@@ -1,12 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" >
-
-    <item
-        jar="/home/aman/OfferCartApp/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
-        jumboMode="true"
-        revision="24.0.2"
-        sha1="f620981ec4895876b81ac7b730068a851ee6915f">
-        <dex dex="/home/aman/OfferCartApp/app/build/intermediates/pre-dexed/debug/instant-run-bootstrap_c117d7e2bc0f437af270bf0cee8aad10dac8e690.jar" />
-    </item>
-
-</items>
+<items version="2" />
