@@ -17,7 +17,7 @@
 
         <!-- Splash screen -->
         <activity
-            android:name="com.example.aman.offercart_v1.SplashScreen"
+            android:name=".SplashScreen.view.SplashScreenActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Black.NoTitleBar"
@@ -40,7 +40,7 @@
         </activity>
 
         <activity
-            android:name="com.example.aman.offercart_v1.Welcome_screen"
+            android:name=".WelcomeScreen.view.Welcome_screen"
             android:label="@string/app_name" >
         </activity>
 
