@@ -33,7 +33,7 @@
 
         <!-- Main activity -->
         <activity
-            android:name="com.example.aman.offercart_v1.MainActivity"
+            android:name=".LoginScreen.view.LoginActivity"
             android:label="@string/app_name"
 
             >

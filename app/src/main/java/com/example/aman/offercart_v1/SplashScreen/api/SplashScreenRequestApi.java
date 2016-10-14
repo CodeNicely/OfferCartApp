@@ -3,17 +3,19 @@ package com.example.aman.offercart_v1.SplashScreen.api;
 import com.example.aman.offercart_v1.SplashScreen.models.data.SplashScreenData;
 import com.example.aman.offercart_v1.helper.Urls;
 
-import retrofit.Call;
-import retrofit.http.Field;
-import retrofit.http.GET;
+import retrofit2.Call;
+import retrofit2.http.Field;
+import retrofit2.http.FormUrlEncoded;
+import retrofit2.http.GET;
 
 /**
  * Created by aman on 14/10/16.
  */
 public interface SplashScreenRequestApi {
 
+    @FormUrlEncoded
     @GET(Urls.REQUEST_SPLASH_SCREEN)
-    Call<SplashScreenData>requestSplash(@Field("version")int version,@Field("success")boolean sucess,
-                                        @Field("message")String message,
+    Call<SplashScreenData> getJson(@Field("version")int version,@Field("message")String message,
+                                        @Field("success")boolean success,
                                         @Field("compulsory_update")int compulsory_update);
 }

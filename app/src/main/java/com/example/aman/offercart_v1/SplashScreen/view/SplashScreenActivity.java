@@ -18,7 +18,6 @@ import butterknife.ButterKnife;
 
 import com.example.aman.offercart_v1.BuildConfig;
 import com.example.aman.offercart_v1.CityScreen.view.City_Screen;
-import com.example.aman.offercart_v1.MainActivity;
 import com.example.aman.offercart_v1.R;
 import com.example.aman.offercart_v1.SharedPrefs;
 import com.example.aman.offercart_v1.SplashScreen.models.RetrofitSplashScreenProvider;

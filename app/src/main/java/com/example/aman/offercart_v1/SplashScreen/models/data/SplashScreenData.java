@@ -10,7 +10,7 @@ public class SplashScreenData {
     private int version;
     private int compulsory_update;
 
-    public SplashScreenData(boolean success, String message, int version, int compulsory_update)
+    public SplashScreenData(int version, String message, boolean success, int compulsory_update)
     {
         this.success = success;
         this.message = message;
