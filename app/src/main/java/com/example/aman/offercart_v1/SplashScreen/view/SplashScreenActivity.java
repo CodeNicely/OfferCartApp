@@ -25,7 +25,7 @@ import com.example.aman.offercart_v1.SplashScreen.models.data.SplashScreenData;
 import com.example.aman.offercart_v1.SplashScreen.presenter.SplashScreenPresenter;
 import com.example.aman.offercart_v1.SplashScreen.presenter.SplashScreenPresenterImpl;
 import com.example.aman.offercart_v1.WelcomeScreen.view.WelcomeScreenActivity;
-
+import com.example.aman.offercart_v1.cityScreen.view.CityScreenActivity;
 
 
 public class SplashScreenActivity extends Activity implements SplashScreenView
@@ -121,21 +121,20 @@ public class SplashScreenActivity extends Activity implements SplashScreenView
 
 
         }
-        else if (splashScreenData.isSuccess())
-        {
+        else if (splashScreenData.isSuccess()) {
 
-            /*if (sharedPrefs.isLoggedIn())
-            {
+            if (sharedPrefs.isLoggedIn()) {
                 Intent in = new Intent(SplashScreenActivity.this, CityScreenActivity.class);
                 startActivity(in);
                 finish();
-            } else*/
+            } else
+            {
 
                 Intent signIn = new Intent(SplashScreenActivity.this, WelcomeScreenActivity.class);
-                startActivity(signIn);
-                finish();
+            startActivity(signIn);
+            finish();
 
-
+            }
         }
     }
 
