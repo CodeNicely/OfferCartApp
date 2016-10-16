@@ -12,32 +12,31 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
 import com.example.aman.offercart_v1.BuildConfig;
-import com.example.aman.offercart_v1.CityScreen.view.City_Screen;
 import com.example.aman.offercart_v1.R;
 import com.example.aman.offercart_v1.SharedPrefs;
 import com.example.aman.offercart_v1.SplashScreen.models.RetrofitSplashScreenProvider;
 import com.example.aman.offercart_v1.SplashScreen.models.data.SplashScreenData;
 import com.example.aman.offercart_v1.SplashScreen.presenter.SplashScreenPresenter;
 import com.example.aman.offercart_v1.SplashScreen.presenter.SplashScreenPresenterImpl;
-import com.example.aman.offercart_v1.WelcomeScreen.view.Welcome_screen;
+import com.example.aman.offercart_v1.WelcomeScreen.view.WelcomeScreenActivity;
+
 
 
 public class SplashScreenActivity extends Activity implements SplashScreenView
 {
 
-    // Splash screen timer
-    //private static int SPLASH_TIME_OUT = 3000;
     @BindView(R.id.progressBar)
     ProgressBar progressBar;
 
     private SharedPrefs sharedPrefs;
-
-
+    private SplashScreenPresenter splashScreenPresenter;
+    SplashScreenData splashScreenData;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -46,24 +45,10 @@ public class SplashScreenActivity extends Activity implements SplashScreenView
 
         ButterKnife.bind(this);
         sharedPrefs = new SharedPrefs(this);
-        final SplashScreenPresenter splashScreenPresenter =
-                new SplashScreenPresenterImpl(this, new RetrofitSplashScreenProvider());
+        splashScreenPresenter =new SplashScreenPresenterImpl(this,
+                                new RetrofitSplashScreenProvider());
 
-
-        /*new Handler().postDelayed(
-                new Runnable()
-                {
-
-                    @Override
-                    public void run() {
-                        // This method will be executed once the timer is over
-                        // Start your app main activity
-                        Intent i = new Intent(SplashScreenActivity.this, Welcome_screen.class);
-                        startActivity(i);
-
-                        finish();
-                    }
-                }, SPLASH_TIME_OUT);*/
+        splashScreenPresenter.requestSplash();
 
     }
 
@@ -71,7 +56,7 @@ public class SplashScreenActivity extends Activity implements SplashScreenView
     @Override
     public void showMessage(String message)
     {
-
+        Toast.makeText(this,message,Toast.LENGTH_LONG).show();
     }
 
     @Override
@@ -79,7 +64,8 @@ public class SplashScreenActivity extends Activity implements SplashScreenView
     {
         if (show) {
             progressBar.setVisibility(View.VISIBLE);
-        } else {
+        } else
+        {
             progressBar.setVisibility(View.GONE);
         }
 
@@ -88,6 +74,7 @@ public class SplashScreenActivity extends Activity implements SplashScreenView
     @Override
     public void version_check(SplashScreenData splashScreenData)
     {
+
         int i = splashScreenData.getVersion();
 
         if (i > BuildConfig.VERSION_CODE)
@@ -134,18 +121,21 @@ public class SplashScreenActivity extends Activity implements SplashScreenView
 
 
         }
-        else if (splashScreenData.isSuccess()) {
+        else if (splashScreenData.isSuccess())
+        {
 
-            if (sharedPrefs.isLoggedIn()) {
-                Intent in = new Intent(SplashScreenActivity.this, City_Screen.class);
+            /*if (sharedPrefs.isLoggedIn())
+            {
+                Intent in = new Intent(SplashScreenActivity.this, CityScreenActivity.class);
                 startActivity(in);
                 finish();
-            } else {
-                Intent signIn = new Intent(SplashScreenActivity.this, Welcome_screen.class);
+            } else*/
+
+                Intent signIn = new Intent(SplashScreenActivity.this, WelcomeScreenActivity.class);
                 startActivity(signIn);
                 finish();
 
-            }
+
         }
     }
 

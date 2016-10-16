@@ -8,6 +8,5 @@ import com.example.aman.offercart_v1.SplashScreen.models.data.SplashScreenData;
  */
 public interface SplashScreenProvider {
 
-    void requestSplash(int version, String message, boolean success, int compulsory_update,
-                       SplashScreenCallback splashScreenCallback);
+    void requestSplash(SplashScreenCallback splashScreenCallback);
 }

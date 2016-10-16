@@ -21,7 +21,7 @@ import com.example.aman.offercart_v1.LoginScreen.view.LoginActivity;
 import com.example.aman.offercart_v1.R;
 import com.example.aman.offercart_v1.SharedPrefs;
 
-public class Welcome_screen extends AppCompatActivity {
+public class WelcomeScreenActivity extends AppCompatActivity {
 
     private ViewPager viewPager;
     private MyViewPagerAdapter myViewPagerAdapter;
@@ -103,7 +103,7 @@ public class Welcome_screen extends AppCompatActivity {
 
     private void launchHomeScreen() {
         //prefManager.setFirstTimeLaunch(false);
-        startActivity(new Intent(Welcome_screen.this, LoginActivity.class));
+        startActivity(new Intent(WelcomeScreenActivity.this, LoginActivity.class));
         finish();
     }
 

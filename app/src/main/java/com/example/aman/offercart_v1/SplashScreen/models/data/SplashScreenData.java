@@ -18,19 +18,23 @@ public class SplashScreenData {
         this.compulsory_update = compulsory_update;
     }
 
-    public int getCompulsory_update() {
+    public int getCompulsory_update()
+    {
         return compulsory_update;
     }
 
-    public boolean isSuccess() {
+    public boolean isSuccess()
+    {
         return success;
     }
 
-    public String getMessage() {
+    public String getMessage()
+    {
         return message;
     }
 
-    public int getVersion() {
+    public int getVersion()
+    {
         return version;
     }
 

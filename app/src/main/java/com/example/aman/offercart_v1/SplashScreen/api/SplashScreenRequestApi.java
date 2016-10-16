@@ -13,9 +13,7 @@ import retrofit2.http.GET;
  */
 public interface SplashScreenRequestApi {
 
-    @FormUrlEncoded
+
     @GET(Urls.REQUEST_SPLASH_SCREEN)
-    Call<SplashScreenData> getJson(@Field("version")int version,@Field("message")String message,
-                                        @Field("success")boolean success,
-                                        @Field("compulsory_update")int compulsory_update);
+    Call<SplashScreenData> requestSplash();
 }
