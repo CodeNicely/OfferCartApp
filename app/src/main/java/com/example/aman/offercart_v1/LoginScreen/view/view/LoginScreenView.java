@@ -8,6 +8,7 @@ public interface LoginScreenView {
 
     void showLoading(boolean show);
     void showMessage(String message);
+    void onLoginVerified();
 
 
 

@@ -9,7 +9,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
 import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,15 +16,9 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-
-<<<<<<< HEAD
 import com.example.aman.offercart_v1.LoginScreen.view.view.LoginScreenActivity;
-
-=======
-import com.example.aman.offercart_v1.LoginScreen.view.view1.LoginScreenViewImpl;
->>>>>>> 6cc407bddebf31d4d24e102a83a4b5f1143520cb
 import com.example.aman.offercart_v1.R;
-import com.example.aman.offercart_v1.SharedPrefs;
+import com.example.aman.offercart_v1.helper.SharedPrefs;
 
 public class WelcomeScreenActivity extends Activity {
 
@@ -110,11 +103,8 @@ public class WelcomeScreenActivity extends Activity {
 
     private void launchHomeScreen() {
         //prefManager.setFirstTimeLaunch(false);
-<<<<<<< HEAD
         startActivity(new Intent(WelcomeScreenActivity.this, LoginScreenActivity.class));
-=======
-        startActivity(new Intent(WelcomeScreenActivity.this, LoginScreenViewImpl.class));
->>>>>>> 6cc407bddebf31d4d24e102a83a4b5f1143520cb
+
         finish();
     }
 

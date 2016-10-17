@@ -20,11 +20,14 @@ public class OtpViewImpl extends Activity implements OtpView {
     EditText otp;
     Button submitButton;
     ProgressBar progressbar;
+    String mobile;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_otp);
+
+        mobile=getIntent().getExtras().getString("mobile");
 
         otp = (EditText) findViewById(R.id.editText);
         submitButton = (Button) findViewById(R.id.button);

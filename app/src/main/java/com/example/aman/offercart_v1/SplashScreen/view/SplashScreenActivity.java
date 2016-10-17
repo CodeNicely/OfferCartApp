@@ -19,7 +19,7 @@ import butterknife.ButterKnife;
 
 import com.example.aman.offercart_v1.BuildConfig;
 import com.example.aman.offercart_v1.R;
-import com.example.aman.offercart_v1.SharedPrefs;
+import com.example.aman.offercart_v1.helper.SharedPrefs;
 import com.example.aman.offercart_v1.SplashScreen.models.RetrofitSplashScreenProvider;
 import com.example.aman.offercart_v1.SplashScreen.models.data.SplashScreenData;
 import com.example.aman.offercart_v1.SplashScreen.presenter.SplashScreenPresenter;
