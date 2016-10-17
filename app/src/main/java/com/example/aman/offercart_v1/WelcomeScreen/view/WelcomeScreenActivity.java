@@ -3,6 +3,7 @@ package com.example.aman.offercart_v1.WelcomeScreen.view;
 /**
  * Created by aman on 12/10/16.
  */
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -17,12 +18,11 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-//import com.example.aman.offercart_v1.LoginScreen.view.LoginActivity;
+import com.example.aman.offercart_v1.LoginScreen.view.view1.LoginScreenViewImpl;
 import com.example.aman.offercart_v1.R;
 import com.example.aman.offercart_v1.SharedPrefs;
-import com.example.aman.offercart_v1.cityScreen.view.CityScreenActivity;
 
-public class WelcomeScreenActivity extends AppCompatActivity {
+public class WelcomeScreenActivity extends Activity {
 
     private ViewPager viewPager;
     private MyViewPagerAdapter myViewPagerAdapter;
@@ -71,7 +71,8 @@ public class WelcomeScreenActivity extends AppCompatActivity {
 
         btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v)
+            {
 
                     launchHomeScreen();
 
@@ -104,8 +105,7 @@ public class WelcomeScreenActivity extends AppCompatActivity {
 
     private void launchHomeScreen() {
         //prefManager.setFirstTimeLaunch(false);
-        //startActivity(new Intent(WelcomeScreenActivity.this, LoginActivity.class));
-        startActivity(new Intent(WelcomeScreenActivity.this, CityScreenActivity.class));
+        startActivity(new Intent(WelcomeScreenActivity.this, LoginScreenViewImpl.class));
         finish();
     }
 
