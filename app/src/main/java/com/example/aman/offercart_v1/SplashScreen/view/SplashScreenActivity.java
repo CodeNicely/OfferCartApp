@@ -34,6 +34,7 @@ public class SplashScreenActivity extends Activity implements SplashScreenView
     @BindView(R.id.progressBar)
     ProgressBar progressBar;
 
+
     private SharedPrefs sharedPrefs;
     private SplashScreenPresenter splashScreenPresenter;
     SplashScreenData splashScreenData;

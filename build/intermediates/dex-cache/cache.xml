@@ -3,21 +3,21 @@
 
     <item
         is-multidex="false"
-        jar="/home/aman/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/retrofit/2.1.0/2de7cd8b95b7021b1d597f049bcb422055119f2c/retrofit-2.1.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="2de7cd8b95b7021b1d597f049bcb422055119f2c">
-        <dex dex="/home/aman/OfferCartApp/app/build/intermediates/pre-dexed/debug/retrofit-2.1.0_a690cd9364cb60d177ffb31ef9471d294b57a361.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="/home/aman/OfferCartApp/app/build/intermediates/exploded-aar/com.jakewharton/butterknife/8.4.0/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.2"
         sha1="a07818a1ecabdb149998823429cce555af4b9cba">
         <dex dex="/home/aman/OfferCartApp/app/build/intermediates/pre-dexed/debug/com.jakewharton-butterknife-8.4.0_2d2847818955f9bec62410e1da932cd459a58508.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/aman/caches/modules-2/files-2.1/com.squareup.okhttp3/logging-interceptor/3.2.0/a56f28d5b7fab623c6c1d2afa08dd496d873ac21/logging-interceptor-3.2.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="a56f28d5b7fab623c6c1d2afa08dd496d873ac21">
+        <dex dex="/home/aman/OfferCartApp/app/build/intermediates/pre-dexed/debug/logging-interceptor-3.2.0_31e173f064bb70fd81c42b2c35abce896dce7ed2.jar" />
     </item>
     <item
         is-multidex="false"
@@ -34,17 +34,35 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.2"
-        sha1="202f8fa17101109d051c363d7086e9e69b21754b">
+        sha1="c17c76f05fe1794de7811e2093f75079071b6da1">
         <dex dex="/home/aman/OfferCartApp/app/build/intermediates/pre-dexed/debug/instant-run_b5862585f70ac85f82eabec5363380b8546f21b0.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/home/aman/.gradle/caches/modules-2/files-2.1/com.jakewharton/butterknife-annotations/8.4.0/ea392375cf9ff59234a82e7928a204215ccc98cd/butterknife-annotations-8.4.0.jar"
+        jar="/home/aman/caches/modules-2/files-2.1/com.squareup.retrofit2/converter-gson/2.1.0/aa557d71ead91cbf26e0c316a0f593d168303309/converter-gson-2.1.0.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.2"
-        sha1="ea392375cf9ff59234a82e7928a204215ccc98cd">
-        <dex dex="/home/aman/OfferCartApp/app/build/intermediates/pre-dexed/debug/butterknife-annotations-8.4.0_bd11534dcaadfa01f758bf17efd22df8ea54fe22.jar" />
+        sha1="aa557d71ead91cbf26e0c316a0f593d168303309">
+        <dex dex="/home/aman/OfferCartApp/app/build/intermediates/pre-dexed/debug/converter-gson-2.1.0_a064a5997806a24c176666f93618d24b389d0d30.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/aman/caches/modules-2/files-2.1/com.squareup.retrofit2/adapter-rxjava/2.0.2/a60c039ba54c73d1133b72178e1b04133c73d13d/adapter-rxjava-2.0.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="a60c039ba54c73d1133b72178e1b04133c73d13d">
+        <dex dex="/home/aman/OfferCartApp/app/build/intermediates/pre-dexed/debug/adapter-rxjava-2.0.2_6752ca4543dc1a03cfc0bbdff301dcf5693b9202.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/aman/caches/modules-2/files-2.1/com.squareup.okio/okio/1.8.0/5ea7af56cc7c567ed9856d99efb30740e9b17ff/okio-1.8.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="05ea7af56cc7c567ed9856d99efb30740e9b17ff">
+        <dex dex="/home/aman/OfferCartApp/app/build/intermediates/pre-dexed/debug/okio-1.8.0_a1d019ad04030dc3a2fb03e8c28e4467d4e8b194.jar" />
     </item>
     <item
         is-multidex="false"
@@ -57,29 +75,11 @@
     </item>
     <item
         is-multidex="false"
-        jar="/home/aman/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.7/751f548c85fa49f330cecbb1875893f971b33c4e/gson-2.7.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="751f548c85fa49f330cecbb1875893f971b33c4e">
-        <dex dex="/home/aman/OfferCartApp/app/build/intermediates/pre-dexed/debug/gson-2.7_bf3f3aec9eded4ea3e8c33426115763ceb92538a.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/aman/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/adapter-rxjava/2.0.2/a60c039ba54c73d1133b72178e1b04133c73d13d/adapter-rxjava-2.0.2.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="a60c039ba54c73d1133b72178e1b04133c73d13d">
-        <dex dex="/home/aman/OfferCartApp/app/build/intermediates/pre-dexed/debug/adapter-rxjava-2.0.2_868a5ce9d10e8494e5de1038e28bb1aace5f5897.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="/home/aman/OfferCartApp/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.2"
-        sha1="7b64ffbff89c1120fe69f43165faa18730cf28ed">
+        sha1="d0ec1104b4b46f8a8d5448084ac513817750d2d1">
         <dex dex="/home/aman/OfferCartApp/app/build/intermediates/pre-dexed/debug/instant-run-bootstrap_c117d7e2bc0f437af270bf0cee8aad10dac8e690.jar" />
     </item>
     <item
@@ -111,15 +111,6 @@
     </item>
     <item
         is-multidex="false"
-        jar="/home/aman/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/converter-gson/2.1.0/aa557d71ead91cbf26e0c316a0f593d168303309/converter-gson-2.1.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="aa557d71ead91cbf26e0c316a0f593d168303309">
-        <dex dex="/home/aman/OfferCartApp/app/build/intermediates/pre-dexed/debug/converter-gson-2.1.0_627921e19eae1c0c008bf75fda1857738d6383a4.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="/home/aman/OfferCartApp/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.0/jars/libs/internal_impl-24.2.0.jar"
         jumboMode="true"
         optimize="true"
@@ -147,21 +138,21 @@
     </item>
     <item
         is-multidex="false"
-        jar="/home/aman/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.8.0/5ea7af56cc7c567ed9856d99efb30740e9b17ff/okio-1.8.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="05ea7af56cc7c567ed9856d99efb30740e9b17ff">
-        <dex dex="/home/aman/OfferCartApp/app/build/intermediates/pre-dexed/debug/okio-1.8.0_d69ee9be66feb3a1eea046b199d9fc279e61d505.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="/home/aman/OfferCartApp/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.2.0/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.2"
         sha1="f3ee23ef25c9a8fe3d40246d0b7097267963a612">
         <dex dex="/home/aman/OfferCartApp/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-24.2.0_00da344d811cdb23fd1d6ae16651118b0b6efe34.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/aman/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.3.0/2b802460eea20f8f2ad9c08c74e0f14718e88aa9/okhttp-3.3.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="2b802460eea20f8f2ad9c08c74e0f14718e88aa9">
+        <dex dex="/home/aman/OfferCartApp/app/build/intermediates/pre-dexed/debug/okhttp-3.3.0_85e484935e9627cf3e278219fbf3a7b0c5d23687.jar" />
     </item>
     <item
         is-multidex="false"
@@ -183,30 +174,30 @@
     </item>
     <item
         is-multidex="false"
-        jar="/home/aman/.gradle/caches/modules-2/files-2.1/io.reactivex/rxjava/1.1.6/2586312cd2b8a511e4c6236736f5a039fc0f2273/rxjava-1.1.6.jar"
+        jar="/home/aman/caches/modules-2/files-2.1/com.squareup.retrofit2/retrofit/2.1.0/2de7cd8b95b7021b1d597f049bcb422055119f2c/retrofit-2.1.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="2de7cd8b95b7021b1d597f049bcb422055119f2c">
+        <dex dex="/home/aman/OfferCartApp/app/build/intermediates/pre-dexed/debug/retrofit-2.1.0_d72f3cb6113fe53630076118bec451d59f5436b0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/aman/caches/modules-2/files-2.1/com.jakewharton/butterknife-annotations/8.4.0/ea392375cf9ff59234a82e7928a204215ccc98cd/butterknife-annotations-8.4.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="ea392375cf9ff59234a82e7928a204215ccc98cd">
+        <dex dex="/home/aman/OfferCartApp/app/build/intermediates/pre-dexed/debug/butterknife-annotations-8.4.0_510e1c8712ea2253904337e5921ae84e9718c531.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/aman/caches/modules-2/files-2.1/io.reactivex/rxjava/1.1.6/2586312cd2b8a511e4c6236736f5a039fc0f2273/rxjava-1.1.6.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.2"
         sha1="2586312cd2b8a511e4c6236736f5a039fc0f2273">
-        <dex dex="/home/aman/OfferCartApp/app/build/intermediates/pre-dexed/debug/rxjava-1.1.6_59ce0469ea0fa8f9069ebe38a105d3b6fe8eeef1.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/aman/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/logging-interceptor/3.2.0/a56f28d5b7fab623c6c1d2afa08dd496d873ac21/logging-interceptor-3.2.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="a56f28d5b7fab623c6c1d2afa08dd496d873ac21">
-        <dex dex="/home/aman/OfferCartApp/app/build/intermediates/pre-dexed/debug/logging-interceptor-3.2.0_a0c02cfc6edb05d5bc55d9fcea53adf30619bd15.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/aman/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.3.0/2b802460eea20f8f2ad9c08c74e0f14718e88aa9/okhttp-3.3.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="2b802460eea20f8f2ad9c08c74e0f14718e88aa9">
-        <dex dex="/home/aman/OfferCartApp/app/build/intermediates/pre-dexed/debug/okhttp-3.3.0_f013c35072f429af755219ac5566d5da32d6d75f.jar" />
+        <dex dex="/home/aman/OfferCartApp/app/build/intermediates/pre-dexed/debug/rxjava-1.1.6_dc365613991758faaf8303b95c80756d41125757.jar" />
     </item>
     <item
         is-multidex="false"
@@ -246,6 +237,15 @@
     </item>
     <item
         is-multidex="false"
+        jar="/home/aman/caches/modules-2/files-2.1/com.google.code.gson/gson/2.7/751f548c85fa49f330cecbb1875893f971b33c4e/gson-2.7.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="751f548c85fa49f330cecbb1875893f971b33c4e">
+        <dex dex="/home/aman/OfferCartApp/app/build/intermediates/pre-dexed/debug/gson-2.7_1d19ac8b3292b74330b3c629b49d998e58c96354.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/home/aman/OfferCartApp/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.0/jars/classes.jar"
         jumboMode="true"
         optimize="true"
@@ -264,12 +264,12 @@
     </item>
     <item
         is-multidex="false"
-        jar="/home/aman/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.3.3/1262995965440e28ba5c4d480c9c9ab4ccce84cc/picasso-2.3.3.jar"
+        jar="/home/aman/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.3.3/1262995965440e28ba5c4d480c9c9ab4ccce84cc/picasso-2.3.3.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.2"
         sha1="1262995965440e28ba5c4d480c9c9ab4ccce84cc">
-        <dex dex="/home/aman/OfferCartApp/app/build/intermediates/pre-dexed/debug/picasso-2.3.3_59f70c60715febf8d21d735150973d23b73cf94d.jar" />
+        <dex dex="/home/aman/OfferCartApp/app/build/intermediates/pre-dexed/debug/picasso-2.3.3_b8a1a66b217d779446485ad31c82a5bbf4c5bab3.jar" />
     </item>
 
 </items>

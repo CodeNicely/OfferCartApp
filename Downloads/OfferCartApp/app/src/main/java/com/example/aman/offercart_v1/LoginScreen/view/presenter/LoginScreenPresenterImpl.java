@@ -1,7 +1,7 @@
 package com.example.aman.offercart_v1.LoginScreen.view.presenter;
 
 import com.example.aman.offercart_v1.LoginScreen.view.models.LoginProvider;
-import com.example.aman.offercart_v1.LoginScreen.view.view1.LoginScreenView;
+import com.example.aman.offercart_v1.LoginScreen.view.view.LoginScreenView;
 import com.example.aman.offercart_v1.LoginScreen.view.models.data.LoginData;
 import com.example.aman.offercart_v1.LoginScreen.view.LoginCallback;
 /**

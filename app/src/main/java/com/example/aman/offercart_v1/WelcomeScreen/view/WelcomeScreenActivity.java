@@ -17,7 +17,8 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.example.aman.offercart_v1.LoginScreen.view.LoginActivity;
+import com.example.aman.offercart_v1.LoginScreen.view.view.LoginScreenActivity;
+
 import com.example.aman.offercart_v1.R;
 import com.example.aman.offercart_v1.SharedPrefs;
 
@@ -103,7 +104,7 @@ public class WelcomeScreenActivity extends AppCompatActivity {
 
     private void launchHomeScreen() {
         //prefManager.setFirstTimeLaunch(false);
-        startActivity(new Intent(WelcomeScreenActivity.this, LoginActivity.class));
+        startActivity(new Intent(WelcomeScreenActivity.this, LoginScreenActivity.class));
         finish();
     }
 

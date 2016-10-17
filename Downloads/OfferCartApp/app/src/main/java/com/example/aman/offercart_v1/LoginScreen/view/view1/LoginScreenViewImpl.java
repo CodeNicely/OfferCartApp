@@ -1,4 +1,4 @@
-package com.example.aman.offercart_v1.LoginScreen.view.view1;
+package com.example.aman.offercart_v1.LoginScreen.view.view;
 
 import android.app.Activity;
 import android.os.Bundle;
