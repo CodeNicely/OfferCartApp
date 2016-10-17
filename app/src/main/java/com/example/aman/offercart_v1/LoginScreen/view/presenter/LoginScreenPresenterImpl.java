@@ -1,7 +1,6 @@
 package com.example.aman.offercart_v1.LoginScreen.view.presenter;
 
 import com.example.aman.offercart_v1.LoginScreen.view.models.LoginProvider;
-import com.example.aman.offercart_v1.LoginScreen.view.models.RetrofitLoginScreenProvider;
 import com.example.aman.offercart_v1.LoginScreen.view.view.LoginScreenView;
 import com.example.aman.offercart_v1.LoginScreen.view.models.data.LoginData;
 import com.example.aman.offercart_v1.LoginScreen.view.LoginCallback;
@@ -13,9 +12,9 @@ public class LoginScreenPresenterImpl implements LoginScreenPresenter {
     private LoginScreenView loginView;
     private LoginProvider loginProvider;
 
-    public LoginScreenPresenterImpl(LoginScreenView loginView, RetrofitLoginScreenProvider retrofitLoginScreenProvider) {
+    public LoginScreenPresenterImpl( LoginScreenView loginView, LoginProvider loginProvider) {
         this. loginView =  loginView;
-        this. loginProvider =  retrofitLoginScreenProvider;
+        this. loginProvider =  loginProvider;
     }
 
     @Override
@@ -30,7 +29,7 @@ public class LoginScreenPresenterImpl implements LoginScreenPresenter {
 
                 loginView.showMessage("success");
             }
-                 @Override
+
             public void onFailure(String error) {
                loginView.showLoading(true);
                 loginView.showMessage("Failed");

@@ -122,20 +122,22 @@ public class SplashScreenActivity extends Activity implements SplashScreenView
 
 
         }
-        else if (splashScreenData.isSuccess()) {
+        else if (splashScreenData.isSuccess())
+        {
 
-            if (sharedPrefs.isLoggedIn()) {
-                Intent in = new Intent(SplashScreenActivity.this, CityScreenActivity.class);
-                startActivity(in);
+           if (sharedPrefs.isLoggedIn())
+            {
+                Intent city = new Intent(SplashScreenActivity.this, CityScreenActivity.class);
+                startActivity(city);
                 finish();
             } else
-            {
+           {
 
-                Intent signIn = new Intent(SplashScreenActivity.this, WelcomeScreenActivity.class);
-            startActivity(signIn);
-            finish();
+               Intent Welcome = new Intent(SplashScreenActivity.this, WelcomeScreenActivity.class);
+               startActivity(Welcome);
+               finish();
+           }
 
-            }
         }
     }
 

@@ -56,9 +56,6 @@ public class LoginScreenActivity extends Activity implements LoginScreenView {
                 String mobile1 = mobile.getText().toString();
                 String email1 = email.getText().toString();
                 loginScreenPresenter.requestLogin(name1, mobile1, email1);
-
-
-
             }
         });
 
