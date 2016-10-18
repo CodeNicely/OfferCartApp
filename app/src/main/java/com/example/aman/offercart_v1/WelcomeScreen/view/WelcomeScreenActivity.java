@@ -11,18 +11,27 @@ import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Html;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.aman.offercart_v1.LoginScreen.view.view1.LoginScreenViewImpl;
 import com.example.aman.offercart_v1.R;
 import com.example.aman.offercart_v1.SharedPrefs;
+import com.example.aman.offercart_v1.WelcomeScreen.models.RetrofitWelcomeScreenProvider;
+import com.example.aman.offercart_v1.WelcomeScreen.models.data.WelcomeImageDetails;
+import com.example.aman.offercart_v1.WelcomeScreen.models.data.WelcomeScreenData;
+import com.example.aman.offercart_v1.WelcomeScreen.presenter.WelcomeScreenPresenter;
+import com.example.aman.offercart_v1.WelcomeScreen.presenter.WelcomeScreenPresenterImpl;
 
-public class WelcomeScreenActivity extends Activity {
+import java.util.List;
+
+public class WelcomeScreenActivity extends Activity implements WelcomeScreenView{
 
     private ViewPager viewPager;
     private MyViewPagerAdapter myViewPagerAdapter;
@@ -31,12 +40,22 @@ public class WelcomeScreenActivity extends Activity {
     private int[] layouts;
     private Button btn_login;
     private SharedPrefs prefManager;
+    private WelcomeScreenPresenter welcomeScreenPresenter;
+
+
+
+
+
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
 
-        // Checking for first time launch - before calling setContentView()
+//        String s=getIntent().getExtras().getString("mobile");
+//        Log.d("dd",s);
+
+//         Checking for first time launch - before calling setContentView()
         prefManager = new SharedPrefs(this);
         if (!prefManager.isFirstTimeLaunch()) {
             launchHomeScreen();
@@ -48,18 +67,11 @@ public class WelcomeScreenActivity extends Activity {
         viewPager = (ViewPager) findViewById(R.id.view_pager);
         dotsLayout = (LinearLayout) findViewById(R.id.layoutDots);
         btn_login = (Button) findViewById(R.id.btn_login);
-
-
-
         layouts = new int[]{
                 R.layout.welcome_slide1,
                 R.layout.welcome_slide2,
                 R.layout.welcome_slide3,
                 R.layout.welcome_slide4};
-
-
-
-
         // adding bottom dots
         addBottomDots(0);
 
@@ -69,7 +81,8 @@ public class WelcomeScreenActivity extends Activity {
 
 
 
-        btn_login.setOnClickListener(new View.OnClickListener() {
+        btn_login.setOnClickListener(new View.OnClickListener()
+        {
             @Override
             public void onClick(View v)
             {
@@ -80,7 +93,8 @@ public class WelcomeScreenActivity extends Activity {
         });
     }
 
-    private void addBottomDots(int currentPage) {
+    private void addBottomDots(int currentPage)
+    {
         dots = new TextView[layouts.length];
 
         int[] colorsActive = getResources().getIntArray(R.array.array_dot_active);
@@ -109,33 +123,52 @@ public class WelcomeScreenActivity extends Activity {
         finish();
     }
 
+
+
+
+
     //  viewpager change listener
-    ViewPager.OnPageChangeListener viewPagerPageChangeListener = new ViewPager.OnPageChangeListener() {
+    ViewPager.OnPageChangeListener viewPagerPageChangeListener = new ViewPager.OnPageChangeListener()
+    {
 
         @Override
-        public void onPageSelected(int position) {
+        public void onPageSelected(int position)
+        {
             addBottomDots(position);
 
 
         }
 
         @Override
-        public void onPageScrolled(int arg0, float arg1, int arg2) {
+        public void onPageScrolled(int arg0, float arg1, int arg2)
+        {
 
         }
 
         @Override
-        public void onPageScrollStateChanged(int arg0) {
+        public void onPageScrollStateChanged(int arg0)
+        {
 
         }
     };
 
+    @Override
+    public void showMessage(String message) {
+        Toast.makeText(WelcomeScreenActivity.this, message, Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void setData(List<WelcomeImageDetails> welcomeImageDetails)
+    {
+
+    }
 
 
     /**
      * View pager adapter
      */
-    public class MyViewPagerAdapter extends PagerAdapter {
+    public class MyViewPagerAdapter extends PagerAdapter
+    {
         private LayoutInflater layoutInflater;
 
         public MyViewPagerAdapter() {
@@ -168,4 +201,15 @@ public class WelcomeScreenActivity extends Activity {
             container.removeView(view);
         }
     }
+
+    private void initialize() {
+        prefManager = new SharedPrefs(this);
+        welcomeScreenPresenter = new WelcomeScreenPresenterImpl(this, new RetrofitWelcomeScreenProvider());
+//        homeDetailsAdapter = new WelcomeImageDetailsAdapter(this);
+
+
+    }
+
+
+
 }

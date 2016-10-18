@@ -1,35 +1,35 @@
 package com.example.aman.offercart_v1.WelcomeScreen.models.data;
 
-import java.util.List;
-
 /**
- * Created by aman on 16/10/16.
+ * Created by aman on 18/10/16.
  */
+
 public class WelcomeImageDetails {
+    private String image_id;
+    private String message;
+    private String image_url;
 
-    private List<String> viewPagerImageList;
-    private String image;
-    private String url;
+    public WelcomeImageDetails(String image_id, String message, String image_url) {
+        this.image_id = image_id;
+        this.message = message;
+        this.image_url = image_url;
+    }
 
-    public WelcomeImageDetails(List<String> viewPagerImageList, String image,String url)
+    public String getImage_id()
     {
-        this.viewPagerImageList=viewPagerImageList;
-        this.url=url;
-        this.image=image;
-
+        return image_id;
     }
 
-    public String getImage() {
-        return image;
+    public String getMessage()
+    {
+        return message;
     }
 
-    public String getUrl() {
-        return url;
+    public String getImage_url()
+    {
+        return image_url;
     }
-
-
-
-
-
-
 }
+
+
+

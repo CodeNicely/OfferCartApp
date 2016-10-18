@@ -133,6 +133,7 @@ public class SplashScreenActivity extends Activity implements SplashScreenView
            {
 
                Intent Welcome = new Intent(SplashScreenActivity.this, WelcomeScreenActivity.class);
+//               Welcome.putExtra("mobile","9174908579");
                startActivity(Welcome);
                finish();
            }

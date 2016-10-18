@@ -8,13 +8,15 @@ import java.util.List;
 public class WelcomeScreenData {
     private boolean success;
     private String message;
-    private List<WelcomeImageDetails> homeDetailsList;
+    private List<WelcomeImageDetails> slider_data;
+    //private String image_id;
+    //private String image_url;
 
-    public WelcomeScreenData(boolean success, String message, List<WelcomeImageDetails> homeDetailsList) {
 
+    public WelcomeScreenData(boolean success, String message, List<WelcomeImageDetails> slider_data) {
         this.success = success;
         this.message = message;
-        this.homeDetailsList = homeDetailsList;
+        this.slider_data = slider_data;
     }
 
     public boolean isSuccess() {
@@ -25,7 +27,7 @@ public class WelcomeScreenData {
         return message;
     }
 
-    public List<WelcomeImageDetails> getHomeDetailsList() {
-        return homeDetailsList;
+    public List<WelcomeImageDetails> getSlider_data() {
+        return slider_data;
     }
 }
