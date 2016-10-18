@@ -16,22 +16,20 @@ import retrofit2.converter.gson.GsonConverterFactory;
 import com.example.aman.offercart_v1.LoginScreen.view.Api.LoginApi;
 import  com.example.aman.offercart_v1.LoginScreen.view.LoginCallback;
 import com.example.aman.offercart_v1.LoginScreen.view.models.data.LoginData;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
-
-
-
-
-/**
- * Created by aman on 15/10/16.
- */
 
 public class RetrofitLoginScreenProvider implements LoginProvider{
 
     private LoginApi loginApi;
     public RetrofitLoginScreenProvider() {
+        Gson gson=new GsonBuilder()
+                .setLenient()
+                .create();
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(Urls.BASE_URL)
-                .addConverterFactory(GsonConverterFactory.create())
+                .addConverterFactory(GsonConverterFactory.create(gson))
                 .build();
         loginApi  = retrofit.create( LoginApi.class);
 

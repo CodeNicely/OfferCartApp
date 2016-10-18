@@ -16,5 +16,5 @@ public interface OtpApi {
 
 
     @POST(Urls.VERIFY_OTP)
-    Call<OtpData> requestOtp(@Query("otp") String otp);
+    Call<OtpData> requestOtp(@Query("otp") String otp,@Query("mobile")String mobile);
 }

@@ -44,12 +44,14 @@
 
 
     <ProgressBar
-        android:id="@+id/progressBar"
+        android:id="@+id/progressBarView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_alignParentBottom="true"
-        android:visibility="gone" />
+
+        android:visibility="gone"
+         android:layout_centerHorizontal="true"/>
 
 
 </RelativeLayout>

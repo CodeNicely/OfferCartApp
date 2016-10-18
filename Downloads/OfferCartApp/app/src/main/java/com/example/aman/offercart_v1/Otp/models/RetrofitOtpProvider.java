@@ -15,7 +15,8 @@ import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 import com.example.aman.offercart_v1.Otp.OtpCallback;
-
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
 
 /**
@@ -28,6 +29,9 @@ public class RetrofitOtpProvider implements OtpProvider{
 
 
     void RetrofitLoginScreenProvider(){
+        Gson gson=new GsonBuilder()
+                .setLenient()
+                .create();
     Retrofit retrofit = new Retrofit.Builder()
         .baseUrl(Urls.BASE_URL)
         .addConverterFactory(GsonConverterFactory.create())
@@ -35,9 +39,9 @@ public class RetrofitOtpProvider implements OtpProvider{
     otpApi  = retrofit.create( OtpApi.class);
 
 }
-    public void requestOtp(String otp , final OtpCallback otpCallback) {
+    public void requestOtp(String otp ,String mobile,final OtpCallback otpCallback) {
 
-        Call<OtpData> otpDataCall= otpApi.requestOtp(otp);
+        Call<OtpData> otpDataCall= otpApi.requestOtp(otp,mobile);
 
         otpDataCall.enqueue(new Callback<OtpData>() {
 
