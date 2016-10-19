@@ -9,7 +9,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
 import android.text.Html;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -18,16 +17,22 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
 import android.widget.Toast;
 
-import com.example.aman.offercart_v1.LoginScreen.view.view1.LoginScreenViewImpl;
+
 import com.example.aman.offercart_v1.R;
-import com.example.aman.offercart_v1.SharedPrefs;
+
 import com.example.aman.offercart_v1.WelcomeScreen.models.RetrofitWelcomeScreenProvider;
 import com.example.aman.offercart_v1.WelcomeScreen.models.data.WelcomeImageDetails;
 import com.example.aman.offercart_v1.WelcomeScreen.models.data.WelcomeScreenData;
 import com.example.aman.offercart_v1.WelcomeScreen.presenter.WelcomeScreenPresenter;
 import com.example.aman.offercart_v1.WelcomeScreen.presenter.WelcomeScreenPresenterImpl;
+
+import com.example.aman.offercart_v1.LoginScreen.view.view.LoginScreenActivity;
+import com.example.aman.offercart_v1.R;
+import com.example.aman.offercart_v1.helper.SharedPrefs;
+
 
 import java.util.List;
 
@@ -119,7 +124,8 @@ public class WelcomeScreenActivity extends Activity implements WelcomeScreenView
 
     private void launchHomeScreen() {
         //prefManager.setFirstTimeLaunch(false);
-        startActivity(new Intent(WelcomeScreenActivity.this, LoginScreenViewImpl.class));
+        startActivity(new Intent(WelcomeScreenActivity.this, LoginScreenActivity.class));
+
         finish();
     }
 

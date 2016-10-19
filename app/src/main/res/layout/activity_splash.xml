@@ -30,7 +30,6 @@
         android:layout_below="@+id/imgLogo"
         android:layout_centerHorizontal="true"
         android:layout_gravity="center"
-
         />
 
 

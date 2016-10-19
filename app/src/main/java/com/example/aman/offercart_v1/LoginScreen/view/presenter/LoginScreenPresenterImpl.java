@@ -1,7 +1,9 @@
 package com.example.aman.offercart_v1.LoginScreen.view.presenter;
 
+import android.util.Log;
+
 import com.example.aman.offercart_v1.LoginScreen.view.models.LoginProvider;
-import com.example.aman.offercart_v1.LoginScreen.view.view1.LoginScreenView;
+import com.example.aman.offercart_v1.LoginScreen.view.view.LoginScreenView;
 import com.example.aman.offercart_v1.LoginScreen.view.models.data.LoginData;
 import com.example.aman.offercart_v1.LoginScreen.view.LoginCallback;
 /**
@@ -21,17 +23,23 @@ public class LoginScreenPresenterImpl implements LoginScreenPresenter {
     public void requestLogin(String name, String mobile, String email) {
 
         loginView.showLoading(true);
+        Log.d("Resp","1");
         loginProvider.requestLogin(name, mobile, email, new LoginCallback() {
             @Override
             public void onSuccess(LoginData loginData) {
+                Log.d("Response","succ");
+
+
 
                 loginView.showLoading(false);
 
                 loginView.showMessage("success");
+                loginView.onLoginVerified();
             }
 
             public void onFailure(String error) {
-               loginView.showLoading(true);
+                Log.d("Response","false");
+                loginView.showLoading(false);
                 loginView.showMessage("Failed");
 
             }

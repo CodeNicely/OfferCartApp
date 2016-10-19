@@ -1,7 +1,6 @@
 package com.example.aman.offercart_v1.LoginScreen.view.models;
 
 
-
 import com.example.aman.offercart_v1.helper.Urls;
 
 import okhttp3.OkHttpClient;
@@ -14,52 +13,51 @@ import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 import com.example.aman.offercart_v1.LoginScreen.view.Api.LoginApi;
-import  com.example.aman.offercart_v1.LoginScreen.view.LoginCallback;
+import com.example.aman.offercart_v1.LoginScreen.view.LoginCallback;
 import com.example.aman.offercart_v1.LoginScreen.view.models.data.LoginData;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
 
-
-
-
-/**
- * Created by aman on 15/10/16.
- */
-
-public class RetrofitLoginScreenProvider implements LoginProvider{
+public class RetrofitLoginScreenProvider implements LoginProvider {
 
     private LoginApi loginApi;
+
     public RetrofitLoginScreenProvider() {
+        Gson gson = new GsonBuilder()
+                .setLenient()
+                .create();
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(Urls.BASE_URL)
-                .addConverterFactory(GsonConverterFactory.create())
+                .addConverterFactory(GsonConverterFactory.create(gson))
                 .build();
-        loginApi  = retrofit.create( LoginApi.class);
+        loginApi = retrofit.create(LoginApi.class);
 
     }
 
 
+    public void requestLogin(String name, String mobile, String email, final LoginCallback loginCallback) {
 
-public void requestLogin(String name, String mobile, String email, final LoginCallback loginCallback) {
-
-        Call<LoginData> loginDataCall= loginApi.requestLogin(name, mobile, email);
+        Call<LoginData> loginDataCall = loginApi.requestLogin(name, mobile, email);
 
         loginDataCall.enqueue(new Callback<LoginData>() {
 
 
-       @Override
+            @Override
             public void onResponse(Call<LoginData> call, Response<LoginData> response) {
 
 
-        loginCallback.onSuccess(response.body());
+                loginCallback.onSuccess(response.body());
 
-        }
+            }
+
             @Override
-public void onFailure(Call<LoginData> call, Throwable t) {
+            public void onFailure(Call<LoginData> call, Throwable t) {
 
 
-        t.printStackTrace();
-        }
+                t.printStackTrace();
+            }
         });
-        }
-        }
+    }
+}
 

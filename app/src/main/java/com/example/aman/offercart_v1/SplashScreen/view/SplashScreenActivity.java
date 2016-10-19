@@ -8,6 +8,7 @@ import android.app.Dialog;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
@@ -19,7 +20,7 @@ import butterknife.ButterKnife;
 
 import com.example.aman.offercart_v1.BuildConfig;
 import com.example.aman.offercart_v1.R;
-import com.example.aman.offercart_v1.SharedPrefs;
+import com.example.aman.offercart_v1.helper.SharedPrefs;
 import com.example.aman.offercart_v1.SplashScreen.models.RetrofitSplashScreenProvider;
 import com.example.aman.offercart_v1.SplashScreen.models.data.SplashScreenData;
 import com.example.aman.offercart_v1.SplashScreen.presenter.SplashScreenPresenter;
@@ -33,6 +34,7 @@ public class SplashScreenActivity extends Activity implements SplashScreenView
 
     @BindView(R.id.progressBar)
     ProgressBar progressBar;
+
 
     private SharedPrefs sharedPrefs;
     private SplashScreenPresenter splashScreenPresenter;
@@ -124,6 +126,7 @@ public class SplashScreenActivity extends Activity implements SplashScreenView
         else if (splashScreenData.isSuccess())
         {
 
+/*
            if (sharedPrefs.isLoggedIn())
             {
                 Intent city = new Intent(SplashScreenActivity.this, CityScreenActivity.class);
@@ -136,7 +139,31 @@ public class SplashScreenActivity extends Activity implements SplashScreenView
 //               Welcome.putExtra("mobile","9174908579");
                startActivity(Welcome);
                finish();
-           }
+
+*/
+            Handler handler=new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+
+
+                    if (sharedPrefs.isLoggedIn())
+                    {
+                        Intent city = new Intent(SplashScreenActivity.this, CityScreenActivity.class);
+                        startActivity(city);
+                        finish();
+                    } else
+                    {
+
+                        Intent Welcome = new Intent(SplashScreenActivity.this, WelcomeScreenActivity.class);
+                        startActivity(Welcome);
+                        finish();
+                    }
+
+                }
+            },5000);
+
+
 
         }
     }

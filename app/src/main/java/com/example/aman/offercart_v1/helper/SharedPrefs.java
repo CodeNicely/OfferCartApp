@@ -1,4 +1,4 @@
-package com.example.aman.offercart_v1;
+package com.example.aman.offercart_v1.helper;
 
 /**
  * Created by aman on 12/10/16.
