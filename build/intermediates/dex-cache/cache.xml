@@ -129,21 +129,21 @@
     </item>
     <item
         is-multidex="false"
-        jar="/home/iket/OfferCartApp/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/24.2.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="24.0.2"
-        sha1="7521486d9bfd2cd9e756e0cf75ed7d97f2ce2d3b">
-        <dex dex="/home/iket/OfferCartApp/app/build/intermediates/pre-dexed/debug/com.android.support-recyclerview-v7-24.2.1_d604dc083a874d79253092533c8953c1e802e41c.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="/home/iket/OfferCartApp/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="24.0.2"
         sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
         <dex dex="/home/iket/OfferCartApp/app/build/intermediates/pre-dexed/debug/com.android.support-support-media-compat-24.2.1_d53c0c58f2c66cb671cf081928743f457630a5c5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/iket/OfferCartApp/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/24.2.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="7521486d9bfd2cd9e756e0cf75ed7d97f2ce2d3b">
+        <dex dex="/home/iket/OfferCartApp/app/build/intermediates/pre-dexed/debug/com.android.support-recyclerview-v7-24.2.1_d604dc083a874d79253092533c8953c1e802e41c.jar" />
     </item>
     <item
         is-multidex="false"

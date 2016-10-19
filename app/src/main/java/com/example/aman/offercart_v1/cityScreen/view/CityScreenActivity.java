@@ -1,5 +1,6 @@
 package com.example.aman.offercart_v1.cityScreen.view;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -16,6 +17,7 @@ import com.example.aman.offercart_v1.cityScreen.models.data.CityScreenData;
 import com.example.aman.offercart_v1.cityScreen.presenter.CityScreenPresenter;
 import com.example.aman.offercart_v1.cityScreen.presenter.CityScreenPresenterImpl;
 import com.example.aman.offercart_v1.helper.SharedPrefs;
+import com.example.aman.offercart_v1.home.view.HomePage;
 
 import java.util.List;
 
@@ -91,6 +93,22 @@ public class CityScreenActivity extends AppCompatActivity implements CityScreenV
 
         }
 
+    }
+
+    @Override
+    public void onCitySelected(String city_id, String city_name) {
+        Log.d("Response",city_name);
+//        sharedPrefs=new SharedPrefs(this);
+//        sharedPrefs.setKEY_City(city_name);
+        cityScreenPresenter=new CityScreenPresenterImpl(this,new RetrofitCityScreenProvider());
+        cityScreenPresenter.sendSelectedCity(city_id);
+
+    }
+
+    @Override
+    public void onCitySent() {
+        Intent in=new Intent(CityScreenActivity.this, HomePage.class);
+        startActivity(in);
     }
 }
 

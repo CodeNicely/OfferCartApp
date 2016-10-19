@@ -21,6 +21,7 @@ public class SharedPrefs {
     private static final String KEY_LOGIN_TYPE = "loginType";
     private static final String KEY_FCM = "fcm";
     private static final String KEY_ACCESS_TOKEN = "access_token";
+    private static final String KEY_City = "raipur";
     private static final int KEY_VERSION=1;
     private static final String IS_FIRST_TIME_LAUNCH = "IsFirstTimeLaunch";
 
@@ -40,6 +41,16 @@ public class SharedPrefs {
         this._context = context;
         pref = _context.getSharedPreferences(PREF_NAME, PRIVATE_MODE);
         editor = pref.edit();
+    }
+
+    public void setKEY_City(String city)
+    {
+        editor.putString(KEY_City,city);
+        editor.commit();
+    }
+    public String getKEY_City()
+    {
+        return pref.getString(KEY_City,"Raipur");
     }
 
 
