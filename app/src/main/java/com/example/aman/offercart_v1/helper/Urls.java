@@ -25,5 +25,8 @@ public class Urls {
     public static final String REQUEST_CITY = "city/";
     public static final String Send_CITY = "selected_city/";
 
+    //offer
+    public static final String REQUEST_OFFER = "offer/";
+
 
 }
