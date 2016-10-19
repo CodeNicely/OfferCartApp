@@ -1,7 +1,10 @@
 package com.example.aman.offercart_v1.cityScreen.models;
 
 import com.example.aman.offercart_v1.cityScreen.api.CityScreenRequestApi;
+import com.example.aman.offercart_v1.cityScreen.api.SendSelectedCityApi;
+import com.example.aman.offercart_v1.cityScreen.models.data.SelectedCityData;
 import com.example.aman.offercart_v1.cityScreen.view.OnCitiesReceived;
+import com.example.aman.offercart_v1.cityScreen.view.OnCitiesSent;
 import com.example.aman.offercart_v1.cityScreen.view.Response;
 import com.example.aman.offercart_v1.helper.Urls;
 import com.google.gson.Gson;
@@ -15,6 +18,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitCityScreenProvider implements CityScreenProvider {
    private CityScreenRequestApi cityScreenRequestApi;
+    private SendSelectedCityApi sendSelectedCityApi;
 
     public RetrofitCityScreenProvider()
     {
@@ -26,6 +30,8 @@ public class RetrofitCityScreenProvider implements CityScreenProvider {
                 .addConverterFactory(GsonConverterFactory.create(gson))
                 .build();
         cityScreenRequestApi = retrofit.create(CityScreenRequestApi.class);
+        sendSelectedCityApi=retrofit.create(SendSelectedCityApi.class);
+
     }
 
 
@@ -50,6 +56,25 @@ public class RetrofitCityScreenProvider implements CityScreenProvider {
 
 
 
+
+    }
+
+    @Override
+    public void sendSelectedCity(String city_id, final OnCitiesSent onCitiesSent) {
+        Call<SelectedCityData> call=sendSelectedCityApi.sendCity(city_id);
+        call.enqueue(new Callback<SelectedCityData>() {
+            @Override
+            public void onResponse(Call<SelectedCityData> call, retrofit2.Response<SelectedCityData> response) {
+                onCitiesSent.onSuccess(response.body());
+            }
+
+            @Override
+            public void onFailure(Call<SelectedCityData> call, Throwable t) {
+                onCitiesSent.onFailure();
+                t.printStackTrace();
+
+            }
+        });
 
     }
 }
