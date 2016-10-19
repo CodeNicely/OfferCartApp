@@ -73,6 +73,11 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_alignParentBottom="true"
+<<<<<<< HEAD:Downloads/OfferCartApp/app/src/main/res/layout/activity_loginscreen.xml
+        android:visibility="gone"
+        android:layout_centerHorizontal="true"/>
+=======
         android:visibility="gone" />
+>>>>>>> 010a0f397f1e129cecfa05bd03b46277f631d483:app/src/main/res/layout/activity_loginscreen.xml
 
 </RelativeLayout>
