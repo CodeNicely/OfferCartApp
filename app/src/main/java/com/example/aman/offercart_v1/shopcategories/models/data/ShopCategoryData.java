@@ -8,17 +8,17 @@ import java.util.List;
 
 public class ShopCategoryData {
 
-    private List<subcategory_data> subcategory_data;
+    private List<ShopCategoryDetails> subcategory_data;
     private boolean success;
 
 
-    public ShopCategoryData(List<subcategory_data> subcategory_data, boolean success)
+    public ShopCategoryData(List<ShopCategoryDetails> ShopCategoryDetails, boolean success)
     {
-        this.subcategory_data = subcategory_data;
+        this.subcategory_data = ShopCategoryDetails;
         this.success = success;
     }
 
-    public List<subcategory_data> getSubcategory_data()
+    public List<ShopCategoryDetails> getSubcategory_data()
     {
         return subcategory_data;
     }

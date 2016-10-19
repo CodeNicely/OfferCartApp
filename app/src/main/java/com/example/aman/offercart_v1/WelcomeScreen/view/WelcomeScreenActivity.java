@@ -4,55 +4,110 @@ package com.example.aman.offercart_v1.WelcomeScreen.view;
  * Created by aman on 12/10/16.
  */
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.text.Html;
-import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.TextView;
-
 import android.widget.Toast;
 
 
+import com.example.aman.offercart_v1.LoginScreen.view.view.LoginScreenActivity;
 import com.example.aman.offercart_v1.R;
 
 import com.example.aman.offercart_v1.WelcomeScreen.models.RetrofitWelcomeScreenProvider;
 import com.example.aman.offercart_v1.WelcomeScreen.models.data.WelcomeImageDetails;
-import com.example.aman.offercart_v1.WelcomeScreen.models.data.WelcomeScreenData;
 import com.example.aman.offercart_v1.WelcomeScreen.presenter.WelcomeScreenPresenter;
 import com.example.aman.offercart_v1.WelcomeScreen.presenter.WelcomeScreenPresenterImpl;
 
-import com.example.aman.offercart_v1.LoginScreen.view.view.LoginScreenActivity;
-import com.example.aman.offercart_v1.R;
 import com.example.aman.offercart_v1.helper.SharedPrefs;
 
 
 import java.util.List;
 
-public class WelcomeScreenActivity extends Activity implements WelcomeScreenView{
+public class WelcomeScreenActivity extends Activity implements WelcomeScreenView
+{
 
     private ViewPager viewPager;
-    private MyViewPagerAdapter myViewPagerAdapter;
-    private LinearLayout dotsLayout;
-    private TextView[] dots;
-    private int[] layouts;
-    private Button btn_login;
-    private SharedPrefs prefManager;
+    private ProgressBar progressBar;
+    private ViewPagerAdapter viewPagerAdapter;
     private WelcomeScreenPresenter welcomeScreenPresenter;
+    private Button button;
+    private WelcomeScreenView welcomeScreenView;
 
 
-
-
-
+//    private LinearLayout dotsLayout;
+//    private TextView[] dots;
+//    private int[] layouts;
+//    private SharedPrefs prefManager;
 
     @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_welcome);
+        progressBar=(ProgressBar)findViewById(R.id.progressBar);
+        initialise();
+
+
+
+
+    }
+
+    public void initialise() {
+        viewPagerAdapter = new ViewPagerAdapter(this);
+        viewPager = (ViewPager) findViewById(R.id.viewpager);
+        welcomeScreenPresenter = new WelcomeScreenPresenterImpl(this, new RetrofitWelcomeScreenProvider());
+        welcomeScreenPresenter.getWelcomeData();
+        viewPagerAdapter = new ViewPagerAdapter(this);
+        viewPager.setAdapter(viewPagerAdapter);
+        button = (Button) findViewById(R.id.button_login);
+    }
+
+    public  void button (View v)
+    {
+        Intent i =new Intent(WelcomeScreenActivity.this,LoginScreenActivity.class);
+        startActivity(i);
+    }
+        @Override
+    public void showMessage(String error) {
+            Toast.makeText(this,error,Toast.LENGTH_LONG).show();
+
+    }
+
+    @Override
+    public void showProgressBar(boolean show) {
+        if (show)
+        {
+            progressBar.setVisibility(View.VISIBLE);
+        }
+        else
+        {
+            progressBar.setVisibility(View.INVISIBLE);
+        }
+    }
+
+    @Override
+    public void setData(List<WelcomeImageDetails> welcomeImageDetails) {
+        viewPagerAdapter.setImageList(welcomeImageDetails);
+        viewPagerAdapter.notifyDataSetChanged();
+
+    }
+
+
+
+
+}
+
+
+
+
+
+
+
+/*    @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
@@ -170,9 +225,11 @@ public class WelcomeScreenActivity extends Activity implements WelcomeScreenView
     }
 
 
-    /**
+    /*
      * View pager adapter
      */
+
+/*
     public class MyViewPagerAdapter extends PagerAdapter
     {
         private LayoutInflater layoutInflater;
@@ -216,6 +273,5 @@ public class WelcomeScreenActivity extends Activity implements WelcomeScreenView
 
     }
 
+*/
 
-
-}

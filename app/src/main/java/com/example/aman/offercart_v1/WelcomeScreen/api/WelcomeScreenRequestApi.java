@@ -11,7 +11,7 @@ import retrofit2.http.GET;
  */
 public interface WelcomeScreenRequestApi {
 
-    @GET(Urls.REQUEST_CITY)
+    @GET(Urls.REQUEST_Welcome_SCREEN)
     Call<WelcomeScreenData> getWelcomeData();
 
 }

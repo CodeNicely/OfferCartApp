@@ -19,7 +19,7 @@ public class WelcomeScreenPresenterImpl implements WelcomeScreenPresenter {
     }
 
     @Override
-    public void getHomeData()
+    public void getWelcomeData()
     {
         welcomeScreenProvider.getWelcomeData(new WelcomeScreenCallback() {
             @Override
@@ -27,11 +27,12 @@ public class WelcomeScreenPresenterImpl implements WelcomeScreenPresenter {
                 if (welcomeScreenData.isSuccess()){
                     welcomeScreenView.setData(welcomeScreenData.getSlider_data());
                     welcomeScreenView.showMessage("Success");
+                    welcomeScreenView.showProgressBar(false);
 
                 }
                 else{
                     welcomeScreenView.showMessage("Something went wrong");
-
+                    welcomeScreenView.showProgressBar(true);
                 }
             }
 

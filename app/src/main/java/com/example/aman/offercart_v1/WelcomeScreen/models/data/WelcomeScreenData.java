@@ -7,7 +7,6 @@ import java.util.List;
  */
 public class WelcomeScreenData {
     private boolean success;
-    private String message;
     private List<WelcomeImageDetails> slider_data;
     //private String image_id;
     //private String image_url;
@@ -15,7 +14,6 @@ public class WelcomeScreenData {
 
     public WelcomeScreenData(boolean success, String message, List<WelcomeImageDetails> slider_data) {
         this.success = success;
-        this.message = message;
         this.slider_data = slider_data;
     }
 
@@ -23,11 +21,7 @@ public class WelcomeScreenData {
         return success;
     }
 
-    public String getMessage() {
-        return message;
-    }
-
-    public List<WelcomeImageDetails> getSlider_data() {
+       public List<WelcomeImageDetails> getSlider_data() {
         return slider_data;
     }
 }

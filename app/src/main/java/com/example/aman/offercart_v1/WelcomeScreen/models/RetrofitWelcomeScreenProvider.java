@@ -1,5 +1,7 @@
 package com.example.aman.offercart_v1.WelcomeScreen.models;
 
+import android.util.Log;
+
 import com.example.aman.offercart_v1.WelcomeScreen.WelcomeScreenCallback;
 import com.example.aman.offercart_v1.WelcomeScreen.api.WelcomeScreenRequestApi;
 import com.example.aman.offercart_v1.WelcomeScreen.models.data.WelcomeScreenData;
@@ -20,6 +22,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitWelcomeScreenProvider implements WelcomeScreenProvider {
 
+    private static final String TAG = "RetrofitWelcomeScreenProvider";
+
     private WelcomeScreenRequestApi welcomeScreenRequestApi;
     @Override
     public void getWelcomeData(final WelcomeScreenCallback welcomeScreenCallback)
@@ -38,11 +42,13 @@ public class RetrofitWelcomeScreenProvider implements WelcomeScreenProvider {
             @Override
             public void onResponse(Call<WelcomeScreenData> call, Response<WelcomeScreenData> response) {
                 welcomeScreenCallback.onSuccess(response.body());
+                Log.d("Response recieved",response.message());
             }
 
             @Override
             public void onFailure(Call<WelcomeScreenData> call, Throwable t) {
                 welcomeScreenCallback.onFailure("Unable to connect to api");
+                Log.d("error",t.getMessage());
                 t.printStackTrace();
             }
         });

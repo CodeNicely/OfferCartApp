@@ -4,32 +4,36 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:showIn="@layout/activity_welcome">
+    tools:showIn="@layout/activity_welcome"
+    >
 
 
     <android.support.v4.view.ViewPager
-        android:id="@+id/view_pager"
+        android:id="@+id/viewpager"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
-    <LinearLayout
-        android:id="@+id/layoutDots"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/dots_height"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="@dimen/dots_margin_bottom"
-        android:gravity="center"
-        android:orientation="horizontal"></LinearLayout>
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:alpha=".5"
-        android:layout_above="@+id/layoutDots"
+        android:layout_above="@+id/button_login"
         android:background="@android:color/white" />
 
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"
+        android:layout_marginTop="350dp"
+        android:layout_marginStart="180dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
+        android:visibility="visible"
+        android:layout_marginLeft="180dp" />
+
     <Button
-        android:id="@+id/btn_login"
+        android:id="@+id/button_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -39,7 +43,7 @@
         android:background="@null"
         android:text="LOGIN"
         android:textSize="20dp"
-
+        android:onClick="button"
         android:textColor="@android:color/white" />
 
 
