@@ -4,18 +4,23 @@ package com.example.aman.offercart_v1.home.model.data;
  * Created by iket on 19/10/16.
  */
 public class CategoryData {
-    private String Category_name,image_url;
+    private String name,image,id;
 
-    public CategoryData(String category_name, String image_url) {
-        Category_name = category_name;
-        this.image_url = image_url;
+    public CategoryData(String name, String image, String id) {
+        this.name = name;
+        this.image = image;
+        this.id = id;
     }
 
-    public String getCategory_name() {
-        return Category_name;
+    public String getName() {
+        return name;
     }
 
-    public String getImage_url() {
-        return image_url;
+    public String getImage() {
+        return image;
+    }
+
+    public String getId() {
+        return id;
     }
 }

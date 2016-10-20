@@ -23,23 +23,16 @@ public class OtpViewImpl extends Activity implements OtpView {
     Button submitButton;
     ProgressBar progressbar;
     String mobile;
-<<<<<<< HEAD:Downloads/OfferCartApp/app/src/main/java/com/example/aman/offercart_v1/Otp/view/OtpViewImpl.java
     String otp1;
-=======
->>>>>>> 010a0f397f1e129cecfa05bd03b46277f631d483:app/src/main/java/com/example/aman/offercart_v1/Otp/view/OtpViewImpl.java
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_otp);
 
-<<<<<<< HEAD:Downloads/OfferCartApp/app/src/main/java/com/example/aman/offercart_v1/Otp/view/OtpViewImpl.java
         mobile = getIntent().getExtras().getString("mobile");
         progressbar = (ProgressBar) findViewById(R.id.progressBarView);
-=======
-        mobile=getIntent().getExtras().getString("mobile");
 
->>>>>>> 010a0f397f1e129cecfa05bd03b46277f631d483:app/src/main/java/com/example/aman/offercart_v1/Otp/view/OtpViewImpl.java
         otp = (EditText) findViewById(R.id.editText);
         submitButton = (Button) findViewById(R.id.button);
 
