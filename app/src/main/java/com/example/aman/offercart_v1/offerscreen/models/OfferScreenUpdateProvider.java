@@ -8,5 +8,5 @@ import com.example.aman.offercart_v1.offerscreen.models.data.OfferScreenUpdateDa
  */
 
 public interface OfferScreenUpdateProvider {
-    void responseProductList(String offer ,OfferScreenUpdateDataCallback offerScreenUpdateDataCallback);
+    void responseOfferList(String offer , OfferScreenUpdateDataCallback offerScreenUpdateDataCallback);
 }

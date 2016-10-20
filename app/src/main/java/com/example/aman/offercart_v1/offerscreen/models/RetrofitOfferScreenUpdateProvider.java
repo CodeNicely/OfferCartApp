@@ -22,7 +22,7 @@ public class RetrofitOfferScreenUpdateProvider implements OfferScreenUpdateProvi
 
 
     @Override
-    public void responseProductList(String offer, final OfferScreenUpdateDataCallback offerScreenUpdateDataCallback) {
+    public void responseOfferList(String offer, final OfferScreenUpdateDataCallback offerScreenUpdateDataCallback) {
 
             Gson gson = new GsonBuilder()
                     .setLenient()
