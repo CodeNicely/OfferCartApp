@@ -28,10 +28,14 @@ public class RetrofitOtpProvider implements OtpProvider{
 
 
 
-    void RetrofitLoginScreenProvider(){
+    void RetrofitOtpProvider(){
         Gson gson=new GsonBuilder()
                 .setLenient()
                 .create();
+        HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
+        interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
+        OkHttpClient client = new OkHttpClient.Builder().addInterceptor(interceptor).build();
+
     Retrofit retrofit = new Retrofit.Builder()
         .baseUrl(Urls.BASE_URL)
         .addConverterFactory(GsonConverterFactory.create())
