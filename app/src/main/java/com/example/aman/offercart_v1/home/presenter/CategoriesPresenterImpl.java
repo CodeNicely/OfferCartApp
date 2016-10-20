@@ -11,13 +11,17 @@ import java.util.List;
  * Created by iket on 19/10/16.
  */
 public class CategoriesPresenterImpl implements CategoriesPresenter {
-    private CategoriesProvider categoriesProvider;
     private CategoriesView categoriesView;
 
-    public CategoriesPresenterImpl(CategoriesProvider categoriesProvider, CategoriesView categoriesView) {
-        this.categoriesProvider = categoriesProvider;
+    public CategoriesPresenterImpl(CategoriesView categoriesView, CategoriesProvider categoriesProvider) {
         this.categoriesView = categoriesView;
+        this.categoriesProvider = categoriesProvider;
     }
+
+    private CategoriesProvider categoriesProvider;
+
+
+
 
     @Override
     public void getCategories() {

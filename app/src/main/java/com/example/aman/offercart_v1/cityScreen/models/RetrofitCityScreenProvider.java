@@ -31,7 +31,6 @@ public class RetrofitCityScreenProvider implements CityScreenProvider {
                 .build();
         cityScreenRequestApi = retrofit.create(CityScreenRequestApi.class);
         sendSelectedCityApi=retrofit.create(SendSelectedCityApi.class);
-
     }
 
 

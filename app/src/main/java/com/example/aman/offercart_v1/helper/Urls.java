@@ -20,7 +20,8 @@ public class Urls {
     public static final String SEND_OTP = "otp/";
     public static final String VERIFY_OTP = "otp1/";
 
-    public static final String CATEGORIES = "categories/";
+    public static final String CATEGORIES = "category/";
+    public static final String WALLET = "wallet/";
 
     //city_screen
     public static final String REQUEST_CITY = "city/";

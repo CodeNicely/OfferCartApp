@@ -77,5 +77,4 @@
         android:visibility="gone"
         android:layout_centerHorizontal="true"/>
 
-
 </RelativeLayout>

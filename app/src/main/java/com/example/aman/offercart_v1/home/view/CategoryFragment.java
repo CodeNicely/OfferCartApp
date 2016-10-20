@@ -4,12 +4,26 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ProgressBar;
+import android.widget.Toast;
 
 import com.example.aman.offercart_v1.R;
+import com.example.aman.offercart_v1.home.model.CategoriesProvider;
+import com.example.aman.offercart_v1.home.model.RetrofitCategoriesProvider;
+import com.example.aman.offercart_v1.home.model.data.CategoryData;
+import com.example.aman.offercart_v1.home.presenter.CategoriesPresenter;
+import com.example.aman.offercart_v1.home.presenter.CategoriesPresenterImpl;
+
+import java.util.List;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -19,7 +33,7 @@ import com.example.aman.offercart_v1.R;
  * Use the {@link CategoryFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class CategoryFragment extends Fragment{
+public class CategoryFragment extends Fragment implements CategoriesView{
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -30,6 +44,15 @@ public class CategoryFragment extends Fragment{
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    private CategoriesPresenter categoriesPresenter;
+    private CategoryAdapter categoryAdapter;
+    private LinearLayoutManager linearLayoutManager;
+
+    @BindView(R.id.category_recycler)
+    RecyclerView recyclerView;
+
+    @BindView(R.id.categories_progressbar)
+    ProgressBar progressBar;
 
     private OnFragmentInteractionListener mListener;
 
@@ -67,17 +90,27 @@ public class CategoryFragment extends Fragment{
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
 
 
 
         View view= inflater.inflate(R.layout.fragment_category, container, false);
 
-
+        ButterKnife.bind(this,view);
+        initialize();
+        categoriesPresenter.getCategories();
 
         return view;
 
+    }
 
+    void initialize()
+    {
+        categoriesPresenter=new CategoriesPresenterImpl(this,new RetrofitCategoriesProvider());
+        categoryAdapter=new CategoryAdapter(getContext());
+        recyclerView.setHasFixedSize(true);
+        linearLayoutManager=new LinearLayoutManager(getContext());
+        recyclerView.setLayoutManager(linearLayoutManager);
+        recyclerView.setAdapter(categoryAdapter);
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -97,6 +130,29 @@ public class CategoryFragment extends Fragment{
     public void onDetach() {
         super.onDetach();
         mListener = null;
+    }
+
+    @Override
+    public void showMessage(String message) {
+        Toast.makeText(getContext(), message, Toast.LENGTH_LONG).show();
+    }
+
+    @Override
+    public void showProgressbar(boolean show) {
+        if (show) {
+            progressBar.setVisibility(View.VISIBLE);
+            recyclerView.setVisibility(View.VISIBLE);
+        } else {
+            progressBar.setVisibility(View.GONE);
+        }
+
+    }
+
+    @Override
+    public void onDataReceived(List<CategoryData> categoryDatas) {
+        categoryAdapter.setData(categoryDatas);
+        categoryAdapter.notifyDataSetChanged();
+
     }
 
     /**
