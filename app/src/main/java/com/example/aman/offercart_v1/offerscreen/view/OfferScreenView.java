@@ -13,5 +13,8 @@ public interface OfferScreenView {
 
     void showMessage(String error);
     void showProgressBar(boolean show);
-    void setData(List<OfferScreenDetails> offerScreenDetails);
+    void onOfferVerified(List<OfferScreenDetails> offerScreenDetailsList);
+    void onOfferSelected(int offer_id,String offer_code,String offer_name);
+    void onOfferSent();
+
 }

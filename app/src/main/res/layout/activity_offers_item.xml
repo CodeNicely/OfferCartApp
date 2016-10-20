@@ -8,6 +8,22 @@
 
     android:paddingLeft="20dp"
     android:paddingRight="20dp">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="165dp"
+        app:srcCompat="?attr/colorControlHighlight"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="45dp"
+        android:id="@+id/imageView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+
+
+
+
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -16,29 +32,32 @@
         app:contentPadding="4dp"
         >
         <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_width="match_parent"
+            android:layout_height="165dp">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
                 android:gravity="center"
-                android:text="Offer"
+                android:text="Offer_name"
 
                 android:textSize="22dp"
                 android:background="#ffffff"
                 android:id="@+id/offer"
                 android:textColor="#1b264f"
                 />
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:id="@+id/select_button"
-
-                android:background="@color/black"
-                android:text="Select"
-                android:textColor="@color/white"
-                android:layout_alignParentRight="true"
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:gravity="center"
+                android:text="Offer_des"
+                android:textSize="22dp"
+                android:background="#ffffff"
+                android:id="@+id/offer_des"
+                android:textColor="#1b264f"
                 />
+
+
         </RelativeLayout>
 
     </android.support.v7.widget.CardView>

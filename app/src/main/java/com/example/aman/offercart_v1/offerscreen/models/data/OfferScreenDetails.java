@@ -8,7 +8,7 @@ public class OfferScreenDetails {
 
     private String offer_des;
     private int data_type;
-    private int offer_data;
+    private int offer_id;
     private String offer_code;
     private String offer_validdate;
     private String offer_name;
@@ -19,7 +19,7 @@ public class OfferScreenDetails {
     {
         this.offer_des = offer_des;
         this.data_type = data_type;
-        this.offer_data = offer_data;
+        this.offer_id = offer_data;
         this.offer_code = offer_code;
         this.offer_validdate = offer_validdate;
         this.offer_name = offer_name;
@@ -34,8 +34,8 @@ public class OfferScreenDetails {
         return data_type;
     }
 
-    public int getOffer_data() {
-        return offer_data;
+    public int getOffer_id() {
+        return offer_id;
     }
 
     public String getOffer_code() {

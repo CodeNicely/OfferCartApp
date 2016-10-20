@@ -6,37 +6,58 @@ package com.example.aman.offercart_v1.offerscreen.models.data;
 
 public class OfferScreenUpdateData {
 
-    private String offer;
+    private int offer_id;
+    private String offer_code;
+    private String offer_name;
+
     private boolean success;
     private String message;
 
-    public OfferScreenUpdateData(String offer, boolean success, String message) {
-        this.offer = offer;
-        this.message= message;
-        this.success= success;
-    }
-
-    public void setOffer(String offer) {
-        this.offer = offer;
-    }
-
-    public void setSuccess(boolean success) {
+    public OfferScreenUpdateData(int offer_id, String offer_code, String offer_name, boolean success, String message) {
+        this.offer_id = offer_id;
+        this.offer_code = offer_code;
+        this.offer_name = offer_name;
         this.success = success;
-    }
-
-    public void setMessage(String message) {
         this.message = message;
     }
 
-    public String getOffer() {
-        return offer;
+    public int getOffer_id() {
+        return offer_id;
+    }
+
+    public void setOffer_id(int offer_id) {
+        this.offer_id = offer_id;
+    }
+
+    public String getOffer_code() {
+        return offer_code;
+    }
+
+    public void setOffer_code(String offer_code) {
+        this.offer_code = offer_code;
+    }
+
+    public String getOffer_name() {
+        return offer_name;
+    }
+
+    public void setOffer_name(String offer_name) {
+        this.offer_name = offer_name;
     }
 
     public boolean isSuccess() {
         return success;
     }
 
+    public void setSuccess(boolean success) {
+        this.success = success;
+    }
+
     public String getMessage() {
         return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
     }
 }

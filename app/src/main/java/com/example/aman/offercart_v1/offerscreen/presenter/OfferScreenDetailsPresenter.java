@@ -8,6 +8,6 @@ public interface OfferScreenDetailsPresenter
 {
 
     void requestOfferList();
-    void responseOfferList(String offer);
+    void responseOfferList(int offer_id, String offer_code, String offer_name);
 
 }
