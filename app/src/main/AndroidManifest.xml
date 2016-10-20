@@ -22,20 +22,24 @@
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Black.NoTitleBar"
             >
-
+            <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
 
         </activity>
         <activity android:name=".home.view.HomePage">
-            <intent-filter>
+            <!--intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            </intent-filter-->
         </activity>
 
         <!-- Main activity -->
 
         <activity android:name=".LoginScreen.view.view.LoginScreenActivity"/>
+        <activity android:name=".Otp.view.OtpViewImpl"/>
 
         <activity
             android:name=".WelcomeScreen.view.WelcomeScreenActivity"

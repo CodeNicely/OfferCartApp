@@ -6,6 +6,7 @@
     <JAVADOC />
     <SOURCES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/logging-interceptor/3.2.0/a22fffb4a254bb0ade612c7c93251751f5ddd68b/logging-interceptor-3.2.0-sources.jar!/" />
+      <root url="jar://$USER_HOME$/caches/modules-2/files-2.1/com.squareup.okhttp3/logging-interceptor/3.2.0/a22fffb4a254bb0ade612c7c93251751f5ddd68b/logging-interceptor-3.2.0-sources.jar!/" />
     </SOURCES>
   </library>
 </component>
