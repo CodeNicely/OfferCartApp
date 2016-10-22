@@ -1,4 +1,4 @@
-package com.example.aman.offercart_v1.WelcomeScreen.models.data;
+package com.example.aman.offercart_v1.welcome_screen.models.data;
 
 import java.util.List;
 

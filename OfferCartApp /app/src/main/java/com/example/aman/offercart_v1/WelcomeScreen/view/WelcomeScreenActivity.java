@@ -1,4 +1,4 @@
-package com.example.aman.offercart_v1.WelcomeScreen.view;
+package com.example.aman.offercart_v1.welcome_screen.view;
 
 /**
  * Created by aman on 12/10/16.
@@ -16,7 +16,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import com.example.aman.offercart_v1.LoginScreen.view.view.LoginScreenActivity;
+import com.example.aman.offercart_v1.login.view.view.LoginScreenActivity;
 import com.example.aman.offercart_v1.R;
 import com.example.aman.offercart_v1.helper.SharedPrefs;
 

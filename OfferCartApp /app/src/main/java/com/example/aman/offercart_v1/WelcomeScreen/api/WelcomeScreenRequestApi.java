@@ -1,6 +1,6 @@
-package com.example.aman.offercart_v1.WelcomeScreen.api;
+package com.example.aman.offercart_v1.welcome_screen.api;
 
-import com.example.aman.offercart_v1.WelcomeScreen.models.data.WelcomeScreenData;
+import com.example.aman.offercart_v1.welcome_screen.models.data.WelcomeScreenData;
 import com.example.aman.offercart_v1.helper.Urls;
 
 import retrofit2.Call;

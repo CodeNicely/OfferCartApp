@@ -1,13 +1,13 @@
-package com.example.aman.offercart_v1.SplashScreen.presenter;
+package com.example.aman.offercart_v1.splash_screen.presenter;
 
 import android.util.Log;
 
-import com.example.aman.offercart_v1.SplashScreen.SplashScreenCallback;
-import com.example.aman.offercart_v1.SplashScreen.models.RetrofitSplashScreenProvider;
-import com.example.aman.offercart_v1.SplashScreen.models.SplashScreenProvider;
-import com.example.aman.offercart_v1.SplashScreen.models.data.SplashScreenData;
-import com.example.aman.offercart_v1.SplashScreen.view.SplashScreenActivity;
-import com.example.aman.offercart_v1.SplashScreen.view.SplashScreenView;
+import com.example.aman.offercart_v1.splash_screen.SplashScreenCallback;
+import com.example.aman.offercart_v1.splash_screen.models.RetrofitSplashScreenProvider;
+import com.example.aman.offercart_v1.splash_screen.models.SplashScreenProvider;
+import com.example.aman.offercart_v1.splash_screen.models.data.SplashScreenData;
+import com.example.aman.offercart_v1.splash_screen.view.SplashScreenActivity;
+import com.example.aman.offercart_v1.splash_screen.view.SplashScreenView;
 
 /**
  * Created by aman on 13/10/16.

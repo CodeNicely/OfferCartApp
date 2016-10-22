@@ -1,11 +1,5 @@
 package com.example.aman.offercart_v1.wallet.model;
 
-import android.util.Log;
-import android.widget.Toast;
-
-import com.example.aman.offercart_v1.cityScreen.api.CityScreenRequestApi;
-import com.example.aman.offercart_v1.cityScreen.api.SendSelectedCityApi;
-import com.example.aman.offercart_v1.cityScreen.models.RetrofitCityScreenProvider;
 import com.example.aman.offercart_v1.helper.Urls;
 import com.example.aman.offercart_v1.wallet.api.WalletApi;
 import com.example.aman.offercart_v1.wallet.model.data.WalletData;

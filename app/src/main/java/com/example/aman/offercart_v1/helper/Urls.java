@@ -6,19 +6,19 @@ package com.example.aman.offercart_v1.helper;
 public class Urls {
 
 
-    //public static final String BASE_URL = "http://192.168.43.19:8000/";
+    public static final String BASE_URL = "http://192.168.0.109:8000/";
 
-    public static final String BASE_URL = "http://xendroiders.pythonanywhere.com/";
+//    public static final String BASE_URL = "http://xendroiders.pythonanywhere.com/";
 
     //splash_screen
     public static final String REQUEST_SPLASH_SCREEN = "version/";
     //public static final String REQUEST_SIGN_IN_API = "Here half url will be there leaving base url ";
     //welcome_screen
-    public static final String REQUEST_Welcome_SCREEN = "url/";
+    public static final String REQUEST_Welcome_SCREEN = "welcome/";
 
     //login_screen
-    public static final String SEND_OTP = "otp/";
-    public static final String VERIFY_OTP = "otp1/";
+    public static final String SEND_OTP = "send_otp/";
+    public static final String VERIFY_OTP = "verify_otp/";
 
     public static final String CATEGORIES = "category/";
     public static final String WALLET = "wallet/";
@@ -31,7 +31,7 @@ public class Urls {
     public static final String REQUEST_OFFER = "offer/";
 
     //shop
-    public static final String RequestShop= "shop/";
+    public static final String RequestShop = "shop/";
 
 
 }

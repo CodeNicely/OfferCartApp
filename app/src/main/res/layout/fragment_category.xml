@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:background="@drawable/businessman"
     android:layout_height="match_parent"
-    tools:context=".shopcategories.view.CategoryFragment">
+    tools:context=".categories.view.CategoryFragment">
 
    <android.support.v7.widget.RecyclerView
        android:layout_width="match_parent"

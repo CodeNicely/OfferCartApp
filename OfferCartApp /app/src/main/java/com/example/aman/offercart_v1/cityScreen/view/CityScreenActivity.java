@@ -1,4 +1,4 @@
-package com.example.aman.offercart_v1.cityScreen.view;
+package com.example.aman.offercart_v1.city.view;
 
 import android.app.Activity;
 import android.os.Bundle;

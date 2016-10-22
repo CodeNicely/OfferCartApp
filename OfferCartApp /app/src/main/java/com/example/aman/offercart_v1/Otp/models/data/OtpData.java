@@ -1,4 +1,4 @@
-package com.example.aman.offercart_v1.Otp.models.data;
+package com.example.aman.offercart_v1.verify_otp.models.data;
 
 import com.example.aman.offercart_v1.helper.Urls;
 

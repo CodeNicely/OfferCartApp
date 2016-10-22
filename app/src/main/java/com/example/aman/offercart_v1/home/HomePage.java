@@ -14,7 +14,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
 import com.example.aman.offercart_v1.R;
-import com.example.aman.offercart_v1.shopcategories.view.CategoryFragment;
+import com.example.aman.offercart_v1.categories.view.CategoryFragment;
 import com.example.aman.offercart_v1.shops.view.ShopFragment;
 import com.example.aman.offercart_v1.wallet.view.WalletFragment;
 

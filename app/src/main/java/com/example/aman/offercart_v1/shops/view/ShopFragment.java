@@ -14,10 +14,7 @@ import android.widget.Toast;
 
 import com.example.aman.offercart_v1.R;
 import com.example.aman.offercart_v1.shops.model.MockShopProvider;
-import com.example.aman.offercart_v1.shops.model.RetrofitShopProvider;
 import com.example.aman.offercart_v1.shops.model.data.ShopData;
-import com.example.aman.offercart_v1.shops.presenter.ShopPresenter;
-import com.example.aman.offercart_v1.shops.presenter.ShopPresenterImpl;
 
 import java.util.List;
 
@@ -44,7 +41,7 @@ public class ShopFragment extends Fragment implements ShopView{
 
     private OnFragmentInteractionListener mListener;
 
-    private ShopPresenter shopPresenter;
+//    private ShopPresenter shopPresenter;
     private ShopAdapter shopAdapter;
     private LinearLayoutManager linearLayoutManager;
 
@@ -93,7 +90,7 @@ public class ShopFragment extends Fragment implements ShopView{
         View view= inflater.inflate(R.layout.fragment_shop, container, false);
         ButterKnife.bind(this,view);
         initialize();
-        shopPresenter.getShops("1");
+  //      shopPresenter.getShops("1");
         return view;
     }
 
@@ -103,7 +100,7 @@ public class ShopFragment extends Fragment implements ShopView{
         shopAdapter=new ShopAdapter(getContext());
         recyclerView.setHasFixedSize(true);
 //        shopPresenter=new ShopPresenterImpl(this,new RetrofitShopProvider());
-        shopPresenter=new ShopPresenterImpl(this,new MockShopProvider());
+    //    shopPresenter=new ShopPresenterImpl(this,new MockShopProvider());
         recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.setAdapter(shopAdapter);
 
