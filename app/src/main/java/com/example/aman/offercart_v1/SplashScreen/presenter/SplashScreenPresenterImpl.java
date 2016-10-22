@@ -60,8 +60,8 @@ public class SplashScreenPresenterImpl implements SplashScreenPresenter
 
             @Override
             public void onFailure(String error) {
-               // splashScreenView.showProgressBar(true);
-               // splashScreenView.showMessage("Failed");
+                splashScreenView.showProgressBar(false);
+                splashScreenView.showMessage("No Internet Connection");
 
             }
         });

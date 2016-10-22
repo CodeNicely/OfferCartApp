@@ -17,11 +17,6 @@ import retrofit2.http.POST;
 
 public interface ShopCategoryRequestApi {
 
-    @GET(Urls.REQUEST_CITY)
-    Call<ShopCategoryData> getShopCategoryData();
 
-    @FormUrlEncoded
-    @POST(Urls.REQUEST_CITY)
-    Call<ShopCategoryData> getShops(@Field("subcategory_name") String subcategory_name);
 
 }
