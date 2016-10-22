@@ -6,7 +6,8 @@ package com.example.aman.offercart_v1.helper;
 public class Urls {
 
 
-    //public static final String BASE_URL = "http://192.168.1.6:8000/";
+    //public static final String BASE_URL = "http://192.168.43.19:8000/";
+
     public static final String BASE_URL = "http://xendroiders.pythonanywhere.com/";
 
     //splash_screen
@@ -19,10 +20,15 @@ public class Urls {
     public static final String SEND_OTP = "otp/";
     public static final String VERIFY_OTP = "otp1/";
 
+    public static final String CATEGORIES = "category/";
+    public static final String WALLET = "wallet/";
+
     //city_screen
     public static final String REQUEST_CITY = "city/";
+    public static final String Send_CITY = "selected_city/";
 
-    //
+    //offer
+    public static final String REQUEST_OFFER = "offer/";
 
 
 }

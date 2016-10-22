@@ -7,6 +7,7 @@ public interface OtpView {
 
     void showLoading(boolean show);
     void showMessage(String message);
+   void onOtpVerified();
 
 
 }

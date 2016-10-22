@@ -9,6 +9,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     >
 
+
     <TextView android:text="Login" android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textview"
@@ -73,6 +74,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_alignParentBottom="true"
-        android:visibility="gone" />
+        android:visibility="gone"
+        android:layout_centerHorizontal="true"/>
 
 </RelativeLayout>

@@ -126,7 +126,21 @@ public class SplashScreenActivity extends Activity implements SplashScreenView
         else if (splashScreenData.isSuccess())
         {
 
+/*
+           if (sharedPrefs.isLoggedIn())
+            {
+                Intent city = new Intent(SplashScreenActivity.this, CityScreenActivity.class);
+                startActivity(city);
+                finish();
+            } else
+           {
 
+               Intent Welcome = new Intent(SplashScreenActivity.this, WelcomeScreenActivity.class);
+//               Welcome.putExtra("mobile","9174908579");
+               startActivity(Welcome);
+               finish();
+
+*/
             Handler handler=new Handler();
             handler.postDelayed(new Runnable() {
                 @Override
@@ -148,6 +162,7 @@ public class SplashScreenActivity extends Activity implements SplashScreenView
 
                 }
             },5000);
+
 
 
         }
