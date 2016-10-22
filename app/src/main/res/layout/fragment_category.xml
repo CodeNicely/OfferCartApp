@@ -1,8 +1,9 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@drawable/businessman"
     android:layout_height="match_parent"
-    tools:context="com.example.aman.offercart_v1.home.view.CategoryFragment">
+    tools:context=".shopcategories.view.CategoryFragment">
 
    <android.support.v7.widget.RecyclerView
        android:layout_width="match_parent"

@@ -5,15 +5,24 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ProgressBar;
+import android.widget.Toast;
 
 import com.example.aman.offercart_v1.R;
+import com.example.aman.offercart_v1.shops.model.MockShopProvider;
+import com.example.aman.offercart_v1.shops.model.RetrofitShopProvider;
 import com.example.aman.offercart_v1.shops.model.data.ShopData;
 import com.example.aman.offercart_v1.shops.presenter.ShopPresenter;
+import com.example.aman.offercart_v1.shops.presenter.ShopPresenterImpl;
 
 import java.util.List;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -38,6 +47,12 @@ public class ShopFragment extends Fragment implements ShopView{
     private ShopPresenter shopPresenter;
     private ShopAdapter shopAdapter;
     private LinearLayoutManager linearLayoutManager;
+
+    @BindView(R.id.shops_recycler)
+    RecyclerView recyclerView;
+
+    @BindView(R.id.shop_progressbar)
+    ProgressBar progressBar;
 
     public ShopFragment() {
         // Required empty public constructor
@@ -73,8 +88,25 @@ public class ShopFragment extends Fragment implements ShopView{
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_shop, container, false);
+
+
+        View view= inflater.inflate(R.layout.fragment_shop, container, false);
+        ButterKnife.bind(this,view);
+        initialize();
+        shopPresenter.getShops("1");
+        return view;
+    }
+
+    void initialize()
+    {
+        linearLayoutManager=new LinearLayoutManager(getContext());
+        shopAdapter=new ShopAdapter(getContext());
+        recyclerView.setHasFixedSize(true);
+//        shopPresenter=new ShopPresenterImpl(this,new RetrofitShopProvider());
+        shopPresenter=new ShopPresenterImpl(this,new MockShopProvider());
+        recyclerView.setLayoutManager(linearLayoutManager);
+        recyclerView.setAdapter(shopAdapter);
+
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -87,12 +119,7 @@ public class ShopFragment extends Fragment implements ShopView{
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        if (context instanceof OnFragmentInteractionListener) {
-            mListener = (OnFragmentInteractionListener) context;
-        } else {
-            throw new RuntimeException(context.toString()
-                    + " must implement OnFragmentInteractionListener");
-        }
+
     }
 
     @Override
@@ -103,17 +130,23 @@ public class ShopFragment extends Fragment implements ShopView{
 
     @Override
     public void showLoading(boolean show) {
-
+        if (show) {
+            progressBar.setVisibility(View.VISIBLE);
+            recyclerView.setVisibility(View.VISIBLE);
+        } else {
+            progressBar.setVisibility(View.GONE);
+        }
     }
 
     @Override
     public void showMessage(String message) {
-
+        Toast.makeText(getContext(), message, Toast.LENGTH_LONG).show();
     }
 
     @Override
     public void OnShopsDataReceived(List<ShopData> shopDataList) {
-
+        shopAdapter.setData(shopDataList);
+        shopAdapter.notifyDataSetChanged();
     }
 
     /**

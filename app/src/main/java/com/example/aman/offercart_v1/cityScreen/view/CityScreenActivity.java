@@ -17,7 +17,7 @@ import com.example.aman.offercart_v1.cityScreen.models.data.CityScreenData;
 import com.example.aman.offercart_v1.cityScreen.presenter.CityScreenPresenter;
 import com.example.aman.offercart_v1.cityScreen.presenter.CityScreenPresenterImpl;
 import com.example.aman.offercart_v1.helper.SharedPrefs;
-import com.example.aman.offercart_v1.home.view.HomePage;
+import com.example.aman.offercart_v1.home.HomePage;
 
 import java.util.List;
 

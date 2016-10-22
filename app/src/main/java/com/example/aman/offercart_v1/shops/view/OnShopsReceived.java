@@ -1,6 +1,7 @@
 package com.example.aman.offercart_v1.shops.view;
 
 import com.example.aman.offercart_v1.shops.model.data.ShopData;
+import com.example.aman.offercart_v1.shops.model.data.ShopList;
 
 import java.util.List;
 
@@ -9,5 +10,5 @@ import java.util.List;
  */
 public interface OnShopsReceived {
     void onFailure();
-    void onSuccess(List<ShopData>shopDatas);
+    void onSuccess(ShopList shopList);
 }
