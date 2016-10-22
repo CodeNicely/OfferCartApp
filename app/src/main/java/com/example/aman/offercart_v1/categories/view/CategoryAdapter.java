@@ -47,7 +47,6 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.MyView
         holder.name.setText(categoryData.getName());
         Picasso.with(context)
                 .load(categoryData.getImage())
-                .error(R.drawable.happy)
                 .into(holder.image);
 
     }

@@ -47,7 +47,6 @@ public class ShopAdapter extends RecyclerView.Adapter<ShopAdapter.MyViewHolder>{
         holder.address.setText(shopData.getAddress());
         Picasso.with(context)
                 .load(shopData.getImage())
-                .error(R.drawable.happy)
                 .into(holder.image);
     }
 

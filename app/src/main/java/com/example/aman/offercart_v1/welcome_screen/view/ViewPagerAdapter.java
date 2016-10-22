@@ -38,7 +38,7 @@ public class ViewPagerAdapter extends PagerAdapter
     public Object instantiateItem(ViewGroup container, int position) {
         layoutInflater = LayoutInflater.from(context);
 
-        View view = layoutInflater.inflate(R.layout.view_pager_item, container, false);
+        View view = layoutInflater.inflate(R.layout.welcome_view_pager_item, container, false);
         container.addView(view);
         WelcomeImageDetails welcomeImageDetails = welcomeImageDetailsList.get(position);
         TextView textView = (TextView) view.findViewById(R.id.tv1);
@@ -46,7 +46,6 @@ public class ViewPagerAdapter extends PagerAdapter
         textView.setText(welcomeImageDetails.getMessage());
         Picasso.with(context)
                 .load(welcomeImageDetails.getImage_url())
-                .error(R.drawable.happy)
                 .into(imageView);
 
         return view;
