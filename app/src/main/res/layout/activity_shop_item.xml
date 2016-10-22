@@ -30,7 +30,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="130dp"
-            #00ffffff
             android:text="Opposite,"
             />
     </android.support.v7.widget.CardView>

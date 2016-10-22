@@ -11,4 +11,5 @@ public interface OfferScreenDetailsCallback
 {
     void onSuccess(OfferScreenData offerScreenData);
     void onFailure(String error);
+
 }

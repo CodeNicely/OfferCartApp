@@ -89,10 +89,10 @@ public class OfferScreenActivity extends Activity implements OfferScreenView {
 
     @Override
     public void onOfferSelected(int offer_id, String offer_code, String offer_name) {
-            offerScreenDetailsPresenter=new OfferScreenDetailsPresenterImpl
+          /*  offerScreenDetailsPresenter=new OfferScreenDetailsPresenterImpl
                     (this,new RetrofitOfferScreenUpdateProvider());
             offerScreenDetailsPresenter.responseOfferList(offer_id,offer_code,offer_name);
-    }
+ */   }
 
     @Override
     public void onOfferSent() {
