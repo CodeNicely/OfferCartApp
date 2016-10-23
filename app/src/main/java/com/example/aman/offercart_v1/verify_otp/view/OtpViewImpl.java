@@ -31,6 +31,7 @@ public class OtpViewImpl extends Activity implements OtpView {
     String mobile;
     String otp1;
     private SharedPrefs sharedPrefs;
+    String access_token;
 
     private OtpPresenter otpPresenter;
     private RetrofitOtpProvider retrofitOtpProvider;
@@ -42,6 +43,7 @@ public class OtpViewImpl extends Activity implements OtpView {
 
         ButterKnife.bind(this);
         sharedPrefs=new SharedPrefs(this);
+        access_token=sharedPrefs.getAccessToken();
         otpPresenter =new OtpPresenterImpl(this,
                 new RetrofitOtpProvider());
 
@@ -55,7 +57,7 @@ public class OtpViewImpl extends Activity implements OtpView {
             @Override
             public void onClick(View v) {
                 otp1 = otp.getText().toString();
-                otpPresenter.requestOtp(otp1, mobile);
+                otpPresenter.requestOtp(access_token,otp1, mobile);
             }
         });
 

@@ -21,7 +21,7 @@ public class RetrofitOfferScreenDetailsProvider implements OfferScreenDetailsPro
 
 
     @Override
-    public void requestOfferList(final OfferScreenDetailsCallback offerScreenDetailsCallback) {
+    public void requestOfferList(String offerToken,final OfferScreenDetailsCallback offerScreenDetailsCallback) {
 
         Gson gson = new GsonBuilder()
                 .setLenient()

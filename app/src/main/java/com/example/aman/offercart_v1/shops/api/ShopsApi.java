@@ -12,5 +12,5 @@ import retrofit2.http.Query;
  */
 public interface ShopsApi {
     @GET(Urls.RequestShop)
-    Call<ShopList>getShops(@Query("category_id")String category_id);
+    Call<ShopList>getShops( @Query("category_id")String category_id);
 }
