@@ -1,5 +1,4 @@
-package com.example.aman.offercart_v1.login.view.models;
-
+package com.example.aman.offercart_v1.login.models;
 
 import com.example.aman.offercart_v1.helper.Urls;
 
@@ -11,9 +10,9 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-import com.example.aman.offercart_v1.login.view.Api.LoginApi;
-import com.example.aman.offercart_v1.login.view.LoginCallback;
-import com.example.aman.offercart_v1.login.view.models.data.LoginData;
+import com.example.aman.offercart_v1.login.LoginCallback;
+import com.example.aman.offercart_v1.login.api.LoginApi;
+import com.example.aman.offercart_v1.login.models.data.LoginData;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 

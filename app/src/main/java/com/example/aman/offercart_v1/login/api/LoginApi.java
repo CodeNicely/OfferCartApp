@@ -1,4 +1,4 @@
-package com.example.aman.offercart_v1.login.view.Api;
+package com.example.aman.offercart_v1.login.api;
 
 import retrofit2.Call;
 import retrofit2.http.Field;
@@ -6,9 +6,7 @@ import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.POST;
 
 import com.example.aman.offercart_v1.helper.Urls;
-import com.example.aman.offercart_v1.login.view.models.data.LoginData;
-
-
+import com.example.aman.offercart_v1.login.models.data.LoginData;
 
 
 /**

@@ -3,6 +3,7 @@ package com.example.aman.offercart_v1.verify_otp.view;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -10,6 +11,7 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 
+import com.example.aman.offercart_v1.helper.SharedPrefs;
 import com.example.aman.offercart_v1.verify_otp.presenter.OtpPresenterImpl;
 import com.example.aman.offercart_v1.verify_otp.presenter.OtpPresenter;
 import com.example.aman.offercart_v1.R;
@@ -28,6 +30,7 @@ public class OtpViewImpl extends Activity implements OtpView {
     ProgressBar progressbar;
     String mobile;
     String otp1;
+    private SharedPrefs sharedPrefs;
 
     private OtpPresenter otpPresenter;
     private RetrofitOtpProvider retrofitOtpProvider;
@@ -38,8 +41,7 @@ public class OtpViewImpl extends Activity implements OtpView {
         setContentView(R.layout.activity_otp);
 
         ButterKnife.bind(this);
-
-
+        sharedPrefs=new SharedPrefs(this);
         otpPresenter =new OtpPresenterImpl(this,
                 new RetrofitOtpProvider());
 
@@ -74,11 +76,14 @@ public class OtpViewImpl extends Activity implements OtpView {
     }
 
     @Override
-    public void onOtpVerified() {
-    Intent a=new Intent(OtpViewImpl.this, CityScreenActivity.class);
+    public void onOtpVerified(String token) {
+        Log.d("res",token);
+        sharedPrefs.setAccessToken(token);
+        Log.d("res","done");
+        Intent a=new Intent(OtpViewImpl.this, CityScreenActivity.class);
+        startActivity(a);
+        finish();
 
-     startActivity(a);
-    finish();
+    }
 
-     }
 }

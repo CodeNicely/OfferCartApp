@@ -1,11 +1,13 @@
-package com.example.aman.offercart_v1.login.view.presenter;
+package com.example.aman.offercart_v1.login.presenter;
 
 import android.util.Log;
 
-import com.example.aman.offercart_v1.login.view.models.LoginProvider;
-import com.example.aman.offercart_v1.login.view.view.LoginScreenView;
-import com.example.aman.offercart_v1.login.view.models.data.LoginData;
-import com.example.aman.offercart_v1.login.view.LoginCallback;
+import com.example.aman.offercart_v1.login.LoginCallback;
+import com.example.aman.offercart_v1.login.models.LoginProvider;
+import com.example.aman.offercart_v1.login.models.data.LoginData;
+import com.example.aman.offercart_v1.login.view.LoginScreenView;
+
+
 /**
  * Created by aman on 15/10/16.
  */
@@ -27,14 +29,18 @@ public class LoginScreenPresenterImpl implements LoginScreenPresenter {
         loginProvider.requestLogin(name, mobile, email, new LoginCallback() {
             @Override
             public void onSuccess(LoginData loginData) {
-                Log.d("Response","succ");
+                if(loginData.isSuccess())
+                {
+                    loginView.showLoading(false);
+                    loginView.onLoginVerified();
+                }
+                else
+                {
+                    loginView.showLoading(false);
+                    loginView.showMessage(loginData.getMessage());
 
+                }
 
-
-                loginView.showLoading(false);
-
-                loginView.showMessage("success");
-                loginView.onLoginVerified();
             }
 
             public void onFailure(String error) {

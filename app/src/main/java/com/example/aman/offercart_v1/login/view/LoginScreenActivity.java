@@ -1,4 +1,4 @@
-package com.example.aman.offercart_v1.login.view.view;
+package com.example.aman.offercart_v1.login.view;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -9,14 +9,14 @@ import android.widget.EditText;
 
 import butterknife.ButterKnife;
 
-import com.example.aman.offercart_v1.login.view.presenter.LoginScreenPresenter;
+import com.example.aman.offercart_v1.login.models.RetrofitLoginScreenProvider;
+import com.example.aman.offercart_v1.login.presenter.LoginScreenPresenter;
+import com.example.aman.offercart_v1.login.presenter.LoginScreenPresenterImpl;
 import com.example.aman.offercart_v1.verify_otp.view.OtpViewImpl;
 import com.example.aman.offercart_v1.R;
-import com.example.aman.offercart_v1.login.view.models.RetrofitLoginScreenProvider;
 import android.widget.ProgressBar;
 import android.view.View;
 import android.widget.Toast;
-import com.example.aman.offercart_v1.login.view.presenter.LoginScreenPresenterImpl;
 
 
 /**

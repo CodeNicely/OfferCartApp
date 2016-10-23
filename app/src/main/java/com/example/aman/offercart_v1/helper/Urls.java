@@ -6,9 +6,9 @@ package com.example.aman.offercart_v1.helper;
 public class Urls {
 
 
-//    public static final String BASE_URL = "http://192.168.0.109:8000/";
+    public static final String BASE_URL = "http://192.168.0.120:8000/";
 
-    public static final String BASE_URL = "http://xendroiders.pythonanywhere.com/";
+//    public static final String BASE_URL = "http://xendroiders.pythonanywhere.com/";
 
     //splash_screen
     public static final String REQUEST_SPLASH_SCREEN = "version/";
@@ -25,13 +25,11 @@ public class Urls {
 
     //city_screen
     public static final String REQUEST_CITY = "city/";
-    public static final String Send_CITY = "selected_city/";
+    public static final String Send_CITY = "city/";
 
     //offer
     public static final String REQUEST_OFFER = "offer/";
-
     //shop
     public static final String RequestShop = "shop/";
-
 
 }
