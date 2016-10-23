@@ -1,9 +1,9 @@
-package com.example.aman.offercart_v1.offer.models;
+package com.example.aman.offercart_v1.offer.model;
 
 import com.example.aman.offercart_v1.helper.Urls;
 import com.example.aman.offercart_v1.offer.OfferScreenDetailsCallback;
 import com.example.aman.offercart_v1.offer.api.OfferScreenRequestApi;
-import com.example.aman.offercart_v1.offer.models.data.OfferScreenData;
+import com.example.aman.offercart_v1.offer.model.data.OfferScreenList;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -32,17 +32,17 @@ public class RetrofitOfferScreenDetailsProvider implements OfferScreenDetailsPro
                 .build();
         final OfferScreenRequestApi offerScreenRequestApi=retrofit.create(OfferScreenRequestApi.class);
 
-        final Call<OfferScreenData> offerScreenDataCall=offerScreenRequestApi.getCategoryListData();
+        final Call<OfferScreenList> offerScreenDataCall=offerScreenRequestApi.getCategoryListData();
 
-            offerScreenDataCall.enqueue(new Callback<OfferScreenData>() {
+            offerScreenDataCall.enqueue(new Callback<OfferScreenList>() {
                 @Override
-                public void onResponse(Call<OfferScreenData> call, Response<OfferScreenData> response) {
+                public void onResponse(Call<OfferScreenList> call, Response<OfferScreenList> response) {
 
                     offerScreenDetailsCallback.onSuccess(response.body());
                 }
 
                 @Override
-                public void onFailure(Call<OfferScreenData> call, Throwable t) {
+                public void onFailure(Call<OfferScreenList> call, Throwable t) {
                     t.printStackTrace();
 
                 }

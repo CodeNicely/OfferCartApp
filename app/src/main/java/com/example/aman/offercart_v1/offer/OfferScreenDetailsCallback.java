@@ -1,6 +1,6 @@
 package com.example.aman.offercart_v1.offer;
 
-import com.example.aman.offercart_v1.offer.models.data.OfferScreenData;
+import com.example.aman.offercart_v1.offer.model.data.OfferScreenList;
 
 /**
  * Created by aman on 19/10/16.
@@ -8,7 +8,7 @@ import com.example.aman.offercart_v1.offer.models.data.OfferScreenData;
 
 public interface OfferScreenDetailsCallback
 {
-    void onSuccess(OfferScreenData offerScreenData);
+    void onSuccess(OfferScreenList offerScreenData);
     void onFailure(String error);
 
 }

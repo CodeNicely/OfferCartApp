@@ -1,4 +1,4 @@
-package com.example.aman.offercart_v1.offer.models;
+package com.example.aman.offercart_v1.offer.model;
 
 import com.example.aman.offercart_v1.offer.OfferScreenDetailsCallback;
 

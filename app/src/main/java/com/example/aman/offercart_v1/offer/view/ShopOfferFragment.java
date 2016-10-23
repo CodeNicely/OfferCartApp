@@ -1,4 +1,4 @@
-package com.example.aman.offercart_v1.shops.view;
+package com.example.aman.offercart_v1.offer.view;
 
 import android.content.Context;
 import android.net.Uri;
@@ -13,10 +13,14 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.example.aman.offercart_v1.R;
+import com.example.aman.offercart_v1.helper.SharedPrefs;
+import com.example.aman.offercart_v1.offer.model.RetrofitOfferScreenDetailsProvider;
+import com.example.aman.offercart_v1.offer.model.data.OfferScreenDetails;
+import com.example.aman.offercart_v1.offer.presenter.OfferScreenDetailsPresenter;
+import com.example.aman.offercart_v1.offer.presenter.OfferScreenDetailsPresenterImpl;
 import com.example.aman.offercart_v1.shops.model.MockShopProvider;
-import com.example.aman.offercart_v1.shops.model.data.ShopData;
-import com.example.aman.offercart_v1.shops.presenter.ShopPresenter;
 import com.example.aman.offercart_v1.shops.presenter.ShopPresenterImpl;
+import com.example.aman.offercart_v1.shops.view.ShopAdapter;
 
 import java.util.List;
 
@@ -26,12 +30,12 @@ import butterknife.ButterKnife;
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link ShopFragment.OnFragmentInteractionListener} interface
+ * {@link ShopOfferFragment.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link ShopFragment#newInstance} factory method to
+ * Use the {@link ShopOfferFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class ShopFragment extends Fragment implements ShopView{
+public class ShopOfferFragment extends Fragment implements OfferScreenView{
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -41,19 +45,19 @@ public class ShopFragment extends Fragment implements ShopView{
     private String mParam1;
     private String mParam2;
 
-    private OnFragmentInteractionListener mListener;
-
-    private ShopPresenter shopPresenter;
-    private ShopAdapter shopAdapter;
+    private OfferScreenAdapter offerScreenAdapter;
+    private OfferScreenDetailsPresenter offerScreenDetailsPresenter;
     private LinearLayoutManager linearLayoutManager;
+    private SharedPrefs sharedPrefs;
 
-    @BindView(R.id.shops_recycler)
+    @BindView(R.id.offersRecycler)
     RecyclerView recyclerView;
-
-    @BindView(R.id.shop_progressbar)
+    @BindView(R.id.offersProgressBar)
     ProgressBar progressBar;
 
-    public ShopFragment() {
+    private OnFragmentInteractionListener mListener;
+
+    public ShopOfferFragment() {
         // Required empty public constructor
     }
 
@@ -63,11 +67,11 @@ public class ShopFragment extends Fragment implements ShopView{
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment ShopFragment.
+     * @return A new instance of fragment ShopOfferFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static ShopFragment newInstance(String param1, String param2) {
-        ShopFragment fragment = new ShopFragment();
+    public static ShopOfferFragment newInstance(String param1, String param2) {
+        ShopOfferFragment fragment = new ShopOfferFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -87,25 +91,19 @@ public class ShopFragment extends Fragment implements ShopView{
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
-
-        View view= inflater.inflate(R.layout.fragment_shop, container, false);
+        View view= inflater.inflate(R.layout.fragment_shop_offer2, container, false);
         ButterKnife.bind(this,view);
         initialize();
-        shopPresenter.getShops("1");
         return view;
     }
-
     void initialize()
     {
         linearLayoutManager=new LinearLayoutManager(getContext());
-        shopAdapter=new ShopAdapter(getContext());
+        offerScreenAdapter=new OfferScreenAdapter(getContext());
         recyclerView.setHasFixedSize(true);
-//        shopPresenter=new ShopPresenterImpl(this,new RetrofitShopProvider());
-        shopPresenter=new ShopPresenterImpl(this,new MockShopProvider());
+        offerScreenDetailsPresenter=new OfferScreenDetailsPresenterImpl(this,new RetrofitOfferScreenDetailsProvider());
         recyclerView.setLayoutManager(linearLayoutManager);
-        recyclerView.setAdapter(shopAdapter);
-
+        recyclerView.setAdapter(offerScreenAdapter);
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -128,36 +126,37 @@ public class ShopFragment extends Fragment implements ShopView{
     }
 
     @Override
-    public void showLoading(boolean show) {
+    public void showMessage(String error) {
+        Toast.makeText(getContext(), error, Toast.LENGTH_LONG).show();
+    }
+
+    @Override
+    public void showProgressBar(boolean show) {
         if (show) {
             progressBar.setVisibility(View.VISIBLE);
             recyclerView.setVisibility(View.VISIBLE);
         } else {
             progressBar.setVisibility(View.GONE);
         }
+
     }
 
     @Override
-    public void showMessage(String message) {
-        Toast.makeText(getContext(), message, Toast.LENGTH_LONG).show();
+    public void onOfferReceived(List<OfferScreenDetails> offerScreenDetailsList) {
+        offerScreenAdapter.setdata(offerScreenDetailsList);
+        offerScreenAdapter.notifyDataSetChanged();
     }
 
     @Override
-    public void OnShopsDataReceived(List<ShopData> shopDataList) {
-        shopAdapter.setData(shopDataList);
-        shopAdapter.notifyDataSetChanged();
+    public void onOfferSelected(OfferScreenDetails offerScreenDetails) {
+
     }
 
-    /**
-     * This interface must be implemented by activities that contain this
-     * fragment to allow an interaction in this fragment to be communicated
-     * to the activity and potentially other fragments contained in that
-     * activity.
-     * <p/>
-     * See the Android Training lesson <a href=
-     * "http://developer.android.com/training/basics/fragments/communicating.html"
-     * >Communicating with Other Fragments</a> for more information.
-     */
+    @Override
+    public void onOfferSent() {
+
+    }
+
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);

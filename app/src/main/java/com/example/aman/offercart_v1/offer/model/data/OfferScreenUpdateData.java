@@ -1,4 +1,4 @@
-package com.example.aman.offercart_v1.offer.models.data;
+package com.example.aman.offercart_v1.offer.model.data;
 
 /**
  * Created by aman on 20/10/16.
