@@ -46,7 +46,7 @@ public class CityAdapter extends RecyclerView.Adapter<CityAdapter.MyViewHolder> 
 
         holder.city.setText(cityScreenData.getCity_name());
 
-        holder.select.setOnClickListener(new View.OnClickListener() {
+        holder.city.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 cityScreenView.onCitySelected(cityScreenData.getCity_id(),cityScreenData.getCity_name());
@@ -72,7 +72,7 @@ public class CityAdapter extends RecyclerView.Adapter<CityAdapter.MyViewHolder> 
             super(itemView);
             context2=itemView.getContext();
             city= (TextView) itemView.findViewById(R.id.city);
-            select=(Button)itemView.findViewById(R.id.select_button);
+
 
         }
 

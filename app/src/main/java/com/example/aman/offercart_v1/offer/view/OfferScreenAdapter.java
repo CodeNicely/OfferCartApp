@@ -9,7 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.aman.offercart_v1.R;
-import com.example.aman.offercart_v1.offer.models.data.OfferScreenDetails;
+import com.example.aman.offercart_v1.offer.model.data.OfferScreenDetails;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,7 +31,7 @@ public class OfferScreenAdapter extends RecyclerView.Adapter<OfferScreenAdapter.
 
         this.context = context;
         layoutInflater = layoutInflater.from(context);
-        offerScreenView = new OfferScreenActivity();
+
 
     }
     public void setdata(List<OfferScreenDetails> offerScreenDetails)
@@ -54,65 +54,13 @@ public class OfferScreenAdapter extends RecyclerView.Adapter<OfferScreenAdapter.
         holder.offer.setText(offerScreenDetails.getOffer_name());
         holder.offer_des.setText(offerScreenDetails.getOffer_des());
 
-        //holder.imageView.setImage(offerScreenDetails.getOffer_image());
-        holder.imageView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                offerScreenView.onOfferSelected(offerScreenDetails.getOffer_id(),
-                                                offerScreenDetails.getOffer_code(),
-                                                offerScreenDetails.getOffer_name());
-
-
-
-            }
-
-
-
-        });
-
-        holder.offer.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                offerScreenView.onOfferSelected(offerScreenDetails.getOffer_id(),
-                        offerScreenDetails.getOffer_code(),
-                        offerScreenDetails.getOffer_name());
-
-
-
-            }
-
-
-
-        });
-
-        holder.offer_des.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                offerScreenView.onOfferSelected(offerScreenDetails.getOffer_id(),
-                        offerScreenDetails.getOffer_code(),
-                        offerScreenDetails.getOffer_name());
-
-
-
-            }
-
-
-
-        });
-
-
-
-
 
 
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return offerScreenDetailsList.size();
     }
 
 

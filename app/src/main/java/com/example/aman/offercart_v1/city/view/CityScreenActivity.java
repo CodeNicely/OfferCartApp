@@ -85,19 +85,11 @@ public class CityScreenActivity extends AppCompatActivity implements CityScreenV
 
         cityAdapter.setData(cityScreenDataList);
         cityAdapter.notifyDataSetChanged();
-        for(int i=0;i<cityScreenDataList.size();i++)
-        {
-
-            CityScreenData cityScreenData=cityScreenDataList.get(i);
-            Log.d("response",cityScreenData.getCity_name());
-
-        }
 
     }
 
     @Override
     public void onCitySelected(String city_id, String city_name) {
-        Log.d("Response",city_name);
 //        sharedPrefs=new SharedPrefs(this);
 //        sharedPrefs.setKEY_City(city_name);
         cityScreenPresenter=new CityScreenPresenterImpl(this,new RetrofitCityScreenProvider());
