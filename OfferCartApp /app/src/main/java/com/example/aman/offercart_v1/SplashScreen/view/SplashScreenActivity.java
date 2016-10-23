@@ -1,4 +1,4 @@
-package com.example.aman.offercart_v1.SplashScreen.view;
+package com.example.aman.offercart_v1.splash_screen.view;
 
 /**
  * Created by aman on 11/10/16.
@@ -20,12 +20,12 @@ import butterknife.ButterKnife;
 import com.example.aman.offercart_v1.BuildConfig;
 import com.example.aman.offercart_v1.R;
 import com.example.aman.offercart_v1.helper.SharedPrefs;
-import com.example.aman.offercart_v1.SplashScreen.models.RetrofitSplashScreenProvider;
-import com.example.aman.offercart_v1.SplashScreen.models.data.SplashScreenData;
-import com.example.aman.offercart_v1.SplashScreen.presenter.SplashScreenPresenter;
-import com.example.aman.offercart_v1.SplashScreen.presenter.SplashScreenPresenterImpl;
-import com.example.aman.offercart_v1.WelcomeScreen.view.WelcomeScreenActivity;
-import com.example.aman.offercart_v1.cityScreen.view.CityScreenActivity;
+import com.example.aman.offercart_v1.splash_screen.models.RetrofitSplashScreenProvider;
+import com.example.aman.offercart_v1.splash_screen.models.data.SplashScreenData;
+import com.example.aman.offercart_v1.splash_screen.presenter.SplashScreenPresenter;
+import com.example.aman.offercart_v1.splash_screen.presenter.SplashScreenPresenterImpl;
+import com.example.aman.offercart_v1.welcome_screen.view.WelcomeScreenActivity;
+import com.example.aman.offercart_v1.city.view.CityScreenActivity;
 
 
 public class SplashScreenActivity extends Activity implements SplashScreenView

@@ -1,11 +1,11 @@
-package com.example.aman.offercart_v1.SplashScreen.models;
+package com.example.aman.offercart_v1.splash_screen.models;
 
 
 import android.util.Log;
 
-import com.example.aman.offercart_v1.SplashScreen.SplashScreenCallback;
-import com.example.aman.offercart_v1.SplashScreen.api.SplashScreenRequestApi;
-import com.example.aman.offercart_v1.SplashScreen.models.data.SplashScreenData;
+import com.example.aman.offercart_v1.splash_screen.SplashScreenCallback;
+import com.example.aman.offercart_v1.splash_screen.api.SplashScreenRequestApi;
+import com.example.aman.offercart_v1.splash_screen.models.data.SplashScreenData;
 import com.example.aman.offercart_v1.helper.Urls;
 
 import com.google.gson.Gson;

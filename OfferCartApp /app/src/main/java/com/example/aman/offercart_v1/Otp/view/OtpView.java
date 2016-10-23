@@ -1,4 +1,4 @@
-package com.example.aman.offercart_v1.Otp.view;
+package com.example.aman.offercart_v1.verify_otp.view;
 
 /**
  * Created by aman on 16/10/16.

@@ -1,11 +1,11 @@
-package com.example.aman.offercart_v1.LoginScreen.view.presenter;
+package com.example.aman.offercart_v1.login.view.presenter;
 
 import android.util.Log;
 
-import com.example.aman.offercart_v1.LoginScreen.view.models.LoginProvider;
-import com.example.aman.offercart_v1.LoginScreen.view.view.LoginScreenView;
-import com.example.aman.offercart_v1.LoginScreen.view.models.data.LoginData;
-import com.example.aman.offercart_v1.LoginScreen.view.LoginCallback;
+import com.example.aman.offercart_v1.login.view.models.LoginProvider;
+import com.example.aman.offercart_v1.login.view.view.LoginScreenView;
+import com.example.aman.offercart_v1.login.view.models.data.LoginData;
+import com.example.aman.offercart_v1.login.view.LoginCallback;
 /**
  * Created by aman on 15/10/16.
  */

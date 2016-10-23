@@ -10,8 +10,6 @@
     android:foreground="?android:attr/selectableItemBackground"
     android:clickable="true"
     >
-
-
 <LinearLayout
     android:id="@+id/categoryLayout"
     android:layout_width="match_parent"
@@ -28,7 +26,7 @@
     <ImageView
         android:id="@+id/categoryView"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="150dp"
         android:src="@mipmap/ic_launcher"
 
         />
