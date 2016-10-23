@@ -30,7 +30,7 @@ import butterknife.ButterKnife;
 public class CityScreenActivity extends AppCompatActivity implements CityScreenView
 {
 
-    @BindView(R.id.citiesToolbar)
+    @BindView(R.id.toolbar)
     Toolbar toolbar;
 
     @BindView(R.id.citiesRecycler)
