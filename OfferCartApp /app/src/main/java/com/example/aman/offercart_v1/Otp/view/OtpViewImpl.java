@@ -1,4 +1,4 @@
-package com.example.aman.offercart_v1.Otp.view;
+package com.example.aman.offercart_v1.verify_otp.view;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -12,7 +12,7 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.example.aman.offercart_v1.R;
-import com.example.aman.offercart_v1.cityScreen.view.CityScreenActivity;
+import com.example.aman.offercart_v1.city.view.CityScreenActivity;
 
 
 /**

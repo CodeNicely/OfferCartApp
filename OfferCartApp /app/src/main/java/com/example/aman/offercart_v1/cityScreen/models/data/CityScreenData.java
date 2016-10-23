@@ -1,4 +1,4 @@
-package com.example.aman.offercart_v1.cityScreen.models.data;
+package com.example.aman.offercart_v1.city.models.data;
 
 /**
  * Created by aman on 15/10/16.

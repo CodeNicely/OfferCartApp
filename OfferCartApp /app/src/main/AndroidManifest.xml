@@ -17,7 +17,7 @@
 
         <!-- Splash screen -->
         <activity
-            android:name=".SplashScreen.view.SplashScreenActivity"
+            android:name=".splash_screen.view.SplashScreenActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Black.NoTitleBar"
@@ -33,18 +33,18 @@
 
         <!-- Main activity -->
         <activity
-            android:name=".Otp.view.OtpViewImpl"
+            android:name=".verify_otp.view.OtpViewImpl"
             android:label="@string/app_name">
         </activity>
-        <activity android:name=".LoginScreen.view.view.LoginScreenActivity"/>
+        <activity android:name=".login.view.view.LoginScreenActivity"/>
 
         <activity
-            android:name=".WelcomeScreen.view.WelcomeScreenActivity"
+            android:name=".welcome_screen.view.WelcomeScreenActivity"
             android:label="@string/app_name" >
         </activity>
 
         <activity
-            android:name=".cityScreen.view.CityScreenActivity"
+            android:name=".city.view.CityScreenActivity"
             android:label="@string/app_name" >
         </activity>
 
