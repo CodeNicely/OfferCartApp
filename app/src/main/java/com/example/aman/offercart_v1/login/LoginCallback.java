@@ -1,6 +1,6 @@
-package com.example.aman.offercart_v1.login.view;
+package com.example.aman.offercart_v1.login;
 
-import com.example.aman.offercart_v1.login.view.models.data.LoginData;
+import com.example.aman.offercart_v1.login.models.data.LoginData;
 
 
 /**

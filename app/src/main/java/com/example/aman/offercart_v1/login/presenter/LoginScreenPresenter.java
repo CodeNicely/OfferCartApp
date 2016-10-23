@@ -1,4 +1,4 @@
-package com.example.aman.offercart_v1.login.view.presenter;
+package com.example.aman.offercart_v1.login.presenter;
 
 /**
  * Created by aman on 15/10/16.

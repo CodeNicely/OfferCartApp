@@ -1,7 +1,7 @@
-package com.example.aman.offercart_v1.login.view.models;
+package com.example.aman.offercart_v1.login.models;
 
 
-import com.example.aman.offercart_v1.login.view.LoginCallback;
+import com.example.aman.offercart_v1.login.LoginCallback;
 
 /**
  * Created by aman on 15/10/16.

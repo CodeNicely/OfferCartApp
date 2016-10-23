@@ -39,7 +39,7 @@
 
         <!-- Main activity -->
 
-        <activity android:name=".login.view.view.LoginScreenActivity" />
+        <activity android:name=".login.view.LoginScreenActivity" />
         <activity android:name=".verify_otp.view.OtpViewImpl" />
         <activity
             android:name=".welcome_screen.view.WelcomeScreenActivity"
