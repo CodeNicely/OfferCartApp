@@ -13,8 +13,11 @@ import butterknife.ButterKnife;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+<<<<<<< HEAD
 
 import com.example.aman.offercart_v1.helper.SharedPrefs;
+=======
+>>>>>>> d4435a29bbcac19de839f038bcea0617fac03b7c
 import com.example.aman.offercart_v1.login.presenter.LoginScreenPresenter;
 import com.example.aman.offercart_v1.verify_otp.view.OtpViewImpl;
 import com.example.aman.offercart_v1.R;
@@ -23,7 +26,6 @@ import android.widget.ProgressBar;
 import android.view.View;
 import android.widget.Toast;
 import com.example.aman.offercart_v1.login.presenter.LoginScreenPresenterImpl;
-
 
 
 /**

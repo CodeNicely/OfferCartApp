@@ -3,10 +3,10 @@ package com.example.aman.offercart_v1.login.presenter;
 import android.util.Log;
 
 
-import com.example.aman.offercart_v1.login.LoginCallback;
 import com.example.aman.offercart_v1.login.models.LoginProvider;
-import com.example.aman.offercart_v1.login.models.data.LoginData;
 import com.example.aman.offercart_v1.login.view.LoginScreenView;
+import com.example.aman.offercart_v1.login.models.data.LoginData;
+import com.example.aman.offercart_v1.login.LoginCallback;
 
 
 
