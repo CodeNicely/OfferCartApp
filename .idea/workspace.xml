@@ -9,8 +9,67 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <list default="true" id="d6db2179-5c51-4e6f-a159-cf9ea16b234f" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/cache.properties.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/cityScreen/models/data/SelectedCityData.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/cityScreen/models/data/SelectedCityData.java" />
+=======
+=======
+>>>>>>> c40c4adb7619c0fcedd4002c24a53c7be83644e4
+    <list default="true" id="31abe646-6d59-4f81-b7f3-6a058474a258" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/cache.properties.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileHashes.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshots.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshotsToTreeSnapshotsIndex.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshotsToTreeSnapshotsIndex.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/taskArtifacts.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/city/api/CityScreenRequestApi.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/city/api/CityScreenRequestApi.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/city/api/SendSelectedCityApi.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/city/api/SendSelectedCityApi.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/city/models/CityScreenProvider.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/city/models/CityScreenProvider.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/city/models/RetrofitCityScreenProvider.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/city/models/RetrofitCityScreenProvider.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/city/presenter/CityScreenPresenter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/city/presenter/CityScreenPresenter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/city/presenter/CityScreenPresenterImpl.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/city/presenter/CityScreenPresenterImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/city/view/CityAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/city/view/CityAdapter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/city/view/CityScreenActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/city/view/CityScreenActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/helper/Urls.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/helper/Urls.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/login/LoginCallback.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/login/LoginCallback.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/login/api/LoginApi.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/login/api/LoginApi.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/login/models/LoginProvider.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/login/models/LoginProvider.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/login/models/RetrofitLoginScreenProvider.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/login/models/RetrofitLoginScreenProvider.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/login/models/data/LoginData.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/login/models/data/LoginData.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/login/presenter/LoginScreenPresenter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/login/presenter/LoginScreenPresenter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/login/presenter/LoginScreenPresenterImpl.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/login/presenter/LoginScreenPresenterImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/login/view/LoginScreenActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/login/view/LoginScreenActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/login/view/LoginScreenView.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/login/view/LoginScreenView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/offer/view/OfferScreenAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/offer/view/OfferScreenAdapter.java" />
+<<<<<<< HEAD
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/offer/view/OfferScreenView.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/offer/view/OfferScreenView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/shops/view/ShopFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/shops/view/ShopFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_cities_item.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_cities_item.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" />
+<<<<<<< HEAD
+>>>>>>> 5be7c87fea8f56d2de9268a64f99a5da1b7951ae
+=======
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local.properties" afterPath="$PROJECT_DIR$/local.properties" />
+>>>>>>> 159bafef1143b08405eb2e9cbb2e8bb4e277762a
+=======
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/verify_otp/models/data/OtpData.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/verify_otp/models/data/OtpData.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/verify_otp/presenter/OtpPresenterImpl.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/verify_otp/presenter/OtpPresenterImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/verify_otp/view/OtpView.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/verify_otp/view/OtpView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/verify_otp/view/OtpViewImpl.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/verify_otp/view/OtpViewImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/welcome_screen/view/WelcomeScreenActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/welcome_screen/view/WelcomeScreenActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_offers_item.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_offers_item.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_offerscreen.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_offerscreen.xml" />
+>>>>>>> c40c4adb7619c0fcedd4002c24a53c7be83644e4
+    </list>
+    <ignored path="OfferCartApp.iws" />
+=======
     <list default="true" id="ff553942-e02d-4f75-919e-c69a26a5da11" name="Default" comment="" />
     <ignored path="OfferCartApp-master.iws" />
+>>>>>>> 0386feb8033daea2e302e3e5ed794b5785912c85
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -33,72 +92,278 @@
     <favorites_list name="OfferCartApp-master" />
   </component>
   <component name="FileEditorManager">
+<<<<<<< HEAD
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+<<<<<<< HEAD
+<<<<<<< HEAD
+      <file leaf-file-name="RetrofitCityScreenProvider.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/cityScreen/models/RetrofitCityScreenProvider.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+=======
+      <file leaf-file-name="activity_loginscreen.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_loginscreen.xml">
+=======
+      <file leaf-file-name="Urls.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/helper/Urls.java">
+>>>>>>> 159bafef1143b08405eb2e9cbb2e8bb4e277762a
+=======
     <leaf>
+<<<<<<< HEAD
       <file leaf-file-name="WalletFragment.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/wallet/view/WalletFragment.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="180">
               <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+=======
+      <file leaf-file-name="FontsOverride.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/helper/FontsOverride.java">
+>>>>>>> c40c4adb7619c0fcedd4002c24a53c7be83644e4
+          <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+            <state vertical-scroll-proportion="0.0">
+              <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+=======
+            <state relative-caret-position="120">
+              <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+>>>>>>> 0386feb8033daea2e302e3e5ed794b5785912c85
+>>>>>>> 66875e75b2556a7c77f46b45919704e215f91f7e
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="WalletInterface.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/wallet/view/WalletInterface.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
               <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+=======
+<<<<<<< HEAD
+      <file leaf-file-name="OfferScreenAdapter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/offer/view/OfferScreenAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+=======
+      <file leaf-file-name="MyApplication.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/helper/MyApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+<<<<<<< HEAD
+            <state relative-caret-position="468">
+              <caret line="26" column="46" selection-start-line="26" selection-start-column="46" selection-end-line="26" selection-end-column="46" />
+>>>>>>> 5be7c87fea8f56d2de9268a64f99a5da1b7951ae
+=======
+            <state vertical-scroll-proportion="-8.275862">
+              <caret line="32" column="17" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
+>>>>>>> 159bafef1143b08405eb2e9cbb2e8bb4e277762a
+=======
+            <state relative-caret-position="120">
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+>>>>>>> 0386feb8033daea2e302e3e5ed794b5785912c85
+>>>>>>> c40c4adb7619c0fcedd4002c24a53c7be83644e4
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+      <file leaf-file-name="CityScreenProvider.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/cityScreen/models/CityScreenProvider.java">
+=======
+      <file leaf-file-name="activity_cityscreen.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_cityscreen.xml">
+=======
+      <file leaf-file-name="CityAdapter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/city/view/CityAdapter.java">
+>>>>>>> 159bafef1143b08405eb2e9cbb2e8bb4e277762a
+=======
+      <file leaf-file-name="RetrofitCityScreenProvider.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/city/models/RetrofitCityScreenProvider.java">
+>>>>>>> c40c4adb7619c0fcedd4002c24a53c7be83644e4
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+>>>>>>> 66875e75b2556a7c77f46b45919704e215f91f7e
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+<<<<<<< HEAD
       <file leaf-file-name="WelcomeScreenRequestApi.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/welcome_screen/api/WelcomeScreenRequestApi.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
               <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+=======
+<<<<<<< HEAD
+      <file leaf-file-name="CityScreenActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/city/view/CityScreenActivity.java">
+>>>>>>> 5be7c87fea8f56d2de9268a64f99a5da1b7951ae
+=======
+      <file leaf-file-name="CityAdapter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/city/view/CityAdapter.java">
+>>>>>>> c40c4adb7619c0fcedd4002c24a53c7be83644e4
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+=======
+      <file leaf-file-name="SharedPrefs.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/helper/SharedPrefs.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="20" column="38" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
+>>>>>>> 0386feb8033daea2e302e3e5ed794b5785912c85
+>>>>>>> 66875e75b2556a7c77f46b45919704e215f91f7e
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="WelcomeImageDetails.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/welcome_screen/models/data/WelcomeImageDetails.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="90">
               <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+      <file leaf-file-name="OnCitiesSent.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/cityScreen/view/OnCitiesSent.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.27202073">
+              <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+=======
+      <file leaf-file-name="CityScreenRequestApi.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/city/api/CityScreenRequestApi.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+>>>>>>> 5be7c87fea8f56d2de9268a64f99a5da1b7951ae
+=======
+      <file leaf-file-name="CityScreenPresenter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/city/presenter/CityScreenPresenter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+>>>>>>> 159bafef1143b08405eb2e9cbb2e8bb4e277762a
+=======
+      <file leaf-file-name="CityScreenActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/city/view/CityScreenActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="91" column="0" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
+=======
+      <file leaf-file-name="Urls.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/helper/Urls.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+>>>>>>> 0386feb8033daea2e302e3e5ed794b5785912c85
+>>>>>>> c40c4adb7619c0fcedd4002c24a53c7be83644e4
+>>>>>>> 66875e75b2556a7c77f46b45919704e215f91f7e
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="WelcomeScreenData.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/welcome_screen/models/data/WelcomeScreenData.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
               <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+      <file leaf-file-name="OnCitiesReceived.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/cityScreen/view/OnCitiesReceived.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+=======
+      <file leaf-file-name="SendSelectedCityApi.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/city/api/SendSelectedCityApi.java">
+=======
+      <file leaf-file-name="CityScreenPresenterImpl.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/city/presenter/CityScreenPresenterImpl.java">
+>>>>>>> 159bafef1143b08405eb2e9cbb2e8bb4e277762a
+=======
+      <file leaf-file-name="CityScreenRequestApi.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/city/api/CityScreenRequestApi.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+=======
+      <file leaf-file-name="SplashScreenRequestApi.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/splash_screen/api/SplashScreenRequestApi.java">
+>>>>>>> c40c4adb7619c0fcedd4002c24a53c7be83644e4
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="15" column="41" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
+>>>>>>> 0386feb8033daea2e302e3e5ed794b5785912c85
+>>>>>>> 66875e75b2556a7c77f46b45919704e215f91f7e
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="RetrofitWelcomeScreenProvider.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/welcome_screen/models/RetrofitWelcomeScreenProvider.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="135">
               <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+=======
+<<<<<<< HEAD
+      <file leaf-file-name="CityScreenPresenterImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/city/presenter/CityScreenPresenterImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+=======
+      <file leaf-file-name="activity_splash.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_splash.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="14" column="16" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="16" />
+>>>>>>> 0386feb8033daea2e302e3e5ed794b5785912c85
+>>>>>>> 66875e75b2556a7c77f46b45919704e215f91f7e
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="WelcomeScreenProvider.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/welcome_screen/models/WelcomeScreenProvider.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
               <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+=======
+<<<<<<< HEAD
+      <file leaf-file-name="SendSelectedCityApi.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/city/api/SendSelectedCityApi.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.16055046">
+              <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+=======
+      <file leaf-file-name="activity_splash_dialog_box.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_splash_dialog_box.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+>>>>>>> 0386feb8033daea2e302e3e5ed794b5785912c85
+>>>>>>> 66875e75b2556a7c77f46b45919704e215f91f7e
               <folding />
             </state>
           </provider>
@@ -114,16 +379,47 @@
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="WelcomeScreenPresenterImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/welcome_screen/presenter/WelcomeScreenPresenterImpl.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
               <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+=======
+<<<<<<< HEAD
+      <file leaf-file-name="activity_offerscreen.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_offerscreen.xml">
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+<<<<<<< HEAD
+            <state relative-caret-position="378">
+              <caret line="21" column="16" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
+>>>>>>> 5be7c87fea8f56d2de9268a64f99a5da1b7951ae
+=======
+            <state vertical-scroll-proportion="0.0">
+              <caret line="106" column="0" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
+>>>>>>> 159bafef1143b08405eb2e9cbb2e8bb4e277762a
+=======
+            <state vertical-scroll-proportion="-6.9827585">
+              <caret line="27" column="39" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="39" />
+=======
+      <file leaf-file-name="drawables.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/drawables.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+>>>>>>> 0386feb8033daea2e302e3e5ed794b5785912c85
+>>>>>>> c40c4adb7619c0fcedd4002c24a53c7be83644e4
+>>>>>>> 66875e75b2556a7c77f46b45919704e215f91f7e
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="WelcomeScreenCallback.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/welcome_screen/WelcomeScreenCallback.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -131,11 +427,55 @@
               <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
               <folding />
             </state>
+=======
+<<<<<<< HEAD
+      <file leaf-file-name="activity_offers_item.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_offers_item.xml">
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-7.7586207">
+              <caret line="30" column="31" selection-start-line="30" selection-start-column="31" selection-end-line="30" selection-end-column="31" />
+              <folding />
+            </state>
+=======
+      <file leaf-file-name="back1.jpg" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/back1.jpg">
+          <provider selected="true" editor-type-id="images">
+            <state />
+>>>>>>> 0386feb8033daea2e302e3e5ed794b5785912c85
+>>>>>>> 66875e75b2556a7c77f46b45919704e215f91f7e
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
+<<<<<<< HEAD
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+<<<<<<< HEAD
+        <option value="Interface" />
+        <option value="Class" />
+=======
+        <option value="resourceFile" />
+        <option value="ASClass" />
+        <option value="valueResourceFile" />
+<<<<<<< HEAD
+>>>>>>> 5be7c87fea8f56d2de9268a64f99a5da1b7951ae
+=======
+        <option value="Interface" />
+        <option value="Class" />
+>>>>>>> 159bafef1143b08405eb2e9cbb2e8bb4e277762a
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+=======
+>>>>>>> c40c4adb7619c0fcedd4002c24a53c7be83644e4
   <component name="GradleLocalSettings">
     <option name="availableProjects">
       <map>
@@ -2198,6 +2538,115 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+<<<<<<< HEAD
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/shops/model/ShopProvider.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/shops/model/MockShopProvider.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/SplashScreen/models/RetrofitSplashScreenProvider.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/WelcomeScreen/models/data/WelcomeScreenData.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/WelcomeScreen/presenter/WelcomeScreenPresenterImpl.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/WelcomeScreen/models/RetrofitWelcomeScreenProvider.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/WelcomeScreen/view/ViewPagerAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/LoginScreen/view/models/RetrofitLoginScreenProvider.java" />
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/Otp/presenter/OtpPresenterImpl.java" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/Otp/models/RetrofitOtpProvider.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/Otp/view/OtpViewImpl.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/Shops/presenter/ShopPresenterImpl.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/Shops/presenter/ShopPresenter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/Shops/api/ShopRequestApi.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/Shops/api/SendSelectedShopApi.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/Shops/models/data/ShopData.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/cityScreen/models/data/SelectedCityData.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/Shops/models/data/SelectShopData.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/Shops/models/ShopProvider.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/Shops/models/RetrofitShopProvider.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/Shops/view/ShopSelectSend.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/Shops/view/ShopReceived.java" />
+=======
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/helper/Urls.java" />
+=======
+>>>>>>> 159bafef1143b08405eb2e9cbb2e8bb4e277762a
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/LoginScreen/view/Api/LoginApi.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/Otp/api/OtpApi.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/Otp/models/RetrofitOtpProvider.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/Otp/view/OtpViewImpl.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/verify_otp/view/OtpViewImpl.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_category.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_shop.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/welcome_screen/view/ViewPagerAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/categories/view/CategoryAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/shops/view/ShopAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/view_pager_item.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/welcome_screen/presenter/WelcomeScreenPresenterImpl.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/drawable/app_background.xml" />
+=======
+<<<<<<< HEAD
+>>>>>>> c40c4adb7619c0fcedd4002c24a53c7be83644e4
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/welcome_view_pager_item.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_welcome.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/helper/TypeFaceUtil.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/helper/FontsOverride.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/assets.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/helper/MyApplication.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_loginscreen.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_splash.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_otp.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_cityscreen.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/shops/presenter/ShopPresenter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/shops/view/ShopFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/shops/presenter/ShopPresenterImpl.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/shops/model/RetrofitShopProvider.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/offer/api/OfferScreenRequestApi.java" />
+        <option value="$PROJECT_DIR$/app/build.gradle" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/offer/view/OfferScreenActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/offer/view/OfferScreenView.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/offer/view/ShopOfferFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/helper/SharedPrefs.java" />
+<<<<<<< HEAD
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+<<<<<<< HEAD
+>>>>>>> 5be7c87fea8f56d2de9268a64f99a5da1b7951ae
+=======
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/offer/view/OfferScreenAdapter.java" />
+=======
+>>>>>>> c40c4adb7619c0fcedd4002c24a53c7be83644e4
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/offer/presenter/OfferScreenDetailsPresenterImpl.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_cities_item.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/city/view/CityAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/verify_otp/models/data/OtpData.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/verify_otp/view/OtpView.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/verify_otp/view/OtpViewImpl.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/city/api/CityScreenRequestApi.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/city/models/CityScreenProvider.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/city/models/RetrofitCityScreenProvider.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/city/presenter/CityScreenPresenter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/city/presenter/CityScreenPresenterImpl.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/verify_otp/presenter/OtpPresenterImpl.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/city/view/CityScreenActivity.java" />
+<<<<<<< HEAD
+>>>>>>> 159bafef1143b08405eb2e9cbb2e8bb4e277762a
+=======
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/login/presenter/LoginScreenPresenter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/login/view/LoginScreenView.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/login/models/data/LoginData.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/login/api/LoginApi.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/login/LoginCallback.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/login/models/RetrofitLoginScreenProvider.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/login/models/LoginProvider.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/login/presenter/LoginScreenPresenterImpl.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/login/view/LoginScreenActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/welcome_screen/view/WelcomeScreenActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_offerscreen.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_offers_item.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/helper/Urls.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/offer/view/OfferScreenAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/city/api/SendSelectedCityApi.java" />
+=======
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/welcome_screen/view/WelcomeScreenActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/login/view/LoginScreenActivity.java" />
@@ -2211,13 +2660,34 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/login/LoginCallback.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/splash_screen/api/SplashScreenRequestApi.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_splash.xml" />
+>>>>>>> 0386feb8033daea2e302e3e5ed794b5785912c85
+>>>>>>> c40c4adb7619c0fcedd4002c24a53c7be83644e4
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <option name="x" value="65" />
+    <option name="y" value="24" />
+    <option name="width" value="1301" />
+=======
+    <option name="y" value="24" />
+    <option name="width" value="1366" />
+>>>>>>> 5be7c87fea8f56d2de9268a64f99a5da1b7951ae
+    <option name="height" value="744" />
+=======
+    <option name="x" value="78" />
+    <option name="y" value="27" />
+    <option name="width" value="1842" />
+    <option name="height" value="1053" />
+>>>>>>> 159bafef1143b08405eb2e9cbb2e8bb4e277762a
+=======
     <option name="y" value="24" />
     <option name="width" value="1366" />
     <option name="height" value="744" />
+>>>>>>> c40c4adb7619c0fcedd4002c24a53c7be83644e4
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -2248,7 +2718,15 @@
     <OptionsSetting value="true" id="Update" />
     <OptionsSetting value="true" id="Status" />
     <OptionsSetting value="true" id="Edit" />
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <ConfirmationsSetting value="1" id="Add" />
+=======
+    <ConfirmationsSetting value="2" id="Add" />
+>>>>>>> 5be7c87fea8f56d2de9268a64f99a5da1b7951ae
+=======
     <ConfirmationsSetting value="0" id="Add" />
+>>>>>>> c40c4adb7619c0fcedd4002c24a53c7be83644e4
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
@@ -2266,8 +2744,24 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+<<<<<<< HEAD
+<<<<<<< HEAD
+      <pane id="Scope" />
+<<<<<<< HEAD
+      <pane id="ProjectPane" />
+      <pane id="PackagesPane" />
+=======
+      <pane id="Scratches" />
+=======
+>>>>>>> 159bafef1143b08405eb2e9cbb2e8bb4e277762a
+      <pane id="ProjectPane">
+        <subPane />
+      </pane>
+>>>>>>> 5be7c87fea8f56d2de9268a64f99a5da1b7951ae
+=======
       <pane id="PackagesPane" />
       <pane id="ProjectPane" />
+>>>>>>> c40c4adb7619c0fcedd4002c24a53c7be83644e4
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -2430,11 +2924,18 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+<<<<<<< HEAD
               <option name="myItemId" value="welcome_screen" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="presenter" />
+=======
+<<<<<<< HEAD
+              <option name="myItemId" value="helper" />
+=======
+              <option name="myItemId" value="verify_otp" />
+>>>>>>> 66875e75b2556a7c77f46b45919704e215f91f7e
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -2487,6 +2988,7 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="models" />
+>>>>>>> 0386feb8033daea2e302e3e5ed794b5785912c85
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -2515,6 +3017,8 @@
               <option name="myItemId" value="welcome_screen" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+<<<<<<< HEAD
+=======
             <PATH_ELEMENT>
               <option name="myItemId" value="api" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
@@ -2627,6 +3131,7 @@
               <option name="myItemId" value="data" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+>>>>>>> 0386feb8033daea2e302e3e5ed794b5785912c85
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -2651,6 +3156,8 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="api" />
+<<<<<<< HEAD
+=======
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -2672,13 +3179,58 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+<<<<<<< HEAD
               <option name="myItemId" value="verify_otp" />
+=======
+              <option name="myItemId" value="login" />
+>>>>>>> 0386feb8033daea2e302e3e5ed794b5785912c85
+>>>>>>> 66875e75b2556a7c77f46b45919704e215f91f7e
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="OfferCartApp-master" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OfferCartApp" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+=======
+              <option name="myItemId" value="manifests" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidManifestsGroupNode" />
+=======
+>>>>>>> c40c4adb7619c0fcedd4002c24a53c7be83644e4
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="offercart_v1" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OfferCartApp" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -2694,11 +3246,111 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="cityScreen" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OfferCartApp" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+=======
+>>>>>>> 159bafef1143b08405eb2e9cbb2e8bb4e277762a
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="offercart_v1" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+<<<<<<< HEAD
+              <option name="myItemId" value="cityScreen" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OfferCartApp" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+<<<<<<< HEAD
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="offercart_v1" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cityScreen" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OfferCartApp" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="offercart_v1" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+<<<<<<< HEAD
               <option name="myItemId" value="verify_otp" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="view" />
+=======
+              <option name="myItemId" value="cityScreen" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+=======
+              <option name="myItemId" value="manifests" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidManifestsGroupNode" />
+>>>>>>> 5be7c87fea8f56d2de9268a64f99a5da1b7951ae
+=======
+              <option name="myItemId" value="city" />
+=======
+              <option name="myItemId" value="home" />
+>>>>>>> c40c4adb7619c0fcedd4002c24a53c7be83644e4
+>>>>>>> 66875e75b2556a7c77f46b45919704e215f91f7e
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -2726,6 +3378,10 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="presenter" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+<<<<<<< HEAD
+>>>>>>> 159bafef1143b08405eb2e9cbb2e8bb4e277762a
+=======
+>>>>>>> 0386feb8033daea2e302e3e5ed794b5785912c85
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -2738,6 +3394,7 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+<<<<<<< HEAD
               <option name="myItemId" value="java" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
             </PATH_ELEMENT>
@@ -3764,6 +4421,30 @@
       </pane>
       <pane id="Scope" />
       <pane id="Scratches" />
+=======
+              <option name="myItemId" value="manifests" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidManifestsGroupNode" />
+>>>>>>> c40c4adb7619c0fcedd4002c24a53c7be83644e4
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+      <pane id="Scratches" />
+=======
+=======
+      <pane id="Scratches" />
+      <pane id="Scope" />
+>>>>>>> 159bafef1143b08405eb2e9cbb2e8bb4e277762a
+      <pane id="PackagesPane" />
+>>>>>>> 5be7c87fea8f56d2de9268a64f99a5da1b7951ae
+=======
+      <pane id="Scope" />
+      <pane id="Scratches" />
+>>>>>>> c40c4adb7619c0fcedd4002c24a53c7be83644e4
+>>>>>>> 66875e75b2556a7c77f46b45919704e215f91f7e
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -3805,6 +4486,7 @@
         <option name="WORKING_DIR" value="" />
         <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
       </Hybrid>
+<<<<<<< HEAD
       <Java />
       <Native>
         <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
@@ -3817,6 +4499,11 @@
         <option name="GAPID_DISABLE_PCS" value="false" />
         <option name="SUPPORT_LIB_ENABLED" value="true" />
         <option name="INSTRUMENTATION_ENABLED" value="true" />
+=======
+<<<<<<< HEAD
+      <Profilers>
+        <option name="GAPID_DISABLE_PCS" value="false" />
+>>>>>>> 66875e75b2556a7c77f46b45919704e215f91f7e
       </Profilers>
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
@@ -3833,14 +4520,28 @@
       <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
       <option name="PREFERRED_AVD" value="" />
       <option name="CLEAR_LOGCAT" value="false" />
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="DEBUGGER_TYPE" value="Java" />
+=======
+>>>>>>> 66875e75b2556a7c77f46b45919704e215f91f7e
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
       <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
       <option name="FORCE_STOP_RUNNING_APP" value="true" />
       <option name="DEBUGGER_TYPE" value="Auto" />
+<<<<<<< HEAD
+=======
+>>>>>>> 5be7c87fea8f56d2de9268a64f99a5da1b7951ae
+>>>>>>> 66875e75b2556a7c77f46b45919704e215f91f7e
       <option name="USE_LAST_SELECTED_DEVICE" value="false" />
       <option name="PREFERRED_AVD" value="" />
       <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
       <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+<<<<<<< HEAD
       <Auto>
         <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
         <option name="WORKING_DIR" value="" />
@@ -3864,6 +4565,52 @@
         <option name="SUPPORT_LIB_ENABLED" value="true" />
         <option name="INSTRUMENTATION_ENABLED" value="true" />
       </Profilers>
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      <Java />
+>>>>>>> c40c4adb7619c0fcedd4002c24a53c7be83644e4
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+      </Native>
+      <Profilers>
+        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
+        <option name="GAPID_ENABLED" value="false" />
+        <option name="GAPID_DISABLE_PCS" value="false" />
+<<<<<<< HEAD
+=======
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+=======
+      <Native>
+>>>>>>> 159bafef1143b08405eb2e9cbb2e8bb4e277762a
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+      </Native>
+      <Java />
+      <Hybrid>
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+      </Hybrid>
+      <Profilers>
+        <option name="GAPID_DISABLE_PCS" value="false" />
+<<<<<<< HEAD
+        <option name="SUPPORT_LIB_ENABLED" value="true" />
+        <option name="INSTRUMENTATION_ENABLED" value="true" />
+>>>>>>> 5be7c87fea8f56d2de9268a64f99a5da1b7951ae
+=======
+>>>>>>> 159bafef1143b08405eb2e9cbb2e8bb4e277762a
+=======
+        <option name="SUPPORT_LIB_ENABLED" value="true" />
+        <option name="INSTRUMENTATION_ENABLED" value="true" />
+>>>>>>> c40c4adb7619c0fcedd4002c24a53c7be83644e4
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+>>>>>>> 66875e75b2556a7c77f46b45919704e215f91f7e
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -3881,6 +4628,7 @@
       <envs />
       <method />
     </configuration>
+<<<<<<< HEAD
     <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -3897,6 +4645,8 @@
       </ExternalSystemSettings>
       <method />
     </configuration>
+=======
+>>>>>>> 66875e75b2556a7c77f46b45919704e215f91f7e
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -3921,6 +4671,40 @@
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 159bafef1143b08405eb2e9cbb2e8bb4e277762a
+    <configuration default="true" type="JUnitTestDiscovery" factoryName="JUnit Test Discovery" changeList="All">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+<<<<<<< HEAD
+=======
+>>>>>>> 5be7c87fea8f56d2de9268a64f99a5da1b7951ae
+=======
+>>>>>>> 159bafef1143b08405eb2e9cbb2e8bb4e277762a
+>>>>>>> 66875e75b2556a7c77f46b45919704e215f91f7e
     <configuration default="true" type="JarApplication" factoryName="JAR Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <envs />
@@ -3942,6 +4726,11 @@
       <envs />
       <method />
     </configuration>
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> c40c4adb7619c0fcedd4002c24a53c7be83644e4
+>>>>>>> 66875e75b2556a7c77f46b45919704e215f91f7e
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
@@ -3978,6 +4767,10 @@
       <listeners />
       <method />
     </configuration>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 66875e75b2556a7c77f46b45919704e215f91f7e
     <configuration default="true" type="TestNGTestDiscovery" factoryName="TestNG Test Discovery" changeList="All">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -4006,7 +4799,22 @@
       <listeners />
       <method />
     </configuration>
+<<<<<<< HEAD
     <configuration default="false" name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+      <module name="app" />
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <configuration default="false" name="app" type="AndroidRunConfigurationType" factoryName="Android Application">
+=======
+    <configuration default="false" name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+>>>>>>> 5be7c87fea8f56d2de9268a64f99a5da1b7951ae
+      <module name="app" />
+=======
+    <configuration default="false" name="app" type="AndroidRunConfigurationType" factoryName="Android Application" activateToolWindowBeforeRun="false">
+=======
+    <configuration default="false" name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+>>>>>>> c40c4adb7619c0fcedd4002c24a53c7be83644e4
       <module name="app" />
       <option name="DEPLOY" value="true" />
       <option name="ARTIFACT_NAME" value="" />
@@ -4016,6 +4824,51 @@
       <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
       <option name="PREFERRED_AVD" value="" />
       <option name="CLEAR_LOGCAT" value="false" />
+<<<<<<< HEAD
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="DEBUGGER_TYPE" value="Java" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="true" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <Native>
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+      </Native>
+      <Java />
+      <Hybrid>
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+      </Hybrid>
+      <Profilers>
+        <option name="GAPID_DISABLE_PCS" value="false" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <method />
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="Android Application.app" />
+    </list>
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android App">
+      <module name="" />
+>>>>>>> 159bafef1143b08405eb2e9cbb2e8bb4e277762a
+>>>>>>> 66875e75b2556a7c77f46b45919704e215f91f7e
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 0386feb8033daea2e302e3e5ed794b5785912c85
+>>>>>>> 66875e75b2556a7c77f46b45919704e215f91f7e
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
       <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
       <option name="FORCE_STOP_RUNNING_APP" value="true" />
@@ -4067,8 +4920,24 @@
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
     </configuration>
   </component>
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+  <component name="ShelveChangesManager" show_recycled="false" />
+=======
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
+  </component>
+>>>>>>> 5be7c87fea8f56d2de9268a64f99a5da1b7951ae
+=======
+  <component name="ShelveChangesManager" show_recycled="false" />
+>>>>>>> 159bafef1143b08405eb2e9cbb2e8bb4e277762a
+  <component name="SvnConfiguration">
+    <configuration />
+=======
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+>>>>>>> c40c4adb7619c0fcedd4002c24a53c7be83644e4
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -4081,6 +4950,110 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
+<<<<<<< HEAD
+    <frame x="78" y="27" width="1842" height="1053" extended-state="6" />
+    <editor active="false" />
+    <layout>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286334" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Android Monitor" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2548807" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32924107" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329718" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
+<<<<<<< HEAD
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.374502" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+=======
+=======
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+>>>>>>> 159bafef1143b08405eb2e9cbb2e8bb4e277762a
+      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25669643" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+>>>>>>> 5be7c87fea8f56d2de9268a64f99a5da1b7951ae
+=======
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+>>>>>>> 159bafef1143b08405eb2e9cbb2e8bb4e277762a
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979912" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32988048" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+=======
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
+>>>>>>> 5be7c87fea8f56d2de9268a64f99a5da1b7951ae
+=======
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+>>>>>>> 159bafef1143b08405eb2e9cbb2e8bb4e277762a
+    </layout>
+    <layout-to-restore>
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.79718006" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979912" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286334" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32924107" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25725445" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+=======
     <frame x="0" y="24" width="1366" height="744" extended-state="6" />
     <editor active="false" />
     <layout>
@@ -4117,6 +5090,15 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
     </layout>
+>>>>>>> 0386feb8033daea2e302e3e5ed794b5785912c85
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -4126,6 +5108,7 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/offer/view/OfferScreenView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -4138,11 +5121,93 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="37" column="13" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/LoginScreen/view/presenter/LoginScreenPresenterImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="26" column="77" selection-start-line="26" selection-start-column="3" selection-end-line="26" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/Otp/models/RetrofitOtpProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/shops/model/MockShopProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="15" column="21" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
+>>>>>>> 5be7c87fea8f56d2de9268a64f99a5da1b7951ae
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/offer/presenter/OfferScreenDetailsPresenter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/offer/api/OfferScreenRequestApi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+>>>>>>> 0386feb8033daea2e302e3e5ed794b5785912c85
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/offer/OfferScreenUpdateDataCallback.java">
+>>>>>>> c40c4adb7619c0fcedd4002c24a53c7be83644e4
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+          <folding />
+>>>>>>> 159bafef1143b08405eb2e9cbb2e8bb4e277762a
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_shop_offer.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/Otp/view/OtpViewImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+=======
+        <state relative-caret-position="1826">
+          <caret line="116" column="43" selection-start-line="116" selection-start-column="43" selection-end-line="116" selection-end-column="43" />
+=======
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+>>>>>>> 66875e75b2556a7c77f46b45919704e215f91f7e
+          <folding />
+>>>>>>> 159bafef1143b08405eb2e9cbb2e8bb4e277762a
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/offer/OfferScreenDetailsCallback.java">
+=======
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="44" column="1" selection-start-line="44" selection-start-column="1" selection-end-line="44" selection-end-column="1" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+>>>>>>> 66875e75b2556a7c77f46b45919704e215f91f7e
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
@@ -4160,12 +5225,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/shops/api/ShopsApi.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <state relative-caret-position="162">
+          <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
+>>>>>>> 5be7c87fea8f56d2de9268a64f99a5da1b7951ae
+=======
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="16" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
+=======
         <state relative-caret-position="105">
+<<<<<<< HEAD
           <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+=======
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+>>>>>>> 0386feb8033daea2e302e3e5ed794b5785912c85
+>>>>>>> c40c4adb7619c0fcedd4002c24a53c7be83644e4
+>>>>>>> 66875e75b2556a7c77f46b45919704e215f91f7e
           <folding />
+>>>>>>> 159bafef1143b08405eb2e9cbb2e8bb4e277762a
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/shops/model/data/ShopData.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -4207,21 +5289,74 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/shops/presenter/ShopPresenter.java">
+=======
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_shop_offer2.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+=======
+        <state relative-caret-position="90">
+          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+>>>>>>> 5be7c87fea8f56d2de9268a64f99a5da1b7951ae
+=======
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/welcome_screen/presenter/WelcomeScreenPresenter.java">
+>>>>>>> 66875e75b2556a7c77f46b45919704e215f91f7e
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+>>>>>>> 0386feb8033daea2e302e3e5ed794b5785912c85
           <folding />
+>>>>>>> 159bafef1143b08405eb2e9cbb2e8bb4e277762a
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/shops/presenter/ShopPresenterImpl.java">
+=======
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/offer/view/ShopOfferFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+=======
+        <state relative-caret-position="486">
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+>>>>>>> 5be7c87fea8f56d2de9268a64f99a5da1b7951ae
+=======
+        <state vertical-scroll-proportion="0.0">
+<<<<<<< HEAD
+          <caret line="21" column="67" selection-start-line="21" selection-start-column="67" selection-end-line="21" selection-end-column="67" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+>>>>>>> 159bafef1143b08405eb2e9cbb2e8bb4e277762a
+=======
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/welcome_screen/presenter/WelcomeScreenPresenterImpl.java">
+>>>>>>> 66875e75b2556a7c77f46b45919704e215f91f7e
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+>>>>>>> 0386feb8033daea2e302e3e5ed794b5785912c85
           <folding />
+>>>>>>> c40c4adb7619c0fcedd4002c24a53c7be83644e4
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/shops/view/OnShopsReceived.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -4274,10 +5409,117 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+=======
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/offer/model/data/OfferScreenDetails.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/welcome_screen/view/ViewPagerAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+>>>>>>> 0386feb8033daea2e302e3e5ed794b5785912c85
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/offer/model/data/OfferScreenList.java">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/cityScreen/presenter/CityScreenPresenterImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/cityScreen/view/CityScreenView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/cityScreen/view/CityScreenActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="95" column="5" selection-start-line="95" selection-start-column="5" selection-end-line="95" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/cityScreen/view/CityAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/LoginScreen/view/presenter/LoginScreenPresenter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/LoginScreen/view/Api/LoginApi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/helper/SharedPrefs.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/shopcategories/models/data/ShopCategoryData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/shopcategories/ShopCategoriesCallback.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/shopcategories/view/ShopCategoryView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+=======
+        <state relative-caret-position="108">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+=======
+        <state vertical-scroll-proportion="-20.625">
+          <caret line="33" column="16" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="16" />
+=======
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+>>>>>>> c40c4adb7619c0fcedd4002c24a53c7be83644e4
+>>>>>>> 66875e75b2556a7c77f46b45919704e215f91f7e
+          <folding />
+>>>>>>> 159bafef1143b08405eb2e9cbb2e8bb4e277762a
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/splash_screen/models/SplashScreenProvider.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -4322,11 +5564,27 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/offer/model/data/OfferScreenUpdateData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/welcome_screen/models/data/WelcomeImageDetails.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
+>>>>>>> 0386feb8033daea2e302e3e5ed794b5785912c85
+>>>>>>> 66875e75b2556a7c77f46b45919704e215f91f7e
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/offer/model/OfferScreenDetailsProvider.java">
+=======
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/verify_otp/api/OtpApi.java">
+>>>>>>> 0386feb8033daea2e302e3e5ed794b5785912c85
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
@@ -4334,6 +5592,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/verify_otp/models/data/OtpData.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -4342,22 +5601,39 @@
         </state>
       </provider>
     </entry>
+=======
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/offer/model/RetrofitOfferScreenDetailsProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="34" column="100" selection-start-line="34" selection-start-column="100" selection-end-line="34" selection-end-column="100" />
+=======
+>>>>>>> 66875e75b2556a7c77f46b45919704e215f91f7e
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/verify_otp/models/OtpProvider.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+>>>>>>> 0386feb8033daea2e302e3e5ed794b5785912c85
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/shops/view/ShopFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="108" column="5" selection-start-line="108" selection-start-column="5" selection-end-line="108" selection-end-column="5" />
+=======
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/verify_otp/models/RetrofitOtpProvider.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+>>>>>>> 0386feb8033daea2e302e3e5ed794b5785912c85
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/verify_otp/presenter/OtpPresenter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -4370,11 +5646,32 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+=======
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/offer/OfferScreenDetailsCallback.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/verify_otp/presenter/OtpPresenterImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="23" column="46" selection-start-line="23" selection-start-column="46" selection-end-line="23" selection-end-column="46" />
+>>>>>>> 0386feb8033daea2e302e3e5ed794b5785912c85
+>>>>>>> 66875e75b2556a7c77f46b45919704e215f91f7e
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/verify_otp/view/OtpView.java">
+=======
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/offer/view/OfferScreenView.java">
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/verify_otp/presenter/OtpPresenter.java">
+>>>>>>> 0386feb8033daea2e302e3e5ed794b5785912c85
+>>>>>>> 66875e75b2556a7c77f46b45919704e215f91f7e
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
@@ -4382,38 +5679,111 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/verify_otp/view/OtpViewImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+=======
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/city/models/data/CityScreenData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/helper/FontsOverride.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+>>>>>>> 0386feb8033daea2e302e3e5ed794b5785912c85
+>>>>>>> 66875e75b2556a7c77f46b45919704e215f91f7e
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/verify_otp/OtpCallback.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+=======
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/city/models/data/SelectedCityData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/helper/MyApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+>>>>>>> 0386feb8033daea2e302e3e5ed794b5785912c85
+>>>>>>> 66875e75b2556a7c77f46b45919704e215f91f7e
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/wallet/api/WalletApi.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+=======
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/offer/presenter/OfferScreenDetailsPresenterImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/helper/SharedPrefs.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="20" column="38" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
+>>>>>>> 0386feb8033daea2e302e3e5ed794b5785912c85
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_cities_item.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.275862">
+          <caret line="32" column="17" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/splash_screen/models/RetrofitSplashScreenProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="36" column="93" selection-start-line="32" selection-start-column="0" selection-end-line="36" selection-end-column="93" />
+>>>>>>> 66875e75b2556a7c77f46b45919704e215f91f7e
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/wallet/model/data/WalletData.java">
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/verify_otp/api/OtpApi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/helper/Urls.java">
+>>>>>>> 66875e75b2556a7c77f46b45919704e215f91f7e
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+>>>>>>> 0386feb8033daea2e302e3e5ed794b5785912c85
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/wallet/model/RetrofitWalletProvider.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -4423,6 +5793,26 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/wallet/model/WalletProvider.java">
+=======
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/verify_otp/models/data/OtpData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding>
+            <element signature="e#443#444#0" expanded="false" />
+            <element signature="e#478#479#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/verify_otp/models/RetrofitOtpProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/splash_screen/api/SplashScreenRequestApi.java">
+>>>>>>> 66875e75b2556a7c77f46b45919704e215f91f7e
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
@@ -4472,20 +5862,276 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/welcome_screen/api/WelcomeScreenRequestApi.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="105">
           <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+=======
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+>>>>>>> 0386feb8033daea2e302e3e5ed794b5785912c85
+>>>>>>> 66875e75b2556a7c77f46b45919704e215f91f7e
           <folding />
+>>>>>>> 5be7c87fea8f56d2de9268a64f99a5da1b7951ae
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/welcome_screen/models/data/WelcomeImageDetails.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/shopcategories/view/ShopCategoryActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/shopcategories/presenter/ShopCategoryPresenterImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/shopcategories/api/ShopCategoryRequestApi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="17" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/welcome_screen/view/ViewPagerAdapter.java">
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/offer/presenter/OfferScreenDetailsPresenter.java">
+>>>>>>> 159bafef1143b08405eb2e9cbb2e8bb4e277762a
+=======
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/verify_otp/view/OtpView.java">
+>>>>>>> c40c4adb7619c0fcedd4002c24a53c7be83644e4
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="34" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/drawables.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+>>>>>>> 0386feb8033daea2e302e3e5ed794b5785912c85
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/helper/SharedPrefs.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="128" column="48" selection-start-line="128" selection-start-column="48" selection-end-line="128" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/city/models/CityScreenProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="34" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/city/presenter/CityScreenPresenter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="35" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="35" />
+          <folding />
+>>>>>>> 5be7c87fea8f56d2de9268a64f99a5da1b7951ae
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/verify_otp/models/OtpProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/shopcategories/models/RetrofitShopCategoryProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/shopcategories/models/ShopCategoryProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/shopcategories/models/data/ShopCategoryDetails.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/welcome_screen/presenter/WelcomeScreenPresenterImpl.java">
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/offer/view/ShopOfferFragment.java">
+>>>>>>> 159bafef1143b08405eb2e9cbb2e8bb4e277762a
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/verify_otp/presenter/OtpPresenterImpl.java">
+>>>>>>> c40c4adb7619c0fcedd4002c24a53c7be83644e4
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="27" column="17" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/verify_otp/view/OtpViewImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="57" column="54" selection-start-line="57" selection-start-column="54" selection-end-line="57" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/login/view/LoginScreenView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
+          <folding />
+>>>>>>> 5be7c87fea8f56d2de9268a64f99a5da1b7951ae
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/login/models/data/LoginData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/shopcategories/presenter/ShopCategoryPresenter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_welcome.xml">
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/offer/model/OfferScreenDetailsProvider.java">
+>>>>>>> 159bafef1143b08405eb2e9cbb2e8bb4e277762a
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+          <folding />
+>>>>>>> 5be7c87fea8f56d2de9268a64f99a5da1b7951ae
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/login/api/LoginApi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+>>>>>>> c40c4adb7619c0fcedd4002c24a53c7be83644e4
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/login/LoginCallback.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/cityScreen/presenter/CityScreenPresenter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/cityScreen/view/Response.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_cityscreen.xml">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_cities_item.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.4727273">
+          <caret line="46" column="17" selection-start-line="46" selection-start-column="17" selection-end-line="46" selection-end-column="17" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/cityScreen/api/CityScreenRequestApi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/shops/view/ShopFragment.java">
+>>>>>>> 159bafef1143b08405eb2e9cbb2e8bb4e277762a
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/login/models/LoginProvider.java">
+>>>>>>> c40c4adb7619c0fcedd4002c24a53c7be83644e4
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/login/models/RetrofitLoginScreenProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="40" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/login/presenter/LoginScreenPresenter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+>>>>>>> 66875e75b2556a7c77f46b45919704e215f91f7e
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/welcome_screen/models/data/WelcomeScreenData.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -4503,11 +6149,307 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/welcome_screen/models/WelcomeScreenProvider.java">
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/login/presenter/LoginScreenPresenterImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="25" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/login/view/LoginScreenActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.916666">
+          <caret line="33" column="19" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/welcome_screen/view/WelcomeScreenActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/offer/view/ShopOfferFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="37" column="13" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_offers_item.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.7586207">
+          <caret line="30" column="31" selection-start-line="30" selection-start-column="31" selection-end-line="30" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/helper/Urls.java">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="144">
+          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+>>>>>>> 5be7c87fea8f56d2de9268a64f99a5da1b7951ae
+=======
+        <state vertical-scroll-proportion="0.0">
+<<<<<<< HEAD
+          <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+>>>>>>> 159bafef1143b08405eb2e9cbb2e8bb4e277762a
+=======
+          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+>>>>>>> c40c4adb7619c0fcedd4002c24a53c7be83644e4
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/cityScreen/api/SendSelectedCityApi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+          <folding />
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_otp.xml">
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/helper/SharedPrefs.java">
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/offer/view/OfferScreenAdapter.java">
+>>>>>>> c40c4adb7619c0fcedd4002c24a53c7be83644e4
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+>>>>>>> 159bafef1143b08405eb2e9cbb2e8bb4e277762a
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-19.166666">
+          <caret line="33" column="19" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
+          <folding>
+            <element signature="e#710#728#0" expanded="true" />
+            <element signature="e#949#967#0" expanded="true" />
+            <element signature="e#1462#1480#0" expanded="true" />
+            <element signature="e#1585#1603#0" expanded="true" />
+          </folding>
+>>>>>>> 5be7c87fea8f56d2de9268a64f99a5da1b7951ae
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_offerscreen.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.9827585">
+          <caret line="27" column="39" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="39" />
+          <folding />
+>>>>>>> c40c4adb7619c0fcedd4002c24a53c7be83644e4
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/city/models/RetrofitCityScreenProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/cityScreen/models/data/CityScreenData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/city/api/SendSelectedCityApi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="13" column="19" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
+>>>>>>> 5be7c87fea8f56d2de9268a64f99a5da1b7951ae
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/offer/presenter/OfferScreenDetailsPresenterImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+>>>>>>> 159bafef1143b08405eb2e9cbb2e8bb4e277762a
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/city/view/CityAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+>>>>>>> c40c4adb7619c0fcedd4002c24a53c7be83644e4
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/cityScreen/models/data/SelectedCityData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/helper/Urls.java">
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/city/view/CityScreenActivity.java">
+>>>>>>> c40c4adb7619c0fcedd4002c24a53c7be83644e4
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="468">
+          <caret line="26" column="46" selection-start-line="26" selection-start-column="46" selection-end-line="26" selection-end-column="46" />
+>>>>>>> 5be7c87fea8f56d2de9268a64f99a5da1b7951ae
+=======
+        <state vertical-scroll-proportion="0.0">
+<<<<<<< HEAD
+          <caret line="30" column="56" selection-start-line="30" selection-start-column="56" selection-end-line="30" selection-end-column="56" />
+>>>>>>> 159bafef1143b08405eb2e9cbb2e8bb4e277762a
+=======
+          <caret line="91" column="0" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
+>>>>>>> c40c4adb7619c0fcedd4002c24a53c7be83644e4
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/cityScreen/models/RetrofitCityScreenProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/cityScreen/view/OnCitiesSent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.27202073">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/city/view/CityScreenActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="44" column="29" selection-start-line="44" selection-start-column="29" selection-end-line="44" selection-end-column="29" />
+>>>>>>> 5be7c87fea8f56d2de9268a64f99a5da1b7951ae
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_cities_item.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.275862">
+          <caret line="32" column="17" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
+>>>>>>> 159bafef1143b08405eb2e9cbb2e8bb4e277762a
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/city/presenter/CityScreenPresenterImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+>>>>>>> c40c4adb7619c0fcedd4002c24a53c7be83644e4
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/cityScreen/models/CityScreenProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+          <folding />
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_cityscreen.xml">
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/city/view/CityAdapter.java">
+>>>>>>> 159bafef1143b08405eb2e9cbb2e8bb4e277762a
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="51" column="83" selection-start-line="51" selection-start-column="83" selection-end-line="51" selection-end-column="83" />
+          <folding>
+            <element signature="e#1553#1776#0" expanded="true" />
+            <element signature="e#1775#1776#0" expanded="true" />
+          </folding>
+>>>>>>> 5be7c87fea8f56d2de9268a64f99a5da1b7951ae
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/city/api/CityScreenRequestApi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+          <folding />
+>>>>>>> c40c4adb7619c0fcedd4002c24a53c7be83644e4
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/city/api/SendSelectedCityApi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.16055046">
+          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+          <folding />
+        </state>
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/back1.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/cityScreen/view/OnCitiesReceived.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+          <folding />
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest">
+        <state />
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/city/presenter/CityScreenPresenter.java">
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/back.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_splash_dialog_box.xml">
+>>>>>>> c40c4adb7619c0fcedd4002c24a53c7be83644e4
+>>>>>>> 66875e75b2556a7c77f46b45919704e215f91f7e
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
           <folding />
         </state>
+>>>>>>> 159bafef1143b08405eb2e9cbb2e8bb4e277762a
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/welcome_screen/presenter/WelcomeScreenPresenter.java">
@@ -4520,11 +6462,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/welcome_screen/presenter/WelcomeScreenPresenterImpl.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="105">
           <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <state relative-caret-position="-86">
+          <caret line="36" column="44" selection-start-line="36" selection-start-column="44" selection-end-line="36" selection-end-column="44" />
+          <folding>
+            <element signature="e#710#728#0" expanded="true" />
+          </folding>
+>>>>>>> 5be7c87fea8f56d2de9268a64f99a5da1b7951ae
+=======
+        <state vertical-scroll-proportion="0.11811024">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+=======
+        <state relative-caret-position="210">
+          <caret line="14" column="16" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="16" />
+>>>>>>> c40c4adb7619c0fcedd4002c24a53c7be83644e4
+>>>>>>> 66875e75b2556a7c77f46b45919704e215f91f7e
           <folding />
+>>>>>>> 159bafef1143b08405eb2e9cbb2e8bb4e277762a
         </state>
       </provider>
+<<<<<<< HEAD
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/aman/offercart_v1/welcome_screen/WelcomeScreenCallback.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -4532,6 +6494,11 @@
           <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
           <folding />
         </state>
+=======
+      <provider editor-type-id="android-designer2">
+        <state />
+>>>>>>> 0386feb8033daea2e302e3e5ed794b5785912c85
+>>>>>>> 66875e75b2556a7c77f46b45919704e215f91f7e
       </provider>
     </entry>
   </component>

@@ -43,24 +43,22 @@ public class CityScreenActivity extends AppCompatActivity implements CityScreenV
     private LinearLayoutManager linearLayoutManager;
     private CityScreenPresenter cityScreenPresenter;
     private SharedPrefs sharedPrefs;
+    private String access_token;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cityscreen);
-        Log.d("Res","1");
-
-
         ButterKnife.bind(this);
-        Log.d("Res","2");
         sharedPrefs=new SharedPrefs(this);
+
         cityScreenPresenter=new CityScreenPresenterImpl(this,new RetrofitCityScreenProvider());
         cityAdapter=new CityAdapter(this);
-        Log.d("Res","3");
+        access_token=sharedPrefs.getAccessToken();
         linearLayoutManager=new LinearLayoutManager(this);
         recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.setAdapter(cityAdapter);
-        cityScreenPresenter.requestCity();
+        cityScreenPresenter.requestCity(access_token);
     }
 
 
@@ -82,18 +80,17 @@ public class CityScreenActivity extends AppCompatActivity implements CityScreenV
 
     @Override
     public void onCityVerified(List<CityScreenData> cityScreenDataList) {
-
         cityAdapter.setData(cityScreenDataList);
         cityAdapter.notifyDataSetChanged();
-
     }
 
     @Override
     public void onCitySelected(String city_id, String city_name) {
 //        sharedPrefs=new SharedPrefs(this);
 //        sharedPrefs.setKEY_City(city_name);
-        cityScreenPresenter=new CityScreenPresenterImpl(this,new RetrofitCityScreenProvider());
+        Log.d("Res","1");
         cityScreenPresenter.sendSelectedCity(city_id);
+
 
     }
 

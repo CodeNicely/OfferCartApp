@@ -54,7 +54,7 @@
         android:layout_height="wrap_content"
         android:textSize="@dimen/medium_text_size"
 
-        android:ems="10"
+        android:maxLength="10"
         android:id="@+id/editText2"
         android:textColorHint="#ffff299f"
         android:inputType="phone"

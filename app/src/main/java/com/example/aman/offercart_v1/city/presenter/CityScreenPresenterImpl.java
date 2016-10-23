@@ -1,5 +1,7 @@
 package com.example.aman.offercart_v1.city.presenter;
 
+import android.util.Log;
+
 import com.example.aman.offercart_v1.city.models.CityScreenProvider;
 import com.example.aman.offercart_v1.city.models.data.CityScreenData;
 import com.example.aman.offercart_v1.city.models.data.SelectedCityData;
@@ -22,9 +24,13 @@ public class CityScreenPresenterImpl implements CityScreenPresenter {
     }
 
     @Override
-    public void requestCity() {
+    public void requestCity(String token) {
+
+
         cityScreenView.showLoading(true);
-        cityScreenProvider.requestCity(new OnCitiesReceived() {
+        Log.d("Res","3");
+
+        cityScreenProvider.requestCity(token,new OnCitiesReceived() {
             @Override
             public void onFailure() {
                 cityScreenView.showLoading(false);
@@ -42,7 +48,9 @@ public class CityScreenPresenterImpl implements CityScreenPresenter {
 
     @Override
     public void sendSelectedCity(String city_id) {
+        Log.d("Res","2");
         cityScreenView.showLoading(true);
+        Log.d("Res","3");
         cityScreenProvider.sendSelectedCity(city_id, new OnCitiesSent() {
             @Override
             public void onFailure() {

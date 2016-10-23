@@ -74,10 +74,7 @@ public class OfferScreenAdapter extends RecyclerView.Adapter<OfferScreenAdapter.
 
         private MyViewHolder(View itemView) {
             super(itemView);
-            context2=itemView.getContext();
-            offer= (TextView) itemView.findViewById(R.id.offer);
-            offer_des= (TextView) itemView.findViewById(R.id.offer_des);
-            imageView= (ImageView) itemView.findViewById(R.id.imageView);
+
             //final OfferScreenDetails offerScreenDetails =offerScreenDetailsList.get(imageView);
 //            Picasso.with(context)
 //                    .load(offerScreenDetails.getOffer_image())

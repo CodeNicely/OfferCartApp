@@ -20,13 +20,11 @@ import java.util.List;
 public class CityAdapter extends RecyclerView.Adapter<CityAdapter.MyViewHolder> {
     private List<CityScreenData> cityScreenDataList=new ArrayList<>();
     private Context context;
-    private CityScreenView cityScreenView;
     private LayoutInflater layoutInflater;
 
     public CityAdapter(Context context) {
         this.context=context;
         layoutInflater=LayoutInflater.from(context);
-        cityScreenView=new CityScreenActivity();
     }
     public void setData(List<CityScreenData> cityScreenData)
     {
@@ -46,10 +44,15 @@ public class CityAdapter extends RecyclerView.Adapter<CityAdapter.MyViewHolder> 
 
         holder.city.setText(cityScreenData.getCity_name());
 
+
         holder.city.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                cityScreenView.onCitySelected(cityScreenData.getCity_id(),cityScreenData.getCity_name());
+
+            if( context instanceof CityScreenActivity) {
+
+                ((CityScreenActivity) context).onCitySelected(cityScreenData.getCity_id(), cityScreenData.getCity_name());
+            }
 
             }
         });
