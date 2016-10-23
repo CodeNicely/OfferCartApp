@@ -24,12 +24,18 @@ public class OtpPresenterImpl implements OtpPresenter{ private OtpProvider otpPr
         otpProvider.requestOtp(otp, mobile, new OtpCallback() {
             @Override
             public void onSuccess(OtpData otpData) {
+                if(otpData.isSuccess())
+                {
+                    otpView.showLoading(false);
+                    otpView.showMessage("success");
+                    otpView.onOtpVerified(otpData.getAccess_token());
+                }
+                else
+                {
+                    otpView.showLoading(false);
+                    otpView.showMessage(otpData.getMessage());
 
-
-                otpView.showLoading(false);
-
-                otpView.showMessage("success");
-                otpView.onOtpVerified();
+                }
             }
 
             public void onFailure(String error) {

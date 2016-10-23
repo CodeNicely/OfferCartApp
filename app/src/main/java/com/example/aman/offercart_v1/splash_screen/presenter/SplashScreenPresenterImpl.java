@@ -49,6 +49,7 @@ public class SplashScreenPresenterImpl implements SplashScreenPresenter
                     splashScreenView.showProgressBar(false);
                 }
                 else{
+                    //splashScreenView.version_check(splashScreenData);
 
                     splashScreenView.showMessage(splashScreenData.getMessage());
                     splashScreenView.showProgressBar(false);
