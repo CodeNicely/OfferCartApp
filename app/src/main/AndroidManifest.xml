@@ -25,7 +25,11 @@
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Black.NoTitleBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
 
         </activity>
         <activity android:name=".home.HomePage">
@@ -36,11 +40,7 @@
         <!-- Main activity -->
 
         <activity android:name=".login.view.LoginScreenActivity" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
 
         </activity>
         <activity android:name=".verify_otp.view.OtpViewImpl" />
@@ -50,6 +50,7 @@
         <activity
             android:name=".city.view.CityScreenActivity"
             android:label="@string/app_name" >
+
 
             </activity>
     </application>

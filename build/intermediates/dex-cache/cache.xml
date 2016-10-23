@@ -3,6 +3,15 @@
 
     <item
         is-multidex="false"
+        jar="/home/iket/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/retrofit/2.1.0/2de7cd8b95b7021b1d597f049bcb422055119f2c/retrofit-2.1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="2de7cd8b95b7021b1d597f049bcb422055119f2c">
+        <dex dex="/home/iket/OfferCartApp/app/build/intermediates/pre-dexed/debug/retrofit-2.1.0_70460b8822ff0d036719af33f050d689c311e63b.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/home/iket/OfferCartApp/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.1/jars/libs/internal_impl-24.2.1.jar"
         jumboMode="false"
         optimize="true"
@@ -21,6 +30,15 @@
     </item>
     <item
         is-multidex="false"
+        jar="/home/iket/OfferCartApp/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/24.2.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="c5e6490573cd2cc8018417f60ddd251138b6ed61">
+        <dex dex="/home/iket/OfferCartApp/app/build/intermediates/pre-dexed/debug/com.android.support-cardview-v7-24.2.1_755fa5b515ee31976037a3bead24d5c938911bbd.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/home/iket/OfferCartApp/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
@@ -30,12 +48,30 @@
     </item>
     <item
         is-multidex="false"
+        jar="/home/iket/OfferCartApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
+        <dex dex="/home/iket/OfferCartApp/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-24.2.1_be57609f888c61cc40f97e66271ce0630d410c69.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/home/iket/OfferCartApp/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
         jumboMode="false"
         optimize="true"
         revision="24.0.2"
         sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
         <dex dex="/home/iket/OfferCartApp/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.1_3a7a7310ab457368651d0bd36b9539f7efefac74.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/iket/OfferCartApp/app/build/intermediates/exploded-aar/com.jakewharton/butterknife/8.4.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="a07818a1ecabdb149998823429cce555af4b9cba">
+        <dex dex="/home/iket/OfferCartApp/app/build/intermediates/pre-dexed/debug/com.jakewharton-butterknife-8.4.0_e4389f2beb0a17b64d4be4062f8bd1d7409b0283.jar" />
     </item>
     <item
         is-multidex="false"
@@ -84,6 +120,15 @@
     </item>
     <item
         is-multidex="false"
+        jar="/home/iket/OfferCartApp/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
+        <dex dex="/home/iket/OfferCartApp/app/build/intermediates/pre-dexed/debug/com.android.support-support-compat-24.2.1_fe5cd3fcf87465d7eefb5e979a65a5a698050bc5.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/home/iket/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.7/751f548c85fa49f330cecbb1875893f971b33c4e/gson-2.7.jar"
         jumboMode="false"
         optimize="true"
@@ -93,12 +138,30 @@
     </item>
     <item
         is-multidex="false"
+        jar="/home/iket/OfferCartApp/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/24.2.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="7521486d9bfd2cd9e756e0cf75ed7d97f2ce2d3b">
+        <dex dex="/home/iket/OfferCartApp/app/build/intermediates/pre-dexed/debug/com.android.support-recyclerview-v7-24.2.1_d604dc083a874d79253092533c8953c1e802e41c.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/home/iket/OfferCartApp/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="24.0.2"
         sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
         <dex dex="/home/iket/OfferCartApp/app/build/intermediates/pre-dexed/debug/com.android.support-support-media-compat-24.2.1_d53c0c58f2c66cb671cf081928743f457630a5c5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/iket/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/converter-gson/2.1.0/aa557d71ead91cbf26e0c316a0f593d168303309/converter-gson-2.1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="aa557d71ead91cbf26e0c316a0f593d168303309">
+        <dex dex="/home/iket/OfferCartApp/app/build/intermediates/pre-dexed/debug/converter-gson-2.1.0_1d320ac7b494d2c92ef48e11e941d834152ac5e2.jar" />
     </item>
     <item
         is-multidex="false"
@@ -138,105 +201,6 @@
     </item>
     <item
         is-multidex="false"
-        jar="/home/iket/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.9.0/f824591a0016efbaeddb8300bee54832a1398cfa/okio-1.9.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="24.0.2"
-        sha1="f824591a0016efbaeddb8300bee54832a1398cfa">
-        <dex dex="/home/iket/OfferCartApp/app/build/intermediates/pre-dexed/debug/okio-1.9.0_8eb5cba7c2fa08b35bb2166a0357f051eb7f78dc.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/iket/OfferCartApp/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/libs/internal_impl-24.2.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="24.0.2"
-        sha1="867dad63c33388ff8c7644b236579355036d075f">
-        <dex dex="/home/iket/OfferCartApp/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.1_85a1e5f270f57d9c17ec34ec3f47f95d7bed156a.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/iket/OfferCartApp/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/libs/internal_impl-24.2.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="24.0.2"
-        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
-        <dex dex="/home/iket/OfferCartApp/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.1_e564e1dd7c6c6b02ff1b3c52702fbc1f68f8d8a5.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/iket/OfferCartApp/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.2.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="24.0.2"
-        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
-        <dex dex="/home/iket/OfferCartApp/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-24.2.1_c3f329b895267d385056b99dac9e88d31385d08f.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/iket/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/retrofit/2.1.0/2de7cd8b95b7021b1d597f049bcb422055119f2c/retrofit-2.1.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="24.0.2"
-        sha1="2de7cd8b95b7021b1d597f049bcb422055119f2c">
-        <dex dex="/home/iket/OfferCartApp/app/build/intermediates/pre-dexed/debug/retrofit-2.1.0_70460b8822ff0d036719af33f050d689c311e63b.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/iket/OfferCartApp/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/24.2.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="24.0.2"
-        sha1="c5e6490573cd2cc8018417f60ddd251138b6ed61">
-        <dex dex="/home/iket/OfferCartApp/app/build/intermediates/pre-dexed/debug/com.android.support-cardview-v7-24.2.1_755fa5b515ee31976037a3bead24d5c938911bbd.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/iket/OfferCartApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="24.0.2"
-        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
-        <dex dex="/home/iket/OfferCartApp/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-24.2.1_be57609f888c61cc40f97e66271ce0630d410c69.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/iket/OfferCartApp/app/build/intermediates/exploded-aar/com.jakewharton/butterknife/8.4.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="24.0.2"
-        sha1="a07818a1ecabdb149998823429cce555af4b9cba">
-        <dex dex="/home/iket/OfferCartApp/app/build/intermediates/pre-dexed/debug/com.jakewharton-butterknife-8.4.0_e4389f2beb0a17b64d4be4062f8bd1d7409b0283.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/iket/OfferCartApp/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="24.0.2"
-        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
-        <dex dex="/home/iket/OfferCartApp/app/build/intermediates/pre-dexed/debug/com.android.support-support-compat-24.2.1_fe5cd3fcf87465d7eefb5e979a65a5a698050bc5.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/iket/OfferCartApp/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/24.2.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="24.0.2"
-        sha1="7521486d9bfd2cd9e756e0cf75ed7d97f2ce2d3b">
-        <dex dex="/home/iket/OfferCartApp/app/build/intermediates/pre-dexed/debug/com.android.support-recyclerview-v7-24.2.1_d604dc083a874d79253092533c8953c1e802e41c.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/iket/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/converter-gson/2.1.0/aa557d71ead91cbf26e0c316a0f593d168303309/converter-gson-2.1.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="24.0.2"
-        sha1="aa557d71ead91cbf26e0c316a0f593d168303309">
-        <dex dex="/home/iket/OfferCartApp/app/build/intermediates/pre-dexed/debug/converter-gson-2.1.0_1d320ac7b494d2c92ef48e11e941d834152ac5e2.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="/home/iket/OfferCartApp/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
         jumboMode="false"
         optimize="true"
@@ -255,6 +219,24 @@
     </item>
     <item
         is-multidex="false"
+        jar="/home/iket/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.9.0/f824591a0016efbaeddb8300bee54832a1398cfa/okio-1.9.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="f824591a0016efbaeddb8300bee54832a1398cfa">
+        <dex dex="/home/iket/OfferCartApp/app/build/intermediates/pre-dexed/debug/okio-1.9.0_8eb5cba7c2fa08b35bb2166a0357f051eb7f78dc.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/iket/OfferCartApp/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="867dad63c33388ff8c7644b236579355036d075f">
+        <dex dex="/home/iket/OfferCartApp/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.1_85a1e5f270f57d9c17ec34ec3f47f95d7bed156a.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/home/iket/OfferCartApp/app/build/intermediates/exploded-aar/com.android.support/design/24.2.1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
@@ -264,12 +246,30 @@
     </item>
     <item
         is-multidex="false"
+        jar="/home/iket/OfferCartApp/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
+        <dex dex="/home/iket/OfferCartApp/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.1_e564e1dd7c6c6b02ff1b3c52702fbc1f68f8d8a5.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/home/iket/OfferCartApp/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.2.1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="24.0.2"
         sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
         <dex dex="/home/iket/OfferCartApp/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-24.2.1_04f66a4f582598156de7672595996a0bb0d3d096.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/iket/OfferCartApp/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.2.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
+        <dex dex="/home/iket/OfferCartApp/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-24.2.1_c3f329b895267d385056b99dac9e88d31385d08f.jar" />
     </item>
     <item
         is-multidex="false"
