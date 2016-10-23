@@ -15,7 +15,7 @@ public class SelectedCityData {
     public String getMessage() {
         return message;
     }
-\
+
     public boolean isSuccess() {
         return success;
     }
