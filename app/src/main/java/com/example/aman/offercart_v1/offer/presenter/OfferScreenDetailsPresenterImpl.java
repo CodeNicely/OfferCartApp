@@ -1,8 +1,8 @@
 package com.example.aman.offercart_v1.offer.presenter;
 
 import com.example.aman.offercart_v1.offer.OfferScreenDetailsCallback;
-import com.example.aman.offercart_v1.offer.models.OfferScreenDetailsProvider;
-import com.example.aman.offercart_v1.offer.models.data.OfferScreenData;
+import com.example.aman.offercart_v1.offer.model.OfferScreenDetailsProvider;
+import com.example.aman.offercart_v1.offer.model.data.OfferScreenList;
 import com.example.aman.offercart_v1.offer.view.OfferScreenView;
 
 /**
@@ -27,9 +27,9 @@ public class OfferScreenDetailsPresenterImpl implements OfferScreenDetailsPresen
         offerScreenView.showProgressBar(true);
         offerScreenDetailsProvider.requestOfferList(new OfferScreenDetailsCallback() {
             @Override
-            public void onSuccess(OfferScreenData offerScreenData) {
+            public void onSuccess(OfferScreenList offerScreenData) {
                 offerScreenView.showProgressBar(false);
-                offerScreenView.onOfferVerified(offerScreenData.getOffer_data());
+                offerScreenView.onOfferReceived(offerScreenData.getOffer_data());
 
             }
 

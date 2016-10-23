@@ -52,10 +52,6 @@ public class RetrofitCityScreenProvider implements CityScreenProvider {
 
             }
         });
-
-
-
-
     }
 
     @Override

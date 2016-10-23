@@ -1,6 +1,6 @@
 package com.example.aman.offercart_v1.offer.view;
 
-import com.example.aman.offercart_v1.offer.models.data.OfferScreenDetails;
+import com.example.aman.offercart_v1.offer.model.data.OfferScreenDetails;
 
 import java.util.List;
 
@@ -12,8 +12,8 @@ public interface OfferScreenView {
 
     void showMessage(String error);
     void showProgressBar(boolean show);
-    void onOfferVerified(List<OfferScreenDetails> offerScreenDetailsList);
-    void onOfferSelected(int offer_id,String offer_code,String offer_name);
+    void onOfferReceived(List<OfferScreenDetails> offerScreenDetailsList);
+    void onOfferSelected(OfferScreenDetails offerScreenDetails);
     void onOfferSent();
 
 }

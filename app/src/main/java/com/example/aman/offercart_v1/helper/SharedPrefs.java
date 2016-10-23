@@ -16,7 +16,6 @@ public class SharedPrefs {
     private static final String KEY_IS_LOGGEDIN = "isLoggedIn";
     private static final String KEY_USERNAME = "username";
     private static final String KEY_EMAIL = "email";
-    private static final String KEY_PHOTO_URL = "photoUrl";
     private static final String KEY_USER_ID = "userId";
     private static final String KEY_LOGIN_TYPE = "loginType";
     private static final String KEY_FCM = "fcm";
@@ -106,17 +105,6 @@ public class SharedPrefs {
 
     }
 
-    public String getPhotoUrl() {
-
-        return pref.getString(KEY_PHOTO_URL, "Not Available");
-    }
-
-    public void setPhotoUrl(String photoUrl) {
-
-        editor.putString(KEY_PHOTO_URL, photoUrl);
-        editor.commit();
-
-    }
 
     public void setAccessToken(String accessToken) {
         editor.putString(KEY_ACCESS_TOKEN, accessToken);
