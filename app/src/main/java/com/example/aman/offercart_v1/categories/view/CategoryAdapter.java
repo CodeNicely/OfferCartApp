@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import com.example.aman.offercart_v1.R;
 import com.example.aman.offercart_v1.categories.model.data.CategoryData;
+import com.example.aman.offercart_v1.home.HomePage;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -48,6 +49,18 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.MyView
         Picasso.with(context)
                 .load(categoryData.getImage())
                 .into(holder.image);
+
+        holder.image.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                if(context instanceof HomePage)
+//                {
+//                    ( (HomePage)context).onCategorySelected(categoryData.getId());
+//                }
+                categoriesView.onSelected(categoryData.getId());
+
+            }
+        });
 
     }
 

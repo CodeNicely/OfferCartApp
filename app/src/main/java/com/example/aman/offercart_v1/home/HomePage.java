@@ -19,8 +19,9 @@ import com.example.aman.offercart_v1.shops.view.ShopFragment;
 import com.example.aman.offercart_v1.wallet.view.WalletFragment;
 
 public class HomePage extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+        implements NavigationView.OnNavigationItemSelectedListener, HomePageInterface {
 
+    private String category_id="1";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,6 +38,10 @@ public class HomePage extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
+//        Bundle bundle = new Bundle();
+//        bundle.putString("category_id","1");
+//        ShopFragment shopFragment=new ShopFragment();
+//        shopFragment.setArguments(bundle);
         setFragment(new CategoryFragment(),"Categories");
 
     }
@@ -75,15 +80,39 @@ public class HomePage extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+    public String getCategory()
+    {
+        return category_id;
+    }
 
     void setFragment(Fragment fragment, String title) {
         if (fragment != null) {
             FragmentManager fragmentManager = getSupportFragmentManager();
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
             fragmentTransaction.replace(R.id.home_layout, fragment);
-            fragmentTransaction.commit();        // set the toolbar title
+            fragmentTransaction.commit();
             getSupportActionBar().setTitle(title);
         }
 
+    }
+    void addFragment(Fragment fragment, String title) {
+        if (fragment != null) {
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.add(R.id.home_layout, fragment);
+            fragmentTransaction.commit();
+            getSupportActionBar().setTitle(title);
+        }
+
+    }
+    @Override
+    public void onCategorySelected(String category_id)
+    {
+//        Bundle bundle = new Bundle();
+//        bundle.putString("category_id",category_id);
+//        ShopFragment shopFragment=new ShopFragment();
+//        shopFragment.setArguments(bundle);
+        this.category_id=category_id;
+        addFragment(new ShopFragment(),"Shops");
     }
 }

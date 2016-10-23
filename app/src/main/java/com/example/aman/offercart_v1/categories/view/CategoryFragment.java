@@ -4,8 +4,11 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,6 +20,7 @@ import com.example.aman.offercart_v1.categories.model.MockCategoryProvider;
 import com.example.aman.offercart_v1.categories.model.data.CategoryData;
 import com.example.aman.offercart_v1.categories.presenter.CategoriesPresenter;
 import com.example.aman.offercart_v1.categories.presenter.CategoriesPresenterImpl;
+import com.example.aman.offercart_v1.shops.view.ShopFragment;
 
 import java.util.List;
 
@@ -153,6 +157,27 @@ public class CategoryFragment extends Fragment implements CategoriesView {
         categoryAdapter.notifyDataSetChanged();
 
     }
+
+    @Override
+    public void onSelected(String category_id) {
+        Fragment fragment = new ShopFragment();
+
+//        FragmentManager fragmentManager = getFragmentManager();
+
+//        fragmentManager.beginTransaction().replace(R.id.home_layout, fragment).commit();
+
+//        FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+//        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+//        fragmentTransaction.replace(R.id.home_layout, fragment);
+//        fragmentTransaction.addToBackStack(null);
+//        fragmentTransaction.commit();
+
+        FragmentManager fm = getFragmentManager();
+        FragmentTransaction ft = fm.beginTransaction();
+        ft.replace(R.id.home_layout, fragment);
+        ft.commit();
+    }
+
 
     /**
      * This interface must be implemented by activities that contain this

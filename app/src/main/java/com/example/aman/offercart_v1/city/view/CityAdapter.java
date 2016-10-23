@@ -68,12 +68,11 @@ public class CityAdapter extends RecyclerView.Adapter<CityAdapter.MyViewHolder> 
     protected class MyViewHolder extends RecyclerView.ViewHolder {
 
         TextView city;
-        Button select;
-        private Context context2;
+
 
         private MyViewHolder(View itemView) {
             super(itemView);
-            context2=itemView.getContext();
+
             city= (TextView) itemView.findViewById(R.id.city);
 
 

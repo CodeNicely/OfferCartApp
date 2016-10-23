@@ -13,6 +13,7 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.example.aman.offercart_v1.R;
+import com.example.aman.offercart_v1.home.HomePage;
 import com.example.aman.offercart_v1.shops.model.MockShopProvider;
 import com.example.aman.offercart_v1.shops.model.data.ShopData;
 import com.example.aman.offercart_v1.shops.presenter.ShopPresenter;
@@ -89,10 +90,14 @@ public class ShopFragment extends Fragment implements ShopView{
                              Bundle savedInstanceState) {
 
 
+        String category_id="1";
+        HomePage homePage=(HomePage)getActivity();
+        category_id=homePage.getCategory();
+//        category_id=getArguments().getString("category_id");
         View view= inflater.inflate(R.layout.fragment_shop, container, false);
         ButterKnife.bind(this,view);
         initialize();
-        shopPresenter.getShops("1");
+        shopPresenter.getShops(category_id);
         return view;
     }
 

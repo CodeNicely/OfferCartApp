@@ -12,4 +12,5 @@ public interface CategoriesView {
 
     void showProgressbar(boolean show);
     void onDataReceived(List<CategoryData> categoryDatas);
+    void onSelected(String category_id);
 }

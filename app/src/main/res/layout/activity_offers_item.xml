@@ -11,25 +11,45 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:contentPadding="4dp"
+        app:cardCornerRadius="8dp"
         android:background="#00ffffff"
         >
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="150dp"
+            android:layout_height="wrap_content"
             android:background="#00ffffff"
             >
-            <TextView
+            <ImageView
                 android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:src="@drawable/back1524"
+                android:scaleType="fitXY"
+                android:id="@+id/offer_image"
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Diwali Bonzana"
-                android:textColor="@color/black"
-                android:textSize="20dp"
+                android:textColor="@color/white"
+                android:id="@+id/offer_title"
+                android:textStyle="bold"
+                android:layout_marginTop="90dp"
+                android:textSize="18dp"
                 />
+
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=""
+                android:text="Price: Rs.15"
+                android:layout_marginTop="110dp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:id="@+id/offer_cost"
+                android:textSize="18dp"
                 />
+
+
 
 
         </RelativeLayout>
