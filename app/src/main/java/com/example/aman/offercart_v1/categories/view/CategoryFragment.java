@@ -3,6 +3,7 @@ package com.example.aman.offercart_v1.categories.view;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -45,6 +46,9 @@ public class CategoryFragment extends Fragment implements CategoriesView {
     private CategoriesPresenter categoriesPresenter;
     private CategoryAdapter categoryAdapter;
     private GridLayoutManager gridLayoutManager;
+
+    @BindView(R.id.tabLayout)
+    TabLayout tabLayout;
 
     @BindView(R.id.category_recycler)
     RecyclerView recyclerView;
