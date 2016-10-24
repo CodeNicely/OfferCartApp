@@ -50,4 +50,6 @@ public class RetrofitOfferScreenDetailsProvider implements OfferScreenDetailsPro
 
 
     }
+
+
 }

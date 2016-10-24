@@ -19,7 +19,7 @@ public interface LoginApi {
     @FormUrlEncoded
     @POST(Urls.SEND_OTP )
     Call<LoginData> requestLogin(@Field("name") String name, @Field("mobile") String mobile,
-                                 @Field("email") String email);
+                                 @Field("email") String email,@Field("access_token") String loginToken);
 
 
 }

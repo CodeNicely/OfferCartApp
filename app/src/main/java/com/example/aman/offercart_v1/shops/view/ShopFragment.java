@@ -13,6 +13,7 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.example.aman.offercart_v1.R;
+import com.example.aman.offercart_v1.helper.SharedPrefs;
 import com.example.aman.offercart_v1.shops.model.MockShopProvider;
 import com.example.aman.offercart_v1.shops.model.data.ShopData;
 import com.example.aman.offercart_v1.shops.presenter.ShopPresenter;
@@ -46,7 +47,8 @@ public class ShopFragment extends Fragment implements ShopView{
     private ShopPresenter shopPresenter;
     private ShopAdapter shopAdapter;
     private LinearLayoutManager linearLayoutManager;
-
+private SharedPrefs sharedPrefs;
+    String access_token;
     @BindView(R.id.shops_recycler)
     RecyclerView recyclerView;
 
@@ -82,6 +84,7 @@ public class ShopFragment extends Fragment implements ShopView{
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
     }
 
     @Override
@@ -92,6 +95,7 @@ public class ShopFragment extends Fragment implements ShopView{
         View view= inflater.inflate(R.layout.fragment_shop, container, false);
         ButterKnife.bind(this,view);
         initialize();
+
         shopPresenter.getShops("1");
         return view;
     }

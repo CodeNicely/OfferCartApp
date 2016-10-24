@@ -61,7 +61,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.2"
-        sha1="2e31788eed3c231b0917253fe026315d0ad59bc7">
+        sha1="0810676920a9eeee8798131c36af2fbb10b2622a">
         <dex dex="/home/aman/Downloads/OfferCartApp-master/app/build/intermediates/pre-dexed/debug/instant-run-bootstrap_dba9cfada9733395751542e11205a7cb965c5f75.jar" />
     </item>
     <item
@@ -277,7 +277,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.2"
-        sha1="43ec588fe38eac97a0e31148ccbeb3ed9c423093">
+        sha1="7e649563dd8f4c758b42ba3b7826a706045e63fc">
         <dex dex="/home/aman/Downloads/OfferCartApp-master/app/build/intermediates/pre-dexed/debug/instant-run_8f3bf732c99f06317d3fc72817d2b93be0e5621c.jar" />
     </item>
     <item

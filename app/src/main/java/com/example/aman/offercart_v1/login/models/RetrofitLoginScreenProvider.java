@@ -43,9 +43,9 @@ public class RetrofitLoginScreenProvider implements LoginProvider {
     }
 
 
-    public void requestLogin(String name, String mobile, String email, final LoginCallback loginCallback) {
+    public void requestLogin( String loginToken,String name, String mobile, String email, final LoginCallback loginCallback) {
 
-        Call<LoginData> loginDataCall = loginApi.requestLogin(name, mobile, email);
+        Call<LoginData> loginDataCall = loginApi.requestLogin(loginToken,name, mobile, email);
 
         loginDataCall.enqueue(new Callback<LoginData>() {
 

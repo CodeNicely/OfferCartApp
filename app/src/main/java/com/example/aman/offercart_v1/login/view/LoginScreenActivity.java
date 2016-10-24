@@ -13,6 +13,10 @@ import butterknife.ButterKnife;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+
+
+import com.example.aman.offercart_v1.helper.SharedPrefs;
+
 import com.example.aman.offercart_v1.login.presenter.LoginScreenPresenter;
 import com.example.aman.offercart_v1.verify_otp.view.OtpViewImpl;
 import com.example.aman.offercart_v1.R;
@@ -34,6 +38,8 @@ public class LoginScreenActivity extends Activity implements LoginScreenView {
     EditText mobile;
     String mobile1;
     EditText email;
+    private SharedPrefs sharedPrefs;
+    private String access_token;
     private ProgressBar progressbar;
     private RetrofitLoginScreenProvider retrofitLoginScreenProvider;
     private LoginScreenPresenter loginScreenPresenter;
@@ -43,7 +49,8 @@ public class LoginScreenActivity extends Activity implements LoginScreenView {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_loginscreen);
         Log.d("Response","1");
-
+          sharedPrefs=new SharedPrefs(this);
+        access_token=sharedPrefs.getAccessToken();
         progressbar=(ProgressBar)findViewById(R.id.progressBar);
         Log.d("Response","2");
 
@@ -104,7 +111,7 @@ public class LoginScreenActivity extends Activity implements LoginScreenView {
 
                 }
                 else{
-                    loginScreenPresenter.requestLogin(name1, mobile1, email1);
+                    loginScreenPresenter.requestLogin(access_token,name1, mobile1, email1);
                 }
 
 
