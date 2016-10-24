@@ -23,9 +23,9 @@ public class OfferScreenDetailsPresenterImpl implements OfferScreenDetailsPresen
     }
 
     @Override
-    public void requestOfferList() {
+    public void requestOfferList(String token) {
         offerScreenView.showProgressBar(true);
-        offerScreenDetailsProvider.requestOfferList(new OfferScreenDetailsCallback() {
+        offerScreenDetailsProvider.requestOfferList(token,new OfferScreenDetailsCallback() {
             @Override
             public void onSuccess(OfferScreenList offerScreenData) {
                 offerScreenView.showProgressBar(false);

@@ -99,7 +99,8 @@ public class HomePage extends AppCompatActivity
         if (fragment != null) {
             FragmentManager fragmentManager = getSupportFragmentManager();
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-            fragmentTransaction.add(R.id.home_layout, fragment);
+            fragmentTransaction.replace(R.id.home_layout, fragment);
+            fragmentTransaction.addToBackStack(null);
             fragmentTransaction.commit();
             getSupportActionBar().setTitle(title);
         }

@@ -309,15 +309,6 @@
     </item>
     <item
         is-multidex="false"
-        jar="/home/iket/OfferCartApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.0.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="24.0.2"
-        sha1="cc178928721f3222b3b06bdfbd9497378ccb9792">
-        <dex dex="/home/iket/OfferCartApp/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-basement-9.0.0_15d5056df1dcf0013097f79c0552bddc79502f28.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="/home/iket/OfferCartApp/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.2.1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
@@ -333,6 +324,15 @@
         revision="24.0.2"
         sha1="d5c731fc64c03dfe04d51134955b483551c35849">
         <dex dex="/home/iket/OfferCartApp/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-24.2.1_72ab83da472430eccaabf81981f67da7323cca7c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/iket/OfferCartApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.0.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="cc178928721f3222b3b06bdfbd9497378ccb9792">
+        <dex dex="/home/iket/OfferCartApp/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-basement-9.0.0_15d5056df1dcf0013097f79c0552bddc79502f28.jar" />
     </item>
     <item
         is-multidex="false"

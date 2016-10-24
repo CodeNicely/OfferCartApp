@@ -13,7 +13,7 @@ import java.util.List;
 public class MockCategoryProvider implements CategoriesProvider {
 
     @Override
-    public void getCategories(OnCategoriesReceived onCategoriesReceived) {
+    public void getCategories(String access_token,OnCategoriesReceived onCategoriesReceived) {
         List<CategoryData> categoryDatas=new ArrayList<>();
 
         CategoryData clothes=new CategoryData("Clothes","http://image.flaticon.com/icons/png/512/194/194116.png","1");

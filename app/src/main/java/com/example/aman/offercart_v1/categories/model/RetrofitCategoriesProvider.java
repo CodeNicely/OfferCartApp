@@ -33,8 +33,8 @@ public class RetrofitCategoriesProvider implements CategoriesProvider {
     }
 
     @Override
-    public void getCategories(final OnCategoriesReceived onCategoriesReceived) {
-        Call<CategoriesList> call=request_categories.getCategories();
+    public void getCategories(String access_token,final OnCategoriesReceived onCategoriesReceived) {
+        Call<CategoriesList> call=request_categories.getCategories(access_token);
         call.enqueue(new Callback<CategoriesList>() {
             @Override
             public void onResponse(Call<CategoriesList> call, Response<CategoriesList> response) {

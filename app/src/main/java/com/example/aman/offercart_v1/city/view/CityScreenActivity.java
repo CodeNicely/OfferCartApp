@@ -51,10 +51,10 @@ public class CityScreenActivity extends AppCompatActivity implements CityScreenV
         setContentView(R.layout.activity_cityscreen);
         ButterKnife.bind(this);
         sharedPrefs=new SharedPrefs(this);
-
+        access_token=sharedPrefs.getAccessToken();
         cityScreenPresenter=new CityScreenPresenterImpl(this,new RetrofitCityScreenProvider());
         cityAdapter=new CityAdapter(this);
-        access_token=sharedPrefs.getAccessToken();
+
         linearLayoutManager=new LinearLayoutManager(this);
         recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.setAdapter(cityAdapter);
@@ -88,8 +88,9 @@ public class CityScreenActivity extends AppCompatActivity implements CityScreenV
     public void onCitySelected(String city_id, String city_name) {
 //        sharedPrefs=new SharedPrefs(this);
 //        sharedPrefs.setKEY_City(city_name);
-        Log.d("Res","1");
-        cityScreenPresenter.sendSelectedCity(city_id);
+        sharedPrefs=new SharedPrefs(this);
+        access_token=sharedPrefs.getAccessToken();
+        cityScreenPresenter.sendSelectedCity(city_id,access_token);
 
 
     }

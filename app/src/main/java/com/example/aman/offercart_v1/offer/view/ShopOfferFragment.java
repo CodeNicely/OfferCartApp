@@ -49,6 +49,7 @@ public class ShopOfferFragment extends Fragment implements OfferScreenView{
     private OfferScreenDetailsPresenter offerScreenDetailsPresenter;
     private LinearLayoutManager linearLayoutManager;
     private SharedPrefs sharedPrefs;
+    String access_token;
 
     @BindView(R.id.offersRecycler)
     RecyclerView recyclerView;
@@ -82,6 +83,7 @@ public class ShopOfferFragment extends Fragment implements OfferScreenView{
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);

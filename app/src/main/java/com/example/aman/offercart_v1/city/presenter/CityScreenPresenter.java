@@ -5,5 +5,5 @@ package com.example.aman.offercart_v1.city.presenter;
  */
 public interface CityScreenPresenter {
     void requestCity(String token);
-    void sendSelectedCity(String city_id);
+    void sendSelectedCity(String city_id,String token);
 }

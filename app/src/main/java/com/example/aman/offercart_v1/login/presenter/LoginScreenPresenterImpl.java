@@ -2,10 +2,12 @@ package com.example.aman.offercart_v1.login.presenter;
 
 import android.util.Log;
 
-import com.example.aman.offercart_v1.login.LoginCallback;
+
 import com.example.aman.offercart_v1.login.models.LoginProvider;
-import com.example.aman.offercart_v1.login.models.data.LoginData;
 import com.example.aman.offercart_v1.login.view.LoginScreenView;
+import com.example.aman.offercart_v1.login.models.data.LoginData;
+import com.example.aman.offercart_v1.login.LoginCallback;
+
 
 
 /**
@@ -22,11 +24,11 @@ public class LoginScreenPresenterImpl implements LoginScreenPresenter {
     }
 
     @Override
-    public void requestLogin(String name, String mobile, String email) {
+    public void requestLogin(String loginToken,String name, String mobile, String email) {
 
         loginView.showLoading(true);
         Log.d("Resp","1");
-        loginProvider.requestLogin(name, mobile, email, new LoginCallback() {
+        loginProvider.requestLogin(loginToken,name, mobile, email, new LoginCallback() {
             @Override
             public void onSuccess(LoginData loginData) {
                 if(loginData.isSuccess())

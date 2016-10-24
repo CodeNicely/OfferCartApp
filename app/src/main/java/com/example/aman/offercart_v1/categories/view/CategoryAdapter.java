@@ -53,11 +53,11 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.MyView
         holder.image.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                if(context instanceof HomePage)
-//                {
-//                    ( (HomePage)context).onCategorySelected(categoryData.getId());
-//                }
-                categoriesView.onSelected(categoryData.getId());
+                if(context instanceof HomePage)
+                {
+                    ( (HomePage)context).onCategorySelected(categoryData.getId());
+                }
+//                categoriesView.onSelected(categoryData.getId());
 
             }
         });

@@ -17,9 +17,11 @@ import android.widget.Toast;
 
 import com.example.aman.offercart_v1.R;
 import com.example.aman.offercart_v1.categories.model.MockCategoryProvider;
+import com.example.aman.offercart_v1.categories.model.RetrofitCategoriesProvider;
 import com.example.aman.offercart_v1.categories.model.data.CategoryData;
 import com.example.aman.offercart_v1.categories.presenter.CategoriesPresenter;
 import com.example.aman.offercart_v1.categories.presenter.CategoriesPresenterImpl;
+import com.example.aman.offercart_v1.helper.SharedPrefs;
 import com.example.aman.offercart_v1.shops.view.ShopFragment;
 
 import java.util.List;
@@ -49,12 +51,15 @@ public class CategoryFragment extends Fragment implements CategoriesView {
     private CategoriesPresenter categoriesPresenter;
     private CategoryAdapter categoryAdapter;
     private GridLayoutManager gridLayoutManager;
+    private String token;
+    private SharedPrefs sharedPrefs;
 
     @BindView(R.id.category_recycler)
     RecyclerView recyclerView;
 
     @BindView(R.id.categories_progressbar)
     ProgressBar progressBar;
+
 
     private OnFragmentInteractionListener mListener;
 
@@ -99,7 +104,7 @@ public class CategoryFragment extends Fragment implements CategoriesView {
 
         ButterKnife.bind(this,view);
         initialize();
-        categoriesPresenter.getCategories();
+        categoriesPresenter.getCategories(token);
 
         return view;
 
@@ -107,10 +112,12 @@ public class CategoryFragment extends Fragment implements CategoriesView {
 
     void initialize()
     {
-//        categoriesPresenter=new CategoriesPresenterImpl(this,new RetrofitCategoriesProvider());
-        categoriesPresenter=new CategoriesPresenterImpl(this,new MockCategoryProvider());
+        categoriesPresenter=new CategoriesPresenterImpl(this,new RetrofitCategoriesProvider());
+//        categoriesPresenter=new CategoriesPresenterImpl(this,new MockCategoryProvider());
         categoryAdapter=new CategoryAdapter(getContext());
         recyclerView.setHasFixedSize(true);
+        sharedPrefs=new SharedPrefs(getContext());
+        token=sharedPrefs.getAccessToken();
         gridLayoutManager=new GridLayoutManager(getContext(),2);
         recyclerView.setLayoutManager(gridLayoutManager);
         recyclerView.setAdapter(categoryAdapter);
@@ -162,33 +169,21 @@ public class CategoryFragment extends Fragment implements CategoriesView {
     public void onSelected(String category_id) {
         Fragment fragment = new ShopFragment();
 
-//        FragmentManager fragmentManager = getFragmentManager();
-
-//        fragmentManager.beginTransaction().replace(R.id.home_layout, fragment).commit();
+        FragmentManager fragmentManager = getFragmentManager();
 
 //        FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
 //        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-//        fragmentTransaction.replace(R.id.home_layout, fragment);
+//        fragmentTransaction.add(R.id.home_layout, fragment);
 //        fragmentTransaction.addToBackStack(null);
 //        fragmentTransaction.commit();
 
-        FragmentManager fm = getFragmentManager();
-        FragmentTransaction ft = fm.beginTransaction();
-        ft.replace(R.id.home_layout, fragment);
-        ft.commit();
+//        FragmentManager fm = getFragmentManager();
+//        FragmentTransaction ft = fm.beginTransaction();
+//        ft.replace(R.id.home_layout, fragment);
+//        ft.commit();
     }
 
 
-    /**
-     * This interface must be implemented by activities that contain this
-     * fragment to allow an interaction in this fragment to be communicated
-     * to the activity and potentially other fragments contained in that
-     * activity.
-     * <p>
-     * See the Android Training lesson <a href=
-     * "http://developer.android.com/training/basics/fragments/communicating.html"
-     * >Communicating with Other Fragments</a> for more information.
-     */
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);

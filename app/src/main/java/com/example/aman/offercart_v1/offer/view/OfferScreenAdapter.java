@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import com.example.aman.offercart_v1.R;
 import com.example.aman.offercart_v1.offer.model.data.OfferScreenDetails;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,12 +28,8 @@ public class OfferScreenAdapter extends RecyclerView.Adapter<OfferScreenAdapter.
     private OfferScreenView offerScreenView;
 
     public OfferScreenAdapter(Context context) {
-
-
         this.context = context;
         layoutInflater = layoutInflater.from(context);
-
-
     }
     public void setdata(List<OfferScreenDetails> offerScreenDetails)
     {
@@ -51,8 +48,13 @@ public class OfferScreenAdapter extends RecyclerView.Adapter<OfferScreenAdapter.
     public void onBindViewHolder(MyViewHolder holder, int position) {
 
         final OfferScreenDetails offerScreenDetails =offerScreenDetailsList.get(position);
-        holder.offer.setText(offerScreenDetails.getOffer_name());
-        holder.offer_des.setText(offerScreenDetails.getOffer_des());
+        holder.title.setText(offerScreenDetails.getOffer_name());
+        holder.cost.setText(offerScreenDetails.getOffer_code());
+
+                    Picasso.with(context)
+                    .load(offerScreenDetails.getOffer_image())
+                    .error(R.drawable.back1524)
+                    .into(holder.image);
 
 
 
@@ -67,19 +69,15 @@ public class OfferScreenAdapter extends RecyclerView.Adapter<OfferScreenAdapter.
 
     protected class MyViewHolder extends RecyclerView.ViewHolder {
 
-        TextView offer,offer_des;
-        ImageView imageView;
-
-        private Context context2;
+        TextView title,cost;
+        ImageView image;
 
         private MyViewHolder(View itemView) {
             super(itemView);
+            title=(TextView)itemView.findViewById(R.id.offer_title);
+            cost=(TextView)itemView.findViewById(R.id.offer_cost);
+            image=(ImageView)itemView.findViewById(R.id.offer_image);
 
-            //final OfferScreenDetails offerScreenDetails =offerScreenDetailsList.get(imageView);
-//            Picasso.with(context)
-//                    .load(offerScreenDetails.getOffer_image())
-//                    .error(R.drawable.happy)
-//                    .into(imageView);
         }
 
     }

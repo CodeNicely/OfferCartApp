@@ -47,11 +47,11 @@ public class CityScreenPresenterImpl implements CityScreenPresenter {
     }
 
     @Override
-    public void sendSelectedCity(String city_id) {
+    public void sendSelectedCity(String city_id,String token) {
         Log.d("Res","2");
         cityScreenView.showLoading(true);
         Log.d("Res","3");
-        cityScreenProvider.sendSelectedCity(city_id, new OnCitiesSent() {
+        cityScreenProvider.sendSelectedCity(city_id,token, new OnCitiesSent() {
             @Override
             public void onFailure() {
                 cityScreenView.showLoading(false);

@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
@@ -149,11 +150,13 @@ public class SplashScreenActivity extends Activity implements SplashScreenView
 
                     if (sharedPrefs.isLoggedIn())
                     {
+                        Log.d("Res",""+sharedPrefs.isLoggedIn());
                         Intent city = new Intent(SplashScreenActivity.this, CityScreenActivity.class);
                         startActivity(city);
                         finish();
                     } else
                     {
+                        Log.d("Res",""+sharedPrefs.isLoggedIn());
 
                         Intent Welcome = new Intent(SplashScreenActivity.this, WelcomeScreenActivity.class);
                         startActivity(Welcome);

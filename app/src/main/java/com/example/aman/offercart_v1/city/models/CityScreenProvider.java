@@ -8,5 +8,5 @@ import com.example.aman.offercart_v1.city.view.OnCitiesSent;
  */
 public interface CityScreenProvider {
     void requestCity(String token,OnCitiesReceived onCitiesReceived);
-    void sendSelectedCity(String city_id, OnCitiesSent onCitiesSent);
+    void sendSelectedCity(String city_id,String token, OnCitiesSent onCitiesSent);
 }

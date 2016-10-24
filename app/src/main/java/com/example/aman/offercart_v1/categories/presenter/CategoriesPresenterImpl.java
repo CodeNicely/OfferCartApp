@@ -22,11 +22,11 @@ public class CategoriesPresenterImpl implements CategoriesPresenter {
 
 
     @Override
-    public void getCategories() {
+    public void getCategories(String access_token) {
 
         categoriesView.showProgressbar(true);
 
-        categoriesProvider.getCategories(new OnCategoriesReceived() {
+        categoriesProvider.getCategories(access_token,new OnCategoriesReceived() {
             @Override
             public void onFailure() {
                 categoriesView.showProgressbar(false);
@@ -35,9 +35,20 @@ public class CategoriesPresenterImpl implements CategoriesPresenter {
 
             @Override
             public void onSuccess(CategoriesList categoriesList) {
-                categoriesView.showProgressbar(false);
-                categoriesView.onDataReceived(categoriesList.getCategoryDatas());
-            }
+                if(categoriesList.isSuccess())
+                {
+                    categoriesView.showProgressbar(false);
+                    categoriesView.showMessage(categoriesList.getMessage());
+                    categoriesView.onDataReceived(categoriesList.getCategoryDatas());
+
+                }
+                else
+                {
+                    categoriesView.showProgressbar(false);
+                    categoriesView.onDataReceived(categoriesList.getCategoryDatas());
+
+                }
+                }
 
         });
     }
