@@ -8,6 +8,6 @@ import com.example.aman.offercart_v1.offer.OfferScreenDetailsCallback;
 
 public interface OfferScreenDetailsProvider {
 
-    void requestOfferList(String offerToken,OfferScreenDetailsCallback offerScreenDetailsCallback);
+    void requestOfferList(String offerToken,String shop_id,OfferScreenDetailsCallback offerScreenDetailsCallback);
 
 }

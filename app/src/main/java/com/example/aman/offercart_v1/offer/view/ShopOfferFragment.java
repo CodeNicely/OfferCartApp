@@ -14,6 +14,7 @@ import android.widget.Toast;
 
 import com.example.aman.offercart_v1.R;
 import com.example.aman.offercart_v1.helper.SharedPrefs;
+import com.example.aman.offercart_v1.home.HomePage;
 import com.example.aman.offercart_v1.offer.model.RetrofitOfferScreenDetailsProvider;
 import com.example.aman.offercart_v1.offer.model.data.OfferScreenDetails;
 import com.example.aman.offercart_v1.offer.presenter.OfferScreenDetailsPresenter;
@@ -44,11 +45,12 @@ public class ShopOfferFragment extends Fragment implements OfferScreenView{
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-
+    private String shop_id;
     private OfferScreenAdapter offerScreenAdapter;
     private OfferScreenDetailsPresenter offerScreenDetailsPresenter;
     private LinearLayoutManager linearLayoutManager;
     private SharedPrefs sharedPrefs;
+
     String access_token;
 
     @BindView(R.id.offersRecycler)
@@ -93,13 +95,19 @@ public class ShopOfferFragment extends Fragment implements OfferScreenView{
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view= inflater.inflate(R.layout.fragment_shop_offer2, container, false);
+        View view= inflater.inflate(R.layout.activity_offerscreen, container, false);
         ButterKnife.bind(this,view);
+        HomePage homePage=new HomePage();
+        shop_id=homePage.getShop_id();
         initialize();
+
+        offerScreenDetailsPresenter.requestOfferList(access_token,shop_id);
         return view;
     }
     void initialize()
     {
+        sharedPrefs=new SharedPrefs(getContext());
+        access_token=sharedPrefs.getAccessToken();
         linearLayoutManager=new LinearLayoutManager(getContext());
         offerScreenAdapter=new OfferScreenAdapter(getContext());
         recyclerView.setHasFixedSize(true);

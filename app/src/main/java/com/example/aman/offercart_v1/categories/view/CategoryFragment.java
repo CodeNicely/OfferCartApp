@@ -149,7 +149,7 @@ public class CategoryFragment extends Fragment implements CategoriesView {
 
     @Override
     public void showProgressbar(boolean show) {
-        if (show) {
+        if (show){
             progressBar.setVisibility(View.VISIBLE);
             recyclerView.setVisibility(View.VISIBLE);
         } else {
@@ -167,20 +167,7 @@ public class CategoryFragment extends Fragment implements CategoriesView {
 
     @Override
     public void onSelected(String category_id) {
-        Fragment fragment = new ShopFragment();
 
-        FragmentManager fragmentManager = getFragmentManager();
-
-//        FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-//        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-//        fragmentTransaction.add(R.id.home_layout, fragment);
-//        fragmentTransaction.addToBackStack(null);
-//        fragmentTransaction.commit();
-
-//        FragmentManager fm = getFragmentManager();
-//        FragmentTransaction ft = fm.beginTransaction();
-//        ft.replace(R.id.home_layout, fragment);
-//        ft.commit();
     }
 
 

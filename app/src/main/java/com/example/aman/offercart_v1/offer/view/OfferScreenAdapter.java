@@ -56,8 +56,6 @@ public class OfferScreenAdapter extends RecyclerView.Adapter<OfferScreenAdapter.
                     .error(R.drawable.back1524)
                     .into(holder.image);
 
-
-
     }
 
     @Override

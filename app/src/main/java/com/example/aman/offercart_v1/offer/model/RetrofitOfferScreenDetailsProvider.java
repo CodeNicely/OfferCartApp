@@ -21,7 +21,7 @@ public class RetrofitOfferScreenDetailsProvider implements OfferScreenDetailsPro
 
 
     @Override
-    public void requestOfferList(String offerToken,final OfferScreenDetailsCallback offerScreenDetailsCallback) {
+    public void requestOfferList(String offerToken,String shop_id,final OfferScreenDetailsCallback offerScreenDetailsCallback) {
 
         Gson gson = new GsonBuilder()
                 .setLenient()
@@ -32,7 +32,7 @@ public class RetrofitOfferScreenDetailsProvider implements OfferScreenDetailsPro
                 .build();
         final OfferScreenRequestApi offerScreenRequestApi=retrofit.create(OfferScreenRequestApi.class);
 
-        final Call<OfferScreenList> offerScreenDataCall=offerScreenRequestApi.getCategoryListData();
+        final Call<OfferScreenList> offerScreenDataCall=offerScreenRequestApi.getCategoryListData(offerToken,shop_id);
 
             offerScreenDataCall.enqueue(new Callback<OfferScreenList>() {
                 @Override
@@ -44,7 +44,6 @@ public class RetrofitOfferScreenDetailsProvider implements OfferScreenDetailsPro
                 @Override
                 public void onFailure(Call<OfferScreenList> call, Throwable t) {
                     t.printStackTrace();
-
                 }
             });
 

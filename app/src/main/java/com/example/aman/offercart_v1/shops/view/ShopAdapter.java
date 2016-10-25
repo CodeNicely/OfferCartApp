@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.aman.offercart_v1.R;
+import com.example.aman.offercart_v1.home.HomePage;
 import com.example.aman.offercart_v1.shops.model.data.ShopData;
 import com.squareup.picasso.Picasso;
 
@@ -48,6 +49,15 @@ public class ShopAdapter extends RecyclerView.Adapter<ShopAdapter.MyViewHolder>{
         Picasso.with(context)
                 .load(shopData.getImage())
                 .into(holder.image);
+        holder.image.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(context instanceof HomePage)
+                {
+                    ( (HomePage)context).onShopSelected(shopData.getId(),shopData.getName());
+                }
+            }
+        });
     }
 
     @Override

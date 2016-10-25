@@ -15,6 +15,7 @@ import android.view.MenuItem;
 
 import com.example.aman.offercart_v1.R;
 import com.example.aman.offercart_v1.categories.view.CategoryFragment;
+import com.example.aman.offercart_v1.offer.view.ShopOfferFragment;
 import com.example.aman.offercart_v1.shops.view.ShopFragment;
 import com.example.aman.offercart_v1.wallet.view.WalletFragment;
 
@@ -22,6 +23,7 @@ public class HomePage extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, HomePageInterface {
 
     private String category_id="1";
+    private String shop_id="1";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,10 +40,6 @@ public class HomePage extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-//        Bundle bundle = new Bundle();
-//        bundle.putString("category_id","1");
-//        ShopFragment shopFragment=new ShopFragment();
-//        shopFragment.setArguments(bundle);
         setFragment(new CategoryFragment(),"Categories");
 
     }
@@ -85,6 +83,10 @@ public class HomePage extends AppCompatActivity
         return category_id;
     }
 
+    public String getShop_id() {
+        return shop_id;
+    }
+
     void setFragment(Fragment fragment, String title) {
         if (fragment != null) {
             FragmentManager fragmentManager = getSupportFragmentManager();
@@ -109,11 +111,13 @@ public class HomePage extends AppCompatActivity
     @Override
     public void onCategorySelected(String category_id)
     {
-//        Bundle bundle = new Bundle();
-//        bundle.putString("category_id",category_id);
-//        ShopFragment shopFragment=new ShopFragment();
-//        shopFragment.setArguments(bundle);
         this.category_id=category_id;
         addFragment(new ShopFragment(),"Shops");
+    }
+
+    @Override
+    public void onShopSelected(String shop_id,String shop_name) {
+        this.shop_id=shop_id;
+        addFragment(new ShopOfferFragment(),shop_name);
     }
 }
