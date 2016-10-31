@@ -1,31 +1,28 @@
 package com.example.aman.offercart_v1.login.view;
 
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.content.ContextCompat;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.net.Uri;
+import android.widget.ProgressBar;
+import android.widget.Toast;
 
-import butterknife.ButterKnife;
+import com.example.aman.offercart_v1.R;
+import com.example.aman.offercart_v1.helper.SharedPrefs;
+import com.example.aman.offercart_v1.login.models.RetrofitLoginScreenProvider;
+import com.example.aman.offercart_v1.login.presenter.LoginScreenPresenter;
+import com.example.aman.offercart_v1.login.presenter.LoginScreenPresenterImpl;
+import com.example.aman.offercart_v1.verify_otp.view.OtpViewImpl;
+import com.example.aman.offercart_v1.welcome_screen.view.WelcomeScreenActivity;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-
-import com.example.aman.offercart_v1.helper.SharedPrefs;
-
-import com.example.aman.offercart_v1.login.presenter.LoginScreenPresenter;
-import com.example.aman.offercart_v1.verify_otp.view.OtpViewImpl;
-import com.example.aman.offercart_v1.R;
-import com.example.aman.offercart_v1.login.models.RetrofitLoginScreenProvider;
-import android.widget.ProgressBar;
-import android.view.View;
-import android.widget.Toast;
-import com.example.aman.offercart_v1.login.presenter.LoginScreenPresenterImpl;
-import com.example.aman.offercart_v1.welcome_screen.view.WelcomeScreenActivity;
-
+import butterknife.ButterKnife;
 
 /**
  * Created by aman on 15/10/16.
