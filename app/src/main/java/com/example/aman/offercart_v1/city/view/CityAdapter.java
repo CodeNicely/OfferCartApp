@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import com.example.aman.offercart_v1.R;
 import com.example.aman.offercart_v1.city.models.data.CityScreenData;
+import com.example.aman.offercart_v1.home.HomePage;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,9 +22,11 @@ public class CityAdapter extends RecyclerView.Adapter<CityAdapter.MyViewHolder> 
     private List<CityScreenData> cityScreenDataList=new ArrayList<>();
     private Context context;
     private LayoutInflater layoutInflater;
+    private CityFragment cityFragment;
 
-    public CityAdapter(Context context) {
+    public CityAdapter(Context context,CityFragment cityFragment) {
         this.context=context;
+        this.cityFragment=cityFragment;
         layoutInflater=LayoutInflater.from(context);
     }
     public void setData(List<CityScreenData> cityScreenData)
@@ -49,9 +52,9 @@ public class CityAdapter extends RecyclerView.Adapter<CityAdapter.MyViewHolder> 
             @Override
             public void onClick(View v) {
 
-            if( context instanceof CityScreenActivity) {
+            if( context instanceof HomePage) {
 
-                ((CityScreenActivity) context).onCitySelected(cityScreenData.getCity_id(), cityScreenData.getCity_name());
+                cityFragment.onCitySelected(cityScreenData.getCity_id(),cityScreenData.getCity_name());
             }
 
             }

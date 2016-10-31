@@ -2,6 +2,7 @@ package com.example.aman.offercart_v1.helper;
 
 import android.app.Application;
 import android.content.Context;
+import android.content.SearchRecentSuggestionsProvider;
 
 /**
  * Created by meghal on 23/10/16.
@@ -10,6 +11,7 @@ import android.content.Context;
 public class MyApplication extends Application {
 
     private static Context context;
+    public static String fcm;
     @Override
     public void onCreate() {
         super.onCreate();

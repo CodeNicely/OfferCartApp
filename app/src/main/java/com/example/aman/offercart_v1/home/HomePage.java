@@ -1,5 +1,6 @@
 package com.example.aman.offercart_v1.home;
 
+import android.content.DialogInterface;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
@@ -9,12 +10,16 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
 import com.example.aman.offercart_v1.R;
 import com.example.aman.offercart_v1.categories.view.CategoryFragment;
+import com.example.aman.offercart_v1.city.view.CityFragment;
+import com.example.aman.offercart_v1.city.view.CityScreenActivity;
+import com.example.aman.offercart_v1.helper.SharedPrefs;
 import com.example.aman.offercart_v1.offer.view.ShopOfferFragment;
 import com.example.aman.offercart_v1.shops.view.ShopFragment;
 import com.example.aman.offercart_v1.wallet.view.WalletFragment;
@@ -22,8 +27,10 @@ import com.example.aman.offercart_v1.wallet.view.WalletFragment;
 public class HomePage extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, HomePageInterface {
 
-    private String category_id="1";
-    private String shop_id="1";
+    private String category_id = "1";
+    private String shop_id = "1";
+    private SharedPrefs sharedPrefs;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,7 +47,16 @@ public class HomePage extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        setFragment(new CategoryFragment(),"Categories");
+        sharedPrefs = new SharedPrefs(this);
+
+        if (!sharedPrefs.getCity().equals("NA")) {
+            setFragment(new CategoryFragment(), "Categories");
+
+        } else {
+            setFragment(new CityFragment(), "City");
+
+        }
+
 
     }
 
@@ -49,8 +65,33 @@ public class HomePage extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
-        } else {
+        } else if (getFragmentManager().getBackStackEntryCount() == 0) {
+
+
             super.onBackPressed();
+
+        } else {
+
+            final AlertDialog ad = new AlertDialog.Builder(this)
+                    .create();
+            ad.setCancelable(false);
+            ad.setTitle("Exit ?");
+            ad.setMessage("Do you really want to exit ?");
+            ad.setButton(DialogInterface.BUTTON_POSITIVE, "yes", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    ad.cancel();
+                    finish();
+                }
+            });
+            ad.setButton(DialogInterface.BUTTON_NEGATIVE, "no", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    ad.cancel();
+
+                }
+            });
+            ad.show();
         }
     }
 
@@ -62,15 +103,16 @@ public class HomePage extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_home) {
-            setFragment(new WalletFragment(),"Wallet");
+
+            setFragment(new CategoryFragment(), "Category ");
+
         } else if (id == R.id.nav_changeCity) {
 
-        } else if (id == R.id.nav_settings) {
-            setFragment(new ShopFragment(),"Shops");
+            addFragment(new CityFragment(), "Select City");
 
-        } else if (id == R.id.nav_logout) {
+        } else if (id == R.id.nav_wallet) {
 
-        } else if (id == R.id.nav_share) {
+            addFragment(new WalletFragment(), "Wallet");
 
         }
 
@@ -78,8 +120,8 @@ public class HomePage extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
-    public String getCategory()
-    {
+
+    public String getCategory() {
         return category_id;
     }
 
@@ -87,7 +129,7 @@ public class HomePage extends AppCompatActivity
         return shop_id;
     }
 
-    void setFragment(Fragment fragment, String title) {
+    public void setFragment(Fragment fragment, String title) {
         if (fragment != null) {
             FragmentManager fragmentManager = getSupportFragmentManager();
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
@@ -97,6 +139,7 @@ public class HomePage extends AppCompatActivity
         }
 
     }
+
     void addFragment(Fragment fragment, String title) {
         if (fragment != null) {
             FragmentManager fragmentManager = getSupportFragmentManager();
@@ -108,16 +151,17 @@ public class HomePage extends AppCompatActivity
         }
 
     }
+
     @Override
-    public void onCategorySelected(String category_id)
-    {
-        this.category_id=category_id;
-        addFragment(new ShopFragment(),"Shops");
+    public void onCategorySelected(String category_id) {
+        this.category_id = category_id;
+        addFragment(new ShopFragment(), "Shops");
     }
 
     @Override
-    public void onShopSelected(String shop_id,String shop_name) {
-        this.shop_id=shop_id;
-        addFragment(new ShopOfferFragment(),shop_name);
+    public void onShopSelected(String shop_id, String shop_name) {
+        this.shop_id = shop_id;
+        addFragment(new ShopOfferFragment(), shop_name);
     }
+
 }

@@ -24,6 +24,7 @@ import android.widget.ProgressBar;
 import android.view.View;
 import android.widget.Toast;
 import com.example.aman.offercart_v1.login.presenter.LoginScreenPresenterImpl;
+import com.example.aman.offercart_v1.welcome_screen.view.WelcomeScreenActivity;
 
 
 /**
@@ -38,7 +39,6 @@ public class LoginScreenActivity extends Activity implements LoginScreenView {
     String mobile1;
     EditText email;
     private SharedPrefs sharedPrefs;
-    private String access_token;
     private ProgressBar progressbar;
     private RetrofitLoginScreenProvider retrofitLoginScreenProvider;
     private LoginScreenPresenter loginScreenPresenter;
@@ -49,7 +49,6 @@ public class LoginScreenActivity extends Activity implements LoginScreenView {
         setContentView(R.layout.activity_loginscreen);
         Log.d("Response","1");
           sharedPrefs=new SharedPrefs(this);
-        access_token=sharedPrefs.getAccessToken();
         progressbar=(ProgressBar)findViewById(R.id.progressBar);
         Log.d("Response","2");
 
@@ -110,7 +109,7 @@ public class LoginScreenActivity extends Activity implements LoginScreenView {
 
                 }
                 else{
-                    loginScreenPresenter.requestLogin(access_token,name1, mobile1, email1);
+                    loginScreenPresenter.requestLogin(name1, mobile1, email1);
                 }
 
 
@@ -156,6 +155,16 @@ public class LoginScreenActivity extends Activity implements LoginScreenView {
         Intent in=new Intent(LoginScreenActivity.this, OtpViewImpl.class);
         in.putExtra("mobile",mobile1);
         startActivity(in);
+        finish();
+
+    }
+
+    @Override
+    public void onBackPressed() {
+    //    super.onBackPressed();
+        Intent intent=new Intent(LoginScreenActivity.this, WelcomeScreenActivity.class);
+        startActivity(intent);
+        finish();
 
     }
 }

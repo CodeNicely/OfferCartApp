@@ -38,9 +38,9 @@ public class RetrofitOtpProvider implements OtpProvider {
 
     }
 
-    public void requestOtp(String otpToken,String otp, String mobile, final OtpCallback otpCallback) {
+    public void requestOtp(String otp, String mobile, final OtpCallback otpCallback) {
 
-        Call<OtpData> otpDataCall = otpApi.requestOtp(otpToken,otp, mobile);
+        Call<OtpData> otpDataCall = otpApi.requestOtp(otp, mobile);
 
         otpDataCall.enqueue(new Callback<OtpData>() {
 

@@ -53,7 +53,7 @@ public class CityScreenActivity extends AppCompatActivity implements CityScreenV
         sharedPrefs=new SharedPrefs(this);
         access_token=sharedPrefs.getAccessToken();
         cityScreenPresenter=new CityScreenPresenterImpl(this,new RetrofitCityScreenProvider());
-        cityAdapter=new CityAdapter(this);
+      //  cityAdapter=new CityAdapter(this,this);
 
         linearLayoutManager=new LinearLayoutManager(this);
         recyclerView.setLayoutManager(linearLayoutManager);
@@ -86,17 +86,14 @@ public class CityScreenActivity extends AppCompatActivity implements CityScreenV
 
     @Override
     public void onCitySelected(String city_id, String city_name) {
-//        sharedPrefs=new SharedPrefs(this);
-//        sharedPrefs.setKEY_City(city_name);
+
         sharedPrefs=new SharedPrefs(this);
         access_token=sharedPrefs.getAccessToken();
-        cityScreenPresenter.sendSelectedCity(city_id,access_token);
-
-
+        cityScreenPresenter.sendSelectedCity(city_name,city_id,access_token);
     }
 
     @Override
-    public void onCitySent() {
+    public void onCitySent(String city) {
         Intent in=new Intent(CityScreenActivity.this, HomePage.class);
         startActivity(in);
     }

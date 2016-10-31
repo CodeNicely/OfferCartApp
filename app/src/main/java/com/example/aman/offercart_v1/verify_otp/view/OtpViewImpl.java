@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 
 import com.example.aman.offercart_v1.helper.SharedPrefs;
+import com.example.aman.offercart_v1.home.HomePage;
 import com.example.aman.offercart_v1.verify_otp.presenter.OtpPresenterImpl;
 import com.example.aman.offercart_v1.verify_otp.presenter.OtpPresenter;
 import com.example.aman.offercart_v1.R;
@@ -31,7 +32,6 @@ public class OtpViewImpl extends Activity implements OtpView {
     String mobile;
     String otp1;
     private SharedPrefs sharedPrefs;
-    String access_token;
 
     private OtpPresenter otpPresenter;
     private RetrofitOtpProvider retrofitOtpProvider;
@@ -43,7 +43,6 @@ public class OtpViewImpl extends Activity implements OtpView {
 
         ButterKnife.bind(this);
         sharedPrefs=new SharedPrefs(this);
-        access_token=sharedPrefs.getAccessToken();
         otpPresenter =new OtpPresenterImpl(this,
                 new RetrofitOtpProvider());
 
@@ -57,7 +56,7 @@ public class OtpViewImpl extends Activity implements OtpView {
             @Override
             public void onClick(View v) {
                 otp1 = otp.getText().toString();
-                otpPresenter.requestOtp(access_token,otp1, mobile);
+                otpPresenter.requestOtp(otp1, mobile);
             }
         });
 
@@ -82,7 +81,7 @@ public class OtpViewImpl extends Activity implements OtpView {
         Log.d("res",token);
         sharedPrefs.setAccessToken(token);
         Log.d("res","done");
-        Intent a=new Intent(OtpViewImpl.this, CityScreenActivity.class);
+        Intent a=new Intent(OtpViewImpl.this, HomePage.class);
         startActivity(a);
         finish();
 

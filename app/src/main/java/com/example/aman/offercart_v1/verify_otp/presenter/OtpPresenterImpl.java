@@ -17,11 +17,11 @@ public class OtpPresenterImpl implements OtpPresenter{ private OtpProvider otpPr
     }
 
     @Override
-    public void requestOtp(String otpToken,String otp, String mobile) {
+    public void requestOtp(String otp, String mobile) {
 
         otpView.showLoading(true);
 
-        otpProvider.requestOtp(otpToken,otp, mobile, new OtpCallback() {
+        otpProvider.requestOtp(otp, mobile, new OtpCallback() {
             @Override
             public void onSuccess(OtpData otpData) {
                 if(otpData.isSuccess())

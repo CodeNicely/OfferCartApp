@@ -22,6 +22,7 @@ import butterknife.ButterKnife;
 import com.example.aman.offercart_v1.BuildConfig;
 import com.example.aman.offercart_v1.R;
 import com.example.aman.offercart_v1.helper.SharedPrefs;
+import com.example.aman.offercart_v1.home.HomePage;
 import com.example.aman.offercart_v1.splash_screen.models.RetrofitSplashScreenProvider;
 import com.example.aman.offercart_v1.splash_screen.models.data.SplashScreenData;
 import com.example.aman.offercart_v1.splash_screen.presenter.SplashScreenPresenter;
@@ -151,7 +152,7 @@ public class SplashScreenActivity extends Activity implements SplashScreenView
                     if (sharedPrefs.isLoggedIn())
                     {
                         Log.d("Res",""+sharedPrefs.isLoggedIn());
-                        Intent city = new Intent(SplashScreenActivity.this, CityScreenActivity.class);
+                        Intent city = new Intent(SplashScreenActivity.this, HomePage.class);
                         startActivity(city);
                         finish();
                     } else

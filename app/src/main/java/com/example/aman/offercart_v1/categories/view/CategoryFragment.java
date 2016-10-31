@@ -106,6 +106,7 @@ public class CategoryFragment extends Fragment implements CategoriesView {
         initialize();
         categoriesPresenter.getCategories(token);
 
+        getActivity().setTitle("Categories");
         return view;
 
     }

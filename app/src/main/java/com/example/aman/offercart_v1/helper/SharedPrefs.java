@@ -42,14 +42,14 @@ public class SharedPrefs {
         editor = pref.edit();
     }
 
-    public void setKEY_City(String city)
+    public void setCity(String city)
     {
         editor.putString(KEY_City,city);
         editor.commit();
     }
-    public String getKEY_City()
+    public String getCity()
     {
-        return pref.getString(KEY_City,"Raipur");
+        return pref.getString(KEY_City,"NA");
     }
 
 

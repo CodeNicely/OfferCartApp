@@ -8,6 +8,6 @@ import com.example.aman.offercart_v1.login.LoginCallback;
  */
 public interface LoginProvider {
 
-    void requestLogin(String loginToken,String name, String mobile, String email, LoginCallback loginUsCallback);
+    void requestLogin(String name, String mobile, String email, LoginCallback loginUsCallback);
 
 }

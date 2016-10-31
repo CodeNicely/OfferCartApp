@@ -14,7 +14,7 @@ public interface CityScreenView {
     void showMessage(String message);
     void onCityVerified(List<CityScreenData> cityScreenDataList);
     void onCitySelected(String city_id,String city_name);
-    void onCitySent();
+    void onCitySent(String city);
 
 }
 

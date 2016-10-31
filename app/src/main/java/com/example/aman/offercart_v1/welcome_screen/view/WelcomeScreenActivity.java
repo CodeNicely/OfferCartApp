@@ -70,6 +70,7 @@ public class WelcomeScreenActivity extends Activity implements WelcomeScreenView
     {
         Intent i =new Intent(WelcomeScreenActivity.this,LoginScreenActivity.class);
         startActivity(i);
+        finish();
     }
         @Override
     public void showMessage(String error) {
