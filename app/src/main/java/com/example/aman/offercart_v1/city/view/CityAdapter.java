@@ -5,6 +5,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.aman.offercart_v1.R;
@@ -40,7 +41,7 @@ public class CityAdapter extends RecyclerView.Adapter<CityAdapter.MyViewHolder> 
     }
 
     @Override
-    public void onBindViewHolder(MyViewHolder holder, int position) {
+    public void onBindViewHolder(final MyViewHolder holder, int position) {
 
         final CityScreenData cityScreenData=cityScreenDataList.get(position);
 
@@ -54,6 +55,7 @@ public class CityAdapter extends RecyclerView.Adapter<CityAdapter.MyViewHolder> 
             if( context instanceof HomePage) {
 
                 cityFragment.onCitySelected(cityScreenData.getCity_id(),cityScreenData.getCity_name());
+                holder.done.setVisibility(View.VISIBLE);
             }
 
             }
@@ -67,14 +69,15 @@ public class CityAdapter extends RecyclerView.Adapter<CityAdapter.MyViewHolder> 
         return cityScreenDataList.size();
     }
 
-    protected class MyViewHolder extends RecyclerView.ViewHolder {
+    public class MyViewHolder extends RecyclerView.ViewHolder {
 
-        TextView city;
-
+        private TextView city;
+        private ImageView done;
 
         private MyViewHolder(View itemView) {
             super(itemView);
 
+            done=(ImageView)itemView.findViewById(R.id.done);
             city= (TextView) itemView.findViewById(R.id.city);
 
 

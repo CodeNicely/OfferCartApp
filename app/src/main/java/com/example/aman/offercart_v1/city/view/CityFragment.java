@@ -36,7 +36,7 @@ import butterknife.ButterKnife;
  * Use the {@link CityFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class CityFragment extends Fragment implements CityScreenView{
+public class CityFragment extends Fragment implements CityScreenView {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -48,6 +48,9 @@ public class CityFragment extends Fragment implements CityScreenView{
 
     @BindView(R.id.citiesProgressbar)
     ProgressBar progressBar;
+
+    @BindView(R.id.toolbar)
+    Toolbar toolbar;
 
     private CityAdapter cityAdapter;
     private LinearLayoutManager linearLayoutManager;
@@ -97,14 +100,24 @@ public class CityFragment extends Fragment implements CityScreenView{
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view= inflater.inflate(R.layout.fragment_city, container, false);
-        ButterKnife.bind(this,view);
-        sharedPrefs=new SharedPrefs(getContext());
-        access_token=sharedPrefs.getAccessToken();
-        cityScreenPresenter=new CityScreenPresenterImpl(this,new RetrofitCityScreenProvider());
-        cityAdapter=new CityAdapter(getContext(),this);
+        View view = inflater.inflate(R.layout.fragment_city, container, false);
+        ButterKnife.bind(this, view);
 
-        linearLayoutManager=new LinearLayoutManager(getContext());
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                getActivity().onBackPressed();
+
+            }
+        });
+
+        sharedPrefs = new SharedPrefs(getContext());
+        access_token = sharedPrefs.getAccessToken();
+        cityScreenPresenter = new CityScreenPresenterImpl(this, new RetrofitCityScreenProvider());
+        cityAdapter = new CityAdapter(getContext(), this);
+
+        linearLayoutManager = new LinearLayoutManager(getContext());
         recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.setAdapter(cityAdapter);
         cityScreenPresenter.requestCity(access_token);
@@ -144,7 +157,7 @@ public class CityFragment extends Fragment implements CityScreenView{
 
     @Override
     public void showMessage(String message) {
-        Toast.makeText(getContext(), ""+message, Toast.LENGTH_SHORT).show();
+        Toast.makeText(getContext(), "" + message, Toast.LENGTH_SHORT).show();
     }
 
     @Override
@@ -155,9 +168,9 @@ public class CityFragment extends Fragment implements CityScreenView{
 
     @Override
     public void onCitySelected(String city_id, String city_name) {
-        sharedPrefs=new SharedPrefs(getContext());
-        access_token=sharedPrefs.getAccessToken();
-        cityScreenPresenter.sendSelectedCity(city_name,city_id,access_token);
+        sharedPrefs = new SharedPrefs(getContext());
+        access_token = sharedPrefs.getAccessToken();
+        cityScreenPresenter.sendSelectedCity(city_name, city_id, access_token);
 
 
     }
@@ -169,7 +182,8 @@ public class CityFragment extends Fragment implements CityScreenView{
         getActivity().finish();
     */
         sharedPrefs.setCity(city);
-        ((HomePage)getContext()).setFragment(new CategoryFragment(),"Home");
+        ((HomePage) getContext()).setFragment(new CategoryFragment(), "Home");
+
     }
 
     /**
