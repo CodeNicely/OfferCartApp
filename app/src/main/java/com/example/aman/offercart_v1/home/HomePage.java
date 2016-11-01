@@ -1,6 +1,7 @@
 package com.example.aman.offercart_v1.home;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
@@ -22,6 +23,7 @@ import com.example.aman.offercart_v1.city.view.CityScreenActivity;
 import com.example.aman.offercart_v1.helper.SharedPrefs;
 import com.example.aman.offercart_v1.offer.view.ShopOfferFragment;
 import com.example.aman.offercart_v1.shops.view.ShopFragment;
+import com.example.aman.offercart_v1.wallet.view.WalletActivity;
 import com.example.aman.offercart_v1.wallet.view.WalletFragment;
 
 public class HomePage extends AppCompatActivity
@@ -114,8 +116,11 @@ public class HomePage extends AppCompatActivity
 
         } else if (id == R.id.nav_wallet) {
 
-            addFragment(new WalletFragment(), "Wallet");
+        /*    addFragment(new WalletFragment(), "Wallet");
             getSupportActionBar().hide();
+*/
+            Intent wallet=new Intent(HomePage.this, WalletActivity.class);
+            startActivity(wallet);
 
         }
 
