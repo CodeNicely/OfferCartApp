@@ -1,7 +1,6 @@
 package com.example.aman.offercart_v1.shops.view;
 
 import android.content.Context;
-import android.graphics.drawable.Drawable;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -36,7 +35,7 @@ public class ShopAdapter extends RecyclerView.Adapter<ShopAdapter.MyViewHolder> 
 
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View itemView = layoutInflater.inflate(R.layout.activity_shop_item, parent, false);
+        View itemView = layoutInflater.inflate(R.layout.shop_item, parent, false);
         return new MyViewHolder(itemView);
     }
 
@@ -45,7 +44,6 @@ public class ShopAdapter extends RecyclerView.Adapter<ShopAdapter.MyViewHolder> 
         final ShopData shopData = shopDatas.get(position);
 
         holder.name.setText(shopData.getName());
-        holder.num.setText(shopData.getPhone());
         holder.address.setText(shopData.getAddress());
         Picasso.with(context)
                 .load(shopData.getImage())
@@ -68,14 +66,13 @@ public class ShopAdapter extends RecyclerView.Adapter<ShopAdapter.MyViewHolder> 
 
     protected class MyViewHolder extends RecyclerView.ViewHolder {
 
-        TextView name, num, address;
+        TextView name, address;
         ImageView image;
 
         private MyViewHolder(View itemView) {
             super(itemView);
             name = (TextView) itemView.findViewById(R.id.shop_name);
             address = (TextView) itemView.findViewById(R.id.shop_address);
-            num = (TextView) itemView.findViewById(R.id.shop_number);
             image = (ImageView) itemView.findViewById(R.id.shop_image);
         }
 

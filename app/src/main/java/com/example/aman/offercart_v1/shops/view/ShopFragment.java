@@ -4,8 +4,10 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -54,6 +56,9 @@ public class ShopFragment extends Fragment implements ShopView{
     @BindView(R.id.shops_recycler)
     RecyclerView recyclerView;
 
+    @BindView(R.id.toolbar)
+    Toolbar toolbar;
+
     @BindView(R.id.shop_progressbar)
     ProgressBar progressBar;
 
@@ -93,14 +98,23 @@ public class ShopFragment extends Fragment implements ShopView{
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
+        ((AppCompatActivity)getActivity()).getSupportActionBar().hide();
+        View view= inflater.inflate(R.layout.fragment_shop, container, false);
+        ButterKnife.bind(this,view);
+
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getActivity().onBackPressed();
+            }
+        });
 
         String category_id="1";
         HomePage homePage=(HomePage)getActivity();
         category_id=homePage.getCategory();
         sharedPrefs=new SharedPrefs(getContext());
 //        category_id=getArguments().getString("category_id");
-        View view= inflater.inflate(R.layout.fragment_shop, container, false);
-        ButterKnife.bind(this,view);
+
         initialize();
         shopPresenter.getShops(sharedPrefs.getAccessToken(),category_id);
         return view;

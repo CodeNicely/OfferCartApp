@@ -105,14 +105,17 @@ public class HomePage extends AppCompatActivity
         if (id == R.id.nav_home) {
 
             setFragment(new CategoryFragment(), "Category ");
-
+            getSupportActionBar().show();
         } else if (id == R.id.nav_changeCity) {
 
             addFragment(new CityFragment(), "Select City");
 
+            getSupportActionBar().hide();
+
         } else if (id == R.id.nav_wallet) {
 
             addFragment(new WalletFragment(), "Wallet");
+            getSupportActionBar().hide();
 
         }
 

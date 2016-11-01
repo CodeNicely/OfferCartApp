@@ -55,7 +55,6 @@ public class OfferScreenAdapter extends RecyclerView.Adapter<OfferScreenAdapter.
 
         Picasso.with(context)
                 .load(offerScreenDetails.getImage())
-                .error(R.drawable.back1524)
                 .into(holder.image);
     }
 
