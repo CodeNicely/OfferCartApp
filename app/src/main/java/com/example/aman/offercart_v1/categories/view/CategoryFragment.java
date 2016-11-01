@@ -55,9 +55,9 @@ public class CategoryFragment extends Fragment implements CategoriesView {
     private String token;
     private SharedPrefs sharedPrefs;
 
-    @BindView(R.id.tabLayout)
+   /* @BindView(R.id.tabLayout)
     TabLayout tabLayout;
-
+*/
     @BindView(R.id.category_recycler)
     RecyclerView recyclerView;
 
@@ -105,7 +105,6 @@ public class CategoryFragment extends Fragment implements CategoriesView {
 
 
         View view= inflater.inflate(R.layout.fragment_category, container, false);
-
         ButterKnife.bind(this,view);
         initialize();
         categoriesPresenter.getCategories(token);
@@ -118,9 +117,9 @@ public class CategoryFragment extends Fragment implements CategoriesView {
     void initialize()
     {
         categoriesPresenter=new CategoriesPresenterImpl(this,new RetrofitCategoriesProvider());
-//        categoriesPresenter=new CategoriesPresenterImpl(this,new MockCategoryProvider());
+ //        categoriesPresenter=new CategoriesPresenterImpl(this,new MockCategoryProvider());
         categoryAdapter=new CategoryAdapter(getContext());
-        recyclerView.setHasFixedSize(true);
+ //       recyclerView.setHasFixedSize(true);
         sharedPrefs=new SharedPrefs(getContext());
         token=sharedPrefs.getAccessToken();
         gridLayoutManager=new GridLayoutManager(getContext(),2);

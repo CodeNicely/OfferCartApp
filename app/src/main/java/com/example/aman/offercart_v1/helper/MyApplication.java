@@ -4,6 +4,8 @@ import android.app.Application;
 import android.content.Context;
 import android.content.SearchRecentSuggestionsProvider;
 
+import com.google.firebase.iid.FirebaseInstanceId;
+
 /**
  * Created by meghal on 23/10/16.
  */
@@ -11,7 +13,7 @@ import android.content.SearchRecentSuggestionsProvider;
 public class MyApplication extends Application {
 
     private static Context context;
-    public static String fcm;
+    private static String fcm;
     @Override
     public void onCreate() {
         super.onCreate();
@@ -21,6 +23,13 @@ public class MyApplication extends Application {
         FontsOverride.setDefaultFont(this, "SERIF", "fonts/dosis.ttf");
     //    FontsOverride.setDefaultFont(this, "SANS_SERIF", "fonts/patrick_hand.ttf");
 
+        fcm = FirebaseInstanceId.getInstance().getToken();
+
+
+    }
+
+    public static String getFcm() {
+        return fcm;
     }
 
     public static Context getContext() {

@@ -6,7 +6,7 @@ package com.example.aman.offercart_v1.helper;
 public class Urls {
 
 
-    public static final String BASE_URL = "http://192.168.0.111:8000/";
+    public static final String BASE_URL = "http://192.168.0.120:8000/";
 //
 //    public static final String BASE_URL = "http://xendroiders.pythonanywhere.com/";
 

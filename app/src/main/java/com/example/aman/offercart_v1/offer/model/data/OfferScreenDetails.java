@@ -6,51 +6,44 @@ package com.example.aman.offercart_v1.offer.model.data;
 
 public class OfferScreenDetails {
 
-    private String offer_des;
-    private int data_type;
+    private String description;
     private int offer_id;
-    private String offer_code;
-    private String offer_validdate;
-    private String offer_name;
-    private String offer_image;
+    private String validity;
+    private String name;
+    private String image;
+    private int price;
 
-    public OfferScreenDetails(String offer_des, int data_type, int offer_data, String offer_code,
-                              String offer_validdate, String offer_name, String offer_image)
-    {
-        this.offer_des = offer_des;
-        this.data_type = data_type;
-        this.offer_id = offer_data;
-        this.offer_code = offer_code;
-        this.offer_validdate = offer_validdate;
-        this.offer_name = offer_name;
-        this.offer_image = offer_image;
+
+    public OfferScreenDetails(String description, int offer_id, String validity, String name, String image, int price) {
+        this.description = description;
+        this.offer_id = offer_id;
+        this.validity = validity;
+        this.name = name;
+        this.image = image;
+        this.price = price;
     }
 
-    public String getOffer_des() {
-        return offer_des;
-    }
-
-    public int getData_type() {
-        return data_type;
+    public String getDescription() {
+        return description;
     }
 
     public int getOffer_id() {
         return offer_id;
     }
 
-    public String getOffer_code() {
-        return offer_code;
+    public String getValidity() {
+        return validity;
     }
 
-    public String getOffer_validdate() {
-        return offer_validdate;
+    public String getName() {
+        return name;
     }
 
-    public String getOffer_name() {
-        return offer_name;
+    public String getImage() {
+        return image;
     }
 
-    public String getOffer_image() {
-        return offer_image;
+    public int getPrice() {
+        return price;
     }
 }

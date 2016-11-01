@@ -14,23 +14,24 @@ import com.example.aman.offercart_v1.home.HomePage;
 import com.example.aman.offercart_v1.shops.model.data.ShopData;
 import com.squareup.picasso.Picasso;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Created by iket on 22/10/16.
  */
-public class ShopAdapter extends RecyclerView.Adapter<ShopAdapter.MyViewHolder>{
-    private List<ShopData>shopDatas;
+public class ShopAdapter extends RecyclerView.Adapter<ShopAdapter.MyViewHolder> {
+    private List<ShopData> shopDatas=new ArrayList<>();
     private Context context;
     private LayoutInflater layoutInflater;
 
     public ShopAdapter(Context context) {
-        this.context=context;
-        layoutInflater=LayoutInflater.from(context);
+        this.context = context;
+        layoutInflater = LayoutInflater.from(context);
     }
-    void setData(List<ShopData>data)
-    {
-        this.shopDatas=data;
+
+    void setData(List<ShopData> data) {
+        this.shopDatas = data;
     }
 
     @Override
@@ -41,7 +42,7 @@ public class ShopAdapter extends RecyclerView.Adapter<ShopAdapter.MyViewHolder>{
 
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
-        final ShopData shopData=shopDatas.get(position);
+        final ShopData shopData = shopDatas.get(position);
 
         holder.name.setText(shopData.getName());
         holder.num.setText(shopData.getPhone());
@@ -52,9 +53,8 @@ public class ShopAdapter extends RecyclerView.Adapter<ShopAdapter.MyViewHolder>{
         holder.image.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(context instanceof HomePage)
-                {
-                    ( (HomePage)context).onShopSelected(shopData.getId(),shopData.getName());
+                if (context instanceof HomePage) {
+                    ((HomePage) context).onShopSelected(shopData.getId(), shopData.getName());
                 }
             }
         });
@@ -68,17 +68,15 @@ public class ShopAdapter extends RecyclerView.Adapter<ShopAdapter.MyViewHolder>{
 
     protected class MyViewHolder extends RecyclerView.ViewHolder {
 
-        TextView name,num,address;
+        TextView name, num, address;
         ImageView image;
-        private Context context2;
 
         private MyViewHolder(View itemView) {
             super(itemView);
-            context2=itemView.getContext();
-            name=(TextView)itemView.findViewById(R.id.shop_name);
-            address= (TextView) itemView.findViewById(R.id.shop_address);
-            num=(TextView)itemView.findViewById(R.id.shop_number);
-            image=(ImageView)itemView.findViewById(R.id.shop_image);
+            name = (TextView) itemView.findViewById(R.id.shop_name);
+            address = (TextView) itemView.findViewById(R.id.shop_address);
+            num = (TextView) itemView.findViewById(R.id.shop_number);
+            image = (ImageView) itemView.findViewById(R.id.shop_image);
         }
 
     }

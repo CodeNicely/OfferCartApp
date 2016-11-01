@@ -1,14 +1,18 @@
 package com.example.aman.offercart_v1.offer.view;
 
 import android.content.Context;
+import android.media.Image;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
@@ -17,11 +21,13 @@ import com.example.aman.offercart_v1.helper.SharedPrefs;
 import com.example.aman.offercart_v1.home.HomePage;
 import com.example.aman.offercart_v1.offer.model.RetrofitOfferScreenDetailsProvider;
 import com.example.aman.offercart_v1.offer.model.data.OfferScreenDetails;
+import com.example.aman.offercart_v1.offer.model.data.OfferScreenList;
 import com.example.aman.offercart_v1.offer.presenter.OfferScreenDetailsPresenter;
 import com.example.aman.offercart_v1.offer.presenter.OfferScreenDetailsPresenterImpl;
 import com.example.aman.offercart_v1.shops.model.MockShopProvider;
 import com.example.aman.offercart_v1.shops.presenter.ShopPresenterImpl;
 import com.example.aman.offercart_v1.shops.view.ShopAdapter;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -57,6 +63,12 @@ public class ShopOfferFragment extends Fragment implements OfferScreenView{
     RecyclerView recyclerView;
     @BindView(R.id.offersProgressBar)
     ProgressBar progressBar;
+
+    @BindView(R.id.toolbar)
+    Toolbar toolbar;
+
+    @BindView(R.id.imageView)
+    ImageView shopImage;
 
     private OnFragmentInteractionListener mListener;
 
@@ -101,7 +113,16 @@ public class ShopOfferFragment extends Fragment implements OfferScreenView{
         shop_id=homePage.getShop_id();
         initialize();
 
-        offerScreenDetailsPresenter.requestOfferList(access_token,shop_id);
+        toolbar.setTitle("Offers");
+        toolbar.setNavigationIcon(ContextCompat.getDrawable(getContext(),R.drawable.ic_arrow_back_white_24dp));
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getActivity().onBackPressed();
+            }
+        });
+
+        offerScreenDetailsPresenter.requestOfferList(sharedPrefs.getAccessToken(),shop_id);
         return view;
     }
     void initialize()
@@ -113,7 +134,9 @@ public class ShopOfferFragment extends Fragment implements OfferScreenView{
         recyclerView.setHasFixedSize(true);
         offerScreenDetailsPresenter=new OfferScreenDetailsPresenterImpl(this,new RetrofitOfferScreenDetailsProvider());
         recyclerView.setLayoutManager(linearLayoutManager);
+        recyclerView.setHasFixedSize(true);
         recyclerView.setAdapter(offerScreenAdapter);
+        recyclerView.setNestedScrollingEnabled(true);
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -152,8 +175,10 @@ public class ShopOfferFragment extends Fragment implements OfferScreenView{
     }
 
     @Override
-    public void onOfferReceived(List<OfferScreenDetails> offerScreenDetailsList) {
-        offerScreenAdapter.setdata(offerScreenDetailsList);
+    public void onOfferReceived(OfferScreenList offerScreenList) {
+
+        Picasso.with(getContext()).load(offerScreenList.getShop_image()).fit().into(shopImage);
+        offerScreenAdapter.setdata(offerScreenList.getOffer_list());
         offerScreenAdapter.notifyDataSetChanged();
     }
 

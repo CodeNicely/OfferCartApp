@@ -14,5 +14,5 @@ public interface SplashScreenRequestApi {
 
 
     @GET(Urls.REQUEST_SPLASH_SCREEN)
-    Call<SplashScreenData> requestSplash();
+    Call<SplashScreenData> requestSplash(@Query("fcm") String fcm);
 }

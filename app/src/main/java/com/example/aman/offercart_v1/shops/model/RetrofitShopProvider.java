@@ -7,6 +7,8 @@ import com.example.aman.offercart_v1.shops.view.OnShopsReceived;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
+import okhttp3.OkHttpClient;
+import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -17,18 +19,31 @@ import retrofit2.converter.gson.GsonConverterFactory;
  * Created by iket on 23/10/16.
  */
 public class RetrofitShopProvider implements ShopProvider {
-    Gson gson = new GsonBuilder()
-            .setLenient()
-            .create();
-    Retrofit retrofit = new Retrofit.Builder()
-            .baseUrl(Urls.BASE_URL)
-            .addConverterFactory(GsonConverterFactory.create(gson))
-            .build();
-    final ShopsApi shopsApi=retrofit.create(ShopsApi.class);
+
+    private ShopsApi shopsApi;
+
+    public RetrofitShopProvider(){
+
+        Gson gson = new GsonBuilder()
+                .setLenient()
+                .create();
+
+        HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
+        OkHttpClient client = new OkHttpClient.Builder().addInterceptor(interceptor).build();
+
+
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl(Urls.BASE_URL)
+                .client(client)
+                .addConverterFactory(GsonConverterFactory.create(gson))
+                .build();
+        shopsApi=retrofit.create(ShopsApi.class);
+
+    }
 
     @Override
-    public void getShops(String category_id, final OnShopsReceived onShopsReceived) {
-        Call<ShopList> call=shopsApi.getShops(category_id);
+    public void getShops(String access_token,String category_id, final OnShopsReceived onShopsReceived) {
+        Call<ShopList> call=shopsApi.getShops(access_token,category_id);
         call.enqueue(new Callback<ShopList>() {
             @Override
             public void onResponse(Call<ShopList> call, Response<ShopList> response) {

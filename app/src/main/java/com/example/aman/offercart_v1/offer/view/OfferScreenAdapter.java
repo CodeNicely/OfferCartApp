@@ -22,7 +22,7 @@ import java.util.List;
 
 public class OfferScreenAdapter extends RecyclerView.Adapter<OfferScreenAdapter.MyViewHolder> {
 
-    private List<OfferScreenDetails> offerScreenDetailsList=new ArrayList<>();
+    private List<OfferScreenDetails> offerScreenDetailsList = new ArrayList<>();
     private Context context;
     private LayoutInflater layoutInflater;
     private OfferScreenView offerScreenView;
@@ -31,10 +31,10 @@ public class OfferScreenAdapter extends RecyclerView.Adapter<OfferScreenAdapter.
         this.context = context;
         layoutInflater = layoutInflater.from(context);
     }
-    public void setdata(List<OfferScreenDetails> offerScreenDetails)
-    {
 
-        this.offerScreenDetailsList=offerScreenDetails;
+    public void setdata(List<OfferScreenDetails> offerScreenDetails) {
+
+        this.offerScreenDetailsList = offerScreenDetails;
     }
 
     @Override
@@ -47,15 +47,16 @@ public class OfferScreenAdapter extends RecyclerView.Adapter<OfferScreenAdapter.
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
 
-        final OfferScreenDetails offerScreenDetails =offerScreenDetailsList.get(position);
-        holder.title.setText(offerScreenDetails.getOffer_name());
-        holder.cost.setText(offerScreenDetails.getOffer_code());
+        final OfferScreenDetails offerScreenDetails = offerScreenDetailsList.get(position);
+        holder.title.setText(offerScreenDetails.getName());
+        holder.cost.setText(String.valueOf(offerScreenDetails.getPrice()));
+        holder.validity.setText(String.valueOf(offerScreenDetails.getValidity()));
+        holder.description.setText(String.valueOf(offerScreenDetails.getDescription()));
 
-                    Picasso.with(context)
-                    .load(offerScreenDetails.getOffer_image())
-                    .error(R.drawable.back1524)
-                    .into(holder.image);
-
+        Picasso.with(context)
+                .load(offerScreenDetails.getImage())
+                .error(R.drawable.back1524)
+                .into(holder.image);
     }
 
     @Override
@@ -64,17 +65,19 @@ public class OfferScreenAdapter extends RecyclerView.Adapter<OfferScreenAdapter.
     }
 
 
-
     protected class MyViewHolder extends RecyclerView.ViewHolder {
 
-        TextView title,cost;
+        TextView title, cost,validity,description;
         ImageView image;
 
         private MyViewHolder(View itemView) {
             super(itemView);
-            title=(TextView)itemView.findViewById(R.id.offer_title);
-            cost=(TextView)itemView.findViewById(R.id.offer_cost);
-            image=(ImageView)itemView.findViewById(R.id.offer_image);
+            title = (TextView) itemView.findViewById(R.id.offer_title);
+            description = (TextView) itemView.findViewById(R.id.offer_description);
+            validity = (TextView) itemView.findViewById(R.id.offer_validity);
+
+            cost = (TextView) itemView.findViewById(R.id.offer_cost);
+            image = (ImageView) itemView.findViewById(R.id.image);
 
         }
 

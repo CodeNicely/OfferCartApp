@@ -9,6 +9,8 @@ import com.example.aman.offercart_v1.helper.Urls;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
+import java.util.concurrent.TimeUnit;
+
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
 
@@ -28,13 +30,14 @@ public class RetrofitSplashScreenProvider implements SplashScreenProvider {
     private static final String LOG_TAG = "SplashScreenActivity";
 
     @Override
-    public void requestSplash(final SplashScreenCallback splashScreenCallback)
+    public void requestSplash(String fcm, final SplashScreenCallback splashScreenCallback)
     {
 
         HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
         interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
 
-        OkHttpClient client = new OkHttpClient.Builder().addInterceptor(interceptor).build();
+        OkHttpClient client = new OkHttpClient.Builder().addInterceptor(interceptor).connectTimeout(5, TimeUnit.MINUTES)
+                .readTimeout(5,TimeUnit.MINUTES).build();
 
         Gson gson = new GsonBuilder()
                 .setLenient()
@@ -48,7 +51,7 @@ public class RetrofitSplashScreenProvider implements SplashScreenProvider {
                 .build();
 
         splashScreenRequestApi = retrofit.create(SplashScreenRequestApi.class);
-        Call<SplashScreenData> call = splashScreenRequestApi.requestSplash();
+        Call<SplashScreenData> call = splashScreenRequestApi.requestSplash(fcm);
 
         call.enqueue(new Callback<SplashScreenData>()
         {

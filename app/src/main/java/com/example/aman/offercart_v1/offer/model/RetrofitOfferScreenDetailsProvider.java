@@ -7,6 +7,10 @@ import com.example.aman.offercart_v1.offer.model.data.OfferScreenList;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
+import java.util.concurrent.TimeUnit;
+
+import okhttp3.OkHttpClient;
+import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -20,32 +24,48 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class RetrofitOfferScreenDetailsProvider implements OfferScreenDetailsProvider {
 
 
-    @Override
-    public void requestOfferList(String offerToken,String shop_id,final OfferScreenDetailsCallback offerScreenDetailsCallback) {
+    private OfferScreenRequestApi offerScreenRequestApi;
+
+    public RetrofitOfferScreenDetailsProvider() {
 
         Gson gson = new GsonBuilder()
                 .setLenient()
                 .create();
+
+        HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
+        interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
+        OkHttpClient client = new OkHttpClient.Builder().addInterceptor(interceptor).
+                connectTimeout(5, TimeUnit.MINUTES).readTimeout(5,TimeUnit.MINUTES).build();
+
+
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(Urls.BASE_URL)
+                .client(client)
                 .addConverterFactory(GsonConverterFactory.create(gson))
                 .build();
-        final OfferScreenRequestApi offerScreenRequestApi=retrofit.create(OfferScreenRequestApi.class);
+        offerScreenRequestApi = retrofit.create(OfferScreenRequestApi.class);
 
-        final Call<OfferScreenList> offerScreenDataCall=offerScreenRequestApi.getCategoryListData(offerToken,shop_id);
 
-            offerScreenDataCall.enqueue(new Callback<OfferScreenList>() {
-                @Override
-                public void onResponse(Call<OfferScreenList> call, Response<OfferScreenList> response) {
+    }
 
-                    offerScreenDetailsCallback.onSuccess(response.body());
-                }
+    @Override
+    public void requestOfferList(String accessToken, String shop_id, final OfferScreenDetailsCallback offerScreenDetailsCallback) {
 
-                @Override
-                public void onFailure(Call<OfferScreenList> call, Throwable t) {
-                    t.printStackTrace();
-                }
-            });
+
+        final Call<OfferScreenList> offerScreenDataCall = offerScreenRequestApi.getCategoryListData(accessToken, shop_id);
+
+        offerScreenDataCall.enqueue(new Callback<OfferScreenList>() {
+            @Override
+            public void onResponse(Call<OfferScreenList> call, Response<OfferScreenList> response) {
+
+                offerScreenDetailsCallback.onSuccess(response.body());
+            }
+
+            @Override
+            public void onFailure(Call<OfferScreenList> call, Throwable t) {
+                t.printStackTrace();
+            }
+        });
 
 
     }

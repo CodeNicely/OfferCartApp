@@ -6,5 +6,5 @@ package com.example.aman.offercart_v1.splash_screen.presenter;
 public interface SplashScreenPresenter {
 
 
-    void requestSplash();
+    void requestSplash(String fcm);
 }

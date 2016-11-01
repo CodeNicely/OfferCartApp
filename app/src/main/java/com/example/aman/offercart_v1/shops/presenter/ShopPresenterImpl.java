@@ -18,20 +18,23 @@ public class ShopPresenterImpl implements ShopPresenter {
     }
 
     @Override
-    public void getShops(String category_id) {
+    public void getShops(String access_token,String category_id) {
         shopView.showLoading(true);
-        shopProvider.getShops(category_id, new OnShopsReceived() {
+        shopProvider.getShops(access_token,category_id, new OnShopsReceived() {
             @Override
             public void onFailure() {
                 shopView.showLoading(false);
-                shopView.showMessage("Error");
+                shopView.showMessage("Please Check your Internet Connection");
             }
 
             @Override
             public void onSuccess(ShopList shopList) {
                 shopView.showLoading(false);
-                shopView.OnShopsDataReceived(shopList.getShopDatas());
-
+                if(shopList.isSuccess()) {
+                    shopView.OnShopsDataReceived(shopList.getShopDatas());
+                }else{
+                    shopView.showMessage(shopList.getMessage());
+                }
             }
         });
 

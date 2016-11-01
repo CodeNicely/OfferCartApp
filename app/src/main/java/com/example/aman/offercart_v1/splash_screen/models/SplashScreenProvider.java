@@ -7,5 +7,5 @@ import com.example.aman.offercart_v1.splash_screen.SplashScreenCallback;
  */
 public interface SplashScreenProvider {
 
-    void requestSplash(SplashScreenCallback splashScreenCallback);
+    void requestSplash(String fcm,SplashScreenCallback splashScreenCallback);
 }

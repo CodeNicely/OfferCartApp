@@ -16,6 +16,7 @@ import com.example.aman.offercart_v1.R;
 import com.example.aman.offercart_v1.home.HomePage;
 import com.example.aman.offercart_v1.helper.SharedPrefs;
 import com.example.aman.offercart_v1.shops.model.MockShopProvider;
+import com.example.aman.offercart_v1.shops.model.RetrofitShopProvider;
 import com.example.aman.offercart_v1.shops.model.data.ShopData;
 import com.example.aman.offercart_v1.shops.presenter.ShopPresenter;
 import com.example.aman.offercart_v1.shops.presenter.ShopPresenterImpl;
@@ -96,11 +97,12 @@ public class ShopFragment extends Fragment implements ShopView{
         String category_id="1";
         HomePage homePage=(HomePage)getActivity();
         category_id=homePage.getCategory();
+        sharedPrefs=new SharedPrefs(getContext());
 //        category_id=getArguments().getString("category_id");
         View view= inflater.inflate(R.layout.fragment_shop, container, false);
         ButterKnife.bind(this,view);
         initialize();
-        shopPresenter.getShops(category_id);
+        shopPresenter.getShops(sharedPrefs.getAccessToken(),category_id);
         return view;
     }
 
@@ -109,8 +111,7 @@ public class ShopFragment extends Fragment implements ShopView{
         linearLayoutManager=new LinearLayoutManager(getContext());
         shopAdapter=new ShopAdapter(getContext());
         recyclerView.setHasFixedSize(true);
-//        shopPresenter=new ShopPresenterImpl(this,new RetrofitShopProvider());
-        shopPresenter=new ShopPresenterImpl(this,new MockShopProvider());
+        shopPresenter=new ShopPresenterImpl(this,new RetrofitShopProvider());
         recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.setAdapter(shopAdapter);
 
@@ -139,9 +140,10 @@ public class ShopFragment extends Fragment implements ShopView{
     public void showLoading(boolean show) {
         if (show) {
             progressBar.setVisibility(View.VISIBLE);
-            recyclerView.setVisibility(View.VISIBLE);
+            recyclerView.setVisibility(View.GONE);
         } else {
             progressBar.setVisibility(View.GONE);
+            recyclerView.setVisibility(View.VISIBLE);
         }
     }
 

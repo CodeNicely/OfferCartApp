@@ -30,11 +30,11 @@ public class SplashScreenPresenterImpl implements SplashScreenPresenter
 
 
     @Override
-    public void requestSplash()
+    public void requestSplash(String fcm)
     {
         splashScreenView.showProgressBar(true);
 
-        splashScreenProvider.requestSplash(new SplashScreenCallback()
+        splashScreenProvider.requestSplash(fcm,new SplashScreenCallback()
         {
             @Override
             public void onSuccess(SplashScreenData splashScreenData)

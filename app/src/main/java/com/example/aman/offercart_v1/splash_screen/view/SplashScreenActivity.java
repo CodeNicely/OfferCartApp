@@ -21,6 +21,7 @@ import butterknife.ButterKnife;
 
 import com.example.aman.offercart_v1.BuildConfig;
 import com.example.aman.offercart_v1.R;
+import com.example.aman.offercart_v1.helper.MyApplication;
 import com.example.aman.offercart_v1.helper.SharedPrefs;
 import com.example.aman.offercart_v1.home.HomePage;
 import com.example.aman.offercart_v1.splash_screen.models.RetrofitSplashScreenProvider;
@@ -52,7 +53,7 @@ public class SplashScreenActivity extends Activity implements SplashScreenView
         splashScreenPresenter =new SplashScreenPresenterImpl(this,
                                 new RetrofitSplashScreenProvider());
 
-        splashScreenPresenter.requestSplash();
+        splashScreenPresenter.requestSplash(MyApplication.getFcm());
 
     }
 
@@ -165,7 +166,7 @@ public class SplashScreenActivity extends Activity implements SplashScreenView
                     }
 
                 }
-            },5000);
+            },1000);
 
 
 
