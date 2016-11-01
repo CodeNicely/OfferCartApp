@@ -1,9 +1,9 @@
 package com.example.aman.offercart_v1.wallet.view;
 
-import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.util.Log;
 
 /**
  * Created by aman on 24/10/16.
@@ -11,8 +11,8 @@ import android.support.v4.app.FragmentPagerAdapter;
 
 public class ViewPagerAdapter extends FragmentPagerAdapter {
 
-    final int TAB_COUNT= 2;
-    private String tabTitles[] = new String[] { "", "Add"};
+    final int TAB_COUNT= 1;
+    private String tabTitles[] = new String[] { "Add"};
     //private Context context;
 
 
@@ -29,12 +29,14 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
+        Log.d("Resp",""+position+1);
         return WalletFragment.newInstance(position + 1);
+
     }
 
     @Override
     public CharSequence getPageTitle(int position)
-    {// Generate title based on item position
+    {
 
         return tabTitles[position];
     }
