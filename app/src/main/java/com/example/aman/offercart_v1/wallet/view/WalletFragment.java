@@ -4,6 +4,7 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,7 +26,7 @@ public class WalletFragment extends Fragment {
 
 
     // TODO: Rename and change types of parameters
-    int mPage;
+    private static int mPage;
 
 
     private OnFragmentInteractionListener mListener;
@@ -44,6 +45,9 @@ public class WalletFragment extends Fragment {
      */
     // TODO: Rename and change types and number of parameters
     public static WalletFragment newInstance(int page) {
+        Log.d("Resp","here");
+        Log.d("Resp",""+page);
+        mPage=page;
         WalletFragment fragment = new WalletFragment();
         Bundle args = new Bundle();
         args.putInt(ARG_PAGE, page);
@@ -55,19 +59,18 @@ public class WalletFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-            mPage = getArguments().getInt(ARG_PAGE);
-
-
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-
-        View view=inflater.inflate(R.layout.tab_add_money, container, false);
+        View view;
+        if(mPage==1)
+            view=inflater.inflate(R.layout.tab_add_money, container, false);
+        else
+            view=inflater.inflate(R.layout.tab_add_money, container, false);
         return view;
-
     }
 
     // TODO: Rename method, update argument and hook method into UI event
