@@ -9,7 +9,6 @@ public class Urls {
     public static final String BASE_URL = "http://192.168.0.111:8000/";
 //
 //    public static final String BASE_URL = "http://xendroiders.pythonanywhere.com/";
-
     //splash_screen
     public static final String REQUEST_SPLASH_SCREEN = "version/";
     //public static final String REQUEST_SIGN_IN_API = "Here half url will be there leaving base url ";
@@ -32,4 +31,5 @@ public class Urls {
     //shop
     public static final String RequestShop = "shop/";
 
+    public static final String SUB_URL_BUY_OFFER ="offer/" ;
 }

@@ -2,37 +2,45 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/back1524" >
+    android:background="@color/white"
+    >
 
-    <ImageView
-        android:id="@+id/imgLogo"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
 
     <ProgressBar
         android:id="@+id/progressBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/imgLogo"
-        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
         android:layout_gravity="center"
-        />
+        android:layout_marginTop="100dp"
+        android:paddingTop="100dp" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+ />
 
     <TextView
+        android:id="@+id/name"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:textSize="50dp"
-        android:textColor="#454545"
+        android:layout_below="@+id/logo"
         android:gravity="center_horizontal"
-        android:text="Offercart"
-        android:id="@+id/textView"
-        android:layout_above="@+id/imgLogo"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="83dp" />
+        android:text="Discount Store"
+        android:textColor="@color/colorAccent"
+        android:textSize="32dp" />
 
+
+    <ImageView
+        android:id="@+id/codenicely_logo"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp"
+        />
 
 </RelativeLayout>

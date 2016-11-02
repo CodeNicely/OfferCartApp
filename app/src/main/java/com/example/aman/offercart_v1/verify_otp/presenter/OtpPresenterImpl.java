@@ -27,7 +27,6 @@ public class OtpPresenterImpl implements OtpPresenter{ private OtpProvider otpPr
                 if(otpData.isSuccess())
                 {
                     otpView.showLoading(false);
-                    otpView.showMessage("success");
                     otpView.onOtpVerified(otpData.getAccess_token());
                 }
                 else

@@ -45,7 +45,6 @@ public class SplashScreenPresenterImpl implements SplashScreenPresenter
                 if(splashScreenData.isSuccess())
                 {
                     splashScreenView.version_check(splashScreenData);
-                    splashScreenView.showMessage(splashScreenData.getMessage());
                     splashScreenView.showProgressBar(false);
                 }
                 else{

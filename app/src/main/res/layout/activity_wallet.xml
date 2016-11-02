@@ -95,7 +95,7 @@
             app:tabMode="scrollable"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-
+            android:visibility="gone"
             />
 
 

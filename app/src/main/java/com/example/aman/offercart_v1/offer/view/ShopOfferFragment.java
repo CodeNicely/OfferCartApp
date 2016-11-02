@@ -1,5 +1,6 @@
 package com.example.aman.offercart_v1.offer.view;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.media.Image;
 import android.net.Uri;
@@ -43,12 +44,12 @@ import butterknife.ButterKnife;
  * Use the {@link ShopOfferFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class ShopOfferFragment extends Fragment implements OfferScreenView{
+public class ShopOfferFragment extends Fragment implements OfferScreenView, BuyOfferView {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-
+    private ProgressDialog progressDialog;
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
@@ -109,15 +110,15 @@ public class ShopOfferFragment extends Fragment implements OfferScreenView{
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        ((AppCompatActivity)getActivity()).getSupportActionBar().hide();
-        View view= inflater.inflate(R.layout.activity_offerscreen, container, false);
-        ButterKnife.bind(this,view);
-        HomePage homePage=new HomePage();
-        shop_id=homePage.getShop_id();
+        ((AppCompatActivity) getActivity()).getSupportActionBar().hide();
+        View view = inflater.inflate(R.layout.activity_offerscreen, container, false);
+        ButterKnife.bind(this, view);
+        HomePage homePage = new HomePage();
+        shop_id = homePage.getShop_id();
         initialize();
 
         toolbar.setTitle("Offers");
-        toolbar.setNavigationIcon(ContextCompat.getDrawable(getContext(),R.drawable.ic_arrow_back_white_24dp));
+        toolbar.setNavigationIcon(ContextCompat.getDrawable(getContext(), R.drawable.ic_arrow_back_white_24dp));
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -125,21 +126,26 @@ public class ShopOfferFragment extends Fragment implements OfferScreenView{
             }
         });
 
-        offerScreenDetailsPresenter.requestOfferList(sharedPrefs.getAccessToken(),shop_id);
+        offerScreenDetailsPresenter.requestOfferList(sharedPrefs.getAccessToken(), shop_id);
         return view;
     }
-    void initialize()
-    {
-        sharedPrefs=new SharedPrefs(getContext());
-        access_token=sharedPrefs.getAccessToken();
-        linearLayoutManager=new LinearLayoutManager(getContext());
-        offerScreenAdapter=new OfferScreenAdapter(getContext());
+
+    void initialize() {
+        sharedPrefs = new SharedPrefs(getContext());
+        access_token = sharedPrefs.getAccessToken();
+        linearLayoutManager = new LinearLayoutManager(getContext());
+        offerScreenAdapter = new OfferScreenAdapter(getContext(), this);
         recyclerView.setHasFixedSize(true);
-        offerScreenDetailsPresenter=new OfferScreenDetailsPresenterImpl(this,new RetrofitOfferScreenDetailsProvider());
+        offerScreenDetailsPresenter = new OfferScreenDetailsPresenterImpl(this, new RetrofitOfferScreenDetailsProvider());
         recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.setHasFixedSize(true);
         recyclerView.setAdapter(offerScreenAdapter);
         recyclerView.setNestedScrollingEnabled(true);
+        progressDialog=new ProgressDialog(getContext());
+
+        progressDialog.setMessage("Buying Offer");
+        progressDialog.setTitle("Connecting . . .");
+
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -195,8 +201,32 @@ public class ShopOfferFragment extends Fragment implements OfferScreenView{
 
     }
 
+    @Override
+    public void showSnackMessage(String message) {
+
+
+
+    }
+
+    @Override
+    public void showLoadingDialog(boolean show) {
+
+        if(show){
+            progressDialog.show();
+        }else {
+            progressDialog.hide();
+        }
+
+
+    }
+
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
+    }
+
+    public void buyOffer(int offer_id) {
+
+
     }
 }

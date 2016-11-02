@@ -1,6 +1,7 @@
 package com.example.aman.offercart_v1.wallet.view;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -8,8 +9,13 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.example.aman.offercart_v1.R;
+import com.example.aman.offercart_v1.payement.view.PaymentActivity;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -24,6 +30,9 @@ public class WalletFragment extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     public static final String ARG_PAGE = "ARG_PAGE";
 
+
+    @BindView(R.id.proceed)
+    Button proceed;
 
     // TODO: Rename and change types of parameters
     private static int mPage;
@@ -40,14 +49,13 @@ public class WalletFragment extends Fragment {
      * this fragment using the provided parameters.
      *
      * @param page Parameter 1.
-
      * @return A new instance of fragment WalletFragment.
      */
     // TODO: Rename and change types and number of parameters
     public static WalletFragment newInstance(int page) {
-        Log.d("Resp","here");
-        Log.d("Resp",""+page);
-        mPage=page;
+        Log.d("Resp", "here");
+        Log.d("Resp", "" + page);
+        mPage = page;
         WalletFragment fragment = new WalletFragment();
         Bundle args = new Bundle();
         args.putInt(ARG_PAGE, page);
@@ -66,10 +74,18 @@ public class WalletFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         View view;
-        if(mPage==1)
-            view=inflater.inflate(R.layout.tab_add_money, container, false);
-        else
-            view=inflater.inflate(R.layout.tab_add_money, container, false);
+        view = inflater.inflate(R.layout.tab_add_money, container, false);
+        ButterKnife.bind(this, view);
+
+        proceed.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent=new Intent(getActivity(), PaymentActivity.class);
+                startActivity(intent);
+            }
+        });
+
         return view;
     }
 

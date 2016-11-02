@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.aman.offercart_v1.R;
@@ -24,11 +25,13 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.MyView
     private Context context;
     private CategoriesView categoriesView;
     private LayoutInflater layoutInflater;
+    private CategoryFragment categoryFragment;
 
-    public CategoryAdapter(Context context) {
+    public CategoryAdapter(Context context,CategoryFragment categoryFragment) {
         this.context=context;
         layoutInflater=LayoutInflater.from(context);
         categoriesView=new CategoryFragment();
+        this.categoryFragment=categoryFragment;
     }
     public void setData(List<CategoryData> cityScreenDataList)
     {
@@ -50,7 +53,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.MyView
                 .load(categoryData.getImage())
                 .into(holder.image);
 
-        holder.image.setOnClickListener(new View.OnClickListener() {
+        holder.categoryLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(context instanceof HomePage)
@@ -62,6 +65,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.MyView
             }
         });
 
+
     }
 
 
@@ -72,15 +76,15 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.MyView
 
     protected class MyViewHolder extends RecyclerView.ViewHolder {
 
-        TextView name;
-        ImageView image;
-        private Context context2;
+       private TextView name;
+       private ImageView image;
+       private LinearLayout categoryLayout;
 
         private MyViewHolder(View itemView) {
             super(itemView);
-            context2=itemView.getContext();
             name=(TextView)itemView.findViewById(R.id.categoryName);
             image=(ImageView)itemView.findViewById(R.id.categoryView);
+            categoryLayout=(LinearLayout)itemView.findViewById(R.id.categoryLayout);
         }
 
     }

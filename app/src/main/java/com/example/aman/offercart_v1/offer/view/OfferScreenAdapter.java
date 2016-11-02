@@ -5,6 +5,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -26,10 +27,12 @@ public class OfferScreenAdapter extends RecyclerView.Adapter<OfferScreenAdapter.
     private Context context;
     private LayoutInflater layoutInflater;
     private OfferScreenView offerScreenView;
-
-    public OfferScreenAdapter(Context context) {
+    private ShopOfferFragment shopOfferFragment;
+    public OfferScreenAdapter(Context context,ShopOfferFragment shopOfferFragment) {
         this.context = context;
+        this.shopOfferFragment=shopOfferFragment;
         layoutInflater = layoutInflater.from(context);
+
     }
 
     public void setdata(List<OfferScreenDetails> offerScreenDetails) {
@@ -53,31 +56,38 @@ public class OfferScreenAdapter extends RecyclerView.Adapter<OfferScreenAdapter.
         holder.validity.setText(String.valueOf(offerScreenDetails.getValidity()));
         holder.description.setText(String.valueOf(offerScreenDetails.getDescription()));
 
+        holder.buy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                shopOfferFragment.buyOffer(offerScreenDetails.getOffer_id());
+
+            }
+        });
         Picasso.with(context)
                 .load(offerScreenDetails.getImage())
                 .into(holder.image);
+
     }
 
     @Override
     public int getItemCount() {
         return offerScreenDetailsList.size();
     }
-
-
     protected class MyViewHolder extends RecyclerView.ViewHolder {
 
-        TextView title, cost,validity,description;
-        ImageView image;
+        private TextView title, cost,validity,description;
+        private ImageView image;
+        private Button buy;
 
         private MyViewHolder(View itemView) {
             super(itemView);
             title = (TextView) itemView.findViewById(R.id.offer_title);
             description = (TextView) itemView.findViewById(R.id.offer_description);
             validity = (TextView) itemView.findViewById(R.id.offer_validity);
-
             cost = (TextView) itemView.findViewById(R.id.offer_cost);
             image = (ImageView) itemView.findViewById(R.id.image);
-
+            buy=(Button)itemView.findViewById(R.id.buy);
         }
 
     }

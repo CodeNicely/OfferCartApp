@@ -23,8 +23,7 @@
         <activity
             android:name=".splash_screen.view.SplashScreenActivity"
             android:label="@string/app_name"
-            android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.Black.NoTitleBar">
+            android:screenOrientation="portrait">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -37,17 +36,19 @@
 
         <!-- Main activity -->
 
-        <activity android:name=".login.view.LoginScreenActivity"></activity>
+        <activity android:name=".login.view.LoginScreenActivity" />
         <activity android:name=".verify_otp.view.OtpViewImpl" />
         <activity
             android:name=".welcome_screen.view.WelcomeScreenActivity"
             android:label="@string/app_name" />
         <activity
             android:name=".city.view.CityScreenActivity"
-            android:label="@string/app_name"></activity>
-        <activity android:name=".wallet.view.WalletActivity" >
+            android:label="@string/app_name" />
+        <activity android:name=".wallet.view.WalletActivity">
 
-         </activity>
+        </activity>
+
+        <activity android:name=".payement.view.PaymentActivity" />
     </application>
 
 </manifest>

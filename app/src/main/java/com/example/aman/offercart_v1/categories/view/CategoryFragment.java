@@ -121,7 +121,7 @@ public class CategoryFragment extends Fragment implements CategoriesView {
     {
         categoriesPresenter=new CategoriesPresenterImpl(this,new RetrofitCategoriesProvider());
  //        categoriesPresenter=new CategoriesPresenterImpl(this,new MockCategoryProvider());
-        categoryAdapter=new CategoryAdapter(getContext());
+        categoryAdapter=new CategoryAdapter(getContext(),this);
  //       recyclerView.setHasFixedSize(true);
         sharedPrefs=new SharedPrefs(getContext());
         token=sharedPrefs.getAccessToken();
@@ -182,4 +182,5 @@ public class CategoryFragment extends Fragment implements CategoriesView {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
     }
+
 }

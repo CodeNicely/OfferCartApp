@@ -12,6 +12,7 @@ import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -19,10 +20,13 @@ import android.widget.Toast;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
+import com.bumptech.glide.Glide;
 import com.example.aman.offercart_v1.BuildConfig;
 import com.example.aman.offercart_v1.R;
 import com.example.aman.offercart_v1.helper.MyApplication;
 import com.example.aman.offercart_v1.helper.SharedPrefs;
+import com.example.aman.offercart_v1.helper.image_loader.GlideImageLoader;
+import com.example.aman.offercart_v1.helper.image_loader.ImageLoader;
 import com.example.aman.offercart_v1.home.HomePage;
 import com.example.aman.offercart_v1.splash_screen.models.RetrofitSplashScreenProvider;
 import com.example.aman.offercart_v1.splash_screen.models.data.SplashScreenData;
@@ -38,10 +42,15 @@ public class SplashScreenActivity extends Activity implements SplashScreenView
     @BindView(R.id.progressBar)
     ProgressBar progressBar;
 
+    @BindView(R.id.codenicely_logo)
+    ImageView codenicely_logo;
 
+    @BindView(R.id.logo)
+    ImageView logo;
+
+    private ImageLoader imageLoader;
     private SharedPrefs sharedPrefs;
     private SplashScreenPresenter splashScreenPresenter;
-    SplashScreenData splashScreenData;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -49,6 +58,10 @@ public class SplashScreenActivity extends Activity implements SplashScreenView
         setContentView(R.layout.activity_splash);
 
         ButterKnife.bind(this);
+        imageLoader=new GlideImageLoader(this);
+        Glide.with(this).load(R.drawable.codenicely_coloured_logo).into(codenicely_logo);
+        Glide.with(this).load(R.drawable.discount_store_logo).into(logo);
+
         sharedPrefs = new SharedPrefs(this);
         splashScreenPresenter =new SplashScreenPresenterImpl(this,
                                 new RetrofitSplashScreenProvider());
@@ -166,9 +179,7 @@ public class SplashScreenActivity extends Activity implements SplashScreenView
                     }
 
                 }
-            },1000);
-
-
+            },5000);
 
         }
     }

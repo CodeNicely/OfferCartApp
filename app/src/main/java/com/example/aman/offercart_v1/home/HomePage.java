@@ -116,12 +116,10 @@ public class HomePage extends AppCompatActivity
 
         } else if (id == R.id.nav_wallet) {
 
-        /*    addFragment(new WalletFragment(), "Wallet");
+     /*       addFragment(new WalletFragment(), "Wallet");
             getSupportActionBar().hide();
-*/
-            Intent wallet=new Intent(HomePage.this, WalletActivity.class);
+    */        Intent wallet=new Intent(HomePage.this, WalletActivity.class);
             startActivity(wallet);
-
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

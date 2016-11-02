@@ -38,7 +38,6 @@ public class CategoriesPresenterImpl implements CategoriesPresenter {
                 if(categoriesList.isSuccess())
                 {
                     categoriesView.showProgressbar(false);
-                    categoriesView.showMessage(categoriesList.getMessage());
                     categoriesView.onDataReceived(categoriesList.getCategoryDatas());
 
                 }

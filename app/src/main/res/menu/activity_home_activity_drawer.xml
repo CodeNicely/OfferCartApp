@@ -4,16 +4,38 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_home"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/ic_home_black_24dp"
             android:title="Home" />
         <item
             android:id="@+id/nav_changeCity"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@drawable/ic_location_on_black_24dp"
             android:title="Change City" />
         <item
             android:id="@+id/nav_wallet"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@drawable/ic_account_balance_wallet_black_24dp"
             android:title="Wallet" />
+
+
+        <item
+            android:id="@+id/nav_my_orders"
+            android:icon="@drawable/ic_account_balance_wallet_black_24dp"
+            android:title="My Orders" />
+
+        <item
+            android:id="@+id/nav_contact_us"
+            android:icon="@drawable/ic_contact_phone_black_24dp"
+            android:title="Contact Us" />
+            android:title="Contact Us" />
+
+        <item
+            android:id="@+id/nav_about_us"
+            android:icon="@drawable/ic_group_work_black_24dp"
+            android:title="About Us" />
+
+        <item
+            android:id="@+id/nav_developer"
+            android:icon="@drawable/ic_account_balance_wallet_black_24dp"
+            android:title="Developers" />
 
     </group>
 
