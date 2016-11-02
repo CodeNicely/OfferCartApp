@@ -32,7 +32,7 @@ public class HomePage extends AppCompatActivity
     private String category_id = "1";
     private String shop_id = "1";
     private SharedPrefs sharedPrefs;
-
+    private NavigationView navigationView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,7 +46,7 @@ public class HomePage extends AppCompatActivity
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
         toggle.syncState();
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
         sharedPrefs = new SharedPrefs(this);
@@ -70,6 +70,7 @@ public class HomePage extends AppCompatActivity
         } else if (getFragmentManager().getBackStackEntryCount() == 0) {
 
 
+            navigationView.getMenu().getItem(0).setChecked(true);
             super.onBackPressed();
 
         } else {
@@ -153,7 +154,7 @@ public class HomePage extends AppCompatActivity
             fragmentTransaction.replace(R.id.home_layout, fragment);
             fragmentTransaction.addToBackStack(null);
             fragmentTransaction.commit();
-            getSupportActionBar().setTitle(title);
+       //     getSupportActionBar().setTitle(title);
         }
 
     }
