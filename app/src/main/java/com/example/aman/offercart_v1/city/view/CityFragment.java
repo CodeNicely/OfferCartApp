@@ -105,14 +105,14 @@ public class CityFragment extends Fragment implements CityScreenView {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 getActivity().onBackPressed();
-
             }
         });
-
         sharedPrefs = new SharedPrefs(getContext());
+        if(sharedPrefs.getCity().equals("NA"))
+            toolbar.setVisibility(View.INVISIBLE);
         access_token = sharedPrefs.getAccessToken();
+
         cityScreenPresenter = new CityScreenPresenterImpl(this, new RetrofitCityScreenProvider());
         cityAdapter = new CityAdapter(getContext(), this);
 

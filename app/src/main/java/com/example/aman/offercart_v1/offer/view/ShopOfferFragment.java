@@ -26,7 +26,7 @@ import com.example.aman.offercart_v1.helper.SharedPrefs;
 import com.example.aman.offercart_v1.home.HomePage;
 import com.example.aman.offercart_v1.offer.model.RetrofitBuyOfferProvider;
 import com.example.aman.offercart_v1.offer.model.RetrofitOfferScreenDetailsProvider;
-import com.example.aman.offercart_v1.offer.model.data.BuyOfferData;
+import com.example.aman.offercart_v1.offer.model.data.OfferData;
 import com.example.aman.offercart_v1.offer.model.data.OfferScreenDetails;
 import com.example.aman.offercart_v1.offer.model.data.OfferScreenList;
 import com.example.aman.offercart_v1.offer.presenter.BuyOfferPresenter;
@@ -235,7 +235,7 @@ public class ShopOfferFragment extends Fragment implements OfferScreenView, BuyO
     }
 
     @Override
-    public void onOfferBuy(BuyOfferData buyOfferData) {
+    public void onOfferBuy(OfferData buyOfferData) {
         String status;
         if(buyOfferData.isSuccess()){
             status="Successful";

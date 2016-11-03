@@ -1,6 +1,6 @@
 package com.example.aman.offercart_v1.offer.view;
 
-import com.example.aman.offercart_v1.offer.model.data.BuyOfferData;
+import com.example.aman.offercart_v1.offer.model.data.OfferData;
 
 /**
  * Created by meghal on 2/11/16.
@@ -13,6 +13,6 @@ public interface BuyOfferView {
 
     void showLoadingDialog(boolean show);
 
-    void onOfferBuy(BuyOfferData buyOfferData);
+    void onOfferBuy(OfferData offerData);
 
 }

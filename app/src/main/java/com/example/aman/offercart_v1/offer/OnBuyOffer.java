@@ -1,6 +1,7 @@
 package com.example.aman.offercart_v1.offer;
 
-import com.example.aman.offercart_v1.offer.model.data.BuyOfferData;
+
+import com.example.aman.offercart_v1.offer.model.data.OfferData;
 
 /**
  * Created by meghal on 2/11/16.
@@ -9,7 +10,7 @@ import com.example.aman.offercart_v1.offer.model.data.BuyOfferData;
 public interface OnBuyOffer {
 
 
-    void onSuccess(BuyOfferData buyOfferData);
+    void onSuccess(OfferData offerData);
 
     void onFailure();
 

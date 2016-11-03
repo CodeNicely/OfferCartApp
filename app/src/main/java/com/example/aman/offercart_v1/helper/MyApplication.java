@@ -25,8 +25,6 @@ public class MyApplication extends Application {
     //    FontsOverride.setDefaultFont(this, "SANS_SERIF", "fonts/patrick_hand.ttf");
 
         fcm = FirebaseInstanceId.getInstance().getToken();
-        Log.d("Resp",fcm);
-
 
     }
 

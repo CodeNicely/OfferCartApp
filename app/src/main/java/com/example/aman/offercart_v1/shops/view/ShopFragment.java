@@ -108,7 +108,6 @@ public class ShopFragment extends Fragment implements ShopView {
         category_id = homePage.getCategory();
         sharedPrefs = new SharedPrefs(getContext());
 //        category_id=getArguments().getString("category_id");
-
         initialize();
         shopPresenter.getShops(sharedPrefs.getAccessToken(), category_id);
         return view;

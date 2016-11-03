@@ -26,6 +26,7 @@ import com.example.aman.offercart_v1.city.view.CityFragment;
 import com.example.aman.offercart_v1.contact_us.view.ContactUsFragment;
 import com.example.aman.offercart_v1.developers.view.DeveloperFragment;
 import com.example.aman.offercart_v1.helper.SharedPrefs;
+import com.example.aman.offercart_v1.my_orders.view.MyOrdersFragment;
 import com.example.aman.offercart_v1.offer.view.ShopOfferFragment;
 import com.example.aman.offercart_v1.shops.view.ShopFragment;
 import com.example.aman.offercart_v1.wallet.view.WalletFragment;
@@ -132,7 +133,6 @@ public class HomePage extends AppCompatActivity
             finish();
 
         } else if (id == R.id.nav_changeCity) {
-
             addFragment(new CityFragment(), "Select City");
             getSupportActionBar().hide();
 
@@ -143,6 +143,9 @@ public class HomePage extends AppCompatActivity
             getSupportActionBar().hide();
 
         } else if (id == R.id.nav_my_orders) {
+            addFragment(new MyOrdersFragment(), "My Orders");
+            getSupportActionBar().hide();
+
 
         } else if (id == R.id.nav_contact_us) {
             addFragment(new ContactUsFragment(), "Contact Us");
