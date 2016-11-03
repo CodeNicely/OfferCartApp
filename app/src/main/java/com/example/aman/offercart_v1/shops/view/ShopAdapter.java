@@ -6,9 +6,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.example.aman.offercart_v1.R;
+import com.example.aman.offercart_v1.helper.image_loader.GlideImageLoader;
+import com.example.aman.offercart_v1.helper.image_loader.ImageLoader;
 import com.example.aman.offercart_v1.home.HomePage;
 import com.example.aman.offercart_v1.shops.model.data.ShopData;
 import com.squareup.picasso.Picasso;
@@ -23,10 +26,11 @@ public class ShopAdapter extends RecyclerView.Adapter<ShopAdapter.MyViewHolder> 
     private List<ShopData> shopDatas = new ArrayList<>();
     private Context context;
     private LayoutInflater layoutInflater;
-
+    private ImageLoader imageLoader;
     public ShopAdapter(Context context) {
         this.context = context;
         layoutInflater = LayoutInflater.from(context);
+        imageLoader=new GlideImageLoader(context);
     }
 
     void setData(List<ShopData> data) {
@@ -45,9 +49,8 @@ public class ShopAdapter extends RecyclerView.Adapter<ShopAdapter.MyViewHolder> 
 
         holder.name.setText(shopData.getName());
         holder.address.setText(shopData.getAddress());
-        Picasso.with(context)
-                .load(shopData.getImage())
-                .into(holder.image);
+
+        imageLoader.loadImage(shopData.getImage(),holder.image,holder.imageProgressBar);
         holder.image.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -68,9 +71,11 @@ public class ShopAdapter extends RecyclerView.Adapter<ShopAdapter.MyViewHolder> 
 
         TextView name, address;
         ImageView image;
+        private ProgressBar imageProgressBar;
 
         private MyViewHolder(View itemView) {
             super(itemView);
+            imageProgressBar=(ProgressBar)itemView.findViewById(R.id.imageProgressBar);
             name = (TextView) itemView.findViewById(R.id.shop_name);
             address = (TextView) itemView.findViewById(R.id.shop_address);
             image = (ImageView) itemView.findViewById(R.id.shop_image);

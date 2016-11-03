@@ -53,7 +53,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.MyView
 
         final CategoryData categoryData = categoryDatas.get(position);
         holder.name.setText(categoryData.getName());
-
+        holder.description.setText(categoryData.getDescription());
         imageLoader.loadImage(categoryData.getImage(), holder.image, holder.imageProgressBar);
 
         holder.categoryLayout.setOnClickListener(new View.OnClickListener() {
@@ -80,7 +80,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.MyView
         private ImageView image;
         private ProgressBar imageProgressBar;
         private LinearLayout categoryLayout;
-
+        private TextView description;
 
         private MyViewHolder(View itemView) {
             super(itemView);
@@ -88,6 +88,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.MyView
             image = (ImageView) itemView.findViewById(R.id.categoryView);
             categoryLayout = (LinearLayout) itemView.findViewById(R.id.categoryLayout);
             imageProgressBar = (ProgressBar) itemView.findViewById(R.id.imageProgressBar);
+            description=(TextView)itemView.findViewById(R.id.categoryDescription);
         }
 
     }

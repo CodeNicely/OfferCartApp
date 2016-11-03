@@ -5,11 +5,13 @@ package com.example.aman.offercart_v1.categories.model.data;
  */
 public class CategoryData {
     private String name, image, id;
+    private String description;
 
-    public CategoryData(String name, String image, String id) {
+    public CategoryData(String name, String image, String id, String description) {
         this.name = name;
         this.image = image;
         this.id = id;
+        this.description = description;
     }
 
     public String getName() {
@@ -22,5 +24,9 @@ public class CategoryData {
 
     public String getId() {
         return id;
+    }
+
+    public String getDescription() {
+        return description;
     }
 }
