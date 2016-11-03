@@ -1,7 +1,7 @@
 package com.example.aman.offercart_v1.welcome_screen.api;
 
-import com.example.aman.offercart_v1.welcome_screen.models.data.WelcomeScreenData;
 import com.example.aman.offercart_v1.helper.Urls;
+import com.example.aman.offercart_v1.welcome_screen.models.data.WelcomeScreenData;
 
 import retrofit2.Call;
 import retrofit2.http.GET;

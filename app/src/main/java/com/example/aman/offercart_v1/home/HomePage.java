@@ -23,7 +23,6 @@ import com.example.aman.offercart_v1.R;
 import com.example.aman.offercart_v1.about_us.view.AboutUsFragment;
 import com.example.aman.offercart_v1.categories.view.CategoryFragment;
 import com.example.aman.offercart_v1.city.view.CityFragment;
-import com.example.aman.offercart_v1.city.view.CityScreenActivity;
 import com.example.aman.offercart_v1.contact_us.view.ContactUsFragment;
 import com.example.aman.offercart_v1.developers.view.DeveloperFragment;
 import com.example.aman.offercart_v1.helper.SharedPrefs;
@@ -45,6 +44,7 @@ public class HomePage extends AppCompatActivity
     private String amt="10";
     private SharedPrefs sharedPrefs;
     private NavigationView navigationView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -128,20 +128,21 @@ public class HomePage extends AppCompatActivity
 
         } else if (id == R.id.nav_wallet) {
 
+
              addFragment(new WalletFragment(), "Wallet");
              getSupportActionBar().hide();
 
         }else if(id==R.id.nav_my_orders){
 
-        }else if(id == R.id.nav_contact_us){
+        } else if (id == R.id.nav_contact_us) {
             addFragment(new ContactUsFragment(), "Contact Us");
             getSupportActionBar().hide();
-        }else if(id==R.id.nav_about_us){
+        } else if (id == R.id.nav_about_us) {
             addFragment(new AboutUsFragment(), "About Us");
 
             getSupportActionBar().hide();
 
-        }else if(id==R.id.nav_developer){
+        } else if (id == R.id.nav_developer) {
             addFragment(new DeveloperFragment(), "Developers");
 
             getSupportActionBar().hide();
@@ -179,7 +180,7 @@ public class HomePage extends AppCompatActivity
             fragmentTransaction.replace(R.id.home_layout, fragment);
             fragmentTransaction.addToBackStack(null);
             fragmentTransaction.commit();
-       //     getSupportActionBar().setTitle(title);
+            //     getSupportActionBar().setTitle(title);
         }
 
     }

@@ -3,6 +3,7 @@ package com.example.aman.offercart_v1.welcome_screen.view;
 /**
  * Created by aman on 12/10/16.
  */
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,24 +13,16 @@ import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
-
-
-
-import com.example.aman.offercart_v1.login.view.LoginScreenActivity;
-
 import com.example.aman.offercart_v1.R;
-
 import com.example.aman.offercart_v1.login.view.LoginScreenActivity;
 import com.example.aman.offercart_v1.welcome_screen.models.RetrofitWelcomeScreenProvider;
 import com.example.aman.offercart_v1.welcome_screen.models.data.WelcomeImageDetails;
 import com.example.aman.offercart_v1.welcome_screen.presenter.WelcomeScreenPresenter;
 import com.example.aman.offercart_v1.welcome_screen.presenter.WelcomeScreenPresenterImpl;
 
-
 import java.util.List;
 
-public class WelcomeScreenActivity extends Activity implements WelcomeScreenView
-{
+public class WelcomeScreenActivity extends Activity implements WelcomeScreenView {
 
     private ViewPager viewPager;
     private ProgressBar progressBar;
@@ -48,10 +41,8 @@ public class WelcomeScreenActivity extends Activity implements WelcomeScreenView
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
-        progressBar=(ProgressBar)findViewById(R.id.progressBar);
+        progressBar = (ProgressBar) findViewById(R.id.progressBar);
         initialise();
-
-
 
 
     }
@@ -66,26 +57,23 @@ public class WelcomeScreenActivity extends Activity implements WelcomeScreenView
         button = (Button) findViewById(R.id.button_login);
     }
 
-    public  void button (View v)
-    {
-        Intent i =new Intent(WelcomeScreenActivity.this,LoginScreenActivity.class);
+    public void button(View v) {
+        Intent i = new Intent(WelcomeScreenActivity.this, LoginScreenActivity.class);
         startActivity(i);
         finish();
     }
-        @Override
+
+    @Override
     public void showMessage(String error) {
-            Toast.makeText(this,error,Toast.LENGTH_LONG).show();
+        Toast.makeText(this, error, Toast.LENGTH_LONG).show();
 
     }
 
     @Override
     public void showProgressBar(boolean show) {
-        if (show)
-        {
+        if (show) {
             progressBar.setVisibility(View.VISIBLE);
-        }
-        else
-        {
+        } else {
             progressBar.setVisibility(View.INVISIBLE);
         }
     }
@@ -96,8 +84,6 @@ public class WelcomeScreenActivity extends Activity implements WelcomeScreenView
         viewPagerAdapter.notifyDataSetChanged();
 
     }
-
-
 
 
 }

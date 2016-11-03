@@ -50,18 +50,18 @@ public class ContactUsData {
         return facebook;
     }
 
-  /*  public String getTwitter() {
-        return twitter;
-    }
+    /*  public String getTwitter() {
+          return twitter;
+      }
 
-    public String getInstagram() {
-        return instagram;
-    }
+      public String getInstagram() {
+          return instagram;
+      }
 
-    public String getWebsite() {
-        return website;
-    }
-*/
+      public String getWebsite() {
+          return website;
+      }
+  */
     public String getImage() {
         return image;
     }

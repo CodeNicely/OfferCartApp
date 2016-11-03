@@ -1,9 +1,9 @@
 package com.example.aman.offercart_v1.welcome_screen.models;
 
+import com.example.aman.offercart_v1.helper.Urls;
 import com.example.aman.offercart_v1.welcome_screen.WelcomeScreenCallback;
 import com.example.aman.offercart_v1.welcome_screen.api.WelcomeScreenRequestApi;
 import com.example.aman.offercart_v1.welcome_screen.models.data.WelcomeScreenData;
-import com.example.aman.offercart_v1.helper.Urls;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -25,7 +25,7 @@ public class RetrofitWelcomeScreenProvider implements WelcomeScreenProvider {
     private WelcomeScreenRequestApi welcomeScreenRequestApi;
     private Retrofit retrofit;
 
-    public RetrofitWelcomeScreenProvider(){
+    public RetrofitWelcomeScreenProvider() {
 
         Gson gson = new GsonBuilder()
                 .setLenient()

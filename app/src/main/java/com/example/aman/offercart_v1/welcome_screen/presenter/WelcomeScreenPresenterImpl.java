@@ -19,18 +19,16 @@ public class WelcomeScreenPresenterImpl implements WelcomeScreenPresenter {
     }
 
     @Override
-    public void getWelcomeData()
-    {
+    public void getWelcomeData() {
         welcomeScreenProvider.getWelcomeData(new WelcomeScreenCallback() {
             @Override
             public void onSuccess(WelcomeScreenData welcomeScreenData) {
-                if (welcomeScreenData.isSuccess()){
+                if (welcomeScreenData.isSuccess()) {
                     welcomeScreenView.setData(welcomeScreenData.getSlider_data());
                     welcomeScreenView.showMessage("Success");
                     welcomeScreenView.showProgressBar(false);
 
-                }
-                else{
+                } else {
                     welcomeScreenView.showMessage("Something went wrong");
                     welcomeScreenView.showProgressBar(true);
                 }

@@ -19,19 +19,19 @@ import java.util.List;
  * Created by iket on 19/10/16.
  */
 public class CityAdapter extends RecyclerView.Adapter<CityAdapter.MyViewHolder> {
-    private List<CityScreenData> cityScreenDataList=new ArrayList<>();
+    private List<CityScreenData> cityScreenDataList = new ArrayList<>();
     private Context context;
     private LayoutInflater layoutInflater;
     private CityFragment cityFragment;
 
-    public CityAdapter(Context context,CityFragment cityFragment) {
-        this.context=context;
-        this.cityFragment=cityFragment;
-        layoutInflater=LayoutInflater.from(context);
+    public CityAdapter(Context context, CityFragment cityFragment) {
+        this.context = context;
+        this.cityFragment = cityFragment;
+        layoutInflater = LayoutInflater.from(context);
     }
-    public void setData(List<CityScreenData> cityScreenData)
-    {
-        cityScreenDataList=cityScreenData;
+
+    public void setData(List<CityScreenData> cityScreenData) {
+        cityScreenDataList = cityScreenData;
     }
 
     @Override
@@ -43,7 +43,7 @@ public class CityAdapter extends RecyclerView.Adapter<CityAdapter.MyViewHolder> 
     @Override
     public void onBindViewHolder(final MyViewHolder holder, int position) {
 
-        final CityScreenData cityScreenData=cityScreenDataList.get(position);
+        final CityScreenData cityScreenData = cityScreenDataList.get(position);
 
         holder.city.setText(cityScreenData.getCity_name());
 
@@ -52,11 +52,11 @@ public class CityAdapter extends RecyclerView.Adapter<CityAdapter.MyViewHolder> 
             @Override
             public void onClick(View v) {
 
-            if( context instanceof HomePage) {
+                if (context instanceof HomePage) {
 
-                cityFragment.onCitySelected(cityScreenData.getCity_id(),cityScreenData.getCity_name());
-                holder.done.setVisibility(View.VISIBLE);
-            }
+                    cityFragment.onCitySelected(cityScreenData.getCity_id(), cityScreenData.getCity_name());
+                    holder.done.setVisibility(View.VISIBLE);
+                }
 
             }
         });
@@ -77,8 +77,8 @@ public class CityAdapter extends RecyclerView.Adapter<CityAdapter.MyViewHolder> 
         private MyViewHolder(View itemView) {
             super(itemView);
 
-            done=(ImageView)itemView.findViewById(R.id.done);
-            city= (TextView) itemView.findViewById(R.id.city);
+            done = (ImageView) itemView.findViewById(R.id.done);
+            city = (TextView) itemView.findViewById(R.id.city);
 
 
         }

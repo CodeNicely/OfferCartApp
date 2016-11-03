@@ -6,7 +6,7 @@ import java.util.List;
  * Created by iket on 22/10/16.
  */
 public class ShopList {
-    private List<ShopData>shopDatas;
+    private List<ShopData> shopDatas;
     private boolean success;
     private String message;
 

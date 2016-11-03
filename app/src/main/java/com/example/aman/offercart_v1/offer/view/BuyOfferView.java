@@ -8,6 +8,7 @@ public interface BuyOfferView {
 
 
     void showSnackMessage(String message);
+
     void showLoadingDialog(boolean show);
 
 }

@@ -28,9 +28,9 @@ public class RetrofitBuyOfferPresenter implements BuyOfferPresenter {
             public void onSuccess(BuyOfferData buyOfferData) {
 
                 buyOfferView.showLoadingDialog(false);
-                if(buyOfferData.isSuccess()){
+                if (buyOfferData.isSuccess()) {
                     buyOfferView.showSnackMessage(buyOfferData.getMessage());
-                }else{
+                } else {
                     buyOfferView.showSnackMessage(buyOfferData.getMessage());
 
                 }

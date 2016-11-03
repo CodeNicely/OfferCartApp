@@ -1,11 +1,10 @@
 package com.example.aman.offercart_v1.splash_screen.models;
 
 
+import com.example.aman.offercart_v1.helper.Urls;
 import com.example.aman.offercart_v1.splash_screen.SplashScreenCallback;
 import com.example.aman.offercart_v1.splash_screen.api.SplashScreenRequestApi;
 import com.example.aman.offercart_v1.splash_screen.models.data.SplashScreenData;
-import com.example.aman.offercart_v1.helper.Urls;
-
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -13,7 +12,6 @@ import java.util.concurrent.TimeUnit;
 
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
-
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -25,19 +23,18 @@ import retrofit2.converter.gson.GsonConverterFactory;
  */
 public class RetrofitSplashScreenProvider implements SplashScreenProvider {
 
-    private static final String TAG = "RetrofitSplashScreen" ;
-    private SplashScreenRequestApi splashScreenRequestApi;
+    private static final String TAG = "RetrofitSplashScreen";
     private static final String LOG_TAG = "SplashScreenActivity";
+    private SplashScreenRequestApi splashScreenRequestApi;
 
     @Override
-    public void requestSplash(String fcm, final SplashScreenCallback splashScreenCallback)
-    {
+    public void requestSplash(String fcm, final SplashScreenCallback splashScreenCallback) {
 
         HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
         interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
 
         OkHttpClient client = new OkHttpClient.Builder().addInterceptor(interceptor).connectTimeout(5, TimeUnit.MINUTES)
-                .readTimeout(5,TimeUnit.MINUTES).build();
+                .readTimeout(5, TimeUnit.MINUTES).build();
 
         Gson gson = new GsonBuilder()
                 .setLenient()
@@ -53,29 +50,25 @@ public class RetrofitSplashScreenProvider implements SplashScreenProvider {
         splashScreenRequestApi = retrofit.create(SplashScreenRequestApi.class);
         Call<SplashScreenData> call = splashScreenRequestApi.requestSplash(fcm);
 
-        call.enqueue(new Callback<SplashScreenData>()
-        {
+        call.enqueue(new Callback<SplashScreenData>() {
 
             @Override
-            public void onResponse(Call<SplashScreenData> call, Response<SplashScreenData> response)
-            {
+            public void onResponse(Call<SplashScreenData> call, Response<SplashScreenData> response) {
 
-               // if(response.body().isSuccess()) {
+                // if(response.body().isSuccess()) {
 //                    Log.d(TAG,response.body().toString());
-                    splashScreenCallback.onSuccess(response.body());
-              //  }
+                splashScreenCallback.onSuccess(response.body());
+                //  }
 
             }
 
             @Override
-            public void onFailure(Call<SplashScreenData> call, Throwable t)
-            {
+            public void onFailure(Call<SplashScreenData> call, Throwable t) {
                 t.printStackTrace();
                 splashScreenCallback.onFailure("Unable to connect to api");
 
             }
         });
-
 
 
     }

@@ -22,7 +22,7 @@ public class RetrofitShopProvider implements ShopProvider {
 
     private ShopsApi shopsApi;
 
-    public RetrofitShopProvider(){
+    public RetrofitShopProvider() {
 
         Gson gson = new GsonBuilder()
                 .setLenient()
@@ -37,13 +37,13 @@ public class RetrofitShopProvider implements ShopProvider {
                 .client(client)
                 .addConverterFactory(GsonConverterFactory.create(gson))
                 .build();
-        shopsApi=retrofit.create(ShopsApi.class);
+        shopsApi = retrofit.create(ShopsApi.class);
 
     }
 
     @Override
-    public void getShops(String access_token,String category_id, final OnShopsReceived onShopsReceived) {
-        Call<ShopList> call=shopsApi.getShops(access_token,category_id);
+    public void getShops(String access_token, String category_id, final OnShopsReceived onShopsReceived) {
+        Call<ShopList> call = shopsApi.getShops(access_token, category_id);
         call.enqueue(new Callback<ShopList>() {
             @Override
             public void onResponse(Call<ShopList> call, Response<ShopList> response) {

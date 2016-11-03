@@ -10,23 +10,19 @@ import com.example.aman.offercart_v1.categories.view.OnCategoriesReceived;
  */
 public class CategoriesPresenterImpl implements CategoriesPresenter {
     private CategoriesView categoriesView;
+    private CategoriesProvider categoriesProvider;
 
     public CategoriesPresenterImpl(CategoriesView categoriesView, CategoriesProvider categoriesProvider) {
         this.categoriesView = categoriesView;
         this.categoriesProvider = categoriesProvider;
     }
 
-    private CategoriesProvider categoriesProvider;
-
-
-
-
     @Override
     public void getCategories(String access_token) {
 
         categoriesView.showProgressbar(true);
 
-        categoriesProvider.getCategories(access_token,new OnCategoriesReceived() {
+        categoriesProvider.getCategories(access_token, new OnCategoriesReceived() {
             @Override
             public void onFailure() {
                 categoriesView.showProgressbar(false);
@@ -35,19 +31,16 @@ public class CategoriesPresenterImpl implements CategoriesPresenter {
 
             @Override
             public void onSuccess(CategoriesList categoriesList) {
-                if(categoriesList.isSuccess())
-                {
+                if (categoriesList.isSuccess()) {
+                    categoriesView.showProgressbar(false);
+                    categoriesView.onDataReceived(categoriesList.getCategoryDatas());
+
+                } else {
                     categoriesView.showProgressbar(false);
                     categoriesView.onDataReceived(categoriesList.getCategoryDatas());
 
                 }
-                else
-                {
-                    categoriesView.showProgressbar(false);
-                    categoriesView.onDataReceived(categoriesList.getCategoryDatas());
-
-                }
-                }
+            }
 
         });
     }

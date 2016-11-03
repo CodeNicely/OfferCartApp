@@ -12,6 +12,6 @@ import retrofit2.http.Query;
  */
 public interface CityScreenRequestApi {
     @GET(Urls.REQUEST_CITY)
-    Call<Response>getCities(@Query("access_token")String token);
+    Call<Response> getCities(@Query("access_token") String token);
 
 }

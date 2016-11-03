@@ -10,14 +10,12 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
-
+import com.example.aman.offercart_v1.R;
 import com.example.aman.offercart_v1.helper.SharedPrefs;
 import com.example.aman.offercart_v1.home.HomePage;
-import com.example.aman.offercart_v1.verify_otp.presenter.OtpPresenterImpl;
-import com.example.aman.offercart_v1.verify_otp.presenter.OtpPresenter;
-import com.example.aman.offercart_v1.R;
-import com.example.aman.offercart_v1.city.view.CityScreenActivity;
 import com.example.aman.offercart_v1.verify_otp.models.RetrofitOtpProvider;
+import com.example.aman.offercart_v1.verify_otp.presenter.OtpPresenter;
+import com.example.aman.offercart_v1.verify_otp.presenter.OtpPresenterImpl;
 
 import butterknife.ButterKnife;
 
@@ -42,8 +40,8 @@ public class OtpViewImpl extends Activity implements OtpView {
         setContentView(R.layout.activity_otp);
 
         ButterKnife.bind(this);
-        sharedPrefs=new SharedPrefs(this);
-        otpPresenter =new OtpPresenterImpl(this,
+        sharedPrefs = new SharedPrefs(this);
+        otpPresenter = new OtpPresenterImpl(this,
                 new RetrofitOtpProvider());
 
 
@@ -78,10 +76,10 @@ public class OtpViewImpl extends Activity implements OtpView {
 
     @Override
     public void onOtpVerified(String token) {
-        Log.d("res",token);
+        Log.d("res", token);
         sharedPrefs.setAccessToken(token);
-        Log.d("res","done");
-        Intent a=new Intent(OtpViewImpl.this, HomePage.class);
+        Log.d("res", "done");
+        Intent a = new Intent(OtpViewImpl.this, HomePage.class);
         startActivity(a);
         finish();
 

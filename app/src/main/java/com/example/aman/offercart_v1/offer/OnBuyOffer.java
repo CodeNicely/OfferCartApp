@@ -10,6 +10,7 @@ public interface OnBuyOffer {
 
 
     void onSuccess(BuyOfferData buyOfferData);
+
     void onFailure();
 
 }

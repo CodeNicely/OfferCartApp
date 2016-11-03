@@ -14,39 +14,34 @@ import com.example.aman.offercart_v1.splash_screen.view.SplashScreenView;
 
 public class SplashScreenPresenterImpl implements SplashScreenPresenter
 
-    {
+{
 
+    private static final String LOG_TAG = "SplashScreenActivity";
     private SplashScreenProvider splashScreenProvider;
     private SplashScreenView splashScreenView;
-    private static final String LOG_TAG = "SplashScreenActivity";
 
     public SplashScreenPresenterImpl(SplashScreenActivity splashScreenView,
-                                     RetrofitSplashScreenProvider retrofitSplashScreenProvider)
-    {
+                                     RetrofitSplashScreenProvider retrofitSplashScreenProvider) {
         this.splashScreenView = splashScreenView;
         this.splashScreenProvider = retrofitSplashScreenProvider;
     }
 
 
-
     @Override
-    public void requestSplash(String fcm)
-    {
+    public void requestSplash(String fcm) {
         splashScreenView.showProgressBar(true);
 
-        splashScreenProvider.requestSplash(fcm,new SplashScreenCallback()
-        {
+        splashScreenProvider.requestSplash(fcm, new SplashScreenCallback() {
             @Override
-            public void onSuccess(SplashScreenData splashScreenData)
-            {
-;
-                if(splashScreenData.isSuccess())
-                {
+            public void onSuccess(SplashScreenData splashScreenData) {
+
+                //Log.d(LOG_TAG,"Reached");
+                //splashScreenView.showProgressBar(false);
+                if (splashScreenData.isSuccess()) {
                     splashScreenView.version_check(splashScreenData);
                     splashScreenView.showProgressBar(false);
-                }
-                else{
-
+                } else {
+                    //splashScreenView.version_check(splashScreenData);
                     splashScreenView.showMessage(splashScreenData.getMessage());
                     splashScreenView.showProgressBar(false);
                 }
@@ -60,8 +55,6 @@ public class SplashScreenPresenterImpl implements SplashScreenPresenter
 
             }
         });
-
-
 
 
     }

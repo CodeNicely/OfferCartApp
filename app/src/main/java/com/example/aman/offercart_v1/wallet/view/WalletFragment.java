@@ -42,10 +42,6 @@ public class WalletFragment extends Fragment implements WalletInterface{
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     public static final String ARG_PAGE = "ARG_PAGE";
 
-
-    @BindView(R.id.proceed)
-    Button proceed;
-
     @BindView(R.id.wallet_toolbar)
     Toolbar toolbar;
 
@@ -67,11 +63,10 @@ public class WalletFragment extends Fragment implements WalletInterface{
     @BindView(R.id.wallet_progressbar)
     ProgressBar progressBar;
 
-
     // TODO: Rename and change types of parameters
     private static int mPage;
-
-
+    @BindView(R.id.proceed)
+    Button proceed;
     private OnFragmentInteractionListener mListener;
     private WalletPresenter walletPresenter;
 
@@ -143,6 +138,8 @@ public class WalletFragment extends Fragment implements WalletInterface{
             @Override
             public void onClick(View v) {
                 ((HomePage)getActivity()).payement(amount.getText().toString());
+//                Intent intent = new Intent(getActivity(), PaymentActivity.class);
+//                startActivity(intent);
             }
         });
 

@@ -10,6 +10,7 @@ import com.example.aman.offercart_v1.developers.model.data.DeveloperData;
 public interface DevelopersCallback {
 
     void onSuccess(DeveloperData developerData);
+
     void onFailed();
 
 

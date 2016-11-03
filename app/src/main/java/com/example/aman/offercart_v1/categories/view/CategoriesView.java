@@ -11,6 +11,8 @@ public interface CategoriesView {
     void showMessage(String message);
 
     void showProgressbar(boolean show);
+
     void onDataReceived(List<CategoryData> categoryDatas);
+
     void onSelected(String category_id);
 }

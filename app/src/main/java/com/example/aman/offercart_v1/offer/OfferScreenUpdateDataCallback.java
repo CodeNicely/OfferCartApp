@@ -9,5 +9,6 @@ import com.example.aman.offercart_v1.offer.model.data.OfferScreenUpdateData;
 public interface OfferScreenUpdateDataCallback {
 
     void onSuccess(OfferScreenUpdateData offerScreenUpdateData);
+
     void onFailure(String error);
 }

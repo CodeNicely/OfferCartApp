@@ -15,18 +15,15 @@ public class WelcomeImageDetails {
         this.image_url = image_url;
     }
 
-    public String getImage_id()
-    {
+    public String getImage_id() {
         return image_id;
     }
 
-    public String getMessage()
-    {
+    public String getMessage() {
         return message;
     }
 
-    public String getImage_url()
-    {
+    public String getImage_url() {
         return image_url;
     }
 }

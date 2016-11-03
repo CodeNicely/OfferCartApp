@@ -20,7 +20,7 @@ import java.util.List;
  * Created by iket on 22/10/16.
  */
 public class ShopAdapter extends RecyclerView.Adapter<ShopAdapter.MyViewHolder> {
-    private List<ShopData> shopDatas=new ArrayList<>();
+    private List<ShopData> shopDatas = new ArrayList<>();
     private Context context;
     private LayoutInflater layoutInflater;
 

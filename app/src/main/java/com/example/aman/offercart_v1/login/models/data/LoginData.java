@@ -3,7 +3,7 @@ package com.example.aman.offercart_v1.login.models.data;
 /**
  * Created by aman on 15/10/16.
  */
- public class LoginData {
+public class LoginData {
 
     private String message;
     private boolean success;

@@ -9,6 +9,7 @@ public interface WalletInterface {
     void showMessage(String message);
 
     void showProgressbar(boolean show);
+
     void walletReceived(WalletData walletData);
 
 

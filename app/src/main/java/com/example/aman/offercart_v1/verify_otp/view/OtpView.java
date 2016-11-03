@@ -6,8 +6,10 @@ package com.example.aman.offercart_v1.verify_otp.view;
 public interface OtpView {
 
     void showLoading(boolean show);
+
     void showMessage(String message);
-   void onOtpVerified(String token);
+
+    void onOtpVerified(String token);
 
 
 }

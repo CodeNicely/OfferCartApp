@@ -1,7 +1,6 @@
 package com.example.aman.offercart_v1.helper.image_loader;
 
 import android.content.Context;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
@@ -37,12 +36,12 @@ public class GlideImageLoader implements ImageLoader {
 
 //        requestManager.load(url).crossFade().thumbnail(0.1f);
 
-  //      requestManager.load(url).crossFade().thumbnail(0.05f);
+        //      requestManager.load(url).crossFade().thumbnail(0.05f);
 
         requestManager.load(url).crossFade().thumbnail(1f).listener(new RequestListener<String, GlideDrawable>() {
             @Override
             public boolean onException(Exception e, String model, Target<GlideDrawable> target, boolean isFirstResource) {
-                if (progressBar!=null){
+                if (progressBar != null) {
                     progressBar.setVisibility(View.GONE);
                 }
 
@@ -51,7 +50,7 @@ public class GlideImageLoader implements ImageLoader {
 
             @Override
             public boolean onResourceReady(GlideDrawable resource, String model, Target<GlideDrawable> target, boolean isFromMemoryCache, boolean isFirstResource) {
-                if (progressBar!=null){
+                if (progressBar != null) {
                     progressBar.setVisibility(View.GONE);
                 }
                 return false;
@@ -59,7 +58,6 @@ public class GlideImageLoader implements ImageLoader {
         }).diskCacheStrategy(DiskCacheStrategy.SOURCE)
                 //.animate(R.anim.image_animation)
                 .fitCenter().crossFade().into(imageView);
-
 
 
         // This code is used for Round Image View using Glide :)

@@ -6,7 +6,7 @@ import java.util.List;
  * Created by iket on 19/10/16.
  */
 public class CategoriesList {
-    private List<CategoryData>categoryDatas;
+    private List<CategoryData> categoryDatas;
     private String message;
     private boolean success;
 

@@ -70,7 +70,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:minHeight="180dp"
+                        android:minHeight="120dp"
                         android:padding="8dp" />
                 </RelativeLayout>
 
@@ -99,7 +99,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:padding="4dp"
-                        android:textColor="@color/codeNicelyColor" />
+                        android:textColor="@color/colorAccent" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -119,7 +119,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:padding="4dp"
-                        android:textColor="@color/codeNicelyColor" />
+                        android:textColor="@color/colorAccent" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -141,7 +141,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:padding="4dp"
-                        android:textColor="@color/codeNicelyColor" />
+                        android:textColor="@color/colorAccent" />
                 </LinearLayout>
 
 
@@ -162,7 +162,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:padding="4dp"
-                        android:textColor="@color/codeNicelyColor" />
+                        android:textColor="@color/colorAccent" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -182,7 +182,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:padding="4dp"
-                        android:textColor="@color/codeNicelyColor" />
+                        android:textColor="@color/colorAccent" />
                 </LinearLayout>
 
             </LinearLayout>

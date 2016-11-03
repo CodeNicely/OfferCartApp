@@ -16,8 +16,7 @@ public class OfferScreenDetailsPresenterImpl implements OfferScreenDetailsPresen
 
 
     public OfferScreenDetailsPresenterImpl(OfferScreenView offerScreenView,
-                                           OfferScreenDetailsProvider offerScreenDetailsProvider)
-    {
+                                           OfferScreenDetailsProvider offerScreenDetailsProvider) {
         this.offerScreenView = offerScreenView;
         this.offerScreenDetailsProvider = offerScreenDetailsProvider;
     }
@@ -25,14 +24,14 @@ public class OfferScreenDetailsPresenterImpl implements OfferScreenDetailsPresen
     @Override
     public void requestOfferList(String access_token, String shop_id) {
         offerScreenView.showProgressBar(true);
-        offerScreenDetailsProvider.requestOfferList(access_token,shop_id,new OfferScreenDetailsCallback() {
+        offerScreenDetailsProvider.requestOfferList(access_token, shop_id, new OfferScreenDetailsCallback() {
             @Override
             public void onSuccess(OfferScreenList offerScreenData) {
 
                 offerScreenView.showProgressBar(false);
-                if(offerScreenData.isSuccess()) {
+                if (offerScreenData.isSuccess()) {
                     offerScreenView.onOfferReceived(offerScreenData);
-                }else{
+                } else {
                     offerScreenView.showMessage(offerScreenData.getMessage());
                 }
             }

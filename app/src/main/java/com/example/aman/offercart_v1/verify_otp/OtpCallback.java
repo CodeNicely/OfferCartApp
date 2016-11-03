@@ -7,5 +7,6 @@ import com.example.aman.offercart_v1.verify_otp.models.data.OtpData;
  */
 public interface OtpCallback {
     void onSuccess(OtpData otpData);
+
     void onFailure(String error);
 }

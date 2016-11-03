@@ -1,12 +1,8 @@
 package com.example.aman.offercart_v1.contact_us.view;
 
-import android.content.ActivityNotFoundException;
-import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
-import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
-import android.content.pm.ResolveInfo;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
@@ -14,7 +10,6 @@ import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -30,8 +25,6 @@ import com.example.aman.offercart_v1.contact_us.presenter.ContactUsPresenter;
 import com.example.aman.offercart_v1.contact_us.presenter.ContactUsPresenterImpl;
 import com.example.aman.offercart_v1.helper.image_loader.GlideImageLoader;
 import com.example.aman.offercart_v1.helper.image_loader.ImageLoader;
-
-import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -49,51 +42,35 @@ public class ContactUsFragment extends Fragment implements ContactUsView {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-
-
+    @BindView(R.id.progressBar)
+    ProgressBar progressBar;
+    @BindView(R.id.email)
+    TextView email;
+    @BindView(R.id.mobile)
+    TextView mobile;
+    @BindView(R.id.address)
+    TextView address;
+    @BindView(R.id.facebook)
+    TextView facebook;
+    @BindView(R.id.imageProgressBar)
+    ProgressBar imageProgressBar;
+    @BindView(R.id.imageView)
+    ImageView imageView;
+    @BindView(R.id.contactUsLayout)
+    LinearLayout contactUsLayout;
+    @BindView(R.id.emailCard)
+    CardView emailCard;
+    @BindView(R.id.phoneCard)
+    CardView phoneCard;
+    @BindView(R.id.locationCard)
+    CardView locationCard;
+    @BindView(R.id.toolbar)
+    Toolbar toolbar;
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
     private ImageLoader imageLoader;
     private View snackView;
-
-    @BindView(R.id.progressBar)
-    ProgressBar progressBar;
-
-    @BindView(R.id.email)
-    TextView email;
-
-    @BindView(R.id.mobile)
-    TextView mobile;
-
-    @BindView(R.id.address)
-    TextView address;
-
-    @BindView(R.id.facebook)
-    TextView facebook;
-
-    @BindView(R.id.imageProgressBar)
-    ProgressBar imageProgressBar;
-
-    @BindView(R.id.imageView)
-    ImageView imageView;
-
-    @BindView(R.id.contactUsLayout)
-    LinearLayout contactUsLayout;
-
-
-    @BindView(R.id.emailCard)
-    CardView emailCard;
-
-    @BindView(R.id.phoneCard)
-    CardView phoneCard;
-
-    @BindView(R.id.locationCard)
-    CardView locationCard;
-
-    @BindView(R.id.toolbar)
-    Toolbar toolbar;
-
     private ContactUsPresenter contactUsPresenter;
     private OnFragmentInteractionListener mListener;
 
@@ -119,6 +96,25 @@ public class ContactUsFragment extends Fragment implements ContactUsView {
         return fragment;
     }
 
+    public static Intent newInstagramProfileIntent(PackageManager pm, String url) {
+        final Intent intent = new Intent(Intent.ACTION_VIEW);
+        try {
+            if (pm.getPackageInfo("com.instagram.android", 0) != null) {
+                if (url.endsWith("/")) {
+                    url = url.substring(0, url.length() - 1);
+                }
+                final String username = url.substring(url.lastIndexOf("/") + 1);
+                // http://stackoverflow.com/questions/21505941/intent-to-open-instagram-user-profile-on-android
+                intent.setData(Uri.parse("http://instagram.com/_u/" + username));
+                intent.setPackage("com.instagram.android");
+                return intent;
+            }
+        } catch (PackageManager.NameNotFoundException ignored) {
+        }
+        intent.setData(Uri.parse(url));
+        return intent;
+    }
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -136,7 +132,7 @@ public class ContactUsFragment extends Fragment implements ContactUsView {
 
         ButterKnife.bind(this, view);
 
-        toolbar.setNavigationIcon(ContextCompat.getDrawable(getContext(),R.drawable.ic_arrow_back_white_24dp));
+        toolbar.setNavigationIcon(ContextCompat.getDrawable(getContext(), R.drawable.ic_arrow_back_white_24dp));
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -194,7 +190,7 @@ public class ContactUsFragment extends Fragment implements ContactUsView {
     @Override
     public void setData(final ContactUsData contactUsData) {
 
-        final String facebookUrl="https://www.facebook.com/"+contactUsData.getFacebook();
+        final String facebookUrl = "https://www.facebook.com/" + contactUsData.getFacebook();
      /*   final String twitterUrl="https://www.twitter.com/"+contactUsData.getTwitter();
         final String instagramUrl="https://www.instagram.com/"+contactUsData.getInstagram();
 */
@@ -329,7 +325,7 @@ public class ContactUsFragment extends Fragment implements ContactUsView {
     }
 
     //method to get the right URL to use in the intent
-    public String getFacebookPageURL(Context context,String facebookUrl,String facebookPageId) {
+    public String getFacebookPageURL(Context context, String facebookUrl, String facebookPageId) {
         PackageManager packageManager = context.getPackageManager();
         try {
             int versionCode = packageManager.getPackageInfo("com.facebook.katana", 0).versionCode;
@@ -343,23 +339,10 @@ public class ContactUsFragment extends Fragment implements ContactUsView {
         }
     }
 
-    public static Intent newInstagramProfileIntent(PackageManager pm, String url) {
-        final Intent intent = new Intent(Intent.ACTION_VIEW);
-        try {
-            if (pm.getPackageInfo("com.instagram.android", 0) != null) {
-                if (url.endsWith("/")) {
-                    url = url.substring(0, url.length() - 1);
-                }
-                final String username = url.substring(url.lastIndexOf("/") + 1);
-                // http://stackoverflow.com/questions/21505941/intent-to-open-instagram-user-profile-on-android
-                intent.setData(Uri.parse("http://instagram.com/_u/" + username));
-                intent.setPackage("com.instagram.android");
-                return intent;
-            }
-        } catch (PackageManager.NameNotFoundException ignored) {
-        }
-        intent.setData(Uri.parse(url));
-        return intent;
+    @Override
+    public void onStop() {
+        super.onStop();
+        contactUsPresenter.onDestroy();
     }
 
     /**
@@ -375,11 +358,5 @@ public class ContactUsFragment extends Fragment implements ContactUsView {
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
-    }
-
-    @Override
-    public void onStop() {
-        super.onStop();
-        contactUsPresenter.onDestroy();
     }
 }

@@ -1,7 +1,7 @@
 package com.example.aman.offercart_v1.verify_otp.api;
 
-import com.example.aman.offercart_v1.verify_otp.models.data.OtpData;
 import com.example.aman.offercart_v1.helper.Urls;
+import com.example.aman.offercart_v1.verify_otp.models.data.OtpData;
 
 import retrofit2.Call;
 import retrofit2.http.Field;
@@ -15,5 +15,5 @@ public interface OtpApi {
 
     @FormUrlEncoded
     @POST(Urls.VERIFY_OTP)
-    Call<OtpData> requestOtp(@Field("otp") String otp, @Field("mobile")String mobile);
+    Call<OtpData> requestOtp(@Field("otp") String otp, @Field("mobile") String mobile);
 }

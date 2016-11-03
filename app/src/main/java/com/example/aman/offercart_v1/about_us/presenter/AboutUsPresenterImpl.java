@@ -12,7 +12,7 @@ import com.example.aman.offercart_v1.helper.MyApplication;
  * Created by meghal on 13/10/16.
  */
 
-public class AboutUsPresenterImpl implements AboutUsPresenter{
+public class AboutUsPresenterImpl implements AboutUsPresenter {
 
 
     private AboutUsView aboutUsView;
@@ -32,14 +32,15 @@ public class AboutUsPresenterImpl implements AboutUsPresenter{
             public void onSuccess(AboutUsData aboutUsData) {
 
                 aboutUsView.showLoader(false);
-                if(aboutUsData.isSuccess()){
+                if (aboutUsData.isSuccess()) {
 
                     aboutUsView.setData(aboutUsData);
 
-                }else{
+                } else {
                     aboutUsView.showMessage(aboutUsData.getMessage());
                 }
             }
+
             @Override
             public void onFailure() {
 
