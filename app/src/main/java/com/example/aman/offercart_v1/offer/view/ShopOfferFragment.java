@@ -2,10 +2,12 @@ package com.example.aman.offercart_v1.offer.view;
 
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -20,11 +22,15 @@ import android.widget.Toast;
 import com.example.aman.offercart_v1.R;
 import com.example.aman.offercart_v1.helper.SharedPrefs;
 import com.example.aman.offercart_v1.home.HomePage;
+import com.example.aman.offercart_v1.offer.model.RetrofitBuyOfferProvider;
 import com.example.aman.offercart_v1.offer.model.RetrofitOfferScreenDetailsProvider;
+import com.example.aman.offercart_v1.offer.model.data.BuyOfferData;
 import com.example.aman.offercart_v1.offer.model.data.OfferScreenDetails;
 import com.example.aman.offercart_v1.offer.model.data.OfferScreenList;
+import com.example.aman.offercart_v1.offer.presenter.BuyOfferPresenter;
 import com.example.aman.offercart_v1.offer.presenter.OfferScreenDetailsPresenter;
 import com.example.aman.offercart_v1.offer.presenter.OfferScreenDetailsPresenterImpl;
+import com.example.aman.offercart_v1.offer.presenter.BuyOfferPresenterImpl;
 import com.squareup.picasso.Picasso;
 
 import butterknife.BindView;
@@ -62,7 +68,7 @@ public class ShopOfferFragment extends Fragment implements OfferScreenView, BuyO
     private LinearLayoutManager linearLayoutManager;
     private SharedPrefs sharedPrefs;
     private OnFragmentInteractionListener mListener;
-
+    private BuyOfferPresenter buyOfferPresenter;
     public ShopOfferFragment() {
         // Required empty public constructor
     }
@@ -105,7 +111,7 @@ public class ShopOfferFragment extends Fragment implements OfferScreenView, BuyO
         HomePage homePage = new HomePage();
         shop_id = homePage.getShop_id();
         initialize();
-
+        buyOfferPresenter=new BuyOfferPresenterImpl(this,new RetrofitBuyOfferProvider());
         toolbar.setTitle("Offers");
         toolbar.setNavigationIcon(ContextCompat.getDrawable(getContext(), R.drawable.ic_arrow_back_white_24dp));
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
@@ -182,7 +188,6 @@ public class ShopOfferFragment extends Fragment implements OfferScreenView, BuyO
 
     @Override
     public void onOfferSelected(OfferScreenDetails offerScreenDetails) {
-
     }
 
     @Override
@@ -208,8 +213,58 @@ public class ShopOfferFragment extends Fragment implements OfferScreenView, BuyO
 
     }
 
-    public void buyOffer(int offer_id) {
+    @Override
+    public void onOfferBuy(BuyOfferData buyOfferData) {
+        String status;
+        if(buyOfferData.isSuccess()){
+            status="Successful";
+        }else {
+            status = "Failed";
+        }
 
+        final AlertDialog ad = new AlertDialog.Builder(getActivity())
+                .create();
+        ad.setIcon(R.drawable.discount_store_logo);
+
+        ad.setCancelable(false);
+        ad.setTitle("Buying Offer "+ status);
+        ad.setMessage(buyOfferData.getMessage()+"\n\n"+"You can checkout your order status in My Orders Section");
+        ad.setCancelable(false);
+        ad.setButton(DialogInterface.BUTTON_POSITIVE, "Okay", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+              //  ((HomePage)getActivity()).addFragment);
+                ad.cancel();
+            }
+        });
+        ad.show();
+
+    }
+
+    public void buyOffer(final int offer_id, int offer_price) {
+
+        final AlertDialog ad = new AlertDialog.Builder(getActivity())
+                .create();
+        ad.setCancelable(false);
+        ad.setIcon(R.drawable.discount_store_logo);
+        ad.setTitle("Do you really want to buy this offer ??");
+        ad.setMessage("This offer cost Rs ."+offer_price+" \nThis amount will be deducted from your account wallet!");
+        ad.setCancelable(false);
+        ad.setButton(DialogInterface.BUTTON_POSITIVE, "Yes", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                buyOfferPresenter.buyOffer(offer_id,sharedPrefs.getAccessToken());
+
+                ad.cancel();
+            }
+        });
+        ad.setButton(DialogInterface.BUTTON_NEGATIVE, "No", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                ad.cancel();
+            }
+        });
+        ad.show();
 
     }
 

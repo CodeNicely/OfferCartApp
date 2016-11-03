@@ -25,7 +25,7 @@ public class RetrofitBuyOfferProvider implements BuyOfferProvider {
 
     private BuyOfferApi buyOfferApi;
 
-    RetrofitBuyOfferProvider() {
+    public RetrofitBuyOfferProvider() {
 
         Gson gson = new GsonBuilder()
                 .setLenient()

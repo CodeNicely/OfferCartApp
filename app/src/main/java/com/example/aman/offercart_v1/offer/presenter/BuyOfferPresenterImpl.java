@@ -9,12 +9,12 @@ import com.example.aman.offercart_v1.offer.view.BuyOfferView;
  * Created by meghal on 2/11/16.
  */
 
-public class RetrofitBuyOfferPresenter implements BuyOfferPresenter {
+public class BuyOfferPresenterImpl implements BuyOfferPresenter {
 
     private BuyOfferView buyOfferView;
     private BuyOfferProvider buyOfferProvider;
 
-    public RetrofitBuyOfferPresenter(BuyOfferView buyOfferView, BuyOfferProvider buyOfferProvider) {
+    public BuyOfferPresenterImpl(BuyOfferView buyOfferView, BuyOfferProvider buyOfferProvider) {
         this.buyOfferView = buyOfferView;
         this.buyOfferProvider = buyOfferProvider;
     }
@@ -29,9 +29,11 @@ public class RetrofitBuyOfferPresenter implements BuyOfferPresenter {
 
                 buyOfferView.showLoadingDialog(false);
                 if (buyOfferData.isSuccess()) {
-                    buyOfferView.showSnackMessage(buyOfferData.getMessage());
+                //    buyOfferView.showSnackMessage(buyOfferData.getMessage());
+                    buyOfferView.onOfferBuy(buyOfferData);
                 } else {
-                    buyOfferView.showSnackMessage(buyOfferData.getMessage());
+                  //  buyOfferView.showSnackMessage(buyOfferData.getMessage());
+                    buyOfferView.onOfferBuy(buyOfferData);
 
                 }
             }

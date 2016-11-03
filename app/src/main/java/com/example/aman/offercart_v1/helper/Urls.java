@@ -31,7 +31,7 @@ public class Urls {
     //shop
     public static final String RequestShop = "shop/";
 
-    public static final String SUB_URL_BUY_OFFER = "offer/";
+    public static final String SUB_URL_BUY_OFFER = "buy_offer/";
     public static final String SUB_URL_ABOUT_US = "about_us/";
     public static final String SUB_URL_CONTACT_US = "contact_us/";
     public static final String SUB_URL_DEVELOPERS = "developers/";
