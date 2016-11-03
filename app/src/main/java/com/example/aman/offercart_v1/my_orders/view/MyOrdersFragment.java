@@ -4,11 +4,26 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ProgressBar;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.aman.offercart_v1.R;
+import com.example.aman.offercart_v1.helper.SharedPrefs;
+import com.example.aman.offercart_v1.my_orders.model.MockDataProvider;
+import com.example.aman.offercart_v1.my_orders.model.RetrofitOrdersProvider;
+import com.example.aman.offercart_v1.my_orders.model.data.OrdersData;
+import com.example.aman.offercart_v1.my_orders.presenter.MyOrdersPresenter;
+import com.example.aman.offercart_v1.my_orders.presenter.MyOrdersPresenterImpl;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -18,7 +33,10 @@ import com.example.aman.offercart_v1.R;
  * Use the {@link MyOrdersFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class MyOrdersFragment extends Fragment {
+
+
+
+public class MyOrdersFragment extends Fragment implements MyOrdersInterface{
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -27,6 +45,21 @@ public class MyOrdersFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    @BindView(R.id.orders_recycler)
+    RecyclerView recyclerView;
+
+    @BindView(R.id.orders_progressbar)
+    ProgressBar progressBar;
+
+    @BindView(R.id.order_toolbar)
+    Toolbar toolbar;
+
+    private Adapter adapter;
+    private SharedPrefs sharedPrefs;
+    private String token;
+    private MyOrdersPresenter myOrdersPresenter;
+    private LinearLayoutManager linearLayoutManager;
 
     private OnFragmentInteractionListener mListener;
 
@@ -64,8 +97,32 @@ public class MyOrdersFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_my_orders, container, false);
+
+        View view=inflater.inflate(R.layout.fragment_my_orders, container, false);
+        ButterKnife.bind(this,view);
+        initialize();
+
+
+        myOrdersPresenter.getOrders(token);
+        return view;
+    }
+
+    private void initialize() {
+        adapter=new Adapter(getContext(),this);
+        sharedPrefs=new SharedPrefs(getContext());
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getActivity().onBackPressed();
+            }
+        });
+
+        linearLayoutManager=new LinearLayoutManager(getContext());
+        myOrdersPresenter=new MyOrdersPresenterImpl(this,new MockDataProvider());
+        token=sharedPrefs.getAccessToken();
+        recyclerView.setAdapter(adapter);
+        recyclerView.setLayoutManager(linearLayoutManager);
+
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -78,18 +135,32 @@ public class MyOrdersFragment extends Fragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        if (context instanceof OnFragmentInteractionListener) {
-            mListener = (OnFragmentInteractionListener) context;
-        } else {
-            throw new RuntimeException(context.toString()
-                    + " must implement OnFragmentInteractionListener");
-        }
+
     }
 
     @Override
     public void onDetach() {
         super.onDetach();
         mListener = null;
+    }
+
+    @Override
+    public void showMessage(String error) {
+        Toast.makeText(getContext(),error,Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void showProgressBar(boolean show) {
+        if(show)
+            progressBar.setVisibility(View.VISIBLE);
+        else
+            progressBar.setVisibility(View.INVISIBLE);
+    }
+
+    @Override
+    public void onOfferReceived(OrdersData ordersData) {
+        adapter.setData(ordersData.getOrders());
+        adapter.notifyDataSetChanged();
     }
 
     /**

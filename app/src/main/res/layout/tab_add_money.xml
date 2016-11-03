@@ -90,7 +90,7 @@
 
             <EditText
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="45dp"
             android:hint="Amount(Rs)"
             android:id="@+id/wallet_amount"
             android:textSize="18dp"

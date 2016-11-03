@@ -20,15 +20,13 @@
             android:name=".splash_screen.view.SplashScreenActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
-        <activity android:name=".home.HomePage"></activity>
+        <activity android:name=".home.HomePage" />
 
         <!-- Main activity -->
 
@@ -37,10 +35,7 @@
         <activity
             android:name=".welcome_screen.view.WelcomeScreenActivity"
             android:label="@string/app_name" />
-        <activity android:name=".wallet.view.WalletActivity">
-
-        </activity>
-
+        <activity android:name=".wallet.view.WalletActivity"></activity>
         <activity android:name=".payement.view.PaymentActivity" />
     </application>
 

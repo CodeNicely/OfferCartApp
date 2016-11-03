@@ -3,7 +3,7 @@ package com.example.aman.offercart_v1.offer.model;
 import com.example.aman.offercart_v1.helper.Urls;
 import com.example.aman.offercart_v1.offer.OnBuyOffer;
 import com.example.aman.offercart_v1.offer.api.BuyOfferApi;
-import com.example.aman.offercart_v1.offer.model.data.BuyOfferData;
+import com.example.aman.offercart_v1.offer.model.data.OfferData;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -21,11 +21,11 @@ import retrofit2.converter.gson.GsonConverterFactory;
  * Created by meghal on 2/11/16.
  */
 
-public class RetrofitBuyOfferProvider implements BuyOfferProvider {
+public class RetrofitBuyOfferProvider implements BuyOffer_Provider {
 
     private BuyOfferApi buyOfferApi;
 
-    RetrofitBuyOfferProvider() {
+    public RetrofitBuyOfferProvider() {
 
         Gson gson = new GsonBuilder()
                 .setLenient()
@@ -49,23 +49,22 @@ public class RetrofitBuyOfferProvider implements BuyOfferProvider {
     @Override
     public void buyOffer(int offer_id, String access_token, final OnBuyOffer onBuyOffer) {
 
-        Call<BuyOfferData> buyOfferDataCall = buyOfferApi.buyOffer(offer_id, access_token);
-        buyOfferDataCall.enqueue(new Callback<BuyOfferData>() {
+//        Call<OfferData> call=buyOfferApi
+
+        Call<OfferData> buyOfferDataCall = buyOfferApi.buyOffer(offer_id, access_token);
+        buyOfferDataCall.enqueue(new Callback<OfferData>() {
             @Override
-            public void onResponse(Call<BuyOfferData> call, Response<BuyOfferData> response) {
+            public void onResponse(Call<OfferData> call, Response<OfferData> response) {
 
                 onBuyOffer.onSuccess(response.body());
 
             }
 
             @Override
-            public void onFailure(Call<BuyOfferData> call, Throwable t) {
-
+            public void onFailure(Call<OfferData> call, Throwable t) {
                 onBuyOffer.onFailure();
                 t.printStackTrace();
             }
         });
-
-
     }
 }

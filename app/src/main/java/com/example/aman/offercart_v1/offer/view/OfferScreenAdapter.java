@@ -61,7 +61,7 @@ public class OfferScreenAdapter extends RecyclerView.Adapter<OfferScreenAdapter.
             @Override
             public void onClick(View v) {
 
-                shopOfferFragment.buyOffer(offerScreenDetails.getOffer_id());
+                shopOfferFragment.buyOffer(offerScreenDetails.getOffer_id(),offerScreenDetails.getPrice());
 
             }
         });

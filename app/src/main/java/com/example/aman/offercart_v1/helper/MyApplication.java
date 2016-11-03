@@ -21,7 +21,7 @@ public class MyApplication extends Application {
         context=this;
    //     FontsOverride.setDefaultFont(this, "DEFAULT", "fonts/comfortaa.ttf");
     //    FontsOverride.setDefaultFont(this, "MONOSPACE", "fonts/homemade.ttf");
-        FontsOverride.setDefaultFont(this, "SERIF", "fonts/dosis.ttf");
+        FontsOverride.setDefaultFont(this, "SERIF", "fonts/itim.ttf");
     //    FontsOverride.setDefaultFont(this, "SANS_SERIF", "fonts/patrick_hand.ttf");
 
         fcm = FirebaseInstanceId.getInstance().getToken();
