@@ -122,21 +122,18 @@ public class WalletFragment extends Fragment implements WalletInterface{
         add50.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 amount.setText("50");
             }
         });
         add100.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 amount.setText("100");
             }
         });
         add200.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 amount.setText("200");
             }
         });

@@ -39,16 +39,13 @@ public class SplashScreenPresenterImpl implements SplashScreenPresenter
             @Override
             public void onSuccess(SplashScreenData splashScreenData)
             {
-
-                //Log.d(LOG_TAG,"Reached");
-                //splashScreenView.showProgressBar(false);
+;
                 if(splashScreenData.isSuccess())
                 {
                     splashScreenView.version_check(splashScreenData);
                     splashScreenView.showProgressBar(false);
                 }
                 else{
-                    //splashScreenView.version_check(splashScreenData);
 
                     splashScreenView.showMessage(splashScreenData.getMessage());
                     splashScreenView.showProgressBar(false);
