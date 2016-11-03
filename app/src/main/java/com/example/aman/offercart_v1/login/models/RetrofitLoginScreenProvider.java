@@ -1,9 +1,12 @@
 package com.example.aman.offercart_v1.login.models;
 
 
-import android.util.Log;
-
 import com.example.aman.offercart_v1.helper.Urls;
+import com.example.aman.offercart_v1.login.LoginCallback;
+import com.example.aman.offercart_v1.login.api.LoginApi;
+import com.example.aman.offercart_v1.login.models.data.LoginData;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
@@ -12,15 +15,6 @@ import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
-
-
-import com.example.aman.offercart_v1.login.api.LoginApi;
-import com.example.aman.offercart_v1.login.LoginCallback;
-
-
-import com.example.aman.offercart_v1.login.models.data.LoginData;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 
 
 public class RetrofitLoginScreenProvider implements LoginProvider {
@@ -50,7 +44,6 @@ public class RetrofitLoginScreenProvider implements LoginProvider {
         Call<LoginData> loginDataCall = loginApi.requestLogin(name, mobile, email);
 
         loginDataCall.enqueue(new Callback<LoginData>() {
-
 
 
             @Override

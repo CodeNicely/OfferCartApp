@@ -35,7 +35,7 @@ public class RetrofitOfferScreenDetailsProvider implements OfferScreenDetailsPro
         HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
         interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
         OkHttpClient client = new OkHttpClient.Builder().addInterceptor(interceptor).
-                connectTimeout(5, TimeUnit.MINUTES).readTimeout(5,TimeUnit.MINUTES).build();
+                connectTimeout(5, TimeUnit.MINUTES).readTimeout(5, TimeUnit.MINUTES).build();
 
 
         Retrofit retrofit = new Retrofit.Builder()

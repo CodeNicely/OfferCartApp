@@ -2,7 +2,6 @@ package com.example.aman.offercart_v1.offer.view;
 
 import android.app.ProgressDialog;
 import android.content.Context;
-import android.media.Image;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -26,12 +25,7 @@ import com.example.aman.offercart_v1.offer.model.data.OfferScreenDetails;
 import com.example.aman.offercart_v1.offer.model.data.OfferScreenList;
 import com.example.aman.offercart_v1.offer.presenter.OfferScreenDetailsPresenter;
 import com.example.aman.offercart_v1.offer.presenter.OfferScreenDetailsPresenterImpl;
-import com.example.aman.offercart_v1.shops.model.MockShopProvider;
-import com.example.aman.offercart_v1.shops.presenter.ShopPresenterImpl;
-import com.example.aman.offercart_v1.shops.view.ShopAdapter;
 import com.squareup.picasso.Picasso;
-
-import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -49,6 +43,15 @@ public class ShopOfferFragment extends Fragment implements OfferScreenView, BuyO
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
+    String access_token;
+    @BindView(R.id.offersRecycler)
+    RecyclerView recyclerView;
+    @BindView(R.id.offersProgressBar)
+    ProgressBar progressBar;
+    @BindView(R.id.toolbar)
+    Toolbar toolbar;
+    @BindView(R.id.imageView)
+    ImageView shopImage;
     private ProgressDialog progressDialog;
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -58,20 +61,6 @@ public class ShopOfferFragment extends Fragment implements OfferScreenView, BuyO
     private OfferScreenDetailsPresenter offerScreenDetailsPresenter;
     private LinearLayoutManager linearLayoutManager;
     private SharedPrefs sharedPrefs;
-
-    String access_token;
-
-    @BindView(R.id.offersRecycler)
-    RecyclerView recyclerView;
-    @BindView(R.id.offersProgressBar)
-    ProgressBar progressBar;
-
-    @BindView(R.id.toolbar)
-    Toolbar toolbar;
-
-    @BindView(R.id.imageView)
-    ImageView shopImage;
-
     private OnFragmentInteractionListener mListener;
 
     public ShopOfferFragment() {
@@ -111,7 +100,7 @@ public class ShopOfferFragment extends Fragment implements OfferScreenView, BuyO
                              Bundle savedInstanceState) {
 
         ((AppCompatActivity) getActivity()).getSupportActionBar().hide();
-        View view = inflater.inflate(R.layout.activity_offerscreen, container, false);
+        View view = inflater.inflate(R.layout.fragment_offers, container, false);
         ButterKnife.bind(this, view);
         HomePage homePage = new HomePage();
         shop_id = homePage.getShop_id();
@@ -141,7 +130,7 @@ public class ShopOfferFragment extends Fragment implements OfferScreenView, BuyO
         recyclerView.setHasFixedSize(true);
         recyclerView.setAdapter(offerScreenAdapter);
         recyclerView.setNestedScrollingEnabled(true);
-        progressDialog=new ProgressDialog(getContext());
+        progressDialog = new ProgressDialog(getContext());
 
         progressDialog.setMessage("Buying Offer");
         progressDialog.setTitle("Connecting . . .");
@@ -205,17 +194,21 @@ public class ShopOfferFragment extends Fragment implements OfferScreenView, BuyO
     public void showSnackMessage(String message) {
 
 
-
     }
 
     @Override
     public void showLoadingDialog(boolean show) {
 
-        if(show){
+        if (show) {
             progressDialog.show();
-        }else {
+        } else {
             progressDialog.hide();
         }
+
+
+    }
+
+    public void buyOffer(int offer_id) {
 
 
     }
@@ -223,10 +216,5 @@ public class ShopOfferFragment extends Fragment implements OfferScreenView, BuyO
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
-    }
-
-    public void buyOffer(int offer_id) {
-
-
     }
 }

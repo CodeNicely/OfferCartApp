@@ -10,31 +10,26 @@ public class SplashScreenData {
     private int version;
     private int compulsory_update;
 
-    public SplashScreenData(int version, String message, boolean success, int compulsory_update)
-    {
+    public SplashScreenData(int version, String message, boolean success, int compulsory_update) {
         this.success = success;
         this.message = message;
         this.version = version;
         this.compulsory_update = compulsory_update;
     }
 
-    public int getCompulsory_update()
-    {
+    public int getCompulsory_update() {
         return compulsory_update;
     }
 
-    public boolean isSuccess()
-    {
+    public boolean isSuccess() {
         return success;
     }
 
-    public String getMessage()
-    {
+    public String getMessage() {
         return message;
     }
 
-    public int getVersion()
-    {
+    public int getVersion() {
         return version;
     }
 

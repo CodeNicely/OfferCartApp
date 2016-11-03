@@ -16,6 +16,6 @@ public interface BuyOfferApi {
 
     @FormUrlEncoded
     @POST(Urls.SUB_URL_BUY_OFFER)
-    Call<BuyOfferData> buyOffer(@Field("offer_id") int offer_id,@Field("access_token") String access_token);
+    Call<BuyOfferData> buyOffer(@Field("offer_id") int offer_id, @Field("access_token") String access_token);
 
 }

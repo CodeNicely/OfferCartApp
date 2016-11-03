@@ -19,8 +19,7 @@ import java.util.List;
  * Created by aman on 19/10/16.
  */
 
-public class ViewPagerAdapter extends PagerAdapter
-{
+public class ViewPagerAdapter extends PagerAdapter {
     private Context context;
     private List<WelcomeImageDetails> welcomeImageDetailsList = new ArrayList<>();
     private LayoutInflater layoutInflater;
@@ -29,9 +28,8 @@ public class ViewPagerAdapter extends PagerAdapter
         this.context = context;
     }
 
-    public void setImageList(List<WelcomeImageDetails> welcomeImageDetailsList)
-    {
-        this.welcomeImageDetailsList=welcomeImageDetailsList;
+    public void setImageList(List<WelcomeImageDetails> welcomeImageDetailsList) {
+        this.welcomeImageDetailsList = welcomeImageDetailsList;
     }
 
     @Override
@@ -42,7 +40,7 @@ public class ViewPagerAdapter extends PagerAdapter
         container.addView(view);
         WelcomeImageDetails welcomeImageDetails = welcomeImageDetailsList.get(position);
         TextView textView = (TextView) view.findViewById(R.id.tv1);
-        ImageView imageView=(ImageView)view.findViewById(R.id.img);
+        ImageView imageView = (ImageView) view.findViewById(R.id.img);
         textView.setText(welcomeImageDetails.getMessage());
         Picasso.with(context)
                 .load(welcomeImageDetails.getImage_url())

@@ -4,7 +4,7 @@ package com.example.aman.offercart_v1.categories.model.data;
  * Created by iket on 19/10/16.
  */
 public class CategoryData {
-    private String name,image,id;
+    private String name, image, id;
 
     public CategoryData(String name, String image, String id) {
         this.name = name;

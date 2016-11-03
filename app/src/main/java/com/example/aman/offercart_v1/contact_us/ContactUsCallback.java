@@ -10,6 +10,7 @@ import com.example.aman.offercart_v1.contact_us.model.data.ContactUsData;
 public interface ContactUsCallback {
 
     void onSuccess(ContactUsData contactUsData);
+
     void onFailure();
 
 }

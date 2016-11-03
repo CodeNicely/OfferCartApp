@@ -39,47 +39,34 @@ public class DeveloperFragment extends Fragment implements DeveloperView {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-
+    @BindView(R.id.progressBar)
+    ProgressBar progressBar;
+    @BindView(R.id.imageView)
+    ImageView companyImage;
+    @BindView(R.id.imageProgressBar)
+    ProgressBar imageProgressBar;
+    @BindView(R.id.about)
+    TextView aboutUs;
+    @BindView(R.id.address)
+    TextView address;
+    @BindView(R.id.email)
+    TextView email;
+    @BindView(R.id.mobile)
+    TextView mobile;
+    @BindView(R.id.website)
+    TextView website;
+    @BindView(R.id.facebook)
+    TextView facebook;
+    @BindView(R.id.developers)
+    TextView developers;
+    @BindView(R.id.developerLayout)
+    LinearLayout developerLayout;
+    @BindView(R.id.toolbar)
+    Toolbar toolbar;
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
     private View snackView;
-    @BindView(R.id.progressBar)
-    ProgressBar progressBar;
-
-    @BindView(R.id.imageView)
-    ImageView companyImage;
-
-    @BindView(R.id.imageProgressBar)
-    ProgressBar imageProgressBar;
-
-    @BindView(R.id.about)
-    TextView aboutUs;
-
-    @BindView(R.id.address)
-    TextView address;
-
-    @BindView(R.id.email)
-    TextView email;
-
-    @BindView(R.id.mobile)
-    TextView mobile;
-
-    @BindView(R.id.website)
-    TextView website;
-
-    @BindView(R.id.facebook)
-    TextView facebook;
-
-    @BindView(R.id.developers)
-    TextView developers;
-
-    @BindView(R.id.developerLayout)
-    LinearLayout developerLayout;
-
-    @BindView(R.id.toolbar)
-    Toolbar toolbar;
-
     private DevelopersPresenter developersPresenter;
     private OnFragmentInteractionListener mListener;
 
@@ -121,7 +108,7 @@ public class DeveloperFragment extends Fragment implements DeveloperView {
         View view = inflater.inflate(R.layout.fragment_developer, container, false);
         ButterKnife.bind(this, view);
 
-        toolbar.setNavigationIcon(ContextCompat.getDrawable(getContext(),R.drawable.ic_arrow_back_white_24dp));
+        toolbar.setNavigationIcon(ContextCompat.getDrawable(getContext(), R.drawable.ic_arrow_back_white_24dp));
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -129,7 +116,7 @@ public class DeveloperFragment extends Fragment implements DeveloperView {
             }
         });
 
-        developersPresenter=new DevelopersPresenterImpl(this,new RetrofitDeveloperProvider());
+        developersPresenter = new DevelopersPresenterImpl(this, new RetrofitDeveloperProvider());
         developersPresenter.requestDevelopersData();
         return view;
     }
@@ -155,13 +142,10 @@ public class DeveloperFragment extends Fragment implements DeveloperView {
     @Override
     public void showLoading(boolean show) {
 
-        if (show)
-        {
+        if (show) {
             progressBar.setVisibility(View.VISIBLE);
             developerLayout.setVisibility(View.GONE);
-            }
-        else
-        {
+        } else {
             progressBar.setVisibility(View.GONE);
             developerLayout.setVisibility(View.VISIBLE);
         }
@@ -194,6 +178,12 @@ public class DeveloperFragment extends Fragment implements DeveloperView {
         }
     }
 
+    @Override
+    public void onStop() {
+        super.onStop();
+        developersPresenter.onDestroy();
+    }
+
     /**
      * This interface must be implemented by activities that contain this
      * fragment to allow an interaction in this fragment to be communicated
@@ -207,11 +197,5 @@ public class DeveloperFragment extends Fragment implements DeveloperView {
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
-    }
-
-    @Override
-    public void onStop() {
-        super.onStop();
-        developersPresenter.onDestroy();
     }
 }

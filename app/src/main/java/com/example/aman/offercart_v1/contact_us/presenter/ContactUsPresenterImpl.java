@@ -31,11 +31,10 @@ public class ContactUsPresenterImpl implements ContactUsPresenter {
             public void onSuccess(ContactUsData contactUsData) {
 
                 contactUsView.showLoader(false);
-                if(contactUsData.isSuccess()){
+                if (contactUsData.isSuccess()) {
                     contactUsView.setData(contactUsData);
 //                    contactUsView.showMessage(contactUsData.getMessage());
-                }else
-                {
+                } else {
                     contactUsView.showMessage(contactUsData.getMessage());
                 }
             }

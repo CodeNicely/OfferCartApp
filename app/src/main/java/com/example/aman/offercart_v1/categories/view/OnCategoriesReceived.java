@@ -7,5 +7,6 @@ import com.example.aman.offercart_v1.categories.model.data.CategoriesList;
  */
 public interface OnCategoriesReceived {
     void onFailure();
+
     void onSuccess(CategoriesList categoriesList);
 }

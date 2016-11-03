@@ -11,7 +11,9 @@ public interface ContactUsView {
 
 
     void showLoader(boolean show);
+
     void showMessage(String message);
+
     void setData(ContactUsData contactUsData);
 
 }

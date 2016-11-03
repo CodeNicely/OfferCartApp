@@ -11,7 +11,9 @@ public interface AboutUsView {
 
 
     void showMessage(String message);
+
     void showLoader(boolean show);
+
     void setData(AboutUsData aboutUsData);
 
 

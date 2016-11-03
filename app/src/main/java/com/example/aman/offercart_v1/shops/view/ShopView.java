@@ -9,6 +9,8 @@ import java.util.List;
  */
 public interface ShopView {
     void showLoading(boolean show);
+
     void showMessage(String message);
+
     void OnShopsDataReceived(List<ShopData> shopDataList);
 }

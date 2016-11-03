@@ -9,5 +9,6 @@ import java.util.List;
  */
 public interface OnCitiesReceived {
     void onFailure();
+
     void onSuccess(List<CityScreenData> cityScreenDatas);
 }

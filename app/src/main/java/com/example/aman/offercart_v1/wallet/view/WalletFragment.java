@@ -29,15 +29,10 @@ public class WalletFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     public static final String ARG_PAGE = "ARG_PAGE";
-
-
-    @BindView(R.id.proceed)
-    Button proceed;
-
     // TODO: Rename and change types of parameters
     private static int mPage;
-
-
+    @BindView(R.id.proceed)
+    Button proceed;
     private OnFragmentInteractionListener mListener;
 
     public WalletFragment() {
@@ -81,7 +76,7 @@ public class WalletFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
-                Intent intent=new Intent(getActivity(), PaymentActivity.class);
+                Intent intent = new Intent(getActivity(), PaymentActivity.class);
                 startActivity(intent);
             }
         });

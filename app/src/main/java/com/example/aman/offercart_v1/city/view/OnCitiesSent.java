@@ -7,5 +7,6 @@ import com.example.aman.offercart_v1.city.models.data.SelectedCityData;
  */
 public interface OnCitiesSent {
     void onFailure();
+
     void onSuccess(SelectedCityData selectedCityData);
 }

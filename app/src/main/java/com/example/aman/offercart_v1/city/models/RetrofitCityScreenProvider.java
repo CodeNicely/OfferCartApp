@@ -19,11 +19,10 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 
 public class RetrofitCityScreenProvider implements CityScreenProvider {
-   private CityScreenRequestApi cityScreenRequestApi;
+    private CityScreenRequestApi cityScreenRequestApi;
     private SendSelectedCityApi sendSelectedCityApi;
 
-    public RetrofitCityScreenProvider()
-    {
+    public RetrofitCityScreenProvider() {
 
         HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
         interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
@@ -38,15 +37,15 @@ public class RetrofitCityScreenProvider implements CityScreenProvider {
                 .client(client)
                 .build();
         cityScreenRequestApi = retrofit.create(CityScreenRequestApi.class);
-        sendSelectedCityApi=retrofit.create(SendSelectedCityApi.class);
+        sendSelectedCityApi = retrofit.create(SendSelectedCityApi.class);
     }
 
 
     @Override
-    public void requestCity(String token,final OnCitiesReceived onCitiesReceived) {
+    public void requestCity(String token, final OnCitiesReceived onCitiesReceived) {
 
 
-        Call<Response> call=cityScreenRequestApi.getCities(token);
+        Call<Response> call = cityScreenRequestApi.getCities(token);
         call.enqueue(new Callback<Response>() {
             @Override
             public void onResponse(Call<Response> call, retrofit2.Response<Response> response) {
@@ -63,8 +62,8 @@ public class RetrofitCityScreenProvider implements CityScreenProvider {
     }
 
     @Override
-    public void sendSelectedCity(String city_id,String token, final OnCitiesSent onCitiesSent) {
-        Call<SelectedCityData> call=sendSelectedCityApi.sendCity(city_id,token);
+    public void sendSelectedCity(String city_id, String token, final OnCitiesSent onCitiesSent) {
+        Call<SelectedCityData> call = sendSelectedCityApi.sendCity(city_id, token);
         call.enqueue(new Callback<SelectedCityData>() {
             @Override
             public void onResponse(Call<SelectedCityData> call, retrofit2.Response<SelectedCityData> response) {

@@ -8,7 +8,7 @@ import java.util.List;
  * Created by iket on 19/10/16.
  */
 public class Response {
-    private List<CityScreenData>city_data;
+    private List<CityScreenData> city_data;
 
     public Response(List<CityScreenData> city_data) {
         this.city_data = city_data;

@@ -15,9 +15,8 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.example.aman.offercart_v1.R;
-import com.example.aman.offercart_v1.home.HomePage;
 import com.example.aman.offercart_v1.helper.SharedPrefs;
-import com.example.aman.offercart_v1.shops.model.MockShopProvider;
+import com.example.aman.offercart_v1.home.HomePage;
 import com.example.aman.offercart_v1.shops.model.RetrofitShopProvider;
 import com.example.aman.offercart_v1.shops.model.data.ShopData;
 import com.example.aman.offercart_v1.shops.presenter.ShopPresenter;
@@ -36,31 +35,26 @@ import butterknife.ButterKnife;
  * Use the {@link ShopFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class ShopFragment extends Fragment implements ShopView{
+public class ShopFragment extends Fragment implements ShopView {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-
+    String access_token;
+    @BindView(R.id.shops_recycler)
+    RecyclerView recyclerView;
+    @BindView(R.id.toolbar)
+    Toolbar toolbar;
+    @BindView(R.id.shop_progressbar)
+    ProgressBar progressBar;
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-
     private OnFragmentInteractionListener mListener;
-
     private ShopPresenter shopPresenter;
     private ShopAdapter shopAdapter;
     private LinearLayoutManager linearLayoutManager;
     private SharedPrefs sharedPrefs;
-    String access_token;
-    @BindView(R.id.shops_recycler)
-    RecyclerView recyclerView;
-
-    @BindView(R.id.toolbar)
-    Toolbar toolbar;
-
-    @BindView(R.id.shop_progressbar)
-    ProgressBar progressBar;
 
     public ShopFragment() {
         // Required empty public constructor
@@ -98,9 +92,9 @@ public class ShopFragment extends Fragment implements ShopView{
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        ((AppCompatActivity)getActivity()).getSupportActionBar().hide();
-        View view= inflater.inflate(R.layout.fragment_shop, container, false);
-        ButterKnife.bind(this,view);
+        ((AppCompatActivity) getActivity()).getSupportActionBar().hide();
+        View view = inflater.inflate(R.layout.fragment_shop, container, false);
+        ButterKnife.bind(this, view);
 
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
@@ -109,23 +103,22 @@ public class ShopFragment extends Fragment implements ShopView{
             }
         });
 
-        String category_id="1";
-        HomePage homePage=(HomePage)getActivity();
-        category_id=homePage.getCategory();
-        sharedPrefs=new SharedPrefs(getContext());
+        String category_id = "1";
+        HomePage homePage = (HomePage) getActivity();
+        category_id = homePage.getCategory();
+        sharedPrefs = new SharedPrefs(getContext());
 //        category_id=getArguments().getString("category_id");
 
         initialize();
-        shopPresenter.getShops(sharedPrefs.getAccessToken(),category_id);
+        shopPresenter.getShops(sharedPrefs.getAccessToken(), category_id);
         return view;
     }
 
-    void initialize()
-    {
-        linearLayoutManager=new LinearLayoutManager(getContext());
-        shopAdapter=new ShopAdapter(getContext());
+    void initialize() {
+        linearLayoutManager = new LinearLayoutManager(getContext());
+        shopAdapter = new ShopAdapter(getContext());
         recyclerView.setHasFixedSize(true);
-        shopPresenter=new ShopPresenterImpl(this,new RetrofitShopProvider());
+        shopPresenter = new ShopPresenterImpl(this, new RetrofitShopProvider());
         recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.setAdapter(shopAdapter);
 

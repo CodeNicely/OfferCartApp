@@ -16,12 +16,11 @@ import retrofit2.converter.gson.GsonConverterFactory;
 /**
  * Created by iket on 20/10/16.
  */
-public class RetrofitWalletProvider implements WalletProvider{
+public class RetrofitWalletProvider implements WalletProvider {
 
     private WalletApi walletApi;
 
-    public RetrofitWalletProvider()
-    {
+    public RetrofitWalletProvider() {
         Gson gson = new GsonBuilder()
                 .setLenient()
                 .create();
@@ -29,12 +28,13 @@ public class RetrofitWalletProvider implements WalletProvider{
                 .baseUrl(Urls.BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create(gson))
                 .build();
-        walletApi=retrofit.create(WalletApi.class);
+        walletApi = retrofit.create(WalletApi.class);
     }
+
     @Override
     public void getWalletInfo(String user_id, OnWalletInfoReceived onWalletInfoReceived) {
 
-        Call<WalletData>call=walletApi.getWallet(user_id);
+        Call<WalletData> call = walletApi.getWallet(user_id);
         call.enqueue(new Callback<WalletData>() {
             @Override
             public void onResponse(Call<WalletData> call, Response<WalletData> response) {

@@ -13,25 +13,25 @@ import java.util.List;
 public class MockCategoryProvider implements CategoriesProvider {
 
     @Override
-    public void getCategories(String access_token,OnCategoriesReceived onCategoriesReceived) {
-        List<CategoryData> categoryDatas=new ArrayList<>();
+    public void getCategories(String access_token, OnCategoriesReceived onCategoriesReceived) {
+        List<CategoryData> categoryDatas = new ArrayList<>();
 
-        CategoryData clothes=new CategoryData("Clothes","http://image.flaticon.com/icons/png/512/194/194116.png","1");
+        CategoryData clothes = new CategoryData("Clothes", "http://image.flaticon.com/icons/png/512/194/194116.png", "1");
         categoryDatas.add(clothes);
 
-        clothes=new CategoryData("Food","https://cdn2.iconfinder.com/data/icons/food-solid-icons-vol-1/48/001-512.png","2");
+        clothes = new CategoryData("Food", "https://cdn2.iconfinder.com/data/icons/food-solid-icons-vol-1/48/001-512.png", "2");
         categoryDatas.add(clothes);
 
-        clothes=new CategoryData("Stationary","https://cdn2.iconfinder.com/data/icons/food-solid-icons-vol-1/48/001-512.png","2");
+        clothes = new CategoryData("Stationary", "https://cdn2.iconfinder.com/data/icons/food-solid-icons-vol-1/48/001-512.png", "2");
         categoryDatas.add(clothes);
 
-        clothes=new CategoryData("Electronics","https://cdn2.iconfinder.com/data/icons/food-solid-icons-vol-1/48/001-512.png","2");
+        clothes = new CategoryData("Electronics", "https://cdn2.iconfinder.com/data/icons/food-solid-icons-vol-1/48/001-512.png", "2");
         categoryDatas.add(clothes);
 
-        clothes=new CategoryData("Gifts","https://cdn2.iconfinder.com/data/icons/food-solid-icons-vol-1/48/001-512.png","2");
+        clothes = new CategoryData("Gifts", "https://cdn2.iconfinder.com/data/icons/food-solid-icons-vol-1/48/001-512.png", "2");
         categoryDatas.add(clothes);
 
-        CategoriesList categoriesList=new CategoriesList(categoryDatas,"Success",true);
+        CategoriesList categoriesList = new CategoriesList(categoryDatas, "Success", true);
         onCategoriesReceived.onSuccess(categoriesList);
 
         onCategoriesReceived.onFailure();

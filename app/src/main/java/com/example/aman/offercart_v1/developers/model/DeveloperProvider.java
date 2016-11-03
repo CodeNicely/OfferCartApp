@@ -10,5 +10,6 @@ import com.example.aman.offercart_v1.developers.DevelopersCallback;
 public interface DeveloperProvider {
 
     void requestDevelopersData(DevelopersCallback developersCallback);
+
     void onDestroy();
 }

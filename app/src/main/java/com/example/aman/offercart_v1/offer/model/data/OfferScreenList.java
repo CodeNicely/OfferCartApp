@@ -6,8 +6,7 @@ import java.util.List;
  * Created by aman on 19/10/16.
  */
 
-public class OfferScreenList
-{
+public class OfferScreenList {
     private List<OfferScreenDetails> offer_list;
     private boolean success;
     private String message;
@@ -16,7 +15,6 @@ public class OfferScreenList
     private String shop_image;
     private String shop_address;
     private String shop_description;
-
 
 
     public OfferScreenList(List<OfferScreenDetails> offer_list, boolean success, String message, String shop_id, String shop_name, String shop_image, String shop_address, String shop_description) {

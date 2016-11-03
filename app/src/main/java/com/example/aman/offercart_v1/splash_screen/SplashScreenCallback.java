@@ -8,6 +8,7 @@ import com.example.aman.offercart_v1.splash_screen.models.data.SplashScreenData;
 public interface SplashScreenCallback {
 
     void onSuccess(SplashScreenData splashScreenData);
+
     void onFailure(String error);
 
 }

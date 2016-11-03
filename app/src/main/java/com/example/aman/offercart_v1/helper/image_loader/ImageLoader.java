@@ -9,6 +9,6 @@ import android.widget.ProgressBar;
 
 public interface ImageLoader {
 
-    void loadImage(String url, ImageView imageView,ProgressBar progressBar);
+    void loadImage(String url, ImageView imageView, ProgressBar progressBar);
 //    void load_circular_image(String url, ImageView imageView);
 }

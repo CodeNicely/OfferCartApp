@@ -9,6 +9,8 @@ import java.util.List;
  */
 public interface WelcomeScreenView {
     void showMessage(String error);
+
     void showProgressBar(boolean show);
+
     void setData(List<WelcomeImageDetails> welcomeImageDetails);
 }

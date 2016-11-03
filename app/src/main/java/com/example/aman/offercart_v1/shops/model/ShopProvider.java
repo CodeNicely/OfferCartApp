@@ -8,6 +8,6 @@ import com.example.aman.offercart_v1.shops.view.OnShopsReceived;
 
 public interface ShopProvider {
 
-    void getShops(String access_token,String category_id, OnShopsReceived onShopsReceived);
+    void getShops(String access_token, String category_id, OnShopsReceived onShopsReceived);
 
 }

@@ -18,9 +18,9 @@ public class ShopPresenterImpl implements ShopPresenter {
     }
 
     @Override
-    public void getShops(String access_token,String category_id) {
+    public void getShops(String access_token, String category_id) {
         shopView.showLoading(true);
-        shopProvider.getShops(access_token,category_id, new OnShopsReceived() {
+        shopProvider.getShops(access_token, category_id, new OnShopsReceived() {
             @Override
             public void onFailure() {
                 shopView.showLoading(false);
@@ -30,9 +30,9 @@ public class ShopPresenterImpl implements ShopPresenter {
             @Override
             public void onSuccess(ShopList shopList) {
                 shopView.showLoading(false);
-                if(shopList.isSuccess()) {
+                if (shopList.isSuccess()) {
                     shopView.OnShopsDataReceived(shopList.getShopDatas());
-                }else{
+                } else {
                     shopView.showMessage(shopList.getMessage());
                 }
             }

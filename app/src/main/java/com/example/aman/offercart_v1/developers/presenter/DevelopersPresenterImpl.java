@@ -12,7 +12,7 @@ import com.example.aman.offercart_v1.helper.MyApplication;
  * Created by meghal on 17/10/16.
  */
 
-public class DevelopersPresenterImpl implements DevelopersPresenter{
+public class DevelopersPresenterImpl implements DevelopersPresenter {
 
     private DeveloperView developerView;
     private DeveloperProvider developerProvider;
@@ -31,9 +31,9 @@ public class DevelopersPresenterImpl implements DevelopersPresenter{
             public void onSuccess(DeveloperData developerData) {
 
                 developerView.showLoading(false);
-                if(developerData.isSuccess()){
+                if (developerData.isSuccess()) {
                     developerView.setData(developerData.getCompanyData());
-                }else {
+                } else {
                     developerView.showMessage(developerData.getMessage());
                 }
 
@@ -46,7 +46,6 @@ public class DevelopersPresenterImpl implements DevelopersPresenter{
                 developerView.showMessage(MyApplication.getContext().getResources().getString(R.string.failure_message));
             }
         });
-
 
 
     }

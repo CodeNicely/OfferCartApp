@@ -38,32 +38,24 @@ public class AboutUsFragment extends Fragment implements AboutUsView {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-
+    @BindView(R.id.progressBar)
+    ProgressBar progressBar;
+    @BindView(R.id.description)
+    TextView description;
+    @BindView(R.id.title)
+    TextView title;
+    @BindView(R.id.imageView)
+    ImageView imageView;
+    @BindView(R.id.imageProgressBar)
+    ProgressBar imageProgressBar;
+    @BindView(R.id.toolbar)
+    Toolbar toolbar;
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
     private ImageLoader imageLoader;
     private AboutUsPresenter aboutUsPresenter;
     private View snackView;
-
-    @BindView(R.id.progressBar)
-    ProgressBar progressBar;
-
-    @BindView(R.id.description)
-    TextView description;
-
-    @BindView(R.id.title)
-    TextView title;
-
-    @BindView(R.id.imageView)
-    ImageView imageView;
-
-    @BindView(R.id.imageProgressBar)
-    ProgressBar imageProgressBar;
-
-    @BindView(R.id.toolbar)
-    Toolbar toolbar;
-
     private OnFragmentInteractionListener mListener;
 
     public AboutUsFragment() {
@@ -103,10 +95,10 @@ public class AboutUsFragment extends Fragment implements AboutUsView {
         // Inflate the layout for this fragment
 
 
-        View view= inflater.inflate(R.layout.fragment_about_us, container, false);
-        ButterKnife.bind(this,view);
+        View view = inflater.inflate(R.layout.fragment_about_us, container, false);
+        ButterKnife.bind(this, view);
 
-        toolbar.setNavigationIcon(ContextCompat.getDrawable(getContext(),R.drawable.ic_arrow_back_white_24dp));
+        toolbar.setNavigationIcon(ContextCompat.getDrawable(getContext(), R.drawable.ic_arrow_back_white_24dp));
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -114,9 +106,9 @@ public class AboutUsFragment extends Fragment implements AboutUsView {
             }
         });
 
-        snackView=getActivity().findViewById(R.id.home_layout);
-        imageLoader=new GlideImageLoader(getContext());
-        aboutUsPresenter=new AboutUsPresenterImpl(this,new RetrofitAboutUsProvider());
+        snackView = getActivity().findViewById(R.id.home_layout);
+        imageLoader = new GlideImageLoader(getContext());
+        aboutUsPresenter = new AboutUsPresenterImpl(this, new RetrofitAboutUsProvider());
 
         description.setVisibility(View.GONE);
         imageView.setVisibility(View.GONE);
@@ -157,7 +149,7 @@ public class AboutUsFragment extends Fragment implements AboutUsView {
     @Override
     public void showLoader(boolean show) {
 
-        if(show)
+        if (show)
             progressBar.setVisibility(View.VISIBLE);
         else
             progressBar.setVisibility(View.GONE);
@@ -168,13 +160,20 @@ public class AboutUsFragment extends Fragment implements AboutUsView {
     public void setData(AboutUsData aboutUsData) {
 
 
-        imageLoader.loadImage(aboutUsData.getImage_url(),imageView,imageProgressBar);
+        imageLoader.loadImage(aboutUsData.getImage_url(), imageView, imageProgressBar);
         description.setText(aboutUsData.getDescription());
         title.setText(aboutUsData.getTitle());
         imageView.setVisibility(View.VISIBLE);
         description.setVisibility(View.VISIBLE);
 
     }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        aboutUsPresenter.onDestroy();
+    }
+
     /**
      * This interface must be implemented by activities that contain this
      * fragment to allow an interaction in this fragment to be communicated
@@ -188,12 +187,6 @@ public class AboutUsFragment extends Fragment implements AboutUsView {
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
-    }
-
-    @Override
-    public void onStop() {
-        super.onStop();
-        aboutUsPresenter.onDestroy();
     }
 
 

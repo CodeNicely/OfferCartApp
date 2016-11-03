@@ -10,8 +10,8 @@ import com.example.aman.offercart_v1.about_us.model.data.AboutUsData;
 public interface AboutUsCallBack {
 
 
-
     void onSuccess(AboutUsData aboutUsData);
+
     void onFailure();
 
 }

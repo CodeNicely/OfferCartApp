@@ -28,9 +28,10 @@ public class OfferScreenAdapter extends RecyclerView.Adapter<OfferScreenAdapter.
     private LayoutInflater layoutInflater;
     private OfferScreenView offerScreenView;
     private ShopOfferFragment shopOfferFragment;
-    public OfferScreenAdapter(Context context,ShopOfferFragment shopOfferFragment) {
+
+    public OfferScreenAdapter(Context context, ShopOfferFragment shopOfferFragment) {
         this.context = context;
-        this.shopOfferFragment=shopOfferFragment;
+        this.shopOfferFragment = shopOfferFragment;
         layoutInflater = layoutInflater.from(context);
 
     }
@@ -74,9 +75,10 @@ public class OfferScreenAdapter extends RecyclerView.Adapter<OfferScreenAdapter.
     public int getItemCount() {
         return offerScreenDetailsList.size();
     }
+
     protected class MyViewHolder extends RecyclerView.ViewHolder {
 
-        private TextView title, cost,validity,description;
+        private TextView title, cost, validity, description;
         private ImageView image;
         private Button buy;
 
@@ -87,7 +89,7 @@ public class OfferScreenAdapter extends RecyclerView.Adapter<OfferScreenAdapter.
             validity = (TextView) itemView.findViewById(R.id.offer_validity);
             cost = (TextView) itemView.findViewById(R.id.offer_cost);
             image = (ImageView) itemView.findViewById(R.id.image);
-            buy=(Button)itemView.findViewById(R.id.buy);
+            buy = (Button) itemView.findViewById(R.id.buy);
         }
 
     }

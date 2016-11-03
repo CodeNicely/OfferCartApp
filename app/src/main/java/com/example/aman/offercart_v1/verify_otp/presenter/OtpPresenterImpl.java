@@ -8,7 +8,8 @@ import com.example.aman.offercart_v1.verify_otp.view.OtpView;
 /**
  * Created by aman on 16/10/16.
  */
-public class OtpPresenterImpl implements OtpPresenter{ private OtpProvider otpProvider;
+public class OtpPresenterImpl implements OtpPresenter {
+    private OtpProvider otpProvider;
     private OtpView otpView;
 
     public OtpPresenterImpl(OtpView otpView, OtpProvider otpProvider) {
@@ -24,13 +25,10 @@ public class OtpPresenterImpl implements OtpPresenter{ private OtpProvider otpPr
         otpProvider.requestOtp(otp, mobile, new OtpCallback() {
             @Override
             public void onSuccess(OtpData otpData) {
-                if(otpData.isSuccess())
-                {
+                if (otpData.isSuccess()) {
                     otpView.showLoading(false);
                     otpView.onOtpVerified(otpData.getAccess_token());
-                }
-                else
-                {
+                } else {
                     otpView.showLoading(false);
                     otpView.showMessage(otpData.getMessage());
 

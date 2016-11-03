@@ -7,5 +7,6 @@ import com.example.aman.offercart_v1.wallet.model.data.WalletData;
  */
 public interface OnWalletInfoReceived {
     void onFailure();
+
     void onSuccess(WalletData walletData);
 }

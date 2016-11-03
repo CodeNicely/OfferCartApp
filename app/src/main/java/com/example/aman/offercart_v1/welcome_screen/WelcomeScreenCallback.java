@@ -8,5 +8,6 @@ import com.example.aman.offercart_v1.welcome_screen.models.data.WelcomeScreenDat
 public interface WelcomeScreenCallback {
 
     void onSuccess(WelcomeScreenData welcomeScreenData);
+
     void onFailure(String error);
 }

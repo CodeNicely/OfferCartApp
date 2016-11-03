@@ -7,6 +7,7 @@ package com.example.aman.offercart_v1.developers.presenter;
 public interface DevelopersPresenter {
 
     void requestDevelopersData();
+
     void onDestroy();
 
 }

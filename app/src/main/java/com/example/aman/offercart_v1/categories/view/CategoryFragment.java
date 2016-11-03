@@ -3,14 +3,10 @@ package com.example.aman.offercart_v1.categories.view;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,13 +14,11 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.example.aman.offercart_v1.R;
-import com.example.aman.offercart_v1.categories.model.MockCategoryProvider;
 import com.example.aman.offercart_v1.categories.model.RetrofitCategoriesProvider;
 import com.example.aman.offercart_v1.categories.model.data.CategoryData;
 import com.example.aman.offercart_v1.categories.presenter.CategoriesPresenter;
 import com.example.aman.offercart_v1.categories.presenter.CategoriesPresenterImpl;
 import com.example.aman.offercart_v1.helper.SharedPrefs;
-import com.example.aman.offercart_v1.shops.view.ShopFragment;
 
 import java.util.List;
 
@@ -44,9 +38,13 @@ public class CategoryFragment extends Fragment implements CategoriesView {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-
-
-
+    /* @BindView(R.id.tabLayout)
+     TabLayout tabLayout;
+ */
+    @BindView(R.id.category_recycler)
+    RecyclerView recyclerView;
+    @BindView(R.id.categories_progressbar)
+    ProgressBar progressBar;
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
@@ -55,17 +53,6 @@ public class CategoryFragment extends Fragment implements CategoriesView {
     private GridLayoutManager gridLayoutManager;
     private String token;
     private SharedPrefs sharedPrefs;
-
-   /* @BindView(R.id.tabLayout)
-    TabLayout tabLayout;
-*/
-    @BindView(R.id.category_recycler)
-    RecyclerView recyclerView;
-
-    @BindView(R.id.categories_progressbar)
-    ProgressBar progressBar;
-
-
     private OnFragmentInteractionListener mListener;
 
     public CategoryFragment() {
@@ -104,11 +91,11 @@ public class CategoryFragment extends Fragment implements CategoriesView {
                              Bundle savedInstanceState) {
 
 
-        ((AppCompatActivity)getActivity()).getSupportActionBar().show();
+        ((AppCompatActivity) getActivity()).getSupportActionBar().show();
 
 
-        View view= inflater.inflate(R.layout.fragment_category, container, false);
-        ButterKnife.bind(this,view);
+        View view = inflater.inflate(R.layout.fragment_category, container, false);
+        ButterKnife.bind(this, view);
         initialize();
         categoriesPresenter.getCategories(token);
 
@@ -117,15 +104,14 @@ public class CategoryFragment extends Fragment implements CategoriesView {
 
     }
 
-    void initialize()
-    {
-        categoriesPresenter=new CategoriesPresenterImpl(this,new RetrofitCategoriesProvider());
- //        categoriesPresenter=new CategoriesPresenterImpl(this,new MockCategoryProvider());
-        categoryAdapter=new CategoryAdapter(getContext(),this);
- //       recyclerView.setHasFixedSize(true);
-        sharedPrefs=new SharedPrefs(getContext());
-        token=sharedPrefs.getAccessToken();
-        gridLayoutManager=new GridLayoutManager(getContext(),2);
+    void initialize() {
+        categoriesPresenter = new CategoriesPresenterImpl(this, new RetrofitCategoriesProvider());
+        //        categoriesPresenter=new CategoriesPresenterImpl(this,new MockCategoryProvider());
+        categoryAdapter = new CategoryAdapter(getContext(), this);
+        //       recyclerView.setHasFixedSize(true);
+        sharedPrefs = new SharedPrefs(getContext());
+        token = sharedPrefs.getAccessToken();
+        gridLayoutManager = new GridLayoutManager(getContext(), 2);
         recyclerView.setLayoutManager(gridLayoutManager);
         recyclerView.setAdapter(categoryAdapter);
     }
@@ -156,7 +142,7 @@ public class CategoryFragment extends Fragment implements CategoriesView {
 
     @Override
     public void showProgressbar(boolean show) {
-        if (show){
+        if (show) {
             progressBar.setVisibility(View.VISIBLE);
             recyclerView.setVisibility(View.VISIBLE);
         } else {

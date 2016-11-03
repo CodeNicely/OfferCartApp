@@ -7,6 +7,7 @@ import com.example.aman.offercart_v1.login.models.data.LoginData;
  */
 public interface LoginCallback {
     void onSuccess(LoginData loginData);
+
     void onFailure(String error);
 
 }

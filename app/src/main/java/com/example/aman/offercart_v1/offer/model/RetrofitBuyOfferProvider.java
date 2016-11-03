@@ -21,11 +21,11 @@ import retrofit2.converter.gson.GsonConverterFactory;
  * Created by meghal on 2/11/16.
  */
 
-public class RetrofitBuyOfferProvider implements BuyOfferProvider{
+public class RetrofitBuyOfferProvider implements BuyOfferProvider {
 
     private BuyOfferApi buyOfferApi;
 
-    RetrofitBuyOfferProvider(){
+    RetrofitBuyOfferProvider() {
 
         Gson gson = new GsonBuilder()
                 .setLenient()
@@ -34,7 +34,7 @@ public class RetrofitBuyOfferProvider implements BuyOfferProvider{
         HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
         interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
         OkHttpClient client = new OkHttpClient.Builder().addInterceptor(interceptor).
-                connectTimeout(5, TimeUnit.MINUTES).readTimeout(5,TimeUnit.MINUTES).build();
+                connectTimeout(5, TimeUnit.MINUTES).readTimeout(5, TimeUnit.MINUTES).build();
 
 
         Retrofit retrofit = new Retrofit.Builder()
@@ -43,13 +43,13 @@ public class RetrofitBuyOfferProvider implements BuyOfferProvider{
                 .addConverterFactory(GsonConverterFactory.create(gson))
                 .build();
 
-        buyOfferApi=retrofit.create(BuyOfferApi.class);
+        buyOfferApi = retrofit.create(BuyOfferApi.class);
     }
 
     @Override
     public void buyOffer(int offer_id, String access_token, final OnBuyOffer onBuyOffer) {
 
-        Call<BuyOfferData> buyOfferDataCall=buyOfferApi.buyOffer(offer_id,access_token);
+        Call<BuyOfferData> buyOfferDataCall = buyOfferApi.buyOffer(offer_id, access_token);
         buyOfferDataCall.enqueue(new Callback<BuyOfferData>() {
             @Override
             public void onResponse(Call<BuyOfferData> call, Response<BuyOfferData> response) {

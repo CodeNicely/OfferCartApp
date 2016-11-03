@@ -7,7 +7,7 @@ public class Urls {
 
 
     public static final String BASE_URL = "http://192.168.0.111:8000/";
-//
+    //
 //    public static final String BASE_URL = "http://xendroiders.pythonanywhere.com/";
     //splash_screen
     public static final String REQUEST_SPLASH_SCREEN = "version/";
@@ -31,8 +31,8 @@ public class Urls {
     //shop
     public static final String RequestShop = "shop/";
 
-    public static final String SUB_URL_BUY_OFFER ="offer/" ;
+    public static final String SUB_URL_BUY_OFFER = "offer/";
     public static final String SUB_URL_ABOUT_US = "about_us/";
-    public static final String SUB_URL_CONTACT_US ="contact_us/" ;
-    public static final String SUB_URL_DEVELOPERS ="developers/" ;
+    public static final String SUB_URL_CONTACT_US = "contact_us/";
+    public static final String SUB_URL_DEVELOPERS = "developers/";
 }

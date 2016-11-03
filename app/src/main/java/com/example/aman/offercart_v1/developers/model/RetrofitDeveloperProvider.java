@@ -18,31 +18,32 @@ import retrofit2.converter.gson.GsonConverterFactory;
  * Created by meghal on 17/10/16.
  */
 
-public class RetrofitDeveloperProvider implements DeveloperProvider{
+public class RetrofitDeveloperProvider implements DeveloperProvider {
 
 
     private DevelopersApi developersApi;
     private Call<DeveloperData> developersApiCall;
-    public RetrofitDeveloperProvider(){
+
+    public RetrofitDeveloperProvider() {
 
         HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
         interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
         OkHttpClient client = new OkHttpClient.Builder().addInterceptor(interceptor)
 //                .addInterceptor(REWRITE_CACHE_CONTROL_INTERCEPTOR).cache(RetrofitCache.provideCache()).build();
-        .build();
+                .build();
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(Urls.BASE_URL)
                 .client(client)
                 .addConverterFactory(GsonConverterFactory.create())
                 .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
                 .build();
-        developersApi=retrofit.create(DevelopersApi.class);
+        developersApi = retrofit.create(DevelopersApi.class);
     }
 
     @Override
     public void requestDevelopersData(final DevelopersCallback developersCallback) {
 
-        developersApiCall=developersApi.requestDeveloperData();
+        developersApiCall = developersApi.requestDeveloperData();
         developersApiCall.enqueue(new Callback<DeveloperData>() {
             @Override
             public void onResponse(Call<DeveloperData> call, Response<DeveloperData> response) {
@@ -61,6 +62,6 @@ public class RetrofitDeveloperProvider implements DeveloperProvider{
     @Override
     public void onDestroy() {
 
-    developersApiCall.cancel();
+        developersApiCall.cancel();
     }
 }

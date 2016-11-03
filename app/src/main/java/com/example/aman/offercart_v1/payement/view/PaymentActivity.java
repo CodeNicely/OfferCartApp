@@ -9,11 +9,14 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+
 import com.example.aman.offercart_v1.R;
 import com.payUMoney.sdk.PayUmoneySdkInitilizer;
 import com.payUMoney.sdk.SdkConstants;
+
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
@@ -21,9 +24,29 @@ public class PaymentActivity extends AppCompatActivity {
 
     @BindView(R.id.test)
     Button test;
-    
-    private String amt="10";
-    
+
+    private String amt = "10";
+
+    public static String hashCal(String str) {
+        byte[] hashseq = str.getBytes();
+        StringBuilder hexString = new StringBuilder();
+        try {
+            MessageDigest algorithm = MessageDigest.getInstance("SHA-512");
+            algorithm.reset();
+            algorithm.update(hashseq);
+            byte messageDigest[] = algorithm.digest();
+            for (byte aMessageDigest : messageDigest) {
+                String hex = Integer.toHexString(0xFF & aMessageDigest);
+                if (hex.length() == 1) {
+                    hexString.append("0");
+                }
+                hexString.append(hex);
+            }
+        } catch (NoSuchAlgorithmException ignored) {
+        }
+        return hexString.toString();
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,10 +57,11 @@ public class PaymentActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 makePayment(v);
-                
+
             }
         });
     }
+
     private boolean isDouble(String str) {
         try {
             Double.parseDouble(str);
@@ -102,18 +126,17 @@ public class PaymentActivity extends AppCompatActivity {
             */
 
         // Recommended
-      //  calculateServerSideHashAndInitiatePayment(paymentParam);
+        //  calculateServerSideHashAndInitiatePayment(paymentParam);
 
            /*
             testing purpose
 
         */
-            String serverCalculatedHash="9f1ce50ba8995e970a23c33e665a990e648df8de3baf64a33e19815acd402275617a16041e421cfa10b7532369f5f12725c7fcf69e8d10da64c59087008590fc";
-            paymentParam.setMerchantHash(serverCalculatedHash);
-            PayUmoneySdkInitilizer.startPaymentActivityForResult(this, paymentParam);
+        String serverCalculatedHash = "9f1ce50ba8995e970a23c33e665a990e648df8de3baf64a33e19815acd402275617a16041e421cfa10b7532369f5f12725c7fcf69e8d10da64c59087008590fc";
+        paymentParam.setMerchantHash(serverCalculatedHash);
+        PayUmoneySdkInitilizer.startPaymentActivityForResult(this, paymentParam);
 
     }
-
 
     public void makePayment() {
 
@@ -158,30 +181,10 @@ public class PaymentActivity extends AppCompatActivity {
             testing purpose
 
         */
-        String serverCalculatedHash="9f1ce50ba8995e970a23c33e665a990e648df8de3baf64a33e19815acd402275617a16041e421cfa10b7532369f5f12725c7fcf69e8d10da64c59087008590fc";
+        String serverCalculatedHash = "9f1ce50ba8995e970a23c33e665a990e648df8de3baf64a33e19815acd402275617a16041e421cfa10b7532369f5f12725c7fcf69e8d10da64c59087008590fc";
         paymentParam.setMerchantHash(serverCalculatedHash);
         PayUmoneySdkInitilizer.startPaymentActivityForResult(this, paymentParam);
 
-    }
-
-    public static String hashCal(String str) {
-        byte[] hashseq = str.getBytes();
-        StringBuilder hexString = new StringBuilder();
-        try {
-            MessageDigest algorithm = MessageDigest.getInstance("SHA-512");
-            algorithm.reset();
-            algorithm.update(hashseq);
-            byte messageDigest[] = algorithm.digest();
-            for (byte aMessageDigest : messageDigest) {
-                String hex = Integer.toHexString(0xFF & aMessageDigest);
-                if (hex.length() == 1) {
-                    hexString.append("0");
-                }
-                hexString.append(hex);
-            }
-        } catch (NoSuchAlgorithmException ignored) {
-        }
-        return hexString.toString();
     }
 
     private void calculateServerSideHashAndInitiatePayment(final PayUmoneySdkInitilizer.PaymentParam paymentParam) {

@@ -2,7 +2,6 @@ package com.example.aman.offercart_v1.helper;
 
 import android.app.Application;
 import android.content.Context;
-import android.content.SearchRecentSuggestionsProvider;
 
 import com.google.firebase.iid.FirebaseInstanceId;
 
@@ -14,19 +13,6 @@ public class MyApplication extends Application {
 
     private static Context context;
     private static String fcm;
-    @Override
-    public void onCreate() {
-        super.onCreate();
-        context=this;
-   //     FontsOverride.setDefaultFont(this, "DEFAULT", "fonts/comfortaa.ttf");
-    //    FontsOverride.setDefaultFont(this, "MONOSPACE", "fonts/homemade.ttf");
-        FontsOverride.setDefaultFont(this, "SERIF", "fonts/dosis.ttf");
-    //    FontsOverride.setDefaultFont(this, "SANS_SERIF", "fonts/patrick_hand.ttf");
-
-        fcm = FirebaseInstanceId.getInstance().getToken();
-
-
-    }
 
     public static String getFcm() {
         return fcm;
@@ -34,6 +20,20 @@ public class MyApplication extends Application {
 
     public static Context getContext() {
         return context;
+    }
+
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        context = this;
+        //     FontsOverride.setDefaultFont(this, "DEFAULT", "fonts/comfortaa.ttf");
+        //    FontsOverride.setDefaultFont(this, "MONOSPACE", "fonts/homemade.ttf");
+        FontsOverride.setDefaultFont(this, "SERIF", "fonts/itim.ttf");
+        //    FontsOverride.setDefaultFont(this, "SANS_SERIF", "fonts/patrick_hand.ttf");
+
+        fcm = FirebaseInstanceId.getInstance().getToken();
+
+
     }
 
 
