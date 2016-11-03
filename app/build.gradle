@@ -6,7 +6,7 @@ android {
     buildToolsVersion "24.0.2"
 
     defaultConfig {
-        applicationId "com.example.aman.offercart_v1"
+        applicationId "com.codenicely.discountstore.project"
         minSdkVersion 16
         targetSdkVersion 24
         versionCode 1

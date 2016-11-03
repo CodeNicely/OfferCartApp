@@ -1,12 +1,12 @@
-package com.example.aman.offercart_v1.splash_screen.models;
+package com.codenicely.discountstore.project.splash_screen.models;
 
 
 import android.util.Log;
 
-import com.example.aman.offercart_v1.splash_screen.SplashScreenCallback;
-import com.example.aman.offercart_v1.splash_screen.api.SplashScreenRequestApi;
-import com.example.aman.offercart_v1.splash_screen.models.data.SplashScreenData;
-import com.example.aman.offercart_v1.helper.Urls;
+import com.codenicely.discountstore.project.splash_screen.SplashScreenCallback;
+import com.codenicely.discountstore.project.splash_screen.api.SplashScreenRequestApi;
+import com.codenicely.discountstore.project.splash_screen.models.data.SplashScreenData;
+import com.codenicely.discountstore.project.helper.Urls;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;

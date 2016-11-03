@@ -1,7 +1,7 @@
-package com.example.aman.offercart_v1.splash_screen.models;
+package com.codenicely.discountstore.project.splash_screen.models;
 
-import com.example.aman.offercart_v1.splash_screen.SplashScreenCallback;
-import com.example.aman.offercart_v1.splash_screen.models.data.SplashScreenData;
+import com.codenicely.discountstore.project.splash_screen.SplashScreenCallback;
+import com.codenicely.discountstore.project.splash_screen.models.data.SplashScreenData;
 
 /**
  * Created by aman on 13/10/16.

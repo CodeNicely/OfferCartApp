@@ -1,10 +1,10 @@
-package com.example.aman.offercart_v1.verify_otp.presenter;
+package com.codenicely.discountstore.project.verify_otp.presenter;
 
-import com.example.aman.offercart_v1.verify_otp.models.OtpProvider;
-import com.example.aman.offercart_v1.verify_otp.view.OtpView;
+import com.codenicely.discountstore.project.verify_otp.models.OtpProvider;
+import com.codenicely.discountstore.project.verify_otp.view.OtpView;
 
-import com.example.aman.offercart_v1.verify_otp.models.data.OtpData;
-import com.example.aman.offercart_v1.verify_otp.OtpCallback;
+import com.codenicely.discountstore.project.verify_otp.models.data.OtpData;
+import com.codenicely.discountstore.project.verify_otp.OtpCallback;
 /**
  * Created by aman on 16/10/16.
  */

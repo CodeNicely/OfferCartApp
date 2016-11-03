@@ -1,4 +1,4 @@
-package com.example.aman.offercart_v1.login.view.view;
+package com.codenicely.discountstore.project.login.view.view;
 
 /**
  * Created by aman on 15/10/16.

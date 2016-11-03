@@ -1,6 +1,6 @@
-package com.example.aman.offercart_v1.login.view;
+package com.codenicely.discountstore.project.login.view;
 
-import com.example.aman.offercart_v1.login.view.models.data.LoginData;
+import com.codenicely.discountstore.project.login.view.models.data.LoginData;
 
 
 /**

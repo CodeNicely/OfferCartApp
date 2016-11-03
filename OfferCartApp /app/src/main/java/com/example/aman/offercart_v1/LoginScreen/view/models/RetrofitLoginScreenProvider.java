@@ -1,8 +1,8 @@
-package com.example.aman.offercart_v1.login.view.models;
+package com.codenicely.discountstore.project.login.view.models;
 
 
 
-import com.example.aman.offercart_v1.helper.Urls;
+import com.codenicely.discountstore.project.helper.Urls;
 
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
@@ -13,9 +13,9 @@ import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-import com.example.aman.offercart_v1.login.view.Api.LoginApi;
-import  com.example.aman.offercart_v1.login.view.LoginCallback;
-import com.example.aman.offercart_v1.login.view.models.data.LoginData;
+import com.codenicely.discountstore.project.login.view.Api.LoginApi;
+import  com.codenicely.discountstore.project.login.view.LoginCallback;
+import com.codenicely.discountstore.project.login.view.models.data.LoginData;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 

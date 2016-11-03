@@ -1,4 +1,4 @@
-package com.example.aman.offercart_v1.splash_screen.view;
+package com.codenicely.discountstore.project.splash_screen.view;
 
 /**
  * Created by aman on 11/10/16.
@@ -17,15 +17,15 @@ import android.widget.Toast;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-import com.example.aman.offercart_v1.BuildConfig;
-import com.example.aman.offercart_v1.R;
-import com.example.aman.offercart_v1.helper.SharedPrefs;
-import com.example.aman.offercart_v1.splash_screen.models.RetrofitSplashScreenProvider;
-import com.example.aman.offercart_v1.splash_screen.models.data.SplashScreenData;
-import com.example.aman.offercart_v1.splash_screen.presenter.SplashScreenPresenter;
-import com.example.aman.offercart_v1.splash_screen.presenter.SplashScreenPresenterImpl;
-import com.example.aman.offercart_v1.welcome_screen.view.WelcomeScreenActivity;
-import com.example.aman.offercart_v1.city.view.CityScreenActivity;
+import com.codenicely.discountstore.project.BuildConfig;
+import com.codenicely.discountstore.project.R;
+import com.codenicely.discountstore.project.helper.SharedPrefs;
+import com.codenicely.discountstore.project.splash_screen.models.RetrofitSplashScreenProvider;
+import com.codenicely.discountstore.project.splash_screen.models.data.SplashScreenData;
+import com.codenicely.discountstore.project.splash_screen.presenter.SplashScreenPresenter;
+import com.codenicely.discountstore.project.splash_screen.presenter.SplashScreenPresenterImpl;
+import com.codenicely.discountstore.project.welcome_screen.view.WelcomeScreenActivity;
+import com.codenicely.discountstore.project.city.view.CityScreenActivity;
 
 
 public class SplashScreenActivity extends Activity implements SplashScreenView

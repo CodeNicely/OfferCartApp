@@ -1,6 +1,6 @@
-package com.example.aman.offercart_v1.verify_otp.models;
+package com.codenicely.discountstore.project.verify_otp.models;
 
-import com.example.aman.offercart_v1.verify_otp.OtpCallback;
+import com.codenicely.discountstore.project.verify_otp.OtpCallback;
 
 /**
  * Created by aman on 16/10/16.

@@ -1,11 +1,11 @@
-package com.example.aman.offercart_v1.login.view.presenter;
+package com.codenicely.discountstore.project.login.view.presenter;
 
 import android.util.Log;
 
-import com.example.aman.offercart_v1.login.view.models.LoginProvider;
-import com.example.aman.offercart_v1.login.view.view.LoginScreenView;
-import com.example.aman.offercart_v1.login.view.models.data.LoginData;
-import com.example.aman.offercart_v1.login.view.LoginCallback;
+import com.codenicely.discountstore.project.login.view.models.LoginProvider;
+import com.codenicely.discountstore.project.login.view.view.LoginScreenView;
+import com.codenicely.discountstore.project.login.view.models.data.LoginData;
+import com.codenicely.discountstore.project.login.view.LoginCallback;
 /**
  * Created by aman on 15/10/16.
  */

@@ -1,6 +1,6 @@
-package com.example.aman.offercart_v1.verify_otp.models.data;
+package com.codenicely.discountstore.project.verify_otp.models.data;
 
-import com.example.aman.offercart_v1.helper.Urls;
+import com.codenicely.discountstore.project.helper.Urls;
 
 
 

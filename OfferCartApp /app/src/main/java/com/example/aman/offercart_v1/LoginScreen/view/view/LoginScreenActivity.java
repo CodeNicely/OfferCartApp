@@ -1,4 +1,4 @@
-package com.example.aman.offercart_v1.login.view.view;
+package com.codenicely.discountstore.project.login.view.view;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -9,15 +9,15 @@ import android.widget.EditText;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-import com.example.aman.offercart_v1.login.view.presenter.LoginScreenPresenter;
-import com.example.aman.offercart_v1.verify_otp.view.OtpViewImpl;
-import com.example.aman.offercart_v1.R;
-import com.example.aman.offercart_v1.login.view.models.RetrofitLoginScreenProvider;
+import com.codenicely.discountstore.project.login.view.presenter.LoginScreenPresenter;
+import com.codenicely.discountstore.project.verify_otp.view.OtpViewImpl;
+import com.codenicely.discountstore.project.R;
+import com.codenicely.discountstore.project.login.view.models.RetrofitLoginScreenProvider;
 import android.widget.ProgressBar;
 import android.view.View;
 import android.widget.Toast;
-import com.example.aman.offercart_v1.login.view.presenter.LoginScreenPresenterImpl;
-import com.example.aman.offercart_v1.login.view.models.data.LoginData;
+import com.codenicely.discountstore.project.login.view.presenter.LoginScreenPresenterImpl;
+import com.codenicely.discountstore.project.login.view.models.data.LoginData;
 
 
 /**

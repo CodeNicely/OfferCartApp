@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:background="@color/colorAccent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="com.example.aman.offercart_v1.wallet.view.WalletFragment">
+    tools:context="com.codenicely.discountstore.project.wallet.view.WalletFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <RelativeLayout

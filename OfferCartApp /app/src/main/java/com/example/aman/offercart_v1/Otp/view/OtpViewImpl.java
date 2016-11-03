@@ -1,4 +1,4 @@
-package com.example.aman.offercart_v1.verify_otp.view;
+package com.codenicely.discountstore.project.verify_otp.view;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -11,8 +11,8 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
-import com.example.aman.offercart_v1.R;
-import com.example.aman.offercart_v1.city.view.CityScreenActivity;
+import com.codenicely.discountstore.project.R;
+import com.codenicely.discountstore.project.city.view.CityScreenActivity;
 
 
 /**

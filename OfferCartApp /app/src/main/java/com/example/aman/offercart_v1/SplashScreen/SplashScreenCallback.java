@@ -1,6 +1,6 @@
-package com.example.aman.offercart_v1.splash_screen;
+package com.codenicely.discountstore.project.splash_screen;
 
-import com.example.aman.offercart_v1.splash_screen.models.data.SplashScreenData;
+import com.codenicely.discountstore.project.splash_screen.models.data.SplashScreenData;
 
 /**
  * Created by aman on 13/10/16.

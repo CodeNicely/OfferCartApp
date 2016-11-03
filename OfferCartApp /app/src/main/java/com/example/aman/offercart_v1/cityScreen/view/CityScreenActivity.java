@@ -1,11 +1,11 @@
-package com.example.aman.offercart_v1.city.view;
+package com.codenicely.discountstore.project.city.view;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
-import com.example.aman.offercart_v1.R;
+import com.codenicely.discountstore.project.R;
 
 import butterknife.BindView;
 

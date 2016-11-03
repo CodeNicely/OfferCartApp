@@ -1,4 +1,4 @@
-package com.example.aman.offercart_v1.helper;
+package com.codenicely.discountstore.project.helper;
 
 /**
  * Created by aman on 14/10/16.

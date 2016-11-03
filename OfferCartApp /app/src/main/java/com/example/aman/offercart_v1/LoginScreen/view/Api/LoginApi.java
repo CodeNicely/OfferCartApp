@@ -1,11 +1,11 @@
-package com.example.aman.offercart_v1.login.view.Api;
+package com.codenicely.discountstore.project.login.view.Api;
 
 import retrofit2.Call;
 import retrofit2.http.Field;
 import retrofit2.http.POST;
 import retrofit2.http.Query;
-import com.example.aman.offercart_v1.helper.Urls;
-import com.example.aman.offercart_v1.login.view.models.data.LoginData;
+import com.codenicely.discountstore.project.helper.Urls;
+import com.codenicely.discountstore.project.login.view.models.data.LoginData;
 
 
 

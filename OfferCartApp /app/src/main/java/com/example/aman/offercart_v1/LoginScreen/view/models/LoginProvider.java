@@ -1,7 +1,7 @@
-package com.example.aman.offercart_v1.login.view.models;
+package com.codenicely.discountstore.project.login.view.models;
 
 
-import com.example.aman.offercart_v1.login.view.LoginCallback;
+import com.codenicely.discountstore.project.login.view.LoginCallback;
 
 /**
  * Created by aman on 15/10/16.

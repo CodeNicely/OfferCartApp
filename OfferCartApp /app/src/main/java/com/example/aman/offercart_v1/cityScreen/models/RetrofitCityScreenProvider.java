@@ -1,4 +1,4 @@
-package com.example.aman.offercart_v1.city.models;
+package com.codenicely.discountstore.project.city.models;
 
 /**
  * Created by aman on 15/10/16.

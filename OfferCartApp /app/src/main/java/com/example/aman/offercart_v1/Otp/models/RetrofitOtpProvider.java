@@ -1,10 +1,10 @@
-package com.example.aman.offercart_v1.verify_otp.models;
+package com.codenicely.discountstore.project.verify_otp.models;
 
 
 
-import com.example.aman.offercart_v1.verify_otp.api.OtpApi;
-import com.example.aman.offercart_v1.verify_otp.models.data.OtpData;
-import com.example.aman.offercart_v1.helper.Urls;
+import com.codenicely.discountstore.project.verify_otp.api.OtpApi;
+import com.codenicely.discountstore.project.verify_otp.models.data.OtpData;
+import com.codenicely.discountstore.project.helper.Urls;
 
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
@@ -14,7 +14,7 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
-import com.example.aman.offercart_v1.verify_otp.OtpCallback;
+import com.codenicely.discountstore.project.verify_otp.OtpCallback;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 

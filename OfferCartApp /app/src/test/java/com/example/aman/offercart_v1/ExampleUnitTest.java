@@ -1,4 +1,4 @@
-package com.example.aman.offercart_v1;
+package com.codenicely.discountstore.project;
 
 import org.junit.Test;
 

@@ -1,6 +1,6 @@
-package com.example.aman.offercart_v1.welcome_screen;
+package com.codenicely.discountstore.project.welcome_screen;
 
-import com.example.aman.offercart_v1.welcome_screen.models.data.WelcomeScreenData;
+import com.codenicely.discountstore.project.welcome_screen.models.data.WelcomeScreenData;
 
 /**
  * Created by aman on 16/10/16.

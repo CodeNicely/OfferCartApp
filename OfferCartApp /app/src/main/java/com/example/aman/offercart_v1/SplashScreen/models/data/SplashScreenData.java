@@ -1,4 +1,4 @@
-package com.example.aman.offercart_v1.splash_screen.models.data;
+package com.codenicely.discountstore.project.splash_screen.models.data;
 
 /**
  * Created by aman on 13/10/16.
