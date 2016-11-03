@@ -17,9 +17,12 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
 import com.example.aman.offercart_v1.R;
+import com.example.aman.offercart_v1.about_us.view.AboutUsFragment;
 import com.example.aman.offercart_v1.categories.view.CategoryFragment;
 import com.example.aman.offercart_v1.city.view.CityFragment;
 import com.example.aman.offercart_v1.city.view.CityScreenActivity;
+import com.example.aman.offercart_v1.contact_us.view.ContactUsFragment;
+import com.example.aman.offercart_v1.developers.view.DeveloperFragment;
 import com.example.aman.offercart_v1.helper.SharedPrefs;
 import com.example.aman.offercart_v1.offer.view.ShopOfferFragment;
 import com.example.aman.offercart_v1.shops.view.ShopFragment;
@@ -121,6 +124,22 @@ public class HomePage extends AppCompatActivity
             getSupportActionBar().hide();
     */        Intent wallet=new Intent(HomePage.this, WalletActivity.class);
             startActivity(wallet);
+        }else if(id==R.id.nav_my_orders){
+
+        }else if(id == R.id.nav_contact_us){
+            addFragment(new ContactUsFragment(), "Contact Us");
+
+            getSupportActionBar().hide();
+        }else if(id==R.id.nav_about_us){
+            addFragment(new AboutUsFragment(), "About Us");
+
+            getSupportActionBar().hide();
+
+        }else if(id==R.id.nav_developer){
+            addFragment(new DeveloperFragment(), "Developers");
+
+            getSupportActionBar().hide();
+
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

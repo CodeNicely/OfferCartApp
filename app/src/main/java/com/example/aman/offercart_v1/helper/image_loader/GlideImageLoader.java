@@ -30,8 +30,8 @@ public class GlideImageLoader implements ImageLoader {
     }
 
     @Override
-    public void loadImage(String url, final ImageView imageView) {
-        Log.d("Response",url);
+    public void loadImage(String url, final ImageView imageView, final ProgressBar progressBar) {
+//        Log.d("Response",url);
 //        url = url.replace("\"", "");
 
 
@@ -42,12 +42,18 @@ public class GlideImageLoader implements ImageLoader {
         requestManager.load(url).crossFade().thumbnail(1f).listener(new RequestListener<String, GlideDrawable>() {
             @Override
             public boolean onException(Exception e, String model, Target<GlideDrawable> target, boolean isFirstResource) {
+                if (progressBar!=null){
+                    progressBar.setVisibility(View.GONE);
+                }
+
                 return false;
             }
 
             @Override
             public boolean onResourceReady(GlideDrawable resource, String model, Target<GlideDrawable> target, boolean isFromMemoryCache, boolean isFirstResource) {
-
+                if (progressBar!=null){
+                    progressBar.setVisibility(View.GONE);
+                }
                 return false;
             }
         }).diskCacheStrategy(DiskCacheStrategy.SOURCE)
