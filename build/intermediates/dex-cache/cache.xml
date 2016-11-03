@@ -7,7 +7,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.2"
-        sha1="c21a5ba417f7ac2dc21f1d80c5d8861cbfafb34d">
+        sha1="a86569eaba463abf0e28d5f3402af8e65fd37efc">
         <dex dex="/home/meghal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_e4e70ecb90ee133b8cc26b7c329539b06e442a50/classes.dex" />
     </item>
     <item
@@ -133,7 +133,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.2"
-        sha1="8710b2114ce252c7c1b955cec7472b1d79fb7ece">
+        sha1="72fbd5554b8952ceab45f45195ed1900103461b9">
         <dex dex="/home/meghal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_1d6ee9db7719ec52505ab63a8fa9a885a1db09dc/classes.dex" />
     </item>
     <item
