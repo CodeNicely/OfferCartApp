@@ -17,6 +17,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
+import android.widget.ScrollView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.aman.offercart_v1.R;
@@ -58,6 +60,19 @@ public class ShopOfferFragment extends Fragment implements OfferScreenView, BuyO
     Toolbar toolbar;
     @BindView(R.id.imageView)
     ImageView shopImage;
+
+    @BindView(R.id.scrollView)
+    ScrollView scrollView;
+
+    @BindView(R.id.shop_name)
+    TextView shopName;
+
+    @BindView(R.id.shop_description)
+    TextView shopDescription;
+
+    @BindView(R.id.shop_address)
+    TextView shopAddress;
+
     private ProgressDialog progressDialog;
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -135,7 +150,8 @@ public class ShopOfferFragment extends Fragment implements OfferScreenView, BuyO
         recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.setHasFixedSize(true);
         recyclerView.setAdapter(offerScreenAdapter);
-        recyclerView.setNestedScrollingEnabled(true);
+    //    recyclerView.setNestedScrollingEnabled(true);
+      //  scrollView.setNestedScrollingEnabled(true);
         progressDialog = new ProgressDialog(getContext());
 
         progressDialog.setMessage("Buying Offer");
@@ -182,6 +198,11 @@ public class ShopOfferFragment extends Fragment implements OfferScreenView, BuyO
     public void onOfferReceived(OfferScreenList offerScreenList) {
 
         Picasso.with(getContext()).load(offerScreenList.getShop_image()).fit().into(shopImage);
+
+        shopName.setText(offerScreenList.getShop_name());
+        shopDescription.setText(offerScreenList.getShop_description());
+        shopAddress.setText(offerScreenList.getShop_address());
+
         offerScreenAdapter.setdata(offerScreenList.getOffer_list());
         offerScreenAdapter.notifyDataSetChanged();
     }

@@ -28,7 +28,6 @@ import com.example.aman.offercart_v1.developers.view.DeveloperFragment;
 import com.example.aman.offercart_v1.helper.SharedPrefs;
 import com.example.aman.offercart_v1.offer.view.ShopOfferFragment;
 import com.example.aman.offercart_v1.shops.view.ShopFragment;
-import com.example.aman.offercart_v1.wallet.view.WalletActivity;
 import com.example.aman.offercart_v1.wallet.view.WalletFragment;
 import com.payUMoney.sdk.PayUmoneySdkInitilizer;
 import com.payUMoney.sdk.SdkConstants;
@@ -41,7 +40,7 @@ public class HomePage extends AppCompatActivity
 
     private String category_id = "1";
     private String shop_id = "1";
-    private String amt="10";
+    private String amt = "10";
     private SharedPrefs sharedPrefs;
     private NavigationView navigationView;
 
@@ -72,6 +71,15 @@ public class HomePage extends AppCompatActivity
         }
 
 
+        int backStackCount = getSupportFragmentManager().getBackStackEntryCount();
+        for (int i = 0; i < backStackCount; i++) {
+
+            // Get the back stack fragment id.
+            int backStackId = getSupportFragmentManager().getBackStackEntryAt(i).getId();
+
+            getFragmentManager().popBackStack(backStackId, FragmentManager.POP_BACK_STACK_INCLUSIVE);
+
+        }
     }
 
     @Override
@@ -119,8 +127,10 @@ public class HomePage extends AppCompatActivity
 
         if (id == R.id.nav_home) {
 
-            setFragment(new CategoryFragment(), "Category ");
-            getSupportActionBar().show();
+            Intent intent = new Intent(this, HomePage.class);
+            startActivity(intent);
+            finish();
+
         } else if (id == R.id.nav_changeCity) {
 
             addFragment(new CityFragment(), "Select City");
@@ -129,17 +139,16 @@ public class HomePage extends AppCompatActivity
         } else if (id == R.id.nav_wallet) {
 
 
-             addFragment(new WalletFragment(), "Wallet");
-             getSupportActionBar().hide();
+            addFragment(new WalletFragment(), "Wallet");
+            getSupportActionBar().hide();
 
-        }else if(id==R.id.nav_my_orders){
+        } else if (id == R.id.nav_my_orders) {
 
         } else if (id == R.id.nav_contact_us) {
             addFragment(new ContactUsFragment(), "Contact Us");
             getSupportActionBar().hide();
         } else if (id == R.id.nav_about_us) {
             addFragment(new AboutUsFragment(), "About Us");
-
             getSupportActionBar().hide();
 
         } else if (id == R.id.nav_developer) {
@@ -163,6 +172,7 @@ public class HomePage extends AppCompatActivity
     }
 
     public void setFragment(Fragment fragment, String title) {
+
         if (fragment != null) {
             FragmentManager fragmentManager = getSupportFragmentManager();
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
@@ -198,7 +208,7 @@ public class HomePage extends AppCompatActivity
     }
 
     public void payement(String amount) {
-        amt=amount;
+        amt = amount;
         makePayment();
     }
 
@@ -273,7 +283,7 @@ public class HomePage extends AppCompatActivity
             testing purpose
 
         */
-        String serverCalculatedHash="9f1ce50ba8995e970a23c33e665a990e648df8de3baf64a33e19815acd402275617a16041e421cfa10b7532369f5f12725c7fcf69e8d10da64c59087008590fc";
+        String serverCalculatedHash = "9f1ce50ba8995e970a23c33e665a990e648df8de3baf64a33e19815acd402275617a16041e421cfa10b7532369f5f12725c7fcf69e8d10da64c59087008590fc";
         paymentParam.setMerchantHash(serverCalculatedHash);
         PayUmoneySdkInitilizer.startPaymentActivityForResult(this, paymentParam);
 
@@ -323,7 +333,7 @@ public class HomePage extends AppCompatActivity
             testing purpose
 
         */
-        String serverCalculatedHash="9f1ce50ba8995e970a23c33e665a990e648df8de3baf64a33e19815acd402275617a16041e421cfa10b7532369f5f12725c7fcf69e8d10da64c59087008590fc";
+        String serverCalculatedHash = "9f1ce50ba8995e970a23c33e665a990e648df8de3baf64a33e19815acd402275617a16041e421cfa10b7532369f5f12725c7fcf69e8d10da64c59087008590fc";
         paymentParam.setMerchantHash(serverCalculatedHash);
         PayUmoneySdkInitilizer.startPaymentActivityForResult(HomePage.this, paymentParam);
 

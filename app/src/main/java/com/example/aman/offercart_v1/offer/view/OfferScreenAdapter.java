@@ -13,6 +13,8 @@ import com.example.aman.offercart_v1.R;
 import com.example.aman.offercart_v1.offer.model.data.OfferScreenDetails;
 import com.squareup.picasso.Picasso;
 
+import org.w3c.dom.Text;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -26,7 +28,6 @@ public class OfferScreenAdapter extends RecyclerView.Adapter<OfferScreenAdapter.
     private List<OfferScreenDetails> offerScreenDetailsList = new ArrayList<>();
     private Context context;
     private LayoutInflater layoutInflater;
-    private OfferScreenView offerScreenView;
     private ShopOfferFragment shopOfferFragment;
 
     public OfferScreenAdapter(Context context, ShopOfferFragment shopOfferFragment) {
@@ -81,6 +82,10 @@ public class OfferScreenAdapter extends RecyclerView.Adapter<OfferScreenAdapter.
         private TextView title, cost, validity, description;
         private ImageView image;
         private Button buy;
+        private TextView shop_name;
+        private TextView shop_address;
+        private TextView shop_description;
+
 
         private MyViewHolder(View itemView) {
             super(itemView);
@@ -90,6 +95,8 @@ public class OfferScreenAdapter extends RecyclerView.Adapter<OfferScreenAdapter.
             cost = (TextView) itemView.findViewById(R.id.offer_cost);
             image = (ImageView) itemView.findViewById(R.id.image);
             buy = (Button) itemView.findViewById(R.id.buy);
+
+
         }
 
     }
