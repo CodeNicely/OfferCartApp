@@ -31,6 +31,7 @@ import com.example.aman.offercart_v1.offer.view.ShopOfferFragment;
 import com.example.aman.offercart_v1.shops.view.ShopFragment;
 import com.example.aman.offercart_v1.wallet.view.WalletActivity;
 import com.example.aman.offercart_v1.wallet.view.WalletFragment;
+import com.example.aman.offercart_v1.welcome_screen.view.WelcomeScreenActivity;
 import com.payUMoney.sdk.PayUmoneySdkInitilizer;
 import com.payUMoney.sdk.SdkConstants;
 
@@ -149,6 +150,17 @@ public class HomePage extends AppCompatActivity
             addFragment(new DeveloperFragment(), "Developers");
 
             getSupportActionBar().hide();
+
+        }else if(id==R.id.nav_logout)
+        {
+            sharedPrefs.setLogin(false);
+            sharedPrefs.setCity("NA");
+            sharedPrefs.setAccessToken("");
+            sharedPrefs.setEmailId("");
+            sharedPrefs.setUsername("");
+            Intent in=new Intent(HomePage.this, WelcomeScreenActivity.class);
+            startActivity(in);
+
 
         }
 
