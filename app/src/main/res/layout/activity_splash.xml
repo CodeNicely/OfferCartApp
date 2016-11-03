@@ -2,13 +2,12 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
     >
 
 
     <ProgressBar
         android:id="@+id/progressBar"
-        android:layout_width="wrap_content"
+        android:layout_width="30dp"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:layout_gravity="center"
@@ -17,8 +16,8 @@
 
     <ImageView
         android:id="@+id/logo"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
  />
@@ -33,11 +32,20 @@
         android:textColor="@color/colorAccent"
         android:textSize="32dp" />
 
+    <TextView
+        android:gravity="center"
+        android:id="@+id/powered_by"
+        android:layout_width="match_parent"
+        android:textColor="@color/black"
+        android:text="Powered by CodeNicely"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/codenicely_logo"
+        />
 
     <ImageView
         android:id="@+id/codenicely_logo"
-        android:layout_width="160dp"
-        android:layout_height="160dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="50dp"

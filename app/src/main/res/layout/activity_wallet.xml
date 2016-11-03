@@ -64,7 +64,6 @@
 
 
 
-
     <android.support.v7.widget.CardView
         android:id="@+id/title"
         android:layout_centerHorizontal="true"

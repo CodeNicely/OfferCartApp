@@ -59,7 +59,7 @@ public class SplashScreenActivity extends Activity implements SplashScreenView
 
         ButterKnife.bind(this);
         imageLoader=new GlideImageLoader(this);
-        Glide.with(this).load(R.drawable.codenicely_coloured_logo).into(codenicely_logo);
+        Glide.with(this).load(R.drawable.codenicely_logo).into(codenicely_logo);
         Glide.with(this).load(R.drawable.discount_store_logo).into(logo);
 
         sharedPrefs = new SharedPrefs(this);

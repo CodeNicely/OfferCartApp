@@ -3,6 +3,7 @@ package com.example.aman.offercart_v1.helper;
 import android.app.Application;
 import android.content.Context;
 import android.content.SearchRecentSuggestionsProvider;
+import android.util.Log;
 
 import com.google.firebase.iid.FirebaseInstanceId;
 
@@ -24,6 +25,7 @@ public class MyApplication extends Application {
     //    FontsOverride.setDefaultFont(this, "SANS_SERIF", "fonts/patrick_hand.ttf");
 
         fcm = FirebaseInstanceId.getInstance().getToken();
+        Log.d("Resp",fcm);
 
 
     }

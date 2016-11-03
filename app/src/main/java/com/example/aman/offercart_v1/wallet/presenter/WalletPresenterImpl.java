@@ -29,8 +29,13 @@ public class WalletPresenterImpl implements WalletPresenter {
 
             @Override
             public void onSuccess(WalletData walletData) {
-                walletInterface.showProgressbar(false);
-                walletInterface.walletReceived(walletData);
+                if (walletData.isSuccess()) {
+                    walletInterface.showProgressbar(false);
+                    walletInterface.walletReceived(walletData);
+                } else {
+                    walletInterface.showProgressbar(false);
+                    walletInterface.showMessage(walletData.getMessage());
+                }
             }
         });
 
