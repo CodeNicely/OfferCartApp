@@ -14,6 +14,7 @@
             android:id="@+id/collapsingToolbar"
             android:layout_width="match_parent"
             android:layout_height="256dp"
+            app:titleEnabled="false"
             app:contentScrim="?attr/colorPrimary"
             app:layout_scrollFlags="scroll|exitUntilCollapsed">
             <!--
@@ -35,8 +36,6 @@
                 android:layout_height="56dp"
                 android:gravity="top"
                 android:background="?attr/selectableItemBackground"
-                app:title=""
-                android:title=""
                 android:minHeight="?attr/actionBarSize"
                 app:layout_collapseMode="pin" />
 
