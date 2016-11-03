@@ -136,6 +136,7 @@ public class HomePage extends AppCompatActivity
             addFragment(new MyOrdersFragment(), "My Orders");
             getSupportActionBar().hide();
 
+
         } else if (id == R.id.nav_contact_us) {
             addFragment(new ContactUsFragment(), "Contact Us");
             getSupportActionBar().hide();
