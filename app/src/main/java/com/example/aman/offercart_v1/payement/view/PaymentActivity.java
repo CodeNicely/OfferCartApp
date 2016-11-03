@@ -53,6 +53,8 @@ public class PaymentActivity extends AppCompatActivity {
         setContentView(R.layout.activity_test);
         ButterKnife.bind(this);
         makePayment();
+
+
         test.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

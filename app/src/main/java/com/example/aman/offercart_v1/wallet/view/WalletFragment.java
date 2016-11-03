@@ -5,14 +5,26 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.ContextCompat;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ProgressBar;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.aman.offercart_v1.R;
+import com.example.aman.offercart_v1.home.HomePage;
+import com.example.aman.offercart_v1.home.HomePageInterface;
 import com.example.aman.offercart_v1.payement.view.PaymentActivity;
+import com.example.aman.offercart_v1.wallet.model.RetrofitWalletProvider;
+import com.example.aman.offercart_v1.wallet.model.data.WalletData;
+import com.example.aman.offercart_v1.wallet.presenter.WalletPresenter;
+import com.example.aman.offercart_v1.wallet.presenter.WalletPresenterImpl;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -25,15 +37,38 @@ import butterknife.ButterKnife;
  * Use the {@link WalletFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class WalletFragment extends Fragment {
+public class WalletFragment extends Fragment implements WalletInterface{
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     public static final String ARG_PAGE = "ARG_PAGE";
+
+    @BindView(R.id.wallet_toolbar)
+    Toolbar toolbar;
+
+    @BindView(R.id.add_50)
+    Button add50;
+
+    @BindView(R.id.add_100)
+    Button add100;
+
+    @BindView(R.id.add_200)
+    Button add200;
+
+    @BindView(R.id.wallet_amount)
+    EditText amount;
+
+    @BindView(R.id.wallet_balance)
+    TextView balance;
+
+    @BindView(R.id.wallet_progressbar)
+    ProgressBar progressBar;
+
     // TODO: Rename and change types of parameters
     private static int mPage;
     @BindView(R.id.proceed)
     Button proceed;
     private OnFragmentInteractionListener mListener;
+    private WalletPresenter walletPresenter;
 
     public WalletFragment() {
         // Required empty public constructor
@@ -48,8 +83,7 @@ public class WalletFragment extends Fragment {
      */
     // TODO: Rename and change types and number of parameters
     public static WalletFragment newInstance(int page) {
-        Log.d("Resp", "here");
-        Log.d("Resp", "" + page);
+
         mPage = page;
         WalletFragment fragment = new WalletFragment();
         Bundle args = new Bundle();
@@ -61,7 +95,6 @@ public class WalletFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
     }
 
     @Override
@@ -70,14 +103,43 @@ public class WalletFragment extends Fragment {
 
         View view;
         view = inflater.inflate(R.layout.tab_add_money, container, false);
+        walletPresenter=new WalletPresenterImpl(this,new RetrofitWalletProvider());
         ButterKnife.bind(this, view);
+
+        toolbar.setNavigationIcon(ContextCompat.getDrawable(getContext(),R.drawable.ic_arrow_back_white_24dp));
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getActivity().onBackPressed();
+            }
+        });
+
+        add50.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                amount.setText("50");
+            }
+        });
+        add100.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                amount.setText("100");
+            }
+        });
+        add200.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                amount.setText("200");
+            }
+        });
+
 
         proceed.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                Intent intent = new Intent(getActivity(), PaymentActivity.class);
-                startActivity(intent);
+                ((HomePage)getActivity()).payement(amount.getText().toString());
+//                Intent intent = new Intent(getActivity(), PaymentActivity.class);
+//                startActivity(intent);
             }
         });
 
@@ -102,16 +164,25 @@ public class WalletFragment extends Fragment {
         mListener = null;
     }
 
-    /**
-     * This interface must be implemented by activities that contain this
-     * fragment to allow an interaction in this fragment to be communicated
-     * to the activity and potentially other fragments contained in that
-     * activity.
-     * <p/>
-     * See the Android Training lesson <a href=
-     * "http://developer.android.com/training/basics/fragments/communicating.html"
-     * >Communicating with Other Fragments</a> for more information.
-     */
+    @Override
+    public void showMessage(String message) {
+        Toast.makeText(getContext(),message, Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void showProgressbar(boolean show) {
+        if(show)
+            progressBar.setVisibility(View.VISIBLE);
+        else
+            progressBar.setVisibility(View.INVISIBLE);
+    }
+
+    @Override
+    public void walletReceived(WalletData walletData) {
+        balance.setText(walletData.getBalance());
+    }
+
+
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);

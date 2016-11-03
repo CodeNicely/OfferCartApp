@@ -5,6 +5,6 @@ package com.example.aman.offercart_v1.home;
  */
 public interface HomePageInterface {
     void onCategorySelected(String category_id);
+    void onShopSelected(String shop_id,String shop_name);
 
-    void onShopSelected(String shop_id, String shop_name);
 }
