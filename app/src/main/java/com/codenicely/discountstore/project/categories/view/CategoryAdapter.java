@@ -60,7 +60,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.MyView
             @Override
             public void onClick(View v) {
                 if (context instanceof HomePage) {
-                    ((HomePage) context).onCategorySelected(categoryData.getId());
+                    ((HomePage) context).onCategorySelected(categoryData.getId(),categoryData.getName());
                 }
             }
         });
@@ -88,7 +88,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.MyView
             image = (ImageView) itemView.findViewById(R.id.categoryView);
             categoryLayout = (LinearLayout) itemView.findViewById(R.id.categoryLayout);
             imageProgressBar = (ProgressBar) itemView.findViewById(R.id.imageProgressBar);
-            description=(TextView)itemView.findViewById(R.id.categoryDescription);
+            description = (TextView) itemView.findViewById(R.id.categoryDescription);
         }
 
     }

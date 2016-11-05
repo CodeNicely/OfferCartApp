@@ -49,7 +49,7 @@ public class RetrofitOfferScreenDetailsProvider implements OfferScreenDetailsPro
     }
 
     @Override
-    public void requestOfferList(String accessToken, String shop_id, final OfferScreenDetailsCallback offerScreenDetailsCallback) {
+    public void requestOfferList(String accessToken, int shop_id, final OfferScreenDetailsCallback offerScreenDetailsCallback) {
 
 
         final Call<OfferScreenList> offerScreenDataCall = offerScreenRequestApi.getCategoryListData(accessToken, shop_id);

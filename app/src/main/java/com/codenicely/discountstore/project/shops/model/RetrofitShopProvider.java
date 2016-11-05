@@ -46,7 +46,7 @@ public class RetrofitShopProvider implements ShopProvider {
     }
 
     @Override
-    public void getShops(String access_token, String category_id, final OnShopsReceived onShopsReceived) {
+    public void getShops(String access_token, int category_id, final OnShopsReceived onShopsReceived) {
         Call<ShopList> call = shopsApi.getShops(access_token, category_id);
         call.enqueue(new Callback<ShopList>() {
             @Override

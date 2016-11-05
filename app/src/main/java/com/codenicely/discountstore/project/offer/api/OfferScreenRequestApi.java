@@ -14,5 +14,5 @@ import retrofit2.http.Query;
 public interface OfferScreenRequestApi {
 
     @GET(Urls.REQUEST_OFFER)
-    Call<OfferScreenList> getCategoryListData(@Query("access_token") String access_token, @Query("shop_id") String shop_id);
+    Call<OfferScreenList> getCategoryListData(@Query("access_token") String access_token, @Query("shop_id") int shop_id);
 }

@@ -15,7 +15,7 @@
     <style name="PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
     <style name="ExpandedAppBar" parent="@android:style/TextAppearance.Medium">
-        <item name="android:textSize">32dp</item>
+        <item name="android:textSize">0dp</item>
         <item name="android:textColor">@color/colorAccent</item>
         <item name="android:textStyle">bold</item>
         <item name="android:typeface">serif</item>
@@ -31,7 +31,7 @@
     </style>
 
     <style name="ExpandedAppBarPlus1" parent="@android:style/TextAppearance.Medium">
-        <item name="android:textSize">32dp</item>
+        <item name="android:textSize">0dp</item>
         <item name="android:textColor">@color/colorAccent</item>
         <item name="android:textStyle">bold</item>
         <item name="android:typeface">serif</item>

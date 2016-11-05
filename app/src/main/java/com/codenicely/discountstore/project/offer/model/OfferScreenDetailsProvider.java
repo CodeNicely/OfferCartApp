@@ -8,6 +8,6 @@ import com.codenicely.discountstore.project.offer.OfferScreenDetailsCallback;
 
 public interface OfferScreenDetailsProvider {
 
-    void requestOfferList(String offerToken, String shop_id, OfferScreenDetailsCallback offerScreenDetailsCallback);
+    void requestOfferList(String offerToken, int shop_id, OfferScreenDetailsCallback offerScreenDetailsCallback);
 
 }

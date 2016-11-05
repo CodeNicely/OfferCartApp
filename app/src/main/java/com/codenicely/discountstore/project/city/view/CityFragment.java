@@ -183,7 +183,7 @@ public class CityFragment extends Fragment implements CityScreenView {
     }
 
     @Override
-    public void onCitySelected(String city_id, String city_name) {
+    public void onCitySelected(int city_id, String city_name) {
         sharedPrefs = new SharedPrefs(getContext());
         access_token = sharedPrefs.getAccessToken();
         cityScreenPresenter.sendSelectedCity(city_name, city_id, access_token);

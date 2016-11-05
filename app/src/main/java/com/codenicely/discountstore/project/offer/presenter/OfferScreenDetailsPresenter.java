@@ -6,7 +6,6 @@ package com.codenicely.discountstore.project.offer.presenter;
 
 public interface OfferScreenDetailsPresenter {
 
-    void requestOfferList(String access_token, String shop_id);
-//    void responseOfferList(int offer_id, String offer_code, String offer_name);
+    void requestOfferList(String access_token, int shop_id);
 
 }

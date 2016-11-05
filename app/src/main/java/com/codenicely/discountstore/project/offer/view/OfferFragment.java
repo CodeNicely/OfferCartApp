@@ -27,7 +27,6 @@ import com.codenicely.discountstore.project.helper.Keys;
 import com.codenicely.discountstore.project.helper.SharedPrefs;
 import com.codenicely.discountstore.project.helper.image_loader.GlideImageLoader;
 import com.codenicely.discountstore.project.helper.image_loader.ImageLoader;
-import com.codenicely.discountstore.project.home.HomePage;
 import com.codenicely.discountstore.project.offer.model.RetrofitBuyOfferProvider;
 import com.codenicely.discountstore.project.offer.model.RetrofitOfferScreenDetailsProvider;
 import com.codenicely.discountstore.project.offer.model.data.OfferData;
@@ -44,12 +43,12 @@ import butterknife.ButterKnife;
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link ShopOfferFragment.OnFragmentInteractionListener} interface
+ * {@link OfferFragment.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link ShopOfferFragment#newInstance} factory method to
+ * Use the {@link OfferFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class ShopOfferFragment extends Fragment implements OfferScreenView, BuyOfferView {
+public class OfferFragment extends Fragment implements OfferScreenView, BuyOfferView {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -94,7 +93,7 @@ public class ShopOfferFragment extends Fragment implements OfferScreenView, BuyO
     private SharedPrefs sharedPrefs;
     private OnFragmentInteractionListener mListener;
     private BuyOfferPresenter buyOfferPresenter;
-    public ShopOfferFragment() {
+    public OfferFragment() {
         // Required empty public constructor
     }
 
@@ -104,11 +103,11 @@ public class ShopOfferFragment extends Fragment implements OfferScreenView, BuyO
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment ShopOfferFragment.
+     * @return A new instance of fragment OfferFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static ShopOfferFragment newInstance(String param1, String param2) {
-        ShopOfferFragment fragment = new ShopOfferFragment();
+    public static OfferFragment newInstance(String param1, String param2) {
+        OfferFragment fragment = new OfferFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -147,7 +146,7 @@ public class ShopOfferFragment extends Fragment implements OfferScreenView, BuyO
             }
         });
         Bundle bundle=this.getArguments();
-        String shop_id=bundle.getString(Keys.KEY_SHOP_ID);
+        int shop_id=bundle.getInt(Keys.KEY_SHOP_ID);
         offerScreenDetailsPresenter.requestOfferList(sharedPrefs.getAccessToken(), shop_id);
         return view;
     }

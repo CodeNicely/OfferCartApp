@@ -105,11 +105,10 @@ public class ShopFragment extends Fragment implements ShopView {
             }
         });
 
-        String category_id = "1";
-        HomePage homePage = (HomePage) getActivity();
-        category_id = homePage.getCategory();
+        Bundle bundle=this.getArguments();
+        int category_id=bundle.getInt(Keys.KEY_CATEGORY_ID);
+
         sharedPrefs = new SharedPrefs(getContext());
-//        category_id=getArguments().getString("category_id");
         initialize();
         shopPresenter.getShops(sharedPrefs.getAccessToken(), category_id);
         return view;

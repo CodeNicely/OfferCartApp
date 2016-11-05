@@ -22,7 +22,7 @@ public class OfferScreenDetailsPresenterImpl implements OfferScreenDetailsPresen
     }
 
     @Override
-    public void requestOfferList(String access_token, String shop_id) {
+    public void requestOfferList(String access_token, int shop_id) {
         offerScreenView.showProgressBar(true);
         offerScreenDetailsProvider.requestOfferList(access_token, shop_id, new OfferScreenDetailsCallback() {
             @Override

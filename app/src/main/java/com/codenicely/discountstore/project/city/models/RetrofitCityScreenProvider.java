@@ -62,7 +62,7 @@ public class RetrofitCityScreenProvider implements CityScreenProvider {
     }
 
     @Override
-    public void sendSelectedCity(String city_id, String token, final OnCitiesSent onCitiesSent) {
+    public void sendSelectedCity(int city_id, String token, final OnCitiesSent onCitiesSent) {
         Call<SelectedCityData> call = sendSelectedCityApi.sendCity(city_id, token);
         call.enqueue(new Callback<SelectedCityData>() {
             @Override

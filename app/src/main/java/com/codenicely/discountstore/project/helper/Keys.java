@@ -8,4 +8,5 @@ public class Keys {
 
     public static final String KEY_SHOP_ID="shop_id123";
 
+    public static final String KEY_CATEGORY_ID = "category_hdb";
 }

@@ -14,7 +14,6 @@ import com.codenicely.discountstore.project.R;
 import com.codenicely.discountstore.project.helper.image_loader.GlideImageLoader;
 import com.codenicely.discountstore.project.helper.image_loader.ImageLoader;
 import com.codenicely.discountstore.project.offer.model.data.OfferScreenDetails;
-import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,11 +28,11 @@ public class OfferScreenAdapter extends RecyclerView.Adapter<OfferScreenAdapter.
     private List<OfferScreenDetails> offerScreenDetailsList = new ArrayList<>();
     private Context context;
     private LayoutInflater layoutInflater;
-    private ShopOfferFragment shopOfferFragment;
+    private OfferFragment offerFragment;
     private ImageLoader imageLoader;
-    public OfferScreenAdapter(Context context, ShopOfferFragment shopOfferFragment) {
+    public OfferScreenAdapter(Context context, OfferFragment offerFragment) {
         this.context = context;
-        this.shopOfferFragment = shopOfferFragment;
+        this.offerFragment = offerFragment;
         layoutInflater = layoutInflater.from(context);
         imageLoader=new GlideImageLoader(context);
     }
@@ -64,7 +63,7 @@ public class OfferScreenAdapter extends RecyclerView.Adapter<OfferScreenAdapter.
             @Override
             public void onClick(View v) {
 
-                shopOfferFragment.buyOffer(offerScreenDetails.getOffer_id(),offerScreenDetails.getPrice());
+                offerFragment.buyOffer(offerScreenDetails.getOffer_id(),offerScreenDetails.getPrice());
 
             }
         });

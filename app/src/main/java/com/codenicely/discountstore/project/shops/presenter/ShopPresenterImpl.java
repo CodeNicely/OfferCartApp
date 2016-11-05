@@ -18,7 +18,7 @@ public class ShopPresenterImpl implements ShopPresenter {
     }
 
     @Override
-    public void getShops(String access_token, String category_id) {
+    public void getShops(String access_token, int category_id) {
         shopView.showLoading(true);
         shopProvider.getShops(access_token, category_id, new OnShopsReceived() {
             @Override

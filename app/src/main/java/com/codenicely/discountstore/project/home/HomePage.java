@@ -28,13 +28,12 @@ import com.codenicely.discountstore.project.developers.view.DeveloperFragment;
 import com.codenicely.discountstore.project.helper.Keys;
 import com.codenicely.discountstore.project.helper.SharedPrefs;
 import com.codenicely.discountstore.project.my_orders.view.MyOrdersFragment;
-import com.codenicely.discountstore.project.offer.view.ShopOfferFragment;
+import com.codenicely.discountstore.project.offer.view.OfferFragment;
 import com.codenicely.discountstore.project.shops.view.ShopFragment;
 import com.codenicely.discountstore.project.wallet.view.WalletFragment;
 import com.codenicely.discountstore.project.welcome_screen.view.WelcomeScreenActivity;
 import com.payUMoney.sdk.PayUmoneySdkInitilizer;
 import com.payUMoney.sdk.SdkConstants;
-import com.payUMoney.sdk.walledSdk.SharedPrefsUtils;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -42,7 +41,6 @@ import java.security.NoSuchAlgorithmException;
 public class HomePage extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, HomePageInterface {
 
-    private String category_id = "1";
     private String shop_id ="0";
     private String amt = "10";
     private SharedPrefs sharedPrefs;
@@ -181,7 +179,7 @@ public class HomePage extends AppCompatActivity
             sharedPrefs.setUsername("");
             Intent in=new Intent(HomePage.this, WelcomeScreenActivity.class);
             startActivity(in);
-
+            finish();
 
         }
 
@@ -190,13 +188,6 @@ public class HomePage extends AppCompatActivity
         return true;
     }
 
-    public String getCategory() {
-        return category_id;
-    }
-
-    public String getShop_id() {
-        return this.shop_id;
-    }
 
     public void setFragment(Fragment fragment, String title) {
 
@@ -222,20 +213,22 @@ public class HomePage extends AppCompatActivity
 
     }
 
-    @Override
-    public void onCategorySelected(String category_id) {
-        this.category_id = category_id;
-        addFragment(new ShopFragment(), "Shops");
+    public void onCategorySelected(int category_id,String category_name) {
+        Bundle bundle = new Bundle();
+        bundle.putInt(Keys.KEY_CATEGORY_ID, category_id);
+        ShopFragment shopFragment = new ShopFragment();
+        shopFragment.setArguments(bundle);
+        addFragment(shopFragment, category_name);
     }
 
-    @Override
-    public void onShopSelected(String shop_id1, String shop_name) {
-        Bundle bundle = new Bundle();
-        bundle.putString(Keys.KEY_SHOP_ID, shop_id1);
-        ShopOfferFragment shopOfferFragment = new ShopOfferFragment();
-        shopOfferFragment.setArguments(bundle);
 
-        addFragment(shopOfferFragment, shop_name);
+    public void onShopSelected(int shop_id, String shop_name) {
+        Bundle bundle = new Bundle();
+        bundle.putInt(Keys.KEY_SHOP_ID, shop_id);
+        OfferFragment offerFragment = new OfferFragment();
+        offerFragment.setArguments(bundle);
+
+        addFragment(offerFragment, shop_name);
     }
 
     public void payement(String amount) {
