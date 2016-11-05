@@ -89,6 +89,7 @@ public class OtpViewImpl extends Activity implements OtpView {
     public void onOtpVerified(String token) {
         Log.d("res", token);
         sharedPrefs.setAccessToken(token);
+        sharedPrefs.setLogin(true);
         Log.d("res", "done");
         Intent a = new Intent(OtpViewImpl.this, HomePage.class);
         startActivity(a);

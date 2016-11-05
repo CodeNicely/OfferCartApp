@@ -152,8 +152,6 @@ public class LoginScreenActivity extends Activity implements LoginScreenView {
 
     @Override
     public void onLoginVerified() {
-        sharedPrefs = new SharedPrefs(this);
-        sharedPrefs.setLogin(true);
         Intent in = new Intent(LoginScreenActivity.this, OtpViewImpl.class);
         in.putExtra("mobile", mobile1);
         startActivity(in);

@@ -9,8 +9,8 @@ android {
         applicationId "com.codenicely.discountstore.project"
         minSdkVersion 16
         targetSdkVersion 24
-        versionCode 2
-        versionName "1.01"
+        versionCode 4
+        versionName "1.04"
     }
     buildTypes {
 
