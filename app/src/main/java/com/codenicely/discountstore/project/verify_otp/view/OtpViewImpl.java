@@ -3,6 +3,7 @@ package com.codenicely.discountstore.project.verify_otp.view;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -17,6 +18,7 @@ import com.codenicely.discountstore.project.verify_otp.models.RetrofitOtpProvide
 import com.codenicely.discountstore.project.verify_otp.presenter.OtpPresenter;
 import com.codenicely.discountstore.project.verify_otp.presenter.OtpPresenterImpl;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
@@ -29,17 +31,26 @@ public class OtpViewImpl extends Activity implements OtpView {
     ProgressBar progressbar;
     String mobile;
     String otp1;
+
+    @BindView(R.id.toolbar)
+    Toolbar toolbar;
+
     private SharedPrefs sharedPrefs;
 
     private OtpPresenter otpPresenter;
-    private RetrofitOtpProvider retrofitOtpProvider;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_otp);
-
         ButterKnife.bind(this);
+
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
         sharedPrefs = new SharedPrefs(this);
         otpPresenter = new OtpPresenterImpl(this,
                 new RetrofitOtpProvider());

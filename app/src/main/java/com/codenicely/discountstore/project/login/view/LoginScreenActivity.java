@@ -4,6 +4,7 @@ package com.codenicely.discountstore.project.login.view;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -22,6 +23,7 @@ import com.codenicely.discountstore.project.welcome_screen.view.WelcomeScreenAct
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
@@ -37,6 +39,10 @@ public class LoginScreenActivity extends Activity implements LoginScreenView {
     EditText mobile;
     String mobile1;
     EditText email;
+
+    @BindView(R.id.toolbar)
+    Toolbar toolbar;
+
     private SharedPrefs sharedPrefs;
     private ProgressBar progressbar;
     private RetrofitLoginScreenProvider retrofitLoginScreenProvider;
@@ -51,6 +57,15 @@ public class LoginScreenActivity extends Activity implements LoginScreenView {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_loginscreen);
+        ButterKnife.bind(this);
+
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
         Log.d("Response", "1");
         sharedPrefs = new SharedPrefs(this);
         progressbar = (ProgressBar) findViewById(R.id.progressBar);

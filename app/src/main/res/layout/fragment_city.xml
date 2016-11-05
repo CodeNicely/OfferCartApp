@@ -16,7 +16,9 @@
             android:layout_height="wrap_content"
             app:navigationIcon="@drawable/ic_arrow_back_white_24dp"
             app:titleTextColor="@color/white"
-            app:title="City"
+            app:title="Select City"
+            android:title="Select City"
+            android:navigationIcon="@drawable/ic_arrow_back_white_24dp"
             />
     </android.support.design.widget.AppBarLayout>
 

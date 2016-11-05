@@ -102,15 +102,32 @@ public class CityFragment extends Fragment implements CityScreenView {
         View view = inflater.inflate(R.layout.fragment_city, container, false);
         ButterKnife.bind(this, view);
 
-        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                getActivity().onBackPressed();
-            }
-        });
+        ((HomePage)getActivity()).getSupportActionBar().hide();
+        toolbar.setTitle("Select City");
+
+
+
+
+
         sharedPrefs = new SharedPrefs(getContext());
-        if(sharedPrefs.getCity().equals("NA"))
-            toolbar.setVisibility(View.INVISIBLE);
+
+        if(sharedPrefs.getCity().equals("NA")){
+           toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+               @Override
+               public void onClick(View v) {
+
+                   Toast.makeText(getContext(), "Please Select City", Toast.LENGTH_SHORT).show();
+
+               }
+           });
+        }else{
+            toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    getActivity().onBackPressed();
+                }
+            });
+        }
         access_token = sharedPrefs.getAccessToken();
 
         cityScreenPresenter = new CityScreenPresenterImpl(this, new RetrofitCityScreenProvider());

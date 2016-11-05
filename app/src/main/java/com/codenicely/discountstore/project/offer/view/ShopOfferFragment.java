@@ -282,7 +282,7 @@ public class ShopOfferFragment extends Fragment implements OfferScreenView, BuyO
         ad.setCancelable(false);
         ad.setIcon(R.drawable.discount_store_logo);
         ad.setTitle("Do you really want to buy this offer ??");
-        ad.setMessage("This offer cost Rs ."+offer_price+" \nThis amount will be deducted from your account wallet!");
+        ad.setMessage("This offer cost Rs. "+offer_price+" \nThis amount will be deducted from your account wallet!");
         ad.setCancelable(false);
         ad.setButton(DialogInterface.BUTTON_POSITIVE, "Yes", new DialogInterface.OnClickListener() {
             @Override

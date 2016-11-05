@@ -6,9 +6,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.codenicely.discountstore.project.R;
+import com.codenicely.discountstore.project.helper.image_loader.GlideImageLoader;
+import com.codenicely.discountstore.project.helper.image_loader.ImageLoader;
 import com.codenicely.discountstore.project.welcome_screen.models.data.WelcomeImageDetails;
 import com.squareup.picasso.Picasso;
 
@@ -23,8 +26,11 @@ public class ViewPagerAdapter extends PagerAdapter {
     private Context context;
     private List<WelcomeImageDetails> welcomeImageDetailsList = new ArrayList<>();
     private LayoutInflater layoutInflater;
+    private ImageLoader imageLoader;
 
     public ViewPagerAdapter(Context context) {
+
+        imageLoader=new GlideImageLoader(context);
         this.context = context;
     }
 
@@ -41,10 +47,11 @@ public class ViewPagerAdapter extends PagerAdapter {
         WelcomeImageDetails welcomeImageDetails = welcomeImageDetailsList.get(position);
         TextView textView = (TextView) view.findViewById(R.id.tv1);
         ImageView imageView = (ImageView) view.findViewById(R.id.img);
+        ProgressBar imageProgressBar = (ProgressBar) view.findViewById(R.id.imageProgressBar);
+
         textView.setText(welcomeImageDetails.getMessage());
-        Picasso.with(context)
-                .load(welcomeImageDetails.getImage_url())
-                .into(imageView);
+        imageLoader.loadImage(welcomeImageDetails.getImage_url(),imageView,imageProgressBar);
+
 
         return view;
     }

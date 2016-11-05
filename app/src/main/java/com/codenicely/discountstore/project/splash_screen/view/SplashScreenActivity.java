@@ -158,7 +158,7 @@ public class SplashScreenActivity extends Activity implements SplashScreenView {
                     }
 
                 }
-            }, 5000);
+            }, 2500);
 
         }
     }

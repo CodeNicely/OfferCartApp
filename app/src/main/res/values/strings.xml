@@ -13,5 +13,9 @@
     <string name="select_your_city">Select City</string>
     <string name="failure_message">Unable to connect to server</string>
     <string name="developers">CodeNicely</string>
+    <string name="login_lable">Login</string>
+    <string name="veryfy_otp">Verify Otp</string>
+    <string name="otp_screen_description">We have sent you a 6 digit Otp . \n Please enter the otp in the Space given below to verify your mobile.</string>
+    <string name="login_description">One time Login to access all our Amazing Services!</string>
 </resources>
 

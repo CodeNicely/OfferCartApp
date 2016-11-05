@@ -55,7 +55,8 @@ public class OfferScreenAdapter extends RecyclerView.Adapter<OfferScreenAdapter.
 
         final OfferScreenDetails offerScreenDetails = offerScreenDetailsList.get(position);
         holder.title.setText(offerScreenDetails.getName());
-        holder.cost.setText(String.valueOf(offerScreenDetails.getPrice()));
+        holder.cost.setText("Rs. ");
+        holder.cost.append(String.valueOf(offerScreenDetails.getPrice()));
         holder.validity.setText(String.valueOf(offerScreenDetails.getValidity()));
         holder.description.setText(String.valueOf(offerScreenDetails.getDescription()));
 
@@ -82,9 +83,6 @@ public class OfferScreenAdapter extends RecyclerView.Adapter<OfferScreenAdapter.
         private TextView title, cost, validity, description;
         private ImageView image;
         private Button buy;
-        private TextView shop_name;
-        private TextView shop_address;
-        private TextView shop_description;
         private ProgressBar imageProgressBar;
 
         private MyViewHolder(View itemView) {

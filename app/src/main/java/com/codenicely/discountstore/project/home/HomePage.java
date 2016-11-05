@@ -129,6 +129,16 @@ public class HomePage extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
+        if(sharedPrefs.getCity().equals("NA")){
+            addFragment(new CityFragment(), "Select City");
+            getSupportActionBar().hide();
+            Toast.makeText(this, "Please Select City First", Toast.LENGTH_SHORT).show();
+            DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+            drawer.closeDrawer(GravityCompat.START);
+            return true;
+        }
+
+
         if (id == R.id.nav_home) {
 
             Intent intent = new Intent(this, HomePage.class);
