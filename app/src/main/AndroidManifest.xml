@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.codenicely.discountstore.project">
+    package="com.codenicely.discountstore.project1">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -8,7 +8,7 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
-        android:name="com.codenicely.discountstore.project.helper.MyApplication"
+        android:name="com.codenicely.discountstore.project1.helper.MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -17,7 +17,7 @@
 
         <!-- Splash screen -->
         <activity
-            android:name="com.codenicely.discountstore.project.splash_screen.view.SplashScreenActivity"
+            android:name="com.codenicely.discountstore.project1.splash_screen.view.SplashScreenActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -26,17 +26,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.codenicely.discountstore.project.home.HomePage" />
+        <activity android:name="com.codenicely.discountstore.project1.home.HomePage" />
 
         <!-- Main activity -->
 
-        <activity android:name="com.codenicely.discountstore.project.login.view.LoginScreenActivity" />
-        <activity android:name="com.codenicely.discountstore.project.verify_otp.view.OtpViewImpl" />
+        <activity android:name="com.codenicely.discountstore.project1.login.view.LoginScreenActivity" />
+        <activity android:name="com.codenicely.discountstore.project1.verify_otp.view.OtpViewImpl" />
         <activity
-            android:name="com.codenicely.discountstore.project.welcome_screen.view.WelcomeScreenActivity"
+            android:name="com.codenicely.discountstore.project1.welcome_screen.view.WelcomeScreenActivity"
             android:label="@string/app_name" />
-        <activity android:name="com.codenicely.discountstore.project.wallet.view.WalletActivity"></activity>
-        <activity android:name="com.codenicely.discountstore.project.payement.view.PaymentActivity" />
+        <activity android:name="com.codenicely.discountstore.project1.wallet.view.WalletActivity"></activity>
     </application>
 
 </manifest>
