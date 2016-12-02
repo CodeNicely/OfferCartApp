@@ -66,7 +66,7 @@ public class PaymentActivity extends AppCompatActivity implements PaymentView {
             Bundle bundle = getIntent().getExtras();
 
             paymentPresenter.requestPaymentHash(bundle.getDouble(Keys.KEY_MONEY), sharedPrefs.getAccessToken());
-
+        //    makePayment();
         } else {
 
             showMessage("");
@@ -351,12 +351,11 @@ public class PaymentActivity extends AppCompatActivity implements PaymentView {
                 .setUdf3("")
                 .setUdf4("")
                 .setUdf5("")
-                .setIsDebug(true)
+                .setIsDebug(false)
                 .setKey(paymentData.getKey())
-                .setMerchantId(paymentData.getMerchant_id());// Debug Merchant ID
+                .setMerchantId(paymentData.getMerchant_id());
 
         PayUmoneySdkInitilizer.PaymentParam paymentParam = builder.build();
-
         paymentParam.setMerchantHash(paymentData.getServer_hash());
         PayUmoneySdkInitilizer.startPaymentActivityForResult(this, paymentParam);
 

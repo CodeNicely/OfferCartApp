@@ -10,348 +10,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f474b909-ce54-4a5b-870a-71ffc177aee1" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/PayU_release.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/payement/OnPaymentCallback.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/payement/api/PaymentRequestApi.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/payement/model/PaymentProvider.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/payement/model/RetrofitPaymentProvider.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/payement/model/data/PaymentData.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/payement/presenter/PaymentPresenter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/payement/presenter/PaymentPresenterImpl.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp / offercart .iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /.gradle/2.14.1/taskArtifacts/cache.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /.gradle/2.14.1/taskArtifacts/cache.properties.lock" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /.gradle/2.14.1/taskArtifacts/fileHashes.bin" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /.gradle/2.14.1/taskArtifacts/fileSnapshots.bin" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /.gradle/2.14.1/taskArtifacts/fileSnapshotsToTreeSnapshotsIndex.bin" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /.gradle/2.14.1/taskArtifacts/taskArtifacts.bin" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /.gradle/2.14.1/tasks/_app_compileDebugAndroidTestJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /.gradle/2.14.1/tasks/_app_compileDebugAndroidTestJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /.gradle/2.14.1/tasks/_app_compileDebugAndroidTestJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.bin" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /.gradle/2.14.1/tasks/_app_compileDebugAndroidTestJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.bin" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /.gradle/2.14.1/tasks/_app_compileDebugUnitTestJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /.gradle/2.14.1/tasks/_app_compileDebugUnitTestJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /.gradle/2.14.1/tasks/_app_compileDebugUnitTestJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.bin" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /.gradle/2.14.1/tasks/_app_compileDebugUnitTestJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /.idea/.name" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /.idea/compiler.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /.idea/copyright/profiles_settings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /.idea/encodings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /.idea/gradle.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /.idea/libraries/adapter_rxjava_2_0_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /.idea/libraries/animated_vector_drawable_24_2_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /.idea/libraries/appcompat_v7_24_2_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /.idea/libraries/butterknife_8_4_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /.idea/libraries/butterknife_annotations_8_4_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /.idea/libraries/converter_gson_2_1_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /.idea/libraries/gson_2_7.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /.idea/libraries/hamcrest_core_1_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /.idea/libraries/junit_4_12.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /.idea/libraries/logging_interceptor_3_4_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /.idea/libraries/okhttp_3_4_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /.idea/libraries/okio_1_9_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /.idea/libraries/picasso_2_3_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /.idea/libraries/retrofit_2_0_0_beta2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /.idea/libraries/retrofit_2_1_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /.idea/libraries/rxandroid_1_2_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /.idea/libraries/rxjava_1_1_6.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /.idea/libraries/support_annotations_24_2_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /.idea/libraries/support_compat_24_2_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /.idea/libraries/support_core_ui_24_2_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /.idea/libraries/support_core_utils_24_2_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /.idea/libraries/support_fragment_24_2_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /.idea/libraries/support_media_compat_24_2_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /.idea/libraries/support_v4_24_2_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /.idea/libraries/support_vector_drawable_24_2_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /.idea/misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /.idea/runConfigurations.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /.idea/workspace.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /OfferCartApp .iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /OfferCartApp-master.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /OfferCartApp.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /app/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /app/app.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /app/build.gradle" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /app/libs/retrofit-2.0.0-beta2.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /app/proguard-rules.pro" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /app/src/androidTest/java/com/example/aman/offercart_v1/ApplicationTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /app/src/main/AndroidManifest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /app/src/main/java/com/example/aman/offercart_v1/LoginScreen/view/Api/LoginApi.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /app/src/main/java/com/example/aman/offercart_v1/LoginScreen/view/LoginCallback.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /app/src/main/java/com/example/aman/offercart_v1/LoginScreen/view/models/LoginProvider.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /app/src/main/java/com/example/aman/offercart_v1/LoginScreen/view/models/RetrofitLoginScreenProvider.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /app/src/main/java/com/example/aman/offercart_v1/LoginScreen/view/models/data/LoginData.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /app/src/main/java/com/example/aman/offercart_v1/LoginScreen/view/presenter/LoginScreenPresenter.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /app/src/main/java/com/example/aman/offercart_v1/LoginScreen/view/presenter/LoginScreenPresenterImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /app/src/main/java/com/example/aman/offercart_v1/LoginScreen/view/view/LoginScreenActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /app/src/main/java/com/example/aman/offercart_v1/LoginScreen/view/view/LoginScreenView.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /app/src/main/java/com/example/aman/offercart_v1/Otp/OtpCallback.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /app/src/main/java/com/example/aman/offercart_v1/Otp/api/OtpApi.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /app/src/main/java/com/example/aman/offercart_v1/Otp/models/OtpProvider.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /app/src/main/java/com/example/aman/offercart_v1/Otp/models/RetrofitOtpProvider.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /app/src/main/java/com/example/aman/offercart_v1/Otp/models/data/OtpData.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /app/src/main/java/com/example/aman/offercart_v1/Otp/presenter/OtpPresenter.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /app/src/main/java/com/example/aman/offercart_v1/Otp/presenter/OtpPresenterImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /app/src/main/java/com/example/aman/offercart_v1/Otp/view/OtpView.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /app/src/main/java/com/example/aman/offercart_v1/Otp/view/OtpViewImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /app/src/main/java/com/example/aman/offercart_v1/SplashScreen/SplashScreenCallback.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /app/src/main/java/com/example/aman/offercart_v1/SplashScreen/api/SplashScreenRequestApi.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /app/src/main/java/com/example/aman/offercart_v1/SplashScreen/models/RetrofitSplashScreenProvider.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /app/src/main/java/com/example/aman/offercart_v1/SplashScreen/models/SplashScreenProvider.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /app/src/main/java/com/example/aman/offercart_v1/SplashScreen/models/data/SplashScreenData.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /app/src/main/java/com/example/aman/offercart_v1/SplashScreen/presenter/SplashScreenPresenter.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /app/src/main/java/com/example/aman/offercart_v1/SplashScreen/presenter/SplashScreenPresenterImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /app/src/main/java/com/example/aman/offercart_v1/SplashScreen/view/SplashScreenActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /app/src/main/java/com/example/aman/offercart_v1/SplashScreen/view/SplashScreenView.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /app/src/main/java/com/example/aman/offercart_v1/WelcomeScreen/WelcomeScreenCallback.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /app/src/main/java/com/example/aman/offercart_v1/WelcomeScreen/api/WelcomeScreenRequestApi.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /app/src/main/java/com/example/aman/offercart_v1/WelcomeScreen/models/RetrofitWelcomeScreenProvider.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /app/src/main/java/com/example/aman/offercart_v1/WelcomeScreen/models/WelcomeScreenProvider.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /app/src/main/java/com/example/aman/offercart_v1/WelcomeScreen/models/data/WelcomeImageDetails.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /app/src/main/java/com/example/aman/offercart_v1/WelcomeScreen/models/data/WelcomeScreenData.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /app/src/main/java/com/example/aman/offercart_v1/WelcomeScreen/presenter/WelcomeScreenPresenter.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /app/src/main/java/com/example/aman/offercart_v1/WelcomeScreen/presenter/WelcomeScreenPresenterImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /app/src/main/java/com/example/aman/offercart_v1/WelcomeScreen/view/WelcomeScreenActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /app/src/main/java/com/example/aman/offercart_v1/WelcomeScreen/view/WelcomeScreenView.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /app/src/main/java/com/example/aman/offercart_v1/cityScreen/CityScreenCallback.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /app/src/main/java/com/example/aman/offercart_v1/cityScreen/api/CityScreenRequestApi.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /app/src/main/java/com/example/aman/offercart_v1/cityScreen/models/CityScreenProvider.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /app/src/main/java/com/example/aman/offercart_v1/cityScreen/models/RetrofitCityScreenProvider.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /app/src/main/java/com/example/aman/offercart_v1/cityScreen/models/data/CityScreenData.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /app/src/main/java/com/example/aman/offercart_v1/cityScreen/presenter/CityScreenPresenter.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /app/src/main/java/com/example/aman/offercart_v1/cityScreen/presenter/CityScreenPresenterImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /app/src/main/java/com/example/aman/offercart_v1/cityScreen/view/CityScreenActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /app/src/main/java/com/example/aman/offercart_v1/cityScreen/view/CityScreenView.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /app/src/main/java/com/example/aman/offercart_v1/helper/SharedPrefs.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /app/src/main/java/com/example/aman/offercart_v1/helper/Urls.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /app/src/main/res/drawable/back.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /app/src/main/res/drawable/icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /app/src/main/res/drawable/icon1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /app/src/main/res/layout/activity_cityscreen.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /app/src/main/res/layout/activity_loginscreen.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /app/src/main/res/layout/activity_main.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /app/src/main/res/layout/activity_otp.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /app/src/main/res/layout/activity_splash.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /app/src/main/res/layout/activity_splash_dialog_box.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /app/src/main/res/layout/activity_welcome.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /app/src/main/res/layout/welcome_slide1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /app/src/main/res/layout/welcome_slide2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /app/src/main/res/layout/welcome_slide3.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /app/src/main/res/layout/welcome_slide4.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /app/src/main/res/mipmap-hdpi/ic_launcher.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /app/src/main/res/mipmap-mdpi/ic_launcher.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /app/src/main/res/mipmap-xhdpi/ic_launcher.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /app/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /app/src/main/res/values-w820dp/dimens.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /app/src/main/res/values/colors.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /app/src/main/res/values/dimens.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /app/src/main/res/values/strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /app/src/main/res/values/styles.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /app/src/test/java/com/example/aman/offercart_v1/ExampleUnitTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /build.gradle" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /build/generated/mockable-android-24.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /build/intermediates/dex-cache/cache.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /gradle.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /gradle/wrapper/gradle-wrapper.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /gradle/wrapper/gradle-wrapper.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /gradlew" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /gradlew.bat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /local.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /offercart_v1.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OfferCartApp /settings.gradle" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/codenicely/discountstore/project/ApplicationTest.java" afterPath="$PROJECT_DIR$/app/src/androidTest/java/com/codenicely/discountstore/project1/ApplicationTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/PayMentGateWay.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/PayMentGateWay.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/about_us/AboutUsCallBack.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/about_us/AboutUsCallBack.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/about_us/api/AboutUsApi.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/about_us/api/AboutUsApi.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/about_us/model/AboutUsProvider.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/about_us/model/AboutUsProvider.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/about_us/model/RetrofitAboutUsProvider.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/about_us/model/RetrofitAboutUsProvider.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/about_us/model/data/AboutUsData.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/about_us/model/data/AboutUsData.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/about_us/presenter/AboutUsPresenter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/about_us/presenter/AboutUsPresenter.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/about_us/presenter/AboutUsPresenterImpl.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/about_us/presenter/AboutUsPresenterImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/about_us/view/AboutUsFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/about_us/view/AboutUsFragment.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/about_us/view/AboutUsView.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/about_us/view/AboutUsView.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/categories/ShopCategoriesCallback.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/categories/ShopCategoriesCallback.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/categories/api/Request_Categories.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/categories/api/Request_Categories.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/categories/model/CategoriesProvider.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/categories/model/CategoriesProvider.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/categories/model/MockCategoryProvider.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/categories/model/MockCategoryProvider.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/categories/model/RetrofitCategoriesProvider.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/categories/model/RetrofitCategoriesProvider.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/categories/model/data/CategoriesList.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/categories/model/data/CategoriesList.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/categories/model/data/CategoryData.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/categories/model/data/CategoryData.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/categories/presenter/CategoriesPresenter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/categories/presenter/CategoriesPresenter.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/categories/presenter/CategoriesPresenterImpl.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/categories/presenter/CategoriesPresenterImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/categories/view/CategoriesView.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/categories/view/CategoriesView.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/categories/view/CategoryAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/categories/view/CategoryAdapter.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/categories/view/CategoryFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/categories/view/CategoryFragment.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/categories/view/OnCategoriesReceived.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/categories/view/OnCategoriesReceived.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/city/api/CityScreenRequestApi.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/city/api/CityScreenRequestApi.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/city/api/SendSelectedCityApi.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/city/api/SendSelectedCityApi.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/city/models/CityScreenProvider.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/city/models/CityScreenProvider.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/city/models/RetrofitCityScreenProvider.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/city/models/RetrofitCityScreenProvider.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/city/models/data/CityScreenData.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/city/models/data/CityScreenData.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/city/models/data/SelectedCityData.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/city/models/data/SelectedCityData.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/city/presenter/CityScreenPresenter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/city/presenter/CityScreenPresenter.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/city/presenter/CityScreenPresenterImpl.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/city/presenter/CityScreenPresenterImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/city/view/CityAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/city/view/CityAdapter.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/city/view/CityFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/city/view/CityFragment.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/city/view/CityScreenView.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/city/view/CityScreenView.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/city/view/OnCitiesReceived.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/city/view/OnCitiesReceived.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/city/view/OnCitiesSent.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/city/view/OnCitiesSent.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/city/view/Response.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/city/view/Response.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/contact_us/ContactUsCallback.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/contact_us/ContactUsCallback.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/contact_us/api/ContactUsApi.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/contact_us/api/ContactUsApi.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/contact_us/model/ContactUsProvider.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/contact_us/model/ContactUsProvider.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/contact_us/model/RetrofitContactUsProvider.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/contact_us/model/RetrofitContactUsProvider.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/contact_us/model/data/ContactUsData.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/contact_us/model/data/ContactUsData.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/contact_us/presenter/ContactUsPresenter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/contact_us/presenter/ContactUsPresenter.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/contact_us/presenter/ContactUsPresenterImpl.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/contact_us/presenter/ContactUsPresenterImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/contact_us/view/ContactUsFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/contact_us/view/ContactUsFragment.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/contact_us/view/ContactUsView.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/contact_us/view/ContactUsView.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/developers/DevelopersCallback.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/developers/DevelopersCallback.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/developers/api/DevelopersApi.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/developers/api/DevelopersApi.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/developers/model/DeveloperProvider.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/developers/model/DeveloperProvider.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/developers/model/RetrofitDeveloperProvider.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/developers/model/RetrofitDeveloperProvider.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/developers/model/data/CompanyData.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/developers/model/data/CompanyData.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/developers/model/data/DeveloperData.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/developers/model/data/DeveloperData.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/developers/presenter/DevelopersPresenter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/developers/presenter/DevelopersPresenter.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/developers/presenter/DevelopersPresenterImpl.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/developers/presenter/DevelopersPresenterImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/developers/view/DeveloperFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/developers/view/DeveloperFragment.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/developers/view/DeveloperView.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/developers/view/DeveloperView.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/helper/FontsOverride.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/helper/FontsOverride.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/helper/Keys.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/helper/Keys.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/helper/MyApplication.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/helper/MyApplication.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/helper/SharedPrefs.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/helper/SharedPrefs.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/helper/Urls.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/helper/Urls.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/helper/image_loader/GlideImageLoader.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/helper/image_loader/GlideImageLoader.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/helper/image_loader/ImageLoader.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/helper/image_loader/ImageLoader.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/helper/image_loader/PicassoImageLoader.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/helper/image_loader/PicassoImageLoader.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/home/HomePage.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/home/HomePage.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/home/HomePageInterface.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/home/HomePageInterface.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/login/LoginCallback.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/login/LoginCallback.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/login/api/LoginApi.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/login/api/LoginApi.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/login/models/LoginProvider.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/login/models/LoginProvider.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/login/models/RetrofitLoginScreenProvider.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/login/models/RetrofitLoginScreenProvider.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/login/models/data/LoginData.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/login/models/data/LoginData.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/login/presenter/LoginScreenPresenter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/login/presenter/LoginScreenPresenter.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/login/presenter/LoginScreenPresenterImpl.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/login/presenter/LoginScreenPresenterImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/login/view/LoginScreenActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/login/view/LoginScreenActivity.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/login/view/LoginScreenView.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/login/view/LoginScreenView.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/my_orders/api/MyOrdersApi.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/my_orders/api/MyOrdersApi.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/my_orders/model/MockDataProvider.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/my_orders/model/MockDataProvider.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/my_orders/model/MyOrdersProvider.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/my_orders/model/MyOrdersProvider.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/my_orders/model/RetrofitOrdersProvider.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/my_orders/model/RetrofitOrdersProvider.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/my_orders/model/data/OrderDetails.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/my_orders/model/data/OrderDetails.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/my_orders/model/data/OrdersData.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/my_orders/model/data/OrdersData.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/my_orders/presenter/MyOrdersPresenter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/my_orders/presenter/MyOrdersPresenter.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/my_orders/presenter/MyOrdersPresenterImpl.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/my_orders/presenter/MyOrdersPresenterImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/my_orders/view/Adapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/my_orders/view/Adapter.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/my_orders/view/MyOrdersFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/my_orders/view/MyOrdersFragment.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/my_orders/view/MyOrdersInterface.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/my_orders/view/MyOrdersInterface.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/my_orders/view/OnOrdersReceived.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/my_orders/view/OnOrdersReceived.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/offer/OfferScreenDetailsCallback.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/offer/OfferScreenDetailsCallback.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/offer/OfferScreenUpdateDataCallback.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/offer/OfferScreenUpdateDataCallback.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/offer/OnBuyOffer.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/offer/OnBuyOffer.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/offer/api/BuyOfferApi.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/offer/api/BuyOfferApi.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/offer/api/OfferScreenRequestApi.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/offer/api/OfferScreenRequestApi.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/offer/model/BuyOffer_Provider.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/offer/model/BuyOffer_Provider.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/offer/model/OfferScreenDetailsProvider.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/offer/model/OfferScreenDetailsProvider.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/offer/model/RetrofitBuyOfferProvider.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/offer/model/RetrofitBuyOfferProvider.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/offer/model/RetrofitOfferScreenDetailsProvider.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/offer/model/RetrofitOfferScreenDetailsProvider.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/offer/model/data/OfferData.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/offer/model/data/OfferData.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/offer/model/data/OfferScreenDetails.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/offer/model/data/OfferScreenDetails.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/offer/model/data/OfferScreenList.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/offer/model/data/OfferScreenList.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/offer/model/data/OfferScreenUpdateData.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/offer/model/data/OfferScreenUpdateData.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/offer/presenter/BuyOfferPresenter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/offer/presenter/BuyOfferPresenter.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/offer/presenter/BuyOfferPresenterImpl.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/offer/presenter/BuyOfferPresenterImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/offer/presenter/OfferScreenDetailsPresenter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/offer/presenter/OfferScreenDetailsPresenter.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/offer/presenter/OfferScreenDetailsPresenterImpl.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/offer/presenter/OfferScreenDetailsPresenterImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/offer/view/BuyOfferView.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/offer/view/BuyOfferView.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/offer/view/OfferFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/offer/view/OfferFragment.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/offer/view/OfferScreenAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/offer/view/OfferScreenAdapter.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/offer/view/OfferScreenView.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/offer/view/OfferScreenView.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/payement/view/PaymentActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/payement/view/PaymentActivity.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/payement/view/PaymentView.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/payement/view/PaymentView.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/shops/api/ShopsApi.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/shops/api/ShopsApi.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/shops/model/MockShopProvider.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/shops/model/MockShopProvider.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/shops/model/RetrofitShopProvider.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/shops/model/RetrofitShopProvider.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/shops/model/ShopProvider.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/shops/model/ShopProvider.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/shops/model/data/ShopData.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/shops/model/data/ShopData.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/shops/model/data/ShopList.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/shops/model/data/ShopList.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/shops/presenter/ShopPresenter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/shops/presenter/ShopPresenter.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/shops/presenter/ShopPresenterImpl.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/shops/presenter/ShopPresenterImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/shops/view/OnShopsReceived.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/shops/view/OnShopsReceived.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/shops/view/ShopAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/shops/view/ShopAdapter.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/shops/view/ShopFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/shops/view/ShopFragment.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/shops/view/ShopView.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/shops/view/ShopView.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/splash_screen/SplashScreenCallback.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/splash_screen/SplashScreenCallback.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/splash_screen/api/SplashScreenRequestApi.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/splash_screen/api/SplashScreenRequestApi.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/splash_screen/models/RetrofitSplashScreenProvider.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/splash_screen/models/RetrofitSplashScreenProvider.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/splash_screen/models/SplashScreenProvider.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/splash_screen/models/SplashScreenProvider.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/splash_screen/models/data/SplashScreenData.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/splash_screen/models/data/SplashScreenData.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/splash_screen/presenter/SplashScreenPresenter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/splash_screen/presenter/SplashScreenPresenter.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/splash_screen/presenter/SplashScreenPresenterImpl.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/splash_screen/presenter/SplashScreenPresenterImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/splash_screen/view/SplashScreenActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/splash_screen/view/SplashScreenActivity.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/splash_screen/view/SplashScreenView.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/splash_screen/view/SplashScreenView.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/verify_otp/OtpCallback.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/verify_otp/OtpCallback.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/verify_otp/api/OtpApi.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/verify_otp/api/OtpApi.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/verify_otp/models/OtpProvider.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/verify_otp/models/OtpProvider.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/verify_otp/models/RetrofitOtpProvider.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/verify_otp/models/RetrofitOtpProvider.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/verify_otp/models/data/OtpData.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/verify_otp/models/data/OtpData.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/verify_otp/presenter/OtpPresenter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/verify_otp/presenter/OtpPresenter.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/verify_otp/presenter/OtpPresenterImpl.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/verify_otp/presenter/OtpPresenterImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/verify_otp/view/OtpView.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/verify_otp/view/OtpView.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/verify_otp/view/OtpViewImpl.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/verify_otp/view/OtpViewImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/wallet/api/WalletApi.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/wallet/api/WalletApi.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/wallet/model/RetrofitWalletProvider.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/wallet/model/RetrofitWalletProvider.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/wallet/model/WalletProvider.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/wallet/model/WalletProvider.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/wallet/model/data/WalletData.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/wallet/model/data/WalletData.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/wallet/presenter/WalletPresenter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/wallet/presenter/WalletPresenter.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/wallet/presenter/WalletPresenterImpl.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/wallet/presenter/WalletPresenterImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/wallet/view/OnWalletInfoReceived.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/wallet/view/OnWalletInfoReceived.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/wallet/view/ViewPagerAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/wallet/view/ViewPagerAdapter.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/wallet/view/WalletActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/wallet/view/WalletActivity.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/wallet/view/WalletFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/wallet/view/WalletFragment.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/wallet/view/WalletInterface.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/wallet/view/WalletInterface.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/welcome_screen/WelcomeScreenCallback.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/welcome_screen/WelcomeScreenCallback.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/welcome_screen/api/WelcomeScreenRequestApi.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/welcome_screen/api/WelcomeScreenRequestApi.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/welcome_screen/models/RetrofitWelcomeScreenProvider.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/welcome_screen/models/RetrofitWelcomeScreenProvider.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/welcome_screen/models/WelcomeScreenProvider.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/welcome_screen/models/WelcomeScreenProvider.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/welcome_screen/models/data/WelcomeImageDetails.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/welcome_screen/models/data/WelcomeImageDetails.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/welcome_screen/models/data/WelcomeScreenData.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/welcome_screen/models/data/WelcomeScreenData.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/welcome_screen/presenter/WelcomeScreenPresenter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/welcome_screen/presenter/WelcomeScreenPresenter.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/welcome_screen/presenter/WelcomeScreenPresenterImpl.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/welcome_screen/presenter/WelcomeScreenPresenterImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/welcome_screen/view/ViewPagerAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/welcome_screen/view/ViewPagerAdapter.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/welcome_screen/view/WelcomeScreenActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/welcome_screen/view/WelcomeScreenActivity.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project/welcome_screen/view/WelcomeScreenView.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/welcome_screen/view/WelcomeScreenView.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_test.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_payment.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/test/java/com/codenicely/discountstore/project/ExampleUnitTest.java" afterPath="$PROJECT_DIR$/app/src/test/java/com/codenicely/discountstore/project1/ExampleUnitTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/cache.properties.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshotsToTreeSnapshotsIndex.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshotsToTreeSnapshotsIndex.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/taskArtifacts.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_payUMoneysdk_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_payUMoneysdk_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_payUMoneysdk_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_payUMoneysdk_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_payUMoneysdk_compileReleaseJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_payUMoneysdk_compileReleaseJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_payUMoneysdk_compileReleaseJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_payUMoneysdk_compileReleaseJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app-release.apk" afterPath="$PROJECT_DIR$/app/app-release.apk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/generated/mockable-android-23.jar" afterPath="$PROJECT_DIR$/build/generated/mockable-android-23.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/generated/mockable-android-24.jar" afterPath="$PROJECT_DIR$/build/generated/mockable-android-24.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build.gradle" afterPath="$PROJECT_DIR$/app/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/google-services.json" afterPath="$PROJECT_DIR$/app/google-services.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_wallet.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_wallet.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/payement/view/PaymentActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/payement/view/PaymentActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" />
     </list>
     <ignored path="OfferCartApp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -383,14 +50,16 @@
     <favorites_list name="OfferCartApp" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="PaymentActivity.java" pinned="false" current-in-tab="false">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="PaymentActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/payement/view/PaymentActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="142">
-              <caret line="28" column="28" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="28" />
+            <state relative-caret-position="234">
+              <caret line="71" column="28" selection-start-line="71" selection-start-column="28" selection-end-line="71" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#11220#11408#0" expanded="true" />
+                <element signature="e#11407#11408#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -399,7 +68,7 @@
       <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
+            <state relative-caret-position="558">
               <caret line="31" column="2" selection-start-line="31" selection-start-column="2" selection-end-line="31" selection-end-column="2" />
               <folding />
             </state>
@@ -408,47 +77,66 @@
       </file>
       <file leaf-file-name="fragment_offers.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_offers.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="27" column="45" selection-start-line="27" selection-start-column="45" selection-end-line="27" selection-end-column="45" />
-              <folding>
-                <element signature="e#2902#2942#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
           <provider editor-type-id="android-designer2">
             <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="486">
+              <caret line="27" column="45" selection-start-line="27" selection-start-column="45" selection-end-line="27" selection-end-column="45" />
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="HomePage.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/home/HomePage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-6948">
+            <state relative-caret-position="54">
               <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2524#2555#0" expanded="true" />
-                <element signature="e#2557#2589#0" expanded="true" />
-                <element signature="e#4158#4391#0" expanded="true" />
-                <element signature="e#4390#4391#0" expanded="true" />
-                <element signature="e#4458#4662#0" expanded="true" />
-                <element signature="e#4661#4662#0" expanded="true" />
-                <element signature="e#16550#16738#0" expanded="true" />
-                <element signature="e#16737#16738#0" expanded="true" />
+                <element signature="e#8756#8757#0" expanded="false" />
+                <element signature="e#8816#8817#0" expanded="false" />
+                <element signature="e#16679#16680#0" expanded="false" />
+                <element signature="e#16727#16728#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WalletFragment.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="WalletFragment.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/wallet/view/WalletFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="146">
-              <caret line="145" column="41" selection-start-line="145" selection-start-column="41" selection-end-line="145" selection-end-column="41" />
+            <state relative-caret-position="2268">
+              <caret line="161" column="13" selection-start-line="161" selection-start-column="13" selection-end-line="161" selection-end-column="13" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#3014#3015#0" expanded="false" />
+                <element signature="e#3064#3065#0" expanded="false" />
+                <element signature="e#3684#3685#0" expanded="false" />
+                <element signature="e#3745#3746#0" expanded="false" />
+                <element signature="e#3884#3885#0" expanded="false" />
+                <element signature="e#3936#3937#0" expanded="false" />
+                <element signature="e#4075#4076#0" expanded="false" />
+                <element signature="e#4128#4129#0" expanded="false" />
+                <element signature="e#4267#4268#0" expanded="false" />
+                <element signature="e#4320#4321#0" expanded="false" />
+                <element signature="e#5353#5354#0" expanded="false" />
+                <element signature="e#5392#5393#0" expanded="false" />
+                <element signature="e#5914#5915#0" expanded="false" />
+                <element signature="e#5970#5971#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+          <provider editor-type-id="android-manifest">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="684">
+              <caret line="38" column="99" selection-start-line="38" selection-start-column="99" selection-end-line="38" selection-end-column="99" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -466,7 +154,7 @@
       <file leaf-file-name="PaymentData.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/payement/model/data/PaymentData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-888">
+            <state relative-caret-position="288">
               <caret line="16" column="20" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
               <folding>
                 <element signature="e#1078#1079#0" expanded="true" />
@@ -499,11 +187,9 @@
       <file leaf-file-name="PaymentPresenterImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/payement/presenter/PaymentPresenterImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="464">
+            <state relative-caret-position="576">
               <caret line="35" column="17" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="17" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -3324,8 +3010,9 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/payement/view/PaymentActivity1.java" />
         <option value="$PROJECT_DIR$/app/libs/PayU-release.jar!/com/payu/india/Payu/Payu.class" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/payement/view/PaymentActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/wallet/view/WalletFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/payement/view/PaymentActivity.java" />
       </list>
     </option>
   </component>
@@ -3359,10 +3046,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane" />
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -3381,18 +3065,11 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OfferCartApp" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -3401,8 +3078,8 @@
     <property name="settings.editor.selected.configurable" value="android.sdk-updates" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="android.sdk.path" value="$USER_HOME$/Android/Sdk" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../MaterialDesignDrawer" />
-    <property name="device.picker.selection" value="192.168.0.105:5556" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../GroceryApp" />
+    <property name="device.picker.selection" value="5729b184" />
     <property name="UI_DESIGNER_EDITOR_MODE.NlPaletteManager-NlPreviewForm.SHOW" value="false" />
   </component>
   <component name="RunManager" selected="Android App.app">
@@ -3713,37 +3390,37 @@
     <frame x="0" y="24" width="1366" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -3755,6 +3432,125 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/payement/view/PaymentActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#11220#11408#0" expanded="true" />
+            <element signature="e#11407#11408#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="558">
+          <caret line="31" column="2" selection-start-line="31" selection-start-column="2" selection-end-line="31" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_offers.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="27" column="45" selection-start-line="27" selection-start-column="45" selection-end-line="27" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/home/HomePage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding>
+            <element signature="e#8756#8757#0" expanded="false" />
+            <element signature="e#8816#8817#0" expanded="false" />
+            <element signature="e#16679#16680#0" expanded="false" />
+            <element signature="e#16727#16728#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/wallet/view/WalletFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2268">
+          <caret line="161" column="13" selection-start-line="161" selection-start-column="13" selection-end-line="161" selection-end-column="13" />
+          <folding>
+            <element signature="e#3014#3015#0" expanded="false" />
+            <element signature="e#3064#3065#0" expanded="false" />
+            <element signature="e#3684#3685#0" expanded="false" />
+            <element signature="e#3745#3746#0" expanded="false" />
+            <element signature="e#3884#3885#0" expanded="false" />
+            <element signature="e#3936#3937#0" expanded="false" />
+            <element signature="e#4075#4076#0" expanded="false" />
+            <element signature="e#4128#4129#0" expanded="false" />
+            <element signature="e#4267#4268#0" expanded="false" />
+            <element signature="e#4320#4321#0" expanded="false" />
+            <element signature="e#5353#5354#0" expanded="false" />
+            <element signature="e#5392#5393#0" expanded="false" />
+            <element signature="e#5914#5915#0" expanded="false" />
+            <element signature="e#5970#5971#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="684">
+          <caret line="38" column="99" selection-start-line="38" selection-start-column="99" selection-end-line="38" selection-end-column="99" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/helper/Urls.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/payement/model/data/PaymentData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" column="20" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
+          <folding>
+            <element signature="e#1078#1079#0" expanded="true" />
+            <element signature="e#1108#1109#0" expanded="true" />
+            <element signature="e#1142#1143#0" expanded="true" />
+            <element signature="e#1172#1173#0" expanded="true" />
+            <element signature="e#1205#1206#0" expanded="true" />
+            <element signature="e#1234#1235#0" expanded="true" />
+            <element signature="e#1275#1276#0" expanded="true" />
+            <element signature="e#1312#1313#0" expanded="true" />
+            <element signature="e#1345#1346#0" expanded="true" />
+            <element signature="e#1374#1375#0" expanded="true" />
+            <element signature="e#1413#1414#0" expanded="true" />
+            <element signature="e#1448#1449#0" expanded="true" />
+            <element signature="e#1479#1480#0" expanded="true" />
+            <element signature="e#1506#1507#0" expanded="true" />
+            <element signature="e#1538#1539#0" expanded="true" />
+            <element signature="e#1566#1567#0" expanded="true" />
+            <element signature="e#1596#1597#0" expanded="true" />
+            <element signature="e#1622#1623#0" expanded="true" />
+            <element signature="e#1660#1661#0" expanded="true" />
+            <element signature="e#1694#1695#0" expanded="true" />
+            <element signature="e#1732#1733#0" expanded="true" />
+            <element signature="e#1766#1767#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/payement/presenter/PaymentPresenterImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="35" column="17" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/helper/Urls.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="482">
@@ -3767,7 +3563,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3775,7 +3570,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3799,7 +3593,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="10" column="34" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3807,26 +3600,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="10" column="34" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_payment.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
           <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
-          <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/payement/OnPaymentCallback.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3834,7 +3624,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="414">
           <caret line="36" column="5" selection-start-line="24" selection-start-column="7" selection-end-line="36" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3852,9 +3641,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
           <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -3862,17 +3648,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="15" column="51" selection-start-line="15" selection-start-column="51" selection-end-line="15" selection-end-column="51" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/payement/presenter/PaymentPresenterImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
+        <state relative-caret-position="576">
           <caret line="35" column="17" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -3886,7 +3669,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/payement/model/data/PaymentData.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-888">
+        <state relative-caret-position="288">
           <caret line="16" column="20" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
           <folding>
             <element signature="e#1078#1079#0" expanded="true" />
@@ -3916,33 +3699,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_offers.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="27" column="45" selection-start-line="27" selection-start-column="45" selection-end-line="27" selection-end-column="45" />
-          <folding>
-            <element signature="e#2902#2942#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/home/HomePage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6948">
-          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2524#2555#0" expanded="true" />
-            <element signature="e#2557#2589#0" expanded="true" />
-            <element signature="e#4158#4391#0" expanded="true" />
-            <element signature="e#4390#4391#0" expanded="true" />
-            <element signature="e#4458#4662#0" expanded="true" />
-            <element signature="e#4661#4662#0" expanded="true" />
-            <element signature="e#16550#16738#0" expanded="true" />
-            <element signature="e#16737#16738#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="486">
+          <caret line="27" column="45" selection-start-line="27" selection-start-column="45" selection-end-line="27" selection-end-column="45" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -3952,6 +3715,8 @@
           <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#11220#11408#0" expanded="true" />
+            <element signature="e#11407#11408#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -3960,7 +3725,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-252">
           <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3968,34 +3732,72 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
+        <state relative-caret-position="558">
           <caret line="31" column="2" selection-start-line="31" selection-start-column="2" selection-end-line="31" selection-end-column="2" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/payement/view/PaymentActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/wallet/view/WalletFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="28" column="28" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="28" />
+        <state relative-caret-position="2268">
+          <caret line="161" column="13" selection-start-line="161" selection-start-column="13" selection-end-line="161" selection-end-column="13" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#3014#3015#0" expanded="false" />
+            <element signature="e#3064#3065#0" expanded="false" />
+            <element signature="e#3684#3685#0" expanded="false" />
+            <element signature="e#3745#3746#0" expanded="false" />
+            <element signature="e#3884#3885#0" expanded="false" />
+            <element signature="e#3936#3937#0" expanded="false" />
+            <element signature="e#4075#4076#0" expanded="false" />
+            <element signature="e#4128#4129#0" expanded="false" />
+            <element signature="e#4267#4268#0" expanded="false" />
+            <element signature="e#4320#4321#0" expanded="false" />
+            <element signature="e#5353#5354#0" expanded="false" />
+            <element signature="e#5392#5393#0" expanded="false" />
+            <element signature="e#5914#5915#0" expanded="false" />
+            <element signature="e#5970#5971#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/wallet/view/WalletFragment.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="145" column="41" selection-start-line="145" selection-start-column="41" selection-end-line="145" selection-end-column="41" />
+        <state relative-caret-position="684">
+          <caret line="38" column="99" selection-start-line="38" selection-start-column="99" selection-end-line="38" selection-end-column="99" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/home/HomePage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding>
+            <element signature="e#8756#8757#0" expanded="false" />
+            <element signature="e#8816#8817#0" expanded="false" />
+            <element signature="e#16679#16680#0" expanded="false" />
+            <element signature="e#16727#16728#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project1/payement/view/PaymentActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="71" column="28" selection-start-line="71" selection-start-column="28" selection-end-line="71" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#11220#11408#0" expanded="true" />
+            <element signature="e#11407#11408#0" expanded="true" />
           </folding>
         </state>
       </provider>
