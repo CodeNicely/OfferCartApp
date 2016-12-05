@@ -264,17 +264,6 @@ public class PaymentActivity extends AppCompatActivity implements PaymentView {
 
         if (requestCode == PayUmoneySdkInitilizer.PAYU_SDK_PAYMENT_REQUEST_CODE) {
 
-/*
-            if (data != null && data.hasExtra("result")) {
-                String responsePayUmoney = data.getStringExtra("result");
-                if (SdkHelper.checkForValidString(responsePayUmoney))
-                    showDialogMessage(responsePayUmoney);
-            } else {
-                showDialogMessage("Unable to get Status of Payment");
-            }
-
-*/
-
             if (resultCode == RESULT_OK) {
                 Log.i("Response", "Success - Payment ID : " + data.getStringExtra(SdkConstants.PAYMENT_ID));
                 String paymentId = data.getStringExtra(SdkConstants.PAYMENT_ID);
@@ -297,7 +286,22 @@ public class PaymentActivity extends AppCompatActivity implements PaymentView {
                 Log.i("Response", "User returned without login");
                 showDialogMessage("User returned without login");
             }
+
+
+/*
+            if (data != null && data.hasExtra("result")) {
+                String responsePayUmoney = data.getStringExtra("result");
+                if (SdkHelper.checkForValidString(responsePayUmoney))
+                    showDialogMessage(responsePayUmoney);
+            } else {
+                showDialogMessage("Unable to get Status of Payment");
+            }
+
+*/
+
         }
+
+
     }
 
     private void showDialogMessage(String message) {
@@ -336,9 +340,13 @@ public class PaymentActivity extends AppCompatActivity implements PaymentView {
 
         PayUmoneySdkInitilizer.PaymentParam.Builder builder = new PayUmoneySdkInitilizer.PaymentParam.Builder();
 
-        Log.d(TAG,paymentData.getMessage()+paymentData.getProduct_name()+paymentData.getAmount());
+        Log.d(TAG,paymentData.getMessage()+paymentData.getProduct_name()+paymentData.getAmount()+paymentData.getMerchant_id()+paymentData.getKey());
 
-        builder.setAmount(paymentData.getAmount())
+        builder
+                .setMerchantId(paymentData.getMerchant_id())
+                .setKey(paymentData.getKey())
+                .setIsDebug(true)
+                .setAmount(paymentData.getAmount())
                 .setTnxId(paymentData.getTransaction_id())
                 .setPhone(paymentData.getMobile())
                 .setProductName(paymentData.getProduct_name())
@@ -350,10 +358,7 @@ public class PaymentActivity extends AppCompatActivity implements PaymentView {
                 .setUdf2("")
                 .setUdf3("")
                 .setUdf4("")
-                .setUdf5("")
-                .setIsDebug(false)
-                .setKey(paymentData.getKey())
-                .setMerchantId(paymentData.getMerchant_id());
+                .setUdf5("");
 
         PayUmoneySdkInitilizer.PaymentParam paymentParam = builder.build();
         paymentParam.setMerchantHash(paymentData.getServer_hash());
