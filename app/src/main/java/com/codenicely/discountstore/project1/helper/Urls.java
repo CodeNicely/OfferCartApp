@@ -40,4 +40,5 @@ public class Urls {
     public static final String SUB_URL_CONTACT_US = "contact_us/";
     public static final String SUB_URL_DEVELOPERS = "developers/";
    public static final String SUB_URL_PAYMENT_HASH = "payment_hash/";
+    public static final String SUB_URL_UPDATE_PAYMENT_STATUS ="update_payment_status/" ;
 }

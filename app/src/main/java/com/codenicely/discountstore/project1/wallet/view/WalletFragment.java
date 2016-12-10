@@ -18,7 +18,7 @@ import android.widget.Toast;
 
 import com.codenicely.discountstore.project1.R;
 import com.codenicely.discountstore.project1.helper.Keys;
-import com.codenicely.discountstore.project1.payement.view.PaymentActivity;
+import com.codenicely.discountstore.project1.payment.view.PaymentActivity;
 import com.codenicely.discountstore.project1.wallet.model.RetrofitWalletProvider;
 import com.codenicely.discountstore.project1.wallet.model.data.WalletData;
 import com.codenicely.discountstore.project1.wallet.presenter.WalletPresenter;
