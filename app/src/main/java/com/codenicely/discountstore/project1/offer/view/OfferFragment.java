@@ -77,9 +77,11 @@ public class OfferFragment extends Fragment implements OfferScreenView, BuyOffer
 
     @BindView(R.id.imageProgressBar)
     ProgressBar imageProgressBar;
+/*
 
     @BindView(R.id.collapsingToolbar)
     CollapsingToolbarLayout collapsingToolbarLayout;
+*/
 
     private ImageLoader imageLoader;
 
@@ -131,6 +133,7 @@ public class OfferFragment extends Fragment implements OfferScreenView, BuyOffer
 
         ((AppCompatActivity) getActivity()).getSupportActionBar().hide();
         View view = inflater.inflate(R.layout.fragment_offers, container, false);
+
         ButterKnife.bind(this, view);
 
         imageLoader=new GlideImageLoader(getContext());
@@ -208,7 +211,7 @@ public class OfferFragment extends Fragment implements OfferScreenView, BuyOffer
     @Override
     public void onOfferReceived(OfferScreenList offerScreenList) {
 
-        setCollapsingToolbarLayoutTitle(offerScreenList.getShop_name()+" - Offers");
+  //      setCollapsingToolbarLayoutTitle(offerScreenList.getShop_name()+" - Offers");
      //   toolbar.setTitle(offerScreenList.getShop_name()+" - Offers ");
         imageLoader.loadImage(offerScreenList.getShop_image(),shopImage,imageProgressBar);
         shopName.setText(offerScreenList.getShop_name());
@@ -248,29 +251,46 @@ public class OfferFragment extends Fragment implements OfferScreenView, BuyOffer
 
     @Override
     public void onOfferBuy(OfferData buyOfferData) {
-        String status;
         if(buyOfferData.isSuccess()){
-            status="Successful";
+            final AlertDialog ad = new AlertDialog.Builder(getActivity())
+                    .create();
+            ad.setIcon(R.drawable.discount_store_logo);
+
+            ad.setCancelable(false);
+            ad.setTitle("Buying Offer Successful \n "+ "Offer Price "+String.valueOf(buyOfferData.getPrice())+"deducted from wallet.");
+            ad.setMessage(buyOfferData.getMessage()+"\n\n"+"You can checkout your order status in My Orders Section");
+            ad.setCancelable(false);
+            ad.setButton(DialogInterface.BUTTON_POSITIVE, "Okay", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    //  ((HomePage)getActivity()).addFragment);
+                    ad.cancel();
+
+                }
+            });
+            ad.show();
+
         }else {
-            status = "Failed";
+            final AlertDialog ad = new AlertDialog.Builder(getActivity())
+                    .create();
+            ad.setIcon(R.drawable.discount_store_logo);
+
+            ad.setCancelable(false);
+            ad.setTitle("Buying Offer Failed");
+            ad.setMessage(buyOfferData.getMessage()+"\n\n"+"You can checkout your order status in My Orders Section");
+            ad.setCancelable(false);
+            ad.setButton(DialogInterface.BUTTON_POSITIVE, "Okay", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    //  ((HomePage)getActivity()).addFragment);
+                    ad.cancel();
+
+                }
+            });
+            ad.show();
+
         }
 
-        final AlertDialog ad = new AlertDialog.Builder(getActivity())
-                .create();
-        ad.setIcon(R.drawable.discount_store_logo);
-
-        ad.setCancelable(false);
-        ad.setTitle("Buying Offer "+ status);
-        ad.setMessage(buyOfferData.getMessage()+"\n\n"+"You can checkout your order status in My Orders Section");
-        ad.setCancelable(false);
-        ad.setButton(DialogInterface.BUTTON_POSITIVE, "Okay", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-              //  ((HomePage)getActivity()).addFragment);
-                ad.cancel();
-            }
-        });
-        ad.show();
 
     }
 
@@ -301,13 +321,13 @@ public class OfferFragment extends Fragment implements OfferScreenView, BuyOffer
 
     }
 
-    private void setCollapsingToolbarLayoutTitle(String title) {
+/*    private void setCollapsingToolbarLayoutTitle(String title) {
         collapsingToolbarLayout.setTitle(title);
         collapsingToolbarLayout.setExpandedTitleTextAppearance(R.style.ExpandedAppBar);
         collapsingToolbarLayout.setCollapsedTitleTextAppearance(R.style.CollapsedAppBar);
         collapsingToolbarLayout.setExpandedTitleTextAppearance(R.style.ExpandedAppBarPlus1);
         collapsingToolbarLayout.setCollapsedTitleTextAppearance(R.style.CollapsedAppBarPlus1);
-    }
+    }*/
 
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name

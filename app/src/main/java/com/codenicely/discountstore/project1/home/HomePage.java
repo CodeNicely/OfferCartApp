@@ -45,6 +45,7 @@ public class HomePage extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_activity);
+
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_NOSENSOR);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -59,10 +60,10 @@ public class HomePage extends AppCompatActivity
 
         sharedPrefs = new SharedPrefs(this);
 
-        if (!sharedPrefs.getCity().equals("NA")) {
+         if (!sharedPrefs.getCity().equals("NA")) {
             setFragment(new CategoryFragment(), "Categories");
 
-        } else {
+        } else  {
             setFragment(new CityFragment(), "City");
 
         }
@@ -77,6 +78,14 @@ public class HomePage extends AppCompatActivity
             getFragmentManager().popBackStack(backStackId, FragmentManager.POP_BACK_STACK_INCLUSIVE);
 
         }
+        if(getIntent().getBooleanExtra(Keys.KEY_OPEN_WALLET, false)){
+
+            addFragment(new WalletFragment(),"WalletFragment");
+            getSupportActionBar().hide();
+
+        }
+
+
     }
 
     @Override

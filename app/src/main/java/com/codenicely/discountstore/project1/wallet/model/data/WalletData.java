@@ -4,17 +4,17 @@ package com.codenicely.discountstore.project1.wallet.model.data;
  * Created by iket on 20/10/16.
  */
 public class WalletData {
-    private String balance;
+    private int balance;
     private String message;
     private boolean success;
 
-    public WalletData(String balance, String message, boolean success) {
+    public WalletData(int balance, String message, boolean success) {
         this.balance = balance;
         this.message = message;
         this.success = success;
     }
 
-    public String getBalance() {
+    public int getBalance() {
         return balance;
     }
 

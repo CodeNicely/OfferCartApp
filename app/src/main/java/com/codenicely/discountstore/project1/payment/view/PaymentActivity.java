@@ -13,10 +13,12 @@ import android.widget.Toast;
 import com.codenicely.discountstore.project1.R;
 import com.codenicely.discountstore.project1.helper.Keys;
 import com.codenicely.discountstore.project1.helper.SharedPrefs;
+import com.codenicely.discountstore.project1.home.HomePage;
 import com.codenicely.discountstore.project1.payment.model.RetrofitPaymentProvider;
 import com.codenicely.discountstore.project1.payment.model.data.PaymentData;
 import com.codenicely.discountstore.project1.payment.presenter.PaymentPresenter;
 import com.codenicely.discountstore.project1.payment.presenter.PaymentPresenterImpl;
+import com.codenicely.discountstore.project1.wallet.view.WalletActivity;
 import com.payUMoney.sdk.PayUmoneySdkInitilizer;
 import com.payUMoney.sdk.SdkConstants;
 
@@ -273,18 +275,27 @@ public class PaymentActivity extends AppCompatActivity implements PaymentView {
                 String paymentId = data.getStringExtra(SdkConstants.PAYMENT_ID);
                 //    showDialogMessage("Payment Success Id : " + paymentId);
                 paymentPresenter.updatePaymentStatus(sharedPrefs.getAccessToken(), transaction_id);
-
+                Intent intent=new Intent(this, HomePage.class);
+                intent.putExtra(Keys.KEY_OPEN_WALLET,true);
+                startActivity(intent);
+                finish();
 
             } else if (resultCode == RESULT_CANCELED) {
                 Log.i("Response", "failure");
              //   showDialogMessage("cancelled");
                 paymentPresenter.updatePaymentStatus(sharedPrefs.getAccessToken(), transaction_id);
-
+                Intent intent=new Intent(this, HomePage.class);
+                intent.putExtra(Keys.KEY_OPEN_WALLET,true);
+                startActivity(intent);
+                finish();
             } else if (resultCode == PayUmoneySdkInitilizer.RESULT_FAILED) {
                 Log.i("app_activity", "failure");
 
                 paymentPresenter.updatePaymentStatus(sharedPrefs.getAccessToken(), transaction_id);
-
+                Intent intent=new Intent(this, HomePage.class);
+                intent.putExtra(Keys.KEY_OPEN_WALLET,true);
+                startActivity(intent);
+                finish();
 /*
                 if (data != null) {
                     if (data.getStringExtra(SdkConstants.RESULT).equals("cancel")) {
@@ -301,7 +312,9 @@ public class PaymentActivity extends AppCompatActivity implements PaymentView {
                 //Write your code if there's no result
             } else if (resultCode == PayUmoneySdkInitilizer.RESULT_BACK) {
                 Log.i("Response", "User returned without login");
-                showDialogMessage("User returned without login");
+                Toast.makeText(this, "User Returned Without Login to PayuMoney", Toast.LENGTH_SHORT).show();
+//                showDialogMessage("User returned without login");
+                finish();
             }
 
 

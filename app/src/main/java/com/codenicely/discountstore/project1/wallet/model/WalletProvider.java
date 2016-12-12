@@ -7,5 +7,5 @@ import com.codenicely.discountstore.project1.wallet.view.OnWalletInfoReceived;
  */
 public interface WalletProvider {
 
-    void getWalletInfo(String user_id, OnWalletInfoReceived onWalletInfoReceived);
+    void getWalletInfo(String access_token, OnWalletInfoReceived onWalletInfoReceived);
 }

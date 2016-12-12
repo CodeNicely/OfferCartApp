@@ -18,9 +18,9 @@ public class WalletPresenterImpl implements WalletPresenter {
     }
 
     @Override
-    public void getWallet(String user_id) {
+    public void getWallet(String access_token) {
         walletInterface.showProgressbar(true);
-        walletProvider.getWalletInfo(user_id, new OnWalletInfoReceived() {
+        walletProvider.getWalletInfo(access_token, new OnWalletInfoReceived() {
             @Override
             public void onFailure() {
                 walletInterface.showProgressbar(false);
@@ -32,6 +32,7 @@ public class WalletPresenterImpl implements WalletPresenter {
                 if (walletData.isSuccess()) {
                     walletInterface.showProgressbar(false);
                     walletInterface.walletReceived(walletData);
+                    walletInterface.showMessage(walletData.getMessage());
                 } else {
                     walletInterface.showProgressbar(false);
                     walletInterface.showMessage(walletData.getMessage());

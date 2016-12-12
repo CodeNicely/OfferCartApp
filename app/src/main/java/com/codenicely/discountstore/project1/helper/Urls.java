@@ -6,10 +6,10 @@ package com.codenicely.discountstore.project1.helper;
 public class Urls {
 
 
-    public static final String BASE_URL = "http://192.168.0.111:8000/";
+    public static final String BASE_URL = "http://192.168.88.253:8888/";
     //
-  //  public static final String BASE_URL = "http://xendroiders.pythonanywhere.com/";
-//     public static final String BASE_URL = "http://104.236.210.94:8000/";
+    // public static final String BASE_URL = "http://xendroiders.pythonanywhere.com/";
+    // public static final String BASE_URL = "http://104.236.210.94:8000/";
 
     //splash_screen
     public static final String REQUEST_SPLASH_SCREEN = "version/";
@@ -39,6 +39,6 @@ public class Urls {
     public static final String SUB_URL_ABOUT_US = "about_us/";
     public static final String SUB_URL_CONTACT_US = "contact_us/";
     public static final String SUB_URL_DEVELOPERS = "developers/";
-   public static final String SUB_URL_PAYMENT_HASH = "payment_hash/";
+    public static final String SUB_URL_PAYMENT_HASH = "payment_hash/";
     public static final String SUB_URL_UPDATE_PAYMENT_STATUS ="update_payment_status/" ;
 }

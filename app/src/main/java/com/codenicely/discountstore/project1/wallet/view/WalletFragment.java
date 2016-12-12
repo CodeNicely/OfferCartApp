@@ -1,5 +1,6 @@
 package com.codenicely.discountstore.project1.wallet.view;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
@@ -13,11 +14,14 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.codenicely.discountstore.project1.R;
 import com.codenicely.discountstore.project1.helper.Keys;
+import com.codenicely.discountstore.project1.helper.SharedPrefs;
+import com.codenicely.discountstore.project1.home.HomePage;
 import com.codenicely.discountstore.project1.payment.view.PaymentActivity;
 import com.codenicely.discountstore.project1.wallet.model.RetrofitWalletProvider;
 import com.codenicely.discountstore.project1.wallet.model.data.WalletData;
@@ -58,8 +62,14 @@ public class WalletFragment extends Fragment implements WalletInterface {
     @BindView(R.id.wallet_balance)
     TextView balance;
 
-    @BindView(R.id.wallet_progressbar)
+    @BindView(R.id.progressBar)
     ProgressBar progressBar;
+
+    @BindView(R.id.wallet_layout)
+    RelativeLayout wallet_layout;
+
+
+    private SharedPrefs sharedPrefs;
 
     // TODO: Rename and change types of parameters
     private static int mPage;
@@ -101,9 +111,10 @@ public class WalletFragment extends Fragment implements WalletInterface {
 
         View view;
         view = inflater.inflate(R.layout.tab_add_money, container, false);
-        walletPresenter = new WalletPresenterImpl(this, new RetrofitWalletProvider());
         ButterKnife.bind(this, view);
-
+        sharedPrefs=new SharedPrefs(getContext());
+        walletPresenter = new WalletPresenterImpl(this, new RetrofitWalletProvider());
+        walletPresenter.getWallet(sharedPrefs.getAccessToken());
         toolbar.setNavigationIcon(ContextCompat.getDrawable(getContext(), R.drawable.ic_arrow_back_white_24dp));
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
@@ -178,14 +189,22 @@ public class WalletFragment extends Fragment implements WalletInterface {
     @Override
     public void showProgressbar(boolean show) {
         if (show)
+        {
             progressBar.setVisibility(View.VISIBLE);
+            wallet_layout.setVisibility(View.GONE);
+        }
         else
-            progressBar.setVisibility(View.INVISIBLE);
+        {
+            wallet_layout.setVisibility(View.VISIBLE);
+            progressBar.setVisibility(View.GONE);
+        }
     }
 
+    @SuppressLint("SetTextI18n")
     @Override
     public void walletReceived(WalletData walletData) {
-        balance.setText(walletData.getBalance());
+
+        balance.setText("Rs ."+String.valueOf(walletData.getBalance()));
     }
 
 
@@ -193,4 +212,11 @@ public class WalletFragment extends Fragment implements WalletInterface {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
     }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+    }
+
+
 }

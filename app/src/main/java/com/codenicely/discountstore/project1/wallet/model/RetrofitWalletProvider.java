@@ -7,6 +7,8 @@ import com.codenicely.discountstore.project1.wallet.view.OnWalletInfoReceived;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
+import okhttp3.OkHttpClient;
+import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -24,26 +26,38 @@ public class RetrofitWalletProvider implements WalletProvider {
         Gson gson = new GsonBuilder()
                 .setLenient()
                 .create();
+        HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
+        interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
+        OkHttpClient client = new OkHttpClient.Builder().addInterceptor(interceptor).build();
+
+
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(Urls.BASE_URL)
+                .client(client)
                 .addConverterFactory(GsonConverterFactory.create(gson))
                 .build();
         walletApi = retrofit.create(WalletApi.class);
     }
 
     @Override
-    public void getWalletInfo(String user_id, OnWalletInfoReceived onWalletInfoReceived) {
+    public void getWalletInfo(String access_token, final OnWalletInfoReceived onWalletInfoReceived) {
 
-        Call<WalletData> call = walletApi.getWallet(user_id);
+        Call<WalletData> call = walletApi.getWallet(access_token);
         call.enqueue(new Callback<WalletData>() {
             @Override
             public void onResponse(Call<WalletData> call, Response<WalletData> response) {
-                response.body();
+
+                onWalletInfoReceived.onSuccess(response.body());
+
             }
 
             @Override
-            public void onFailure(Call<WalletData> call, Throwable t) {
+            public void onFailure(Call<WalletData> call, Throwable t)
+            {
+
                 t.printStackTrace();
+                onWalletInfoReceived.onFailure();
+
             }
         });
     }

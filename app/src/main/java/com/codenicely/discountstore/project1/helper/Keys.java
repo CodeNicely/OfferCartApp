@@ -10,4 +10,5 @@ public class Keys {
 
     public static final String KEY_CATEGORY_ID = "category_hdb";
     public static final String KEY_MONEY = "money" ;
+    public static final String KEY_OPEN_WALLET = "wallet";
 }

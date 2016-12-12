@@ -12,5 +12,5 @@ import retrofit2.http.Query;
  */
 public interface WalletApi {
     @GET(Urls.WALLET)
-    Call<WalletData> getWallet(@Query("user_id") String user_id);
+    Call<WalletData> getWallet(@Query("access_token") String access_token);
 }
