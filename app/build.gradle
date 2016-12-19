@@ -9,8 +9,8 @@ android {
         applicationId "com.codenicely.discountstore.project_new"
         minSdkVersion 16
         targetSdkVersion 23
-        versionCode 4
-        versionName "1.04"
+        versionCode 7
+        versionName "1.07"
     }
     buildTypes {
 
@@ -29,7 +29,7 @@ dependencies {
     apt 'com.jakewharton:butterknife-compiler:8.4.0'
     compile 'com.squareup.okhttp3:logging-interceptor:3.4.1'
     compile project(':payUMoneysdk')
-    compile 'com.android.support:appcompat-v7:23.1.0'
+    compile 'com.android.support:appcompat-v7:23.2.0'
     compile 'com.squareup.picasso:picasso:2.3.3'
     compile 'com.jakewharton:butterknife:8.4.0'
     compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
@@ -38,10 +38,10 @@ dependencies {
     compile 'com.squareup.retrofit2:converter-gson:2.1.0'
     compile 'io.reactivex:rxandroid:1.2.1'
     compile 'io.reactivex:rxjava:1.1.6'
-    compile 'com.android.support:recyclerview-v7:23.1.0'
-    compile 'com.android.support:cardview-v7:23.1.0'
-    compile 'com.android.support:design:23.1.0'
-    compile 'com.android.support:support-v4:23.1.0'
+    compile 'com.android.support:recyclerview-v7:23.2.0'
+    compile 'com.android.support:cardview-v7:23.2.0'
+    compile 'com.android.support:design:23.2.0'
+    compile 'com.android.support:support-v4:23.2.0'
     compile 'com.squareup.okhttp3:okhttp:3.4.1'
     compile 'com.google.firebase:firebase-core:9.6.1'
     compile 'com.google.firebase:firebase-messaging:9.6.1'

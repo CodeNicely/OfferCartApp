@@ -18,7 +18,7 @@
 
         <item
             android:id="@+id/nav_my_orders"
-            android:icon="@drawable/ic_account_balance_wallet_black_24dp"
+            android:icon="@drawable/ic_order_history_black_24dp"
             android:title="My Orders" />
 
         <item
@@ -34,7 +34,7 @@
 
         <item
             android:id="@+id/nav_developer"
-            android:icon="@drawable/ic_account_balance_wallet_black_24dp"
+            android:icon="@drawable/ic_developer_mode_black_24dp"
             android:title="Developers" />
         <item
             android:id="@+id/nav_logout"

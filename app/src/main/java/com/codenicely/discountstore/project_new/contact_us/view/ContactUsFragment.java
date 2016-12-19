@@ -199,19 +199,7 @@ public class ContactUsFragment extends Fragment implements ContactUsView {
         mobile.setText(contactUsData.getMobile());
         address.setText(contactUsData.getAddress());
 
-
-        emailCard.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                Intent intent = new Intent(Intent.ACTION_SEND);
-                intent.putExtra(Intent.EXTRA_EMAIL, "bunchofools@gmail.com");
-                intent.putExtra(Intent.EXTRA_SUBJECT, "Suggestion regarding Spot");
-
-                startActivity(Intent.createChooser(intent, "Choose an Email client :"));
-
-            }
-        });/*
+/*
         websiteCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -221,14 +209,6 @@ public class ContactUsFragment extends Fragment implements ContactUsView {
             }
         });*/
 
-        phoneCard.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent callIntent = new Intent(Intent.ACTION_CALL);
-                callIntent.setData(Uri.parse("tel:9713265000"));
-                startActivity(callIntent);
-            }
-        });
 
         facebook.setText(facebookUrl);
 /*

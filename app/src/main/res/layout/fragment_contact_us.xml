@@ -17,15 +17,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:title="Contact Us"
-            app:titleTextColor="@color/white"
-            />
+            app:titleTextColor="@color/white" />
 
     </android.support.design.widget.AppBarLayout>
 
     <ScrollView
-        android:layout_below="@+id/appBarLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_below="@+id/appBarLayout">
 
         <android.support.v7.widget.CardView
             android:layout_width="fill_parent"
@@ -65,9 +64,9 @@
                     android:id="@+id/emailCard"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="4dp"
-                    app:cardCornerRadius="2dp"
-                    app:contentPadding="2dp">
+                    android:layout_margin="1dp"
+                    app:cardCornerRadius="1dp"
+                    app:contentPadding="1dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -95,11 +94,9 @@
                     android:id="@+id/phoneCard"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="4dp"
-                    app:cardCornerRadius="2dp"
-                    app:contentPadding="2dp"
-
-                    >
+                    android:layout_margin="1dp"
+                    app:cardCornerRadius="1dp"
+                    app:contentPadding="1dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -124,12 +121,12 @@
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
+                    android:id="@+id/locationCard"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="4dp"
-                    app:cardCornerRadius="2dp"
-                    android:id="@+id/locationCard"
-                    app:contentPadding="2dp">
+                    android:layout_margin="1dp"
+                    app:cardCornerRadius="1dp"
+                    app:contentPadding="1dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -153,45 +150,44 @@
                             android:padding="4dp" />
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
-<!--
+                <!--
+                                <android.support.v7.widget.CardView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="4dp"
+                                    android:id="@+id/websiteCard"
+                                    app:cardCornerRadius="2dp"
+                                    app:contentPadding="2dp">
+
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+
+                                        <ImageView
+                                            android:id="@+id/websiteImage"
+                                            android:layout_width="wrap_content"
+
+                                            android:layout_height="wrap_content"
+                                            android:padding="4dp"
+                                            android:src="@drawable/ic_language_black_24dp" />
+
+                                        <TextView
+                                            android:id="@+id/website"
+                                            android:layout_width="match_parent"
+
+                                            android:layout_height="wrap_content"
+                                            android:padding="4dp" />
+                                    </LinearLayout>
+                                </android.support.v7.widget.CardView>-->
                 <android.support.v7.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="4dp"
-                    android:id="@+id/websiteCard"
-                    app:cardCornerRadius="2dp"
-                    app:contentPadding="2dp">
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <ImageView
-                            android:id="@+id/websiteImage"
-                            android:layout_width="wrap_content"
-
-                            android:layout_height="wrap_content"
-                            android:padding="4dp"
-                            android:src="@drawable/ic_language_black_24dp" />
-
-                        <TextView
-                            android:id="@+id/website"
-                            android:layout_width="match_parent"
-
-                            android:layout_height="wrap_content"
-                            android:padding="4dp" />
-                    </LinearLayout>
-                </android.support.v7.widget.CardView>-->
-                <android.support.v7.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="4dp"
-                    app:cardCornerRadius="2dp"
                     android:id="@+id/facebookCard"
-                    app:contentPadding="2dp">
-
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    app:cardCornerRadius="1dp"
+                    app:contentPadding="1dp">
                     <LinearLayout
                         android:id="@+id/facebookLayout"
                         android:layout_width="match_parent"
@@ -200,10 +196,10 @@
 
                         <ImageView
                             android:id="@+id/facebookImage"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
                             android:padding="4dp"
-                            android:src="@drawable/facebook" />
+                            android:src="@drawable/facebook_logo" />
 
                         <TextView
                             android:id="@+id/facebook"
@@ -274,7 +270,8 @@
                                             android:padding="4dp" />
                                     </LinearLayout>
                                 </android.support.v7.widget.CardView>
-                    -->        </LinearLayout>
+                    -->
+            </LinearLayout>
         </android.support.v7.widget.CardView>
 
     </ScrollView>

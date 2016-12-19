@@ -109,7 +109,7 @@ public class WalletFragment extends Fragment implements WalletInterface {
                              Bundle savedInstanceState) {
 
         View view;
-        view = inflater.inflate(R.layout.tab_add_money, container, false);
+        view = inflater.inflate(R.layout.wallet_fragment, container, false);
         ButterKnife.bind(this, view);
         sharedPrefs=new SharedPrefs(getContext());
         walletPresenter = new WalletPresenterImpl(this, new RetrofitWalletProvider());

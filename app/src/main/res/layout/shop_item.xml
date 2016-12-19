@@ -5,7 +5,9 @@
     android:layout_height="wrap_content"
     android:layout_margin="4dp"
     app:cardCornerRadius="4dp"
-    app:contentPadding="4dp">
+    app:contentPadding="4dp"
+    android:id="@+id/shop_card"
+    >
 
     <RelativeLayout
         android:layout_width="match_parent"

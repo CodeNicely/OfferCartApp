@@ -7,6 +7,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
+import android.support.v4.widget.NestedScrollView;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -62,11 +63,11 @@ public class OfferFragment extends Fragment implements OfferScreenView, BuyOffer
     @BindView(R.id.imageView)
     ImageView shopImage;
 
-    @BindView(R.id.scrollView)
-    ScrollView scrollView;
-
     @BindView(R.id.shop_name)
     TextView shopName;
+
+    @BindView(R.id.scrollView)
+    NestedScrollView nestedScrollView;
 
     @BindView(R.id.shop_description)
     TextView shopDescription;
@@ -159,14 +160,13 @@ public class OfferFragment extends Fragment implements OfferScreenView, BuyOffer
         linearLayoutManager = new LinearLayoutManager(getContext());
         offerScreenAdapter = new OfferScreenAdapter(getContext(), this);
         recyclerView.setHasFixedSize(true);
+        nestedScrollView.setNestedScrollingEnabled(true);
+        recyclerView.setNestedScrollingEnabled(false);
+        recyclerView.setHasFixedSize(false);
         offerScreenDetailsPresenter = new OfferScreenDetailsPresenterImpl(this, new RetrofitOfferScreenDetailsProvider());
         recyclerView.setLayoutManager(linearLayoutManager);
-        recyclerView.setHasFixedSize(true);
         recyclerView.setAdapter(offerScreenAdapter);
-    //    recyclerView.setNestedScrollingEnabled(true);
-      //  scrollView.setNestedScrollingEnabled(true);
         progressDialog = new ProgressDialog(getContext());
-
         progressDialog.setMessage("Buying Offer");
         progressDialog.setTitle("Connecting . . .");
 

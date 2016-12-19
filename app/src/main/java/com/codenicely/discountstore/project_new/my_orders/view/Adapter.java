@@ -45,7 +45,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
 
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View itemView = layoutInflater.inflate(R.layout.activity_orders_item, parent, false);
+        View itemView = layoutInflater.inflate(R.layout.my_orders_item, parent, false);
         return new MyViewHolder(itemView);
     }
 
@@ -56,9 +56,12 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
 
         holder.title.setText(ordersDetails.getOffer_name());
         holder.address.setText(ordersDetails.getShop_address());
-        holder.cost.setText(ordersDetails.getOffer_price());
+        holder.cost.setText("Offer Price - Rs."+ordersDetails.getOffer_price());
         holder.valid.setText("Offer valid upto "+ordersDetails.getOffer_validity());
         holder.shop.setText(ordersDetails.getShop_name());
+        holder.offer_code.setText("Offer Code - "+ordersDetails.getOffer_code());
+        imageLoader.loadImage(ordersDetails.getOffer_image(),holder.imageView,holder.imageProgressBar);
+
     }
 
     @Override
@@ -68,20 +71,20 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
 
     protected class MyViewHolder extends RecyclerView.ViewHolder {
 
-        private TextView title,shop,address,valid,cost;
-        private ImageView image;
+        private TextView title,shop,address,valid,cost,offer_code;
+        private ImageView imageView;
         private ProgressBar imageProgressBar;
 
 
         private MyViewHolder(View itemView) {
             super(itemView);
-
+            offer_code=(TextView)itemView.findViewById(R.id.offer_code);
             title=(TextView)itemView.findViewById(R.id.order_title);
             shop=(TextView)itemView.findViewById(R.id.order_shop);
             address=(TextView)itemView.findViewById(R.id.order_address);
             valid=(TextView)itemView.findViewById(R.id.order_validity);
             cost=(TextView)itemView.findViewById(R.id.order_cost);
-            image=(ImageView)itemView.findViewById(R.id.image);
+            imageView=(ImageView)itemView.findViewById(R.id.image);
             imageProgressBar=(ProgressBar)itemView.findViewById(R.id.imageProgressBar);
         }
 

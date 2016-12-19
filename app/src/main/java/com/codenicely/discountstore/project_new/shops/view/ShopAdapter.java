@@ -1,6 +1,7 @@
 package com.codenicely.discountstore.project_new.shops.view;
 
 import android.content.Context;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -50,7 +51,7 @@ public class ShopAdapter extends RecyclerView.Adapter<ShopAdapter.MyViewHolder> 
         holder.address.setText(shopData.getAddress());
 
         imageLoader.loadImage(shopData.getImage(),holder.image,holder.imageProgressBar);
-        holder.image.setOnClickListener(new View.OnClickListener() {
+        holder.shopCardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (context instanceof HomePage) {
@@ -68,12 +69,15 @@ public class ShopAdapter extends RecyclerView.Adapter<ShopAdapter.MyViewHolder> 
 
     protected class MyViewHolder extends RecyclerView.ViewHolder {
 
-        TextView name, address;
-        ImageView image;
+        private CardView shopCardView;
+        private TextView name, address;
+        private ImageView image;
         private ProgressBar imageProgressBar;
 
         private MyViewHolder(View itemView) {
             super(itemView);
+
+            shopCardView=(CardView)itemView.findViewById(R.id.shop_card);
             imageProgressBar=(ProgressBar)itemView.findViewById(R.id.imageProgressBar);
             name = (TextView) itemView.findViewById(R.id.shop_name);
             address = (TextView) itemView.findViewById(R.id.shop_address);
