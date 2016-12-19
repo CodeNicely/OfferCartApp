@@ -9,15 +9,10 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-<<<<<<< HEAD:app/src/main/java/com/codenicely/discountstore/project_new/my_orders/view/Adapter.java
 import com.codenicely.discountstore.project_new.R;
+import com.codenicely.discountstore.project_new.helper.image_loader.GlideImageLoader;
+import com.codenicely.discountstore.project_new.helper.image_loader.ImageLoader;
 import com.codenicely.discountstore.project_new.my_orders.model.data.OrderDetails;
-=======
-import com.codenicely.discountstore.project1.R;
-import com.codenicely.discountstore.project1.helper.image_loader.GlideImageLoader;
-import com.codenicely.discountstore.project1.helper.image_loader.ImageLoader;
-import com.codenicely.discountstore.project1.my_orders.model.data.OrderDetails;
->>>>>>> eb0b03491633dc424f8e52d27c07884095c69cad:app/src/main/java/com/codenicely/discountstore/project1/my_orders/view/Adapter.java
 
 import java.util.ArrayList;
 import java.util.List;
@@ -59,21 +54,11 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
 
         OrderDetails ordersDetails=orderDetailsList.get(position);
 
-<<<<<<< HEAD:app/src/main/java/com/codenicely/discountstore/project_new/my_orders/view/Adapter.java
         holder.title.setText(ordersDetails.getOffer_name());
         holder.address.setText(ordersDetails.getShop_address());
         holder.cost.setText(ordersDetails.getOffer_price());
         holder.valid.setText("Offer valid upto "+ordersDetails.getOffer_validity());
         holder.shop.setText(ordersDetails.getShop_name());
-=======
-        holder.title.setText(ordersDetails.getTitle());
-        holder.address.setText(ordersDetails.getAddress());
-        holder.cost.setText(ordersDetails.getCost());
-        holder.valid.setText("Offer valid upto "+ordersDetails.getDate());
-        holder.shop.setText(ordersDetails.getShop());
-        imageLoader.loadImage(ordersDetails.getImage(),holder.image,holder.imageProgressBar);
-
->>>>>>> eb0b03491633dc424f8e52d27c07884095c69cad:app/src/main/java/com/codenicely/discountstore/project1/my_orders/view/Adapter.java
     }
 
     @Override
