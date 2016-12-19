@@ -1,27 +1,27 @@
 {
   "project_info": {
-    "project_number": "1003422090147",
-    "firebase_url": "https://discountstoreapp.firebaseio.com",
-    "project_id": "discountstoreapp",
-    "storage_bucket": "discountstoreapp.appspot.com"
+    "project_number": "548136714438",
+    "firebase_url": "https://discount-store-1d9b8.firebaseio.com",
+    "project_id": "discount-store-1d9b8",
+    "storage_bucket": "discount-store-1d9b8.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1003422090147:android:6975370eaed5da20",
+        "mobilesdk_app_id": "1:548136714438:android:c132b35edec347e1",
         "android_client_info": {
-          "package_name": "com.codenicely.discountstore.project1"
+          "package_name": "com.codenicely.discountstore.project_new"
         }
       },
       "oauth_client": [
         {
-          "client_id": "1003422090147-r9hgrsb10v3sb67jj1vhe1i4u4e97063.apps.googleusercontent.com",
+          "client_id": "548136714438-7uur68bj5bkm894snka6chtsb47e58qu.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBVjv9C7UOgJlFoQXMi2ZaUumhlQVj5P-M"
+          "current_key": "AIzaSyDzy9hLbSvez8O2NfBpUXkDEyPSW7jNO9o"
         }
       ],
       "services": {
