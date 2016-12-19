@@ -5,10 +5,19 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
+<<<<<<< HEAD:app/src/main/java/com/codenicely/discountstore/project_new/my_orders/view/Adapter.java
 import com.codenicely.discountstore.project_new.R;
 import com.codenicely.discountstore.project_new.my_orders.model.data.OrderDetails;
+=======
+import com.codenicely.discountstore.project1.R;
+import com.codenicely.discountstore.project1.helper.image_loader.GlideImageLoader;
+import com.codenicely.discountstore.project1.helper.image_loader.ImageLoader;
+import com.codenicely.discountstore.project1.my_orders.model.data.OrderDetails;
+>>>>>>> eb0b03491633dc424f8e52d27c07884095c69cad:app/src/main/java/com/codenicely/discountstore/project1/my_orders/view/Adapter.java
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,11 +31,16 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
     private List<OrderDetails> orderDetailsList=new ArrayList<>();
     private Context context;
     private LayoutInflater layoutInflater;
+    private ImageLoader imageLoader;
+    private MyOrdersFragment myOrdersFragment;
+
 
     public Adapter(Context context, MyOrdersFragment myOrdersFragment) {
 
         this.context=context;
+        this.myOrdersFragment = myOrdersFragment;
         layoutInflater = LayoutInflater.from(context);
+        imageLoader = new GlideImageLoader(context);
 
     }
     public void setData(List<OrderDetails> orderDetailsList)
@@ -45,11 +59,21 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
 
         OrderDetails ordersDetails=orderDetailsList.get(position);
 
+<<<<<<< HEAD:app/src/main/java/com/codenicely/discountstore/project_new/my_orders/view/Adapter.java
         holder.title.setText(ordersDetails.getOffer_name());
         holder.address.setText(ordersDetails.getShop_address());
         holder.cost.setText(ordersDetails.getOffer_price());
         holder.valid.setText("Offer valid upto "+ordersDetails.getOffer_validity());
         holder.shop.setText(ordersDetails.getShop_name());
+=======
+        holder.title.setText(ordersDetails.getTitle());
+        holder.address.setText(ordersDetails.getAddress());
+        holder.cost.setText(ordersDetails.getCost());
+        holder.valid.setText("Offer valid upto "+ordersDetails.getDate());
+        holder.shop.setText(ordersDetails.getShop());
+        imageLoader.loadImage(ordersDetails.getImage(),holder.image,holder.imageProgressBar);
+
+>>>>>>> eb0b03491633dc424f8e52d27c07884095c69cad:app/src/main/java/com/codenicely/discountstore/project1/my_orders/view/Adapter.java
     }
 
     @Override
@@ -60,6 +84,8 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
     protected class MyViewHolder extends RecyclerView.ViewHolder {
 
         private TextView title,shop,address,valid,cost;
+        private ImageView image;
+        private ProgressBar imageProgressBar;
 
 
         private MyViewHolder(View itemView) {
@@ -70,6 +96,8 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
             address=(TextView)itemView.findViewById(R.id.order_address);
             valid=(TextView)itemView.findViewById(R.id.order_validity);
             cost=(TextView)itemView.findViewById(R.id.order_cost);
+            image=(ImageView)itemView.findViewById(R.id.image);
+            imageProgressBar=(ProgressBar)itemView.findViewById(R.id.imageProgressBar);
         }
 
     }
