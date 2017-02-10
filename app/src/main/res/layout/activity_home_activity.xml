@@ -21,4 +21,5 @@
         app:itemIconTint="@color/colorPrimary"
         app:headerLayout="@layout/nav_header_home_activity"
         app:menu="@menu/activity_home_activity_drawer" />
+
 </android.support.v4.widget.DrawerLayout>

@@ -36,6 +36,8 @@ import com.codenicely.discountstore.project_new.offer.presenter.BuyOfferPresente
 import com.codenicely.discountstore.project_new.offer.presenter.OfferScreenDetailsPresenter;
 import com.codenicely.discountstore.project_new.offer.presenter.OfferScreenDetailsPresenterImpl;
 import com.codenicely.discountstore.project_new.offer.presenter.BuyOfferPresenterImpl;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -139,6 +141,9 @@ public class OfferFragment extends Fragment implements OfferScreenView, BuyOffer
         imageLoader=new GlideImageLoader(getContext());
 
         initialize();
+        AdView adView = (AdView)view.findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        adView.loadAd(adRequest);
         buyOfferPresenter=new BuyOfferPresenterImpl(this,new RetrofitBuyOfferProvider());
         toolbar.setTitle("Offers");
         toolbar.setNavigationIcon(ContextCompat.getDrawable(getContext(), R.drawable.ic_arrow_back_white_24dp));

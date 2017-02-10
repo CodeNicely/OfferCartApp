@@ -17,5 +17,13 @@
     <string name="veryfy_otp">Verify Otp</string>
     <string name="otp_screen_description">We have sent you a 6 digit Otp . \n Please enter the otp in the Space given below to verify your mobile.</string>
     <string name="login_description">One time Login to access all our Amazing Services!</string>
+    <string name="banner_city_screen">ca-app-pub-7676088497515789/8311996957</string>
+    <string name="banner_orders_screen">ca-app-pub-7676088497515789/9788730156</string>
+    <string name="banner_home_screen">ca-app-pub-7676088497515789/2544664951</string>
+    <string name="banner_aboutus_screen">ca-app-pub-7676088497515789/9649129359</string>
+    <string name="banner_developer_screen">ca-app-pub-7676088497515789/6695662951</string>
+    <string name="banner_contactus_screen">ca-app-pub-7676088497515789/2265463351</string>
+    <string name="banner_shop_screen">ca-app-pub-7676088497515789/5358530552</string>
+    <string name="banner_splash_sub_screen">ca-app-pub-7676088497515789/6757551759</string>
 </resources>
 

@@ -31,6 +31,7 @@ import com.codenicely.discountstore.project_new.splash_screen.models.data.Splash
 import com.codenicely.discountstore.project_new.splash_screen.presenter.SplashScreenPresenter;
 import com.codenicely.discountstore.project_new.splash_screen.presenter.SplashScreenPresenterImpl;
 import com.codenicely.discountstore.project_new.welcome_screen.view.WelcomeScreenActivity;
+import com.google.android.gms.ads.MobileAds;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -65,6 +66,7 @@ public class SplashScreenActivity extends Activity implements SplashScreenView {
         splashScreenPresenter = new SplashScreenPresenterImpl(this,
                 new RetrofitSplashScreenProvider());
         splashScreenPresenter.requestSplash(MyApplication.getFcm());
+        MobileAds.initialize(getApplicationContext(),"ca-app-pub-7676088497515789~2963467358");
     }
 
 

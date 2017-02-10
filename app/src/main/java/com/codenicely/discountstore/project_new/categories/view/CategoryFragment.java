@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,6 +20,10 @@ import com.codenicely.discountstore.project_new.categories.model.data.CategoryDa
 import com.codenicely.discountstore.project_new.categories.presenter.CategoriesPresenter;
 import com.codenicely.discountstore.project_new.categories.presenter.CategoriesPresenterImpl;
 import com.codenicely.discountstore.project_new.helper.SharedPrefs;
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.InterstitialAd;
 
 import java.util.List;
 
@@ -54,6 +59,7 @@ public class CategoryFragment extends Fragment implements CategoriesView {
     private String token;
     private SharedPrefs sharedPrefs;
     private OnFragmentInteractionListener mListener;
+    private InterstitialAd mInterstitialAd;
 
     public CategoryFragment() {
         // Required empty public constructor
@@ -96,13 +102,46 @@ public class CategoryFragment extends Fragment implements CategoriesView {
 
         View view = inflater.inflate(R.layout.fragment_category, container, false);
         ButterKnife.bind(this, view);
+        AdView adView = (AdView)view.findViewById(R.id.adView);
+        final AdRequest adRequest = new AdRequest.Builder().build();
+        adView.loadAd(adRequest);
+        mInterstitialAd = new InterstitialAd(view.getContext());
+        mInterstitialAd.setAdUnitId(getString(R.string.banner_splash_sub_screen));
+        mInterstitialAd.loadAd(adRequest);
         initialize();
         categoriesPresenter.getCategories(token);
-
+        //sharedPrefs.clearVisitCount();
+        sharedPrefs.setVisitCount();
+        Log.d("count",String.valueOf(sharedPrefs.getVisitCount()));
+        
+        if(sharedPrefs.getVisitCount()%7==0)
+        {
+            Toast.makeText(getContext(),"working",Toast.LENGTH_LONG).show();
+        }
+        else
+        {
+            Toast.makeText(getContext(),"incrementing",Toast.LENGTH_LONG).show();
+        }
+        Log.d("count",String.valueOf(sharedPrefs.getVisitCount()));
         getActivity().setTitle("Categories");
+        mInterstitialAd.setAdListener(new AdListener() {
+            @Override
+            public void onAdLoaded() {
+                display();
+            }
+
+        });
         return view;
 
     }
+    void display()
+    {
+        if(mInterstitialAd.isLoaded())
+        {
+            mInterstitialAd.show();
+        }
+    }
+
 
     void initialize() {
         categoriesPresenter = new CategoriesPresenterImpl(this, new RetrofitCategoriesProvider());

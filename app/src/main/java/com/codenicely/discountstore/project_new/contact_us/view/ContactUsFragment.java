@@ -25,6 +25,8 @@ import com.codenicely.discountstore.project_new.contact_us.presenter.ContactUsPr
 import com.codenicely.discountstore.project_new.contact_us.presenter.ContactUsPresenterImpl;
 import com.codenicely.discountstore.project_new.helper.image_loader.GlideImageLoader;
 import com.codenicely.discountstore.project_new.helper.image_loader.ImageLoader;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -131,6 +133,9 @@ public class ContactUsFragment extends Fragment implements ContactUsView {
         View view = inflater.inflate(R.layout.fragment_contact_us, container, false);
 
         ButterKnife.bind(this, view);
+        AdView adView = (AdView)view.findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        adView.loadAd(adRequest);
 
         toolbar.setNavigationIcon(ContextCompat.getDrawable(getContext(), R.drawable.ic_arrow_back_white_24dp));
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {

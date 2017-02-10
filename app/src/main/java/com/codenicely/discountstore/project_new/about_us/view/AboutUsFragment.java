@@ -21,6 +21,8 @@ import com.codenicely.discountstore.project_new.about_us.presenter.AboutUsPresen
 import com.codenicely.discountstore.project_new.about_us.presenter.AboutUsPresenterImpl;
 import com.codenicely.discountstore.project_new.helper.image_loader.GlideImageLoader;
 import com.codenicely.discountstore.project_new.helper.image_loader.ImageLoader;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -97,6 +99,9 @@ public class AboutUsFragment extends Fragment implements AboutUsView {
 
         View view = inflater.inflate(R.layout.fragment_about_us, container, false);
         ButterKnife.bind(this, view);
+        AdView adView = (AdView)view.findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        adView.loadAd(adRequest);
 
         toolbar.setNavigationIcon(ContextCompat.getDrawable(getContext(), R.drawable.ic_arrow_back_white_24dp));
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
