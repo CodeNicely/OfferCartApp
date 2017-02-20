@@ -3,7 +3,7 @@
     package="com.codenicely.discountstore.project_new">
 
     <uses-permission android:name="android.permission.INTERNET" />
-
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
     <application
         android:name="com.codenicely.discountstore.project_new.helper.MyApplication"
         android:allowBackup="true"
@@ -11,6 +11,12 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <service
+            android:name=".MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
 
         <!-- Splash screen -->
         <activity
@@ -36,9 +42,6 @@
             android:label="@string/app_name" />
         <activity android:name="com.codenicely.discountstore.project_new.wallet.view.WalletActivity"></activity>
         <activity android:name="com.codenicely.discountstore.project_new.payment.view.PaymentActivity"></activity>
-        <activity android:name="com.google.android.gms.ads.AdActivity"
-            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
-            android:theme="@android:style/Theme.Translucent" />
 
     </application>
 

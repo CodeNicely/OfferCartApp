@@ -141,9 +141,9 @@ public class OfferFragment extends Fragment implements OfferScreenView, BuyOffer
         imageLoader=new GlideImageLoader(getContext());
 
         initialize();
-        AdView adView = (AdView)view.findViewById(R.id.adView);
+       /* AdView adView = (AdView)view.findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
-        adView.loadAd(adRequest);
+        adView.loadAd(adRequest);*/
         buyOfferPresenter=new BuyOfferPresenterImpl(this,new RetrofitBuyOfferProvider());
         toolbar.setTitle("Offers");
         toolbar.setNavigationIcon(ContextCompat.getDrawable(getContext(), R.drawable.ic_arrow_back_white_24dp));

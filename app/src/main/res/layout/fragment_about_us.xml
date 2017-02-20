@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:mobfox="http://schemas.android.com/tools"
     android:baselineAligned="false"
     android:orientation="vertical">
 
@@ -25,6 +26,7 @@
     <ScrollView
         android:layout_below="@+id/appBarLayout"
         android:layout_width="match_parent"
+        android:layout_above="@+id/layout_ad"
         android:layout_height="match_parent">
 
         <LinearLayout
@@ -86,19 +88,4 @@
         android:layout_gravity="center"
 
         />
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/layout_ad"
-        android:gravity="center"
-        android:layout_alignParentBottom="true"
-        android:orientation="horizontal">
-        <com.google.android.gms.ads.AdView
-            android:id="@+id/adView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            ads:adSize="BANNER"
-            ads:adUnitId="@string/banner_aboutus_screen">
-        </com.google.android.gms.ads.AdView>
-    </LinearLayout>
 </RelativeLayout>

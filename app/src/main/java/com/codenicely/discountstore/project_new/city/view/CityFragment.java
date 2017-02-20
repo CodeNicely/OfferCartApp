@@ -20,6 +20,7 @@ import com.codenicely.discountstore.project_new.city.models.RetrofitCityScreenPr
 import com.codenicely.discountstore.project_new.city.models.data.CityScreenData;
 import com.codenicely.discountstore.project_new.city.presenter.CityScreenPresenter;
 import com.codenicely.discountstore.project_new.city.presenter.CityScreenPresenterImpl;
+import com.codenicely.discountstore.project_new.helper.MyApplication;
 import com.codenicely.discountstore.project_new.helper.SharedPrefs;
 import com.codenicely.discountstore.project_new.home.HomePage;
 import com.google.android.gms.ads.AdRequest;
@@ -111,9 +112,9 @@ public class CityFragment extends Fragment implements CityScreenView {
         toolbar.setTitle("Select City");
 
         sharedPrefs = new SharedPrefs(getContext());
-        AdView adView = (AdView)view.findViewById(R.id.adView);
+       /* AdView adView = (AdView)view.findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
-        adView.loadAd(adRequest);
+        adView.loadAd(adRequest);*/
 
         if(sharedPrefs.getCity().equals("NA")){
            toolbar.setNavigationOnClickListener(new View.OnClickListener() {
@@ -191,7 +192,7 @@ public class CityFragment extends Fragment implements CityScreenView {
     public void onCitySelected(int city_id, String city_name) {
         sharedPrefs = new SharedPrefs(getContext());
         access_token = sharedPrefs.getAccessToken();
-        cityScreenPresenter.sendSelectedCity(city_name, city_id, access_token);
+        cityScreenPresenter.sendSelectedCity(city_name, city_id, access_token, MyApplication.getFcm());
 
 
     }

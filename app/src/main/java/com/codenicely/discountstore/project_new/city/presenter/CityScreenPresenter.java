@@ -6,5 +6,5 @@ package com.codenicely.discountstore.project_new.city.presenter;
 public interface CityScreenPresenter {
     void requestCity(String token);
 
-    void sendSelectedCity(String city, int city_id, String token);
+    void sendSelectedCity(String city, int city_id, String token,String fcm);
 }

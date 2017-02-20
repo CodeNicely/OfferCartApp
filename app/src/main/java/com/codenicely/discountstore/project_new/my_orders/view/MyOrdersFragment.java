@@ -102,9 +102,9 @@ public class MyOrdersFragment extends Fragment implements MyOrdersInterface{
         View view=inflater.inflate(R.layout.fragment_my_orders, container, false);
         ButterKnife.bind(this,view);
         initialize();
-        AdView adView = (AdView)view.findViewById(R.id.adView);
+       /* AdView adView = (AdView)view.findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
-        adView.loadAd(adRequest);
+        adView.loadAd(adRequest);*/
 
 
         myOrdersPresenter.getOrders(token);

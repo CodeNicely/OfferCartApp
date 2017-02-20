@@ -109,9 +109,9 @@ public class DeveloperFragment extends Fragment implements DeveloperView {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_developer, container, false);
         ButterKnife.bind(this, view);
-        AdView adView = (AdView)view.findViewById(R.id.adView);
+        /*AdView adView = (AdView)view.findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
-        adView.loadAd(adRequest);
+        adView.loadAd(adRequest);*/
 
         toolbar.setNavigationIcon(ContextCompat.getDrawable(getContext(), R.drawable.ic_arrow_back_white_24dp));
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {

@@ -97,9 +97,9 @@ public class ShopFragment extends Fragment implements ShopView {
         View view = inflater.inflate(R.layout.fragment_shop, container, false);
 
         ButterKnife.bind(this, view);
-        AdView adView = (AdView)view.findViewById(R.id.adView);
+        /*AdView adView = (AdView)view.findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
-        adView.loadAd(adRequest);
+        adView.loadAd(adRequest);*/
 
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
