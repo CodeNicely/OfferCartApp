@@ -21,8 +21,6 @@ import com.codenicely.discountstore.project_new.shops.model.RetrofitShopProvider
 import com.codenicely.discountstore.project_new.shops.model.data.ShopData;
 import com.codenicely.discountstore.project_new.shops.presenter.ShopPresenter;
 import com.codenicely.discountstore.project_new.shops.presenter.ShopPresenterImpl;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
 
 import java.util.List;
 

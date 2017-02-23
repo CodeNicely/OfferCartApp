@@ -10,7 +10,7 @@ public class Urls {
     //
     //public static final String BASE_URL = "http://xendroiders.pythonanywhere.com/";
      //public static final String BASE_URL = "http://104.236.210.94:8888/";
-    public static final String BASE_URL = "http://172.16.68.190:8000/";
+    public static final String BASE_URL = "http://172.16.8.152:8000/";
     //splash_screen
 
     public static final String REQUEST_SPLASH_SCREEN = "version/";

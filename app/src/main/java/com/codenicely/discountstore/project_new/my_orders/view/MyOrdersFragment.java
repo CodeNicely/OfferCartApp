@@ -15,13 +15,10 @@ import android.widget.Toast;
 
 import com.codenicely.discountstore.project_new.R;
 import com.codenicely.discountstore.project_new.helper.SharedPrefs;
-import com.codenicely.discountstore.project_new.my_orders.model.MockDataProvider;
 import com.codenicely.discountstore.project_new.my_orders.model.RetrofitOrdersProvider;
 import com.codenicely.discountstore.project_new.my_orders.model.data.OrdersData;
 import com.codenicely.discountstore.project_new.my_orders.presenter.MyOrdersPresenter;
 import com.codenicely.discountstore.project_new.my_orders.presenter.MyOrdersPresenterImpl;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -36,8 +33,7 @@ import butterknife.ButterKnife;
  */
 
 
-
-public class MyOrdersFragment extends Fragment implements MyOrdersInterface{
+public class MyOrdersFragment extends Fragment implements MyOrdersInterface {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -99,8 +95,8 @@ public class MyOrdersFragment extends Fragment implements MyOrdersInterface{
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View view=inflater.inflate(R.layout.fragment_my_orders, container, false);
-        ButterKnife.bind(this,view);
+        View view = inflater.inflate(R.layout.fragment_my_orders, container, false);
+        ButterKnife.bind(this, view);
         initialize();
        /* AdView adView = (AdView)view.findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
@@ -112,8 +108,8 @@ public class MyOrdersFragment extends Fragment implements MyOrdersInterface{
     }
 
     private void initialize() {
-        adapter=new Adapter(getContext(),this);
-        sharedPrefs=new SharedPrefs(getContext());
+        adapter = new Adapter(getContext(), this);
+        sharedPrefs = new SharedPrefs(getContext());
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -121,9 +117,9 @@ public class MyOrdersFragment extends Fragment implements MyOrdersInterface{
             }
         });
 
-        linearLayoutManager=new LinearLayoutManager(getContext());
-        myOrdersPresenter=new MyOrdersPresenterImpl(this,new RetrofitOrdersProvider());
-        token=sharedPrefs.getAccessToken();
+        linearLayoutManager = new LinearLayoutManager(getContext());
+        myOrdersPresenter = new MyOrdersPresenterImpl(this, new RetrofitOrdersProvider());
+        token = sharedPrefs.getAccessToken();
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(linearLayoutManager);
 
@@ -150,12 +146,12 @@ public class MyOrdersFragment extends Fragment implements MyOrdersInterface{
 
     @Override
     public void showMessage(String error) {
-        Toast.makeText(getContext(),error,Toast.LENGTH_SHORT).show();
+        Toast.makeText(getContext(), error, Toast.LENGTH_SHORT).show();
     }
 
     @Override
     public void showProgressBar(boolean show) {
-        if(show)
+        if (show)
             progressBar.setVisibility(View.VISIBLE);
         else
             progressBar.setVisibility(View.INVISIBLE);

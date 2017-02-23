@@ -31,7 +31,6 @@ import com.codenicely.discountstore.project_new.splash_screen.models.data.Splash
 import com.codenicely.discountstore.project_new.splash_screen.presenter.SplashScreenPresenter;
 import com.codenicely.discountstore.project_new.splash_screen.presenter.SplashScreenPresenterImpl;
 import com.codenicely.discountstore.project_new.welcome_screen.view.WelcomeScreenActivity;
-import com.google.android.gms.ads.MobileAds;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

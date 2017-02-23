@@ -38,8 +38,6 @@ import com.codenicely.discountstore.project_new.offer.presenter.OfferScreenDetai
 import com.codenicely.discountstore.project_new.offer.presenter.OfferScreenDetailsPresenterImpl;
 import com.codenicely.discountstore.project_new.offer.presenter.BuyOfferPresenterImpl;
 import com.codenicely.discountstore.project_new.wallet.view.WalletFragment;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

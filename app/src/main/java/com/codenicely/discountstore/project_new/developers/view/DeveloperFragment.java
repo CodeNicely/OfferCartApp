@@ -22,8 +22,6 @@ import com.codenicely.discountstore.project_new.developers.presenter.DevelopersP
 import com.codenicely.discountstore.project_new.developers.presenter.DevelopersPresenterImpl;
 import com.codenicely.discountstore.project_new.helper.image_loader.GlideImageLoader;
 import com.codenicely.discountstore.project_new.helper.image_loader.ImageLoader;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

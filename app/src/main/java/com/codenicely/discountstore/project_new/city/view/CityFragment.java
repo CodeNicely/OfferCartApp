@@ -23,9 +23,6 @@ import com.codenicely.discountstore.project_new.city.presenter.CityScreenPresent
 import com.codenicely.discountstore.project_new.helper.MyApplication;
 import com.codenicely.discountstore.project_new.helper.SharedPrefs;
 import com.codenicely.discountstore.project_new.home.HomePage;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdSize;
-import com.google.android.gms.ads.AdView;
 
 import java.util.List;
 
@@ -108,7 +105,7 @@ public class CityFragment extends Fragment implements CityScreenView {
         View view = inflater.inflate(R.layout.fragment_city, container, false);
         ButterKnife.bind(this, view);
 
-        ((HomePage)getActivity()).getSupportActionBar().hide();
+        ((HomePage) getActivity()).getSupportActionBar().hide();
         toolbar.setTitle("Select City");
 
         sharedPrefs = new SharedPrefs(getContext());
@@ -116,16 +113,16 @@ public class CityFragment extends Fragment implements CityScreenView {
         AdRequest adRequest = new AdRequest.Builder().build();
         adView.loadAd(adRequest);*/
 
-        if(sharedPrefs.getCity().equals("NA")){
-           toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-               @Override
-               public void onClick(View v) {
+        if (sharedPrefs.getCity().equals("NA")) {
+            toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
 
-                   Toast.makeText(getContext(), "Please Select City", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), "Please Select City", Toast.LENGTH_SHORT).show();
 
-               }
-           });
-        }else{
+                }
+            });
+        } else {
             toolbar.setNavigationOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -133,7 +130,7 @@ public class CityFragment extends Fragment implements CityScreenView {
                 }
             });
         }
-        Log.d("count",String.valueOf(sharedPrefs.getVisitCount()));
+        Log.d("count", String.valueOf(sharedPrefs.getVisitCount()));
         access_token = sharedPrefs.getAccessToken();
 
         cityScreenPresenter = new CityScreenPresenterImpl(this, new RetrofitCityScreenProvider());
