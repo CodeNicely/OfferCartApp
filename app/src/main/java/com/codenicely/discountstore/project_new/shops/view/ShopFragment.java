@@ -21,6 +21,8 @@ import com.codenicely.discountstore.project_new.shops.model.RetrofitShopProvider
 import com.codenicely.discountstore.project_new.shops.model.data.ShopData;
 import com.codenicely.discountstore.project_new.shops.presenter.ShopPresenter;
 import com.codenicely.discountstore.project_new.shops.presenter.ShopPresenterImpl;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 
 import java.util.List;
 
@@ -95,6 +97,9 @@ public class ShopFragment extends Fragment implements ShopView {
         View view = inflater.inflate(R.layout.fragment_shop, container, false);
 
         ButterKnife.bind(this, view);
+        /*AdView adView = (AdView)view.findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        adView.loadAd(adRequest);*/
 
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override

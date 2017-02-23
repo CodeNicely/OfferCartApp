@@ -4,6 +4,7 @@
     xmlns:card_view="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
     android:baselineAligned="false"
     android:orientation="vertical">
 
@@ -284,5 +285,7 @@
         android:layout_gravity="center"
 
         />
+
+
 
 </RelativeLayout>

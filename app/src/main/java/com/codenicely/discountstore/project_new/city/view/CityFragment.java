@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,8 +20,12 @@ import com.codenicely.discountstore.project_new.city.models.RetrofitCityScreenPr
 import com.codenicely.discountstore.project_new.city.models.data.CityScreenData;
 import com.codenicely.discountstore.project_new.city.presenter.CityScreenPresenter;
 import com.codenicely.discountstore.project_new.city.presenter.CityScreenPresenterImpl;
+import com.codenicely.discountstore.project_new.helper.MyApplication;
 import com.codenicely.discountstore.project_new.helper.SharedPrefs;
 import com.codenicely.discountstore.project_new.home.HomePage;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdSize;
+import com.google.android.gms.ads.AdView;
 
 import java.util.List;
 
@@ -93,6 +98,7 @@ public class CityFragment extends Fragment implements CityScreenView {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
     }
 
     @Override
@@ -105,11 +111,10 @@ public class CityFragment extends Fragment implements CityScreenView {
         ((HomePage)getActivity()).getSupportActionBar().hide();
         toolbar.setTitle("Select City");
 
-
-
-
-
         sharedPrefs = new SharedPrefs(getContext());
+       /* AdView adView = (AdView)view.findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        adView.loadAd(adRequest);*/
 
         if(sharedPrefs.getCity().equals("NA")){
            toolbar.setNavigationOnClickListener(new View.OnClickListener() {
@@ -128,6 +133,7 @@ public class CityFragment extends Fragment implements CityScreenView {
                 }
             });
         }
+        Log.d("count",String.valueOf(sharedPrefs.getVisitCount()));
         access_token = sharedPrefs.getAccessToken();
 
         cityScreenPresenter = new CityScreenPresenterImpl(this, new RetrofitCityScreenProvider());
@@ -186,7 +192,7 @@ public class CityFragment extends Fragment implements CityScreenView {
     public void onCitySelected(int city_id, String city_name) {
         sharedPrefs = new SharedPrefs(getContext());
         access_token = sharedPrefs.getAccessToken();
-        cityScreenPresenter.sendSelectedCity(city_name, city_id, access_token);
+        cityScreenPresenter.sendSelectedCity(city_name, city_id, access_token, MyApplication.getFcm());
 
 
     }

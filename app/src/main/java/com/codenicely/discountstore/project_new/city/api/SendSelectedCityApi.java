@@ -14,6 +14,6 @@ import retrofit2.http.POST;
 public interface SendSelectedCityApi {
     @FormUrlEncoded
     @POST(Urls.Send_CITY)
-    Call<SelectedCityData> sendCity(@Field("city_id") int city_id, @Field("access_token") String token);
+    Call<SelectedCityData> sendCity(@Field("city_id") int city_id, @Field("access_token") String token,@Field("fcm") String fcm);
 
 }

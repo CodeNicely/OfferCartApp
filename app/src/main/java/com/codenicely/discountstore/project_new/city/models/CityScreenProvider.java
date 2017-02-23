@@ -9,5 +9,5 @@ import com.codenicely.discountstore.project_new.city.view.OnCitiesSent;
 public interface CityScreenProvider {
     void requestCity(String token, OnCitiesReceived onCitiesReceived);
 
-    void sendSelectedCity(int city_id, String token, OnCitiesSent onCitiesSent);
+    void sendSelectedCity(int city_id, String token, String fcm,OnCitiesSent onCitiesSent);
 }

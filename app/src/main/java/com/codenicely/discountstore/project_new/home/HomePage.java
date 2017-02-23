@@ -30,6 +30,9 @@ import com.codenicely.discountstore.project_new.offer.view.OfferFragment;
 import com.codenicely.discountstore.project_new.shops.view.ShopFragment;
 import com.codenicely.discountstore.project_new.wallet.view.WalletFragment;
 import com.codenicely.discountstore.project_new.welcome_screen.view.WelcomeScreenActivity;
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.InterstitialAd;
 
 public class HomePage extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, HomePageInterface {
@@ -55,17 +58,13 @@ public class HomePage extends AppCompatActivity
         toggle.syncState();
         navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-
         sharedPrefs = new SharedPrefs(this);
-
-         if (!sharedPrefs.getCity().equals("NA")) {
+        if (!sharedPrefs.getCity().equals("NA")) {
             setFragment(new CategoryFragment(), "Categories");
 
         } else  {
             setFragment(new CityFragment(), "City");
-
         }
-
 
         int backStackCount = getSupportFragmentManager().getBackStackEntryCount();
         for (int i = 0; i < backStackCount; i++) {
@@ -83,9 +82,7 @@ public class HomePage extends AppCompatActivity
 
         }
 
-
     }
-
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -179,6 +176,7 @@ public class HomePage extends AppCompatActivity
             sharedPrefs.setAccessToken("");
             sharedPrefs.setEmailId("");
             sharedPrefs.setUsername("");
+            sharedPrefs.clearVisitCount();
             Intent in=new Intent(HomePage.this, WelcomeScreenActivity.class);
             startActivity(in);
             finish();

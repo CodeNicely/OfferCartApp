@@ -1,5 +1,6 @@
 package com.codenicely.discountstore.project_new.about_us.view;
 
+import android.app.Activity;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
@@ -13,6 +14,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.codenicely.discountstore.project_new.R;
 import com.codenicely.discountstore.project_new.about_us.model.RetrofitAboutUsProvider;
@@ -21,6 +23,10 @@ import com.codenicely.discountstore.project_new.about_us.presenter.AboutUsPresen
 import com.codenicely.discountstore.project_new.about_us.presenter.AboutUsPresenterImpl;
 import com.codenicely.discountstore.project_new.helper.image_loader.GlideImageLoader;
 import com.codenicely.discountstore.project_new.helper.image_loader.ImageLoader;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.mobfox.sdk.bannerads.Banner;
+import com.mobfox.sdk.bannerads.BannerListener;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -57,6 +63,7 @@ public class AboutUsFragment extends Fragment implements AboutUsView {
     private AboutUsPresenter aboutUsPresenter;
     private View snackView;
     private OnFragmentInteractionListener mListener;
+    private Banner banner;
 
     public AboutUsFragment() {
         // Required empty public constructor
@@ -97,6 +104,9 @@ public class AboutUsFragment extends Fragment implements AboutUsView {
 
         View view = inflater.inflate(R.layout.fragment_about_us, container, false);
         ButterKnife.bind(this, view);
+        /*AdView adView = (AdView)view.findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        adView.loadAd(adRequest);*/
 
         toolbar.setNavigationIcon(ContextCompat.getDrawable(getContext(), R.drawable.ic_arrow_back_white_24dp));
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
@@ -114,8 +124,24 @@ public class AboutUsFragment extends Fragment implements AboutUsView {
         imageView.setVisibility(View.GONE);
         aboutUsPresenter.requestAboutUs();
 
-
         return view;
+    }
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+        banner.onRequestPermissionsResult(requestCode, permissions, grantResults);
+    }
+
+    //add this so video ads will work properly
+    @Override
+    public void onPause() {
+        super.onPause();
+        banner.onPause();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        banner.onResume();
     }
 
     // TODO: Rename method, update argument and hook method into UI event
