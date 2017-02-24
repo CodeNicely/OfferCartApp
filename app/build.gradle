@@ -9,8 +9,8 @@ android {
         applicationId "com.codenicely.discountstore.project_new"
         minSdkVersion 16
         targetSdkVersion 23
-        versionCode 9
-        versionName "1.09"
+        versionCode 10
+        versionName "1.10"
     }
     buildTypes {
 
@@ -45,9 +45,7 @@ dependencies {
     compile 'com.squareup.okhttp3:okhttp:3.4.1'
     compile 'com.google.firebase:firebase-core:9.6.1'
     compile 'com.google.firebase:firebase-messaging:9.6.1'
-    compile 'com.google.firebase:firebase-ads:10.0.1'
     compile 'com.github.bumptech.glide:glide:3.7.0'
-    compile 'com.google.android.gms:play-services-ads:9.6.1'
     compile 'com.github.mobfox:MobFox-Android-SDK-Core:3.2.3'
 }
 apply plugin: 'com.google.gms.google-services'

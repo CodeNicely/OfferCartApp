@@ -25,11 +25,8 @@ import com.codenicely.discountstore.project_new.contact_us.presenter.ContactUsPr
 import com.codenicely.discountstore.project_new.contact_us.presenter.ContactUsPresenterImpl;
 import com.codenicely.discountstore.project_new.helper.image_loader.GlideImageLoader;
 import com.codenicely.discountstore.project_new.helper.image_loader.ImageLoader;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 
 /**
  * A simple {@link Fragment} subclass.

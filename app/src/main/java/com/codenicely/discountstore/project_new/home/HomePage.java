@@ -30,9 +30,6 @@ import com.codenicely.discountstore.project_new.offer.view.OfferFragment;
 import com.codenicely.discountstore.project_new.shops.view.ShopFragment;
 import com.codenicely.discountstore.project_new.wallet.view.WalletFragment;
 import com.codenicely.discountstore.project_new.welcome_screen.view.WelcomeScreenActivity;
-import com.google.android.gms.ads.AdListener;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.InterstitialAd;
 
 public class HomePage extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, HomePageInterface {
@@ -201,7 +198,7 @@ public class HomePage extends AppCompatActivity
 
     }
 
-    void addFragment(Fragment fragment, String title) {
+    public void addFragment(Fragment fragment, String title) {
         if (fragment != null) {
             FragmentManager fragmentManager = getSupportFragmentManager();
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();

@@ -1,6 +1,5 @@
 package com.codenicely.discountstore.project_new.about_us.view;
 
-import android.app.Activity;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
@@ -14,7 +13,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.codenicely.discountstore.project_new.R;
 import com.codenicely.discountstore.project_new.about_us.model.RetrofitAboutUsProvider;
@@ -23,10 +21,7 @@ import com.codenicely.discountstore.project_new.about_us.presenter.AboutUsPresen
 import com.codenicely.discountstore.project_new.about_us.presenter.AboutUsPresenterImpl;
 import com.codenicely.discountstore.project_new.helper.image_loader.GlideImageLoader;
 import com.codenicely.discountstore.project_new.helper.image_loader.ImageLoader;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
 import com.mobfox.sdk.bannerads.Banner;
-import com.mobfox.sdk.bannerads.BannerListener;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
