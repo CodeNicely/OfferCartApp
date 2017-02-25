@@ -3,46 +3,49 @@
     package="com.codenicely.discountstore.project_new">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
-        android:name="com.codenicely.discountstore.project_new.helper.MyApplication"
+        android:name=".helper.MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <service
-            android:name=".helper.MyFirebaseService">
+        <service android:name=".helper.MyFirebaseService">
             <intent-filter>
-                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
 
         <!-- Splash screen -->
         <activity
-            android:name="com.codenicely.discountstore.project_new.splash_screen.view.SplashScreenActivity"
+            android:name=".splash_screen.view.SplashScreenActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait">
-            <meta-data android:name="com.google.android.gms.version"
+            <meta-data
+                android:name="com.google.android.gms.version"
                 android:value="@integer/google_play_services_version" />
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.codenicely.discountstore.project_new.home.HomePage" />
+        <activity android:name=".home.HomePage" />
 
         <!-- Main activity -->
 
-        <activity android:name="com.codenicely.discountstore.project_new.login.view.LoginScreenActivity" />
-        <activity android:name="com.codenicely.discountstore.project_new.verify_otp.view.OtpViewImpl" />
+        <activity android:name=".login.view.LoginScreenActivity" />
+        <activity android:name=".verify_otp.view.OtpViewImpl" />
         <activity
-            android:name="com.codenicely.discountstore.project_new.welcome_screen.view.WelcomeScreenActivity"
+            android:name=".welcome_screen.view.WelcomeScreenActivity"
             android:label="@string/app_name" />
-        <activity android:name="com.codenicely.discountstore.project_new.wallet.view.WalletActivity"></activity>
-        <activity android:name="com.codenicely.discountstore.project_new.payment.view.PaymentActivity"></activity>
-
+        <activity android:name=".wallet.view.WalletActivity" />
+        <activity android:name=".payment.view.PaymentActivity" />
+        <activity android:name=".shop.shop.view.ShopSignUpActivity" />
+        <activity android:name=".shop.shop_signup.view.ShopSignUpActivity"></activity>
     </application>
 
 </manifest>
