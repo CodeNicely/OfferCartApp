@@ -62,7 +62,7 @@ public class MyFirebaseService extends FirebaseMessagingService {
                 .setContentText(messageBody.getData().get("Nick"+""))
                 .setContentIntent(pendingIntent)
                 .setAutoCancel(true)
-                .setSound(defaultSoundUri).setSmallIcon(R.drawable.message_icon);
+                .setSound(defaultSoundUri).setSmallIcon(R.mipmap.ic_launcher);
 
                 Log.d("value of nid",String.valueOf(nid));
 
