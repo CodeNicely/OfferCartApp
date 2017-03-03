@@ -59,6 +59,10 @@ public class MyFirebaseService extends FirebaseMessagingService {
         Log.d("value of id and name",messageBody.getData().get("shop_id")+""+messageBody.getData().get("shop_name"));
         PendingIntent pendingIntent = PendingIntent.getActivity(this, nid++ /* Request code */, intent,
                 PendingIntent.FLAG_ONE_SHOT);
+        if(messageBody.getNotification().getClickAction().equals("1"))
+        {
+
+        }
 
         Uri defaultSoundUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
         NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(this)
@@ -75,6 +79,7 @@ public class MyFirebaseService extends FirebaseMessagingService {
 
         notificationManager.notify(nid /* ID of notification */, notificationBuilder.build());
     }
+
 
 
 }
