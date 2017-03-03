@@ -43,42 +43,51 @@ public class HomePage extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_activity);
+            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_NOSENSOR);
+            Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+            setSupportActionBar(toolbar);
+            DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+            ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+                    this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+            drawer.setDrawerListener(toggle);
+            toggle.syncState();
+            navigationView = (NavigationView) findViewById(R.id.nav_view);
+            navigationView.setNavigationItemSelectedListener(this);
+            sharedPrefs = new SharedPrefs(this);
+            if (!sharedPrefs.getCity().equals("NA")) {
+                setFragment(new CategoryFragment(), "Categories");
 
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_NOSENSOR);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.setDrawerListener(toggle);
-        toggle.syncState();
-        navigationView = (NavigationView) findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(this);
-        sharedPrefs = new SharedPrefs(this);
-        if (!sharedPrefs.getCity().equals("NA")) {
-            setFragment(new CategoryFragment(), "Categories");
+            } else {
+                setFragment(new CityFragment(), "City");
+            }
 
-        } else  {
-            setFragment(new CityFragment(), "City");
+            int backStackCount = getSupportFragmentManager().getBackStackEntryCount();
+            for (int i = 0; i < backStackCount; i++) {
+
+                // Get the back stack fragment id.
+                int backStackId = getSupportFragmentManager().getBackStackEntryAt(i).getId();
+
+                getFragmentManager().popBackStack(backStackId, FragmentManager.POP_BACK_STACK_INCLUSIVE);
+
+            }
+            if (getIntent().getBooleanExtra(Keys.KEY_OPEN_WALLET, false)) {
+
+                addFragment(new WalletFragment(), "WalletFragment");
+                getSupportActionBar().hide();
+
+            }
+        Intent startingIntent = getIntent();
+        if (startingIntent.getExtras() != null) {
+            String msg = startingIntent.getStringExtra("shop_id");
+            String name = startingIntent.getStringExtra("shop_name");
+            int id = Integer.valueOf(msg);
+            if (id != 0 && name != null) {
+                Log.d("open offers fragment 1", "offers");
+                onShopSelected(id, name);
+            }
         }
 
-        int backStackCount = getSupportFragmentManager().getBackStackEntryCount();
-        for (int i = 0; i < backStackCount; i++) {
-
-            // Get the back stack fragment id.
-            int backStackId = getSupportFragmentManager().getBackStackEntryAt(i).getId();
-
-            getFragmentManager().popBackStack(backStackId, FragmentManager.POP_BACK_STACK_INCLUSIVE);
-
         }
-        if(getIntent().getBooleanExtra(Keys.KEY_OPEN_WALLET, false)){
-
-            addFragment(new WalletFragment(),"WalletFragment");
-            getSupportActionBar().hide();
-
-        }
-
-    }
     @Override
     public  void onNewIntent(Intent intent)
     {

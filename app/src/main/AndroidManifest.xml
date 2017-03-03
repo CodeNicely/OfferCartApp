@@ -34,7 +34,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".home.HomePage" />
+        <activity android:name=".home.HomePage" >
+            <intent-filter>
+                <action android:name="com.codenicely.dicountstore.home.HomePage" />
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            </activity>
 
         <!-- Main activity -->
 

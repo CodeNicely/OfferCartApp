@@ -42,6 +42,8 @@ public class MyFirebaseService extends FirebaseMessagingService {
         // Check if message contains a notification payload.
         if (remoteMessage.getNotification() != null) {
             Log.d(TAG, "Message Notification Body: " + remoteMessage.getNotification().getBody());
+            Log.d(TAG, "Message Notification Body: " + remoteMessage.getNotification().getClickAction());
+
         }
 
         sendNotification(remoteMessage);
@@ -56,14 +58,10 @@ public class MyFirebaseService extends FirebaseMessagingService {
         intent.putExtra("FcmActivity","True");
         intent.putExtra("shop_id",messageBody.getData().get("shop_id"));
         intent.putExtra("shop_name",messageBody.getData().get("shop_name"));
+        intent.putExtra("click_action_data",messageBody.getNotification().getClickAction());
         Log.d("value of id and name",messageBody.getData().get("shop_id")+""+messageBody.getData().get("shop_name"));
         PendingIntent pendingIntent = PendingIntent.getActivity(this, nid++ /* Request code */, intent,
                 PendingIntent.FLAG_ONE_SHOT);
-        if(messageBody.getNotification().getClickAction().equals("1"))
-        {
-
-        }
-
         Uri defaultSoundUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
         NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(this)
                 .setContentTitle("Discount Store")
