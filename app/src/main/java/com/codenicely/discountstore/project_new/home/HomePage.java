@@ -76,6 +76,7 @@ public class HomePage extends AppCompatActivity
                 getSupportActionBar().hide();
 
             }
+        //when app is in background or closed..!
         Intent startingIntent = getIntent();
         if (startingIntent.getExtras() != null) {
             String msg = startingIntent.getStringExtra("shop_id");
@@ -88,6 +89,7 @@ public class HomePage extends AppCompatActivity
         }
 
         }
+    //when app is in foreground..!
     @Override
     public  void onNewIntent(Intent intent)
     {
