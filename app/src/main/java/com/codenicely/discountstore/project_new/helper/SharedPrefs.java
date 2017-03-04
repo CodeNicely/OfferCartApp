@@ -23,8 +23,6 @@ public class SharedPrefs {
     private static final String KEY_ACCESS_TOKEN = "access_token";
     private static final String KEY_City = "raipur";
     private static final int KEY_VERSION = 1;
-    private static final String  KEY_VISIT_COUNT="count";
-    private static int KEY_COUNT=0;
     private static final String IS_FIRST_TIME_LAUNCH = "IsFirstTimeLaunch";
 
     // LogCat tag
@@ -80,25 +78,6 @@ public class SharedPrefs {
 
 
     }
-    public int getVisitCount()
-    {
-        return pref.getInt(KEY_VISIT_COUNT,0);
-    }
-    public void setVisitCount()
-    {
-        int count=pref.getInt(KEY_VISIT_COUNT,KEY_COUNT);
-        ++count;
-        editor.putInt(KEY_VISIT_COUNT,count);
-        editor.commit();
-    }
-    public void clearVisitCount()
-    {
-        editor.putInt(KEY_VISIT_COUNT,0);
-        editor.commit();
-    }
-
-
-
 
 
     public void setEmailId(String emailId) {

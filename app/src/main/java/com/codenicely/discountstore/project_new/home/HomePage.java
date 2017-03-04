@@ -198,7 +198,6 @@ public class HomePage extends AppCompatActivity
             sharedPrefs.setAccessToken("");
             sharedPrefs.setEmailId("");
             sharedPrefs.setUsername("");
-            sharedPrefs.clearVisitCount();
             Intent in=new Intent(HomePage.this, WelcomeScreenActivity.class);
             startActivity(in);
             finish();

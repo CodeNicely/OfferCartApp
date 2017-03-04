@@ -130,7 +130,6 @@ public class CityFragment extends Fragment implements CityScreenView {
                 }
             });
         }
-        Log.d("count", String.valueOf(sharedPrefs.getVisitCount()));
         access_token = sharedPrefs.getAccessToken();
 
         cityScreenPresenter = new CityScreenPresenterImpl(this, new RetrofitCityScreenProvider());
