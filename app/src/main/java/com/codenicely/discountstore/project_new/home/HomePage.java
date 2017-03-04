@@ -14,6 +14,7 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.MenuItem;
 import android.widget.Toast;
 
@@ -34,7 +35,6 @@ import com.codenicely.discountstore.project_new.welcome_screen.view.WelcomeScree
 public class HomePage extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, HomePageInterface {
 
-    private String shop_id ="0";
     private String amt = "10";
     private SharedPrefs sharedPrefs;
     private NavigationView navigationView;
@@ -43,43 +43,70 @@ public class HomePage extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_activity);
+            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_NOSENSOR);
+            Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+            setSupportActionBar(toolbar);
+            DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+            ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+                    this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+            drawer.setDrawerListener(toggle);
+            toggle.syncState();
+            navigationView = (NavigationView) findViewById(R.id.nav_view);
+            navigationView.setNavigationItemSelectedListener(this);
+            sharedPrefs = new SharedPrefs(this);
+            if (!sharedPrefs.getCity().equals("NA")) {
+                setFragment(new CategoryFragment(), "Categories");
 
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_NOSENSOR);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+            } else {
+                setFragment(new CityFragment(), "City");
+            }
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.setDrawerListener(toggle);
-        toggle.syncState();
-        navigationView = (NavigationView) findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(this);
-        sharedPrefs = new SharedPrefs(this);
-        if (!sharedPrefs.getCity().equals("NA")) {
-            setFragment(new CategoryFragment(), "Categories");
+            int backStackCount = getSupportFragmentManager().getBackStackEntryCount();
+            for (int i = 0; i < backStackCount; i++) {
 
-        } else  {
-            setFragment(new CityFragment(), "City");
+                // Get the back stack fragment id.
+                int backStackId = getSupportFragmentManager().getBackStackEntryAt(i).getId();
+
+                getFragmentManager().popBackStack(backStackId, FragmentManager.POP_BACK_STACK_INCLUSIVE);
+
+            }
+            if (getIntent().getBooleanExtra(Keys.KEY_OPEN_WALLET, false)) {
+
+                addFragment(new WalletFragment(), "WalletFragment");
+                getSupportActionBar().hide();
+
+            }
+        //when app is in background or closed..!
+        Intent startingIntent = getIntent();
+        if (startingIntent.getExtras() != null) {
+            String msg = startingIntent.getStringExtra("shop_id");
+            String name = startingIntent.getStringExtra("shop_name");
+            int id = Integer.valueOf(msg);
+            if (id != 0 && name != null) {
+                Log.d("open offers fragment 1", "offers");
+                onShopSelected(id, name);
+            }
         }
 
-        int backStackCount = getSupportFragmentManager().getBackStackEntryCount();
-        for (int i = 0; i < backStackCount; i++) {
-
-            // Get the back stack fragment id.
-            int backStackId = getSupportFragmentManager().getBackStackEntryAt(i).getId();
-
-            getFragmentManager().popBackStack(backStackId, FragmentManager.POP_BACK_STACK_INCLUSIVE);
-
         }
-        if(getIntent().getBooleanExtra(Keys.KEY_OPEN_WALLET, false)){
-
-            addFragment(new WalletFragment(),"WalletFragment");
-            getSupportActionBar().hide();
-
+    //when app is in foreground..!
+    @Override
+    public  void onNewIntent(Intent intent)
+    {
+        super.onNewIntent(intent);
+        if(intent.getStringExtra("FcmActivity").equals("True"))
+        {
+            String msg=intent.getStringExtra("shop_id");
+            String name=intent.getStringExtra("shop_name");
+            int id= Integer.valueOf(msg);
+            if (id!=0 && name!=null){
+                Log.d("open offers fragment","offers");
+                onShopSelected(id,name);
+            }
         }
 
     }
+
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -173,7 +200,6 @@ public class HomePage extends AppCompatActivity
             sharedPrefs.setAccessToken("");
             sharedPrefs.setEmailId("");
             sharedPrefs.setUsername("");
-            sharedPrefs.clearVisitCount();
             Intent in=new Intent(HomePage.this, WelcomeScreenActivity.class);
             startActivity(in);
             finish();
@@ -224,7 +250,6 @@ public class HomePage extends AppCompatActivity
         bundle.putInt(Keys.KEY_SHOP_ID, shop_id);
         OfferFragment offerFragment = new OfferFragment();
         offerFragment.setArguments(bundle);
-
         addFragment(offerFragment, shop_name);
     }
 
@@ -447,6 +472,5 @@ public class HomePage extends AppCompatActivity
         });
         builder.show();
     }
-
 
 }

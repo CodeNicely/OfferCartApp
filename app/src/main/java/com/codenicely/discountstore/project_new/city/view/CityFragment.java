@@ -130,7 +130,6 @@ public class CityFragment extends Fragment implements CityScreenView {
                 }
             });
         }
-        Log.d("count", String.valueOf(sharedPrefs.getVisitCount()));
         access_token = sharedPrefs.getAccessToken();
 
         cityScreenPresenter = new CityScreenPresenterImpl(this, new RetrofitCityScreenProvider());
@@ -189,6 +188,7 @@ public class CityFragment extends Fragment implements CityScreenView {
     public void onCitySelected(int city_id, String city_name) {
         sharedPrefs = new SharedPrefs(getContext());
         access_token = sharedPrefs.getAccessToken();
+
         cityScreenPresenter.sendSelectedCity(city_name, city_id, access_token, MyApplication.getFcm());
 
 

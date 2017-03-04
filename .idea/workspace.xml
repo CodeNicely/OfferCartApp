@@ -9,7 +9,11 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
+    <list default="true" id="834b5aac-9647-4191-891f-f7227b8490f9" name="Default" comment="" />
+=======
     <list default="true" id="b06607d9-0f2d-4f4b-9c2b-be10278307d5" name="Default" comment="" />
+>>>>>>> a71008817b6c47fb95e8f6e582edf2785f5aea28
     <ignored path="OfferCartApp.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />

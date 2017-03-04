@@ -66,6 +66,9 @@ public class OtpViewImpl extends Activity implements OtpView {
             public void onClick(View v) {
                 otp1 = otp.getText().toString();
                 otpPresenter.requestOtp(otp1, mobile);
+                submitButton.setEnabled(false);
+                submitButton.setClickable(false);
+
             }
         });
 
@@ -75,8 +78,11 @@ public class OtpViewImpl extends Activity implements OtpView {
     public void showLoading(boolean show) {
         if (show) {
             progressbar.setVisibility(View.VISIBLE);
+            submitButton.setClickable(false);
+
         } else {
             progressbar.setVisibility(View.INVISIBLE);
+            submitButton.setEnabled(true);
         }
     }
 

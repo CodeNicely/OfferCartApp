@@ -97,32 +97,10 @@ public class CategoryFragment extends Fragment implements CategoriesView {
 
         View view = inflater.inflate(R.layout.fragment_category, container, false);
         ButterKnife.bind(this, view);
-       /* AdView adView = (AdView)view.findViewById(R.id.adView);
-        final AdRequest adRequest = new AdRequest.Builder().build();
-        adView.loadAd(adRequest);
-        mInterstitialAd = new InterstitialAd(view.getContext());
-        mInterstitialAd.setAdUnitId(getString(R.string.banner_splash_sub_screen));
-        mInterstitialAd.loadAd(adRequest);*/
         initialize();
         categoriesPresenter.getCategories(token);
-        //sharedPrefs.clearVisitCount();
-        sharedPrefs.setVisitCount();
-        Log.d("count", String.valueOf(sharedPrefs.getVisitCount()));
-
-        if (sharedPrefs.getVisitCount() % 7 == 0) {
-            Toast.makeText(getContext(), "working", Toast.LENGTH_LONG).show();
-        } else {
-            Toast.makeText(getContext(), "incrementing", Toast.LENGTH_LONG).show();
-        }
-        Log.d("count", String.valueOf(sharedPrefs.getVisitCount()));
         getActivity().setTitle("Categories");
-/*        mInterstitialAd.setAdListener(new AdListener() {
-            @Override
-            public void onAdLoaded() {
-                display();
-            }
 
-        });*/
         return view;
 
     }
