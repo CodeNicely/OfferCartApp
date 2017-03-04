@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,6 +17,7 @@ import android.widget.Toast;
 
 import com.codenicely.discountstore.project_new.R;
 import com.codenicely.discountstore.project_new.helper.Keys;
+import com.codenicely.discountstore.project_new.helper.MyApplication;
 import com.codenicely.discountstore.project_new.helper.SharedPrefs;
 import com.codenicely.discountstore.project_new.shops.model.RetrofitShopProvider;
 import com.codenicely.discountstore.project_new.shops.model.data.ShopData;
@@ -111,6 +113,7 @@ public class ShopFragment extends Fragment implements ShopView {
 
         sharedPrefs = new SharedPrefs(getContext());
         initialize();
+        Log.d("fcm", MyApplication.getFcm());
         shopPresenter.getShops(sharedPrefs.getAccessToken(), category_id);
         return view;
     }

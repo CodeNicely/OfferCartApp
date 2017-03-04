@@ -58,7 +58,6 @@ public class MyFirebaseService extends FirebaseMessagingService {
         intent.putExtra("FcmActivity","True");
         intent.putExtra("shop_id",messageBody.getData().get("shop_id"));
         intent.putExtra("shop_name",messageBody.getData().get("shop_name"));
-        intent.putExtra("click_action_data",messageBody.getNotification().getClickAction());
         Log.d("value of id and name",messageBody.getData().get("shop_id")+""+messageBody.getData().get("shop_name"));
         PendingIntent pendingIntent = PendingIntent.getActivity(this, nid++ /* Request code */, intent,
                 PendingIntent.FLAG_ONE_SHOT);

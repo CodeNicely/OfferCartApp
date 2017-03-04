@@ -2,6 +2,7 @@ package com.codenicely.discountstore.project_new.city.view;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -53,7 +54,6 @@ public class CityAdapter extends RecyclerView.Adapter<CityAdapter.MyViewHolder> 
             public void onClick(View v) {
 
                 if (context instanceof HomePage) {
-
                     cityFragment.onCitySelected(cityScreenData.getCity_id(), cityScreenData.getCity_name());
                     holder.done.setVisibility(View.VISIBLE);
                 }
