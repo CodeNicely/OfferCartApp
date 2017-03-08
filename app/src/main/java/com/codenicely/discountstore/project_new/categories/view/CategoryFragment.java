@@ -19,6 +19,7 @@ import com.codenicely.discountstore.project_new.categories.model.RetrofitCategor
 import com.codenicely.discountstore.project_new.categories.model.data.CategoryData;
 import com.codenicely.discountstore.project_new.categories.presenter.CategoriesPresenter;
 import com.codenicely.discountstore.project_new.categories.presenter.CategoriesPresenterImpl;
+import com.codenicely.discountstore.project_new.helper.MyApplication;
 import com.codenicely.discountstore.project_new.helper.SharedPrefs;
 
 import java.util.List;

@@ -11,6 +11,7 @@ public class Urls {
     //public static final String BASE_URL = "http://xendroiders.pythonanywhere.com/";
     public static final String BASE_URL = "http://104.236.210.94:8000/";
     //public static final String BASE_URL = "http://192.168.1.3:8000/";
+    public  static  final String REQUEST_FCM_UPDATE="city/";
     //splash_screen
 
     public static final String REQUEST_SPLASH_SCREEN = "version/";

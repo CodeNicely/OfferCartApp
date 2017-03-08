@@ -2,8 +2,12 @@ package com.codenicely.discountstore.project_new.helper;
 
 import android.app.Application;
 import android.content.Context;
+import android.util.Log;
 
+import com.codenicely.discountstore.project_new.update_fcm.FcmUpdaterView;
+import com.codenicely.discountstore.project_new.update_fcm.presenter.FcmTokenUpdater;
 import com.google.firebase.iid.FirebaseInstanceId;
+import com.google.firebase.iid.FirebaseInstanceIdService;
 
 /**
  * Created by meghal on 23/10/16.
@@ -21,9 +25,7 @@ public class MyApplication extends Application {
     //    FontsOverride.setDefaultFont(this, "MONOSPACE", "fonts/homemade.ttf");
         FontsOverride.setDefaultFont(this, "SERIF", "fonts/itim.ttf");
     //    FontsOverride.setDefaultFont(this, "SANS_SERIF", "fonts/patrick_hand.ttf");
-
         fcm = FirebaseInstanceId.getInstance().getToken();
-
     }
 
     public static String getFcm() {
@@ -33,7 +35,5 @@ public class MyApplication extends Application {
     public static Context getContext() {
         return context;
     }
-
-
 
 }
