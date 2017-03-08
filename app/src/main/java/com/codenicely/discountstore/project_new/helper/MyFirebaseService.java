@@ -10,6 +10,7 @@ import android.net.Uri;
 import android.util.Log;
 
 import android.support.v4.app.NotificationCompat;
+import android.widget.Toast;
 
 import com.codenicely.discountstore.project_new.R;
 import com.codenicely.discountstore.project_new.home.HomePage;
@@ -29,6 +30,8 @@ public class MyFirebaseService extends FirebaseMessagingService {
     @Override
     public void onMessageReceived(RemoteMessage remoteMessage) {
         // ...
+
+//        Toast.makeText(getApplicationContext(), "OnMessageReceived", Toast.LENGTH_SHORT).show();
 
         // TODO(developer): Handle FCM messages here.
         // Not getting messages here? See why this may be: https://goo.gl/39bRNJ

@@ -3,24 +3,6 @@
 
     <item
         is-multidex="false"
-        jar="/home/meghal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/exploded-aar/io.reactivex/rxandroid/1.2.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="5a2386ad9bfff580b206a7fe305cdccd00798159">
-        <dex dex="/home/meghal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/pre-dexed/debug/io.reactivex-rxandroid-1.2.1_bced29ca035ab03fc210d8f2fa282ddd5848036d.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/meghal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.6.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="1e14ebe1cda8491f152083e752ca5bf73cd37bff">
-        <dex dex="/home/meghal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-iid-9.6.1_c5fab1dad4bbcac418b0c93eab94141338779934.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="/home/meghal/.gradle/caches/modules-2/files-2.1/com.jakewharton/butterknife-annotations/8.4.0/ea392375cf9ff59234a82e7928a204215ccc98cd/butterknife-annotations-8.4.0.jar"
         jumboMode="false"
         optimize="true"
@@ -39,24 +21,6 @@
     </item>
     <item
         is-multidex="false"
-        jar="/home/meghal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/9.6.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="0efd1b44f47c134fb245914a1d54a55adbfc2f8d">
-        <dex dex="/home/meghal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-analytics-impl-9.6.1_1c8467ec5d19a8762f008c0927d2bc8f9fc6d5f7.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/meghal/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.7/751f548c85fa49f330cecbb1875893f971b33c4e/gson-2.7.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="751f548c85fa49f330cecbb1875893f971b33c4e">
-        <dex dex="/home/meghal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/pre-dexed/debug/gson-2.7_5b87d4f50a10d1b7571cdde365e816be1d58e7b5.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="/home/meghal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/9.6.1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
@@ -72,6 +36,177 @@
         revision="23.0.3"
         sha1="2586312cd2b8a511e4c6236736f5a039fc0f2273">
         <dex dex="/home/meghal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/pre-dexed/debug/rxjava-1.1.6_14eb4ba870dd115b0e56715c5207204d0e3a5d16.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meghal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/exploded-aar/com.android.support/design/23.2.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="1aa5b025efe97f5006f5be16d6ca67c6c3c0c0d8">
+        <dex dex="/home/meghal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/pre-dexed/debug/com.android.support-design-23.2.0_cfa1b4120780af4f443a460489c7e30681447a00.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meghal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/exploded-aar/com.jakewharton/butterknife/8.4.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="a07818a1ecabdb149998823429cce555af4b9cba">
+        <dex dex="/home/meghal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/pre-dexed/debug/com.jakewharton-butterknife-8.4.0_d37aca02c9eca28fafaf901d9892c05a6b0869ef.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meghal/AndroidStudioProjects/OfferCartApp/app/libs/PayU-release.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="4f44d002c904670109f55299492ea858abdeb705">
+        <dex dex="/home/meghal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/pre-dexed/debug/PayU-release_b7f197a67a903963fcbdd386e9cf87223475d146.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meghal/.gradle/caches/modules-2/files-2.1/com.mcxiaoke.volley/library/1.0.18/38da306aafee11459cd935a01d2c92a98dc670a4/library-1.0.18.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="38da306aafee11459cd935a01d2c92a98dc670a4">
+        <dex dex="/home/meghal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/pre-dexed/debug/library-1.0.18_a883792b21e9d279ff3d21eafbfa690b04024f42.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meghal/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.3.3/1262995965440e28ba5c4d480c9c9ab4ccce84cc/picasso-2.3.3.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="1262995965440e28ba5c4d480c9c9ab4ccce84cc">
+        <dex dex="/home/meghal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/pre-dexed/debug/picasso-2.3.3_24a484ca31107f2861474751ded68734971c2641.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meghal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.2.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="8c108c22c99e794eff255bb34d2a461200c4cbb0">
+        <dex dex="/home/meghal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-23.2.0_3dd919242814f5bd441e96320c5bfc8bb5a9fec3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meghal/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/converter-gson/2.1.0/aa557d71ead91cbf26e0c316a0f593d168303309/converter-gson-2.1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="aa557d71ead91cbf26e0c316a0f593d168303309">
+        <dex dex="/home/meghal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/pre-dexed/debug/converter-gson-2.1.0_5d62d2ec2c846408468c82253ba16b0dc11742c6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meghal/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.9.0/f824591a0016efbaeddb8300bee54832a1398cfa/okio-1.9.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="f824591a0016efbaeddb8300bee54832a1398cfa">
+        <dex dex="/home/meghal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/pre-dexed/debug/okio-1.9.0_4db4019ad5781a3b8800e21faf68b992fc0df2c9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meghal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="6e3578f92f7462d1a935a1d36173e3bdd1234976">
+        <dex dex="/home/meghal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.2.0_ed804cf7984b9c5b1d9138798cbb7529189bb9b9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meghal/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/adapter-rxjava/2.1.0/693eddc23e87ab13f9cf5001707ce8e7e1d1ff01/adapter-rxjava-2.1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="693eddc23e87ab13f9cf5001707ce8e7e1d1ff01">
+        <dex dex="/home/meghal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/pre-dexed/debug/adapter-rxjava-2.1.0_fde9774cbdfae0976a1b199958f059d1881a6473.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meghal/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/24.1.0/support-annotations-24.1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="8a23146e1a8c7cb4758e3d3f62449213f1e51f67">
+        <dex dex="/home/meghal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/pre-dexed/debug/support-annotations-24.1.0_006bd34b1d321aa72770f1a650b8a9cf7f09ed1f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meghal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/exploded-aar/com.android.support/multidex/1.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="78ea232052df889856dcb7b7b542707c89bb3bfb">
+        <dex dex="/home/meghal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/pre-dexed/debug/com.android.support-multidex-1.0.1_5847422dbe0fd1e18890f284f5e4678474c551db.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meghal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/exploded-aar/com.google.firebase/firebase-messaging/9.6.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="80dd8bea08bc5fe10b10a3243b8279c856ccc690">
+        <dex dex="/home/meghal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-messaging-9.6.1_947cb8ef173ccb89e4045ed9ff87f8d21da87e8a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meghal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.2.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="d4c936aa8c7d2522c82e3f1829c791d9e367f009">
+        <dex dex="/home/meghal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/pre-dexed/debug/com.android.support-recyclerview-v7-23.2.0_6146f72394a37ae460b54d9624373b25ca20a953.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meghal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/23.2.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="bc599eb9531da9d18bc58ec4eb0b1a1d895f6839">
+        <dex dex="/home/meghal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/pre-dexed/debug/com.android.support-cardview-v7-23.2.0_6a106a58de2c3442fee90de0ca8d67b87b6972cf.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meghal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/exploded-aar/io.reactivex/rxandroid/1.2.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="5a2386ad9bfff580b206a7fe305cdccd00798159">
+        <dex dex="/home/meghal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/pre-dexed/debug/io.reactivex-rxandroid-1.2.1_bced29ca035ab03fc210d8f2fa282ddd5848036d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meghal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.6.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="1e14ebe1cda8491f152083e752ca5bf73cd37bff">
+        <dex dex="/home/meghal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-iid-9.6.1_c5fab1dad4bbcac418b0c93eab94141338779934.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meghal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/9.6.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="0efd1b44f47c134fb245914a1d54a55adbfc2f8d">
+        <dex dex="/home/meghal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-analytics-impl-9.6.1_1c8467ec5d19a8762f008c0927d2bc8f9fc6d5f7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/meghal/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.7/751f548c85fa49f330cecbb1875893f971b33c4e/gson-2.7.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="751f548c85fa49f330cecbb1875893f971b33c4e">
+        <dex dex="/home/meghal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/pre-dexed/debug/gson-2.7_5b87d4f50a10d1b7571cdde365e816be1d58e7b5.jar" />
     </item>
     <item
         is-multidex="false"
@@ -129,24 +264,6 @@
     </item>
     <item
         is-multidex="false"
-        jar="/home/meghal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/exploded-aar/com.android.support/design/23.2.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="1aa5b025efe97f5006f5be16d6ca67c6c3c0c0d8">
-        <dex dex="/home/meghal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/pre-dexed/debug/com.android.support-design-23.2.0_cfa1b4120780af4f443a460489c7e30681447a00.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/meghal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/exploded-aar/com.jakewharton/butterknife/8.4.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="a07818a1ecabdb149998823429cce555af4b9cba">
-        <dex dex="/home/meghal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/pre-dexed/debug/com.jakewharton-butterknife-8.4.0_d37aca02c9eca28fafaf901d9892c05a6b0869ef.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="/home/meghal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/exploded-aar/com.payu.custombrowser/payu-custom-browser/5.3.7/jars/classes.jar"
         jumboMode="false"
         optimize="true"
@@ -165,48 +282,12 @@
     </item>
     <item
         is-multidex="false"
-        jar="/home/meghal/AndroidStudioProjects/OfferCartApp/app/libs/PayU-release.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="4f44d002c904670109f55299492ea858abdeb705">
-        <dex dex="/home/meghal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/pre-dexed/debug/PayU-release_b7f197a67a903963fcbdd386e9cf87223475d146.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="/home/meghal/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.4.1/c7c4f9e35c2fd5900da24f9872e3971801f08ce0/okhttp-3.4.1.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.3"
         sha1="c7c4f9e35c2fd5900da24f9872e3971801f08ce0">
         <dex dex="/home/meghal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/pre-dexed/debug/okhttp-3.4.1_6f4bb74b304215244d5c13fd73a959917902e407.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/meghal/.gradle/caches/modules-2/files-2.1/com.mcxiaoke.volley/library/1.0.18/38da306aafee11459cd935a01d2c92a98dc670a4/library-1.0.18.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="38da306aafee11459cd935a01d2c92a98dc670a4">
-        <dex dex="/home/meghal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/pre-dexed/debug/library-1.0.18_a883792b21e9d279ff3d21eafbfa690b04024f42.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/meghal/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.3.3/1262995965440e28ba5c4d480c9c9ab4ccce84cc/picasso-2.3.3.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="1262995965440e28ba5c4d480c9c9ab4ccce84cc">
-        <dex dex="/home/meghal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/pre-dexed/debug/picasso-2.3.3_24a484ca31107f2861474751ded68734971c2641.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/meghal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.2.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="8c108c22c99e794eff255bb34d2a461200c4cbb0">
-        <dex dex="/home/meghal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-23.2.0_3dd919242814f5bd441e96320c5bfc8bb5a9fec3.jar" />
     </item>
     <item
         is-multidex="false"
@@ -225,42 +306,6 @@
         revision="23.0.3"
         sha1="3f9cb14177c394545a825f1f04b4f287f6c771e0">
         <dex dex="/home/meghal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/pre-dexed/debug/com.payu.magicretry-magicretry-1.0.4_305fade22910fb3153ec1c2821e95992cb661391.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/meghal/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/converter-gson/2.1.0/aa557d71ead91cbf26e0c316a0f593d168303309/converter-gson-2.1.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="aa557d71ead91cbf26e0c316a0f593d168303309">
-        <dex dex="/home/meghal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/pre-dexed/debug/converter-gson-2.1.0_5d62d2ec2c846408468c82253ba16b0dc11742c6.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/meghal/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.9.0/f824591a0016efbaeddb8300bee54832a1398cfa/okio-1.9.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="f824591a0016efbaeddb8300bee54832a1398cfa">
-        <dex dex="/home/meghal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/pre-dexed/debug/okio-1.9.0_4db4019ad5781a3b8800e21faf68b992fc0df2c9.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/meghal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="6e3578f92f7462d1a935a1d36173e3bdd1234976">
-        <dex dex="/home/meghal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.2.0_ed804cf7984b9c5b1d9138798cbb7529189bb9b9.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/meghal/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/adapter-rxjava/2.1.0/693eddc23e87ab13f9cf5001707ce8e7e1d1ff01/adapter-rxjava-2.1.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="693eddc23e87ab13f9cf5001707ce8e7e1d1ff01">
-        <dex dex="/home/meghal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/pre-dexed/debug/adapter-rxjava-2.1.0_fde9774cbdfae0976a1b199958f059d1881a6473.jar" />
     </item>
     <item
         is-multidex="false"
@@ -291,39 +336,12 @@
     </item>
     <item
         is-multidex="false"
-        jar="/home/meghal/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/24.1.0/support-annotations-24.1.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="8a23146e1a8c7cb4758e3d3f62449213f1e51f67">
-        <dex dex="/home/meghal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/pre-dexed/debug/support-annotations-24.1.0_006bd34b1d321aa72770f1a650b8a9cf7f09ed1f.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/meghal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/exploded-aar/com.android.support/multidex/1.0.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="78ea232052df889856dcb7b7b542707c89bb3bfb">
-        <dex dex="/home/meghal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/pre-dexed/debug/com.android.support-multidex-1.0.1_5847422dbe0fd1e18890f284f5e4678474c551db.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="/home/meghal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.2.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.3"
         sha1="292a9fa091757208efa65e77eef63088247e51f3">
         <dex dex="/home/meghal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-23.2.0_5c5886af8962c431fe6be3c5e54c6b16ba4c9a12.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/meghal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/exploded-aar/com.google.firebase/firebase-messaging/9.6.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="80dd8bea08bc5fe10b10a3243b8279c856ccc690">
-        <dex dex="/home/meghal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-messaging-9.6.1_947cb8ef173ccb89e4045ed9ff87f8d21da87e8a.jar" />
     </item>
     <item
         is-multidex="false"
@@ -351,24 +369,6 @@
         revision="23.0.3"
         sha1="0adb9447509bdd9a674c1c3e7e5ee996247df478">
         <dex dex="/home/meghal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/pre-dexed/debug/com.mixpanel.android-mixpanel-android-4.6.4_e423c68552bd835445bc36aaeced8c8d3d057053.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/meghal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.2.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="d4c936aa8c7d2522c82e3f1829c791d9e367f009">
-        <dex dex="/home/meghal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/pre-dexed/debug/com.android.support-recyclerview-v7-23.2.0_6146f72394a37ae460b54d9624373b25ca20a953.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/meghal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/23.2.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="bc599eb9531da9d18bc58ec4eb0b1a1d895f6839">
-        <dex dex="/home/meghal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/pre-dexed/debug/com.android.support-cardview-v7-23.2.0_6a106a58de2c3442fee90de0ca8d67b87b6972cf.jar" />
     </item>
 
 </items>

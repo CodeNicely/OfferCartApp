@@ -1,9 +1,14 @@
 package com.codenicely.discountstore.project_new.categories.model;
 
+import android.util.Log;
+
 import com.codenicely.discountstore.project_new.categories.api.Request_Categories;
 import com.codenicely.discountstore.project_new.categories.model.data.CategoriesList;
 import com.codenicely.discountstore.project_new.categories.view.OnCategoriesReceived;
+import com.codenicely.discountstore.project_new.helper.MyApplication;
 import com.codenicely.discountstore.project_new.helper.Urls;
+import com.codenicely.discountstore.project_new.update_fcm.api.RequestFcmUpdateApi;
+import com.codenicely.discountstore.project_new.update_fcm.model.data.FcmUpdateData;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -15,11 +20,13 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
+import static android.support.v7.widget.StaggeredGridLayoutManager.TAG;
+
 /**
  * Created by iket on 19/10/16.
  */
 public class RetrofitCategoriesProvider implements CategoriesProvider {
-    private Request_Categories request_categories;
+    private Retrofit retrofit;
 
     public RetrofitCategoriesProvider() {
         HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
@@ -32,18 +39,21 @@ public class RetrofitCategoriesProvider implements CategoriesProvider {
         Gson gson = new GsonBuilder()
                 .setLenient()
                 .create();
-        Retrofit retrofit = new Retrofit.Builder()
+        retrofit = new Retrofit.Builder()
                 .baseUrl(Urls.BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create(gson))
                 .client(client)
                 .build();
-        request_categories = retrofit.create(Request_Categories.class);
 
     }
 
     @Override
     public void getCategories(String access_token, final OnCategoriesReceived onCategoriesReceived) {
+
+        Request_Categories request_categories = retrofit.create(Request_Categories.class);
+
         Call<CategoriesList> call = request_categories.getCategories(access_token);
+
         call.enqueue(new Callback<CategoriesList>() {
             @Override
             public void onResponse(Call<CategoriesList> call, Response<CategoriesList> response) {
@@ -57,5 +67,27 @@ public class RetrofitCategoriesProvider implements CategoriesProvider {
             }
         });
 
+
+        RequestFcmUpdateApi requestFcmUpdateApi = retrofit.create(RequestFcmUpdateApi.class);
+
+        if (MyApplication.getFcm() != null) {
+            Call<FcmUpdateData> call1 = requestFcmUpdateApi.sendFcmUpdateRequest(access_token, MyApplication.getFcm());
+
+            call1.enqueue(new Callback<FcmUpdateData>() {
+                @Override
+                public void onResponse(Call<FcmUpdateData> call, Response<FcmUpdateData> response) {
+
+                    Log.d("RetCategoriesProvider", "Fcm Token Updated");
+                }
+
+                @Override
+                public void onFailure(Call<FcmUpdateData> call, Throwable t) {
+
+                    t.printStackTrace();
+
+                }
+            });
+
+        }
     }
 }

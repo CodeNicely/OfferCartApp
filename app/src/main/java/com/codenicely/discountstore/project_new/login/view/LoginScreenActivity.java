@@ -122,6 +122,8 @@ public class LoginScreenActivity extends Activity implements LoginScreenView {
 
 
                 } else {
+                    login_button.setEnabled(false);
+                    login_button.setClickable(false);
                     loginScreenPresenter.requestLogin(name1, mobile1, email1);
                 }
 
@@ -138,8 +140,10 @@ public class LoginScreenActivity extends Activity implements LoginScreenView {
     public void showLoading(boolean show) {
         if (show) {
             progressbar.setVisibility(View.VISIBLE);
+            login_button.setEnabled(true);
         } else {
             progressbar.setVisibility(View.INVISIBLE);
+            login_button.setEnabled(true);
         }
     }
 
