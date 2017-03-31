@@ -7,13 +7,13 @@ public class SplashScreenData {
 
     private boolean success;
     private String message;
-    private int version;
+    private int version_code;
     private int compulsory_update;
 
-    public SplashScreenData(int version, String message, boolean success, int compulsory_update) {
+    public SplashScreenData(int version_code, String message, boolean success, int compulsory_update) {
         this.success = success;
         this.message = message;
-        this.version = version;
+        this.version_code = version_code;
         this.compulsory_update = compulsory_update;
     }
 
@@ -29,8 +29,8 @@ public class SplashScreenData {
         return message;
     }
 
-    public int getVersion() {
-        return version;
+    public int getVersion_code() {
+        return version_code;
     }
 
 

@@ -6,10 +6,13 @@ package com.codenicely.discountstore.project_new.splash_screen.view;
 
 import android.app.Activity;
 import android.app.Dialog;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.v7.app.AlertDialog;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -50,6 +53,7 @@ public class SplashScreenActivity extends Activity implements SplashScreenView {
     private ImageLoader imageLoader;
     private SharedPrefs sharedPrefs;
     private SplashScreenPresenter splashScreenPresenter;
+    private Handler handler;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,87 +84,115 @@ public class SplashScreenActivity extends Activity implements SplashScreenView {
         }
     }
 
+
     @Override
-    public void version_check(SplashScreenData splashScreenData) {
+    public void onVersionReceived(SplashScreenData splashScreenData) throws PackageManager.NameNotFoundException {
 
-        int i = splashScreenData.getVersion();
-
-        if (i > BuildConfig.VERSION_CODE) {
-            final Dialog dialog = new Dialog(SplashScreenActivity.this);
-            dialog.setContentView(R.layout.activity_splash_dialog_box);
-            Button btn = (Button) dialog.findViewById(R.id.dialog_button);
-            TextView rules = (TextView) dialog.findViewById(R.id.text);
+        if (getPackageManager().getPackageInfo(getPackageName(), 0).versionCode < splashScreenData.getVersion_code() && splashScreenData.getCompulsory_update() != 1) {
 
 
-            if (splashScreenData.getCompulsory_update() == 1) {
-                rules.setText("Major Update.");
-                dialog.setCancelable(false);
-            } else {
-                rules.setText("Please Update");
-                dialog.setCancelable(true);
-            }
-
-            dialog.setTitle("App Update");
-            btn.setText("Update");
-            dialog.show();
-            btn.setOnClickListener(new View.OnClickListener() {
-
+            final AlertDialog ad = new AlertDialog.Builder(this)
+                    .create();
+            ad.setCancelable(false);
+            ad.setTitle("App Update Available");
+            ad.setMessage("Please update the app for better experience");
+            ad.setButton(DialogInterface.BUTTON_POSITIVE, "Update", new DialogInterface.OnClickListener() {
                 @Override
-                public void onClick(View v) {
-
-                    final String appPackageName = getPackageName();
+                public void onClick(DialogInterface dialog, int which) {
+                    ad.cancel();
+                    final String appPackageName = getPackageName(); // getPackageName() from Context or Activity object
                     try {
-                        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse
-                                ("market://details?id="
-                                        + appPackageName)));
-                    } catch (android.content.ActivityNotFoundException e) {
-                        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(
-                                "https://play.google.com/store/apps/details?id=" + appPackageName)));
+                        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + appPackageName)));
+                    } catch (android.content.ActivityNotFoundException anfe) {
+                        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + appPackageName)));
                     }
+
+                    finish();
                 }
             });
+            ad.setButton(DialogInterface.BUTTON_NEGATIVE, "Not Now", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    ad.cancel();
+
+                    if (sharedPrefs.isLoggedIn()) {
+                        startActivity(new Intent(SplashScreenActivity.this, HomePage.class));
+                        finish();
+                    } else {
+                        startActivity(new Intent(SplashScreenActivity.this, WelcomeScreenActivity.class));
+                        finish();
+                    }
+
+                }
+            });
+            ad.show();
 
 
-        } else if (splashScreenData.isSuccess()) {
+        } else if (getPackageManager().getPackageInfo(getPackageName(), 0).versionCode < splashScreenData.getVersion_code() && splashScreenData.getCompulsory_update() == 1) {
 
-/*
-           if (sharedPrefs.isLoggedIn())
-            {
-                Intent city = new Intent(SplashScreenActivity.this, CityScreenActivity.class);
-                startActivity(city);
-                finish();
-            } else
-           {
+            final AlertDialog ad = new AlertDialog.Builder(this)
 
-               Intent Welcome = new Intent(SplashScreenActivity.this, WelcomeScreenActivity.class);
-//               Welcome.putExtra("mobile","9174908579");
-               startActivity(Welcome);
-               finish();
+                    .create();
+            ad.setCancelable(false);
+            ad.setTitle("App Update Available");
+            ad.setMessage("This is a compulsory Update . Please Update the app to enjoy our services");
+            ad.setButton(DialogInterface.BUTTON_POSITIVE, "Update", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    ad.cancel();
+                    final String appPackageName = getPackageName(); // getPackageName() from Context or Activity object
+                    try {
+                        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + appPackageName)));
+                    } catch (android.content.ActivityNotFoundException anfe) {
+                        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + appPackageName)));
+                    }
 
-*/
-            Handler handler = new Handler();
+                    finish();
+                }
+            });
+            ad.show();
+
+
+        } else {
+            handler = new Handler();
             handler.postDelayed(new Runnable() {
                 @Override
                 public void run() {
 
-
                     if (sharedPrefs.isLoggedIn()) {
-                        Log.d("Res", "" + sharedPrefs.isLoggedIn());
-                        Intent city = new Intent(SplashScreenActivity.this, HomePage.class);
-                        startActivity(city);
+                        startActivity(new Intent(SplashScreenActivity.this, HomePage.class));
                         finish();
                     } else {
-                        Log.d("Res", "" + sharedPrefs.isLoggedIn());
-
-                        Intent Welcome = new Intent(SplashScreenActivity.this, WelcomeScreenActivity.class);
-                        startActivity(Welcome);
+                        startActivity(new Intent(SplashScreenActivity.this, WelcomeScreenActivity.class));
                         finish();
                     }
 
                 }
-            }, 2500);
-
+            }, 3000);
         }
+
+
+    }
+
+    @Override
+    public void onFailed() {
+
+        handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+
+                if (sharedPrefs.isLoggedIn()) {
+                    startActivity(new Intent(SplashScreenActivity.this, HomePage.class));
+                    finish();
+                } else {
+                    startActivity(new Intent(SplashScreenActivity.this, WelcomeScreenActivity.class));
+                    finish();
+                }
+
+            }
+        }, 3000);
+
     }
 
 

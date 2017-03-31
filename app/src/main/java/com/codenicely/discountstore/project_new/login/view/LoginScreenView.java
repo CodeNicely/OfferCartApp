@@ -12,6 +12,6 @@ public interface LoginScreenView {
 
     void onLoginVerified();
 
-
+    void onLoginFailed();
 }
 

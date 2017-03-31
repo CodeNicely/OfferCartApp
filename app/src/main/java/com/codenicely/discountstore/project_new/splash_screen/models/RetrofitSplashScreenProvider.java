@@ -1,6 +1,8 @@
 package com.codenicely.discountstore.project_new.splash_screen.models;
 
 
+import android.content.pm.PackageManager;
+
 import com.codenicely.discountstore.project_new.helper.Urls;
 import com.codenicely.discountstore.project_new.splash_screen.SplashScreenCallback;
 import com.codenicely.discountstore.project_new.splash_screen.api.SplashScreenRequestApi;
@@ -57,7 +59,11 @@ public class RetrofitSplashScreenProvider implements SplashScreenProvider {
 
                 // if(response.body().isSuccess()) {
 //                    Log.d(TAG,response.body().toString());
-                splashScreenCallback.onSuccess(response.body());
+                try {
+                    splashScreenCallback.onSuccess(response.body());
+                } catch (PackageManager.NameNotFoundException e) {
+                    e.printStackTrace();
+                }
                 //  }
 
             }

@@ -164,8 +164,13 @@ public class LoginScreenActivity extends Activity implements LoginScreenView {
     }
 
     @Override
+    public void onLoginFailed() {
+        login_button.setEnabled(true);
+        login_button.setClickable(true);
+    }
+
+    @Override
     public void onBackPressed() {
-        //    super.onBackPressed();
         Intent intent = new Intent(LoginScreenActivity.this, WelcomeScreenActivity.class);
         startActivity(intent);
         finish();

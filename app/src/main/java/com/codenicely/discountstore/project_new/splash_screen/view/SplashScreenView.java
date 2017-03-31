@@ -1,6 +1,8 @@
 package com.codenicely.discountstore.project_new.splash_screen.view;
 
 
+import android.content.pm.PackageManager;
+
 import com.codenicely.discountstore.project_new.splash_screen.models.data.SplashScreenData;
 
 /**
@@ -12,6 +14,7 @@ public interface SplashScreenView {
 
     void showProgressBar(boolean show);
 
-    void version_check(SplashScreenData splashScreenData);
+    void onVersionReceived(SplashScreenData splashScreenData) throws PackageManager.NameNotFoundException;
 
+    void onFailed();
 }
