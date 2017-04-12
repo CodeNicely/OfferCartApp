@@ -10,6 +10,7 @@ import android.net.Uri;
 import android.util.Log;
 
 import android.support.v4.app.NotificationCompat;
+import android.widget.Toast;
 
 import com.codenicely.discountstore.project_new.R;
 import com.codenicely.discountstore.project_new.home.HomePage;
@@ -45,7 +46,6 @@ public class MyFirebaseService extends FirebaseMessagingService {
             Log.d(TAG, "Message Notification Body: " + remoteMessage.getNotification().getClickAction());
 
         }
-
         sendNotification(remoteMessage);
 
         // Also if you intend on generating your own notifications as a result of a received FCM
@@ -59,7 +59,7 @@ public class MyFirebaseService extends FirebaseMessagingService {
         intent.putExtra("shop_id",messageBody.getData().get("shop_id"));
         intent.putExtra("shop_name",messageBody.getData().get("shop_name"));
         Log.d("value of id and name",messageBody.getData().get("shop_id")+""+messageBody.getData().get("shop_name"));
-        PendingIntent pendingIntent = PendingIntent.getActivity(this, nid++ /* Request code */, intent,
+        PendingIntent pendingIntent = PendingIntent.getActivity(this, nid++ /* Request code*/ , intent,
                 PendingIntent.FLAG_ONE_SHOT);
         Uri defaultSoundUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
         NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(this)
@@ -74,7 +74,7 @@ public class MyFirebaseService extends FirebaseMessagingService {
         NotificationManager notificationManager =
                 (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
 
-        notificationManager.notify(nid /* ID of notification */, notificationBuilder.build());
+        notificationManager.notify(nid  /*ID of notification*/ , notificationBuilder.build());
     }
 
 
