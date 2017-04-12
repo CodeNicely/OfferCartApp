@@ -58,7 +58,6 @@ public class AboutUsFragment extends Fragment implements AboutUsView {
     private AboutUsPresenter aboutUsPresenter;
     private View snackView;
     private OnFragmentInteractionListener mListener;
-    private Banner banner;
 
     public AboutUsFragment() {
         // Required empty public constructor
@@ -120,23 +119,6 @@ public class AboutUsFragment extends Fragment implements AboutUsView {
         aboutUsPresenter.requestAboutUs();
 
         return view;
-    }
-    @Override
-    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
-        banner.onRequestPermissionsResult(requestCode, permissions, grantResults);
-    }
-
-    //add this so video ads will work properly
-    @Override
-    public void onPause() {
-        super.onPause();
-        banner.onPause();
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-        banner.onResume();
     }
 
     // TODO: Rename method, update argument and hook method into UI event

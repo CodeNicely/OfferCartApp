@@ -1,5 +1,7 @@
 package com.codenicely.discountstore.project_new.splash_screen;
 
+import android.content.pm.PackageManager;
+
 import com.codenicely.discountstore.project_new.splash_screen.models.data.SplashScreenData;
 
 /**
@@ -7,7 +9,7 @@ import com.codenicely.discountstore.project_new.splash_screen.models.data.Splash
  */
 public interface SplashScreenCallback {
 
-    void onSuccess(SplashScreenData splashScreenData);
+    void onSuccess(SplashScreenData splashScreenData) throws PackageManager.NameNotFoundException;
 
     void onFailure(String error);
 

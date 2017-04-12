@@ -1,5 +1,7 @@
 package com.codenicely.discountstore.project_new.splash_screen.presenter;
 
+import android.content.pm.PackageManager;
+
 import com.codenicely.discountstore.project_new.splash_screen.SplashScreenCallback;
 import com.codenicely.discountstore.project_new.splash_screen.models.RetrofitSplashScreenProvider;
 import com.codenicely.discountstore.project_new.splash_screen.models.SplashScreenProvider;
@@ -33,15 +35,16 @@ public class SplashScreenPresenterImpl implements SplashScreenPresenter
 
         splashScreenProvider.requestSplash(fcm, new SplashScreenCallback() {
             @Override
-            public void onSuccess(SplashScreenData splashScreenData) {
+            public void onSuccess(SplashScreenData splashScreenData) throws PackageManager.NameNotFoundException {
 
                 //Log.d(LOG_TAG,"Reached");
                 //splashScreenView.showProgressBar(false);
                 if (splashScreenData.isSuccess()) {
-                    splashScreenView.version_check(splashScreenData);
+                    splashScreenView.onVersionReceived(splashScreenData);
                     splashScreenView.showProgressBar(false);
                 } else {
                     //splashScreenView.version_check(splashScreenData);
+                    splashScreenView.onFailed();
                     splashScreenView.showMessage(splashScreenData.getMessage());
                     splashScreenView.showProgressBar(false);
                 }

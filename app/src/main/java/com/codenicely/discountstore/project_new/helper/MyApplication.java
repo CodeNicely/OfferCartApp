@@ -16,7 +16,6 @@ import com.google.firebase.iid.FirebaseInstanceIdService;
 public class MyApplication extends Application {
 
     private static Context context;
-    private static String fcm;
     @Override
     public void onCreate() {
         super.onCreate();
@@ -25,6 +24,10 @@ public class MyApplication extends Application {
     //    FontsOverride.setDefaultFont(this, "MONOSPACE", "fonts/homemade.ttf");
         FontsOverride.setDefaultFont(this, "SERIF", "fonts/itim.ttf");
     //    FontsOverride.setDefaultFont(this, "SANS_SERIF", "fonts/patrick_hand.ttf");
+<<<<<<< HEAD
+=======
+
+>>>>>>> 06339525a66c3054f66ec38aa3315f1974956e0d
     }
 
     public static String getFcm() {

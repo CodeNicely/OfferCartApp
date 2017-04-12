@@ -6,11 +6,17 @@ package com.codenicely.discountstore.project_new.helper;
 public class Urls {
 
 
-    //public static final String BASE_URL = "http://192.168.88.253:8889/";
-    //
     //public static final String BASE_URL = "http://xendroiders.pythonanywhere.com/";
+<<<<<<< HEAD
     public static final String BASE_URL = "http://104.236.210.94:8000/";
     //public static final String BASE_URL = "http://192.168.1.3:8000/";
+=======
+//    public static final String BASE_URL = "http://104.236.210.94:8888/";
+
+//    public static final String BASE_URL = "http://104.236.210.94:8000/";
+    public static final String BASE_URL = "http://192.168.0.107:8000/";
+
+>>>>>>> 06339525a66c3054f66ec38aa3315f1974956e0d
     public  static  final String REQUEST_FCM_UPDATE="update_fcm/";
     //splash_screen
 

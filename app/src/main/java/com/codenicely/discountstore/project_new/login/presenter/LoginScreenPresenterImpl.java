@@ -35,15 +35,14 @@ public class LoginScreenPresenterImpl implements LoginScreenPresenter {
                 } else {
                     loginView.showLoading(false);
                     loginView.showMessage(loginData.getMessage());
-
+                    loginView.onLoginFailed();
                 }
 
             }
 
             public void onFailure(String error) {
-                Log.d("Response", "false");
                 loginView.showLoading(false);
-                loginView.showMessage("Failed");
+                loginView.showMessage(error);
 
             }
         });

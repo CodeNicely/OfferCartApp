@@ -21,6 +21,8 @@ import com.codenicely.discountstore.project_new.categories.presenter.CategoriesP
 import com.codenicely.discountstore.project_new.categories.presenter.CategoriesPresenterImpl;
 import com.codenicely.discountstore.project_new.helper.MyApplication;
 import com.codenicely.discountstore.project_new.helper.SharedPrefs;
+import com.codenicely.discountstore.project_new.update_fcm.presenter.FcmTokenUpdater;
+import com.codenicely.discountstore.project_new.update_fcm.presenter.FcmTokenUpdaterImpl;
 
 import java.util.List;
 
@@ -118,6 +120,7 @@ public class CategoryFragment extends Fragment implements CategoriesView {
         gridLayoutManager = new GridLayoutManager(getContext(), 2);
         recyclerView.setLayoutManager(gridLayoutManager);
         recyclerView.setAdapter(categoryAdapter);
+
     }
 
     // TODO: Rename method, update argument and hook method into UI event

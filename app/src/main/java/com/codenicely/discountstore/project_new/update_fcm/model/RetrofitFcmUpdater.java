@@ -1,5 +1,7 @@
 package com.codenicely.discountstore.project_new.update_fcm.model;
 
+import android.util.Log;
+
 import com.codenicely.discountstore.project_new.helper.Urls;
 import com.codenicely.discountstore.project_new.login.api.LoginApi;
 import com.codenicely.discountstore.project_new.update_fcm.FcmUpdateCallback;
@@ -41,11 +43,13 @@ public class RetrofitFcmUpdater implements FcmUpdateHelper {
     }
     @Override
     public void sendFcmToken(String access_token, final String fcm, final FcmUpdateCallback fcmUpdateCallback) {
+
         Call<FcmUpdateData> call=requestFcmUpdateApi.sendFcmUpdateRequest(access_token,fcm);
         call.enqueue(new Callback<FcmUpdateData>() {
             @Override
             public void onResponse(Call<FcmUpdateData> call, Response<FcmUpdateData> response) {
                 fcmUpdateCallback.onSuccess(response.body());
+                Log.d("RetrofitFcmUpdater","Fcm Token Updated !");
             }
             @Override
             public void onFailure(Call<FcmUpdateData> call, Throwable t) {

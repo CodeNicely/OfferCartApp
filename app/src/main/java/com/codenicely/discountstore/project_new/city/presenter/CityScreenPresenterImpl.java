@@ -47,9 +47,9 @@ public class CityScreenPresenterImpl implements CityScreenPresenter {
     }
 
     @Override
-    public void sendSelectedCity(final String city, int city_id, String token,String fcm) {
+    public void sendSelectedCity(final String city, int city_id, String token, String fcm) {
         cityScreenView.showLoading(true);
-        cityScreenProvider.sendSelectedCity(city_id, token,fcm, new OnCitiesSent() {
+        cityScreenProvider.sendSelectedCity(city_id, token, fcm, new OnCitiesSent() {
             @Override
             public void onFailure() {
                 cityScreenView.showLoading(false);
@@ -58,9 +58,16 @@ public class CityScreenPresenterImpl implements CityScreenPresenter {
 
             @Override
             public void onSuccess(SelectedCityData selectedCityData) {
-                cityScreenView.showLoading(false);
-                cityScreenView.showMessage("Done!");
-                cityScreenView.onCitySent(city);
+
+                if (selectedCityData.isSuccess()) {
+                    cityScreenView.showLoading(false);
+                    cityScreenView.onCitySent(city);
+                } else {
+                    cityScreenView.showLoading(false);
+                    cityScreenView.showMessage(selectedCityData.getMessage());
+
+                }
+
 
             }
         });
