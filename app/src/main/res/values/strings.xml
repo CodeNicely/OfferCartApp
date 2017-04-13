@@ -25,5 +25,11 @@
     <string name="banner_contactus_screen">ca-app-pub-7676088497515789/2265463351</string>
     <string name="banner_shop_screen">ca-app-pub-7676088497515789/5358530552</string>
     <string name="banner_splash_sub_screen">ca-app-pub-7676088497515789/6757551759</string>
+    <string name="hint_name">Shop Name</string>
+    <string name="hint_mobile">Shop Mobile</string>
+    <string name="hint_email">Shop Address</string>
+    <string name="register_shop">Register Shop</string>
+    <string name="take_picture">Take Picture</string>
+    <string name="select_images_gallery">Select Image from Gallery</string>
 </resources>
 
