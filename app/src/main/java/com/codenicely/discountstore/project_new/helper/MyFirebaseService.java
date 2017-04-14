@@ -48,7 +48,6 @@ public class MyFirebaseService extends FirebaseMessagingService {
             Log.d(TAG, "Message Notification Body: " + remoteMessage.getNotification().getClickAction());
 
         }
-
         sendNotification(remoteMessage);
 
         // Also if you intend on generating your own notifications as a result of a received FCM
@@ -58,6 +57,17 @@ public class MyFirebaseService extends FirebaseMessagingService {
     //we need this module only for creating notification when app is in foreground
     private void sendNotification(RemoteMessage messageBody) {
         Intent intent = new Intent(this, HomePage.class);
+/*
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP| Intent.FLAG_ACTIVITY_SINGLE_TOP );
+        intent.putExtra("FcmActivity","True");
+        intent.putExtra("shop_id",messageBody.getData().get("shop_id"));
+        intent.putExtra("shop_name",messageBody.getData().get("shop_name"));
+        Log.d("value of id and name",messageBody.getData().get("shop_id")+""+messageBody.getData().get("shop_name"));
+        PendingIntent pendingIntent = PendingIntent.getActivity(this, nid++ */
+/* Request code*//*
+ , intent,
+*/
+
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
         intent.putExtra("FcmActivity", "True");
         intent.putExtra("shop_id", messageBody.getData().get("shop_id"));
@@ -79,7 +89,7 @@ public class MyFirebaseService extends FirebaseMessagingService {
         NotificationManager notificationManager =
                 (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
 
-        notificationManager.notify(nid /* ID of notification */, notificationBuilder.build());
+        notificationManager.notify(nid  /*ID of notification*/ , notificationBuilder.build());
     }
 
 

@@ -15,6 +15,7 @@ import android.widget.Toast;
 
 import com.codenicely.discountstore.project_new.R;
 import com.codenicely.discountstore.project_new.login.view.LoginScreenActivity;
+import com.codenicely.discountstore.project_new.shop_activity.ShopActivity;
 import com.codenicely.discountstore.project_new.welcome_screen.models.RetrofitWelcomeScreenProvider;
 import com.codenicely.discountstore.project_new.welcome_screen.models.data.WelcomeImageDetails;
 import com.codenicely.discountstore.project_new.welcome_screen.presenter.WelcomeScreenPresenter;
@@ -24,29 +25,31 @@ import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class WelcomeScreenActivity extends Activity implements WelcomeScreenView {
 
     private ViewPager viewPager;
     private ProgressBar progressBar;
     private ViewPagerAdapter viewPagerAdapter;
     private WelcomeScreenPresenter welcomeScreenPresenter;
-    private Button button;
     private WelcomeScreenView welcomeScreenView;
 
+    @BindView(R.id.button_login_shop)
+    Button button_login_shop;
 
-//    private LinearLayout dotsLayout;
-//    private TextView[] dots;
-//    private int[] layouts;
-//    private SharedPrefs prefManager;
+    @BindView(R.id.button_login_customer)
+    Button button_login_customer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
+        ButterKnife.bind(this);
+
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
         initialise();
-
-
     }
 
     public void initialise() {
@@ -56,13 +59,25 @@ public class WelcomeScreenActivity extends Activity implements WelcomeScreenView
         welcomeScreenPresenter.getWelcomeData();
         viewPagerAdapter = new ViewPagerAdapter(this);
         viewPager.setAdapter(viewPagerAdapter);
-        button = (Button) findViewById(R.id.button_login);
-    }
 
-    public void button(View v) {
-        Intent i = new Intent(WelcomeScreenActivity.this, LoginScreenActivity.class);
-        startActivity(i);
-        finish();
+        button_login_customer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(WelcomeScreenActivity.this, LoginScreenActivity.class);
+                startActivity(i);
+                finish();
+
+            }
+        });
+
+        button_login_shop.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(WelcomeScreenActivity.this, ShopActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
     @Override

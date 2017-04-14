@@ -7,6 +7,7 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 
 import com.codenicely.discountstore.project_new.R;
+import com.codenicely.discountstore.project_new.shop_admin.shop_register.view.ShopRegisterFragment;
 
 public class ShopActivity extends AppCompatActivity {
 
@@ -14,31 +15,28 @@ public class ShopActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shop);
-
-
+        setFragment(new ShopRegisterFragment());
 
     }
 
-    public void setFragment(Fragment fragment, String title) {
+    public void setFragment(Fragment fragment) {
         if (fragment != null) {
             FragmentManager fragmentManager = getSupportFragmentManager();
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
             fragmentTransaction.replace(R.id.container_body, fragment);
             fragmentTransaction.commit();
-            getSupportActionBar().setTitle(title);
 
         }
     }
 
 
-    public void addFragment(Fragment fragment, String title) {
+    public void addFragment(Fragment fragment) {
         if (fragment != null) {
             FragmentManager fragmentManager = getSupportFragmentManager();
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
             fragmentTransaction.replace(R.id.home_layout, fragment);
             fragmentTransaction.addToBackStack(null);
             fragmentTransaction.commit();
-            //     getSupportActionBar().setTitle(title);
         }
 
     }

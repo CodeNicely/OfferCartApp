@@ -6,13 +6,10 @@ package com.codenicely.discountstore.project_new.helper;
 public class Urls {
 
 
-    //public static final String BASE_URL = "http://xendroiders.pythonanywhere.com/";
-//    public static final String BASE_URL = "http://104.236.210.94:8888/";
-
 //    public static final String BASE_URL = "http://104.236.210.94:8000/";
-    public static final String BASE_URL = "http://192.168.0.107:8000/";
+     public static final String BASE_URL = "http://192.168.0.108:8000/";
 
-    public  static  final String REQUEST_FCM_UPDATE="update_fcm/";
+    public static final String REQUEST_FCM_UPDATE = "update_fcm/";
     //splash_screen
 
     public static final String REQUEST_SPLASH_SCREEN = "version/";
@@ -43,6 +40,7 @@ public class Urls {
     public static final String SUB_URL_CONTACT_US = "contact_us/";
     public static final String SUB_URL_DEVELOPERS = "developers/";
     public static final String SUB_URL_PAYMENT_HASH = "payment_hash/";
-    public static final String SUB_URL_UPDATE_PAYMENT_STATUS ="update_payment_status/" ;
-    public static final String SUB_URL_CREATE_SHOP ="create_shop/" ;
+    public static final String SUB_URL_UPDATE_PAYMENT_STATUS = "update_payment_status/";
+    public static final String SUB_URL_CREATE_SHOP = "create_shop/";
+    public static final String REQUEST_SHOP_SIGNUP = "shop_signup/";
 }

@@ -2,12 +2,8 @@ package com.codenicely.discountstore.project_new.helper;
 
 import android.app.Application;
 import android.content.Context;
-import android.util.Log;
 
-import com.codenicely.discountstore.project_new.update_fcm.FcmUpdaterView;
-import com.codenicely.discountstore.project_new.update_fcm.presenter.FcmTokenUpdater;
 import com.google.firebase.iid.FirebaseInstanceId;
-import com.google.firebase.iid.FirebaseInstanceIdService;
 
 /**
  * Created by meghal on 23/10/16.
@@ -16,15 +12,15 @@ import com.google.firebase.iid.FirebaseInstanceIdService;
 public class MyApplication extends Application {
 
     private static Context context;
+
     @Override
     public void onCreate() {
         super.onCreate();
-        context=this;
-   //     FontsOverride.setDefaultFont(this, "DEFAULT", "fonts/comfortaa.ttf");
-    //    FontsOverride.setDefaultFont(this, "MONOSPACE", "fonts/homemade.ttf");
-        FontsOverride.setDefaultFont(this, "SERIF", "fonts/itim.ttf");
-    //    FontsOverride.setDefaultFont(this, "SANS_SERIF", "fonts/patrick_hand.ttf");
-
+        context = this;
+        //     FontsOverride.setDefaultFont(this, "DEFAULT", "fonts/comfortaa.ttf");
+        //    FontsOverride.setDefaultFont(this, "MONOSPACE", "fonts/homemade.ttf");
+        FontsOverride.setDefaultFont(this, "SERIF", "fonts/comfortaa_regular.ttf");
+        //    FontsOverride.setDefaultFont(this, "SANS_SERIF", "fonts/patrick_hand.ttf");
     }
 
     public static String getFcm() {

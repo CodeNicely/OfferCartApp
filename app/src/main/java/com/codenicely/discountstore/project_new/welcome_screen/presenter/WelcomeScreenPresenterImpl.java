@@ -25,7 +25,6 @@ public class WelcomeScreenPresenterImpl implements WelcomeScreenPresenter {
             public void onSuccess(WelcomeScreenData welcomeScreenData) {
                 if (welcomeScreenData.isSuccess()) {
                     welcomeScreenView.setData(welcomeScreenData.getSlider_data());
-                    welcomeScreenView.showMessage("Success");
                     welcomeScreenView.showProgressBar(false);
 
                 } else {
@@ -37,7 +36,7 @@ public class WelcomeScreenPresenterImpl implements WelcomeScreenPresenter {
             @Override
             public void onFailure(String error) {
 
-                welcomeScreenView.showMessage("Failed");
+                welcomeScreenView.showMessage(error);
 
             }
         });

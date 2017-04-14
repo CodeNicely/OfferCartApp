@@ -31,5 +31,10 @@
     <string name="register_shop">Register Shop</string>
     <string name="take_picture">Take Picture</string>
     <string name="select_images_gallery">Select Image from Gallery</string>
+    <string name="city">Select City</string>
+    <string name="login_as_customer">Login as Customer</string>
+    <string name="login_as_shop">Login as Shop</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="shop_image">Add Shop Image</string>
 </resources>
 
