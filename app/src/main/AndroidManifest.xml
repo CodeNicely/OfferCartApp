@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.codenicely.discountstore.project_new">
+          package="com.codenicely.discountstore.project_new">
 
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
     <uses-permission android:name="android.permission.CAMERA"/>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
@@ -18,7 +18,7 @@
         android:theme="@style/AppTheme">
         <service android:name=".helper.MyFirebaseService">
             <intent-filter>
-                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
             </intent-filter>
         </service>
 
@@ -29,33 +29,35 @@
             android:screenOrientation="portrait">
             <meta-data
                 android:name="com.google.android.gms.version"
-                android:value="@integer/google_play_services_version" />
+                android:value="@integer/google_play_services_version"/>
 
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
         <activity android:name=".home.HomePage">
             <intent-filter>
-                <action android:name="com.codenicely.dicountstore.home.HomePage" />
+                <action android:name="com.codenicely.dicountstore.home.HomePage"/>
 
-                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
 
         <!-- Main activity -->
 
-        <activity android:name=".login.view.LoginScreenActivity" />
-        <activity android:name=".verify_otp.view.OtpViewImpl"></activity>
+        <activity android:name=".login.view.LoginScreenActivity"/>
+        <activity android:name=".verify_otp.view.OtpViewImpl"/>
         <activity
             android:name=".welcome_screen.view.WelcomeScreenActivity"
-            android:label="@string/app_name" />
-        <activity android:name=".wallet.view.WalletActivity" />
-        <activity android:name=".payment.view.PaymentActivity" />
-        <activity android:name=".shop_admin.shop_signup.view.ShopSignUpActivity" />
-        <activity android:name=".shop_activity.ShopActivity"></activity>
+            android:label="@string/app_name"/>
+        <activity android:name=".wallet.view.WalletActivity"/>
+        <activity android:name=".payment.view.PaymentActivity"/>
+        <activity android:name=".shop_admin.shop_signup.view.ShopSignUpActivity"/>
+        <activity android:name=".shop_activity.ShopActivity"/>
+        <activity android:name=".verify_shop_otp.view.ShopOtpActivity">
+        </activity>
     </application>
 
 </manifest>

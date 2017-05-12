@@ -107,8 +107,6 @@ public class LoginScreenActivity extends Activity implements LoginScreenView {
                 } else if (!validate(email1)) {
                     email.setError("Invalid Email Address");
                     email.requestFocus();
-
-
                 }
 
                 if ((name1.equals("") || name1.equals(null)) ||

@@ -32,8 +32,7 @@ public interface ShopRegisterApi {
             @Part("city") RequestBody city,
             @Part MultipartBody.Part image);
 
-
-    @GET(Urls.SUB_URL_CREATE_SHOP)
+    @GET(Urls.SUB_URL_PREREGISTER_DATA_SHOP)
     Call<ShopPreRegistrationData> requestPreRegisterData();
 
 

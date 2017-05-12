@@ -14,7 +14,6 @@ import com.codenicely.discountstore.project_new.shop_admin.shop_register.view.Sh
 
 import java.io.File;
 import java.io.IOException;
-
 import rx.Observable;
 import rx.Observer;
 import rx.Subscription;

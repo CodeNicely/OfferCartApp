@@ -36,5 +36,10 @@
     <string name="login_as_shop">Login as Shop</string>
     <string name="confirm_password">Confirm password</string>
     <string name="shop_image">Add Shop Image</string>
+    <string name="offer_name">Offer Name</string>
+    <string name="offer_validity">Offer Validity</string>
+    <string name="offer_price">Offer Price </string>
+    <string name="offer_code">Offer Code</string>
+    <string name="register_offer">Register Offer</string>
 </resources>
 

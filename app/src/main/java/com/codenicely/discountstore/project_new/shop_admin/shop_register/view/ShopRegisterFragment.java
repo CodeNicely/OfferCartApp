@@ -281,8 +281,7 @@ public class ShopRegisterFragment extends Fragment implements ShopRegisterView {
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-
+        super.onActivityResult(requestCode,resultCode, data);
 
         if (requestCode == GALLERY_REQUEST_ID && resultCode == RESULT_OK && data != null && data.getData() != null) {
             imageUri = data.getData();
@@ -293,15 +292,14 @@ public class ShopRegisterFragment extends Fragment implements ShopRegisterView {
                     bitmap = MediaStore.Images.Media.getBitmap(context.getContentResolver(), imageUri);
                     imageView.setImageBitmap(bitmap);
                 }
-
             } catch (IOException e) {
                 e.printStackTrace();
             }
 
-        } else if (requestCode == CAMERA_REQUEST_ID && resultCode == RESULT_OK) {
+        } else if (requestCode ==CAMERA_REQUEST_ID && resultCode == RESULT_OK) {
 
             //    imageUri=data.getData();
-            imageUri = Uri.fromFile(image);
+            imageUri=Uri.fromFile(image);
             try {
                 bitmap = BitmapUtils.filePathToBitmapConverter(UriUtils.uriToFilePathConverter(context, imageUri));
                 imageView.setImageBitmap(bitmap);
@@ -309,8 +307,6 @@ public class ShopRegisterFragment extends Fragment implements ShopRegisterView {
                 e.printStackTrace();
             }
         }
-
-
     }
 
     // TODO: Rename method, update argument and hook method into UI event

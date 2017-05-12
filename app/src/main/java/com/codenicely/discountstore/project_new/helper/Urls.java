@@ -7,7 +7,7 @@ public class Urls {
 
 
 //    public static final String BASE_URL = "http://104.236.210.94:8000/";
-     public static final String BASE_URL = "http://192.168.0.108:8000/";
+     public static final String BASE_URL = "http://172.20.10.13:8000/";
 
     public static final String REQUEST_FCM_UPDATE = "update_fcm/";
     //splash_screen
@@ -42,5 +42,6 @@ public class Urls {
     public static final String SUB_URL_PAYMENT_HASH = "payment_hash/";
     public static final String SUB_URL_UPDATE_PAYMENT_STATUS = "update_payment_status/";
     public static final String SUB_URL_CREATE_SHOP = "create_shop/";
+    public static final String SUB_URL_PREREGISTER_DATA_SHOP = "city_category/";
     public static final String REQUEST_SHOP_SIGNUP = "shop_signup/";
 }
