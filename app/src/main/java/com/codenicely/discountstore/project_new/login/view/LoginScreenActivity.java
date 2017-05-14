@@ -1,6 +1,5 @@
 package com.codenicely.discountstore.project_new.login.view;
 
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -158,7 +157,6 @@ public class LoginScreenActivity extends Activity implements LoginScreenView {
         in.putExtra("mobile", mobile1);
         startActivity(in);
         finish();
-
     }
 
     @Override

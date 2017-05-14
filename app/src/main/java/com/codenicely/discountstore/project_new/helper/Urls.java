@@ -7,13 +7,16 @@ public class Urls {
 
 
 //    public static final String BASE_URL = "http://104.236.210.94:8000/";
-     public static final String BASE_URL = "http://172.20.10.13:8000/";
+    public static final String BASE_URL = "http://172.20.10.13:8000/";
+//    public static final String BASE_URL = "http://192.168.42.39:8000/";
+	// public static final String BASE_URL = "http://192.168.0.117:8000";
 
     public static final String REQUEST_FCM_UPDATE = "update_fcm/";
     //splash_screen
 
     public static final String REQUEST_SPLASH_SCREEN = "version/";
     //public static final String REQUEST_SIGN_IN_API = "Here half url will be there leaving base url ";
+
     //welcome_screen
     public static final String REQUEST_Welcome_SCREEN = "welcome/";
 
@@ -44,4 +47,10 @@ public class Urls {
     public static final String SUB_URL_CREATE_SHOP = "create_shop/";
     public static final String SUB_URL_PREREGISTER_DATA_SHOP = "city_category/";
     public static final String REQUEST_SHOP_SIGNUP = "shop_signup/";
+
+    //shop_otp
+    public static final String VERIFY_SHOP_OTP = "verify_shop_otp/";
+    //shop_login
+    public static final String VERIFY_SHOP_LOGIN = "verify_shop_login/";
+
 }

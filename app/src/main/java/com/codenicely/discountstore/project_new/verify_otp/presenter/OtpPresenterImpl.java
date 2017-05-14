@@ -31,17 +31,12 @@ public class OtpPresenterImpl implements OtpPresenter {
                 } else {
                     otpView.showLoading(false);
                     otpView.showMessage(otpData.getMessage());
-
                 }
             }
-
             public void onFailure(String error) {
                 otpView.showLoading(false);
                 otpView.showMessage("Failed");
-
             }
         });
-
-
     }
 }

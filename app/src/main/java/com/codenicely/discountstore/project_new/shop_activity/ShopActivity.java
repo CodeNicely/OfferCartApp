@@ -8,15 +8,18 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 
 import com.codenicely.discountstore.project_new.R;
-import com.codenicely.discountstore.project_new.shop_admin.shop_register.view.ShopRegisterFragment;
+import com.codenicely.discountstore.project_new.shop_login.view.ShopLoginFragment;
+import com.codenicely.discountstore.project_new.shop_register.view.ShopRegisterFragment;
+import com.codenicely.discountstore.project_new.shop_otp.view.ShopOtpFragment;
 
-public class ShopActivity extends AppCompatActivity implements ShopRegisterFragment.OnFragmentInteractionListener {
+public class ShopActivity extends AppCompatActivity implements ShopRegisterFragment.OnFragmentInteractionListener,
+           ShopOtpFragment.OnFragmentInteractionListener,ShopLoginFragment.OnFragmentInteractionListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shop);
-        setFragment(new ShopRegisterFragment());
+        setFragment(new ShopOtpFragment());
     }
 
     public void setFragment(Fragment fragment) {

@@ -55,7 +55,6 @@ public class OtpViewImpl extends Activity implements OtpView {
         otpPresenter = new OtpPresenterImpl(this,
                 new RetrofitOtpProvider());
 
-
         mobile = getIntent().getExtras().getString("mobile");
         progressbar = (ProgressBar) findViewById(R.id.progressBarView);
         otp = (EditText) findViewById(R.id.editText);
