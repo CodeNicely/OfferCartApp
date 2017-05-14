@@ -46,7 +46,6 @@ public class ShopLoginFragment extends Fragment implements ShopLoginView{
 	Button loginButton;
 	@BindView(R.id.progressBar)
 	ProgressBar progressBar;
-	private SharedPrefs sharedPrefs;
 	private ShopLoginPresenter shopLoginPresenter;
 
 	String mobile,password;

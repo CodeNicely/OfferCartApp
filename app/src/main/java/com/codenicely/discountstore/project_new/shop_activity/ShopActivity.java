@@ -19,7 +19,7 @@ public class ShopActivity extends AppCompatActivity implements ShopRegisterFragm
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shop);
-        setFragment(new ShopOtpFragment());
+        setFragment(new ShopLoginFragment());
     }
 
     public void setFragment(Fragment fragment) {

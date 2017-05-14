@@ -45,22 +45,25 @@ public class OfferAddFragment extends Fragment implements OfferAddView, View.OnC
 
 	@BindView(R.id.name)
 	EditText name;
+
 	@BindView(R.id.offer_validity)
 	EditText validity;
+
 	@BindView(R.id.offer_price)
 	EditText price;
+
 	@BindView(R.id.offer_description)
 	EditText description;
+
 	@BindView(R.id.offer_code)
 	EditText offerCode;
+
 	@BindView(R.id.imageView)
 	ImageView imageView;
 	@BindView(R.id.progressBar)
 	ProgressBar progressBar;
-
 	@BindView(R.id.galleryButton)
 	Button galleryButton;
-
 	@BindView(R.id.cameraButton)
 	Button cameraButton;
 	@BindView(R.id.registerOffer)

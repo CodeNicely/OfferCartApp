@@ -42,7 +42,6 @@ public class LoginScreenActivity extends Activity implements LoginScreenView {
     @BindView(R.id.toolbar)
     Toolbar toolbar;
 
-    private SharedPrefs sharedPrefs;
     private ProgressBar progressbar;
     private RetrofitLoginScreenProvider retrofitLoginScreenProvider;
     private LoginScreenPresenter loginScreenPresenter;
@@ -66,7 +65,6 @@ public class LoginScreenActivity extends Activity implements LoginScreenView {
         });
 
         Log.d("Response", "1");
-        sharedPrefs = new SharedPrefs(this);
         progressbar = (ProgressBar) findViewById(R.id.progressBar);
         Log.d("Response", "2");
 

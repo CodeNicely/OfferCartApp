@@ -44,13 +44,20 @@ public class Urls {
     public static final String SUB_URL_DEVELOPERS = "developers/";
     public static final String SUB_URL_PAYMENT_HASH = "payment_hash/";
     public static final String SUB_URL_UPDATE_PAYMENT_STATUS = "update_payment_status/";
-    public static final String SUB_URL_CREATE_SHOP = "create_shop/";
+
+	//shop_register
+	public static final String SUB_URL_CREATE_SHOP = "create_shop/";
     public static final String SUB_URL_PREREGISTER_DATA_SHOP = "city_category/";
-    public static final String REQUEST_SHOP_SIGNUP = "shop_signup/";
+
+	//useless now
+	public static final String REQUEST_SHOP_SIGNUP = "shop_signup/";
 
     //shop_otp
     public static final String VERIFY_SHOP_OTP = "verify_shop_otp/";
     //shop_login
     public static final String VERIFY_SHOP_LOGIN = "verify_shop_login/";
+
+	//offer_register
+	public static final String OFFER_ADD = "offer_add/";
 
 }
