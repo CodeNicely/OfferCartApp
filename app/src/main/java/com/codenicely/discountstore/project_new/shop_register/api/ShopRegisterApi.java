@@ -35,5 +35,4 @@ public interface ShopRegisterApi {
     @GET(Urls.SUB_URL_PREREGISTER_DATA_SHOP)
     Call<ShopPreRegistrationData> requestPreRegisterData();
 
-
 }

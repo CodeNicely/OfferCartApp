@@ -22,14 +22,11 @@ public interface OfferAddApi {
 	@Multipart
 	@POST(Urls.SUB_URL_CREATE_SHOP)
 	Observable<ShopRegisterData> requestShopRegistration(
-		@Part("offer_name") RequestBody name,
-		@Part("validity") RequestBody mobile,
-		@Part("shop_name") RequestBody password,
+		@Part("offer_name") RequestBody offer_name,
+		@Part("validity") RequestBody validity,
+		@Part("shop_name") RequestBody shop_name,
 		@Part("description") RequestBody description,
 		@Part("price") RequestBody price,
 		@Part MultipartBody.Part image);
-
-
-
 
 }

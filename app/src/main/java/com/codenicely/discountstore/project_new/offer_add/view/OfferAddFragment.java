@@ -108,7 +108,6 @@ public class OfferAddFragment extends Fragment implements OfferAddView, View.OnC
 		// Inflate the layout for this fragment
 		View view=inflater.inflate(R.layout.fragment_offer_add,container,false);
 		ButterKnife.bind(this,view);
-
 		cameraButton.setOnClickListener((View.OnClickListener) view);
 		galleryButton.setOnClickListener((View.OnClickListener) view);
 		registerButton.setOnClickListener((View.OnClickListener) view);
