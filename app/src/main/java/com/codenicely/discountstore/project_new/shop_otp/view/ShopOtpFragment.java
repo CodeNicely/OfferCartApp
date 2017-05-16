@@ -89,7 +89,7 @@ public class ShopOtpFragment extends Fragment implements ShopOtpView {
 							 Bundle savedInstanceState) {
 		View v =inflater.inflate(R.layout.fragment_shop_otp, container, false);
 		ButterKnife.bind(this, v);
-
+		mobile = getArguments().getString("mobile");
 		shopOtpPresenter =new ShopOtpPresenterImpl(this,new RetrofitShopOtpProvider());
 
 		sendOtpButton.setOnClickListener(new View.OnClickListener() {

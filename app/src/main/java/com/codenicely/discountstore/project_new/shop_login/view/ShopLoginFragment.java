@@ -16,9 +16,12 @@ import android.widget.Toast;
 import com.codenicely.discountstore.project_new.R;
 import com.codenicely.discountstore.project_new.helper.SharedPrefs;
 import com.codenicely.discountstore.project_new.login.presenter.LoginScreenPresenter;
+import com.codenicely.discountstore.project_new.shop_activity.ShopActivity;
 import com.codenicely.discountstore.project_new.shop_login.model.RetrofitShopLoginProvider;
 import com.codenicely.discountstore.project_new.shop_login.presenter.ShopLoginPresenter;
 import com.codenicely.discountstore.project_new.shop_login.presenter.ShopLoginPresenterImpl;
+import com.codenicely.discountstore.project_new.shop_register.view.ShopRegisterFragment;
+import com.payu.magicretry.MainActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -46,6 +49,9 @@ public class ShopLoginFragment extends Fragment implements ShopLoginView{
 	Button loginButton;
 	@BindView(R.id.progressBar)
 	ProgressBar progressBar;
+	@BindView(R.id.buttonSignUp)
+	Button buttonSignUp;
+
 	private ShopLoginPresenter shopLoginPresenter;
 
 	String mobile,password;
@@ -107,6 +113,12 @@ public class ShopLoginFragment extends Fragment implements ShopLoginView{
 
 			}
 
+		});
+		buttonSignUp.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				((ShopActivity)getActivity()).addFragment(new ShopRegisterFragment());
+			}
 		});
         // Inflate the layout for this fragment
         return view;

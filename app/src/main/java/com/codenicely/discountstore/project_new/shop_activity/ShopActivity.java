@@ -35,7 +35,7 @@ public class ShopActivity extends AppCompatActivity implements ShopRegisterFragm
         if (fragment != null) {
             FragmentManager fragmentManager = getSupportFragmentManager();
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-            fragmentTransaction.replace(R.id.home_layout, fragment);
+            fragmentTransaction.replace(R.id.container_body, fragment);
             fragmentTransaction.addToBackStack(null);
             fragmentTransaction.commit();
         }

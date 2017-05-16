@@ -35,6 +35,7 @@ import com.codenicely.discountstore.project_new.about_us.view.AboutUsFragment;
 import com.codenicely.discountstore.project_new.helper.utils.BitmapUtils;
 import com.codenicely.discountstore.project_new.helper.utils.UriUtils;
 import com.codenicely.discountstore.project_new.shop_activity.ShopActivity;
+import com.codenicely.discountstore.project_new.shop_otp.view.ShopOtpFragment;
 import com.codenicely.discountstore.project_new.shop_register.data.CategoryData;
 import com.codenicely.discountstore.project_new.shop_register.data.CityData;
 import com.codenicely.discountstore.project_new.shop_register.data.ShopPreRegistrationData;
@@ -269,6 +270,14 @@ public class ShopRegisterFragment extends Fragment implements ShopRegisterView {
                             .setActionTextColor(Color.RED)
                             .show();
                 } else {
+                    ShopOtpFragment ldf = new ShopOtpFragment ();
+                    Bundle args = new Bundle();
+                    args.putString("mobile",mobile);
+                    ldf.setArguments(args);
+
+//Inflate the fragment
+                    getFragmentManager().beginTransaction().add(R.id.container_body, ldf).commit();
+
                     shopRegisterPresenter.registerShop(name, mobile, password, description, address,
                             category, city, imageUri);
                 }
