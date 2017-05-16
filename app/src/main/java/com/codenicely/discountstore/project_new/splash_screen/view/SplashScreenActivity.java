@@ -118,7 +118,12 @@ public class SplashScreenActivity extends Activity implements SplashScreenView {
                     if (sharedPrefs.isLoggedIn()) {
                         startActivity(new Intent(SplashScreenActivity.this, HomePage.class));
                         finish();
-                    } else {
+                    }else if(sharedPrefs.isLoggedInasShop()) {
+
+                        //    startActivity(new Intent(SplashScreenActivity.this, HomePage.class));
+                        finish();
+                    }
+                    else {
                         startActivity(new Intent(SplashScreenActivity.this, WelcomeScreenActivity.class));
                         finish();
                     }
@@ -162,7 +167,11 @@ public class SplashScreenActivity extends Activity implements SplashScreenView {
                     if (sharedPrefs.isLoggedIn()) {
                         startActivity(new Intent(SplashScreenActivity.this, HomePage.class));
                         finish();
-                    } else {
+                    }else if (sharedPrefs.isLoggedInasShop()) {
+					//	startActivity(new Intent(SplashScreenActivity.this, HomePage.class));
+						finish();
+					}
+					else {
                         startActivity(new Intent(SplashScreenActivity.this, WelcomeScreenActivity.class));
                         finish();
                     }
@@ -185,7 +194,11 @@ public class SplashScreenActivity extends Activity implements SplashScreenView {
                 if (sharedPrefs.isLoggedIn()) {
                     startActivity(new Intent(SplashScreenActivity.this, HomePage.class));
                     finish();
-                } else {
+                }else if (sharedPrefs.isLoggedInasShop()) {
+			//		startActivity(new Intent(SplashScreenActivity.this, HomePage.class));
+					finish();
+				}
+				else {
                     startActivity(new Intent(SplashScreenActivity.this, WelcomeScreenActivity.class));
                     finish();
                 }

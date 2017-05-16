@@ -1,6 +1,7 @@
 package com.codenicely.discountstore.project_new.shop_otp.view;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -14,6 +15,7 @@ import android.widget.Toast;
 
 import com.codenicely.discountstore.project_new.R;
 import com.codenicely.discountstore.project_new.helper.SharedPrefs;
+import com.codenicely.discountstore.project_new.shop_home.ShopHomePage;
 import com.codenicely.discountstore.project_new.shop_otp.model.RetrofitShopOtpProvider;
 import com.codenicely.discountstore.project_new.shop_otp.presenter.ShopOtpPresenter;
 import com.codenicely.discountstore.project_new.shop_otp.presenter.ShopOtpPresenterImpl;
@@ -89,7 +91,10 @@ public class ShopOtpFragment extends Fragment implements ShopOtpView {
 							 Bundle savedInstanceState) {
 		View v =inflater.inflate(R.layout.fragment_shop_otp, container, false);
 		ButterKnife.bind(this, v);
+		sharedPrefs = new SharedPrefs(getContext());
+
 		mobile = getArguments().getString("mobile");
+
 		shopOtpPresenter =new ShopOtpPresenterImpl(this,new RetrofitShopOtpProvider());
 
 		sendOtpButton.setOnClickListener(new View.OnClickListener() {
@@ -153,8 +158,11 @@ public class ShopOtpFragment extends Fragment implements ShopOtpView {
 
 		Log.d("res", access_token);
 
-		sharedPrefs.setAccessToken(access_token);
-		sharedPrefs.setLogin(true);
+		sharedPrefs.setAccessTokenShop(access_token);
+		sharedPrefs.setShopLogin(true);
+
+		Intent intent = new Intent(getContext(), ShopHomePage.class);
+		startActivity(intent);
 
 		//something to jump to next fragment
 

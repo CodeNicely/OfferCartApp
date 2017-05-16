@@ -138,6 +138,7 @@ public class ShopRegisterFragment extends Fragment implements ShopRegisterView {
     private ArrayAdapter<String> city_array_adapter;
     private ArrayAdapter<String> category_array_adapter;
     private ProgressDialog progressDialog;
+	String mobile;
 
     public ShopRegisterFragment() {
         // Required empty public constructor
@@ -224,7 +225,7 @@ public class ShopRegisterFragment extends Fragment implements ShopRegisterView {
             public void onClick(View v) {
 
                 String name = name_edittext.getText().toString();
-                String mobile = mobile_edittext.getText().toString();
+                mobile = mobile_edittext.getText().toString();
                 String password = password_edittext.getText().toString();
                 String confirm_password = confirm_password_edittext.getText().toString();
                 String description = description_edittext.getText().toString();
@@ -270,13 +271,6 @@ public class ShopRegisterFragment extends Fragment implements ShopRegisterView {
                             .setActionTextColor(Color.RED)
                             .show();
                 } else {
-                    ShopOtpFragment ldf = new ShopOtpFragment ();
-                    Bundle args = new Bundle();
-                    args.putString("mobile",mobile);
-                    ldf.setArguments(args);
-
-//Inflate the fragment
-                    getFragmentManager().beginTransaction().add(R.id.container_body, ldf).commit();
 
                     shopRegisterPresenter.registerShop(name, mobile, password, description, address,
                             category, city, imageUri);
@@ -285,6 +279,7 @@ public class ShopRegisterFragment extends Fragment implements ShopRegisterView {
         });
         shopRegisterPresenter.requestPreRegistrationDetails();
         return view;
+
     }
 
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
@@ -528,6 +523,14 @@ public class ShopRegisterFragment extends Fragment implements ShopRegisterView {
 
     @Override
     public void onRegistrationSuccess() {
-        ((ShopActivity) getContext()).addFragment(new AboutUsFragment());
+		ShopOtpFragment ldf = new ShopOtpFragment ();
+		Bundle args = new Bundle();
+		args.putString("mobile",mobile);
+		ldf.setArguments(args);
+
+//Inflate the fragment
+		getFragmentManager().beginTransaction().add(R.id.container_body, ldf).commit();
+
+        ((ShopActivity) getContext()).addFragment(new ShopOtpFragment());
     }
 }

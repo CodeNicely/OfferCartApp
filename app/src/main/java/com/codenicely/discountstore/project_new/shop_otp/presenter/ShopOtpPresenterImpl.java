@@ -28,6 +28,7 @@ public class ShopOtpPresenterImpl implements ShopOtpPresenter {
 					shopOtpView.showProgressbar(false);
 					shopOtpView.onOtpVerified(shopOtpData.getAccess_token());
 
+
 				}else {
 					shopOtpView.showProgressbar(false);
 					shopOtpView.showMessage(shopOtpData.getMessage());

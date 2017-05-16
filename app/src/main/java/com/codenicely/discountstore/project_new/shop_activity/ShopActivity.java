@@ -9,8 +9,8 @@ import android.support.v7.app.AppCompatActivity;
 
 import com.codenicely.discountstore.project_new.R;
 import com.codenicely.discountstore.project_new.shop_login.view.ShopLoginFragment;
-import com.codenicely.discountstore.project_new.shop_register.view.ShopRegisterFragment;
 import com.codenicely.discountstore.project_new.shop_otp.view.ShopOtpFragment;
+import com.codenicely.discountstore.project_new.shop_register.view.ShopRegisterFragment;
 
 public class ShopActivity extends AppCompatActivity implements ShopRegisterFragment.OnFragmentInteractionListener,
            ShopOtpFragment.OnFragmentInteractionListener,ShopLoginFragment.OnFragmentInteractionListener {
@@ -19,8 +19,10 @@ public class ShopActivity extends AppCompatActivity implements ShopRegisterFragm
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shop);
-        setFragment(new ShopLoginFragment());
-    }
+
+        //setFragment(new ShopLoginFragment());
+
+	}
 
     public void setFragment(Fragment fragment) {
         if (fragment != null) {

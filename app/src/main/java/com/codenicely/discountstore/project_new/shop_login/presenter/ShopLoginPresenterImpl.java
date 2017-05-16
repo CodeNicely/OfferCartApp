@@ -29,7 +29,7 @@ public class ShopLoginPresenterImpl implements ShopLoginPresenter {
 			public void onSuccess(ShopLoginData shopLoginData) {
 				if (shopLoginData.isSuccess()) {
 					shopLoginView.showProgressbar(false);
-					shopLoginView.onLoginVerified();
+					shopLoginView.onLoginVerified(shopLoginData.getAccess_token());
 				} else {
 					shopLoginView.showProgressbar(false);
 					shopLoginView.showMessage(shopLoginData.getMessage());

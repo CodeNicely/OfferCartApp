@@ -2,9 +2,11 @@ package com.codenicely.discountstore.project_new.shop_login.view;
 
 
 
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,6 +19,7 @@ import com.codenicely.discountstore.project_new.R;
 import com.codenicely.discountstore.project_new.helper.SharedPrefs;
 import com.codenicely.discountstore.project_new.login.presenter.LoginScreenPresenter;
 import com.codenicely.discountstore.project_new.shop_activity.ShopActivity;
+import com.codenicely.discountstore.project_new.shop_home.ShopHomePage;
 import com.codenicely.discountstore.project_new.shop_login.model.RetrofitShopLoginProvider;
 import com.codenicely.discountstore.project_new.shop_login.presenter.ShopLoginPresenter;
 import com.codenicely.discountstore.project_new.shop_login.presenter.ShopLoginPresenterImpl;
@@ -55,6 +58,8 @@ public class ShopLoginFragment extends Fragment implements ShopLoginView{
 	private ShopLoginPresenter shopLoginPresenter;
 
 	String mobile,password;
+	private SharedPrefs sharedPrefs;
+
 
 	/**
      * Use this factory method to create a new instance of
@@ -91,6 +96,8 @@ public class ShopLoginFragment extends Fragment implements ShopLoginView{
                              Bundle savedInstanceState) {
         View view =inflater.inflate(R.layout.fragment_shop_login, container, false);
 		ButterKnife.bind(this,view);
+		sharedPrefs = new SharedPrefs(getContext());
+
 		shopLoginPresenter=new ShopLoginPresenterImpl(this,new RetrofitShopLoginProvider());
 
 		loginButton.setOnClickListener(new View.OnClickListener() {
@@ -144,8 +151,16 @@ public class ShopLoginFragment extends Fragment implements ShopLoginView{
 	}
 
 	@Override
-	public void onLoginVerified() {
+	public void onLoginVerified(String access_token) {
+
+		Log.d("Access Token :",access_token);
+		sharedPrefs.setAccessTokenShop(access_token);
+		sharedPrefs.setShopLogin(true);
+
 		//Something to jump to next activity
+		Intent intent = new Intent(getContext(), ShopHomePage.class);
+		startActivity(intent);
+		Toast.makeText(getContext(), "Jump to next activity now", Toast.LENGTH_SHORT).show();
 	}
 
 	public interface OnFragmentInteractionListener {
