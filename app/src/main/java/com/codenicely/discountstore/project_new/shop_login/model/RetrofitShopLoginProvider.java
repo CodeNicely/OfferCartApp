@@ -49,6 +49,7 @@ public class RetrofitShopLoginProvider implements ShopLoginProvider {
 
 			@Override
 			public void onFailure(Call<ShopLoginData> call, Throwable t) {
+
 				t.printStackTrace();
 			}
 		});

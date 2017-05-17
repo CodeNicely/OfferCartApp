@@ -8,8 +8,10 @@ public class ShopOtpData {
 	private boolean success;
 	private String shop_access_token;
 
-	public ShopOtpData(String message) {
+	public ShopOtpData(String message, boolean success, String shop_access_token) {
 		this.message = message;
+		this.success = success;
+		this.shop_access_token = shop_access_token;
 	}
 
 	public String getMessage() {

@@ -8,8 +8,8 @@ public class Urls {
 
 //     public static final String BASE_URL = "http://104.236.210.94:8000/";
 //     public static final String BASE_URL = "http://172.20.10.13:8000/";
-     public static final String BASE_URL = "http://192.168.43.39:8000/";
-//	 public static final String BASE_URL = "http://192.168.0.108:8000";
+//     public static final String BASE_URL = "http://192.168.43.39:8000/";
+	 public static final String BASE_URL = "http://192.168.0.108:8000";
 
     public static final String REQUEST_FCM_UPDATE = "update_fcm/";
     //splash_screen
@@ -47,24 +47,30 @@ public class Urls {
 
 	//shop_register
 	public static final String SUB_URL_CREATE_SHOP = "create_shop/";
-    public static final String SUB_URL_PREREGISTER_DATA_SHOP = "city_category/";
+		//to get category and city list
+    	public static final String SUB_URL_PREREGISTER_DATA_SHOP = "city_category/";
 
     //shop_otp
     public static final String VERIFY_SHOP_OTP = "verify_shop_otp/";
     //shop_login
     public static final String VERIFY_SHOP_LOGIN = "verify_shop_login/";
 
-    //shop_profile
+    //shop_profile_show
     public static final String REQUEST_SHOP_PROFILE = "my_shop_profile/";
 
+	//shop_profile_edit
+	public static final String EDIT_SHOP_PROFILE ="edit_shop_profile/";
 
     //offer_register
 	public static final String OFFER_ADD = "offer_add/";
 
+	//offer_edit
+	public static final String OFFER_EDIT = "offer_edit/";
 
-    //offer_show to shop
+	//offer delete
+	public static final String OFFER_DELETE = "offer_delete/";
+
+	//offer_show to shop
     public static final String MY_SHOP_OFFERS = "my_shop_offers/";
-    //public static final String REQUEST_OFFER = "offer/";
-
 
 }

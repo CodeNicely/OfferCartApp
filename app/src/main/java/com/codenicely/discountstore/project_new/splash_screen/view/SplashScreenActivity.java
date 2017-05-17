@@ -29,6 +29,7 @@ import com.codenicely.discountstore.project_new.helper.SharedPrefs;
 import com.codenicely.discountstore.project_new.helper.image_loader.GlideImageLoader;
 import com.codenicely.discountstore.project_new.helper.image_loader.ImageLoader;
 import com.codenicely.discountstore.project_new.home.HomePage;
+import com.codenicely.discountstore.project_new.shop_home.ShopHomePage;
 import com.codenicely.discountstore.project_new.splash_screen.models.RetrofitSplashScreenProvider;
 import com.codenicely.discountstore.project_new.splash_screen.models.data.SplashScreenData;
 import com.codenicely.discountstore.project_new.splash_screen.presenter.SplashScreenPresenter;
@@ -120,7 +121,7 @@ public class SplashScreenActivity extends Activity implements SplashScreenView {
                         finish();
                     }else if(sharedPrefs.isLoggedInasShop()) {
 
-                        //    startActivity(new Intent(SplashScreenActivity.this, HomePage.class));
+                            startActivity(new Intent(SplashScreenActivity.this, ShopHomePage.class));
                         finish();
                     }
                     else {
@@ -168,7 +169,8 @@ public class SplashScreenActivity extends Activity implements SplashScreenView {
                         startActivity(new Intent(SplashScreenActivity.this, HomePage.class));
                         finish();
                     }else if (sharedPrefs.isLoggedInasShop()) {
-					//	startActivity(new Intent(SplashScreenActivity.this, HomePage.class));
+
+						startActivity(new Intent(SplashScreenActivity.this, ShopHomePage.class));
 						finish();
 					}
 					else {
@@ -195,7 +197,7 @@ public class SplashScreenActivity extends Activity implements SplashScreenView {
                     startActivity(new Intent(SplashScreenActivity.this, HomePage.class));
                     finish();
                 }else if (sharedPrefs.isLoggedInasShop()) {
-			//		startActivity(new Intent(SplashScreenActivity.this, HomePage.class));
+					startActivity(new Intent(SplashScreenActivity.this, ShopHomePage.class));
 					finish();
 				}
 				else {
