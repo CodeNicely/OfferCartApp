@@ -153,14 +153,22 @@ public class ShopRegisterFragment extends Fragment implements ShopRegisterView {
      * @return A new instance of fragment ShopRegisterFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static ShopRegisterFragment newInstance(String param1, String param2) {
-        ShopRegisterFragment fragment = new ShopRegisterFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
+    public  ShopOtpFragment newInstance(String param1, String param2) {
+     /*   ShopRegisterFragment fragment = new ShopRegisterFragment();
+		Bundle args = new Bundle();
+		args.putString(ARG_PARAM1, param1);
+		args.putString(ARG_PARAM2, param2);
+		fragment.setArguments(args);
+		return fragment;*/
+		ShopOtpFragment sof = new ShopOtpFragment();
+		Bundle args = new Bundle();
+		args.putString("mobile", mobile);
+		sof.setArguments(args);
+
+//Inflate the fragment
+		getFragmentManager().beginTransaction().add(R.id.container_body, sof).commit();
+		return sof;
+	}
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -523,14 +531,8 @@ public class ShopRegisterFragment extends Fragment implements ShopRegisterView {
 
     @Override
     public void onRegistrationSuccess() {
-		ShopOtpFragment ldf = new ShopOtpFragment ();
-		Bundle args = new Bundle();
-		args.putString("mobile",mobile);
-		ldf.setArguments(args);
 
-//Inflate the fragment
-		getFragmentManager().beginTransaction().add(R.id.container_body, ldf).commit();
 
-        ((ShopActivity) getContext()).addFragment(new ShopOtpFragment());
+        ((ShopActivity) getActivity()).addFragment(new ShopOtpFragment());
     }
 }

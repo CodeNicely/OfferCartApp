@@ -89,6 +89,7 @@ public class ShopRegisterPresenterImpl implements ShopRegisterPresenter {
                     observeOn(AndroidSchedulers.mainThread()).subscribe(new Observer<ShopRegisterData>() {
                 @Override
                 public void onCompleted() {
+
                 }
 
                 @Override

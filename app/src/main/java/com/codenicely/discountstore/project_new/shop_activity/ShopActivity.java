@@ -20,7 +20,7 @@ public class ShopActivity extends AppCompatActivity implements ShopRegisterFragm
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shop);
 
-        //setFragment(new ShopLoginFragment());
+        setFragment(new ShopLoginFragment());
 
 	}
 

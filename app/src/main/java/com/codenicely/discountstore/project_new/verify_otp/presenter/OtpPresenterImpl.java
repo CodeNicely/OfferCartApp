@@ -20,7 +20,7 @@ public class OtpPresenterImpl implements OtpPresenter {
     @Override
     public void requestOtp(String otp, String mobile) {
 
-        otpView.showLoading(true);
+        otpView.showLoading(false);
 
         otpProvider.requestOtp(otp, mobile, new OtpCallback() {
             @Override

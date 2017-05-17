@@ -18,15 +18,11 @@ import android.view.MenuItem;
 
 import com.codenicely.discountstore.project_new.R;
 import com.codenicely.discountstore.project_new.about_us.view.AboutUsFragment;
-import com.codenicely.discountstore.project_new.city.view.CityFragment;
 import com.codenicely.discountstore.project_new.contact_us.view.ContactUsFragment;
 import com.codenicely.discountstore.project_new.developers.view.DeveloperFragment;
 import com.codenicely.discountstore.project_new.helper.SharedPrefs;
 import com.codenicely.discountstore.project_new.home.HomePageInterface;
-import com.codenicely.discountstore.project_new.my_orders.view.MyOrdersFragment;
-import com.codenicely.discountstore.project_new.offer.view.OfferFragment;
 import com.codenicely.discountstore.project_new.shop_login.view.ShopLoginFragment;
-import com.codenicely.discountstore.project_new.wallet.view.WalletFragment;
 import com.codenicely.discountstore.project_new.welcome_screen.view.WelcomeScreenActivity;
 
 public class ShopHomePage extends AppCompatActivity
@@ -51,6 +47,9 @@ public class ShopHomePage extends AppCompatActivity
             navigationView.setNavigationItemSelectedListener(this);
             sharedPrefs = new SharedPrefs(this);
 
+		ShopLoginFragment loginFragment= new ShopLoginFragment();
+		setFragment(loginFragment,"Home");
+
             int backStackCount = getSupportFragmentManager().getBackStackEntryCount();
             for (int i = 0; i < backStackCount; i++) {
 
@@ -62,17 +61,6 @@ public class ShopHomePage extends AppCompatActivity
             }
 
         }
-
-
-	//when app is in foreground..!
-    @Override
-    public  void onNewIntent(Intent intent)
-    {
-        super.onNewIntent(intent);
-		ShopLoginFragment loginFragment = new ShopLoginFragment();
-		addFragment(loginFragment, "Home");
-
-    }
 
     @Override
     public void onBackPressed() {
@@ -117,36 +105,11 @@ public class ShopHomePage extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        /*if(sharedPrefs.getCity().equals("NA")){
-            addFragment(new CityFragment(), "Select City");
-            getSupportActionBar().hide();
-            Toast.makeText(this, "Please Select City First", Toast.LENGTH_SHORT).show();
-            DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-            drawer.closeDrawer(GravityCompat.START);
-            return true;
-        }
-*/
-
         if (id == R.id.nav_home) {
 
             Intent intent = new Intent(this, ShopHomePage.class);
             startActivity(intent);
             finish();
-
-        } else if (id == R.id.nav_changeCity) {
-            addFragment(new CityFragment(), "Select City");
-            getSupportActionBar().hide();
-
-        } else if (id == R.id.nav_wallet) {
-
-
-            addFragment(new WalletFragment(), "Wallet");
-            getSupportActionBar().hide();
-
-        } else if (id == R.id.nav_my_orders) {
-            addFragment(new MyOrdersFragment(), "My Orders");
-            getSupportActionBar().hide();
-
 
         } else if (id == R.id.nav_contact_us) {
             addFragment(new ContactUsFragment(), "Contact Us");
@@ -162,10 +125,7 @@ public class ShopHomePage extends AppCompatActivity
         }else if(id==R.id.nav_logout)
         {
             sharedPrefs.setShopLogin(false);
-//            sharedPrefs.setCity("NA");
             sharedPrefs.setAccessTokenShop("");
-//            sharedPrefs.setEmailId("");
-//            sharedPrefs.setUsername("");
             Intent in=new Intent(ShopHomePage.this, WelcomeScreenActivity.class);
             startActivity(in);
             finish();
