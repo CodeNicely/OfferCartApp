@@ -24,12 +24,18 @@ import com.codenicely.discountstore.project_new.developers.view.DeveloperFragmen
 import com.codenicely.discountstore.project_new.helper.SharedPrefs;
 import com.codenicely.discountstore.project_new.home.HomePageInterface;
 import com.codenicely.discountstore.project_new.my_orders.view.MyOrdersFragment;
+
+import com.codenicely.discountstore.project_new.shop_login.view.ShopLoginFragment;
+
+
 import com.codenicely.discountstore.project_new.offer_add.view.OfferAddFragment;
 import com.codenicely.discountstore.project_new.shop_login.view.ShopLoginFragment;
+
 import com.codenicely.discountstore.project_new.shop_offerlist.view.ShopOfferListFragment;
 import com.codenicely.discountstore.project_new.wallet.view.WalletFragment;
 import com.codenicely.discountstore.project_new.shop_profile_edit.view.EditShopProfileFragment;
 import com.codenicely.discountstore.project_new.shop_profile_show.view.ShowShopProfileFragment;
+
 import com.codenicely.discountstore.project_new.welcome_screen.view.WelcomeScreenActivity;
 
 public class ShopHomePage extends AppCompatActivity
@@ -131,8 +137,7 @@ public class ShopHomePage extends AppCompatActivity
             addFragment(new ShowShopProfileFragment(), "Profile");
             getSupportActionBar().hide();
 
-        }
-        else if (id == R.id.nav_contact_us) {
+
 
         } else if (id == R.id.nav_wallet) {
 
@@ -145,7 +150,9 @@ public class ShopHomePage extends AppCompatActivity
             getSupportActionBar().hide();
 
 
+
        } else if (id == R.id.nav_contact_us) {
+
             addFragment(new ContactUsFragment(), "Contact Us");
             getSupportActionBar().hide();
         } else if (id == R.id.nav_about_us) {

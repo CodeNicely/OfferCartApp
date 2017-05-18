@@ -16,11 +16,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <service android:name=".helper.MyFirebaseService">
-            <intent-filter>
-                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
-            </intent-filter>
-        </service>
+
 
         <!-- Splash screen -->
         <activity
@@ -45,6 +41,16 @@
 
         <activity android:name=".shop_home.ShopHomePage">
 
+<<<<<<< HEAD
+=======
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+
+            </intent-filter>
+
+>>>>>>> f34f9f8dedb453891468972c7c4a286c3586d0c1
         </activity>
         <!-- Main activity -->
 
@@ -53,6 +59,11 @@
         <activity
             android:name=".welcome_screen.view.WelcomeScreenActivity"
             android:label="@string/app_name"/>
+        <service android:name=".helper.MyFirebaseService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
         <activity android:name=".wallet.view.WalletActivity"/>
         <activity android:name=".payment.view.PaymentActivity"/>
         <activity android:name=".shop_activity.ShopActivity"/>
