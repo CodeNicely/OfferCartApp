@@ -31,19 +31,22 @@
                 android:name="com.google.android.gms.version"
                 android:value="@integer/google_play_services_version"/>
 
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
         </activity>
         <activity android:name=".home.HomePage">
+
+        </activity>
+
+        <activity android:name=".shop_home.ShopHomePage">
             <intent-filter>
                 <action android:name="com.codenicely.dicountstore.home.HomePage"/>
 
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
+
+
+
 
         <!-- Main activity -->
 

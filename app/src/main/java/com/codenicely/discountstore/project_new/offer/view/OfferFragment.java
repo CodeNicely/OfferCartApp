@@ -18,7 +18,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
-import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -110,6 +109,7 @@ public class OfferFragment extends Fragment implements OfferScreenView, BuyOffer
      * @param param2 Parameter 2.
      * @return A new instance of fragment OfferFragment.
      */
+
     // TODO: Rename and change types and number of parameters
     public static OfferFragment newInstance(String param1, String param2) {
         OfferFragment fragment = new OfferFragment();

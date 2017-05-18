@@ -15,15 +15,21 @@ public class SharedPrefs {
     private static final String PREF_NAME = "welcome";
     private static final String PREF_NAME_LOGIN = "Login";
     private static final String KEY_IS_LOGGEDIN = "isLoggedIn";
-    private static final String KEY_USERNAME = "username";
+	private static final String KEY_IS_LOGGEDIN_AS_SHOP = "isLoggedInAsShop";
+
+	private static final String KEY_USERNAME = "username";
     private static final String KEY_EMAIL = "email";
     private static final String KEY_USER_ID = "userId";
     private static final String KEY_LOGIN_TYPE = "loginType";
     private static final String KEY_FCM = "fcm";
     private static final String KEY_ACCESS_TOKEN = "access_token";
-    private static final String KEY_City = "raipur";
+	private static final String KEY_ACCESS_TOKEN_SHOP = "access_token_shop";
+
+	private static final String KEY_City = "raipur";
     private static final int KEY_VERSION = 1;
     private static final String IS_FIRST_TIME_LAUNCH = "IsFirstTimeLaunch";
+
+
 
     // LogCat tag
     private static String TAG = "Shared Preference";
@@ -63,7 +69,20 @@ public class SharedPrefs {
         Log.d(TAG, "User login session modified!");
     }
 
-    public boolean isLoggedIn() {
+	public void setShopLogin(boolean isLoggedIn) {
+
+		editor.putBoolean(KEY_IS_LOGGEDIN_AS_SHOP, isLoggedIn);
+		// commit changes
+		editor.commit();
+		Log.d(TAG, "User login session modified!");
+	}
+
+
+	public boolean isLoggedInasShop() {
+		return pref.getBoolean(KEY_IS_LOGGEDIN_AS_SHOP, false);
+	}
+
+	public boolean isLoggedIn() {
         return pref.getBoolean(KEY_IS_LOGGEDIN, false);
     }
 
@@ -110,7 +129,17 @@ public class SharedPrefs {
         editor.commit();
     }
 
-    public String getEmail() {
+	public String getKeyAccessTokenShop() {
+		return pref.getString(KEY_ACCESS_TOKEN_SHOP, null);
+	}
+
+	public void setAccessTokenShop(String accessToken) {
+		editor.putString(KEY_ACCESS_TOKEN_SHOP, accessToken);
+		editor.commit();
+	}
+
+
+	public String getEmail() {
 
         return pref.getString(KEY_EMAIL, "Not Available");
     }
