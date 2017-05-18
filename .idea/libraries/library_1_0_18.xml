@@ -6,6 +6,7 @@
     <JAVADOC />
     <SOURCES>
       <root url="jar://$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/caches/modules-2/files-2.1/com.mcxiaoke.volley/library/1.0.18/beadbbaf0fb1e8c564852d93b5ff62ba21ad23b2/library-1.0.18-sources.jar!/" />
+      <root url="jar://$USER_HOME$/caches/modules-2/files-2.1/com.mcxiaoke.volley/library/1.0.18/beadbbaf0fb1e8c564852d93b5ff62ba21ad23b2/library-1.0.18-sources.jar!/" />
     </SOURCES>
   </library>
 </component>
