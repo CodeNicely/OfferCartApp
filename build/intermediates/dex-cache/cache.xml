@@ -34,7 +34,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="5e3444f365e293045fb3464da44e25d20d4e8421">
+        sha1="2542687ff0ea21b943ebe7dde8e857522d48d1eb">
         <dex dex="/home/meghal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_1d6ee9db7719ec52505ab63a8fa9a885a1db09dc/classes.dex" />
     </item>
 

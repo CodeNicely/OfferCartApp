@@ -6,7 +6,7 @@ package com.codenicely.discountstore.project_new.shop_login.data;
 public class ShopLoginData {
 	private boolean success;
 	private String message;
-	private String access_token;
+	private String shop_access_token;
 
 	public boolean isSuccess() {
 		return success;
@@ -17,12 +17,12 @@ public class ShopLoginData {
 	}
 
 	public String getAccess_token() {
-		return access_token;
+		return shop_access_token;
 	}
 
-	public ShopLoginData(boolean success, String message, String access_token) {
+	public ShopLoginData(boolean success, String message, String shop_access_token) {
 		this.success = success;
 		this.message = message;
-		this.access_token = access_token;
+		this.shop_access_token = shop_access_token;
 	}
 }

@@ -15,6 +15,8 @@ import android.provider.MediaStore;
 import android.support.annotation.RequiresApi;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.CardView;
@@ -31,10 +33,8 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.codenicely.discountstore.project_new.R;
-import com.codenicely.discountstore.project_new.about_us.view.AboutUsFragment;
 import com.codenicely.discountstore.project_new.helper.utils.BitmapUtils;
 import com.codenicely.discountstore.project_new.helper.utils.UriUtils;
-import com.codenicely.discountstore.project_new.shop_activity.ShopActivity;
 import com.codenicely.discountstore.project_new.shop_otp.view.ShopOtpFragment;
 import com.codenicely.discountstore.project_new.shop_register.data.CategoryData;
 import com.codenicely.discountstore.project_new.shop_register.data.CityData;
@@ -153,21 +153,13 @@ public class ShopRegisterFragment extends Fragment implements ShopRegisterView {
      * @return A new instance of fragment ShopRegisterFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public  ShopOtpFragment newInstance(String param1, String param2) {
-     /*   ShopRegisterFragment fragment = new ShopRegisterFragment();
+    public  ShopRegisterFragment newInstance(String param1, String param2) {
+        ShopRegisterFragment fragment = new ShopRegisterFragment();
 		Bundle args = new Bundle();
 		args.putString(ARG_PARAM1, param1);
 		args.putString(ARG_PARAM2, param2);
 		fragment.setArguments(args);
-		return fragment;*/
-		ShopOtpFragment sof = new ShopOtpFragment();
-		Bundle args = new Bundle();
-		args.putString("mobile", mobile);
-		sof.setArguments(args);
-
-//Inflate the fragment
-		getFragmentManager().beginTransaction().add(R.id.container_body, sof).commit();
-		return sof;
+		return fragment;
 	}
 
     @Override
@@ -187,7 +179,6 @@ public class ShopRegisterFragment extends Fragment implements ShopRegisterView {
 
         context = getContext();
         ButterKnife.bind(this, view);
-
         progressDialog = new ProgressDialog(context);
         progressDialog.setMessage("Please wait . . .");
         progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
@@ -532,7 +523,15 @@ public class ShopRegisterFragment extends Fragment implements ShopRegisterView {
     @Override
     public void onRegistrationSuccess() {
 
+		Fragment fragment=new ShopOtpFragment();
+		FragmentManager fm=getFragmentManager();
+		FragmentTransaction ft=fm.beginTransaction();
+		Bundle args = new Bundle();
+		args.putString("mobile", mobile);
+		fragment.setArguments(args);
+		ft.replace(R.id.container_body,fragment);
+		ft.commit();
 
-        ((ShopActivity) getActivity()).addFragment(new ShopOtpFragment());
+       // ((ShopActivity) getActivity()).addFragment(new ShopOtpFragment());
     }
 }

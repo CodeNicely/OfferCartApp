@@ -73,25 +73,12 @@
                     android:layout_height="wrap_content">
 
                     <EditText
-                        android:id="@+id/description"
+                        android:id="@+id/offer_description"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="start"
                         android:hint="@string/description"
                         android:minHeight="100dp" />
-
-                </android.support.design.widget.TextInputLayout>
-
-
-                <android.support.design.widget.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <EditText
-                        android:id="@+id/offer_code"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/offer_code" />
 
                 </android.support.design.widget.TextInputLayout>
 

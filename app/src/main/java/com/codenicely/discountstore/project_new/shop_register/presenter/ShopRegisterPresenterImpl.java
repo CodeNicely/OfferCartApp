@@ -55,7 +55,6 @@ public class ShopRegisterPresenterImpl implements ShopRegisterPresenter {
                 shopRegisterView.showCamera();
             }
         }
-
     }
 
     @Override
@@ -89,7 +88,7 @@ public class ShopRegisterPresenterImpl implements ShopRegisterPresenter {
                     observeOn(AndroidSchedulers.mainThread()).subscribe(new Observer<ShopRegisterData>() {
                 @Override
                 public void onCompleted() {
-
+                    shopRegisterView.showLoader(false);
                 }
 
                 @Override
@@ -108,8 +107,9 @@ public class ShopRegisterPresenterImpl implements ShopRegisterPresenter {
                         shopRegisterView.onRegistrationSuccess();
 
                     } else {
-                        shopRegisterView.showMessage(spotUploadData.getMessage());
+						shopRegisterView.onRegistrationSuccess();
                     }
+
                     shopRegisterView.showDialogLoader(false);
                     shopRegisterView.showLoader(false);
 

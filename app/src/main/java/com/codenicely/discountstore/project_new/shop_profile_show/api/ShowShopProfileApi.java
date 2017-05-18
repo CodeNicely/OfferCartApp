@@ -13,6 +13,6 @@ import retrofit2.http.Query;
 public interface ShowShopProfileApi {
 
 	@GET(Urls.REQUEST_SHOP_PROFILE)
-	Call<ShowShopProfileData> getShopProfileData(@Query("access_token") String access_token);
+	Call<ShowShopProfileData> getShopProfileData(@Query("shop_access_token") String access_token);
 
 }

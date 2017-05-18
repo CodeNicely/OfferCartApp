@@ -27,9 +27,11 @@
     <string name="banner_splash_sub_screen">ca-app-pub-7676088497515789/6757551759</string>
     <string name="hint_name">Shop Name</string>
     <string name="hint_mobile">Shop Mobile</string>
-    <string name="hint_password">Shop Password</string>
+    <string name="shop_hint_password">Shop Password</string>
+
     <string name="hint_email">Shop Address</string>
     <string name="register_shop">Register Shop</string>
+    <string name="edit_shop">Update Shop Details</string>
     <string name="take_picture">Take Picture</string>
     <string name="select_images_gallery">Select Image from Gallery</string>
     <string name="city">Select City</string>
@@ -42,5 +44,9 @@
     <string name="offer_price">Offer Price </string>
     <string name="offer_code">Offer Code</string>
     <string name="register_offer">Register Offer</string>
+
+//shop change password module
+    <string name="change_password_description">Enter the details to change your password</string>
+
 </resources>
 

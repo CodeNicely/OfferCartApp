@@ -42,12 +42,13 @@ public class OfferScreenAdapter extends RecyclerView.Adapter<OfferScreenAdapter.
         this.offerScreenDetailsList = offerScreenDetails;
     }
 
-    @Override
+  @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View itemView = layoutInflater.inflate(R.layout.offers_item, parent, false);
         return new MyViewHolder(itemView);
 
     }
+
 
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {

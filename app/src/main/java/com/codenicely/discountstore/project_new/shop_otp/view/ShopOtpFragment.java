@@ -83,7 +83,6 @@ public class ShopOtpFragment extends Fragment implements ShopOtpView {
 		super.onCreate(savedInstanceState);
 		if (getArguments() != null) {
 			mParam1 = getArguments().getString(ARG_PARAM1);
-			mobile = getArguments().getString("mobile");
 
 		}
 	}
@@ -94,8 +93,7 @@ public class ShopOtpFragment extends Fragment implements ShopOtpView {
 		View v =inflater.inflate(R.layout.fragment_shop_otp, container, false);
 		ButterKnife.bind(this, v);
 		sharedPrefs = new SharedPrefs(getContext());
-
-
+		mobile = getArguments().getString("mobile");
 		shopOtpPresenter =new ShopOtpPresenterImpl(this,new RetrofitShopOtpProvider());
 
 		sendOtpButton.setOnClickListener(new View.OnClickListener() {

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     xmlns:ads="http://schemas.android.com/apk/res-auto">
 
-    <android.support.design.widget.AppBarLayout
+    <!--<android.support.design.widget.AppBarLayout
         android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -25,13 +25,15 @@
             app:title="Offers"
             app:titleTextColor="@color/white" />
     </android.support.design.widget.AppBarLayout>
-
+-->
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                     xmlns:app="http://schemas.android.com/apk/res-auto"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:layout_behavior="@string/appbar_scrolling_view_behavior"
         >
+
+
 
         <android.support.v4.widget.NestedScrollView
             android:id="@+id/scrollView"
@@ -45,67 +47,41 @@
                 android:orientation="vertical"
                 >
 
-<!--
+
                 <android.support.v7.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:cardCornerRadius="4dp"
-                    app:contentPadding="4dp">
+                    app:contentPadding="4dp"
+                    >
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
 
-                        <RelativeLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:background="@color/transparent">
 
-                            <ImageView
-                                android:id="@+id/imageView"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:minHeight="200dp"
-                                android:scaleType="fitXY"
-                                android:src="@mipmap/ic_launcher"
-
-                                />
-
-                            <ProgressBar
-                                android:id="@+id/imageProgressBar"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_centerInParent="true" />
-                        </RelativeLayout>
 
                         <TextView
-                            android:id="@+id/shop_name"
+                            android:id="@+id/shop_name1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:padding="4dp"
                             android:textColor="@color/colorAccent"
-                            android:textSize="36dp"
+                            android:hint="abcd  "
+                            android:textSize="24dp"
                             android:textStyle="bold" />
 
                         <TextView
-                            android:id="@+id/shop_address"
+                            android:id="@+id/shop_subscription"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="79dp"
                             android:gravity="center"
                             android:padding="4dp"
+                            android:hint="15 days free trail left"
                             android:textColor="@color/colorPrimary"
-                            android:textSize="16dp" />
-
-                        <TextView
-                            android:id="@+id/shop_description"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:padding="4dp"
-                            android:textColor="@color/accent_light"
-                            android:textSize="12dp" />
+                            android:textSize="24dp" />
 
 
                     </LinearLayout>
@@ -114,7 +90,7 @@
 -->
 
                 <android.support.v7.widget.RecyclerView
-                    android:id="@+id/offersRecycler"
+                    android:id="@+id/recycler_view_shop_offer"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:minHeight="200dp"
@@ -127,12 +103,24 @@
                     android:orientation="horizontal">
                 </LinearLayout>
 
+                <android.support.design.widget.FloatingActionButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:id="@+id/add_button1"
+                    android:layout_margin="16dp"
+                    android:clickable="true"
+                    android:src="@drawable/ic_add_circle_black_24dp"
+                     />
+
+
+
             </LinearLayout>
 
         </android.support.v4.widget.NestedScrollView>
 
         <ProgressBar
-            android:id="@+id/offersProgressBar"
+            android:id="@+id/progressBar_shop1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
