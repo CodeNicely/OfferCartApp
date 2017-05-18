@@ -64,20 +64,19 @@ public class Urls {
     //offer_register
 	public static final String OFFER_ADD = "offer_add/";
 
-<<<<<<< HEAD
+
     //offer_show to shop
     public static final String REQUEST_SHOP_OFFER= "shop_offers/";
     //public static final String REQUEST_OFFER = "offer/";
     public static final String REQUEST_SHOP_OFFER_DELETE= "shop_offers_delete/";
-=======
+
 	//offer_edit
 	public static final String OFFER_EDIT = "offer_edit/";
 
 	//offer delete
-	public static final String OFFER_DELETE = "offer_delete/";
+//	public static final String OFFER_DELETE = "offer_delete/";
 
-	//offer_show to shop
-    public static final String MY_SHOP_OFFERS = "my_shop_offers/";
->>>>>>> 0da6e3a879c0c11893c2fa445ed46875c6b9a41c
+
+  //  public static final String MY_SHOP_OFFERS = "my_shop_offers/";
 
 }

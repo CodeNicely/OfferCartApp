@@ -45,7 +45,7 @@
     <string name="offer_code">Offer Code</string>
     <string name="register_offer">Register Offer</string>
 
-//shop change password module
+    //shop change password module
     <string name="change_password_description">Enter the details to change your password</string>
 
 </resources>
