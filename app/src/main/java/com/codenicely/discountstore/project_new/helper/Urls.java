@@ -8,8 +8,8 @@ public class Urls {
 
 //     public static final String BASE_URL = "http://104.236.210.94:8000/";
 //     public static final String BASE_URL = "http://172.20.10.13:8000/";
-     public static final String BASE_URL = "http://10.0.3.1:8000/";
-	// public static final String BASE_URL = "http://192.168.0.100:8000";
+//     public static final String BASE_URL = "http://10.0.3.1:8000/";
+	public static final String BASE_URL = "http://192.168.88.237:8000";
 
     public static final String REQUEST_FCM_UPDATE = "update_fcm/";
     //splash_screen

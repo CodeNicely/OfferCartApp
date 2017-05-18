@@ -67,7 +67,8 @@ public class ShopHomePage extends AppCompatActivity
         navigationView = (NavigationView) findViewById(R.id.nav_view);
             navigationView.setNavigationItemSelectedListener(this);
             sharedPrefs = new SharedPrefs(this);
-		ShopOfferListFragment shopOfferListFragment= new ShopOfferListFragment();
+
+        ShopOfferListFragment shopOfferListFragment= new ShopOfferListFragment();
 		setFragment(shopOfferListFragment,"Home");
 
             int backStackCount = getSupportFragmentManager().getBackStackEntryCount();

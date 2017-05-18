@@ -52,8 +52,8 @@ private SharedPrefs sharedPrefs;
         this.shopOfferListFragment = shopOfferListFragment;
         this.shopOfferListView = new ShopOfferListFragment();
         imageLoader=new GlideImageLoader(context);
-      //  shopOfferListPresenter = new ShopOfferListPresenterImpl(new RetrofitShopOfferListProvider(), shopOfferListFragment);
-        shopOfferListPresenter = new ShopOfferListPresenterImpl(new MockShopOfferListProvider(), shopOfferListFragment);
+        shopOfferListPresenter = new ShopOfferListPresenterImpl(new RetrofitShopOfferListProvider(), shopOfferListFragment);
+      //  shopOfferListPresenter = new ShopOfferListPresenterImpl(new MockShopOfferListProvider(), shopOfferListFragment);
         }
 
     @Override
@@ -88,7 +88,7 @@ private SharedPrefs sharedPrefs;
         holder.delete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-     shopOfferListPresenter.delete(sharedPrefs.getKeyAccessTokenShop(),shopOfferListDetails.getOffer_id());
+       shopOfferListPresenter.delete(sharedPrefs.getKeyAccessTokenShop(),shopOfferListDetails.getOffer_id());
      //           shopOfferListPresenter.delete("dsdssd",shopOfferListDetails.getOffer_id());
 
 

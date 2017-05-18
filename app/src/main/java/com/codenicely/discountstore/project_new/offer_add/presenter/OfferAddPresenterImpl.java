@@ -78,7 +78,7 @@ public class OfferAddPresenterImpl implements OfferAddPresenter {
 					offer_name, offer_description,offer_price,expiry_date,imageUri);
 			Log.i(TAG, "Value of Observable" + offerAddDataObservable.toString());
 			subscription = offerAddDataObservable.subscribeOn(Schedulers.newThread()).
-																								 observeOn(AndroidSchedulers.mainThread()).subscribe(new Observer<OfferAddData>() {
+			 observeOn(AndroidSchedulers.mainThread()).subscribe(new Observer<OfferAddData>() {
 				@Override
 				public void onCompleted() {
 					offerAddView.showLoader(false);

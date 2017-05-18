@@ -200,7 +200,6 @@ public class ShopRegisterFragment extends Fragment implements ShopRegisterView {
         galleryButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
         /*        Intent intent = new Intent();
                 intent.setType("image*//*");
                 intent.setAction(Intent.ACTION_GET_CONTENT);
@@ -210,7 +209,6 @@ public class ShopRegisterFragment extends Fragment implements ShopRegisterView {
 
             }
         });
-
         cameraButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

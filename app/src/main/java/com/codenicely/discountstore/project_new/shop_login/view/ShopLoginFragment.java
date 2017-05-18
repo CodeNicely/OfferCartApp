@@ -160,8 +160,7 @@ public class ShopLoginFragment extends Fragment implements ShopLoginView{
 		//Something to jump to next activity
 		Intent intent = new Intent(getContext(), ShopHomePage.class);
 		startActivity(intent);
-		Toast.makeText(getContext(), "Jump to next activity now", Toast.LENGTH_SHORT).show();
-	}
+		}
 
 	public interface OnFragmentInteractionListener {
 		void onFragmentInteraction(Uri uri);

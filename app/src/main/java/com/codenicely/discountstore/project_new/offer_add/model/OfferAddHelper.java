@@ -6,6 +6,7 @@ import com.codenicely.discountstore.project_new.offer_add.data.OfferAddData;
 import com.codenicely.discountstore.project_new.offer_edit.data.OfferEditData;
 
 import java.io.IOException;
+import java.util.Date;
 
 import rx.Observable;
 
@@ -19,5 +20,13 @@ public interface OfferAddHelper {
 									  String offer_price,
 									  String expiry_date,
 									  Uri imageUri)throws IOException;
+/*
+	Observable<OfferAddData> addOffer(String shop_access_token,
+									  String offer_name,
+									  String offer_description,
+									  String offer_price,
+									  Date expiry_date,
+									  Uri imageUri)throws IOException;
+*/
 
 }
