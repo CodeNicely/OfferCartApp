@@ -53,27 +53,13 @@ public class AddSubscriptionFragment extends Fragment implements AddSubscription
     @BindView(R.id.spinner_add_subscription)
     Spinner subscription_spinner;
     @BindView(R.id.addSubacriptionProgressBar)
-    ProgressBar progressBar;
-    @BindView(R.id.addSubacriptionProgressBar)
+    ProgressBar subscriptionProgressBar;
+    @BindView(R.id.add_subscription_button)
     Button add_subscription;
 
 private SharedPrefs sharedPrefs;
     private AddSubscriptionPresenter addSubscriptionPresenter;
 private AddSubscriptionDetails addSubscriptionDetails;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     private OnFragmentInteractionListener mListener;
 
@@ -152,10 +138,10 @@ access_token=sharedPrefs.getKeyAccessTokenShop();
     @Override
     public void showProgressBar(boolean show) {
         if(show){
-            progressBar.setVisibility(View.VISIBLE);
+            subscriptionProgressBar.setVisibility(View.VISIBLE);
         }
         else{
-            progressBar.setVisibility(View.GONE);
+            subscriptionProgressBar.setVisibility(View.GONE);
 
         }
 
