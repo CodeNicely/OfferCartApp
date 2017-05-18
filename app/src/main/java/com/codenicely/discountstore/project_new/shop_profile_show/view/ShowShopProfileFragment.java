@@ -122,7 +122,8 @@ public class ShowShopProfileFragment extends Fragment implements ShowShopProfile
 			@Override
 			public void onClick(View v) {
 				//something to open new fragment
-		/*		Fragment fragment=new EditShopProfileFragment();
+
+			/*	Fragment fragment=new EditShopProfileFragment();
 				FragmentManager fm=getFragmentManager();
 				FragmentTransaction ft=fm.beginTransaction();
 				Bundle args = new Bundle();
@@ -135,8 +136,8 @@ public class ShowShopProfileFragment extends Fragment implements ShowShopProfile
 				fragment.setArguments(args);
 				ft.replace(R.id.container_body,fragment);
 				ft.commit();
-
 */
+
 				EditShopProfileFragment editShopProfileFragment=new EditShopProfileFragment();
 				((ShopHomePage)getActivity()).addFragment(editShopProfileFragment  ,"Edit Shop Details");
 			}
@@ -146,9 +147,11 @@ public class ShowShopProfileFragment extends Fragment implements ShowShopProfile
 
 	// TODO: Rename method, update argument and hook method into UI event
 	public void onButtonPressed(Uri uri) {
+
 		if (mListener != null) {
 			mListener.onFragmentInteraction(uri);
 		}
+
 	}
 
 	@Override

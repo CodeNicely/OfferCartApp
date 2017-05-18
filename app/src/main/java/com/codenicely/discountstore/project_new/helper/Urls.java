@@ -8,8 +8,8 @@ public class Urls {
 
 //     public static final String BASE_URL = "http://104.236.210.94:8000/";
 //     public static final String BASE_URL = "http://172.20.10.13:8000/";
-//     public static final String BASE_URL = "http://192.168.43.39:8000/";
-	 public static final String BASE_URL = "http://192.168.0.108:8000";
+     public static final String BASE_URL = "http://192.168.43.39:8000/";
+	// public static final String BASE_URL = "http://192.168.0.100:8000";
 
     public static final String REQUEST_FCM_UPDATE = "update_fcm/";
     //splash_screen
@@ -47,8 +47,9 @@ public class Urls {
 
 	//shop_register
 	public static final String SUB_URL_CREATE_SHOP = "create_shop/";
-		//to get category and city list
-    	public static final String SUB_URL_PREREGISTER_DATA_SHOP = "city_category/";
+
+	//to get category and city list
+    public static final String SUB_URL_PREREGISTER_DATA_SHOP = "city_category/";
 
     //shop_otp
     public static final String VERIFY_SHOP_OTP = "verify_shop_otp/";
@@ -72,5 +73,6 @@ public class Urls {
 
 	//offer_show to shop
     public static final String MY_SHOP_OFFERS = "my_shop_offers/";
+
 
 }

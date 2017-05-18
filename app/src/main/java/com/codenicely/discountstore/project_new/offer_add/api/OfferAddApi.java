@@ -1,13 +1,11 @@
 package com.codenicely.discountstore.project_new.offer_add.api;
 
 import com.codenicely.discountstore.project_new.helper.Urls;
-import com.codenicely.discountstore.project_new.shop_register.data.ShopPreRegistrationData;
-import com.codenicely.discountstore.project_new.shop_register.data.ShopRegisterData;
+import com.codenicely.discountstore.project_new.offer_add.data.OfferAddData;
+import com.codenicely.discountstore.project_new.offer_edit.data.OfferEditData;
 
 import okhttp3.MultipartBody;
 import okhttp3.RequestBody;
-import retrofit2.Call;
-import retrofit2.http.GET;
 import retrofit2.http.Multipart;
 import retrofit2.http.POST;
 import retrofit2.http.Part;
@@ -20,13 +18,13 @@ public interface OfferAddApi {
 
 
 	@Multipart
-	@POST(Urls.SUB_URL_CREATE_SHOP)
-	Observable<ShopRegisterData> requestShopRegistration(
-		@Part("offer_name") RequestBody offer_name,
-		@Part("validity") RequestBody validity,
-		@Part("shop_name") RequestBody shop_name,
-		@Part("description") RequestBody description,
-		@Part("price") RequestBody price,
-		@Part MultipartBody.Part image);
+	@POST(Urls.OFFER_ADD)
+	Observable<OfferAddData> requestOfferAdd(
+		@Part("shop_access_token") RequestBody shop_name,
+		@Part("offer_title") RequestBody offer_name,
+		@Part("offer_description") RequestBody description,
+		@Part("expiry_date") RequestBody validity,
+		@Part("offer_price") RequestBody price,
+		@Part MultipartBody.Part offer_image);
 
 }

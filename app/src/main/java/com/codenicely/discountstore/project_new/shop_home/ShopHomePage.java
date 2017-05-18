@@ -23,7 +23,7 @@ import com.codenicely.discountstore.project_new.contact_us.view.ContactUsFragmen
 import com.codenicely.discountstore.project_new.developers.view.DeveloperFragment;
 import com.codenicely.discountstore.project_new.helper.SharedPrefs;
 import com.codenicely.discountstore.project_new.home.HomePageInterface;
-import com.codenicely.discountstore.project_new.shop_login.view.ShopLoginFragment;
+import com.codenicely.discountstore.project_new.offer_add.view.OfferAddFragment;
 import com.codenicely.discountstore.project_new.shop_profile_edit.view.EditShopProfileFragment;
 import com.codenicely.discountstore.project_new.shop_profile_show.view.ShowShopProfileFragment;
 import com.codenicely.discountstore.project_new.welcome_screen.view.WelcomeScreenActivity;
@@ -34,7 +34,8 @@ public class ShopHomePage extends AppCompatActivity
                            EditShopProfileFragment.OnFragmentInteractionListener,
                            ShowShopProfileFragment.OnFragmentInteractionListener,
                             DeveloperFragment.OnFragmentInteractionListener,
-                           ContactUsFragment.OnFragmentInteractionListener {
+                           ContactUsFragment.OnFragmentInteractionListener,
+						   OfferAddFragment.OnFragmentInteractionListener {
 
     private SharedPrefs sharedPrefs;
     private NavigationView navigationView;
@@ -65,9 +66,7 @@ public class ShopHomePage extends AppCompatActivity
                 int backStackId = getSupportFragmentManager().getBackStackEntryAt(i).getId();
 
                 getFragmentManager().popBackStack(backStackId, FragmentManager.POP_BACK_STACK_INCLUSIVE);
-
             }
-
         }
 
     @Override
@@ -119,10 +118,14 @@ public class ShopHomePage extends AppCompatActivity
             startActivity(intent);
             finish();
 
+        } else if (id == R.id.nav_offers) {
+            addFragment(new OfferAddFragment(), "Add Offers");
+            getSupportActionBar().hide();
         } else if (id == R.id.nav_profile) {
             addFragment(new ShowShopProfileFragment(), "Profile");
             getSupportActionBar().hide();
-        } else if (id == R.id.nav_contact_us) {
+        }
+        else if (id == R.id.nav_contact_us) {
             addFragment(new ContactUsFragment(), "Contact Us");
             getSupportActionBar().hide();
         } else if (id == R.id.nav_about_us) {
@@ -133,16 +136,14 @@ public class ShopHomePage extends AppCompatActivity
             addFragment(new DeveloperFragment(), "Developers");
             getSupportActionBar().hide();
 
-        }else if(id==R.id.nav_logout)
+        } else if(id==R.id.nav_logout)
         {
             sharedPrefs.setShopLogin(false);
             sharedPrefs.setAccessTokenShop("");
             Intent in=new Intent(ShopHomePage.this, WelcomeScreenActivity.class);
             startActivity(in);
             finish();
-
         }
-
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
