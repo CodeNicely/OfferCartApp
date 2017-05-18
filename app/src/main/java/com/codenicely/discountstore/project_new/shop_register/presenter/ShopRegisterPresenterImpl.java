@@ -89,6 +89,7 @@ public class ShopRegisterPresenterImpl implements ShopRegisterPresenter {
                     observeOn(AndroidSchedulers.mainThread()).subscribe(new Observer<ShopRegisterData>() {
                 @Override
                 public void onCompleted() {
+
                 }
 
                 @Override
@@ -104,12 +105,14 @@ public class ShopRegisterPresenterImpl implements ShopRegisterPresenter {
 
                     Log.i(TAG, "Response " + spotUploadData.toString());
                     if (spotUploadData.isSuccess()) {
-                        shopRegisterView.showLoader(false);
                         shopRegisterView.onRegistrationSuccess();
+
                     } else {
-                        shopRegisterView.showLoader(false);
                         shopRegisterView.showMessage(spotUploadData.getMessage());
                     }
+                    shopRegisterView.showDialogLoader(false);
+                    shopRegisterView.showLoader(false);
+
                 }
             });
 

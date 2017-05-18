@@ -1,6 +1,7 @@
 package com.codenicely.discountstore.project_new.shop_otp.view;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -8,12 +9,14 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.codenicely.discountstore.project_new.R;
 import com.codenicely.discountstore.project_new.helper.SharedPrefs;
+import com.codenicely.discountstore.project_new.shop_home.ShopHomePage;
 import com.codenicely.discountstore.project_new.shop_otp.model.RetrofitShopOtpProvider;
 import com.codenicely.discountstore.project_new.shop_otp.presenter.ShopOtpPresenter;
 import com.codenicely.discountstore.project_new.shop_otp.presenter.ShopOtpPresenterImpl;
@@ -48,7 +51,7 @@ public class ShopOtpFragment extends Fragment implements ShopOtpView {
 	@BindView(R.id.progressBarView)
 	ProgressBar progressBar;
 	@BindView(R.id.button)
-	EditText sendOtpButton;
+	Button sendOtpButton;
 	String mobile;
 	String otp1;
 	private SharedPrefs sharedPrefs;
@@ -80,7 +83,8 @@ public class ShopOtpFragment extends Fragment implements ShopOtpView {
 		super.onCreate(savedInstanceState);
 		if (getArguments() != null) {
 			mParam1 = getArguments().getString(ARG_PARAM1);
-			mParam2 = getArguments().getString(ARG_PARAM2);
+			mobile = getArguments().getString("mobile");
+
 		}
 	}
 
@@ -89,6 +93,8 @@ public class ShopOtpFragment extends Fragment implements ShopOtpView {
 							 Bundle savedInstanceState) {
 		View v =inflater.inflate(R.layout.fragment_shop_otp, container, false);
 		ButterKnife.bind(this, v);
+		sharedPrefs = new SharedPrefs(getContext());
+
 
 		shopOtpPresenter =new ShopOtpPresenterImpl(this,new RetrofitShopOtpProvider());
 
@@ -153,8 +159,11 @@ public class ShopOtpFragment extends Fragment implements ShopOtpView {
 
 		Log.d("res", access_token);
 
-		sharedPrefs.setAccessToken(access_token);
-		sharedPrefs.setLogin(true);
+		sharedPrefs.setAccessTokenShop(access_token);
+		sharedPrefs.setShopLogin(true);
+
+		Intent intent = new Intent(getContext(), ShopHomePage.class);
+		startActivity(intent);
 
 		//something to jump to next fragment
 

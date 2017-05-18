@@ -35,6 +35,7 @@ import com.codenicely.discountstore.project_new.about_us.view.AboutUsFragment;
 import com.codenicely.discountstore.project_new.helper.utils.BitmapUtils;
 import com.codenicely.discountstore.project_new.helper.utils.UriUtils;
 import com.codenicely.discountstore.project_new.shop_activity.ShopActivity;
+import com.codenicely.discountstore.project_new.shop_otp.view.ShopOtpFragment;
 import com.codenicely.discountstore.project_new.shop_register.data.CategoryData;
 import com.codenicely.discountstore.project_new.shop_register.data.CityData;
 import com.codenicely.discountstore.project_new.shop_register.data.ShopPreRegistrationData;
@@ -137,6 +138,7 @@ public class ShopRegisterFragment extends Fragment implements ShopRegisterView {
     private ArrayAdapter<String> city_array_adapter;
     private ArrayAdapter<String> category_array_adapter;
     private ProgressDialog progressDialog;
+	String mobile;
 
     public ShopRegisterFragment() {
         // Required empty public constructor
@@ -151,14 +153,22 @@ public class ShopRegisterFragment extends Fragment implements ShopRegisterView {
      * @return A new instance of fragment ShopRegisterFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static ShopRegisterFragment newInstance(String param1, String param2) {
-        ShopRegisterFragment fragment = new ShopRegisterFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
+    public  ShopOtpFragment newInstance(String param1, String param2) {
+     /*   ShopRegisterFragment fragment = new ShopRegisterFragment();
+		Bundle args = new Bundle();
+		args.putString(ARG_PARAM1, param1);
+		args.putString(ARG_PARAM2, param2);
+		fragment.setArguments(args);
+		return fragment;*/
+		ShopOtpFragment sof = new ShopOtpFragment();
+		Bundle args = new Bundle();
+		args.putString("mobile", mobile);
+		sof.setArguments(args);
+
+//Inflate the fragment
+		getFragmentManager().beginTransaction().add(R.id.container_body, sof).commit();
+		return sof;
+	}
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -223,7 +233,7 @@ public class ShopRegisterFragment extends Fragment implements ShopRegisterView {
             public void onClick(View v) {
 
                 String name = name_edittext.getText().toString();
-                String mobile = mobile_edittext.getText().toString();
+                mobile = mobile_edittext.getText().toString();
                 String password = password_edittext.getText().toString();
                 String confirm_password = confirm_password_edittext.getText().toString();
                 String description = description_edittext.getText().toString();
@@ -269,6 +279,7 @@ public class ShopRegisterFragment extends Fragment implements ShopRegisterView {
                             .setActionTextColor(Color.RED)
                             .show();
                 } else {
+
                     shopRegisterPresenter.registerShop(name, mobile, password, description, address,
                             category, city, imageUri);
                 }
@@ -276,6 +287,7 @@ public class ShopRegisterFragment extends Fragment implements ShopRegisterView {
         });
         shopRegisterPresenter.requestPreRegistrationDetails();
         return view;
+
     }
 
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
@@ -519,6 +531,8 @@ public class ShopRegisterFragment extends Fragment implements ShopRegisterView {
 
     @Override
     public void onRegistrationSuccess() {
-        ((ShopActivity) getContext()).addFragment(new AboutUsFragment());
+
+
+        ((ShopActivity) getActivity()).addFragment(new ShopOtpFragment());
     }
 }
