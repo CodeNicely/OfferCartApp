@@ -92,6 +92,8 @@ public class OfferAddFragment extends Fragment implements OfferAddView{
 	Button cameraButton;
 	@BindView(R.id.registerOffer)
 	Button registerButton;
+/*	@BindView(R.id.offer_validity2)
+	Date expiry_date;*/
 
 	@BindView(R.id.cardView)
 	CardView cardView;
@@ -198,11 +200,9 @@ public class OfferAddFragment extends Fragment implements OfferAddView{
 				} else {
 					offerAddPresenter.addOffer(sharedPrefs.getKeyAccessTokenShop(),
 							name,description,price,validity,imageUri);
-			/*
-				shopRegisterPresenter.registerShop(name, mobile, password, description, address,
-						category, city, imageUri);
-			*/
-
+	/*				offerAddPresenter.addOffer(sharedPrefs.getKeyAccessTokenShop(),
+							name,description,price,expiry_date,imageUri);
+	*/
 				}
 
 			}

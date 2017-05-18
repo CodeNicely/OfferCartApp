@@ -1,12 +1,12 @@
 <component name="libraryTable">
   <library name="magicretry-1.0.4">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.android/build-cache/e3f6cee27f01a336927f1a7673cc7c750191ff8d/output/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.android/build-cache/e3f6cee27f01a336927f1a7673cc7c750191ff8d/output/res" />
+      <root url="file://$USER_HOME$/.android/build-cache/e4d380e02c0e8f92704db073d2d6c91604ce0453/output/res" />
+      <root url="jar://$USER_HOME$/.android/build-cache/e4d380e02c0e8f92704db073d2d6c91604ce0453/output/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.payu.magicretry/magicretry/1.0.4/af4b79690f0074e921e645a3c8a3c4d8b5cc0565/magicretry-1.0.4-sources.jar!/" />
+      <root url="jar://$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/caches/modules-2/files-2.1/com.payu.magicretry/magicretry/1.0.4/af4b79690f0074e921e645a3c8a3c4d8b5cc0565/magicretry-1.0.4-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

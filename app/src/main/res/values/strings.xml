@@ -41,9 +41,10 @@
     <string name="shop_image">Add Shop Image</string>
     <string name="offer_name">Offer Name</string>
     <string name="offer_validity">Offer Validity</string>
-    <string name="offer_price">Offer Price </string>
+    <string name="offer_price">Offer Price (in Rs)</string>
     <string name="offer_code">Offer Code</string>
     <string name="register_offer">Register Offer</string>
+    <string name="edit_offer">Update Offer</string>
 
 //shop change password module
     <string name="change_password_description">Enter the details to change your password</string>

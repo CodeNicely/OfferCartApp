@@ -59,7 +59,7 @@ public class ShowShopProfileFragment extends Fragment implements ShowShopProfile
 	TextView textViewShopCategory;
 	@BindView(R.id.shop_city)
 	TextView textViewShopCity;
-	@BindView(R.id.shop_image)
+	@BindView(R.id.imageView)
 	ImageView imageView;
 	@BindView(R.id.imageProgressBar)
 	ProgressBar progressBar1;
@@ -198,9 +198,7 @@ public class ShowShopProfileFragment extends Fragment implements ShowShopProfile
 		image=shopProfileData.getImage();
 
 		progressBar1.setVisibility(View.VISIBLE);
-
 		imageLoader.loadImage(shopProfileData.getImage(), imageView, progressBar1);
-
 		textViewShopName.setText(name);
 		textViewShopDescription.setText(shopProfileData.getShop_description());
 		textViewShopAddress.setText(shopProfileData.getShop_address());

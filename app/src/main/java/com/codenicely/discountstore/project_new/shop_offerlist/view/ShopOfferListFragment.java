@@ -104,8 +104,8 @@ public class ShopOfferListFragment extends Fragment implements ShopOfferListView
         View view=inflater.inflate(R.layout.fragment_shop_offerlist, container, false);
         ButterKnife.bind(this,view);
         sharedPrefs = new SharedPrefs(getContext());
-      //  shopOfferListPresenter = new ShopOfferListPresenterImpl(new RetrofitShopOfferListProvider(),this);
-        shopOfferListPresenter = new ShopOfferListPresenterImpl(new MockShopOfferListProvider(),this);
+        shopOfferListPresenter = new ShopOfferListPresenterImpl(new RetrofitShopOfferListProvider(),this);
+      //  shopOfferListPresenter = new ShopOfferListPresenterImpl(new MockShopOfferListProvider(),this);
         shopOfferAdapter = new ShopOfferAdapter(getContext(),this);
         linearLayoutManager= new LinearLayoutManager(getContext());
         recyclerView.setLayoutManager(linearLayoutManager);

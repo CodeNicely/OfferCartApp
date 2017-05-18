@@ -146,7 +146,7 @@ public class OfferEditFragment extends Fragment implements OfferEditView {
 		// Inflate the layout for this fragment
 		context = getContext();
 
-		View view=inflater.inflate(R.layout.fragment_offer_add,container,false);
+		View view=inflater.inflate(R.layout.fragment_edit_offer,container,false);
 		ButterKnife.bind(this,view);
 		offerAddPresenter = new OfferEditPresenterImpl(this,new RetrofitOfferEditHelper(context));
 		cameraButton.setOnClickListener(new View.OnClickListener() {

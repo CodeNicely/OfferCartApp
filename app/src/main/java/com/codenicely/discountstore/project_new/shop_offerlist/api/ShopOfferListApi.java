@@ -14,5 +14,5 @@ import retrofit2.http.Query;
 
 public interface ShopOfferListApi {
     @GET(Urls.REQUEST_SHOP_OFFER)
-    Call<ShopOfferListData> getShopData(@Query("access_token") String access_token);
+    Call<ShopOfferListData> getShopData(@Query("shop_access_token") String access_token);
 }
