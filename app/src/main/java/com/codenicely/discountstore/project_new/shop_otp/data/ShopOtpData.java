@@ -6,12 +6,12 @@ package com.codenicely.discountstore.project_new.shop_otp.data;
 public class ShopOtpData {
 	private String message;
 	private boolean success;
-	private String access_token;
+	private String shop_access_token;
 
-	public ShopOtpData(String message, boolean success, String access_token) {
+	public ShopOtpData(String message, boolean success, String shop_access_token) {
 		this.message = message;
 		this.success = success;
-		this.access_token = access_token;
+		this.shop_access_token = shop_access_token;
 	}
 
 	public String getMessage() {
@@ -23,6 +23,6 @@ public class ShopOtpData {
 	}
 
 	public String getAccess_token() {
-		return access_token;
+		return shop_access_token;
 	}
 }

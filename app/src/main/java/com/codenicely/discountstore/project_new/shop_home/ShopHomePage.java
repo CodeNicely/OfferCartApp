@@ -3,6 +3,7 @@ package com.codenicely.discountstore.project_new.shop_home;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
@@ -18,20 +19,27 @@ import android.view.MenuItem;
 
 import com.codenicely.discountstore.project_new.R;
 import com.codenicely.discountstore.project_new.about_us.view.AboutUsFragment;
-import com.codenicely.discountstore.project_new.city.view.CityFragment;
 import com.codenicely.discountstore.project_new.contact_us.view.ContactUsFragment;
 import com.codenicely.discountstore.project_new.developers.view.DeveloperFragment;
 import com.codenicely.discountstore.project_new.helper.SharedPrefs;
 import com.codenicely.discountstore.project_new.home.HomePageInterface;
-import com.codenicely.discountstore.project_new.my_orders.view.MyOrdersFragment;
-import com.codenicely.discountstore.project_new.offer.view.OfferFragment;
 import com.codenicely.discountstore.project_new.shop_login.view.ShopLoginFragment;
+<<<<<<< HEAD
 import com.codenicely.discountstore.project_new.shop_offerlist.view.ShopOfferListFragment;
 import com.codenicely.discountstore.project_new.wallet.view.WalletFragment;
+=======
+import com.codenicely.discountstore.project_new.shop_profile_edit.view.EditShopProfileFragment;
+import com.codenicely.discountstore.project_new.shop_profile_show.view.ShowShopProfileFragment;
+>>>>>>> 0da6e3a879c0c11893c2fa445ed46875c6b9a41c
 import com.codenicely.discountstore.project_new.welcome_screen.view.WelcomeScreenActivity;
 
 public class ShopHomePage extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener, HomePageInterface {
+        implements NavigationView.OnNavigationItemSelectedListener, HomePageInterface,
+                           AboutUsFragment.OnFragmentInteractionListener,
+                           EditShopProfileFragment.OnFragmentInteractionListener,
+                           ShowShopProfileFragment.OnFragmentInteractionListener,
+                            DeveloperFragment.OnFragmentInteractionListener,
+                           ContactUsFragment.OnFragmentInteractionListener {
 
     private SharedPrefs sharedPrefs;
     private NavigationView navigationView;
@@ -39,7 +47,7 @@ public class ShopHomePage extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home_activity);
+        setContentView(R.layout.activity_shop_home_activity);
             setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_NOSENSOR);
             Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
             setSupportActionBar(toolbar);
@@ -52,6 +60,9 @@ public class ShopHomePage extends AppCompatActivity
             navigationView.setNavigationItemSelectedListener(this);
             sharedPrefs = new SharedPrefs(this);
 
+		ShowShopProfileFragment showShopProfileFragment= new ShowShopProfileFragment();
+		setFragment(showShopProfileFragment,"Home");
+
             int backStackCount = getSupportFragmentManager().getBackStackEntryCount();
             for (int i = 0; i < backStackCount; i++) {
 
@@ -63,17 +74,6 @@ public class ShopHomePage extends AppCompatActivity
             }
 
         }
-
-
-	//when app is in foreground..!
-    @Override
-    public  void onNewIntent(Intent intent)
-    {
-        super.onNewIntent(intent);
-		ShopLoginFragment loginFragment = new ShopLoginFragment();
-		addFragment(loginFragment, "Home");
-
-    }
 
     @Override
     public void onBackPressed() {
@@ -118,25 +118,16 @@ public class ShopHomePage extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        /*if(sharedPrefs.getCity().equals("NA")){
-            addFragment(new CityFragment(), "Select City");
-            getSupportActionBar().hide();
-            Toast.makeText(this, "Please Select City First", Toast.LENGTH_SHORT).show();
-            DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-            drawer.closeDrawer(GravityCompat.START);
-            return true;
-        }
-*/
-
         if (id == R.id.nav_home) {
 
             Intent intent = new Intent(this, ShopHomePage.class);
             startActivity(intent);
             finish();
 
-        } else if (id == R.id.nav_changeCity) {
-            addFragment(new CityFragment(), "Select City");
+        } else if (id == R.id.nav_profile) {
+            addFragment(new ShowShopProfileFragment(), "Profile");
             getSupportActionBar().hide();
+<<<<<<< HEAD
 
         } else if (id == R.id.nav_wallet) {
 
@@ -149,6 +140,8 @@ public class ShopHomePage extends AppCompatActivity
             getSupportActionBar().hide();
 
 
+=======
+>>>>>>> 0da6e3a879c0c11893c2fa445ed46875c6b9a41c
         } else if (id == R.id.nav_contact_us) {
             addFragment(new ContactUsFragment(), "Contact Us");
             getSupportActionBar().hide();
@@ -163,10 +156,7 @@ public class ShopHomePage extends AppCompatActivity
         }else if(id==R.id.nav_logout)
         {
             sharedPrefs.setShopLogin(false);
-//            sharedPrefs.setCity("NA");
             sharedPrefs.setAccessTokenShop("");
-//            sharedPrefs.setEmailId("");
-//            sharedPrefs.setUsername("");
             Intent in=new Intent(ShopHomePage.this, WelcomeScreenActivity.class);
             startActivity(in);
             finish();
@@ -217,4 +207,8 @@ public class ShopHomePage extends AppCompatActivity
         builder.show();
     }
 
+    @Override
+    public void onFragmentInteraction(Uri uri) {
+
+    }
 }

@@ -36,6 +36,7 @@
                         android:id="@+id/name"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:text="Shop1"
                         android:hint="@string/hint_name" />
 
                 </android.support.design.widget.TextInputLayout>
@@ -49,6 +50,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/hint_mobile"
+                        android:text="8223003905"
                         android:inputType="phone"
                         android:maxLength="10"
                         />
@@ -64,6 +66,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/password"
+                        android:text="ujjwal"
                         android:inputType="textPassword" />
 
                 </android.support.design.widget.TextInputLayout>
@@ -77,6 +80,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/confirm_password"
+                        android:text="ujjwal"
                         android:inputType="textPassword" />
 
                 </android.support.design.widget.TextInputLayout>
@@ -90,6 +94,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="start"
+                        android:text="fdsdfsdf"
                         android:hint="@string/description"
                         android:minHeight="100dp" />
 
@@ -102,6 +107,7 @@
 
                     <EditText
                         android:id="@+id/address"
+                        android:text="address"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/hint_email" />

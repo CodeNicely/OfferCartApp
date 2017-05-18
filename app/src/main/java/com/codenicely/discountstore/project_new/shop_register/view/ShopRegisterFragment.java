@@ -15,6 +15,8 @@ import android.provider.MediaStore;
 import android.support.annotation.RequiresApi;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.CardView;
@@ -153,14 +155,14 @@ public class ShopRegisterFragment extends Fragment implements ShopRegisterView {
      * @return A new instance of fragment ShopRegisterFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static ShopRegisterFragment newInstance(String param1, String param2) {
+    public  ShopRegisterFragment newInstance(String param1, String param2) {
         ShopRegisterFragment fragment = new ShopRegisterFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
+		Bundle args = new Bundle();
+		args.putString(ARG_PARAM1, param1);
+		args.putString(ARG_PARAM2, param2);
+		fragment.setArguments(args);
+		return fragment;
+	}
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -523,14 +525,16 @@ public class ShopRegisterFragment extends Fragment implements ShopRegisterView {
 
     @Override
     public void onRegistrationSuccess() {
-		ShopOtpFragment ldf = new ShopOtpFragment ();
+
+		Fragment fragment=new ShopOtpFragment();
+		FragmentManager fm=getFragmentManager();
+		FragmentTransaction ft=fm.beginTransaction();
 		Bundle args = new Bundle();
-		args.putString("mobile",mobile);
-		ldf.setArguments(args);
+		args.putString("mobile", mobile);
+		fragment.setArguments(args);
+		ft.replace(R.id.container_body,fragment);
+		ft.commit();
 
-//Inflate the fragment
-		getFragmentManager().beginTransaction().add(R.id.container_body, ldf).commit();
-
-        ((ShopActivity) getContext()).addFragment(new ShopOtpFragment());
+       // ((ShopActivity) getActivity()).addFragment(new ShopOtpFragment());
     }
 }

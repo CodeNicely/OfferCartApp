@@ -57,9 +57,8 @@
             android:label="@string/app_name"/>
         <activity android:name=".wallet.view.WalletActivity"/>
         <activity android:name=".payment.view.PaymentActivity"/>
-        <activity android:name=".shop_admin.shop_signup.view.ShopSignUpActivity"/>
         <activity android:name=".shop_activity.ShopActivity"/>
-        <activity android:name=".verify_shop_otp.view.ShopOtpActivity">
+        <activity android:name=".shop_home.ShopHomePage">
         </activity>
     </application>
 
