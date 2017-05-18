@@ -88,7 +88,8 @@ private SharedPrefs sharedPrefs;
         holder.delete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-       shopOfferListPresenter.delete(sharedPrefs.getKeyAccessTokenShop(),shopOfferListDetails.getOffer_id());
+     shopOfferListPresenter.delete(sharedPrefs.getKeyAccessTokenShop(),shopOfferListDetails.getOffer_id());
+     //           shopOfferListPresenter.delete("dsdssd",shopOfferListDetails.getOffer_id());
 
 
             }

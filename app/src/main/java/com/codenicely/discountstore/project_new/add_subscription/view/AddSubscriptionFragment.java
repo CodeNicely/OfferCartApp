@@ -35,7 +35,7 @@ public class AddSubscriptionFragment extends Fragment implements AddSubscription
     private String mParam1;
     private String mParam2;
 
-    private String access_token;
+/*    private String access_token;
     @BindView(R.id.)
     Spinner subscription_spinner;
     @BindView(R.id.)
@@ -45,7 +45,7 @@ public class AddSubscriptionFragment extends Fragment implements AddSubscription
 
 
 
-
+*/
 
 
 
@@ -125,10 +125,10 @@ public class AddSubscriptionFragment extends Fragment implements AddSubscription
     @Override
     public void showProgressBar(boolean show) {
         if(show){
-            progressBar.setVisibility(View.VISIBLE);
+            //progressBar.setVisibility(View.VISIBLE);
         }
         else{
-            progressBar.setVisibility(View.GONE);
+            //progressBar.setVisibility(View.GONE);
 
         }
 

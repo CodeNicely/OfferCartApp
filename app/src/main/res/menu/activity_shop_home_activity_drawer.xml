@@ -7,6 +7,11 @@
             android:icon="@drawable/ic_home_black_24dp"
             android:title="Home" />
         <item
+            android:id="@+id/nav_offers"
+            android:icon="@drawable/ic_account_balance_wallet_black_24dp"
+            android:title="Offer" />
+
+        <item
             android:id="@+id/nav_profile"
             android:icon="@drawable/ic_location_on_black_24dp"
             android:title="Profile" />
@@ -25,7 +30,6 @@
             android:id="@+id/nav_contact_us"
             android:icon="@drawable/ic_contact_phone_black_24dp"
             android:title="Contact Us" />
-        android:title="Contact Us" />
 
         <item
             android:id="@+id/nav_about_us"

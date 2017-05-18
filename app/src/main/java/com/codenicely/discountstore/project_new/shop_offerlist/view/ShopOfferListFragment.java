@@ -3,6 +3,7 @@ package com.codenicely.discountstore.project_new.shop_offerlist.view;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -47,7 +48,7 @@ public class ShopOfferListFragment extends Fragment implements ShopOfferListView
     @BindView(R.id.shop_subscription)
     TextView subscription;
     @BindView(R.id.add_button1)
-    Button add_offer;
+    FloatingActionButton add_offer;
     @BindView(R.id.progressBar_shop1)
     ProgressBar progressBar;
     @BindView(R.id.recycler_view_shop_offer)

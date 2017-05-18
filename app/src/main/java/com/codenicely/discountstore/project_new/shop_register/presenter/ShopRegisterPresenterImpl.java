@@ -104,14 +104,15 @@ public class ShopRegisterPresenterImpl implements ShopRegisterPresenter {
 
                     Log.i(TAG, "Response " + spotUploadData.toString());
                     if (spotUploadData.isSuccess()) {
-                        shopRegisterView.showLoader(false);
-						shopRegisterView.showDialogLoader(false);
-						shopRegisterView.onRegistrationSuccess();
+                        shopRegisterView.onRegistrationSuccess();
+
                     } else {
-                        shopRegisterView.showLoader(false);
-                        shopRegisterView.showDialogLoader(false);
-                        shopRegisterView.showMessage(spotUploadData.getMessage());
+						shopRegisterView.onRegistrationSuccess();
                     }
+
+                    shopRegisterView.showDialogLoader(false);
+                    shopRegisterView.showLoader(false);
+
                 }
             });
 
