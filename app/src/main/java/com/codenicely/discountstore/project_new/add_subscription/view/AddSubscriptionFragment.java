@@ -7,15 +7,27 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.codenicely.discountstore.project_new.R;
+import com.codenicely.discountstore.project_new.add_subscription.model.RetrofitAddSubscriptionProvider;
 import com.codenicely.discountstore.project_new.add_subscription.model.data.AddSubscriptionData;
+import com.codenicely.discountstore.project_new.add_subscription.model.data.AddSubscriptionDetails;
+import com.codenicely.discountstore.project_new.add_subscription.presenter.AddSubscriptionPresenter;
+import com.codenicely.discountstore.project_new.add_subscription.presenter.AddSubscriptionPresenterImpl;
+import com.codenicely.discountstore.project_new.helper.SharedPrefs;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -35,17 +47,20 @@ public class AddSubscriptionFragment extends Fragment implements AddSubscription
     private String mParam1;
     private String mParam2;
 
-/*    private String access_token;
-    @BindView(R.id.)
+
+   private String access_token;
+    private  int offerId;
+    @BindView(R.id.spinner_add_subscription)
     Spinner subscription_spinner;
-    @BindView(R.id.)
-    TextView name;
-    @BindView(R.id.)
+    @BindView(R.id.addSubacriptionProgressBar)
+    ProgressBar progressBar;
+    @BindView(R.id.addSubacriptionProgressBar)
     Button add_subscription;
 
+private SharedPrefs sharedPrefs;
+    private AddSubscriptionPresenter addSubscriptionPresenter;
+private AddSubscriptionDetails addSubscriptionDetails;
 
-
-*/
 
 
 
@@ -99,8 +114,20 @@ public class AddSubscriptionFragment extends Fragment implements AddSubscription
         // Inflate the layout for this fragment
         View view =inflater.inflate(R.layout.fragment_add_subscription, container, false);
 
+        ButterKnife.bind(this,view);
+        sharedPrefs = new SharedPrefs(getContext());
+        addSubscriptionPresenter=new AddSubscriptionPresenterImpl(new RetrofitAddSubscriptionProvider(),this);
+        addSubscriptionPresenter.requestSubscription(access_token);
+access_token=sharedPrefs.getKeyAccessTokenShop();
+        add_subscription.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
+                //call pay u money gateway
+//selected offer"s ID is stored in variable offer_id
 
+            }
+        });
 
 
 
@@ -125,10 +152,10 @@ public class AddSubscriptionFragment extends Fragment implements AddSubscription
     @Override
     public void showProgressBar(boolean show) {
         if(show){
-            //progressBar.setVisibility(View.VISIBLE);
+            progressBar.setVisibility(View.VISIBLE);
         }
         else{
-            //progressBar.setVisibility(View.GONE);
+            progressBar.setVisibility(View.GONE);
 
         }
 
@@ -142,6 +169,38 @@ public class AddSubscriptionFragment extends Fragment implements AddSubscription
 
     @Override
     public void setData(AddSubscriptionData addSubscriptionData) {
+        List<AddSubscriptionDetails> addSubscriptionDetailses = new ArrayList<AddSubscriptionDetails>(addSubscriptionData.getSubscription_offer_data());
+
+
+        ArrayAdapter<String> adapter;
+        int n= addSubscriptionDetailses.size();
+        //final String price[] = new String[n];
+        final String validity[] = new String[n];
+        final int id[] = new int[n];
+        int i=0;
+        while(i<n)
+        {
+            addSubscriptionDetails = addSubscriptionDetailses.get(i);
+           // price[i] = addSubscriptionDetails.getSubscription_price()+;
+            validity[i] = addSubscriptionDetails.getSubscription_validity()+" days validity for Rs"+addSubscriptionDetails.getSubscription_price();
+            id[i] = addSubscriptionDetails.getSubscription_offer_id();
+            i++;
+        }
+
+
+        adapter = new ArrayAdapter<String>(getContext(),
+                android.R.layout.simple_spinner_item,validity);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        subscription_spinner.setAdapter(adapter);
+        subscription_spinner.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int t, long l) {
+                offerId=id[t];
+
+            }
+        });
+
+
 
     }
 

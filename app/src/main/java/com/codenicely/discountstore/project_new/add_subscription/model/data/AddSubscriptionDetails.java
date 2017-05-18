@@ -6,16 +6,17 @@ package com.codenicely.discountstore.project_new.add_subscription.model.data;
 
 public class AddSubscriptionDetails {
 
-String subscription_offer_id,subscription_price,subscription_validity;
+String subscription_price,subscription_validity;
+    int subscription_offer_id;
 
-    public AddSubscriptionDetails(String subscription_offer_id, String subscription_price, String subscription_validity) {
+    public AddSubscriptionDetails(int subscription_offer_id, String subscription_price, String subscription_validity) {
         this.subscription_offer_id = subscription_offer_id;
         this.subscription_price = subscription_price;
         this.subscription_validity = subscription_validity;
     }
 
 
-    public String getSubscription_offer_id() {
+    public int getSubscription_offer_id() {
         return subscription_offer_id;
     }
 
