@@ -41,8 +41,6 @@
 
         <activity android:name=".shop_home.ShopHomePage">
 
-<<<<<<< HEAD
-=======
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -50,7 +48,6 @@
 
             </intent-filter>
 
->>>>>>> f34f9f8dedb453891468972c7c4a286c3586d0c1
         </activity>
         <!-- Main activity -->
 

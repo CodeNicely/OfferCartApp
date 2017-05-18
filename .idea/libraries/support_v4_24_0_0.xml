@@ -5,15 +5,9 @@
       <root url="jar://$USER_HOME$/.android/build-cache/5e4218cffe3df1bb56151d966292041de3d699fc/output/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
-<<<<<<< HEAD
       <root url="jar://$USER_HOME$/.android/build-cache/5e4218cffe3df1bb56151d966292041de3d699fc/output/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.android/build-cache/5e4218cffe3df1bb56151d966292041de3d699fc/output/res" />
       <root url="jar://$USER_HOME$/.android/build-cache/5e4218cffe3df1bb56151d966292041de3d699fc/output/jars/libs/internal_impl-24.0.0.jar!/" />
-=======
-      <root url="jar://$USER_HOME$/.android/build-cache/0ebb6485da5d96b69fd8c5e6fd7a4dfb52406c6c/output/jars/classes.jar!/" />
-      <root url="jar://$USER_HOME$/.android/build-cache/0ebb6485da5d96b69fd8c5e6fd7a4dfb52406c6c/output/jars/libs/internal_impl-24.0.0.jar!/" />
-      <root url="file://$USER_HOME$/.android/build-cache/0ebb6485da5d96b69fd8c5e6fd7a4dfb52406c6c/output/res" />
->>>>>>> f34f9f8dedb453891468972c7c4a286c3586d0c1
     </CLASSES>
     <JAVADOC />
     <SOURCES>

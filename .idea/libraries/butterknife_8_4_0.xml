@@ -1,21 +1,12 @@
 <component name="libraryTable">
   <library name="butterknife-8.4.0">
     <CLASSES>
-<<<<<<< HEAD
       <root url="jar://$USER_HOME$/.android/build-cache/86775556cb37a6b75b6601a58460a624e4687169/output/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.android/build-cache/86775556cb37a6b75b6601a58460a624e4687169/output/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
       <root url="jar://$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/caches/modules-2/files-2.1/com.jakewharton/butterknife/8.4.0/bc76ce8e6c5cf2c92ca6efbbc8b70403d3fd061e/butterknife-8.4.0-sources.jar!/" />
-=======
-      <root url="file://$USER_HOME$/.android/build-cache/dbc9ecba6ef7c293e03a2abaf34a2f373a0a3dd9/output/res" />
-      <root url="jar://$USER_HOME$/.android/build-cache/dbc9ecba6ef7c293e03a2abaf34a2f373a0a3dd9/output/jars/classes.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES>
-      <root url="jar://$USER_HOME$/caches/modules-2/files-2.1/com.jakewharton/butterknife/8.4.0/bc76ce8e6c5cf2c92ca6efbbc8b70403d3fd061e/butterknife-8.4.0-sources.jar!/" />
->>>>>>> f34f9f8dedb453891468972c7c4a286c3586d0c1
     </SOURCES>
   </library>
 </component>
