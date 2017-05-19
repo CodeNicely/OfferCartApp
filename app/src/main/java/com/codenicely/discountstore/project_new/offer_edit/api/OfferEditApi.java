@@ -23,7 +23,8 @@ public interface OfferEditApi {
 		@Part("offer_id") RequestBody offer_id,
 		@Part("offer_title") RequestBody offer_name,
 		@Part("offer_description") RequestBody description,
-		@Part("offer_validity") RequestBody validity,
-		@Part("offer_price") RequestBody price,
-		@Part MultipartBody.Part image);
+		@Part("date") RequestBody date,
+		@Part("month") RequestBody month,
+		@Part("year") RequestBody year,
+		@Part MultipartBody.Part offer_image);
 }

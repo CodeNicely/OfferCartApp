@@ -17,6 +17,8 @@ import android.widget.Toast;
 
 import com.codenicely.discountstore.project_new.R;
 import com.codenicely.discountstore.project_new.helper.SharedPrefs;
+import com.codenicely.discountstore.project_new.offer_add.view.OfferAddFragment;
+import com.codenicely.discountstore.project_new.shop_home.ShopHomePage;
 import com.codenicely.discountstore.project_new.shop_offerlist.model.MockShopOfferListProvider;
 import com.codenicely.discountstore.project_new.shop_offerlist.model.RetrofitShopOfferListProvider;
 import com.codenicely.discountstore.project_new.shop_offerlist.model.data.ShopOfferListData;
@@ -41,7 +43,6 @@ public class ShopOfferListFragment extends Fragment implements ShopOfferListView
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
-     String access_token;
 
     @BindView(R.id.shop_name1)
     TextView name;
@@ -113,12 +114,13 @@ public class ShopOfferListFragment extends Fragment implements ShopOfferListView
 
        shopOfferListPresenter.requestShopOffer(sharedPrefs.getKeyAccessTokenShop());
 
-add_offer.setOnClickListener(new View.OnClickListener() {
+		add_offer.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View view) {
         //call add offer fragment
-    }
-});
+        OfferAddFragment offerAddFragment= new OfferAddFragment();
+        ((ShopHomePage)getActivity()).addFragment(offerAddFragment,"Add Offer");
+    }});
 
 
         return view;
@@ -167,17 +169,6 @@ add_offer.setOnClickListener(new View.OnClickListener() {
         subscription.setText(shopOfferListData.getSubscription_validity());
         shopOfferAdapter.setData(shopOfferListData.getShop_offer_list());
         shopOfferAdapter.notifyDataSetChanged();
-
-
-
-
-
-
-
-
-
-
-
     }
 
     /**

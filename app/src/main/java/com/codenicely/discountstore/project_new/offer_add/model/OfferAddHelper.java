@@ -16,7 +16,7 @@ import rx.Observable;
 public interface OfferAddHelper {
 
 	Observable<OfferAddData> addOffer(String shop_access_token, String offer_name,
-									  String offer_description, int offer_price, int date,
+									  String offer_description, int date,
 									  int month, int year, Uri imageUri) throws IOException;
 
 }

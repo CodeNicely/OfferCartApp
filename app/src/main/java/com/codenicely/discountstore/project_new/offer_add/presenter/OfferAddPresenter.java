@@ -16,7 +16,7 @@ public interface OfferAddPresenter {
 	void openGallery();
 
 
-	void addOffer(String keyAccessTokenShop, String name, String description, int price,
+	void addOffer(String keyAccessTokenShop, String name, String description,
 				  int date, int month, int year, Uri imageUri);
 
 }

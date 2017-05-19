@@ -19,6 +19,7 @@ import com.codenicely.discountstore.project_new.R;
 import com.codenicely.discountstore.project_new.helper.SharedPrefs;
 import com.codenicely.discountstore.project_new.helper.image_loader.GlideImageLoader;
 import com.codenicely.discountstore.project_new.helper.image_loader.ImageLoader;
+import com.codenicely.discountstore.project_new.offer_edit.view.OfferEditFragment;
 import com.codenicely.discountstore.project_new.shop_home.ShopHomePage;
 import com.codenicely.discountstore.project_new.shop_profile_edit.view.EditShopProfileFragment;
 import com.codenicely.discountstore.project_new.shop_profile_show.data.ShowShopProfileData;
@@ -121,9 +122,10 @@ public class ShowShopProfileFragment extends Fragment implements ShowShopProfile
 		buttonEditProfile.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
+
 				//something to open new fragment
 
-			/*	Fragment fragment=new EditShopProfileFragment();
+				Fragment fragment=new EditShopProfileFragment();
 				FragmentManager fm=getFragmentManager();
 				FragmentTransaction ft=fm.beginTransaction();
 				Bundle args = new Bundle();
@@ -134,12 +136,14 @@ public class ShowShopProfileFragment extends Fragment implements ShowShopProfile
 				args.putString("city",city);
 				args.putString("image",image);
 				fragment.setArguments(args);
-				ft.replace(R.id.container_body,fragment);
+				ft.replace(R.id.home_layout,fragment);
+				ft.addToBackStack(null);
 				ft.commit();
-*/
 
-				EditShopProfileFragment editShopProfileFragment=new EditShopProfileFragment();
-				((ShopHomePage)getActivity()).addFragment(editShopProfileFragment  ,"Edit Shop Details");
+			//	EditShopProfileFragment editShopProfileFragment=new EditShopProfileFragment();
+			//	((ShopHomePage)getActivity()).addFragment(editShopProfileFragment  ,"Edit Shop Details");
+
+
 			}
 		});
 		return v;
@@ -189,7 +193,6 @@ public class ShowShopProfileFragment extends Fragment implements ShowShopProfile
 
 	@Override
 	public void onProfileRecieved(ShowShopProfileData shopProfileData) {
-
 		name =shopProfileData.getShop_name();
 		description=shopProfileData.getShop_description();
 		address=shopProfileData.getShop_address();
@@ -200,13 +203,11 @@ public class ShowShopProfileFragment extends Fragment implements ShowShopProfile
 		progressBar1.setVisibility(View.VISIBLE);
 		imageLoader.loadImage(shopProfileData.getImage(), imageView, progressBar1);
 		textViewShopName.setText(name);
-		textViewShopDescription.setText(shopProfileData.getShop_description());
-		textViewShopAddress.setText(shopProfileData.getShop_address());
+		textViewShopDescription.setText(description);
+		textViewShopAddress.setText(address);
 		textViewShopPhoneNo.setText(shopProfileData.getMobile_number());
-		textViewShopCategory.setText(shopProfileData.getShop_category());
-		textViewShopCity.setText(shopProfileData.getCity());
-
-
+		textViewShopCategory.setText(category);
+		textViewShopCity.setText(city);
 	}
 
 	/**

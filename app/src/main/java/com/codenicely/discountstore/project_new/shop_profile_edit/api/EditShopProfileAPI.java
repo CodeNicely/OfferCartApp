@@ -21,6 +21,7 @@ public interface EditShopProfileAPI {
 	@POST(Urls.EDIT_SHOP_PROFILE)
 	Observable<ShopEditData> requestShopEdit(
 		@Part("shop_access_token") RequestBody access_token,
+
 		@Part("name") RequestBody name,
 		@Part("description") RequestBody description,
 		@Part("address") RequestBody address,

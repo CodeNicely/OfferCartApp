@@ -6,10 +6,13 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.support.annotation.RequiresApi;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
@@ -20,6 +23,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
@@ -27,6 +31,8 @@ import android.widget.Toast;
 
 import com.codenicely.discountstore.project_new.R;
 import com.codenicely.discountstore.project_new.helper.SharedPrefs;
+import com.codenicely.discountstore.project_new.helper.utils.BitmapUtils;
+import com.codenicely.discountstore.project_new.helper.utils.UriUtils;
 import com.codenicely.discountstore.project_new.offer_edit.model.RetrofitOfferEditHelper;
 import com.codenicely.discountstore.project_new.offer_edit.presenter.OfferEditPresenter;
 import com.codenicely.discountstore.project_new.offer_edit.presenter.OfferEditPresenterImpl;
@@ -40,10 +46,13 @@ import com.karumi.dexter.listener.multi.MultiplePermissionsListener;
 import com.karumi.dexter.listener.single.PermissionListener;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+
+import static android.app.Activity.RESULT_OK;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -63,7 +72,7 @@ public class OfferEditFragment extends Fragment implements OfferEditView {
 	private Context context;
 	private File image = null;
 	private Uri imageUri = null;
-
+	Bitmap bitmap;
 	// TODO: Rename and change types of parameters
 	private String mParam1;
 	private String mParam2;
@@ -71,11 +80,15 @@ public class OfferEditFragment extends Fragment implements OfferEditView {
 	@BindView(R.id.name)
 	EditText editTextname;
 
+/*
 	@BindView(R.id.offer_validity)
 	EditText editTextvalidity;
+*/
 
+/*
 	@BindView(R.id.offer_price)
 	EditText editTextprice;
+*/
 
 	@BindView(R.id.offer_description)
 	EditText editTextdescription;
@@ -90,6 +103,9 @@ public class OfferEditFragment extends Fragment implements OfferEditView {
 	Button cameraButton;
 	@BindView(R.id.registerOffer)
 	Button registerButton;
+	@BindView(R.id.offer_validity2)
+	DatePicker datePicker;
+
 
 	@BindView(R.id.cardView)
 	CardView cardView;
@@ -99,6 +115,7 @@ public class OfferEditFragment extends Fragment implements OfferEditView {
 	private boolean GALLERY_REQUEST = false;
 	private static final int CAMERA_REQUEST_ID = 100;
 	private final int GALLERY_REQUEST_ID = 1;
+
 	String offer_id;
 	OfferEditPresenter offerAddPresenter;
 	//Date expiry_date;
@@ -137,6 +154,7 @@ public class OfferEditFragment extends Fragment implements OfferEditView {
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 							 Bundle savedInstanceState) {
+
 		/*progressDialog = new ProgressDialog(context);
 		progressDialog.setMessage("Please wait . . .");
 		progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
@@ -145,6 +163,7 @@ public class OfferEditFragment extends Fragment implements OfferEditView {
 */
 		// Inflate the layout for this fragment
 		context = getContext();
+		offer_id = getArguments().getString("offer_id");
 
 		View view=inflater.inflate(R.layout.fragment_edit_offer,container,false);
 		ButterKnife.bind(this,view);
@@ -169,9 +188,14 @@ public class OfferEditFragment extends Fragment implements OfferEditView {
 
 				sharedPrefs = new SharedPrefs(getContext());
 				String name = editTextname.getText().toString();
-				String validity = editTextvalidity.getText().toString();
+			//	String validity = editTextvalidity.getText().toString();
 				String description = editTextdescription.getText().toString();
-				String price =editTextprice.getText().toString();
+
+				//	String price =editTextprice.getText().toString();
+
+				int year =datePicker.getYear();
+				int month =datePicker.getMonth();
+				int date = datePicker.getDayOfMonth();
 
 
 				if (name.equals("") || name.equals(null)) {
@@ -182,24 +206,20 @@ public class OfferEditFragment extends Fragment implements OfferEditView {
 					editTextdescription.setError("Please enter Offer description");
 					editTextdescription.requestFocus();
 				}
-				else if (validity.equals("") || validity.equals(null)) {
+				/*else if (validity.equals("") || validity.equals(null)) {
 					editTextvalidity.setError("Please enter Offer Validity");
 					editTextvalidity.requestFocus();
-				}else if (price.equals("") || price.equals(null)) {
+				}*//*else if (price.equals("") || price.equals(null)) {
 					editTextprice.setError("Please enter Offer Validity");
 					editTextprice.requestFocus();
-				}else if (imageUri == null) {
+				}*/else if (imageUri == null) {
 					Snackbar.make(getActivity().findViewById(android.R.id.content),
 							"You've not selected any image to upload.", Snackbar.LENGTH_LONG)
 							.setActionTextColor(Color.RED)
 							.show();
 				} else {
 					offerAddPresenter.requestEditOfferOffer(sharedPrefs.getKeyAccessTokenShop(),offer_id,
-							name,description,price,validity,imageUri);
-			/*
-				shopRegisterPresenter.registerShop(name, mobile, password, description, address,
-						category, city, imageUri);
-			*/
+							name,description,date,month,year,imageUri);
 
 				}
 
@@ -405,6 +425,36 @@ public class OfferEditFragment extends Fragment implements OfferEditView {
 	public interface OnFragmentInteractionListener {
 		// TODO: Update argument type and name
 		void onFragmentInteraction(Uri uri);
+	}
+	@RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
+	@Override
+	public void onActivityResult(int requestCode, int resultCode, Intent data) {
+		super.onActivityResult(requestCode,resultCode, data);
+
+		if (requestCode == GALLERY_REQUEST_ID && resultCode == RESULT_OK && data != null && data.getData() != null) {
+			imageUri = data.getData();
+			try {
+				//Getting the Bitmap from Gallery
+				//bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), filePath);
+				if (imageUri != null) {
+					bitmap = MediaStore.Images.Media.getBitmap(context.getContentResolver(), imageUri);
+					imageView.setImageBitmap(bitmap);
+				}
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+
+		} else if (requestCode ==CAMERA_REQUEST_ID && resultCode == RESULT_OK) {
+
+			//    imageUri=data.getData();
+			imageUri=Uri.fromFile(image);
+			try {
+				bitmap = BitmapUtils.filePathToBitmapConverter(UriUtils.uriToFilePathConverter(context, imageUri));
+				imageView.setImageBitmap(bitmap);
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
 	}
 
 }

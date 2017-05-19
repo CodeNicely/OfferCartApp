@@ -107,7 +107,7 @@ public class ShopRegisterPresenterImpl implements ShopRegisterPresenter {
                         shopRegisterView.onRegistrationSuccess();
 
                     } else {
-						shopRegisterView.onRegistrationSuccess();
+						//shopRegisterView.onRegistrationSuccess();
                     }
 
                     shopRegisterView.showDialogLoader(false);

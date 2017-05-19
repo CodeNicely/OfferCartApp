@@ -47,7 +47,6 @@ import com.karumi.dexter.listener.single.PermissionListener;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.Date;
 import java.util.List;
 
 import butterknife.BindView;
@@ -80,10 +79,13 @@ public class OfferAddFragment extends Fragment implements OfferAddView{
 	private String mParam2;
 	SharedPrefs sharedPrefs;
 	@BindView(R.id.name)
-	EditText editTextname;
+	EditText editTextName;
 
+/*
 	@BindView(R.id.offer_validity)
-	EditText editTextvalidity;
+	EditText editTextValidity;
+*/
+
 /*
 	@BindView(R.id.offer_price)
 	EditText editTextprice;*/
@@ -188,8 +190,8 @@ public class OfferAddFragment extends Fragment implements OfferAddView{
 
 
 				sharedPrefs = new SharedPrefs(getContext());
-				String name = editTextname.getText().toString();
-				String validity = editTextvalidity.getText().toString();
+				String name = editTextName.getText().toString();
+			//	String validity = editTextValidity.getText().toString();
 				String description = editTextdescription.getText().toString();
 			//	int  price = Integer.parseInt(editTextprice.getText().toString());
 				int year =datePicker.getYear();
@@ -197,17 +199,17 @@ public class OfferAddFragment extends Fragment implements OfferAddView{
 				int date = datePicker.getDayOfMonth();
 				int price=0;
 				if (name.equals("") || name.equals(null)) {
-					editTextname.setError("Please enter Offer Name");
-					editTextname.requestFocus();
+					editTextName.setError("Please enter Offer Name");
+					editTextName.requestFocus();
 				}
 				else if (description.equals("") || description.equals(null)) {
 					editTextdescription.setError("Please enter Offer description");
 					editTextdescription.requestFocus();
 				}
-				else if (validity.equals("") || validity.equals(null)) {
-					editTextvalidity.setError("Please enter Offer Validity");
-					editTextvalidity.requestFocus();
-				}else if (imageUri == null) {
+			/*	else if (validity.equals("") || validity.equals(null)) {
+					editTextValidity.setError("Please enter Offer Validity");
+					editTextValidity.requestFocus();
+				}*/else if (imageUri == null) {
 					Snackbar.make(getActivity().findViewById(android.R.id.content),
 							"You've not selected any image to upload.", Snackbar.LENGTH_LONG)
 							.setActionTextColor(Color.RED)
@@ -215,8 +217,11 @@ public class OfferAddFragment extends Fragment implements OfferAddView{
 				} else {
 		/*			offerAddPresenter.addOffer(sharedPrefs.getKeyAccessTokenShop(),
 							name,description,price,validity,imageUri);
-		*/			offerAddPresenter.addOffer(sharedPrefs.getKeyAccessTokenShop(),
-							name,description,price,date,month,year,imageUri);
+
+		*/
+//					Toast.makeText(getContext(),year,Toast.LENGTH_SHORT).show();
+					offerAddPresenter.addOffer(sharedPrefs.getKeyAccessTokenShop(),
+							name,description,date,month,year,imageUri);
 				}
 
 			}
@@ -402,7 +407,10 @@ public class OfferAddFragment extends Fragment implements OfferAddView{
 
 	@Override
 	public void onOfferAdded() {
+
+
 		//Go to home page now.
+
 	}
 
 

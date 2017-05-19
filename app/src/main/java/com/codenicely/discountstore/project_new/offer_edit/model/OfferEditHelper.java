@@ -12,12 +12,7 @@ import rx.Observable;
  * Created by ujjwal on 18/5/17.
  */
 public interface OfferEditHelper {
-	Observable<OfferEditData> editOffer(String shop_access_token,
-										String offer_id,
-										String offer_name,
-										String offer_description,
-										String offer_price,
-										String expiry_date,
-										Uri imageUri)throws IOException;
+	Observable<OfferEditData> editOffer(String shop_access_token,String offer_id, String offer_name, String offer_description,
+										int date,int month,int year,Uri imageUri)throws IOException;
 
 }

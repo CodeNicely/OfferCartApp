@@ -32,9 +32,11 @@ import android.widget.Toast;
 import com.codenicely.discountstore.project_new.R;
 import com.codenicely.discountstore.project_new.contact_us.view.ContactUsFragment;
 import com.codenicely.discountstore.project_new.helper.SharedPrefs;
+import com.codenicely.discountstore.project_new.helper.image_loader.GlideImageLoader;
 import com.codenicely.discountstore.project_new.helper.image_loader.ImageLoader;
 import com.codenicely.discountstore.project_new.helper.utils.BitmapUtils;
 import com.codenicely.discountstore.project_new.helper.utils.UriUtils;
+import com.codenicely.discountstore.project_new.offer.view.OfferFragment;
 import com.codenicely.discountstore.project_new.shop_activity.ShopActivity;
 import com.codenicely.discountstore.project_new.shop_home.ShopHomePage;
 import com.codenicely.discountstore.project_new.shop_otp.view.ShopOtpFragment;
@@ -151,7 +153,7 @@ public class EditShopProfileFragment extends Fragment implements EditShopProfile
 	 * @return A new instance of fragment EditShopProfileFragment.
 	 */
 	// TODO: Rename and change types and number of parameters
-	public static EditShopProfileFragment newInstance(String param1, String param2) {
+	public static EditShopProfileFragment newInstance(String param1,String param2) {
 		EditShopProfileFragment fragment = new EditShopProfileFragment();
 		Bundle args = new Bundle();
 		args.putString(ARG_PARAM1, param1);
@@ -177,15 +179,15 @@ public class EditShopProfileFragment extends Fragment implements EditShopProfile
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 							 Bundle savedInstanceState) {
 		View view=inflater.inflate(R.layout.fragment_edit_shop_profile, container, false);
-/*
 		name = getArguments().getString("name");
 		address = getArguments().getString("address");
 		category = getArguments().getString("category");
 		description = getArguments().getString("description");
 		city = getArguments().getString("city");
 		image1 = getArguments().getString("image");
-*/
 
+
+		imageLoader = new GlideImageLoader(getContext());
 
 
 		context = getContext();
@@ -206,6 +208,7 @@ public class EditShopProfileFragment extends Fragment implements EditShopProfile
 		category_spinner.setAdapter(category_array_adapter);
 		Dexter.initialize(context);
 		initialise();
+
 
 		editShopProfilePresenter = new EditShopProfilePresenterImpl(this, new RetrofitEditShopProfileHelper(context));
 
@@ -272,7 +275,6 @@ public class EditShopProfileFragment extends Fragment implements EditShopProfile
 	@Override
 	public void onActivityResult(int requestCode, int resultCode, Intent data) {
 		super.onActivityResult(requestCode, resultCode, data);
-
 
 		if (requestCode == GALLERY_REQUEST_ID && resultCode == RESULT_OK && data != null && data.getData() != null) {
 			imageUri = data.getData();
@@ -343,13 +345,12 @@ public class EditShopProfileFragment extends Fragment implements EditShopProfile
 	}
 
 	@Override
-	public void showDialogLoader(boolean show) {
+	public void showDialogLoader(boolean show){
 		if (show) {
 			progressDialog.show();
 		} else {
 			progressDialog.hide();
 		}
-
 	}
 
 	@Override
@@ -479,30 +480,42 @@ public class EditShopProfileFragment extends Fragment implements EditShopProfile
 
 	@Override
 	public void setPreRegistrationData(ShopPreRegistrationData shopPreRegistrationData) {
+
+		int index_of_category = 0;
+		int index_of_city = 0;
+
 		for (int i = 0; i < shopPreRegistrationData.getCity_list().size(); i++) {
 			CityData cityData = shopPreRegistrationData.getCity_list().get(i);
+			index_of_city =cityData.getName().indexOf(city);
 			city_array_adapter.add(cityData.getName());
 		}
 
+
 		for (int i = 0; i < shopPreRegistrationData.getCategory_list().size(); i++) {
 			CategoryData categoryData = shopPreRegistrationData.getCategory_list().get(i);
+			index_of_category =categoryData.getName().indexOf(category);
 			category_array_adapter.add(categoryData.getName());
 		}
 		city_array_adapter.notifyDataSetChanged();
 		category_array_adapter.notifyDataSetChanged();
 
+		name_edittext.setText(name);
+		address_edittext.setText(address);
+		description_edittext.setText(description);
+		category_spinner.setSelection(index_of_category);
+		city_spinner.setSelection(index_of_city);
+		imageUri= Uri.parse(image1);
+		imageLoader.loadImage(image1, imageView, progressBar);
+
 	}
 
 	@Override
 	public void onEditSuccess() {
-		ContactUsFragment contactUsFragment=new ContactUsFragment();
-		((ShopHomePage)getActivity()).setFragment(contactUsFragment,"Home");
+		OfferFragment offerFragment=new OfferFragment();
+		((ShopHomePage)getActivity()).setFragment(offerFragment,"Home");
 
 		ShowShopProfileFragment showShopProfileFragment=new ShowShopProfileFragment();
 		((ShopHomePage)getActivity()).addFragment(showShopProfileFragment,"Home");
-
-
-
 	}
 
 	/**

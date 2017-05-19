@@ -523,7 +523,7 @@ public class ShopRegisterFragment extends Fragment implements ShopRegisterView {
     public void onRegistrationSuccess() {
 
 		Fragment fragment=new ShopOtpFragment();
-		FragmentManager fm=getFragmentManager();
+		FragmentManager fm= getFragmentManager();
 		FragmentTransaction ft=fm.beginTransaction();
 		Bundle args = new Bundle();
 		args.putString("mobile", mobile);

@@ -6,23 +6,10 @@ package com.codenicely.discountstore.project_new.shop_offerlist.model.data;
 
 public class ShopOfferListDetails {
 
-    String offer_title, offer_description, offer_image, offer_price,
-              offer_validity_days, offer_validity_date,active;
-    int offer_id;
-
-    public ShopOfferListDetails(int offer_id, String offer_title, String offer_description,
-                                String offer_image, String offer_price, String offer_validity_days,
-                                String offer_validity_date, String active) {
-        this.offer_id = offer_id;
-        this.offer_title = offer_title;
-        this.offer_description = offer_description;
-        this.offer_image = offer_image;
-        this.offer_price = offer_price;
-        this.offer_validity_days = offer_validity_days;
-        this.offer_validity_date = offer_validity_date;
-        this.active = active;
-    }
-
+    String offer_title, offer_description, offer_image,
+               expiry_date;
+    int offer_id,validity;
+    boolean active;
 
     public int getOffer_id() {
         return offer_id;
@@ -36,23 +23,29 @@ public class ShopOfferListDetails {
         return offer_description;
     }
 
+    public int getValidity() {
+        return validity;
+    }
+
     public String getOffer_image() {
         return offer_image;
     }
 
-    public String getOffer_price() {
-        return offer_price;
+    public String getExpiry_date() {
+        return expiry_date;
     }
 
-    public String getOffer_validity_days() {
-        return offer_validity_days;
+    public ShopOfferListDetails(String offer_title, String offer_description, String offer_image, String expiry_date, int offer_id, int validity, boolean active) {
+        this.offer_title = offer_title;
+        this.offer_description = offer_description;
+        this.offer_image = offer_image;
+        this.expiry_date = expiry_date;
+        this.offer_id = offer_id;
+        this.validity = validity;
+        this.active = active;
     }
 
-    public String getOffer_validity_date() {
-        return offer_validity_date;
-    }
-
-    public String getActive() {
+    public boolean isActive() {
         return active;
     }
 }

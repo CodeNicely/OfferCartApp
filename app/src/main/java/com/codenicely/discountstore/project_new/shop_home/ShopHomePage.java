@@ -25,6 +25,8 @@ import com.codenicely.discountstore.project_new.helper.SharedPrefs;
 import com.codenicely.discountstore.project_new.home.HomePageInterface;
 import com.codenicely.discountstore.project_new.my_orders.view.MyOrdersFragment;
 
+import com.codenicely.discountstore.project_new.offer_edit.view.OfferEditFragment;
+import com.codenicely.discountstore.project_new.shop_change_password.view.ShopChangePasswordFragment;
 import com.codenicely.discountstore.project_new.shop_login.view.ShopLoginFragment;
 
 
@@ -46,6 +48,7 @@ public class ShopHomePage extends AppCompatActivity
                             DeveloperFragment.OnFragmentInteractionListener,
                            ContactUsFragment.OnFragmentInteractionListener,
 						   OfferAddFragment.OnFragmentInteractionListener,
+                           OfferEditFragment.OnFragmentInteractionListener,
         ShopOfferListFragment.OnFragmentInteractionListener {
 
     private SharedPrefs sharedPrefs;
@@ -130,28 +133,15 @@ public class ShopHomePage extends AppCompatActivity
             startActivity(intent);
             finish();
 
-        } else if (id == R.id.nav_offers) {
-            addFragment(new OfferAddFragment(), "Add Offers");
+        } else if (id == R.id.change_password) {
+            addFragment(new ShopChangePasswordFragment(), "Change Password");
             getSupportActionBar().hide();
-        } else if (id == R.id.nav_profile) {
+        }
+		else if (id == R.id.nav_profile) {
             addFragment(new ShowShopProfileFragment(), "Profile");
             getSupportActionBar().hide();
 
-
-
-        } else if (id == R.id.nav_wallet) {
-
-
-           setFragment(new ShopOfferListFragment(),"offer list");
-            getSupportActionBar().hide();
-
-        } else if (id == R.id.nav_my_orders) {
-            addFragment(new MyOrdersFragment(), "My Orders");
-            getSupportActionBar().hide();
-
-
-
-       } else if (id == R.id.nav_contact_us) {
+        } else if (id == R.id.nav_contact_us) {
 
             addFragment(new ContactUsFragment(), "Contact Us");
             getSupportActionBar().hide();

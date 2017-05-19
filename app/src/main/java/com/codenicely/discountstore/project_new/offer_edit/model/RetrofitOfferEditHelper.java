@@ -51,8 +51,13 @@ public class RetrofitOfferEditHelper implements OfferEditHelper {
 
 	@Override
 	public Observable<OfferEditData> editOffer(String shop_access_token,String offer_id, String offer_name, String offer_description,
-											   String expiry_date, String offer_price, Uri imageUri) throws IOException {
+											   int date,int month,int year,Uri imageUri) throws IOException {
 
+		String year2,date2,month2,offer_price2;
+
+		year2= String.valueOf(year);
+		month2= String.valueOf(month);
+		date2= String.valueOf(date);
 		RequestBody shop_access_token1 =
 				RequestBody.create(
 						MediaType.parse("multipart/form-data"), shop_access_token);
@@ -64,17 +69,25 @@ public class RetrofitOfferEditHelper implements OfferEditHelper {
 				RequestBody.create(
 						MediaType.parse("multipart/form-data"), offer_description);
 
-		RequestBody expiry_date1 =
-				RequestBody.create(
-						MediaType.parse("multipart/form-data"), expiry_date);
-
+/*
 		RequestBody offer_price1 =
 				RequestBody.create(
 						MediaType.parse("multipart/form-data"), offer_price);
+*/
 
 		RequestBody offer_id1 =
 				RequestBody.create(
 						MediaType.parse("multipart/form-data"), offer_id);
+		RequestBody date1 =
+				RequestBody.create(
+						MediaType.parse("multipart/form-data"), date2);
+		RequestBody month1 =
+				RequestBody.create(
+						MediaType.parse("multipart/form-data"), month2);
+		RequestBody year1 =
+				RequestBody.create(
+						MediaType.parse("multipart/form-data"), year2);
+
 
 		if (imageUri != null) {
 			//    File imageFile=new File(imageUri.getPath());
@@ -85,7 +98,7 @@ public class RetrofitOfferEditHelper implements OfferEditHelper {
 					MultipartBody.Part.createFormData("image", imageFile.getName(), fbody);
 
 			return offerEditApi.requestOfferEdit(shop_access_token1,offer_id1, offer_name1, offer_description1,
-		expiry_date1,	offer_price1,image);
+					date1,month1,year1,image);
 		}
 
 

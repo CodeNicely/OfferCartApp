@@ -13,7 +13,7 @@ public interface OfferEditPresenter {
 	 */
 	void openGallery();
 
-	void requestEditOfferOffer(String shop_access_token, String offer_id,String offer_name, String offer_description,
-							   String offer_price, String expiry_date, Uri imageUri);
+	void requestEditOfferOffer(String shop_access_token,String offer_id, String offer_name, String offer_description,
+							   int date,int month,int year,Uri imageUri);
 
 }

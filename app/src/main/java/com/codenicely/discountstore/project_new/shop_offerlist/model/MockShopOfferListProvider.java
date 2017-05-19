@@ -52,9 +52,9 @@ public class MockShopOfferListProvider implements ShopOfferListProvider {
 
         for(int i=0;i<5;i++)
         {
-            ShopOfferListDetails shopOfferListDetails = new ShopOfferListDetails(1,"dv","vdv","vsdv","vdsv","vdv","dv","vfv");
+    /*        ShopOfferListDetails shopOfferListDetails = new ShopOfferListDetails(1,"dv","vdv","vsdv","vdsv","vdv","dv","vfv");
             shopOfferListDetailses.add(shopOfferListDetails);
-        }
+    */    }
 
         ShopOfferListData shopOfferListData = new ShopOfferListData(true,"List Received","fhd","dv",shopOfferListDetailses);
         return shopOfferListData;

@@ -70,11 +70,11 @@ public class OfferEditPresenterImpl implements OfferEditPresenter {
 
 	@Override
 	public void requestEditOfferOffer(String shop_access_token,String offer_id ,String offer_name, String offer_description
-												 , String expiry_date, String offer_price, Uri imageUri) {
+												 , int date,int month,int year ,Uri imageUri) {
 		offerEditView.showDialogLoader(true);
 		try {
 			offerEditDataObservable = offerEditHelper.editOffer(shop_access_token,offer_id,
-					offer_name, offer_description,expiry_date,offer_price,imageUri);
+					offer_name, offer_description,date,month,year,imageUri);
 			Log.i(TAG, "Value of Observable" + offerEditDataObservable.toString());
 			subscription = offerEditDataObservable.subscribeOn(Schedulers.newThread()).
 				observeOn(AndroidSchedulers.mainThread()).subscribe(new Observer<OfferEditData>() {
