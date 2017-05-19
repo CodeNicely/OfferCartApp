@@ -15,11 +15,8 @@ public interface OfferAddPresenter {
 	 */
 	void openGallery();
 
-	void addOffer(String shop_access_token,String offer_name, String offer_description,
-					  String offer_price, String expiry_date, Uri imageUri);
-/*
-	void addOffer(String shop_access_token, String offer_name, String offer_description,
-				  String offer_price, Date expiry_date, Uri imageUri);
-*/
+
+	void addOffer(String keyAccessTokenShop, String name, String description, int price,
+				  int date, int month, int year, Uri imageUri);
 
 }

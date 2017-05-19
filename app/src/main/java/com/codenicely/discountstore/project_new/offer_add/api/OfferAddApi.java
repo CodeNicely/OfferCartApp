@@ -23,8 +23,11 @@ public interface OfferAddApi {
 		@Part("shop_access_token") RequestBody shop_name,
 		@Part("offer_title") RequestBody offer_name,
 		@Part("offer_description") RequestBody description,
-		@Part("expiry_date") RequestBody validity,
 		@Part("offer_price") RequestBody price,
+		@Part("date") RequestBody date,
+		@Part("month") RequestBody month,
+		@Part("year") RequestBody year,
+
 		@Part MultipartBody.Part offer_image);
 
 }

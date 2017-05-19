@@ -40,7 +40,7 @@
                         android:hint="@string/offer_name" />
 
                 </android.support.design.widget.TextInputLayout>
-                <android.support.design.widget.TextInputLayout
+              <!--  <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
@@ -53,13 +53,18 @@
                         />
 
                 </android.support.design.widget.TextInputLayout>
-
+-->
                 <DatePicker
                     android:layout_width="match_parent"
                     android:id="@+id/offer_validity2"
-                    android:layout_height="wrap_content">
+                    android:datePickerMode="spinner"
 
+                    android:calendarViewShown="false"
+                    android:tag="Offer Validity"
+                    android:layout_height="wrap_content">
                 </DatePicker>
+
+<!--
                 <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
@@ -71,6 +76,7 @@
                         android:hint="@string/offer_price"
                         android:inputType="number" />
                 </android.support.design.widget.TextInputLayout>
+-->
 
                 <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"

@@ -71,11 +71,11 @@ public class OfferAddPresenterImpl implements OfferAddPresenter {
 
 	@Override
 	public void addOffer(String shop_access_token, String offer_name, String offer_description,
-						 String offer_price, String expiry_date, Uri imageUri) {
+						 int offer_price,int date,int month,int year, Uri imageUri) {
 		offerAddView.showDialogLoader(true);
 		try {
 			offerAddDataObservable = offerAddHelper.addOffer(shop_access_token,
-					offer_name, offer_description,offer_price,expiry_date,imageUri);
+					offer_name, offer_description,offer_price,date,month,year,imageUri);
 			Log.i(TAG, "Value of Observable" + offerAddDataObservable.toString());
 			subscription = offerAddDataObservable.subscribeOn(Schedulers.newThread()).
 			 observeOn(AndroidSchedulers.mainThread()).subscribe(new Observer<OfferAddData>() {

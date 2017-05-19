@@ -9,8 +9,10 @@ import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.support.annotation.RequiresApi;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
@@ -21,6 +23,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
@@ -28,6 +31,8 @@ import android.widget.Toast;
 
 import com.codenicely.discountstore.project_new.R;
 import com.codenicely.discountstore.project_new.helper.SharedPrefs;
+import com.codenicely.discountstore.project_new.helper.utils.BitmapUtils;
+import com.codenicely.discountstore.project_new.helper.utils.UriUtils;
 import com.codenicely.discountstore.project_new.offer_add.model.RetrofitOfferAddHelper;
 import com.codenicely.discountstore.project_new.offer_add.presenter.OfferAddPresenter;
 import com.codenicely.discountstore.project_new.offer_add.presenter.OfferAddPresenterImpl;
@@ -41,11 +46,14 @@ import com.karumi.dexter.listener.multi.MultiplePermissionsListener;
 import com.karumi.dexter.listener.single.PermissionListener;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.Date;
 import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+
+import static android.app.Activity.RESULT_OK;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -65,6 +73,7 @@ public class OfferAddFragment extends Fragment implements OfferAddView{
 	private Context context;
 	private File image = null;
 	private Uri imageUri = null;
+	Bitmap bitmap;
 
 	// TODO: Rename and change types of parameters
 	private String mParam1;
@@ -75,9 +84,9 @@ public class OfferAddFragment extends Fragment implements OfferAddView{
 
 	@BindView(R.id.offer_validity)
 	EditText editTextvalidity;
-
+/*
 	@BindView(R.id.offer_price)
-	EditText editTextprice;
+	EditText editTextprice;*/
 
 	@BindView(R.id.offer_description)
 	EditText editTextdescription;
@@ -92,11 +101,11 @@ public class OfferAddFragment extends Fragment implements OfferAddView{
 	Button cameraButton;
 	@BindView(R.id.registerOffer)
 	Button registerButton;
-/*	@BindView(R.id.offer_validity2)
-	Date expiry_date;*/
 
 	@BindView(R.id.cardView)
 	CardView cardView;
+	@BindView(R.id.offer_validity2)
+	DatePicker datePicker;
 	private ProgressDialog progressDialog;
 	private static final String TAG = "OfferEditFragment";
 	private boolean CAMERA_REQUEST = false;
@@ -105,7 +114,10 @@ public class OfferAddFragment extends Fragment implements OfferAddView{
 	private final int GALLERY_REQUEST_ID = 1;
 
 	OfferAddPresenter offerAddPresenter;
-	//Date expiry_date;
+
+
+
+
 	private OnFragmentInteractionListener mListener;
 
 	/**
@@ -151,11 +163,14 @@ public class OfferAddFragment extends Fragment implements OfferAddView{
 		context = getContext();
 
 		View view=inflater.inflate(R.layout.fragment_offer_add,container,false);
+
 		ButterKnife.bind(this,view);
+
 		offerAddPresenter = new OfferAddPresenterImpl(this,new RetrofitOfferAddHelper(context));
 		cameraButton.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
+
 				offerAddPresenter.openCamera();
 
 			}
@@ -163,6 +178,7 @@ public class OfferAddFragment extends Fragment implements OfferAddView{
 		galleryButton.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
+
 				offerAddPresenter.openGallery();
 			}
 		});
@@ -175,9 +191,11 @@ public class OfferAddFragment extends Fragment implements OfferAddView{
 				String name = editTextname.getText().toString();
 				String validity = editTextvalidity.getText().toString();
 				String description = editTextdescription.getText().toString();
-				String price =editTextprice.getText().toString();
-
-
+			//	int  price = Integer.parseInt(editTextprice.getText().toString());
+				int year =datePicker.getYear();
+				int month =datePicker.getMonth();
+				int date = datePicker.getDayOfMonth();
+				int price=0;
 				if (name.equals("") || name.equals(null)) {
 					editTextname.setError("Please enter Offer Name");
 					editTextname.requestFocus();
@@ -189,20 +207,16 @@ public class OfferAddFragment extends Fragment implements OfferAddView{
 				else if (validity.equals("") || validity.equals(null)) {
 					editTextvalidity.setError("Please enter Offer Validity");
 					editTextvalidity.requestFocus();
-				}else if (price.equals("") || price.equals(null)) {
-					editTextprice.setError("Please enter Offer Validity");
-					editTextprice.requestFocus();
 				}else if (imageUri == null) {
 					Snackbar.make(getActivity().findViewById(android.R.id.content),
 							"You've not selected any image to upload.", Snackbar.LENGTH_LONG)
 							.setActionTextColor(Color.RED)
 							.show();
 				} else {
-					offerAddPresenter.addOffer(sharedPrefs.getKeyAccessTokenShop(),
+		/*			offerAddPresenter.addOffer(sharedPrefs.getKeyAccessTokenShop(),
 							name,description,price,validity,imageUri);
-	/*				offerAddPresenter.addOffer(sharedPrefs.getKeyAccessTokenShop(),
-							name,description,price,expiry_date,imageUri);
-	*/
+		*/			offerAddPresenter.addOffer(sharedPrefs.getKeyAccessTokenShop(),
+							name,description,price,date,month,year,imageUri);
 				}
 
 			}
@@ -359,7 +373,6 @@ public class OfferAddFragment extends Fragment implements OfferAddView{
 		intent.putExtra(Intent.EXTRA_ALLOW_MULTIPLE, true);
 		intent.setAction(Intent.ACTION_GET_CONTENT);
 		startActivityForResult(Intent.createChooser(intent, "Select Picture"), GALLERY_REQUEST_ID);
-
 	}
 
 	@Override
@@ -408,5 +421,36 @@ public class OfferAddFragment extends Fragment implements OfferAddView{
 		// TODO: Update argument type and name
 		void onFragmentInteraction(Uri uri);
 	}
+	@RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
+	@Override
+	public void onActivityResult(int requestCode, int resultCode, Intent data) {
+		super.onActivityResult(requestCode,resultCode, data);
+
+		if (requestCode == GALLERY_REQUEST_ID && resultCode == RESULT_OK && data != null && data.getData() != null) {
+			imageUri = data.getData();
+			try {
+				//Getting the Bitmap from Gallery
+				//bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), filePath);
+				if (imageUri != null) {
+					bitmap = MediaStore.Images.Media.getBitmap(context.getContentResolver(), imageUri);
+					imageView.setImageBitmap(bitmap);
+				}
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+
+		} else if (requestCode ==CAMERA_REQUEST_ID && resultCode == RESULT_OK) {
+
+			//    imageUri=data.getData();
+			imageUri=Uri.fromFile(image);
+			try {
+				bitmap = BitmapUtils.filePathToBitmapConverter(UriUtils.uriToFilePathConverter(context, imageUri));
+				imageView.setImageBitmap(bitmap);
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+
 
 }

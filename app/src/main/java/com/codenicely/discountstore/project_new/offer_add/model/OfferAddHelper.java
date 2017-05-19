@@ -14,19 +14,9 @@ import rx.Observable;
  * Created by ujjwal on 18/5/17.
  */
 public interface OfferAddHelper {
-	Observable<OfferAddData> addOffer(String shop_access_token,
-									  String offer_name,
-									  String offer_description,
-									  String offer_price,
-									  String expiry_date,
-									  Uri imageUri)throws IOException;
-/*
-	Observable<OfferAddData> addOffer(String shop_access_token,
-									  String offer_name,
-									  String offer_description,
-									  String offer_price,
-									  Date expiry_date,
-									  Uri imageUri)throws IOException;
-*/
+
+	Observable<OfferAddData> addOffer(String shop_access_token, String offer_name,
+									  String offer_description, int offer_price, int date,
+									  int month, int year, Uri imageUri) throws IOException;
 
 }
