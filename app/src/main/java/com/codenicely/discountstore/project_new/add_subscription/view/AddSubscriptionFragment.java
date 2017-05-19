@@ -22,6 +22,7 @@ import com.codenicely.discountstore.project_new.add_subscription.model.data.AddS
 import com.codenicely.discountstore.project_new.add_subscription.presenter.AddSubscriptionPresenter;
 import com.codenicely.discountstore.project_new.add_subscription.presenter.AddSubscriptionPresenterImpl;
 import com.codenicely.discountstore.project_new.helper.SharedPrefs;
+import com.codenicely.discountstore.project_new.payment_shop.view.ShopPaymentFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -49,7 +50,7 @@ public class AddSubscriptionFragment extends Fragment implements AddSubscription
 
 
    private String access_token;
-    private  int offerId;
+    private  int offerPrice;
     @BindView(R.id.spinner_add_subscription)
     Spinner subscription_spinner;
     @BindView(R.id.addSubacriptionProgressBar)
@@ -108,6 +109,7 @@ access_token=sharedPrefs.getKeyAccessTokenShop();
         add_subscription.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                ShopPaymentFragment shopPaymentFragment=ShopPaymentFragment.newInstance(offerPrice);
 
                 //call pay u money gateway
 //selected offer"s ID is stored in variable offer_id
@@ -160,14 +162,14 @@ access_token=sharedPrefs.getKeyAccessTokenShop();
 
         ArrayAdapter<String> adapter;
         int n= addSubscriptionDetailses.size();
-        //final String price[] = new String[n];
+        final int price[] = new int [n];
         final String validity[] = new String[n];
         final int id[] = new int[n];
         int i=0;
         while(i<n)
         {
             addSubscriptionDetails = addSubscriptionDetailses.get(i);
-           // price[i] = addSubscriptionDetails.getSubscription_price()+;
+           price[i] = addSubscriptionDetails.getSubscription_price();
             validity[i] = addSubscriptionDetails.getSubscription_validity()+" days validity for Rs"+addSubscriptionDetails.getSubscription_price();
             id[i] = addSubscriptionDetails.getSubscription_offer_id();
             i++;
@@ -181,7 +183,7 @@ access_token=sharedPrefs.getKeyAccessTokenShop();
         subscription_spinner.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int t, long l) {
-                offerId=id[t];
+                offerPrice=price[t];
 
             }
         });

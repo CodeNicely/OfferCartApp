@@ -265,7 +265,7 @@ public class PaymentActivity extends AppCompatActivity implements PaymentView {
     }
 */
 
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+   /* protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 
         if (requestCode == PayUmoneySdkInitilizer.PAYU_SDK_PAYMENT_REQUEST_CODE) {
 
@@ -309,7 +309,7 @@ public class PaymentActivity extends AppCompatActivity implements PaymentView {
                 }
 */
                 //Write your code if there's no result
-            } else if (resultCode == PayUmoneySdkInitilizer.RESULT_BACK) {
+       /*     } else if (resultCode == PayUmoneySdkInitilizer.RESULT_BACK) {
                 Log.i("Response", "User returned without login");
                 Toast.makeText(this, "User Returned Without Login to PayuMoney", Toast.LENGTH_SHORT).show();
 //                showDialogMessage("User returned without login");
@@ -328,10 +328,10 @@ public class PaymentActivity extends AppCompatActivity implements PaymentView {
 
 */
 
-        }
+      //  }
 
 
-    }
+    //}
 
     private void showDialogMessage(String message) {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
