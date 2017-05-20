@@ -144,14 +144,8 @@ public class ShopPaymentFragment extends Fragment implements PaymentShopView{
 
 
             }
-
-
-
-
         }
-
-
-    }
+   }
 
     @Override
     public void showMessage(String message) {
