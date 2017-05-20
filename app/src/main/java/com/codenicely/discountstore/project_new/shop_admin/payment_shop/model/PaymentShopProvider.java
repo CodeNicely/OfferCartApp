@@ -12,6 +12,6 @@ public interface PaymentShopProvider {
 
 
 
-    void requestShopPaymentHash(double amount , String access_token, PaymentShopCallBack paymentShopCallBack);
-    void updateShopPaymentStatus(String access_token, String transaction_id, UpdateShopPaymentCallBack updateShopPaymentCallBack);
+    void requestShopPaymentHash(int id, String access_token, PaymentShopCallBack paymentShopCallBack);
+    void updateShopPaymentStatus(String access_token, String transaction_id,Boolean success, UpdateShopPaymentCallBack updateShopPaymentCallBack);
 }

@@ -3,6 +3,7 @@
 
     <item
         is-multidex="false"
+<<<<<<< HEAD
         jar="/home/ujjwal/Desktop/Other Projects/OfferCartApp/payUMoneysdk/build/intermediates/bundles/default/classes.jar"
         jumboMode="false"
         optimize="true"
@@ -27,6 +28,419 @@
         revision="25.0.2"
         sha1="4f44d002c904670109f55299492ea858abdeb705">
         <dex dex="/home/ujjwal/Desktop/Other Projects/OfferCartApp/app/build/intermediates/pre-dexed/debug/PayU-release_a01517c016d308974f3b7bfb9bdb8fa914c56a5b.jar" />
+=======
+        jar="/home/aman/Downloads/new downloads/OfferCartApp/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="2f7e6e2dad1bccaf68a8820820adc6c0d5b96d37">
+        <dex dex="/home/aman/Downloads/new downloads/OfferCartApp/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-24.0.0_ddb7672191cbd7c308d1f8ccdd5e0f379e6cce64.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/aman/Downloads/new downloads/OfferCartApp/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/9.6.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="1ef72e72bc0d05602c366582afa9439f58bb31d6">
+        <dex dex="/home/aman/Downloads/new downloads/OfferCartApp/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-common-9.6.1_ea689586bbbaa192f696054a62943c54cb9e1740.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/aman/Downloads/new downloads/OfferCartApp/app/build/intermediates/exploded-aar/com.payu.custombrowser/payu-custom-browser/6.1.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="bc5cb7b8461ba72332bbc062210bf2bd52aa39ce">
+        <dex dex="/home/aman/Downloads/new downloads/OfferCartApp/app/build/intermediates/pre-dexed/debug/com.payu.custombrowser-payu-custom-browser-6.1.1_903b63f63b08b094754352070da46308e105b76b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/aman/Downloads/new downloads/OfferCartApp/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
+        <dex dex="/home/aman/Downloads/new downloads/OfferCartApp/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-23.4.0_49012e35644898b08c654498f2dffa5dfa886001.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/aman/Downloads/new downloads/OfferCartApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/9.6.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="4a36600281a648769411ef642c331851732bf29e">
+        <dex dex="/home/aman/Downloads/new downloads/OfferCartApp/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-tasks-9.6.1_fe3e9c4b2f860439710d5cb0800b2a1f6c11f97c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/aman/Downloads/new downloads/OfferCartApp/app/build/intermediates/exploded-aar/de.keyboardsurfer.android.widget/crouton/1.8.5/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="b81c788c5f175f94ddaac2f65e5d1726371e0963">
+        <dex dex="/home/aman/Downloads/new downloads/OfferCartApp/app/build/intermediates/pre-dexed/debug/de.keyboardsurfer.android.widget-crouton-1.8.5_74e65482aa0776b1038a088dd601be5fe5009a3f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/aman/Downloads/new downloads/OfferCartApp/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/9.6.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="a1c351dc10b92d638da57f3a6513f87cfbdc9f83">
+        <dex dex="/home/aman/Downloads/new downloads/OfferCartApp/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-analytics-9.6.1_d0411ca8b4e182e9c00a9a57e598ab9ee5bc33b2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/aman/Downloads/new downloads/OfferCartApp/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.4.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="ec75036c3c52e451d0cde50a5aedaf5fd32354a0">
+        <dex dex="/home/aman/Downloads/new downloads/OfferCartApp/app/build/intermediates/pre-dexed/debug/com.android.support-recyclerview-v7-23.4.0_7e434aac77799f84cb889c95b5c94d6d4a8b38fc.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/aman/caches/modules-2/files-2.1/io.reactivex/rxjava/1.1.6/2586312cd2b8a511e4c6236736f5a039fc0f2273/rxjava-1.1.6.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="2586312cd2b8a511e4c6236736f5a039fc0f2273">
+        <dex dex="/home/aman/Downloads/new downloads/OfferCartApp/app/build/intermediates/pre-dexed/debug/rxjava-1.1.6_dc365613991758faaf8303b95c80756d41125757.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/aman/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.3.3/1262995965440e28ba5c4d480c9c9ab4ccce84cc/picasso-2.3.3.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="1262995965440e28ba5c4d480c9c9ab4ccce84cc">
+        <dex dex="/home/aman/Downloads/new downloads/OfferCartApp/app/build/intermediates/pre-dexed/debug/picasso-2.3.3_b8a1a66b217d779446485ad31c82a5bbf4c5bab3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/aman/caches/modules-2/files-2.1/com.github.bumptech.glide/glide/3.7.0/9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4/glide-3.7.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4">
+        <dex dex="/home/aman/Downloads/new downloads/OfferCartApp/app/build/intermediates/pre-dexed/debug/glide-3.7.0_06d7f8c45723814782d9207417f6aa41223beeba.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/aman/caches/modules-2/files-2.1/com.squareup.retrofit2/adapter-rxjava/2.1.0/693eddc23e87ab13f9cf5001707ce8e7e1d1ff01/adapter-rxjava-2.1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="693eddc23e87ab13f9cf5001707ce8e7e1d1ff01">
+        <dex dex="/home/aman/Downloads/new downloads/OfferCartApp/app/build/intermediates/pre-dexed/debug/adapter-rxjava-2.1.0_1d6ad91fc3fbfb67aa8a7c7f85080290def0e840.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/aman/Downloads/new downloads/OfferCartApp/app/build/intermediates/exploded-aar/com.jakewharton/butterknife/8.4.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="a07818a1ecabdb149998823429cce555af4b9cba">
+        <dex dex="/home/aman/Downloads/new downloads/OfferCartApp/app/build/intermediates/pre-dexed/debug/com.jakewharton-butterknife-8.4.0_3c9359abb1be7243d2cb7499b431037cee2ede1f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/aman/Downloads/new downloads/OfferCartApp/app/build/intermediates/exploded-aar/io.reactivex/rxandroid/1.2.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="5a2386ad9bfff580b206a7fe305cdccd00798159">
+        <dex dex="/home/aman/Downloads/new downloads/OfferCartApp/app/build/intermediates/pre-dexed/debug/io.reactivex-rxandroid-1.2.1_8dd905251ef160ee0f67d7a7e5c0cf32140c811a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/aman/Downloads/new downloads/OfferCartApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
+        <dex dex="/home/aman/Downloads/new downloads/OfferCartApp/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.4.0_9d94d191dcd9548f8e4b37af46e96ec39599eddb.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/aman/caches/modules-2/files-2.1/de.greenrobot/eventbus/2.2.1/a18ff12a9ab5ae52fd30d42f134517997568231e/eventbus-2.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="a18ff12a9ab5ae52fd30d42f134517997568231e">
+        <dex dex="/home/aman/Downloads/new downloads/OfferCartApp/app/build/intermediates/pre-dexed/debug/eventbus-2.2.1_5f3c0f5a9cfd96646eceb6636f7d082e47fa3b41.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/aman/Downloads/new downloads/OfferCartApp/app/libs/retrofit-2.0.0-beta2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="880d9e0997b2d1bfc98e0d121ced33ee5d04aac4">
+        <dex dex="/home/aman/Downloads/new downloads/OfferCartApp/app/build/intermediates/pre-dexed/debug/retrofit-2.0.0-beta2_3de8e1e9a4ded9096e8b713e110286d5856c0b9c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/aman/Downloads/new downloads/OfferCartApp/app/build/intermediates/exploded-aar/com.karumi/dexter/2.3.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="3f8fe3c5035c003058846d644d98ca399d405e5e">
+        <dex dex="/home/aman/Downloads/new downloads/OfferCartApp/app/build/intermediates/pre-dexed/debug/com.karumi-dexter-2.3.1_09ba16d754cdf8acdc79ac9ff74667e254e8e824.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/aman/Downloads/new downloads/OfferCartApp/app/libs/PayU-release.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="4f44d002c904670109f55299492ea858abdeb705">
+        <dex dex="/home/aman/Downloads/new downloads/OfferCartApp/app/build/intermediates/pre-dexed/debug/PayU-release_e7bda7d8b0e9a463a6bff7a2c35cdbfb935f5a31.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/aman/Downloads/new downloads/OfferCartApp/app/build/intermediates/exploded-aar/com.payu.magicretry/magicretry/1.0.5/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="591e7c1eb05bda2bcee22d151402fd8d61ffeca9">
+        <dex dex="/home/aman/Downloads/new downloads/OfferCartApp/app/build/intermediates/pre-dexed/debug/com.payu.magicretry-magicretry-1.0.5_1c381945a2b81f2824b55ec60970ad5ba4bf8edf.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/aman/caches/modules-2/files-2.1/com.jakewharton/butterknife-annotations/8.4.0/ea392375cf9ff59234a82e7928a204215ccc98cd/butterknife-annotations-8.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="ea392375cf9ff59234a82e7928a204215ccc98cd">
+        <dex dex="/home/aman/Downloads/new downloads/OfferCartApp/app/build/intermediates/pre-dexed/debug/butterknife-annotations-8.4.0_510e1c8712ea2253904337e5921ae84e9718c531.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/aman/caches/modules-2/files-2.1/com.squareup.retrofit2/converter-gson/2.1.0/aa557d71ead91cbf26e0c316a0f593d168303309/converter-gson-2.1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="aa557d71ead91cbf26e0c316a0f593d168303309">
+        <dex dex="/home/aman/Downloads/new downloads/OfferCartApp/app/build/intermediates/pre-dexed/debug/converter-gson-2.1.0_a064a5997806a24c176666f93618d24b389d0d30.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/aman/caches/modules-2/files-2.1/com.squareup.okhttp3/logging-interceptor/3.4.1/381fc1096ba65040d8e80ea43b2e1d9bad02345e/logging-interceptor-3.4.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="381fc1096ba65040d8e80ea43b2e1d9bad02345e">
+        <dex dex="/home/aman/Downloads/new downloads/OfferCartApp/app/build/intermediates/pre-dexed/debug/logging-interceptor-3.4.1_e02b688a0101d5c0fdf932c2430bfa9c6b700e21.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/aman/Android/Sdk/extras/m2repository/com/android/support/constraint/constraint-layout-solver/1.0.2/constraint-layout-solver-1.0.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
+        <dex dex="/home/aman/Downloads/new downloads/OfferCartApp/app/build/intermediates/pre-dexed/debug/constraint-layout-solver-1.0.2_6b2dac0948af6472d782f924d210c709c84f3c00.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/aman/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/24.1.0/support-annotations-24.1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="8a23146e1a8c7cb4758e3d3f62449213f1e51f67">
+        <dex dex="/home/aman/Downloads/new downloads/OfferCartApp/app/build/intermediates/pre-dexed/debug/support-annotations-24.1.0_71f950879259e0a9b17184b046574d6dccc51f33.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/aman/caches/modules-2/files-2.1/com.mobsandgeeks/android-saripaar/1.0.3/c24cfd9331b6d5a2ee15dccb60774c7cc5debd99/android-saripaar-1.0.3.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="c24cfd9331b6d5a2ee15dccb60774c7cc5debd99">
+        <dex dex="/home/aman/Downloads/new downloads/OfferCartApp/app/build/intermediates/pre-dexed/debug/android-saripaar-1.0.3_950354fdcec1baa5baf383926ad89a312930d238.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/aman/Downloads/new downloads/OfferCartApp/app/libs/PayU-release.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="4f44d002c904670109f55299492ea858abdeb705">
+        <dex dex="/home/aman/Downloads/new downloads/OfferCartApp/app/build/intermediates/pre-dexed/debug/PayU-release_e7bda7d8b0e9a463a6bff7a2c35cdbfb935f5a31.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/aman/Downloads/new downloads/OfferCartApp/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.4.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
+        <dex dex="/home/aman/Downloads/new downloads/OfferCartApp/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-23.4.0_e620d3a88c464b830bde0f2d2a2b111fbb7fe9c8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/aman/caches/modules-2/files-2.1/com.squareup.okio/okio/1.9.0/f824591a0016efbaeddb8300bee54832a1398cfa/okio-1.9.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="f824591a0016efbaeddb8300bee54832a1398cfa">
+        <dex dex="/home/aman/Downloads/new downloads/OfferCartApp/app/build/intermediates/pre-dexed/debug/okio-1.9.0_67ec257d6d6badb3ce98c6a28df58b5d20d6c8e5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/aman/Downloads/new downloads/OfferCartApp/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/jars/libs/internal_impl-24.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="fcaf463e10e69c1923ccf1edeba3b4196d239e00">
+        <dex dex="/home/aman/Downloads/new downloads/OfferCartApp/app/build/intermediates/pre-dexed/debug/internal_impl-24.0.0_f3bb605ca3ee39fb6722a558a66624ad20dd8f59.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/aman/caches/modules-2/files-2.1/com.mcxiaoke.volley/library/1.0.18/38da306aafee11459cd935a01d2c92a98dc670a4/library-1.0.18.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="38da306aafee11459cd935a01d2c92a98dc670a4">
+        <dex dex="/home/aman/Downloads/new downloads/OfferCartApp/app/build/intermediates/pre-dexed/debug/library-1.0.18_aad5d2f4176b07ab6d72bedcbcbed910a10a0aa1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/aman/Downloads/new downloads/OfferCartApp/app/build/intermediates/exploded-aar/com.android.support/design/23.4.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="5326d9a850d491714fef8cbfaa9ea3416f0bf0d2">
+        <dex dex="/home/aman/Downloads/new downloads/OfferCartApp/app/build/intermediates/pre-dexed/debug/com.android.support-design-23.4.0_03d61be7e458d2d0bc695b70aa373f631213cc6a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/aman/caches/modules-2/files-2.1/com.google.code.gson/gson/2.7/751f548c85fa49f330cecbb1875893f971b33c4e/gson-2.7.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="751f548c85fa49f330cecbb1875893f971b33c4e">
+        <dex dex="/home/aman/Downloads/new downloads/OfferCartApp/app/build/intermediates/pre-dexed/debug/gson-2.7_1d19ac8b3292b74330b3c629b49d998e58c96354.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/aman/Downloads/new downloads/OfferCartApp/app/libs/retrofit-2.0.0-beta2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="880d9e0997b2d1bfc98e0d121ced33ee5d04aac4">
+        <dex dex="/home/aman/Downloads/new downloads/OfferCartApp/app/build/intermediates/pre-dexed/debug/retrofit-2.0.0-beta2_3de8e1e9a4ded9096e8b713e110286d5856c0b9c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/aman/Downloads/new downloads/OfferCartApp/app/build/intermediates/exploded-aar/OfferCartApp/payUMoneysdk/unspecified/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="8125c3953f4f5ebed305f8aad66b993e561fb15b">
+        <dex dex="/home/aman/Downloads/new downloads/OfferCartApp/app/build/intermediates/pre-dexed/debug/OfferCartApp-payUMoneysdk-unspecified_53fd85a417905eaaf4190ac2db1b3339bbe04d1c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/aman/Downloads/new downloads/OfferCartApp/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/23.4.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="d9ecde39b460470e655de6e47c05573d2d5a8bfb">
+        <dex dex="/home/aman/Downloads/new downloads/OfferCartApp/app/build/intermediates/pre-dexed/debug/com.android.support-cardview-v7-23.4.0_c617fc7438f87f4157ea983903d15f350b7260c6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/aman/Downloads/new downloads/OfferCartApp/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.6.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="1e14ebe1cda8491f152083e752ca5bf73cd37bff">
+        <dex dex="/home/aman/Downloads/new downloads/OfferCartApp/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-iid-9.6.1_605d630701553a808b0a9c3a48f1ca4936aeb4a9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/aman/caches/modules-2/files-2.1/com.google.code.gson/gson/2.7/751f548c85fa49f330cecbb1875893f971b33c4e/gson-2.7.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="751f548c85fa49f330cecbb1875893f971b33c4e">
+        <dex dex="/home/aman/Downloads/new downloads/OfferCartApp/app/build/intermediates/pre-dexed/debug/gson-2.7_1d19ac8b3292b74330b3c629b49d998e58c96354.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/aman/Downloads/new downloads/OfferCartApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.6.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="eccaaa9ffa6bb4bfbd2e870f01aaf69655d353be">
+        <dex dex="/home/aman/Downloads/new downloads/OfferCartApp/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-basement-9.6.1_04c6f77383e039af7125e54bb5d66fdc5299427d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/aman/Downloads/new downloads/OfferCartApp/app/build/intermediates/exploded-aar/com.android.support/multidex/1.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="78ea232052df889856dcb7b7b542707c89bb3bfb">
+        <dex dex="/home/aman/Downloads/new downloads/OfferCartApp/app/build/intermediates/pre-dexed/debug/com.android.support-multidex-1.0.1_d193ff8660256aaccdc5460d0f42df2513646abf.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/aman/Downloads/new downloads/OfferCartApp/app/build/intermediates/exploded-aar/com.github.mobfox/MobFox-Android-SDK-Core/3.2.3/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="abb30907ff4835e0c8dd9884872f4f3f2f81ee4e">
+        <dex dex="/home/aman/Downloads/new downloads/OfferCartApp/app/build/intermediates/pre-dexed/debug/com.github.mobfox-MobFox-Android-SDK-Core-3.2.3_2f8e135b803f6be2e876b1497ffe47ffa16903cf.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/aman/caches/modules-2/files-2.1/com.squareup.retrofit2/retrofit/2.1.0/2de7cd8b95b7021b1d597f049bcb422055119f2c/retrofit-2.1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="2de7cd8b95b7021b1d597f049bcb422055119f2c">
+        <dex dex="/home/aman/Downloads/new downloads/OfferCartApp/app/build/intermediates/pre-dexed/debug/retrofit-2.1.0_d72f3cb6113fe53630076118bec451d59f5436b0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/aman/Downloads/new downloads/OfferCartApp/app/build/intermediates/exploded-aar/com.android.support.constraint/constraint-layout/1.0.2/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
+        <dex dex="/home/aman/Downloads/new downloads/OfferCartApp/app/build/intermediates/pre-dexed/debug/com.android.support.constraint-constraint-layout-1.0.2_45de2781f2246787cc976ebb935d82223e083f8f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/aman/Downloads/new downloads/OfferCartApp/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/9.6.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="0efd1b44f47c134fb245914a1d54a55adbfc2f8d">
+        <dex dex="/home/aman/Downloads/new downloads/OfferCartApp/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-analytics-impl-9.6.1_b831dcff913fce9d879e04f17f352707bfbf6bf1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/aman/Downloads/new downloads/OfferCartApp/app/build/intermediates/exploded-aar/com.google.firebase/firebase-messaging/9.6.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="80dd8bea08bc5fe10b10a3243b8279c856ccc690">
+        <dex dex="/home/aman/Downloads/new downloads/OfferCartApp/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-messaging-9.6.1_f1f50b7549fe26c80c266ba38874f946dc8d0c71.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/aman/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.4.1/c7c4f9e35c2fd5900da24f9872e3971801f08ce0/okhttp-3.4.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="c7c4f9e35c2fd5900da24f9872e3971801f08ce0">
+        <dex dex="/home/aman/Downloads/new downloads/OfferCartApp/app/build/intermediates/pre-dexed/debug/okhttp-3.4.1_850b118c4e2510dc292765d3dd336d38ebf47bb4.jar" />
+>>>>>>> 6b1e11ad65661c8b2758555e41e7ca2a579c3f5c
     </item>
 
 </items>

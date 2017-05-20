@@ -4,6 +4,7 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,6 +23,7 @@ import com.codenicely.discountstore.project_new.shop_admin.shop_add_subscription
 import com.codenicely.discountstore.project_new.shop_admin.shop_add_subscription.presenter.AddSubscriptionPresenterImpl;
 import com.codenicely.discountstore.project_new.helper.SharedPrefs;
 import com.codenicely.discountstore.project_new.shop_admin.payment_shop.view.ShopPaymentFragment;
+import com.codenicely.discountstore.project_new.shop_admin.shop_home.ShopHomePage;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -49,7 +51,7 @@ public class AddSubscriptionFragment extends Fragment implements AddSubscription
 
 
    private String access_token;
-    private  int offerPrice;
+    private  int offerId;
     @BindView(R.id.spinner_add_subscription)
     Spinner subscription_spinner;
     @BindView(R.id.addSubacriptionProgressBar)
@@ -108,10 +110,12 @@ access_token=sharedPrefs.getKeyAccessTokenShop();
         add_subscription.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ShopPaymentFragment shopPaymentFragment=ShopPaymentFragment.newInstance(offerPrice);
-
+                ShopPaymentFragment shopPaymentFragment=ShopPaymentFragment.newInstance(offerId);
+                ((ShopHomePage) getContext()).setFragment(shopPaymentFragment, "payment fragment");
+                Log.d("add button","fv");
                 //call pay u money gateway
 //selected offer"s ID is stored in variable offer_id
+
 
             }
         });
@@ -162,30 +166,35 @@ access_token=sharedPrefs.getKeyAccessTokenShop();
         ArrayAdapter<String> adapter;
         int n= addSubscriptionDetailses.size();
         final int price[] = new int [n];
-        final String validity[] = new String[n];
+        final String title[] = new String[n];
         final int id[] = new int[n];
         int i=0;
         while(i<n)
         {
             addSubscriptionDetails = addSubscriptionDetailses.get(i);
            price[i] = addSubscriptionDetails.getSubscription_price();
-            validity[i] = addSubscriptionDetails.getSubscription_validity()+" days validity for Rs"+addSubscriptionDetails.getSubscription_price();
-            id[i] = addSubscriptionDetails.getSubscription_offer_id();
+            title[i] = addSubscriptionDetails.getSubscription_title();
+            id[i] = addSubscriptionDetails.getSubscription_id();
             i++;
         }
 
 
         adapter = new ArrayAdapter<String>(getContext(),
-                android.R.layout.simple_spinner_item,validity);
+                android.R.layout.simple_spinner_item,title);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         subscription_spinner.setAdapter(adapter);
-        subscription_spinner.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        subscription_spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int t, long l) {
-                offerPrice=price[t];
+            public void onItemSelected(AdapterView<?> adapterView, View view, int t, long l) {
+                 offerId=id[t];
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
 
             }
         });
+
 
 
 

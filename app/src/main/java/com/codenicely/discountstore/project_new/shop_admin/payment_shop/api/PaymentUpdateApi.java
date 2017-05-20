@@ -16,7 +16,7 @@ public interface PaymentUpdateApi {
 
     @FormUrlEncoded
     @POST(Urls.SUB_URL_UPDATE_SHOP_PAYMENT)
-    Call<UpdateShopPaymentData> updateShopPaymentStatusDataCall(@Field("access_token") String access_token, @Field("transaction_id") String transaction_id);
+    Call<UpdateShopPaymentData> updateShopPaymentStatusDataCall(@Field("shop_access_token") String access_token, @Field("transaction_id") String transaction_id,@Field("success")Boolean success);
 
 
 

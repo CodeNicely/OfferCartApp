@@ -6,25 +6,24 @@ package com.codenicely.discountstore.project_new.shop_admin.shop_add_subscriptio
 
 public class AddSubscriptionDetails {
 
-    String subscription_validity;
-    int subscription_price, subscription_offer_id;
+    String subscription_title;
+    int subscription_price, subscription_id;
 
-    public AddSubscriptionDetails(int subscription_offer_id, int subscription_price, String subscription_validity) {
-        this.subscription_offer_id = subscription_offer_id;
+    public AddSubscriptionDetails(String subscription_title, int subscription_price, int subscription_id) {
+        this.subscription_title = subscription_title;
         this.subscription_price = subscription_price;
-        this.subscription_validity = subscription_validity;
+        this.subscription_id = subscription_id;
     }
 
-
-    public int getSubscription_offer_id() {
-        return subscription_offer_id;
+    public String getSubscription_title() {
+        return subscription_title;
     }
 
     public int getSubscription_price() {
         return subscription_price;
     }
 
-    public String getSubscription_validity() {
-        return subscription_validity;
+    public int getSubscription_id() {
+        return subscription_id;
     }
 }

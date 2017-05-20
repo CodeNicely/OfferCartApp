@@ -1,6 +1,8 @@
 package com.codenicely.discountstore.project_new.shop_admin.payment_shop.presenter;
 
 
+import android.util.Log;
+
 import com.codenicely.discountstore.project_new.shop_admin.payment_shop.PaymentShopCallBack;
 import com.codenicely.discountstore.project_new.shop_admin.payment_shop.UpdateShopPaymentCallBack;
 import com.codenicely.discountstore.project_new.shop_admin.payment_shop.model.PaymentShopProvider;
@@ -24,10 +26,10 @@ public class ShopPaymentPresenterImpl implements  ShopPaymentPresenter{
     }
 
     @Override
-    public void requestShopPaymentHash(double amount, String access_token) {
+    public void requestShopPaymentHash(int id, String access_token) {
 
         paymentShopView.showLoading(true);
-        paymentShopProvider.requestShopPaymentHash(amount, access_token, new PaymentShopCallBack() {
+        paymentShopProvider.requestShopPaymentHash(id, access_token, new PaymentShopCallBack() {
             @Override
             public void OnSuccess(ShopPaymentData shopPaymentData) {
                 if(shopPaymentData.isSuccess())
@@ -35,9 +37,11 @@ public class ShopPaymentPresenterImpl implements  ShopPaymentPresenter{
                     paymentShopView.showLoading(false);
                     paymentShopView.showMessage(shopPaymentData.getMessage());
                     paymentShopView.proceedToShopPayment(shopPaymentData);
+                    Log.d("Hash",shopPaymentData.getServer_hash());
                 }
                 else
                 {
+                    Log.d("False","failure");
                     paymentShopView.showLoading(false);
                     paymentShopView.showMessage(shopPaymentData.getMessage());
                 }
@@ -58,22 +62,23 @@ public class ShopPaymentPresenterImpl implements  ShopPaymentPresenter{
     }
 
     @Override
-    public void updateShopPaymentStatus(String access_token, String transaction_id) {
+    public void updateShopPaymentStatus(String access_token, String transaction_id,Boolean success) {
         paymentShopView.showLoading(true);
-        paymentShopProvider.updateShopPaymentStatus(access_token, transaction_id, new UpdateShopPaymentCallBack() {
+        paymentShopProvider.updateShopPaymentStatus(access_token, transaction_id,success, new UpdateShopPaymentCallBack() {
             @Override
             public void OnSuccess(UpdateShopPaymentData updateShopPaymentData) {
                 if(updateShopPaymentData.isSuccess())
                 {
                     paymentShopView.showLoading(false);
-                    paymentShopView.showMessage(updateShopPaymentData.getMessage());
+                   // paymentShopView.showMessage(updateShopPaymentData.getMessage());
+                    Log.d("Aman_confirm","aman confirm");
                 }
                 else
                 {
                     paymentShopView.showLoading(false);
                     paymentShopView.showMessage(updateShopPaymentData.getMessage());
 
-
+                    Log.d("False2",updateShopPaymentData.getMessage());
                 }
 
 
@@ -83,6 +88,7 @@ public class ShopPaymentPresenterImpl implements  ShopPaymentPresenter{
             public void OnFailure(String error) {
                 paymentShopView.showMessage(error);
                 paymentShopView.showLoading(false);
+                Log.d("Aman","aman");
 
             }
         });

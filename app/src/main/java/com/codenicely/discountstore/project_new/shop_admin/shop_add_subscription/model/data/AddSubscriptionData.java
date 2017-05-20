@@ -9,12 +9,12 @@ import java.util.List;
 public class AddSubscriptionData {
     boolean success;
     String message;
-    List<AddSubscriptionDetails> subscription_offer_data;
+    List<AddSubscriptionDetails> subscription_list;
 
     public AddSubscriptionData(boolean success, String message, List<AddSubscriptionDetails> subscription_offer_data) {
         this.success = success;
         this.message = message;
-        this.subscription_offer_data = subscription_offer_data;
+        this.subscription_list = subscription_offer_data;
     }
 
 
@@ -27,6 +27,6 @@ public class AddSubscriptionData {
     }
 
     public List<AddSubscriptionDetails> getSubscription_offer_data() {
-        return subscription_offer_data;
+        return subscription_list;
     }
 }

@@ -27,7 +27,7 @@
     <string name="yes">Yes</string>
     <string name="ok">@android:string/ok</string>
     <string name="my_cards">My Cards</string>
-    <string name="password">Password (Min length 6)</string>
+    <string name="password">Password</string>
     <string name="cancel">@android:string/cancel</string>
     <string name="enter_cvv_number">Enter CVV Number</string>
     <string name="enter_cvv_number_optional">Enter CVV(Optional)</string>

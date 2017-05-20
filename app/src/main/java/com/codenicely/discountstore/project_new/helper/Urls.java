@@ -9,7 +9,10 @@ public class Urls {
 //     public static final String BASE_URL = "http://104.236.210.94:8000/";
   //   public static final String BASE_URL = "http://172.20.10.13:8000/";
 //     public static final String BASE_URL = "http://10.0.3.1:8000/";
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6b1e11ad65661c8b2758555e41e7ca2a579c3f5c
 	public static final String BASE_URL = "http://192.168.0.106:8000";
 
     public static final String REQUEST_FCM_UPDATE = "update_fcm/";
@@ -45,7 +48,7 @@ public class Urls {
     public static final String SUB_URL_DEVELOPERS = "developers/";
     public static final String SUB_URL_PAYMENT_HASH = "payment_hash/";
     public static final String SUB_URL_UPDATE_PAYMENT_STATUS = "update_payment_status/";
-    public static final String  SUB_URL_SHOP_PAYMENT_HASH= "shop_payment/";
+    public static final String  SUB_URL_SHOP_PAYMENT_HASH= "add_subscription/";
     public static final String SUB_URL_UPDATE_SHOP_PAYMENT = "update_shop_payment_status/";
 	//shop_register
 	public static final String SUB_URL_CREATE_SHOP = "create_shop/";
@@ -79,7 +82,7 @@ public class Urls {
 	//offer_edit
 	public static final String OFFER_EDIT = "offer_edit/";
 
-    public static final String ADD_SUBSCRIPTION= "add_subscription/";
+    public static final String ADD_SUBSCRIPTION= "request_subscription/";
 
 
 }
