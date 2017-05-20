@@ -5,7 +5,6 @@ package com.codenicely.discountstore.project_new.splash_screen.view;
  */
 
 import android.app.Activity;
-import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -13,23 +12,19 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AlertDialog;
-import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
-import com.codenicely.discountstore.project_new.BuildConfig;
 import com.codenicely.discountstore.project_new.R;
 import com.codenicely.discountstore.project_new.helper.MyApplication;
 import com.codenicely.discountstore.project_new.helper.SharedPrefs;
 import com.codenicely.discountstore.project_new.helper.image_loader.GlideImageLoader;
 import com.codenicely.discountstore.project_new.helper.image_loader.ImageLoader;
 import com.codenicely.discountstore.project_new.home.HomePage;
-import com.codenicely.discountstore.project_new.shop_home.ShopHomePage;
+import com.codenicely.discountstore.project_new.shop_admin.shop_home.ShopHomePage;
 import com.codenicely.discountstore.project_new.splash_screen.models.RetrofitSplashScreenProvider;
 import com.codenicely.discountstore.project_new.splash_screen.models.data.SplashScreenData;
 import com.codenicely.discountstore.project_new.splash_screen.presenter.SplashScreenPresenter;

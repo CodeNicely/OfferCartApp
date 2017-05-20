@@ -7,10 +7,10 @@ public class Urls {
 
 
 //     public static final String BASE_URL = "http://104.236.210.94:8000/";
-     public static final String BASE_URL = "http://172.20.10.13:8000/";
+  //   public static final String BASE_URL = "http://172.20.10.13:8000/";
 //     public static final String BASE_URL = "http://10.0.3.1:8000/";
 
-//	public static final String BASE_URL = "http://192.168.42.37:8000";
+	public static final String BASE_URL = "http://192.168.0.106:8000";
 
     public static final String REQUEST_FCM_UPDATE = "update_fcm/";
     //splash_screen
@@ -58,6 +58,9 @@ public class Urls {
     //shop_login
     public static final String VERIFY_SHOP_LOGIN = "verify_shop_login/";
 
+    //shop_change_password
+    public static final String SHOP_CHANGE_PASSWORD = "change_password/";
+
     //shop_profile_show
     public static final String REQUEST_SHOP_PROFILE = "my_shop_profile/";
 
@@ -70,7 +73,8 @@ public class Urls {
     //offer_show to shop
     public static final String REQUEST_SHOP_OFFER= "shop_offers/";
 
-    public static final String REQUEST_SHOP_OFFER_DELETE= "shop_offers_delete/";
+	//delete_offer
+	public static final String REQUEST_SHOP_OFFER_DELETE= "delete_offer/";
 
 	//offer_edit
 	public static final String OFFER_EDIT = "offer_edit/";
