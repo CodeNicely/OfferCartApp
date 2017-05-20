@@ -14,7 +14,7 @@ import retrofit2.http.Url;
 
 public interface AddSubscriptionDataApi {
     @GET(Urls.ADD_SUBSCRIPTION)
-    Call<AddSubscriptionData>getSubscription(@Query("access_token")String access_token);
+    Call<AddSubscriptionData>getSubscription(@Query("shop_access_token")String access_token);
 
 
 
