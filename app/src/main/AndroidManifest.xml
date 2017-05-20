@@ -39,14 +39,14 @@
 
         </activity>
 
-        <activity android:name=".shop_home.ShopHomePage">
-
+        <activity android:name=".shop_admin.shop_home.ShopHomePage">
+<!--
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
 
-            </intent-filter>
+            </intent-filter>-->
 
         </activity>
         <!-- Main activity -->
@@ -63,7 +63,7 @@
         </service>
         <activity android:name=".wallet.view.WalletActivity"/>
         <activity android:name=".payment.view.PaymentActivity"/>
-        <activity android:name=".shop_activity.ShopActivity"/>
+        <activity android:name=".shop_admin.shop_activity.ShopActivity"/>
 
     </application>
 

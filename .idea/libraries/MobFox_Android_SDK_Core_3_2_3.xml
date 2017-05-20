@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="MobFox-Android-SDK-Core-3.2.3">
     <CLASSES>
-      <root url="file://$USER_HOME$/.android/build-cache/316152948c700e3933cbecdd019fb95a2790bd0d/output/res" />
-      <root url="jar://$USER_HOME$/.android/build-cache/316152948c700e3933cbecdd019fb95a2790bd0d/output/jars/classes.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.github.mobfox/MobFox-Android-SDK-Core/3.2.3/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.github.mobfox/MobFox-Android-SDK-Core/3.2.3/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

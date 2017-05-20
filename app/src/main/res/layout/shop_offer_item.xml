@@ -50,17 +50,6 @@
                     android:text="Offer Title"
                     android:textColor="#000000"
                     android:textSize="24dp" />
-
-                <TextView
-                    android:id="@+id/offer_cost"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="8"
-                    android:gravity="center"
-                    android:text="Price: Rs.15"
-                    android:textColor="@color/colorAccent"
-                    android:textSize="16dp" />
             </LinearLayout>
 
             <TextView
@@ -75,27 +64,27 @@
                 />
 
 
-
             <TextView
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:layout_weight="5"
                 android:id="@+id/offer_validity"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="5"
+                android:gravity="center"
                 android:padding="4dp"
                 android:text="Offer Valid till 30th Nov."
                 android:textColor="@color/accent_light"
                 android:textSize="12dp"
 
                 />
+
             <TextView
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:layout_weight="5"
-                android:id="@+id/offer_validity2"
+                android:id="@+id/offer_expiry"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="5"
+                android:gravity="center"
                 android:padding="4dp"
                 android:text="Offer Valid For 30 days from subscription"
                 android:textColor="@color/accent_light"
@@ -104,33 +93,29 @@
                 />
 
 
-
-
-
-
-
             <LinearLayout
-                android:weightSum="10"
-                android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="10">
 
                 <Button
-                    android:layout_weight="5"
                     android:id="@+id/edit"
                     style="@style/Widget.AppCompat.Button.Colored"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="end"
+                    android:layout_weight="5"
                     android:text="EDIT OFFRER"
                     android:textColor="@color/white" />
+
                 <Button
-                    android:layout_weight="5"
                     android:id="@+id/delete"
                     style="@style/Widget.AppCompat.Button.Colored"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="end"
+                    android:layout_weight="5"
                     android:text="DELETE OFFER"
                     android:textColor="@color/white" />
 

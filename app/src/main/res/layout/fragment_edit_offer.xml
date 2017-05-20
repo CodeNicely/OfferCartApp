@@ -1,19 +1,29 @@
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
     <ProgressBar
         android:id="@+id/progressBar"
-        android:layout_centerInParent="true"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:title="@string/title_edit_offer"
+        android:titleTextColor="@color/white"
+        app:title="@string/edit_offer"
+        app:titleTextColor="@color/white" />
 
     <android.support.v7.widget.CardView
         android:id="@+id/cardView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
         android:layout_margin="8dp"
         app:cardCornerRadius="4dp"
         app:contentPadding="8dp">
@@ -54,10 +64,11 @@
 
                                 </android.support.design.widget.TextInputLayout>-->
                 <DatePicker
+                    android:id="@+id/offer_expiry"
                     android:layout_width="match_parent"
-                    android:id="@+id/offer_validity2"
-                    android:layout_height="wrap_content">
-                </DatePicker>
+                    android:layout_height="wrap_content"
+                    android:calendarViewShown="false"
+                    android:spinnersShown="true"></DatePicker><!--
                 <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
@@ -69,7 +80,7 @@
                         android:hint="@string/offer_price"
                         android:inputType="number" />
                 </android.support.design.widget.TextInputLayout>
-
+-->
                 <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
@@ -126,8 +137,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="@string/edit_offer"
-                    />
+                    android:text="@string/edit_offer" />
 
             </LinearLayout>
         </ScrollView>
