@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.codenicely.discountstore.project_new.shop_offerlist.view.ShopOfferListFragment">
+    tools:context=".shop_admin.shop_offerlist.view.ShopOfferListFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView

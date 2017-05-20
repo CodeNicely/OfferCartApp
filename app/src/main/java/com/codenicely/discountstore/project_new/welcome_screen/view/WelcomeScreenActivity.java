@@ -15,7 +15,7 @@ import android.widget.Toast;
 
 import com.codenicely.discountstore.project_new.R;
 import com.codenicely.discountstore.project_new.login.view.LoginScreenActivity;
-import com.codenicely.discountstore.project_new.shop_activity.ShopActivity;
+import com.codenicely.discountstore.project_new.shop_admin.shop_activity.ShopActivity;
 import com.codenicely.discountstore.project_new.welcome_screen.models.RetrofitWelcomeScreenProvider;
 import com.codenicely.discountstore.project_new.welcome_screen.models.data.WelcomeImageDetails;
 import com.codenicely.discountstore.project_new.welcome_screen.presenter.WelcomeScreenPresenter;
