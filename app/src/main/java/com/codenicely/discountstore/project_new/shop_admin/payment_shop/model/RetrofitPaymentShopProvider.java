@@ -48,8 +48,8 @@ public class RetrofitPaymentShopProvider implements PaymentShopProvider {
     }
 
     @Override
-    public void requestShopPaymentHash(double amount, String access_token, final PaymentShopCallBack paymentShopCallBack) {
-        Call<ShopPaymentData>call=paymentApi.getPaymentHash(amount,access_token);
+    public void requestShopPaymentHash(int id, String access_token, final PaymentShopCallBack paymentShopCallBack) {
+        Call<ShopPaymentData>call=paymentApi.getPaymentHash(id,access_token);
         call.enqueue(new Callback<ShopPaymentData>() {
             @Override
             public void onResponse(Call<ShopPaymentData> call, Response<ShopPaymentData> response) {
@@ -67,9 +67,9 @@ public class RetrofitPaymentShopProvider implements PaymentShopProvider {
     }
 
     @Override
-    public void updateShopPaymentStatus(String access_token, String transaction_id, final UpdateShopPaymentCallBack updateShopPaymentCallBack) {
+    public void updateShopPaymentStatus(String access_token, String transaction_id, Boolean success,final UpdateShopPaymentCallBack updateShopPaymentCallBack) {
 
-        Call<UpdateShopPaymentData>call=paymentUpdateApi.updateShopPaymentStatusDataCall(access_token,transaction_id);
+        Call<UpdateShopPaymentData>call=paymentUpdateApi.updateShopPaymentStatusDataCall(access_token,transaction_id,success);
         call.enqueue(new Callback<UpdateShopPaymentData>() {
             @Override
             public void onResponse(Call<UpdateShopPaymentData> call, Response<UpdateShopPaymentData> response) {

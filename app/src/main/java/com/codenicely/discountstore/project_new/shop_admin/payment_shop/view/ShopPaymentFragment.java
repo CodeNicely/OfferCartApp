@@ -20,6 +20,7 @@ import com.codenicely.discountstore.project_new.shop_admin.payment_shop.model.da
 import com.codenicely.discountstore.project_new.shop_admin.payment_shop.presenter.ShopPaymentPresenter;
 import com.codenicely.discountstore.project_new.shop_admin.payment_shop.presenter.ShopPaymentPresenterImpl;
 import com.codenicely.discountstore.project_new.shop_admin.shop_home.ShopHomePage;
+import com.codenicely.discountstore.project_new.shop_admin.shop_offerlist.view.ShopOfferListFragment;
 import com.payUMoney.sdk.PayUmoneySdkInitilizer;
 import com.payUMoney.sdk.SdkConstants;
 
@@ -40,18 +41,18 @@ import static android.app.Activity.RESULT_OK;
 public class ShopPaymentFragment extends Fragment implements PaymentShopView{
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String TRANSACTION = "trans";
+    private static final String SUBSCRIPTION = "trans";
 
 
     // TODO: Rename and change types of parameters
-    private int amount;
+    private int id;
     private  String transaction;
-    @BindView(R.id.progressBar)
+    @BindView(R.id.progressBarShop)
     ProgressBar progressBar;
 
     private SharedPrefs sharedPrefs;
     private ShopPaymentPresenter shopPaymentPresenter;
-
+   private ShopOfferListFragment shopOfferListFragment;
 
 
 
@@ -69,10 +70,10 @@ public class ShopPaymentFragment extends Fragment implements PaymentShopView{
      * @return A new instance of fragment ShopPaymentFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static ShopPaymentFragment newInstance(int amount) {
+    public static ShopPaymentFragment newInstance(int iD) {
         ShopPaymentFragment fragment = new ShopPaymentFragment();
         Bundle args = new Bundle();
-        args.putInt(TRANSACTION,amount);
+        args.putInt(SUBSCRIPTION,iD);
 
         fragment.setArguments(args);
         return fragment;
@@ -82,7 +83,7 @@ public class ShopPaymentFragment extends Fragment implements PaymentShopView{
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            amount = getArguments().getInt(TRANSACTION);
+            id = getArguments().getInt(SUBSCRIPTION);
 
         }
     }
@@ -92,12 +93,11 @@ public class ShopPaymentFragment extends Fragment implements PaymentShopView{
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view=inflater.inflate(R.layout.fragment_shop_payment, container, false);
-
         ButterKnife.bind(this,view);
         shopPaymentPresenter = new ShopPaymentPresenterImpl(new RetrofitPaymentShopProvider(),this);
         sharedPrefs = new SharedPrefs(getContext());
-
-        shopPaymentPresenter.requestShopPaymentHash(amount,sharedPrefs.getKeyAccessTokenShop());
+                shopOfferListFragment=new ShopOfferListFragment();
+        shopPaymentPresenter.requestShopPaymentHash(id,sharedPrefs.getKeyAccessTokenShop());
         return(view);
     }
 
@@ -110,96 +110,42 @@ public class ShopPaymentFragment extends Fragment implements PaymentShopView{
 
 
    public void onActivityResult(int requestCode, int resultCode, Intent data) {
-
+       Log.d("OnActivityResult", "activity");
         if (requestCode == PayUmoneySdkInitilizer.PAYU_SDK_PAYMENT_REQUEST_CODE) {
 
             if (resultCode == RESULT_OK) {
-                Log.i("Response", "Success - Payment ID : " + data.getStringExtra(SdkConstants.PAYMENT_ID));
+                Log.d("Response", "ok");
                 String paymentId = data.getStringExtra(SdkConstants.PAYMENT_ID);
-                //    showDialogMessage("Payment Success Id : " + paymentId);
-                shopPaymentPresenter.updateShopPaymentStatus(sharedPrefs.getAccessToken(), transaction);
-                Intent intent=new Intent(getContext(), ShopHomePage.class);
-                intent.putExtra(Keys.KEY_OPEN_WALLET,true);
-                startActivity(intent);
-                //finish();
+
+                shopPaymentPresenter.updateShopPaymentStatus(sharedPrefs.getKeyAccessTokenShop(), transaction,true);
+
+                ((ShopHomePage)getContext()).setFragment(shopOfferListFragment,"HOME");
 
             } else if (resultCode == RESULT_CANCELED) {
-                Log.i("Response", "failure");
-                //   showDialogMessage("cancelled");
-                shopPaymentPresenter.updateShopPaymentStatus(sharedPrefs.getAccessToken(), transaction);
-                Intent intent=new Intent(getContext(), ShopHomePage.class);
-                intent.putExtra(Keys.KEY_OPEN_WALLET,true);
-                startActivity(intent);
-                //finish();
+                Log.d("Response", "failure");
+
+                shopPaymentPresenter.updateShopPaymentStatus(sharedPrefs.getKeyAccessTokenShop(), transaction,false);
+
+                ((ShopHomePage)getContext()).setFragment(shopOfferListFragment,"HOME");
             } else if (resultCode == PayUmoneySdkInitilizer.RESULT_FAILED) {
                 Log.i("app_activity", "failure");
-
-                shopPaymentPresenter.updateShopPaymentStatus(sharedPrefs.getAccessToken(), transaction);
-                Intent intent=new Intent(getContext(), ShopHomePage.class);
-                intent.putExtra(Keys.KEY_OPEN_WALLET,true);
-                startActivity(intent);
+                Log.d("Response", "failure");
+                shopPaymentPresenter.updateShopPaymentStatus(sharedPrefs.getKeyAccessTokenShop(), transaction,false);
 
 
+                ((ShopHomePage)getContext()).setFragment(shopOfferListFragment,"HOME");
             } else if (resultCode == PayUmoneySdkInitilizer.RESULT_BACK) {
                 Log.i("Response", "User returned without login");
+                Log.d("Response", "failure");
                 Toast.makeText(getContext(), "User Returned Without Login to PayuMoney", Toast.LENGTH_SHORT).show();
+                shopPaymentPresenter.updateShopPaymentStatus(sharedPrefs.getKeyAccessTokenShop(), transaction,false);
+
+                Log.d("BACK AMAN","back");
 
 
             }
-
-
-
-
         }
-
-
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+   }
 
     @Override
     public void showMessage(String message) {
@@ -218,7 +164,7 @@ public class ShopPaymentFragment extends Fragment implements PaymentShopView{
 
     @Override
     public void proceedToShopPayment(ShopPaymentData shopPaymentData) {
-
+        Log.d("PAYMENT","proceed_to_payment");
         PayUmoneySdkInitilizer.PaymentParam.Builder builder = new PayUmoneySdkInitilizer.PaymentParam.Builder();
 
 
@@ -241,12 +187,13 @@ public class ShopPaymentFragment extends Fragment implements PaymentShopView{
                 .setUdf3("")
                 .setUdf4("")
                 .setUdf5("");
-
+        Log.d("PAYMENT2","proceed_to_payment2");
         PayUmoneySdkInitilizer.PaymentParam paymentParam = builder.build();
         paymentParam.setMerchantHash(shopPaymentData.getServer_hash());
+        Log.d("PAYMENT3","proceed_to_payment3");
         PayUmoneySdkInitilizer.startPaymentActivityForResult(getActivity(), paymentParam);
 
-
+        Log.d("BACK AMAN","back");
     }
 
 

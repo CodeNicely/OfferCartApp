@@ -15,7 +15,7 @@ public class ShopPaymentData {
         private String merchant_id;
         private double amount;
         private String transaction_id;
-         private String product_name;
+        private String product_name;
 
         private String server_hash;
 

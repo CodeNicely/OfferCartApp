@@ -24,6 +24,7 @@ import com.codenicely.discountstore.project_new.developers.view.DeveloperFragmen
 import com.codenicely.discountstore.project_new.helper.SharedPrefs;
 import com.codenicely.discountstore.project_new.home.HomePageInterface;
 
+import com.codenicely.discountstore.project_new.shop_admin.shop_add_subscription.view.AddSubscriptionFragment;
 import com.codenicely.discountstore.project_new.shop_admin.shop_edit_offer.view.OfferEditFragment;
 import com.codenicely.discountstore.project_new.shop_admin.shop_change_password.view.ShopChangePasswordFragment;
 
@@ -45,7 +46,8 @@ public class ShopHomePage extends AppCompatActivity
                            ContactUsFragment.OnFragmentInteractionListener,
 						   OfferAddFragment.OnFragmentInteractionListener,
                            OfferEditFragment.OnFragmentInteractionListener,
-        ShopOfferListFragment.OnFragmentInteractionListener {
+                          AddSubscriptionFragment.OnFragmentInteractionListener,
+                           ShopOfferListFragment.OnFragmentInteractionListener {
 
     private SharedPrefs sharedPrefs;
     private NavigationView navigationView;
