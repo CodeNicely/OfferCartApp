@@ -184,4 +184,5 @@ public class ShopOtpFragment extends Fragment implements ShopOtpView {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
     }
+
 }
