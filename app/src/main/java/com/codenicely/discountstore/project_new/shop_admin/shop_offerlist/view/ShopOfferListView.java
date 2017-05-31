@@ -10,4 +10,5 @@ public interface ShopOfferListView {
     void showProgressBar(boolean show);
     void showMessage(String error);
     void setData(ShopOfferListData shopOfferListData);
+    void onDeleteSuccessful();
 }

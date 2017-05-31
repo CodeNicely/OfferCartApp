@@ -32,6 +32,8 @@ import android.widget.Toast;
 
 import com.codenicely.discountstore.project_new.R;
 import com.codenicely.discountstore.project_new.helper.SharedPrefs;
+import com.codenicely.discountstore.project_new.helper.image_loader.GlideImageLoader;
+import com.codenicely.discountstore.project_new.helper.image_loader.ImageLoader;
 import com.codenicely.discountstore.project_new.helper.utils.BitmapUtils;
 import com.codenicely.discountstore.project_new.helper.utils.UriUtils;
 import com.codenicely.discountstore.project_new.shop_admin.shop_edit_offer.model.RetrofitOfferEditHelper;
@@ -113,6 +115,7 @@ public class OfferEditFragment extends Fragment implements OfferEditView {
     //Date expiry_date;
     private OnFragmentInteractionListener mListener;
 
+	ImageLoader imageLoader;
     /**
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
@@ -151,10 +154,23 @@ public class OfferEditFragment extends Fragment implements OfferEditView {
         // Inflate the layout for this fragment
         context = getContext();
         offer_id = getArguments().getString("offer_id");
+		String offer_name = getArguments().getString("offer_name");
+		String offer_description = getArguments().getString("offer_description");
+		String offer_image = getArguments().getString("offer_image");
+		Log.d("Offer Id ------",offer_id);
+		Log.d("Name ------",offer_name);
+		Log.d("Description ---",offer_description);
+		Log.d("Image----",offer_image);
+
+		editTextname.setText(offer_name);
+		editTextdescription.setText(offer_description);
+
+		imageLoader=new GlideImageLoader(getContext());
 
         View view = inflater.inflate(R.layout.fragment_edit_offer, container, false);
         ButterKnife.bind(this, view);
 
+		imageLoader.loadImage(offer_image,imageView,progressBar);
         toolbar.setNavigationIcon(ContextCompat.getDrawable(context, R.drawable.ic_arrow_back_white_24dp));
 
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {

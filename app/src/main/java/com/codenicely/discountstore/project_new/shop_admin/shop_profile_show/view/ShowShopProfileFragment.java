@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v4.content.ContextCompat;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -68,6 +70,9 @@ public class ShowShopProfileFragment extends Fragment implements ShowShopProfile
 	@BindView(R.id.edit_profile_btn)
 	Button buttonEditProfile;
 
+	@BindView(R.id.toolbar)
+	Toolbar toolbar;
+
 	ShowShopProfilePresenter shopProfilePresenter;
 	private ImageLoader imageLoader;
 	SharedPrefs sharedPrefs;
@@ -109,6 +114,19 @@ public class ShowShopProfileFragment extends Fragment implements ShowShopProfile
 							 Bundle savedInstanceState) {
 		View v=inflater.inflate(R.layout.fragment_shop_profile,container,false);
 		ButterKnife.bind(this,v);
+
+		Context context =getContext();
+		toolbar.setNavigationIcon(ContextCompat.getDrawable(context,R.drawable.ic_arrow_back_white_24dp));
+
+		toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View view) {
+
+				getActivity().onBackPressed();
+			}
+		});
+
+
 		progressBar.setVisibility(View.GONE);
 
 		// Inflate the layout for this fragment

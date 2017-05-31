@@ -31,7 +31,7 @@ public class ShopOfferListPresenterImpl implements ShopOfferListPresenter {
                 if(shopOfferDeleteData.isSuccess())
                 {
                     shopOfferListView.showProgressBar(false);
-
+                    shopOfferListView.onDeleteSuccessful();
                 }
                 else
                 {

@@ -183,6 +183,11 @@ public class ShopOfferListFragment extends Fragment implements ShopOfferListView
         shopOfferAdapter.notifyDataSetChanged();
     }
 
+    @Override
+    public void onDeleteSuccessful() {
+        shopOfferListPresenter.requestShopOffer(sharedPrefs.getKeyAccessTokenShop());
+    }
+
     /**
      * This interface must be implemented by activities that contain this
      * fragment to allow an interaction in this fragment to be communicated
