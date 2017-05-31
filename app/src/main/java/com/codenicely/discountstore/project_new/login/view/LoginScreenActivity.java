@@ -8,11 +8,12 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.codenicely.discountstore.project_new.R;
-import com.codenicely.discountstore.project_new.helper.SharedPrefs;
 import com.codenicely.discountstore.project_new.login.models.RetrofitLoginScreenProvider;
 import com.codenicely.discountstore.project_new.login.presenter.LoginScreenPresenter;
 import com.codenicely.discountstore.project_new.login.presenter.LoginScreenPresenterImpl;
@@ -39,8 +40,12 @@ public class LoginScreenActivity extends Activity implements LoginScreenView {
     String mobile1;
     EditText email;
 
-    @BindView(R.id.toolbar)
-    Toolbar toolbar;
+    @BindView(R.id.background_image)
+    ImageView background_image_view;
+
+//
+//    @BindView(R.id.toolbar)
+//    Toolbar toolbar;
 
     private ProgressBar progressbar;
     private RetrofitLoginScreenProvider retrofitLoginScreenProvider;
@@ -54,15 +59,10 @@ public class LoginScreenActivity extends Activity implements LoginScreenView {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_loginscreen);
+        setContentView(R.layout.activity_login);
         ButterKnife.bind(this);
 
-        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
+        Glide.with(this).load(R.drawable.login_background).into(background_image_view);
 
         Log.d("Response", "1");
         progressbar = (ProgressBar) findViewById(R.id.progressBar);
