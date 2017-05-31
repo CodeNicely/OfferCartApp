@@ -26,8 +26,8 @@
     <string name="banner_shop_screen">ca-app-pub-7676088497515789/5358530552</string>
     <string name="banner_splash_sub_screen">ca-app-pub-7676088497515789/6757551759</string>
     <string name="hint_name">Shop Name</string>
-    <string name="hint_mobile">Shop Mobile</string>
-    <string name="shop_hint_password">Shop Password</string>
+    <string name="hint_mobile">Mobile Number</string>
+    <string name="shop_hint_password">Password</string>
 
     <string name="hint_email">Shop Address</string>
     <string name="register_shop">Register Shop</string>
@@ -52,9 +52,14 @@
     <string name="title_edit_offer">Edit Offer</string>
     <string name="add_subscription">Add Subscription</string>
     <string name="customer_login">Get Started</string>
+    <string name="shop_login">L o g i n</string>
+    <string name="shop_login_new">R e g i s t e r </string>
+
+
     <string name="full_name">Full Name</string>
     <string name="mobile_no">Mobile No</string>
     <string name="email_id">Email id</string>
+    <string name="shop_login_textview">S h o p  L o g i n</string>
+    <string name="shop_signup_textview">S i g n U p</string>
 
 </resources>
-

@@ -5,6 +5,7 @@
     </CLASSES>
     <JAVADOC />
     <SOURCES>
+      <root url="jar://$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/caches/modules-2/files-2.1/de.greenrobot/eventbus/2.2.1/b16456627fe64981243455cca85a45f02ab5145/eventbus-2.2.1-sources.jar!/" />
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/de.greenrobot/eventbus/2.2.1/b16456627fe64981243455cca85a45f02ab5145/eventbus-2.2.1-sources.jar!/" />
     </SOURCES>
   </library>
