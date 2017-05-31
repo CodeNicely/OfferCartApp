@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Discount Store</string>
+    <string name="app_name">Brand Store</string>
     <string name="title_activity_home_activity">home_activity</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
@@ -51,6 +51,8 @@
     <string name="title_add_offer">Add New Offer</string>
     <string name="title_edit_offer">Edit Offer</string>
     <string name="add_subscription">Add Subscription</string>
+    <string name="customer_login">Get Started</string>
+    <string name="full_name">Full Name</string>
 
 </resources>
 

@@ -59,7 +59,7 @@ public class SplashScreenActivity extends Activity implements SplashScreenView {
         ButterKnife.bind(this);
         imageLoader = new GlideImageLoader(this);
         Glide.with(this).load(R.drawable.codenicely_logo).into(codenicely_logo);
-        Glide.with(this).load(R.drawable.discount_store_logo).into(logo);
+        Glide.with(this).load(R.drawable.brand_store_logo_white).into(logo);
 
         sharedPrefs = new SharedPrefs(this);
         splashScreenPresenter = new SplashScreenPresenterImpl(this,
@@ -114,12 +114,11 @@ public class SplashScreenActivity extends Activity implements SplashScreenView {
                     if (sharedPrefs.isLoggedIn()) {
                         startActivity(new Intent(SplashScreenActivity.this, HomePage.class));
                         finish();
-                    }else if(sharedPrefs.isLoggedInasShop()) {
+                    } else if (sharedPrefs.isLoggedInasShop()) {
 
-                            startActivity(new Intent(SplashScreenActivity.this, ShopHomePage.class));
+                        startActivity(new Intent(SplashScreenActivity.this, ShopHomePage.class));
                         finish();
-                    }
-                    else {
+                    } else {
                         startActivity(new Intent(SplashScreenActivity.this, WelcomeScreenActivity.class));
                         finish();
                     }
@@ -163,12 +162,11 @@ public class SplashScreenActivity extends Activity implements SplashScreenView {
                     if (sharedPrefs.isLoggedIn()) {
                         startActivity(new Intent(SplashScreenActivity.this, HomePage.class));
                         finish();
-                    }else if (sharedPrefs.isLoggedInasShop()) {
+                    } else if (sharedPrefs.isLoggedInasShop()) {
 
-						startActivity(new Intent(SplashScreenActivity.this, ShopHomePage.class));
-						finish();
-					}
-					else {
+                        startActivity(new Intent(SplashScreenActivity.this, ShopHomePage.class));
+                        finish();
+                    } else {
                         startActivity(new Intent(SplashScreenActivity.this, WelcomeScreenActivity.class));
                         finish();
                     }
@@ -191,11 +189,10 @@ public class SplashScreenActivity extends Activity implements SplashScreenView {
                 if (sharedPrefs.isLoggedIn()) {
                     startActivity(new Intent(SplashScreenActivity.this, HomePage.class));
                     finish();
-                }else if (sharedPrefs.isLoggedInasShop()) {
-					startActivity(new Intent(SplashScreenActivity.this, ShopHomePage.class));
-					finish();
-				}
-				else {
+                } else if (sharedPrefs.isLoggedInasShop()) {
+                    startActivity(new Intent(SplashScreenActivity.this, ShopHomePage.class));
+                    finish();
+                } else {
                     startActivity(new Intent(SplashScreenActivity.this, WelcomeScreenActivity.class));
                     finish();
                 }
