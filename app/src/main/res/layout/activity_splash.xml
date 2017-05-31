@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient_background_splash_screen"
     >
 
 
@@ -19,8 +20,7 @@
         android:layout_width="160dp"
         android:layout_height="160dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
- />
+        android:layout_marginTop="50dp" />
 
     <TextView
         android:id="@+id/name"
@@ -33,22 +33,20 @@
         android:textSize="32dp" />
 
     <TextView
-        android:gravity="center"
         android:id="@+id/powered_by"
         android:layout_width="match_parent"
-        android:textColor="@color/black"
-        android:text="Powered by CodeNicely"
         android:layout_height="wrap_content"
         android:layout_above="@+id/codenicely_logo"
-        />
+        android:gravity="center"
+        android:text="Powered by CodeNicely"
+        android:textColor="@color/black" />
 
     <ImageView
         android:id="@+id/codenicely_logo"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="50dp"
-        />
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp" />
 
 </RelativeLayout>

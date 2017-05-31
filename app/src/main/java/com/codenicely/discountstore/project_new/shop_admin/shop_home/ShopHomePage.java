@@ -23,41 +23,27 @@ import com.codenicely.discountstore.project_new.contact_us.view.ContactUsFragmen
 import com.codenicely.discountstore.project_new.developers.view.DeveloperFragment;
 import com.codenicely.discountstore.project_new.helper.SharedPrefs;
 import com.codenicely.discountstore.project_new.home.HomePageInterface;
-
-import com.codenicely.discountstore.project_new.shop_admin.shop_add_subscription.view.AddSubscriptionFragment;
-<<<<<<< HEAD
-import com.codenicely.discountstore.project_new.shop_admin.shop_change_password.view.ShopChangePasswordView;
-=======
->>>>>>> 6b1e11ad65661c8b2758555e41e7ca2a579c3f5c
-import com.codenicely.discountstore.project_new.shop_admin.shop_edit_offer.view.OfferEditFragment;
-import com.codenicely.discountstore.project_new.shop_admin.shop_change_password.view.ShopChangePasswordFragment;
-
-
 import com.codenicely.discountstore.project_new.shop_admin.shop_add_offer.view.OfferAddFragment;
-
+import com.codenicely.discountstore.project_new.shop_admin.shop_add_subscription.view.AddSubscriptionFragment;
+import com.codenicely.discountstore.project_new.shop_admin.shop_change_password.view.ShopChangePasswordFragment;
+import com.codenicely.discountstore.project_new.shop_admin.shop_edit_offer.view.OfferEditFragment;
 import com.codenicely.discountstore.project_new.shop_admin.shop_offerlist.view.ShopOfferListFragment;
 import com.codenicely.discountstore.project_new.shop_admin.shop_profile_edit.view.EditShopProfileFragment;
 import com.codenicely.discountstore.project_new.shop_admin.shop_profile_show.view.ShowShopProfileFragment;
-
 import com.codenicely.discountstore.project_new.welcome_screen.view.WelcomeScreenActivity;
 
 public class ShopHomePage extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, HomePageInterface,
-                           AboutUsFragment.OnFragmentInteractionListener,
-                           EditShopProfileFragment.OnFragmentInteractionListener,
-                           ShowShopProfileFragment.OnFragmentInteractionListener,
-                            DeveloperFragment.OnFragmentInteractionListener,
-                           ContactUsFragment.OnFragmentInteractionListener,
-						   OfferAddFragment.OnFragmentInteractionListener,
-                           OfferEditFragment.OnFragmentInteractionListener,
-<<<<<<< HEAD
-                           ShopChangePasswordFragment.OnFragmentInteractionListener,
-						   AddSubscriptionFragment.OnFragmentInteractionListener,
+        AboutUsFragment.OnFragmentInteractionListener,
+        EditShopProfileFragment.OnFragmentInteractionListener,
+        ShowShopProfileFragment.OnFragmentInteractionListener,
+        DeveloperFragment.OnFragmentInteractionListener,
+        ContactUsFragment.OnFragmentInteractionListener,
+        OfferAddFragment.OnFragmentInteractionListener,
+        OfferEditFragment.OnFragmentInteractionListener,
+        ShopChangePasswordFragment.OnFragmentInteractionListener,
+        AddSubscriptionFragment.OnFragmentInteractionListener,
         ShopOfferListFragment.OnFragmentInteractionListener {
-=======
-                          AddSubscriptionFragment.OnFragmentInteractionListener,
-                           ShopOfferListFragment.OnFragmentInteractionListener {
->>>>>>> 6b1e11ad65661c8b2758555e41e7ca2a579c3f5c
 
     private SharedPrefs sharedPrefs;
     private NavigationView navigationView;
@@ -66,31 +52,31 @@ public class ShopHomePage extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shop_home_activity);
-            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_NOSENSOR);
-            Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-            setSupportActionBar(toolbar);
-            DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-            ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                    this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-            drawer.setDrawerListener(toggle);
-            toggle.syncState();
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_NOSENSOR);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawer.setDrawerListener(toggle);
+        toggle.syncState();
 
         navigationView = (NavigationView) findViewById(R.id.nav_view);
-            navigationView.setNavigationItemSelectedListener(this);
-            sharedPrefs = new SharedPrefs(this);
+        navigationView.setNavigationItemSelectedListener(this);
+        sharedPrefs = new SharedPrefs(this);
 
-        ShopOfferListFragment shopOfferListFragment= new ShopOfferListFragment();
-		setFragment(shopOfferListFragment,"Home");
+        ShopOfferListFragment shopOfferListFragment = new ShopOfferListFragment();
+        setFragment(shopOfferListFragment, "Home");
 
-            int backStackCount = getSupportFragmentManager().getBackStackEntryCount();
-            for (int i = 0; i < backStackCount; i++) {
+        int backStackCount = getSupportFragmentManager().getBackStackEntryCount();
+        for (int i = 0; i < backStackCount; i++) {
 
-                // Get the back stack fragment id.
-                int backStackId = getSupportFragmentManager().getBackStackEntryAt(i).getId();
+            // Get the back stack fragment id.
+            int backStackId = getSupportFragmentManager().getBackStackEntryAt(i).getId();
 
-                getFragmentManager().popBackStack(backStackId, FragmentManager.POP_BACK_STACK_INCLUSIVE);
-            }
+            getFragmentManager().popBackStack(backStackId, FragmentManager.POP_BACK_STACK_INCLUSIVE);
         }
+    }
 
     @Override
     public void onBackPressed() {
@@ -144,8 +130,7 @@ public class ShopHomePage extends AppCompatActivity
         } else if (id == R.id.change_password) {
             addFragment(new ShopChangePasswordFragment(), "Change Password");
             getSupportActionBar().hide();
-        }
-		else if (id == R.id.nav_profile) {
+        } else if (id == R.id.nav_profile) {
             addFragment(new ShowShopProfileFragment(), "Profile");
             getSupportActionBar().hide();
 
@@ -161,11 +146,10 @@ public class ShopHomePage extends AppCompatActivity
             addFragment(new DeveloperFragment(), "Developers");
             getSupportActionBar().hide();
 
-        } else if(id==R.id.nav_logout)
-        {
+        } else if (id == R.id.nav_logout) {
             sharedPrefs.setShopLogin(false);
             sharedPrefs.setAccessTokenShop("");
-            Intent in=new Intent(ShopHomePage.this, WelcomeScreenActivity.class);
+            Intent in = new Intent(ShopHomePage.this, WelcomeScreenActivity.class);
             startActivity(in);
             finish();
         }
@@ -198,7 +182,6 @@ public class ShopHomePage extends AppCompatActivity
 
         }
     }
-
 
 
     private void showDialogMessage(String message) {
