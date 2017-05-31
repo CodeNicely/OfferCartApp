@@ -20,8 +20,6 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-import static android.support.v7.widget.StaggeredGridLayoutManager.TAG;
-
 /**
  * Created by iket on 19/10/16.
  */

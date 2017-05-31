@@ -25,11 +25,6 @@ import com.codenicely.discountstore.project_new.helper.SharedPrefs;
 import com.codenicely.discountstore.project_new.home.HomePageInterface;
 import com.codenicely.discountstore.project_new.shop_admin.shop_add_offer.view.OfferAddFragment;
 import com.codenicely.discountstore.project_new.shop_admin.shop_add_subscription.view.AddSubscriptionFragment;
-<<<<<<< HEAD
-=======
-import com.codenicely.discountstore.project_new.shop_admin.shop_change_password.view.ShopChangePasswordView;
-import com.codenicely.discountstore.project_new.shop_admin.shop_edit_offer.view.OfferEditFragment;
->>>>>>> 5a0ea6c4aca08720f39275e97f947352617d781a
 import com.codenicely.discountstore.project_new.shop_admin.shop_change_password.view.ShopChangePasswordFragment;
 import com.codenicely.discountstore.project_new.shop_admin.shop_edit_offer.view.OfferEditFragment;
 import com.codenicely.discountstore.project_new.shop_admin.shop_offerlist.view.ShopOfferListFragment;
@@ -38,8 +33,9 @@ import com.codenicely.discountstore.project_new.shop_admin.shop_profile_show.vie
 import com.codenicely.discountstore.project_new.welcome_screen.view.WelcomeScreenActivity;
 
 public class ShopHomePage extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener, HomePageInterface,
-<<<<<<< HEAD
+        implements
+        NavigationView.OnNavigationItemSelectedListener,
+        HomePageInterface,
         AboutUsFragment.OnFragmentInteractionListener,
         EditShopProfileFragment.OnFragmentInteractionListener,
         ShowShopProfileFragment.OnFragmentInteractionListener,
@@ -49,17 +45,6 @@ public class ShopHomePage extends AppCompatActivity
         OfferEditFragment.OnFragmentInteractionListener,
         ShopChangePasswordFragment.OnFragmentInteractionListener,
         AddSubscriptionFragment.OnFragmentInteractionListener,
-=======
-                           AboutUsFragment.OnFragmentInteractionListener,
-                           EditShopProfileFragment.OnFragmentInteractionListener,
-                           ShowShopProfileFragment.OnFragmentInteractionListener,
-                            DeveloperFragment.OnFragmentInteractionListener,
-                           ContactUsFragment.OnFragmentInteractionListener,
-						   OfferAddFragment.OnFragmentInteractionListener,
-                           OfferEditFragment.OnFragmentInteractionListener,
-                           ShopChangePasswordFragment.OnFragmentInteractionListener,
-						   AddSubscriptionFragment.OnFragmentInteractionListener,
->>>>>>> 5a0ea6c4aca08720f39275e97f947352617d781a
         ShopOfferListFragment.OnFragmentInteractionListener {
 
     private SharedPrefs sharedPrefs;
