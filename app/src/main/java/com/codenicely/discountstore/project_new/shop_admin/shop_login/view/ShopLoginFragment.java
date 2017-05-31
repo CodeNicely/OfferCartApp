@@ -3,21 +3,30 @@ package com.codenicely.discountstore.project_new.shop_admin.shop_login.view;
 
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.ActionBar;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.animation.GlideAnimation;
+import com.bumptech.glide.request.target.SimpleTarget;
 import com.codenicely.discountstore.project_new.R;
 import com.codenicely.discountstore.project_new.helper.SharedPrefs;
 import com.codenicely.discountstore.project_new.helper.image_loader.GlideImageLoader;
@@ -56,10 +65,13 @@ public class ShopLoginFragment extends Fragment implements ShopLoginView{
 	@BindView(R.id.progressBar)
 	ProgressBar progressBar;
 	@BindView(R.id.buttonSignUp)
-	Button buttonSignUp;
+	Button buttonSignUp;/*
 	@BindView(R.id.imageView)
-	ImageView imageView;
-
+	ImageView imageView;*/
+	@BindView(R.id.linearlayoutLoginShop)
+	RelativeLayout relativeLayout;/*
+	@BindView(R.id.linearlayoutLoginShop)
+	LinearLayout linearLayout;*/
 
 	private ShopLoginPresenter shopLoginPresenter;
 
@@ -99,11 +111,44 @@ public class ShopLoginFragment extends Fragment implements ShopLoginView{
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view =inflater.inflate(R.layout.fragment_shop_login, container, false);
+
+
+		if (Build.VERSION.SDK_INT < 16)//before Jelly Bean Versions
+		{
+			getActivity().getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+					WindowManager.LayoutParams.FLAG_FULLSCREEN);
+		}
+		else // Jelly Bean and up
+		{
+			View decorView = getActivity().getWindow().getDecorView();
+			// Hide the status bar.
+			int ui = View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR;
+			decorView.setSystemUiVisibility(ui);
+
+			//Hide actionbar
+
+			//	android.app.ActionBar actionBar = getActivity().getActionBar();
+		//	actionBar.hide();
+		}
+
+
+		View view =inflater.inflate(R.layout.fragment_shop_login, container, false);
 		ButterKnife.bind(this,view);
 		sharedPrefs = new SharedPrefs(getContext());
-		Glide.with(getContext()).load(R.drawable.background_shop_login).asBitmap().override(1080, 600).into(imageView);
+	//	Glide.with(getContext()).load(R.drawable.background_shop_login).asBitmap().override(1080, 600).into(imageView);
 	//	Glide.with(this).load(R.drawable.background_shop_login).into(imageView);
+		Glide.with(this).load(R.drawable.login_background).asBitmap().into(
+				new SimpleTarget<Bitmap>() {
+					@Override
+					public void onResourceReady(Bitmap resource,
+												GlideAnimation<? super Bitmap> glideAnimation) {
+						Drawable drawable = new BitmapDrawable(resource);
+						if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+							relativeLayout.setBackground(drawable);
+						}
+					}
+				});
+
 		shopLoginPresenter=new ShopLoginPresenterImpl(this,new RetrofitShopLoginProvider());
 
 		loginButton.setOnClickListener(new View.OnClickListener() {

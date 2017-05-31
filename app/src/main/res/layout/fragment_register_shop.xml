@@ -4,9 +4,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/colorAccent">
+    android:background="@color/colorPrimary2">
 
 
+<!--
     <android.support.design.widget.AppBarLayout
         android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
@@ -23,6 +24,18 @@
             app:titleTextColor="@color/white" />
 
     </android.support.design.widget.AppBarLayout>
+-->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textAllCaps="true"
+        android:gravity="center"
+        android:textColor="@color/colorAccent2"
+        android:text="@string/shop_signup_textview"
+        android:textSize="@dimen/medium_text_size"
+        android:layout_marginTop="50dp"
+        />
 
     <ProgressBar
         android:id="@+id/progressBar"
@@ -40,14 +53,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:background="@color/colorAccent"
-
+                android:background="@color/colorPrimary2"
                 android:padding="8dp">
 
 
                 <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
                     android:textColorHint="@color/colorAccent2"
+                    app:hintTextAppearance="@color/colorAccent2"
                     android:layout_height="wrap_content">
                     <EditText
                         android:id="@+id/name"
@@ -55,13 +68,13 @@
                         android:layout_height="wrap_content"
                         android:textColor="@color/colorAccent2"
                         android:textColorHint="@color/colorAccent2"
-                        android:shadowColor="@color/colorAccent2"
-                        android:backgroundTint="@color/white"
+                        android:theme="@style/EditTextTheme"
                         android:hint="@string/hint_name" />
                     </android.support.design.widget.TextInputLayout>
 
                 <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
+                    app:hintTextAppearance="@color/colorAccent2"
                     android:textColorHint="@color/colorAccent2"
                     android:layout_height="wrap_content">
 
@@ -73,14 +86,14 @@
                         android:inputType="phone"
                         android:textColor="@color/colorAccent2"
                         android:textColorHint="@color/colorAccent2"
-                        android:shadowColor="@color/colorAccent2"
-                        android:backgroundTint="@color/white"
+                        android:theme="@style/EditTextTheme"
                         android:maxLength="10"
                         />
 
                 </android.support.design.widget.TextInputLayout>
 
                 <android.support.design.widget.TextInputLayout
+                    app:hintTextAppearance="@color/colorAccent2"
                     android:textColorHint="@color/colorAccent2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
@@ -90,17 +103,15 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/password"
-                        android:text="ujjwal"
-
                         android:textColor="@color/colorAccent2"
                         android:textColorHint="@color/colorAccent2"
-                        android:shadowColor="@color/colorAccent2"
-                        android:backgroundTint="@color/white"
+                        android:theme="@style/EditTextTheme"
                         android:inputType="textPassword" />
 
                 </android.support.design.widget.TextInputLayout>
 
                 <android.support.design.widget.TextInputLayout
+                    app:hintTextAppearance="@color/colorAccent2"
                     android:textColorHint="@color/colorAccent2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
@@ -110,18 +121,16 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/confirm_password"
-                        android:text="ujjwal"
-
                         android:textColor="@color/colorAccent2"
                         android:textColorHint="@color/colorAccent2"
-                        android:shadowColor="@color/colorAccent2"
-                        android:backgroundTint="@color/white"
+                        android:theme="@style/EditTextTheme"
                         android:inputType="textPassword" />
 
                 </android.support.design.widget.TextInputLayout>
 
                 <android.support.design.widget.TextInputLayout
                     android:textColorHint="@color/colorAccent2"
+                    app:hintTextAppearance="@color/colorAccent2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
@@ -130,12 +139,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="start"
-                        android:text="fdsdfsdf"
-
                         android:textColor="@color/colorAccent2"
                         android:textColorHint="@color/colorAccent2"
-                        android:shadowColor="@color/colorAccent2"
-                        android:backgroundTint="@color/white"
+                        android:theme="@style/EditTextTheme"
                         android:hint="@string/description"
                         android:minHeight="100dp" />
 
@@ -145,19 +151,16 @@
                 <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
                     android:textColorHint="@color/colorAccent2"
-
+                    app:hintTextAppearance="@color/colorAccent2"
                     android:layout_height="wrap_content">
 
                     <EditText
                         android:id="@+id/address"
-                        android:text="address"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-
                         android:textColor="@color/colorAccent2"
                         android:textColorHint="@color/colorAccent2"
-                        android:shadowColor="@color/colorAccent2"
-                        android:backgroundTint="@color/white"
+                        android:theme="@style/EditTextTheme"
                         android:hint="@string/hint_email" />
 
                 </android.support.design.widget.TextInputLayout>
@@ -166,24 +169,26 @@
                 <Spinner
                     android:id="@+id/category_spinner"
                     android:layout_width="match_parent"
+                    android:backgroundTint="@color/colorAccent2"
                     android:layout_height="wrap_content"
                     />
 
                 <Spinner
                     android:id="@+id/city_spinner"
+                    android:backgroundTint="@color/colorAccent2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
 
 
                 <ImageView
                     android:id="@+id/imageView"
-                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
                     android:contentDescription="@string/shop_image"
-                    android:maxHeight="250dp"
+                    android:maxHeight="150dp"
                     android:minHeight="100dp"
                     android:padding="8dp"
-                    android:src="@drawable/discount_store_logo" />
+                    android:src="@mipmap/brand_store_logo_white" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -194,23 +199,25 @@
                     <Button
                         android:id="@+id/galleryButton"
                         style="@style/Widget.AppCompat.Button.Colored"
+                        android:layout_margin="12dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="5"
                         android:text="@string/select_images_gallery"
                         android:textColor="@color/colorAccent2"
-                        android:background="@color/colorAccentButton2"
+                        android:background="@drawable/shop_sign_up_button"
 
                         />
 
                     <Button
                         android:id="@+id/cameraButton"
+                        android:layout_margin="12dp"
                         style="@style/Widget.AppCompat.Button.Colored"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="5"
                         android:textColor="@color/colorAccent2"
-                        android:background="@color/colorAccentButton2"
+                        android:background="@drawable/shop_sign_up_button"
 
                         android:text="@string/take_picture" />
 
@@ -223,9 +230,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:layout_margin="12dp"
                     android:text="@string/register_shop"
                     android:textColor="@color/colorAccent2"
-                    android:background="@color/colorAccentButton2"
+                    android:background="@drawable/shop_sign_up_button"
+
                 />
 
             </LinearLayout>
