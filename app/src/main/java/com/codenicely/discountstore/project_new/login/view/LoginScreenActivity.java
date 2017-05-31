@@ -2,17 +2,22 @@ package com.codenicely.discountstore.project_new.login.view;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.animation.GlideAnimation;
+import com.bumptech.glide.request.target.SimpleTarget;
 import com.codenicely.discountstore.project_new.R;
 import com.codenicely.discountstore.project_new.login.models.RetrofitLoginScreenProvider;
 import com.codenicely.discountstore.project_new.login.presenter.LoginScreenPresenter;
@@ -40,15 +45,17 @@ public class LoginScreenActivity extends Activity implements LoginScreenView {
     String mobile1;
     EditText email;
 
-    @BindView(R.id.background_image)
-    ImageView background_image_view;
+    @BindView(R.id.back_button)
+    ImageView back_button;
+
+    @BindView(R.id.relativeLayout)
+    RelativeLayout relativeLayout;
 
 //
 //    @BindView(R.id.toolbar)
 //    Toolbar toolbar;
 
     private ProgressBar progressbar;
-    private RetrofitLoginScreenProvider retrofitLoginScreenProvider;
     private LoginScreenPresenter loginScreenPresenter;
 
     public static boolean validate(String emailStr) {
@@ -62,32 +69,44 @@ public class LoginScreenActivity extends Activity implements LoginScreenView {
         setContentView(R.layout.activity_login);
         ButterKnife.bind(this);
 
-        Glide.with(this).load(R.drawable.login_background).into(background_image_view);
+        back_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
 
-        Log.d("Response", "1");
+        Glide.with(this).load(R.drawable.login_background).asBitmap().into(
+                new SimpleTarget<Bitmap>() {
+                    @Override
+                    public void onResourceReady(Bitmap resource,
+                                                GlideAnimation<? super Bitmap> glideAnimation) {
+                        Drawable drawable = new BitmapDrawable(resource);
+                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+                            relativeLayout.setBackground(drawable);
+                        }
+                    }
+                });
+
+
         progressbar = (ProgressBar) findViewById(R.id.progressBar);
-        Log.d("Response", "2");
 
         login_button = (Button) findViewById(R.id.button);
         name = (EditText) findViewById(R.id.editText);
         mobile = (EditText) findViewById(R.id.editText2);
-        Log.d("Response", "3");
         email = (EditText) findViewById(R.id.editText3);
 
         ButterKnife.bind(this);
-        Log.d("Response", "4");
 
         loginScreenPresenter = new LoginScreenPresenterImpl(this,
                 new RetrofitLoginScreenProvider());
 
-        Log.d("Response", "5");
         login_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 name1 = name.getText().toString();
                 mobile1 = mobile.getText().toString();
                 email1 = email.getText().toString();
-                Log.d("Response", "b1");
                 if (name1.equals("") || name1.equals(null)) {
                     name.setError("Please fill name");
                     name.requestFocus();
@@ -123,10 +142,8 @@ public class LoginScreenActivity extends Activity implements LoginScreenView {
                 }
 
 
-                Log.d("Response", "b2");
             }
         });
-        Log.d("Response", "6");
 
 
     }
