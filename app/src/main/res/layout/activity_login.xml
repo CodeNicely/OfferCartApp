@@ -46,8 +46,8 @@
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColorHint="@color/colorAccent2"
-            app:hintTextAppearance="@color/colorAccent2"
+            android:textColorHint="@color/white"
+            app:hintTextAppearance="@color/white"
             tools:targetApi="lollipop">
 
             <EditText
@@ -57,8 +57,8 @@
                 android:focusable="true"
                 android:hint="@string/full_name"
                 android:text="Meghal Agrawal"
-                android:textColor="@color/colorAccent2"
-                android:textColorHint="@color/colorAccent2"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
                 android:textSize="@dimen/small_text_size"
                 android:theme="@style/EditTextTheme"
 
@@ -69,8 +69,8 @@
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColorHint="@color/colorAccent2"
-            app:hintTextAppearance="@color/colorAccent2"
+            android:textColorHint="@color/white"
+            app:hintTextAppearance="@color/white"
             tools:targetApi="lollipop">
 
             <EditText
@@ -81,8 +81,8 @@
                 android:text="8109109457"
                 android:inputType="number"
                 android:hint="@string/mobile_no"
-                android:textColor="@color/colorAccent2"
-                android:textColorHint="@color/colorAccent2"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
                 android:textSize="@dimen/small_text_size"
                 android:theme="@style/EditTextTheme"
 
@@ -92,8 +92,8 @@
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColorHint="@color/colorAccent2"
-            app:hintTextAppearance="@color/colorAccent2"
+            android:textColorHint="@color/white"
+            app:hintTextAppearance="@color/white"
             tools:targetApi="lollipop">
 
             <EditText
@@ -103,8 +103,8 @@
                 android:focusable="true"
                 android:text="meghal@codenicely.in"
                 android:hint="@string/email_id"
-                android:textColor="@color/colorAccent2"
-                android:textColorHint="@color/colorAccent2"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
                 android:textSize="@dimen/small_text_size"
                 android:theme="@style/EditTextTheme"
 

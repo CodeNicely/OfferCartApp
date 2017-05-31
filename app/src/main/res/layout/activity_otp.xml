@@ -56,8 +56,8 @@
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColorHint="@color/colorAccent2"
-                app:hintTextAppearance="@color/colorAccent2"
+                android:textColorHint="@color/white"
+                app:hintTextAppearance="@color/white"
                 tools:targetApi="lollipop"
                 android:padding="12dp"
                 >
@@ -69,8 +69,8 @@
                     android:gravity="center"
                     android:hint="@string/otp"
                     android:inputType="number"
-                    android:textColor="@color/colorAccent2"
-                    android:textColorHint="@color/colorAccent2"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
                     android:textSize="@dimen/large_text_size"
                     android:theme="@style/EditTextTheme" />
             </android.support.design.widget.TextInputLayout>
