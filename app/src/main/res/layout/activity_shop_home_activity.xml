@@ -18,8 +18,8 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
-        app:itemTextColor="@color/colorPrimary"
-        app:itemIconTint="@color/colorPrimary"
+        app:itemTextColor="@color/color_shop_primary"
+        app:itemIconTint="@color/color_shop_primary"
         app:headerLayout="@layout/nav_header_home_activity"
         app:menu="@menu/activity_shop_home_activity_drawer" />
 

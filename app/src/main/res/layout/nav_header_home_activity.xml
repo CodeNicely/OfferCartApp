@@ -15,14 +15,14 @@
         android:layout_width="match_parent"
         android:layout_height="160dp"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
-        android:src="@drawable/discount_store_logo" />
+        android:src="@mipmap/brand_store_logo" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
         android:gravity="center"
-        android:text="Discount Store \n Buy EveryDay :)"
+        android:text="Brand Store \n Buy EveryDay :)"
         android:textColor="@color/black"
         android:textStyle="bold"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
