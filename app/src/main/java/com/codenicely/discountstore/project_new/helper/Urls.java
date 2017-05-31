@@ -7,7 +7,7 @@ public class Urls {
 
 
 
-	public static final String BASE_URL = "http://192.168.0.106:8000";
+	public static final String BASE_URL = "http://192.168.0.109:8000";
 
     public static final String REQUEST_FCM_UPDATE = "update_fcm/";
     //splash_screen

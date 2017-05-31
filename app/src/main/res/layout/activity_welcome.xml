@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:showIn="@layout/activity_welcome">
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                tools:showIn="@layout/activity_welcome">
 
 
     <android.support.v4.view.ViewPager
@@ -13,6 +14,14 @@
 
         />
 
+    <android.support.design.widget.TabLayout
+    android:id="@+id/tabLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:tabBackground="@drawable/tab_selector"
+    app:tabGravity="center"
+    android:layout_above="@+id/button_login_customer"
+    app:tabIndicatorHeight="0dp"/>
 
     <View
         android:layout_width="match_parent"
@@ -35,7 +44,7 @@
 
     <Button
         android:id="@+id/button_login_customer"
-        style="@style/Base.Widget.AppCompat.Button.Colored"
+        style="@style/Base.Widget.AppCompat.Button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@+id/button_login_shop"
@@ -49,7 +58,7 @@
 
     <Button
         android:id="@+id/button_login_shop"
-        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        style="@style/Base.Widget.AppCompat.Button.Colored"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"

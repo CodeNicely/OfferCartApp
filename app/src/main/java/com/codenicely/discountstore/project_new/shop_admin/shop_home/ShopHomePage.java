@@ -33,7 +33,9 @@ import com.codenicely.discountstore.project_new.shop_admin.shop_profile_show.vie
 import com.codenicely.discountstore.project_new.welcome_screen.view.WelcomeScreenActivity;
 
 public class ShopHomePage extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener, HomePageInterface,
+        implements
+        NavigationView.OnNavigationItemSelectedListener,
+        HomePageInterface,
         AboutUsFragment.OnFragmentInteractionListener,
         EditShopProfileFragment.OnFragmentInteractionListener,
         ShowShopProfileFragment.OnFragmentInteractionListener,

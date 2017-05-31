@@ -83,7 +83,11 @@
 <<<<<<< HEAD
       <sourceFolder url="file://$MODULE_DIR$/src/test/jni" isTestSource="true" />
 =======
+<<<<<<< HEAD
 >>>>>>> master
+=======
+>>>>>>> cbbcd75c85761c41bafc3a925b7636d2763e3444
+>>>>>>> 5a0ea6c4aca08720f39275e97f947352617d781a
       <sourceFolder url="file://$MODULE_DIR$/src/test/rs" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/test/shaders" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/annotations" />

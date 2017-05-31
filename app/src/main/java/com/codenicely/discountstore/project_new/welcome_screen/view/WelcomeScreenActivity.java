@@ -7,6 +7,7 @@ package com.codenicely.discountstore.project_new.welcome_screen.view;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.widget.Button;
@@ -35,7 +36,7 @@ public class WelcomeScreenActivity extends Activity implements WelcomeScreenView
     private ViewPagerAdapter viewPagerAdapter;
     private WelcomeScreenPresenter welcomeScreenPresenter;
     private WelcomeScreenView welcomeScreenView;
-
+    private TabLayout tabLayout;
     @BindView(R.id.button_login_shop)
     Button button_login_shop;
 
@@ -55,10 +56,12 @@ public class WelcomeScreenActivity extends Activity implements WelcomeScreenView
     public void initialise() {
         viewPagerAdapter = new ViewPagerAdapter(this);
         viewPager = (ViewPager) findViewById(R.id.viewpager);
+        tabLayout= (TabLayout) findViewById(R.id.tabLayout);
         welcomeScreenPresenter = new WelcomeScreenPresenterImpl(this, new RetrofitWelcomeScreenProvider());
         welcomeScreenPresenter.getWelcomeData();
         viewPagerAdapter = new ViewPagerAdapter(this);
         viewPager.setAdapter(viewPagerAdapter);
+        tabLayout.setupWithViewPager(viewPager);
 
         button_login_customer.setOnClickListener(new View.OnClickListener() {
             @Override

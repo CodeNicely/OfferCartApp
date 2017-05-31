@@ -21,8 +21,6 @@ import com.codenicely.discountstore.project_new.about_us.presenter.AboutUsPresen
 import com.codenicely.discountstore.project_new.about_us.presenter.AboutUsPresenterImpl;
 import com.codenicely.discountstore.project_new.helper.image_loader.GlideImageLoader;
 import com.codenicely.discountstore.project_new.helper.image_loader.ImageLoader;
-import com.mobfox.sdk.bannerads.Banner;
-
 import butterknife.BindView;
 import butterknife.ButterKnife;
 

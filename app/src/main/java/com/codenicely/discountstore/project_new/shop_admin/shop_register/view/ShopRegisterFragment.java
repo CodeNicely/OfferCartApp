@@ -122,9 +122,9 @@ public class ShopRegisterFragment extends Fragment implements ShopRegisterView {
 
     @BindView(R.id.imageView)
     ImageView imageView;
-
+/*
     @BindView(R.id.cardView)
-    CardView cardView;
+    CardView cardView;*/
 
     @BindView(R.id.progressBar)
     ProgressBar progressBar;
@@ -186,8 +186,8 @@ public class ShopRegisterFragment extends Fragment implements ShopRegisterView {
         progressDialog.setIndeterminate(true);
         progressDialog.setCancelable(false);
 
-        city_array_adapter = new ArrayAdapter<>(context, android.R.layout.simple_list_item_1);
-        category_array_adapter = new ArrayAdapter<>(context, android.R.layout.simple_list_item_1);
+        city_array_adapter = new ArrayAdapter<>(context, R.layout.spinner_item);
+        category_array_adapter = new ArrayAdapter<>(context, R.layout.spinner_item);
 
         city_array_adapter.add(SELECT_CITY);
         category_array_adapter.add(SELECT_CATEGORY);
@@ -335,10 +335,10 @@ public class ShopRegisterFragment extends Fragment implements ShopRegisterView {
 
         if (show) {
             progressBar.setVisibility(View.VISIBLE);
-            cardView.setVisibility(View.GONE);
+            //cardView.setVisibility(View.GONE);
         } else {
             progressBar.setVisibility(View.GONE);
-            cardView.setVisibility(View.VISIBLE);
+           // cardView.setVisibility(View.VISIBLE);
         }
     }
 
