@@ -61,5 +61,6 @@
     <string name="email_id">Email id</string>
     <string name="shop_login_textview">S h o p  L o g i n</string>
     <string name="shop_signup_textview">S i g n U p</string>
+    <string name="otp">Enter OTP</string>
 
 </resources>

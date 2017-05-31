@@ -172,7 +172,7 @@ public class SplashScreenActivity extends Activity implements SplashScreenView {
                     }
 
                 }
-            }, 3000);
+            }, 300);
         }
 
 
@@ -198,7 +198,7 @@ public class SplashScreenActivity extends Activity implements SplashScreenView {
                 }
 
             }
-        }, 3000);
+        }, 300);
 
     }
 
