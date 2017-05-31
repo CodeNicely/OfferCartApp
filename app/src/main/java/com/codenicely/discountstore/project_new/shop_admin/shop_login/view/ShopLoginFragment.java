@@ -12,11 +12,16 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.codenicely.discountstore.project_new.R;
 import com.codenicely.discountstore.project_new.helper.SharedPrefs;
+import com.codenicely.discountstore.project_new.helper.image_loader.GlideImageLoader;
+import com.codenicely.discountstore.project_new.helper.image_loader.ImageLoader;
 import com.codenicely.discountstore.project_new.shop_admin.shop_activity.ShopActivity;
 import com.codenicely.discountstore.project_new.shop_admin.shop_home.ShopHomePage;
 import com.codenicely.discountstore.project_new.shop_admin.shop_login.model.RetrofitShopLoginProvider;
@@ -52,12 +57,14 @@ public class ShopLoginFragment extends Fragment implements ShopLoginView{
 	ProgressBar progressBar;
 	@BindView(R.id.buttonSignUp)
 	Button buttonSignUp;
+	@BindView(R.id.imageView)
+	ImageView imageView;
+
 
 	private ShopLoginPresenter shopLoginPresenter;
 
 	String mobile,password;
 	private SharedPrefs sharedPrefs;
-
 
 	/**
      * Use this factory method to create a new instance of
@@ -95,7 +102,8 @@ public class ShopLoginFragment extends Fragment implements ShopLoginView{
         View view =inflater.inflate(R.layout.fragment_shop_login, container, false);
 		ButterKnife.bind(this,view);
 		sharedPrefs = new SharedPrefs(getContext());
-
+		Glide.with(getContext()).load(R.drawable.background_shop_login).asBitmap().override(1080, 600).into(imageView);
+	//	Glide.with(this).load(R.drawable.background_shop_login).into(imageView);
 		shopLoginPresenter=new ShopLoginPresenterImpl(this,new RetrofitShopLoginProvider());
 
 		loginButton.setOnClickListener(new View.OnClickListener() {

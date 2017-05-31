@@ -5,10 +5,14 @@
     <color name="colorAccent1">#08415C</color>
     <color name="colorAccent">#153243</color>
     -->
+    01B0FA
+    <color name="colorAccentButton2">#01B0FA</color>
 
-    <color name="colorAccent">#F95428</color>
+    <color name="colorAccent2">#FFFFFF</color>
+    <color name="colorAccent">#6DC5E9</color>
     <color name="colorPrimaryDark">#122937</color>
-    <color name="colorPrimary">#153243</color>
+    <color name="colorPrimary">#15D5B0</color>
+    <color name="colorPrimary2">#6DC5E9</color>
 
     <color name="accent_light">#6A7C87</color>
 

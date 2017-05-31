@@ -38,6 +38,7 @@ import com.codenicely.discountstore.project_new.helper.utils.BitmapUtils;
 import com.codenicely.discountstore.project_new.helper.utils.UriUtils;
 import com.codenicely.discountstore.project_new.offer.view.OfferFragment;
 import com.codenicely.discountstore.project_new.shop_admin.shop_home.ShopHomePage;
+import com.codenicely.discountstore.project_new.shop_admin.shop_offerlist.view.ShopOfferListFragment;
 import com.codenicely.discountstore.project_new.shop_admin.shop_profile_edit.model.RetrofitEditShopProfileHelper;
 import com.codenicely.discountstore.project_new.shop_admin.shop_profile_edit.presenter.EditShopProfilePresenter;
 import com.codenicely.discountstore.project_new.shop_admin.shop_profile_edit.presenter.EditShopProfilePresenterImpl;
@@ -261,12 +262,12 @@ public class EditShopProfileFragment extends Fragment implements EditShopProfile
 					Toast.makeText(context, "Please select a city",
 							Toast.LENGTH_SHORT).show();
 					city_spinner.requestFocus();
-				} else if (imageUri == null) {
+				} /*else if (imageUri == null) {
 					Snackbar.make(getActivity().findViewById(android.R.id.content),
 							"You've not selected any image to upload.", Snackbar.LENGTH_LONG)
 							.setActionTextColor(Color.RED)
 							.show();
-				} else {
+				} */else {
 					sharedPrefs = new SharedPrefs(getContext());
 					String access_token = sharedPrefs.getKeyAccessTokenShop();
 
@@ -521,8 +522,8 @@ public class EditShopProfileFragment extends Fragment implements EditShopProfile
 
 	@Override
 	public void onEditSuccess() {
-		OfferFragment offerFragment=new OfferFragment();
-		((ShopHomePage)getActivity()).setFragment(offerFragment,"Home");
+		ShopOfferListFragment shopOfferListFragment =new ShopOfferListFragment();
+		((ShopHomePage)getActivity()).setFragment(shopOfferListFragment,"Home");
 
 		ShowShopProfileFragment showShopProfileFragment=new ShowShopProfileFragment();
 		((ShopHomePage)getActivity()).addFragment(showShopProfileFragment,"Home");
