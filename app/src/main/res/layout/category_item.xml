@@ -34,7 +34,7 @@
                     android:id="@+id/categoryView"
                     android:layout_width="match_parent"
                     android:layout_height="160dp"
-                    android:src="@mipmap/ic_launcher" />
+                    android:src="@mipmap/brand_store_logo" />
 
                 <ProgressBar
                     android:id="@+id/imageProgressBar"

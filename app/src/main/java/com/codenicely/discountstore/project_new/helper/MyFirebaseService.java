@@ -82,7 +82,7 @@ public class MyFirebaseService extends FirebaseMessagingService {
                 .setContentIntent(pendingIntent)
                 .setAutoCancel(true)
                 .setSound(defaultSoundUri)
-                .setSmallIcon(R.mipmap.ic_launcher);
+                .setSmallIcon(R.mipmap.brand_store_logo);
 
         Log.d("value of nid", String.valueOf(nid));
 
