@@ -6,6 +6,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -60,7 +61,7 @@ public class ShopOfferAdapter extends RecyclerView.Adapter<ShopOfferAdapter.MyVi
     @Override
     public ShopOfferAdapter.MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
-
+		sharedPrefs=new SharedPrefs(context);
         View view = layoutInflater.inflate(R.layout.shop_offer_item, parent, false);
         return new ShopOfferAdapter.MyViewHolder(view);
 
@@ -71,24 +72,39 @@ public class ShopOfferAdapter extends RecyclerView.Adapter<ShopOfferAdapter.MyVi
         final ShopOfferListDetails shopOfferListDetails = shopOfferListDetailses.get(position);
         holder.title.setText(shopOfferListDetails.getOffer_title());
         holder.validity1.setText(String.valueOf(shopOfferListDetails.getValidity()));
-        holder.validity2.setText(String.valueOf(shopOfferListDetails.getExpiry_date()));
-        holder.description.setText(String.valueOf(shopOfferListDetails.getOffer_description()));
+        holder.validity2.setText(shopOfferListDetails.getExpiry_date());
+        holder.description.setText(shopOfferListDetails.getOffer_description());
+
         holder.edit.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
 
                 //call edit fragment
                 String offer_id_string = String.valueOf(shopOfferListDetails.getOffer_id());
+                String offer_name_string = shopOfferListDetails.getOffer_title();
+                String offer_description_string = shopOfferListDetails.getOffer_description();
+                String offer_image_string = shopOfferListDetails.getOffer_image();
+              //  String year =shopOfferListDetails.get
+
+
                 Fragment fragment = new OfferEditFragment();
                 FragmentManager fm = ((ShopHomePage) context).getSupportFragmentManager();
                 FragmentTransaction ft = fm.beginTransaction();
                 Bundle args = new Bundle();
-                args.putString("offer_id", offer_id_string);
-                fragment.setArguments(args);
+
+				args.putString("offer_id", offer_id_string);
+                args.putString("offer_name", offer_name_string);
+                args.putString("offer_description", offer_description_string);
+                args.putString("offer_image", offer_image_string);
+				Log.d("Name --------------",offer_name_string);
+
+				fragment.setArguments(args);
                 ft.replace(R.id.home_layout, fragment);
                 ft.addToBackStack(null);
                 ft.commit();
                 ((ShopHomePage) context).getSupportActionBar().hide();
+
             }
         });
 
@@ -98,12 +114,10 @@ public class ShopOfferAdapter extends RecyclerView.Adapter<ShopOfferAdapter.MyVi
             public void onClick(View v) {
                 shopOfferListPresenter.delete(sharedPrefs.getKeyAccessTokenShop(), shopOfferListDetails.getOffer_id());
 
-
             }
         });
 
         imageLoader.loadImage(shopOfferListDetails.getOffer_image(), holder.image, holder.imageProgressBar);
-
 
     }
 
@@ -137,9 +151,6 @@ public class ShopOfferAdapter extends RecyclerView.Adapter<ShopOfferAdapter.MyVi
             imageProgressBar = (ProgressBar) itemView.findViewById(R.id.imageProgressBar);
             edit = (Button) itemView.findViewById(R.id.edit);
             delete = (Button) itemView.findViewById(R.id.delete);
-
         }
-
-
     }
 }

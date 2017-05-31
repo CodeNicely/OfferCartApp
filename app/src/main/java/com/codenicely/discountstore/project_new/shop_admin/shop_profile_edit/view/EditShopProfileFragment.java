@@ -16,6 +16,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.CardView;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -125,6 +126,9 @@ public class EditShopProfileFragment extends Fragment implements EditShopProfile
 	@BindView(R.id.progressBar)
 	ProgressBar progressBar;
 
+	@BindView(R.id.toolbar)
+	Toolbar toolbar;
+
 	ImageLoader imageLoader;
 	private Bitmap bitmap;
 	private Uri imageUri = null;
@@ -187,6 +191,17 @@ public class EditShopProfileFragment extends Fragment implements EditShopProfile
 
 		context = getContext();
 		ButterKnife.bind(this, view);
+
+		toolbar.setNavigationIcon(ContextCompat.getDrawable(context,R.drawable.ic_arrow_back_white_24dp));
+
+		toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View view) {
+
+				getActivity().onBackPressed();
+			}
+		});
+
 		progressDialog = new ProgressDialog(context);
 		progressDialog.setMessage("Please wait . . .");
 		progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);

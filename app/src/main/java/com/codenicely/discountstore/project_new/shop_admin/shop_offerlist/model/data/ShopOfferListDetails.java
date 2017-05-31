@@ -7,8 +7,9 @@ package com.codenicely.discountstore.project_new.shop_admin.shop_offerlist.model
 public class ShopOfferListDetails {
 
     String offer_title, offer_description, offer_image,
-               expiry_date;
+               offer_expiry_date;
     int offer_id,validity;
+
     boolean active;
 
     public int getOffer_id() {
@@ -32,20 +33,21 @@ public class ShopOfferListDetails {
     }
 
     public String getExpiry_date() {
-        return expiry_date;
+        return offer_expiry_date;
     }
 
-    public ShopOfferListDetails(String offer_title, String offer_description, String offer_image, String expiry_date, int offer_id, int validity, boolean active) {
-        this.offer_title = offer_title;
-        this.offer_description = offer_description;
-        this.offer_image = offer_image;
-        this.expiry_date = expiry_date;
-        this.offer_id = offer_id;
-        this.validity = validity;
-        this.active = active;
-    }
+	public ShopOfferListDetails(String offer_title, String offer_description, String offer_image,
+			String offer_expiry_date, int offer_id, int validity, boolean active) {
+		this.offer_title = offer_title;
+		this.offer_description = offer_description;
+		this.offer_image = offer_image;
+		this.offer_expiry_date = offer_expiry_date;
+		this.offer_id = offer_id;
+		this.validity = validity;
+		this.active = active;
+	}
 
-    public boolean isActive() {
+	public boolean isActive() {
         return active;
     }
 }

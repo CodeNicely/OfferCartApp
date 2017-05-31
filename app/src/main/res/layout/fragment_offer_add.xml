@@ -44,7 +44,7 @@
                     android:layout_height="wrap_content">
 
                     <EditText
-                        android:id="@+id/name"
+                        android:id="@+id/offer_name"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/offer_name" />
@@ -64,6 +64,15 @@
 
                 </android.support.design.widget.TextInputLayout>
 -->
+<!--
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/offer_expiry"
+    android:text="Offer Validity"
+    />-->
+
+
                 <DatePicker
                     android:layout_width="match_parent"
                     android:id="@+id/offer_expiry"
@@ -107,6 +116,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:maxHeight="250dp"
+                    android:visibility="gone"
                     android:minHeight="100dp"
                     android:padding="8dp"
                     android:src="@drawable/discount_store_logo" />

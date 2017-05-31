@@ -75,7 +75,6 @@
                 android:text="Offer Valid till 30th Nov."
                 android:textColor="@color/accent_light"
                 android:textSize="12dp"
-
                 />
 
             <TextView
@@ -106,7 +105,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="end"
                     android:layout_weight="5"
-                    android:text="EDIT OFFRER"
+                    android:text="EDIT OFFER"
                     android:textColor="@color/white" />
 
                 <Button

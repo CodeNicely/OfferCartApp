@@ -158,6 +158,7 @@ public class ShopLoginFragment extends Fragment implements ShopLoginView{
 		//Something to jump to next activity
 		Intent intent = new Intent(getContext(), ShopHomePage.class);
 		startActivity(intent);
+		onDestroy();
 		}
 
 	public interface OnFragmentInteractionListener {

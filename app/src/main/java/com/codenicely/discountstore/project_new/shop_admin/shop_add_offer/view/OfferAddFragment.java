@@ -28,6 +28,7 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.codenicely.discountstore.project_new.R;
@@ -79,7 +80,7 @@ public class OfferAddFragment extends Fragment implements OfferAddView {
     private String mParam1;
     private String mParam2;
     SharedPrefs sharedPrefs;
-    @BindView(R.id.name)
+    @BindView(R.id.offer_name)
     EditText editTextName;
 
 /*
@@ -107,6 +108,9 @@ public class OfferAddFragment extends Fragment implements OfferAddView {
 
     @BindView(R.id.cardView)
     CardView cardView;
+/*
+	@BindView(R.id.offer_expiry)
+	TextView tvofferExpiry;*/
     @BindView(R.id.offer_expiry)
     DatePicker datePicker;
 
@@ -182,10 +186,9 @@ public class OfferAddFragment extends Fragment implements OfferAddView {
         progressDialog.setIndeterminate(true);
         progressDialog.setCancelable(false);
 
+	//	tvofferExpiry.setOnClickListener(new On);
 
-
-        datePicker.setMinDate(System.currentTimeMillis());
-
+      //  datePicker.setMinDate(System.currentTimeMillis());
         offerAddPresenter = new OfferAddPresenterImpl(this, new RetrofitOfferAddHelper(context));
         cameraButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -212,6 +215,7 @@ public class OfferAddFragment extends Fragment implements OfferAddView {
                 //	String validity = editTextValidity.getText().toString();
                 String description = editTextdescription.getText().toString();
                 //	int  price = Integer.parseInt(editTextprice.getText().toString());
+
                 int year = datePicker.getYear();
                 int month = datePicker.getMonth();
                 int date = datePicker.getDayOfMonth();
@@ -425,7 +429,7 @@ public class OfferAddFragment extends Fragment implements OfferAddView {
     @Override
     public void onOfferAdded() {
 
-
+		getActivity().onBackPressed();
         //Go to home page now.
 
     }
@@ -458,6 +462,7 @@ public class OfferAddFragment extends Fragment implements OfferAddView {
                 //bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), filePath);
                 if (imageUri != null) {
                     bitmap = MediaStore.Images.Media.getBitmap(context.getContentResolver(), imageUri);
+                    imageView.setVisibility(View.VISIBLE);
                     imageView.setImageBitmap(bitmap);
                 }
             } catch (IOException e) {
@@ -470,6 +475,7 @@ public class OfferAddFragment extends Fragment implements OfferAddView {
             imageUri = Uri.fromFile(image);
             try {
                 bitmap = BitmapUtils.filePathToBitmapConverter(UriUtils.uriToFilePathConverter(context, imageUri));
+                imageView.setVisibility(View.VISIBLE);
                 imageView.setImageBitmap(bitmap);
             } catch (IOException e) {
                 e.printStackTrace();

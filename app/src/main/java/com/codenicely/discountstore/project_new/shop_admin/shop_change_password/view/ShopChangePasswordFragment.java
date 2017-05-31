@@ -1,9 +1,12 @@
 package com.codenicely.discountstore.project_new.shop_admin.shop_change_password.view;
 
+import android.annotation.TargetApi;
 import android.content.Context;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +14,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
+import android.widget.Toolbar;
 
 import com.codenicely.discountstore.project_new.R;
 import com.codenicely.discountstore.project_new.helper.SharedPrefs;
@@ -53,6 +57,9 @@ public class ShopChangePasswordFragment extends Fragment implements ShopChangePa
 	ShopChangePasswordPresenter shopChangePasswordPresenter;
 	SharedPrefs sharedPrefs;
 
+	@BindView(R.id.toolbar)
+	android.support.v7.widget.Toolbar toolbar;
+
 	private OnFragmentInteractionListener mListener;
 	/**
 	 * Use this factory method to create a new instance of
@@ -92,6 +99,19 @@ public class ShopChangePasswordFragment extends Fragment implements ShopChangePa
 							 Bundle savedInstanceState) {
 		View view=inflater.inflate(R.layout.fragment_shop_change_password, container, false);
 		ButterKnife.bind(this,view);
+		Context context =getContext();
+
+		toolbar.setNavigationIcon(ContextCompat.getDrawable(context,R.drawable.ic_arrow_back_white_24dp));
+
+		toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View view) {
+
+				getActivity().onBackPressed();
+			}
+		});
+
+
 		shopChangePasswordPresenter=new ShopChangePasswordPresenterImpl(this,new RetrofitShopChangePasswordHelper());
 		sharedPrefs=new SharedPrefs(getContext());
 		loginButton.setOnClickListener(new View.OnClickListener() {

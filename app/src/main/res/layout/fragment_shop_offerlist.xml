@@ -1,15 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
+
+       <!-- <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:minHeight="?attr/actionBarSize"
+            android:navigationIcon="@drawable/ic_arrow_back_white_24dp"
+            android:title="Offers"
+            android:titleTextColor="@color/white"
+            app:navigationIcon="@drawable/ic_arrow_back_white_24dp"
+            app:title="Offers"
+            app:titleTextColor="@color/white" />-->
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        >
 
         <android.support.v4.widget.NestedScrollView
             android:id="@+id/scrollView"
@@ -75,19 +90,26 @@
                     android:id="@+id/recycler_view_shop_offer"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:minHeight="200dp" />
+                    android:minHeight="200dp"
+                    />
 
-                <LinearLayout
-                    android:id="@+id/layout_ad"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:orientation="horizontal"></LinearLayout>
+
 
 
             </LinearLayout>
 
+
         </android.support.v4.widget.NestedScrollView>
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/add_button1"
+            android:layout_margin="16dp"
+            android:clickable="true"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_add_circle_24dp"
+            />
 
         <ProgressBar
             android:id="@+id/progressBar_shop1"
@@ -98,15 +120,5 @@
 
 
     </RelativeLayout>
-
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/add_button1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_margin="16dp"
-        android:clickable="true"
-        android:src="@drawable/ic_add_circle_outline_white_24dp" />
 
 </RelativeLayout>
