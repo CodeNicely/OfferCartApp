@@ -109,7 +109,7 @@ public class ShopRegisterPresenterImpl implements ShopRegisterPresenter {
                     } else {
 						//shopRegisterView.onRegistrationSuccess();
                     }
-
+                    shopRegisterView.showMessage(spotUploadData.getMessage());
                     shopRegisterView.showDialogLoader(false);
                     shopRegisterView.showLoader(false);
 

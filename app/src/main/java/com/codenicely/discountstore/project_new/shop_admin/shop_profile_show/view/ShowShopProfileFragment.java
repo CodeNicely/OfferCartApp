@@ -213,17 +213,23 @@ public class ShowShopProfileFragment extends Fragment implements ShowShopProfile
 		description=shopProfileData.getShop_description();
 		address=shopProfileData.getShop_address();
 		city=shopProfileData.getCity();
-		category=shopProfileData.getCity();
+		category=shopProfileData.getShop_category();
 		image=shopProfileData.getImage();
 
 		progressBar1.setVisibility(View.VISIBLE);
 		imageLoader.loadImage(shopProfileData.getImage(), imageView, progressBar1);
-		textViewShopName.setText(name);
-		textViewShopDescription.setText(description);
-		textViewShopAddress.setText(address);
-		textViewShopPhoneNo.setText(shopProfileData.getMobile_number());
-		textViewShopCategory.setText(category);
-		textViewShopCity.setText(city);
+		textViewShopName.setText("Name: ");
+		textViewShopName.append(name);
+		textViewShopDescription.setText("Description: ");
+		textViewShopDescription.append(description);
+		textViewShopAddress.setText("Address: ");
+		textViewShopAddress.append(address);
+		textViewShopPhoneNo.setText("Mobile number: ");
+		textViewShopPhoneNo.append(shopProfileData.getMobile_number());
+		textViewShopCategory.setText("Category: ");
+		textViewShopCategory.append(category);
+		textViewShopCity.setText("City: ");
+		textViewShopCity.append(city);
 	}
 
 	/**

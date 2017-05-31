@@ -6,7 +6,7 @@
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="jar://$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1/caches/modules-2/files-2.1/de.keyboardsurfer.android.widget/crouton/1.8.5/368f18883b398d7ee334ca3e6c43cf182b2058e2/crouton-1.8.5-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/de.keyboardsurfer.android.widget/crouton/1.8.5/368f18883b398d7ee334ca3e6c43cf182b2058e2/crouton-1.8.5-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

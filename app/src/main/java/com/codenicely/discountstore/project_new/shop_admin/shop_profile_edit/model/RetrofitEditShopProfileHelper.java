@@ -89,7 +89,6 @@ public class RetrofitEditShopProfileHelper implements EditShopProfileHelper {
 					address1,category1,city1,image);
 		}
 
-
 		return null;
 	}
 
