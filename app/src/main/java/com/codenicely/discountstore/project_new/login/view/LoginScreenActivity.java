@@ -171,7 +171,6 @@ public class LoginScreenActivity extends Activity implements LoginScreenView {
         Intent in = new Intent(LoginScreenActivity.this, OtpViewImpl.class);
         in.putExtra("mobile", mobile1);
         startActivity(in);
-        finish();
     }
 
     @Override

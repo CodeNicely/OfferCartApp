@@ -15,6 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:title="Edit Shop Profile"
+        android:background="@color/color_shop_primary"
         app:titleTextColor="@color/white" />
 
 </android.support.design.widget.AppBarLayout>

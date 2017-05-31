@@ -8,7 +8,7 @@ public class ShopOfferListDetails {
 
     String offer_title, offer_description, offer_image,
                offer_expiry_date;
-    int offer_id,validity;
+    int offer_id,offer_validity_days;
 
     boolean active;
 
@@ -25,7 +25,7 @@ public class ShopOfferListDetails {
     }
 
     public int getValidity() {
-        return validity;
+        return offer_validity_days;
     }
 
     public String getOffer_image() {
@@ -43,7 +43,7 @@ public class ShopOfferListDetails {
 		this.offer_image = offer_image;
 		this.offer_expiry_date = offer_expiry_date;
 		this.offer_id = offer_id;
-		this.validity = validity;
+		this.offer_validity_days = validity;
 		this.active = active;
 	}
 

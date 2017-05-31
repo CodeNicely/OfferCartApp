@@ -5,18 +5,25 @@
     <color name="colorAccent1">#08415C</color>
     <color name="colorAccent">#153243</color>
     -->
+
+    <!--User Colors-->
+    <color name="colorPrimaryCustomer">#15D5B0</color>
+    <color name="colorAccentCustomer">#032236</color>
+    <color name="colorPrimaryDarkCustomer">#12AF91</color>
+
+    <!--Shop Colors-->
+
     <color name="colorAccentButton2">#01B0FA</color>
 
     <color name="color_shop_accent">#FFFFFF</color>
     <color name="colorAccent">#032236</color>
-    <color name="colorPrimaryDark">#122937</color>
+    <color name="colorPrimaryDark">#12AF91</color>
     <color name="colorPrimary">#15D5B0</color>
     <color name="color_shop_primary">#6DC5E9</color>
 
     <color name="accent_light">#6A7C87</color>
 
     <color name="codeNicelyColor">#52A795</color>
-
 
 
     <!-- Screens background color-->

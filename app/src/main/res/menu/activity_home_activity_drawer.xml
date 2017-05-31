@@ -10,21 +10,20 @@
             android:id="@+id/nav_changeCity"
             android:icon="@drawable/ic_location_on_black_24dp"
             android:title="Change City" />
-        <item
+        <!--<item
             android:id="@+id/nav_wallet"
             android:icon="@drawable/ic_account_balance_wallet_black_24dp"
             android:title="Wallet" />
-
+-->
 
         <item
             android:id="@+id/nav_my_orders"
             android:icon="@drawable/ic_order_history_black_24dp"
-            android:title="My Orders" />
+            android:title="My Offers" />
 
         <item
             android:id="@+id/nav_contact_us"
             android:icon="@drawable/ic_contact_phone_black_24dp"
-            android:title="Contact Us" />
             android:title="Contact Us" />
 
         <item

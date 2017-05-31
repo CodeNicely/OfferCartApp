@@ -26,7 +26,7 @@ import com.codenicely.discountstore.project_new.contact_us.view.ContactUsFragmen
 import com.codenicely.discountstore.project_new.developers.view.DeveloperFragment;
 import com.codenicely.discountstore.project_new.helper.Keys;
 import com.codenicely.discountstore.project_new.helper.SharedPrefs;
-import com.codenicely.discountstore.project_new.my_orders.view.MyOrdersFragment;
+import com.codenicely.discountstore.project_new.my_offers.view.MyOrdersFragment;
 import com.codenicely.discountstore.project_new.offer.view.OfferFragment;
 import com.codenicely.discountstore.project_new.shops.view.ShopFragment;
 import com.codenicely.discountstore.project_new.wallet.view.WalletFragment;
@@ -168,12 +168,6 @@ public class HomePage extends AppCompatActivity
 
         } else if (id == R.id.nav_changeCity) {
             addFragment(new CityFragment(), "Select City");
-            getSupportActionBar().hide();
-
-        } else if (id == R.id.nav_wallet) {
-
-
-            addFragment(new WalletFragment(), "Wallet");
             getSupportActionBar().hide();
 
         } else if (id == R.id.nav_my_orders) {

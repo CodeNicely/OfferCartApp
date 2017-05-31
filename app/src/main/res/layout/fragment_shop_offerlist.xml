@@ -59,7 +59,7 @@
                             android:gravity="center"
                             android:hint="Shop Name "
                             android:padding="4dp"
-                            android:textColor="@color/color_shop_accent"
+                            android:textColor="@color/color_shop_primary"
                             android:textSize="24dp"
                             android:textStyle="bold" />
 
@@ -69,7 +69,7 @@
                             android:layout_height="79dp"
                             android:gravity="center"
                             android:padding="4dp"
-                            android:textColor="@color/color_shop_accent"
+                            android:textColor="@color/color_shop_primary"
                             android:textSize="24dp" />
 
 
@@ -96,15 +96,9 @@
                     android:layout_height="wrap_content"
                     android:minHeight="200dp"
                     />
-
-
-
-
             </LinearLayout>
 
-
         </android.support.v4.widget.NestedScrollView>
-
 
         <android.support.design.widget.FloatingActionButton
             android:layout_width="wrap_content"
@@ -115,7 +109,6 @@
             android:layout_alignParentBottom="true"
             android:layout_alignParentRight="true"
             android:src="@drawable/ic_add_circle_white_48dp"
-            app:backgroundTint="@color/color_shop_accent"
             />
 
         <ProgressBar

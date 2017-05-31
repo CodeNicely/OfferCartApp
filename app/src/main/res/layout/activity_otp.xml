@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/customer_background"
-    >
+    android:background="@color/colorPrimaryCustomer">
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/transparent"
-        >
+        android:background="@color/transparent">
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
@@ -23,18 +22,23 @@
             app:title="@string/veryfy_otp"
             app:titleTextColor="@color/white" />
     </android.support.design.widget.AppBarLayout>
-<ScrollView
-    android:layout_below="@+id/appBarLayout"
-    android:id="@+id/scrollView"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-    <android.support.v7.widget.CardView
 
+    <ScrollView
+        android:id="@+id/scrollView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="12dp"
-        app:cardCornerRadius="8dp"
-        app:contentPadding="8dp">
+        android:layout_below="@+id/appBarLayout"
+        android:padding="12dp">
+        <!--
+
+                <android.support.v7.widget.CardView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12dp"
+                    app:cardCornerRadius="8dp"
+                    app:contentPadding="8dp">
+        -->
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -42,47 +46,59 @@
             android:orientation="vertical">
 
             <TextView
-                android:text="@string/otp_screen_description"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:padding="8dp"
-                android:textColor="@color/accent_light"
-                />
+                android:text="@string/otp_screen_description"
+                android:textColor="@color/white" />
 
-            <EditText
-                android:id="@+id/editText"
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/white"
+                app:hintTextAppearance="@color/white"
+                tools:targetApi="lollipop"
+                android:padding="12dp"
+                >
+
+                <EditText
+                    android:id="@+id/editText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:hint="@string/otp"
+                    android:inputType="number"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="@dimen/large_text_size"
+                    android:theme="@style/EditTextTheme" />
+            </android.support.design.widget.TextInputLayout>
+
+            <Button
+                android:layout_margin="12dp"
+                android:id="@+id/button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:ems="6"
-                android:focusable="true"
-                android:gravity="center"
-                android:hint="6 Digit OTP"
-                android:inputType="phone"
-                android:maxLength="6"
-                android:textSize="@dimen/large_text_size" />
-
-
-            <Button
-                android:id="@+id/button"
-                style="@style/Base.Widget.AppCompat.Button.Colored"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="submit"
-                android:enabled="true"
+                android:background="@drawable/button_customer"
                 android:clickable="true"
+                android:enabled="true"
+                android:gravity="center"
+                android:text="submit"
+                android:textColor="@color/white"
 
                 />
         </LinearLayout>
-    </android.support.v7.widget.CardView>
-</ScrollView>
+        <!--</android.support.v7.widget.CardView>-->
+    </ScrollView>
+
     <ProgressBar
 
-        android:layout_below="@+id/scrollView"
         android:id="@+id/progressBarView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/scrollView"
         android:layout_centerHorizontal="true"
         android:layout_gravity="center"
         android:visibility="gone" />
