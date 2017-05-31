@@ -46,7 +46,7 @@ public class ShopOtpFragment extends Fragment implements ShopOtpView {
     private OnFragmentInteractionListener mListener;
     ShopOtpPresenter shopOtpPresenter;
 
-    @BindView(R.id.editText)
+    @BindView(R.id.editTextOtp)
     EditText otpEditText;
     @BindView(R.id.progressBarView)
     ProgressBar progressBar;

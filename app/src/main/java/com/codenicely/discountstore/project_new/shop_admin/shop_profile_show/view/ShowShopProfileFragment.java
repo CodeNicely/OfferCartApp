@@ -218,17 +218,17 @@ public class ShowShopProfileFragment extends Fragment implements ShowShopProfile
 
 		progressBar1.setVisibility(View.VISIBLE);
 		imageLoader.loadImage(shopProfileData.getImage(), imageView, progressBar1);
-		textViewShopName.setText("Name: ");
+		textViewShopName.setText("Name          : ");
 		textViewShopName.append(name);
-		textViewShopDescription.setText("Description: ");
+		textViewShopDescription.setText("Description   : ");
 		textViewShopDescription.append(description);
-		textViewShopAddress.setText("Address: ");
+		textViewShopAddress.setText("Address       : ");
 		textViewShopAddress.append(address);
-		textViewShopPhoneNo.setText("Mobile number: ");
+		textViewShopPhoneNo.setText("Mobile number : ");
 		textViewShopPhoneNo.append(shopProfileData.getMobile_number());
-		textViewShopCategory.setText("Category: ");
+		textViewShopCategory.setText("Category      : ");
 		textViewShopCategory.append(category);
-		textViewShopCity.setText("City: ");
+		textViewShopCity.setText("City          : ");
 		textViewShopCity.append(city);
 	}
 

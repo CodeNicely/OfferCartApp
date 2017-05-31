@@ -7,11 +7,11 @@
     -->
     <color name="colorAccentButton2">#01B0FA</color>
 
-    <color name="colorAccent2">#FFFFFF</color>
+    <color name="color_shop_accent">#FFFFFF</color>
     <color name="colorAccent">#032236</color>
     <color name="colorPrimaryDark">#122937</color>
     <color name="colorPrimary">#15D5B0</color>
-    <color name="colorPrimary2">#6DC5E9</color>
+    <color name="color_shop_primary">#6DC5E9</color>
 
     <color name="accent_light">#6A7C87</color>
 

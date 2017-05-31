@@ -249,10 +249,10 @@ public class ShopRegisterFragment extends Fragment implements ShopRegisterView {
                 } else if (!confirm_password.contentEquals(password)) {
                     confirm_password_edittext.setError("Passwords don't match");
                     confirm_password_edittext.requestFocus();
-                } else if (description.equals("") || description.equals(null)) {
+                }/* else if (description.equals("") || description.equals(null)) {
                     description_edittext.setError("Please enter shop description");
                     description_edittext.requestFocus();
-                } else if (address.equals("") || address.equals(null)) {
+                } */else if (address.equals("") || address.equals(null)) {
                     description_edittext.setError("Please enter shop address");
                     description_edittext.requestFocus();
                 } else if (category.equals(SELECT_CATEGORY)) {

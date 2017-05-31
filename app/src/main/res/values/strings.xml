@@ -15,7 +15,7 @@
     <string name="developers">CodeNicely</string>
     <string name="login_lable">Login</string>
     <string name="veryfy_otp">Verify Otp</string>
-    <string name="otp_screen_description">We have sent you a 6 digit Otp . \n Please enter the otp in the Space given below to verify your mobile.</string>
+    <string name="otp_screen_description">We have sent you a 4 digit Otp . \n Please enter the otp in the Space given below to verify your mobile.</string>
     <string name="login_description">One time Login to access all our Amazing Services!</string>
     <string name="banner_city_screen">ca-app-pub-7676088497515789/8311996957</string>
     <string name="banner_orders_screen">ca-app-pub-7676088497515789/9788730156</string>
@@ -59,7 +59,7 @@
     <string name="full_name">Full Name</string>
     <string name="mobile_no">Mobile No</string>
     <string name="email_id">Email id</string>
-    <string name="shop_login_textview">S h o p  L o g i n</string>
+    <string name="shop_login_textview">Shop \t Login</string>
     <string name="shop_signup_textview">S i g n U p</string>
 
 </resources>

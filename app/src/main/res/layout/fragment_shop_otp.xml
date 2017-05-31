@@ -2,35 +2,52 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 xmlns:app="http://schemas.android.com/apk/res-auto"
                 android:layout_width="match_parent"
+                android:background="@color/color_shop_primary"
                 android:layout_height="match_parent">
 
-    <android.support.design.widget.AppBarLayout
-        android:id="@+id/appBarLayout"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@color/color_shop_primary"
+        android:id="@+id/linearlayout"
+        android:layout_margin="30dp"
+        android:layout_marginTop="-30dp"
+        android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textAllCaps="true"
+        android:gravity="center"
+        android:textColor="@color/color_shop_accent"
+        android:text="Verify Otp"
+        android:textSize="@dimen/medium_text_size"
+        android:layout_marginTop="10dp"
+        android:layout_margin="20dp"
+        />
 
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
+    <!--
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appBarLayout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="?attr/selectableItemBackground"
-            android:navigationIcon="@drawable/ic_arrow_back_white_24dp"
-            app:navigationIcon="@drawable/ic_arrow_back_white_24dp"
-            app:title="@string/veryfy_otp"
-            app:titleTextColor="@color/white" />
-    </android.support.design.widget.AppBarLayout>
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:navigationIcon="@drawable/ic_arrow_back_white_24dp"
+                app:navigationIcon="@drawable/ic_arrow_back_white_24dp"
+                app:title="@string/veryfy_otp"
+                app:titleTextColor="@color/white" />
+        </android.support.design.widget.AppBarLayout>
+    -->
+
+
     <ScrollView
-        android:layout_below="@+id/appBarLayout"
         android:id="@+id/scrollView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <android.support.v7.widget.CardView
-
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="12dp"
-            app:cardCornerRadius="8dp"
-            app:contentPadding="8dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -45,50 +62,52 @@
                     android:padding="8dp"
                     android:textColor="@color/accent_light"
                     />
-
-
                 <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
+                    android:textColorHint="@color/color_shop_accent"
+                    app:hintTextAppearance="@style/EditTextLayoutTheme"
                     android:layout_height="wrap_content">
 
                     <EditText
-                        android:id="@+id/editText"
-                        android:layout_width="wrap_content"
+                        android:id="@+id/editTextOtp"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:ems="6"
-                        android:focusable="true"
-                        android:gravity="center"
-                        android:hint="6 Digit OTP"
+                        android:hint="Please enter OTP to continue"
                         android:inputType="phone"
-                        android:maxLength="6"
-                        android:textSize="@dimen/large_text_size"
+                        android:textColor="@color/color_shop_accent"
+                        android:textColorHint="@color/color_shop_accent"
+                        android:theme="@style/EditTextTheme"
+                        android:maxLength="10"
+                        android:textSize="@dimen/small_text_size"
                         />
 
                 </android.support.design.widget.TextInputLayout>
-
                 <Button
                     android:id="@+id/button"
                     style="@style/Base.Widget.AppCompat.Button.Colored"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="submit"
+                    android:layout_gravity="center"
+                    android:layout_margin="12dp"
                     android:enabled="true"
                     android:clickable="true"
+                    android:text="Submit"
+                    android:textColor="@color/color_shop_accent"
+                    android:background="@drawable/shop_sign_up_button"
 
                     />
             </LinearLayout>
-        </android.support.v7.widget.CardView>
     </ScrollView>
+    </LinearLayout>
+
     <ProgressBar
 
-        android:layout_below="@+id/scrollView"
+        android:layout_below="@+id/linearlayout"
         android:id="@+id/progressBarView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_gravity="center"
         android:visibility="gone" />
-
 
 </RelativeLayout>
