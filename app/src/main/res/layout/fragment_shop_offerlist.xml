@@ -81,7 +81,7 @@
                             android:layout_gravity="center"
                             android:layout_margin="12dp"
                             android:text="@string/add_subscription"
-                            android:textColor="@color/color_shop_accent"
+                            android:textColor="@color/white_line"
                             android:background="@drawable/shop_sign_up_button"
 
                             />

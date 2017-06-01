@@ -106,16 +106,18 @@ public class OfferAddFragment extends Fragment implements OfferAddView {
     @BindView(R.id.registerOffer)
     Button registerButton;
 
-    @BindView(R.id.cardView)
-    CardView cardView;
+/*    @BindView(R.id.cardView)
+    CardView cardView;*/
 /*
 	@BindView(R.id.offer_expiry)
 	TextView tvofferExpiry;*/
     @BindView(R.id.offer_expiry)
     DatePicker datePicker;
 
+/*
     @BindView(R.id.toolbar)
     Toolbar toolbar;
+*/
 
     private ProgressDialog progressDialog;
     private static final String TAG = "OfferEditFragment";
@@ -170,15 +172,15 @@ public class OfferAddFragment extends Fragment implements OfferAddView {
 
         ButterKnife.bind(this, view);
 
-        toolbar.setNavigationIcon(ContextCompat.getDrawable(context,R.drawable.ic_arrow_back_white_24dp));
-
+        //toolbar.setNavigationIcon(ContextCompat.getDrawable(context,R.drawable.ic_arrow_back_white_24dp));
+/*
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                 getActivity().onBackPressed();
             }
-        });
+        });*/
 
         progressDialog = new ProgressDialog(context);
         progressDialog.setMessage("Please wait . . .");
@@ -282,10 +284,10 @@ public class OfferAddFragment extends Fragment implements OfferAddView {
     public void showLoader(boolean show) {
         if (show) {
             progressBar.setVisibility(View.VISIBLE);
-            cardView.setVisibility(View.GONE);
+           // cardView.setVisibility(View.GONE);
         } else {
             progressBar.setVisibility(View.GONE);
-            cardView.setVisibility(View.VISIBLE);
+           // cardView.setVisibility(View.VISIBLE);
         }
 
     }

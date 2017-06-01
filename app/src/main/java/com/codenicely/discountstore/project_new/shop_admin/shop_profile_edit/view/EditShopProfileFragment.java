@@ -102,9 +102,11 @@ public class EditShopProfileFragment extends Fragment implements EditShopProfile
 
 	@BindView(R.id.name)
 	EditText name_edittext;
+/*
 
 	@BindView(R.id.mobile)
 	TextView mobile_textview;
+*/
 
 	@BindView(R.id.description)
 	EditText description_edittext;

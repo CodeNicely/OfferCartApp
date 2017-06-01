@@ -26,14 +26,14 @@
             android:gravity="center"
             android:text="@string/shop_signup_textview"
             android:textAllCaps="true"
-            android:textColor="@color/color_shop_accent"
+            android:textColor="@color/white_line"
             android:textSize="@dimen/medium_text_size" />
 
         <ScrollView
             android:id="@+id/scrollView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/colorAccent">
+            android:background="@color/color_shop_primary">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -46,7 +46,7 @@
                 <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColorHint="@color/color_shop_accent"
+                    android:textColorHint="@color/white_line"
                     app:hintTextAppearance="@style/EditTextLayoutTheme">
 
                     <EditText
@@ -54,15 +54,16 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/hint_name"
-                        android:textColor="@color/color_shop_accent"
-                        android:textColorHint="@color/color_shop_accent"
-                        android:theme="@style/EditTextTheme" />
+                        android:textColor="@color/white_line"
+                        android:textColorHint="@color/white_line"
+                        android:theme="@style/EditTextTheme"
+                        />
                 </android.support.design.widget.TextInputLayout>
 
                 <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColorHint="@color/color_shop_accent"
+                    android:textColorHint="@color/white_line"
                     app:hintTextAppearance="@style/EditTextLayoutTheme">
 
                     <EditText
@@ -72,8 +73,8 @@
                         android:hint="@string/hint_mobile"
                         android:inputType="phone"
                         android:maxLength="10"
-                        android:textColor="@color/color_shop_accent"
-                        android:textColorHint="@color/color_shop_accent"
+                        android:textColor="@color/white_line"
+                        android:textColorHint="@color/white_line"
                         android:theme="@style/EditTextTheme" />
 
                 </android.support.design.widget.TextInputLayout>
@@ -81,7 +82,7 @@
                 <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColorHint="@color/color_shop_accent"
+                    android:textColorHint="@color/white_line"
                     app:hintTextAppearance="@style/EditTextLayoutTheme">
 
                     <EditText
@@ -90,8 +91,8 @@
                         android:layout_height="wrap_content"
                         android:hint="@string/password"
                         android:inputType="textPassword"
-                        android:textColor="@color/color_shop_accent"
-                        android:textColorHint="@color/color_shop_accent"
+                        android:textColor="@color/white_line"
+                        android:textColorHint="@color/white_line"
                         android:theme="@style/EditTextTheme" />
 
                 </android.support.design.widget.TextInputLayout>
@@ -99,7 +100,7 @@
                 <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColorHint="@color/color_shop_accent"
+                    android:textColorHint="@color/white_line"
                     app:hintTextAppearance="@style/EditTextLayoutTheme">
 
                     <EditText
@@ -108,8 +109,8 @@
                         android:layout_height="wrap_content"
                         android:hint="@string/confirm_password"
                         android:inputType="textPassword"
-                        android:textColor="@color/color_shop_accent"
-                        android:textColorHint="@color/color_shop_accent"
+                        android:textColor="@color/white_line"
+                        android:textColorHint="@color/white_line"
                         android:theme="@style/EditTextTheme" />
 
                 </android.support.design.widget.TextInputLayout>
@@ -117,7 +118,7 @@
                 <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColorHint="@color/color_shop_accent"
+                    android:textColorHint="@color/white_line"
                     app:hintTextAppearance="@style/EditTextLayoutTheme">
 
                     <EditText
@@ -127,8 +128,8 @@
                         android:gravity="start"
                         android:hint="@string/description"
                         android:minHeight="100dp"
-                        android:textColor="@color/color_shop_accent"
-                        android:textColorHint="@color/color_shop_accent"
+                        android:textColor="@color/white_line"
+                        android:textColorHint="@color/white_line"
                         android:theme="@style/EditTextTheme" />
 
                 </android.support.design.widget.TextInputLayout>
@@ -137,7 +138,7 @@
                 <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColorHint="@color/color_shop_accent"
+                    android:textColorHint="@color/white_line"
                     app:hintTextAppearance="@style/EditTextLayoutTheme">
 
                     <EditText
@@ -145,8 +146,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/hint_email"
-                        android:textColor="@color/color_shop_accent"
-                        android:textColorHint="@color/color_shop_accent"
+                        android:textColor="@color/white_line"
+                        android:textColorHint="@color/white_line"
                         android:theme="@style/EditTextTheme" />
 
                 </android.support.design.widget.TextInputLayout>
@@ -156,13 +157,13 @@
                     android:id="@+id/category_spinner"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:backgroundTint="@color/color_shop_accent" />
+                    android:backgroundTint="@color/white_line" />
 
                 <Spinner
                     android:id="@+id/city_spinner"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:backgroundTint="@color/color_shop_accent" />
+                    android:backgroundTint="@color/white_line" />
 
 
                 <ImageView
@@ -189,7 +190,7 @@
                         android:layout_weight="5"
                         android:background="@drawable/shop_sign_up_button"
                         android:text="@string/select_images_gallery"
-                        android:textColor="@color/color_shop_accent"
+                        android:textColor="@color/white_line"
 
                         />
 
@@ -203,7 +204,7 @@
                         android:background="@drawable/shop_sign_up_button"
                         android:text="@string/take_picture"
 
-                        android:textColor="@color/color_shop_accent" />
+                        android:textColor="@color/white_line" />
 
                 </LinearLayout>
 
@@ -217,7 +218,7 @@
                     android:layout_margin="12dp"
                     android:background="@drawable/shop_sign_up_button"
                     android:text="@string/register_shop"
-                    android:textColor="@color/color_shop_accent"
+                    android:textColor="@color/white_line"
 
                     />
 

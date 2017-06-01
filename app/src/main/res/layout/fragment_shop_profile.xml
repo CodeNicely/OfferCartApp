@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:background="@color/color_shop_primary"
                 xmlns:card_view="http://schemas.android.com/tools"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:baselineAligned="false"
                 android:orientation="vertical">
+<!--
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/appBarLayout"
@@ -22,11 +24,48 @@
 
         </android.support.v7.widget.Toolbar>
     </android.support.design.widget.AppBarLayout>
+-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:orientation="vertical"
+        android:padding="4dp">
 
-    <ScrollView
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="20"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_weight="4"
+                android:src="@drawable/ic_arrow_back_white_48dp"
+                android:layout_height="match_parent"/>
+            <TextView
+        android:layout_width="match_parent"
+        android:layout_weight="12"
+        android:layout_height="50dp"
+
+        android:gravity="center"
+        android:text="Shop Profile"
+        android:textAllCaps="true"
+        android:textColor="@color/white_line"
+        android:textSize="@dimen/medium_text_size" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_weight="4"
+                android:src="@drawable/ic_border_color_white_48dp"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+
+        <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/appBarLayout">
+<!--
 
         <android.support.v7.widget.CardView
             android:layout_width="fill_parent"
@@ -36,6 +75,7 @@
             app:cardBackgroundColor="#00998899"
             card_view:cardCornerRadius="8dp"
             card_view:contentPadding="8dp">
+-->
 
             <LinearLayout
                 android:id="@+id/contactUsLayout"
@@ -58,12 +98,12 @@
                         android:id="@+id/imageView"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:minHeight="250dp"
+                        android:maxHeight="400dp"
                         android:contentDescription="@string/shop_image"
-                        android:maxHeight="250dp"
-                        android:minHeight="100dp"
-                        android:padding="8dp"
-                        android:src="@mipmap/brand_store_logo"
-                        />
+                        android:src="@drawable/brand_store_logo_white" />
+
+
 
                 </RelativeLayout>
 
@@ -74,7 +114,7 @@
                     android:padding="4dp"
                     android:textSize="16dp"
                     android:id="@+id/shop_name"
-                    android:textColor="@color/colorAccent"
+                    android:textColor="@color/white_line"
                     />
                 <TextView
                     android:layout_width="match_parent"
@@ -83,7 +123,7 @@
                     android:padding="4dp"
                     android:textSize="16dp"
                     android:id="@+id/shop_description"
-                    android:textColor="@color/colorAccent"
+                    android:textColor="@color/white_line"
                     />
 
 
@@ -95,7 +135,7 @@
                     android:padding="4dp"
                     android:textSize="16dp"
                     android:id="@+id/phone_number"
-                    android:textColor="@color/colorAccent"
+                    android:textColor="@color/white_line"
                     />
 
 
@@ -106,7 +146,7 @@
                     android:padding="4dp"
                     android:textSize="16dp"
                     android:id="@+id/shop_address"
-                    android:textColor="@color/colorAccent"
+                    android:textColor="@color/white_line"
                     />
 
 
@@ -117,7 +157,7 @@
                     android:padding="4dp"
                     android:textSize="16dp"
                     android:id="@+id/shop_category"
-                    android:textColor="@color/colorAccent"
+                    android:textColor="@color/white_line"
                     />
 
                 <TextView
@@ -127,7 +167,7 @@
                     android:padding="4dp"
                     android:textSize="16dp"
                     android:id="@+id/shop_city"
-                    android:textColor="@color/colorAccent"
+                    android:textColor="@color/white_line"
                     />
 
                 <Button
@@ -140,10 +180,11 @@
                     android:text="Edit Shop Profile"
                     android:textAllCaps="false"/>
 
-            </LinearLayout>
-        </android.support.v7.widget.CardView>
+            </LinearLayout><!--
+        </android.support.v7.widget.CardView>-->
 
     </ScrollView>
+    </LinearLayout>
 
     <ProgressBar
         android:id="@+id/progressBar"

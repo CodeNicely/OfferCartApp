@@ -72,9 +72,9 @@ public class ShowShopProfileFragment extends Fragment implements ShowShopProfile
 	@BindView(R.id.edit_profile_btn)
 	Button buttonEditProfile;
 
-	@BindView(R.id.toolbar)
+	/*@BindView(R.id.toolbar)
 	Toolbar toolbar;
-
+*/
 	ShowShopProfilePresenter shopProfilePresenter;
 	private ImageLoader imageLoader;
 	SharedPrefs sharedPrefs;
@@ -125,7 +125,7 @@ public class ShowShopProfileFragment extends Fragment implements ShowShopProfile
 		ButterKnife.bind(this,v);
 
 		Context context =getContext();
-		toolbar.setNavigationIcon(ContextCompat.getDrawable(context,R.drawable.ic_arrow_back_white_24dp));
+	/*	toolbar.setNavigationIcon(ContextCompat.getDrawable(context,R.drawable.ic_arrow_back_white_24dp));
 
 		toolbar.setNavigationOnClickListener(new View.OnClickListener() {
 			@Override
@@ -135,7 +135,7 @@ public class ShowShopProfileFragment extends Fragment implements ShowShopProfile
 			}
 		});
 		toolbar.inflateMenu(R.menu.shop_show_profile);
-
+*/
 		progressBar.setVisibility(View.GONE);
 
 
