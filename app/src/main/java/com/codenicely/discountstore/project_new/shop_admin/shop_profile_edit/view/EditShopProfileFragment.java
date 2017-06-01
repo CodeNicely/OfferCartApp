@@ -102,9 +102,11 @@ public class EditShopProfileFragment extends Fragment implements EditShopProfile
 
 	@BindView(R.id.name)
 	EditText name_edittext;
+/*
 
 	@BindView(R.id.mobile)
 	TextView mobile_textview;
+*/
 
 	@BindView(R.id.description)
 	EditText description_edittext;
@@ -121,14 +123,20 @@ public class EditShopProfileFragment extends Fragment implements EditShopProfile
 	@BindView(R.id.imageView)
 	ImageView imageView;
 
+/*
 	@BindView(R.id.cardView)
 	CardView cardView;
+*/
 
 	@BindView(R.id.progressBar)
 	ProgressBar progressBar;
 
-	@BindView(R.id.toolbar)
-	Toolbar toolbar;
+/*	@BindView(R.id.toolbar)
+	Toolbar toolbar;*/
+
+	@BindView(R.id.backButton)
+	ImageView backButton;
+
 
 	ImageLoader imageLoader;
 	private Bitmap bitmap;
@@ -193,7 +201,7 @@ public class EditShopProfileFragment extends Fragment implements EditShopProfile
 		context = getContext();
 		ButterKnife.bind(this, view);
 
-		toolbar.setNavigationIcon(ContextCompat.getDrawable(context,R.drawable.ic_arrow_back_white_24dp));
+		/*toolbar.setNavigationIcon(ContextCompat.getDrawable(context,R.drawable.ic_arrow_back_white_24dp));
 
 		toolbar.setNavigationOnClickListener(new View.OnClickListener() {
 			@Override
@@ -203,13 +211,20 @@ public class EditShopProfileFragment extends Fragment implements EditShopProfile
 			}
 		});
 
+*/backButton.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				getActivity().onBackPressed();
+			}
+		});
+
 		progressDialog = new ProgressDialog(context);
 		progressDialog.setMessage("Please wait . . .");
 		progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
 		progressDialog.setIndeterminate(true);
 		progressDialog.setCancelable(false);
-		city_array_adapter = new ArrayAdapter<>(context, android.R.layout.simple_list_item_1);
-		category_array_adapter = new ArrayAdapter<>(context, android.R.layout.simple_list_item_1);
+		city_array_adapter = new ArrayAdapter<>(context, R.layout.spinner_item);
+		category_array_adapter = new ArrayAdapter<>(context, R.layout.spinner_item);
 
 
 		city_array_adapter.add(SELECT_CITY);
@@ -347,10 +362,10 @@ public class EditShopProfileFragment extends Fragment implements EditShopProfile
 
 		if (show) {
 			progressBar.setVisibility(View.VISIBLE);
-			cardView.setVisibility(View.GONE);
+		//	cardView.setVisibility(View.GONE);
 		} else {
 			progressBar.setVisibility(View.GONE);
-			cardView.setVisibility(View.VISIBLE);
+		//	cardView.setVisibility(View.VISIBLE);
 		}
 
 	}

@@ -58,6 +58,9 @@ public class Urls {
     //shop_change_password
     public static final String SHOP_CHANGE_PASSWORD = "change_password/";
 
+	//shop_forgot_password
+	public static final String SHOP_FORGOT_PASSWORD = "forgot_password/";
+
     //shop_profile_show
     public static final String REQUEST_SHOP_PROFILE = "my_shop_profile/";
 

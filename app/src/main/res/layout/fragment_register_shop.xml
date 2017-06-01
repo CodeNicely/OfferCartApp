@@ -16,6 +16,39 @@
         android:layout_height="wrap_content"
         android:layout_margin="4dp"
         android:orientation="vertical"
+        android:id="@+id/linearlayout"
+
+        android:padding="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="20"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_weight="4"
+            android:id="@+id/backButton"
+            android:src="@drawable/ic_arrow_back_white_24dp"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_weight="16"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="Sign Up"
+            android:textAllCaps="true"
+            android:textColor="@color/white_line"
+            android:textSize="18dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:orientation="vertical"
         android:padding="4dp">
 
         <TextView
@@ -26,14 +59,14 @@
             android:gravity="center"
             android:text="@string/shop_signup_textview"
             android:textAllCaps="true"
-            android:textColor="@color/while_line"
+            android:textColor="@color/white_line"
             android:textSize="@dimen/medium_text_size" />
 
         <ScrollView
             android:id="@+id/scrollView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/colorAccent">
+            android:background="@color/color_shop_primary">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -46,7 +79,7 @@
                 <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColorHint="@color/color_shop_accent"
+                    android:textColorHint="@color/white_line"
                     app:hintTextAppearance="@style/EditTextLayoutTheme">
 
                     <EditText
@@ -54,15 +87,16 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/hint_name"
-                        android:textColor="@color/while_line"
-                        android:textColorHint="@color/while_line"
-                        android:theme="@style/EditTextTheme" />
+                        android:textColor="@color/white_line"
+                        android:textColorHint="@color/white_line"
+                        android:theme="@style/EditTextTheme"
+                        />
                 </android.support.design.widget.TextInputLayout>
 
                 <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColorHint="@color/color_shop_accent"
+                    android:textColorHint="@color/white_line"
                     app:hintTextAppearance="@style/EditTextLayoutTheme">
 
                     <EditText
@@ -72,8 +106,8 @@
                         android:hint="@string/hint_mobile"
                         android:inputType="phone"
                         android:maxLength="10"
-                        android:textColor="@color/while_line"
-                        android:textColorHint="@color/while_line"
+                        android:textColor="@color/white_line"
+                        android:textColorHint="@color/white_line"
                         android:theme="@style/EditTextTheme" />
 
                 </android.support.design.widget.TextInputLayout>
@@ -81,7 +115,7 @@
                 <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColorHint="@color/color_shop_accent"
+                    android:textColorHint="@color/white_line"
                     app:hintTextAppearance="@style/EditTextLayoutTheme">
 
                     <EditText
@@ -90,8 +124,8 @@
                         android:layout_height="wrap_content"
                         android:hint="@string/password"
                         android:inputType="textPassword"
-                        android:textColor="@color/while_line"
-                        android:textColorHint="@color/while_line"
+                        android:textColor="@color/white_line"
+                        android:textColorHint="@color/white_line"
                         android:theme="@style/EditTextTheme" />
 
                 </android.support.design.widget.TextInputLayout>
@@ -99,7 +133,7 @@
                 <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColorHint="@color/color_shop_accent"
+                    android:textColorHint="@color/white_line"
                     app:hintTextAppearance="@style/EditTextLayoutTheme">
 
                     <EditText
@@ -108,8 +142,8 @@
                         android:layout_height="wrap_content"
                         android:hint="@string/confirm_password"
                         android:inputType="textPassword"
-                        android:textColor="@color/while_line"
-                        android:textColorHint="@color/while_line"
+                        android:textColor="@color/white_line"
+                        android:textColorHint="@color/white_line"
                         android:theme="@style/EditTextTheme" />
 
                 </android.support.design.widget.TextInputLayout>
@@ -117,7 +151,7 @@
                 <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColorHint="@color/color_shop_accent"
+                    android:textColorHint="@color/white_line"
                     app:hintTextAppearance="@style/EditTextLayoutTheme">
 
                     <EditText
@@ -127,8 +161,8 @@
                         android:gravity="start"
                         android:hint="@string/description"
                         android:minHeight="100dp"
-                        android:textColor="@color/while_line"
-                        android:textColorHint="@color/while_line"
+                        android:textColor="@color/white_line"
+                        android:textColorHint="@color/white_line"
                         android:theme="@style/EditTextTheme" />
 
                 </android.support.design.widget.TextInputLayout>
@@ -137,7 +171,7 @@
                 <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColorHint="@color/color_shop_accent"
+                    android:textColorHint="@color/white_line"
                     app:hintTextAppearance="@style/EditTextLayoutTheme">
 
                     <EditText
@@ -145,8 +179,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/hint_email"
-                        android:textColor="@color/while_line"
-                        android:textColorHint="@color/while_line"
+                        android:textColor="@color/white_line"
+                        android:textColorHint="@color/white_line"
                         android:theme="@style/EditTextTheme" />
 
                 </android.support.design.widget.TextInputLayout>
@@ -156,13 +190,13 @@
                     android:id="@+id/category_spinner"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:backgroundTint="@color/while_line" />
+                    android:backgroundTint="@color/white_line" />
 
                 <Spinner
                     android:id="@+id/city_spinner"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:backgroundTint="@color/while_line" />
+                    android:backgroundTint="@color/white_line" />
 
 
                 <ImageView
@@ -189,7 +223,7 @@
                         android:layout_weight="5"
                         android:background="@drawable/shop_sign_up_button"
                         android:text="@string/select_images_gallery"
-                        android:textColor="@color/while_line"
+                        android:textColor="@color/white_line"
 
                         />
 
@@ -203,7 +237,7 @@
                         android:background="@drawable/shop_sign_up_button"
                         android:text="@string/take_picture"
 
-                        android:textColor="@color/while_line" />
+                        android:textColor="@color/white_line" />
 
                 </LinearLayout>
 
@@ -217,12 +251,12 @@
                     android:layout_margin="12dp"
                     android:background="@drawable/shop_sign_up_button"
                     android:text="@string/register_shop"
-                    android:textColor="@color/while_line"
+                    android:textColor="@color/white_line"
 
                     />
 
             </LinearLayout>
         </ScrollView>
     </LinearLayout>
-
+</LinearLayout>
 </RelativeLayout>

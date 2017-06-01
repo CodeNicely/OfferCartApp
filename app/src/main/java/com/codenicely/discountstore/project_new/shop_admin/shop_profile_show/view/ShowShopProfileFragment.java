@@ -9,6 +9,8 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -52,6 +54,8 @@ public class ShowShopProfileFragment extends Fragment implements ShowShopProfile
 	TextView textViewShopName;
 	@BindView(R.id.shop_description)
 	TextView textViewShopDescription;
+	@BindView(R.id.backButton)
+	ImageView backButton;
 	@BindView(R.id.shop_address)
 	TextView textViewShopAddress;
 	@BindView(R.id.phone_number)
@@ -67,12 +71,19 @@ public class ShowShopProfileFragment extends Fragment implements ShowShopProfile
 
 	@BindView(R.id.progressBar)
 	ProgressBar progressBar;
+/*
 	@BindView(R.id.edit_profile_btn)
 	Button buttonEditProfile;
+*/
+	@BindView(R.id.editButton)
+	ImageView edit_profile_btn;
 
-	@BindView(R.id.toolbar)
+
+	/*@BindView(R.id.toolbar)
 	Toolbar toolbar;
 
+
+*/
 	ShowShopProfilePresenter shopProfilePresenter;
 	private ImageLoader imageLoader;
 	SharedPrefs sharedPrefs;
@@ -96,7 +107,9 @@ public class ShowShopProfileFragment extends Fragment implements ShowShopProfile
 		args.putString(ARG_PARAM2, param2);
 		fragment.setArguments(args);
 		return fragment;
-	}	public ShowShopProfileFragment() {
+	}
+
+	public ShowShopProfileFragment() {
 		// Required empty public constructor
 	}
 
@@ -110,13 +123,20 @@ public class ShowShopProfileFragment extends Fragment implements ShowShopProfile
 	}
 
 	@Override
+	public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+		inflater.inflate(R.menu.shop_show_profile, menu);
+			super.onCreateOptionsMenu(menu, inflater);
+
+	}
+
+	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 							 Bundle savedInstanceState) {
 		View v=inflater.inflate(R.layout.fragment_shop_profile,container,false);
 		ButterKnife.bind(this,v);
 
 		Context context =getContext();
-		toolbar.setNavigationIcon(ContextCompat.getDrawable(context,R.drawable.ic_arrow_back_white_24dp));
+	/*	toolbar.setNavigationIcon(ContextCompat.getDrawable(context,R.drawable.ic_arrow_back_white_24dp));
 
 		toolbar.setNavigationOnClickListener(new View.OnClickListener() {
 			@Override
@@ -125,17 +145,24 @@ public class ShowShopProfileFragment extends Fragment implements ShowShopProfile
 				getActivity().onBackPressed();
 			}
 		});
-
-
+		toolbar.inflateMenu(R.menu.shop_show_profile);
+*/
 		progressBar.setVisibility(View.GONE);
+
 
 		// Inflate the layout for this fragment
 		shopProfilePresenter=new ShowShopProfilePresenterImpl(this,new RetrofitShopProfileProvider());
 		imageLoader = new GlideImageLoader(getContext());
 		sharedPrefs= new SharedPrefs(getContext());
 		shopProfilePresenter.requestShopProfileDetails(sharedPrefs.getKeyAccessTokenShop());
+		backButton.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				getActivity().onBackPressed();
+			}
+		});
 
-		buttonEditProfile.setOnClickListener(new View.OnClickListener() {
+		edit_profile_btn.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
 
@@ -215,7 +242,6 @@ public class ShowShopProfileFragment extends Fragment implements ShowShopProfile
 		city=shopProfileData.getCity();
 		category=shopProfileData.getShop_category();
 		image=shopProfileData.getImage();
-
 		progressBar1.setVisibility(View.VISIBLE);
 		imageLoader.loadImage(shopProfileData.getImage(), imageView, progressBar1);
 		textViewShopName.setText("Name          : ");

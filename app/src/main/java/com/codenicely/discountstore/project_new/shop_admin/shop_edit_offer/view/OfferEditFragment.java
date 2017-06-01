@@ -99,11 +99,18 @@ public class OfferEditFragment extends Fragment implements OfferEditView {
     @BindView(R.id.offer_expiry)
     DatePicker datePicker;
 
+
+/*
     @BindView(R.id.toolbar)
     Toolbar toolbar;
-
     @BindView(R.id.cardView)
     CardView cardView;
+*/
+
+
+    @BindView(R.id.backButton)
+    ImageView backButton;
+
     private ProgressDialog progressDialog;
     private static final String TAG = "OfferEditFragment";
     private boolean CAMERA_REQUEST = false;
@@ -163,7 +170,6 @@ public class OfferEditFragment extends Fragment implements OfferEditView {
 		Log.d("Description ---",offer_description);
 		Log.d("Image----",offer_image);
 
-
         View view = inflater.inflate(R.layout.fragment_edit_offer, container, false);
         ButterKnife.bind(this, view);
         editTextname.setText(offer_name);
@@ -172,6 +178,7 @@ public class OfferEditFragment extends Fragment implements OfferEditView {
         imageLoader=new GlideImageLoader(getContext());
 
 		imageLoader.loadImage(offer_image,imageView,progressBar);
+/*
         toolbar.setNavigationIcon(ContextCompat.getDrawable(context, R.drawable.ic_arrow_back_white_24dp));
 
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
@@ -180,13 +187,19 @@ public class OfferEditFragment extends Fragment implements OfferEditView {
                 getActivity().onBackPressed();
             }
         });
+*/
 
         progressDialog = new ProgressDialog(context);
         progressDialog.setMessage("Please wait . . .");
         progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
         progressDialog.setIndeterminate(true);
         progressDialog.setCancelable(false);
-
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getActivity().onBackPressed();
+            }
+        });
 
         offerAddPresenter = new OfferEditPresenterImpl(this, new RetrofitOfferEditHelper(context));
         cameraButton.setOnClickListener(new View.OnClickListener() {
@@ -196,12 +209,14 @@ public class OfferEditFragment extends Fragment implements OfferEditView {
 
             }
         });
+
         galleryButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 offerAddPresenter.openGallery();
             }
         });
+
         registerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -280,10 +295,10 @@ public class OfferEditFragment extends Fragment implements OfferEditView {
     public void showLoader(boolean show) {
         if (show) {
             progressBar.setVisibility(View.VISIBLE);
-            cardView.setVisibility(View.GONE);
+  //          cardView.setVisibility(View.GONE);
         } else {
             progressBar.setVisibility(View.GONE);
-            cardView.setVisibility(View.VISIBLE);
+//            cardView.setVisibility(View.VISIBLE);
         }
 
     }
