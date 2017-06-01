@@ -16,7 +16,7 @@
         app:titleTextColor="@color/white"
         android:titleTextColor="@color/white"
         android:title="@string/title_add_offer"
-        android:background="@color/colorPrimary"
+        android:background="@color/color_shop_primary"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
     <android.support.v7.widget.CardView
@@ -119,7 +119,7 @@
                     android:visibility="gone"
                     android:minHeight="100dp"
                     android:padding="8dp"
-                    android:src="@drawable/discount_store_logo" />
+                    android:src="@mipmap/brand_store_logo" />
 
                 <LinearLayout
                     android:layout_width="match_parent"

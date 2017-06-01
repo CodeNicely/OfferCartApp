@@ -39,6 +39,7 @@ import com.codenicely.discountstore.project_new.helper.utils.UriUtils;
 import com.codenicely.discountstore.project_new.shop_admin.shop_edit_offer.model.RetrofitOfferEditHelper;
 import com.codenicely.discountstore.project_new.shop_admin.shop_edit_offer.presenter.OfferEditPresenter;
 import com.codenicely.discountstore.project_new.shop_admin.shop_edit_offer.presenter.OfferEditPresenterImpl;
+import com.codenicely.discountstore.project_new.shop_admin.shop_home.ShopHomePage;
 import com.karumi.dexter.Dexter;
 import com.karumi.dexter.MultiplePermissionsReport;
 import com.karumi.dexter.PermissionToken;
@@ -162,13 +163,13 @@ public class OfferEditFragment extends Fragment implements OfferEditView {
 		Log.d("Description ---",offer_description);
 		Log.d("Image----",offer_image);
 
-		editTextname.setText(offer_name);
-		editTextdescription.setText(offer_description);
-
-		imageLoader=new GlideImageLoader(getContext());
 
         View view = inflater.inflate(R.layout.fragment_edit_offer, container, false);
         ButterKnife.bind(this, view);
+        editTextname.setText(offer_name);
+        editTextdescription.setText(offer_description);
+
+        imageLoader=new GlideImageLoader(getContext());
 
 		imageLoader.loadImage(offer_image,imageView,progressBar);
         toolbar.setNavigationIcon(ContextCompat.getDrawable(context, R.drawable.ic_arrow_back_white_24dp));
@@ -427,6 +428,10 @@ public class OfferEditFragment extends Fragment implements OfferEditView {
 
     @Override
     public void onOfferEdited() {
+        Intent intent = new Intent(getContext(), ShopHomePage.class);
+        startActivity(intent);
+        getActivity().finish();
+
         //Go to home page now.
     }
 

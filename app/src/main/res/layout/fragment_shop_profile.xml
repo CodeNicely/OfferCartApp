@@ -18,8 +18,19 @@
             android:layout_height="wrap_content"
             app:title="Shop Profile"
             android:background="@color/color_shop_primary"
-            app:titleTextColor="@color/white" />
+            app:titleTextColor="@color/white" >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right">
 
+                <Button
+                    android:id="@+id/toolbar_overflow_menu_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+        </android.support.v7.widget.Toolbar>
     </android.support.design.widget.AppBarLayout>
 
     <ScrollView
@@ -61,7 +72,7 @@
                         android:maxHeight="250dp"
                         android:minHeight="100dp"
                         android:padding="8dp"
-                        android:src="@drawable/discount_store_logo"
+                        android:src="@mipmap/brand_store_logo"
                         />
 
                 </RelativeLayout>

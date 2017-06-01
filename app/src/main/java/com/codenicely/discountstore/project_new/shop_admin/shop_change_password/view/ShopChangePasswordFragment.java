@@ -58,9 +58,11 @@ public class ShopChangePasswordFragment extends Fragment implements ShopChangePa
 	ProgressBar progressBar;
 	ShopChangePasswordPresenter shopChangePasswordPresenter;
 	SharedPrefs sharedPrefs;
+/*
 
 	@BindView(R.id.toolbar)
 	android.support.v7.widget.Toolbar toolbar;
+*/
 
 	private OnFragmentInteractionListener mListener;
 	/**
@@ -103,16 +105,16 @@ public class ShopChangePasswordFragment extends Fragment implements ShopChangePa
 		ButterKnife.bind(this,view);
 		Context context =getContext();
 
-		toolbar.setNavigationIcon(ContextCompat.getDrawable(context,R.drawable.ic_arrow_back_white_24dp));
+		//toolbar.setNavigationIcon(ContextCompat.getDrawable(context,R.drawable.ic_arrow_back_white_24dp));
 
-		toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+	/*	toolbar.setNavigationOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View view) {
 
 				getActivity().onBackPressed();
 			}
 		});
-
+*/
 
 		shopChangePasswordPresenter=new ShopChangePasswordPresenterImpl(this,new RetrofitShopChangePasswordHelper());
 		sharedPrefs=new SharedPrefs(getContext());
