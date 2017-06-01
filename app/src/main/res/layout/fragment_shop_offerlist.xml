@@ -109,6 +109,7 @@
             android:layout_alignParentBottom="true"
             android:layout_alignParentRight="true"
             android:src="@drawable/ic_add_circle_white_48dp"
+            android:layout_marginBottom="16dp"
             />
 
         <ProgressBar

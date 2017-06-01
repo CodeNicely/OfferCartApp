@@ -71,8 +71,14 @@ public class ShopOfferAdapter extends RecyclerView.Adapter<ShopOfferAdapter.MyVi
     public void onBindViewHolder(ShopOfferAdapter.MyViewHolder holder, int position) {
         final ShopOfferListDetails shopOfferListDetails = shopOfferListDetailses.get(position);
         holder.title.setText(shopOfferListDetails.getOffer_title());
-        holder.validity1.setText(String.valueOf(shopOfferListDetails.getValidity()));
-        holder.validity2.setText(shopOfferListDetails.getExpiry_date());
+        holder.validity1.setText("Offer is valid till ");
+        holder.validity1.append(String.valueOf(shopOfferListDetails.getValidity()));
+        holder.validity1.append(" more days");
+
+        holder.validity2.setText("The offer is valid before ");
+        holder.validity2.append(shopOfferListDetails.getExpiry_date());
+
+
         holder.description.setText(shopOfferListDetails.getOffer_description());
 
         holder.edit.setOnClickListener(new View.OnClickListener() {
