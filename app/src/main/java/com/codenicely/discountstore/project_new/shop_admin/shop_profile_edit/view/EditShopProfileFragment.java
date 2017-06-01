@@ -134,6 +134,10 @@ public class EditShopProfileFragment extends Fragment implements EditShopProfile
 /*	@BindView(R.id.toolbar)
 	Toolbar toolbar;*/
 
+	@BindView(R.id.backButton)
+	ImageView backButton;
+
+
 	ImageLoader imageLoader;
 	private Bitmap bitmap;
 	private Uri imageUri = null;
@@ -206,7 +210,14 @@ public class EditShopProfileFragment extends Fragment implements EditShopProfile
 				getActivity().onBackPressed();
 			}
 		});
-*/
+
+*/backButton.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				getActivity().onBackPressed();
+			}
+		});
+
 		progressDialog = new ProgressDialog(context);
 		progressDialog.setMessage("Please wait . . .");
 		progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);

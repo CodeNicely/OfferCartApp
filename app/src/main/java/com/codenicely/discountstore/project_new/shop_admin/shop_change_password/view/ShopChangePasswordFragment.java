@@ -14,6 +14,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 import android.widget.Toolbar;
@@ -63,6 +64,9 @@ public class ShopChangePasswordFragment extends Fragment implements ShopChangePa
 	@BindView(R.id.toolbar)
 	android.support.v7.widget.Toolbar toolbar;
 */
+	@BindView(R.id.backButton)
+	ImageView backButton;
+
 
 	private OnFragmentInteractionListener mListener;
 	/**
@@ -115,7 +119,12 @@ public class ShopChangePasswordFragment extends Fragment implements ShopChangePa
 			}
 		});
 */
-
+		backButton.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				getActivity().onBackPressed();
+			}
+		});
 		shopChangePasswordPresenter=new ShopChangePasswordPresenterImpl(this,new RetrofitShopChangePasswordHelper());
 		sharedPrefs=new SharedPrefs(getContext());
 		loginButton.setOnClickListener(new View.OnClickListener() {

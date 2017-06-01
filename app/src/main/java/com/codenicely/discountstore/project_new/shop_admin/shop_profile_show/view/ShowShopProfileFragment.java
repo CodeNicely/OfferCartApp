@@ -54,6 +54,8 @@ public class ShowShopProfileFragment extends Fragment implements ShowShopProfile
 	TextView textViewShopName;
 	@BindView(R.id.shop_description)
 	TextView textViewShopDescription;
+	@BindView(R.id.backButton)
+	ImageView backButton;
 	@BindView(R.id.shop_address)
 	TextView textViewShopAddress;
 	@BindView(R.id.phone_number)
@@ -69,11 +71,18 @@ public class ShowShopProfileFragment extends Fragment implements ShowShopProfile
 
 	@BindView(R.id.progressBar)
 	ProgressBar progressBar;
+/*
 	@BindView(R.id.edit_profile_btn)
 	Button buttonEditProfile;
+*/
+	@BindView(R.id.editButton)
+	ImageView edit_profile_btn;
+
 
 	/*@BindView(R.id.toolbar)
 	Toolbar toolbar;
+
+
 */
 	ShowShopProfilePresenter shopProfilePresenter;
 	private ImageLoader imageLoader;
@@ -144,8 +153,14 @@ public class ShowShopProfileFragment extends Fragment implements ShowShopProfile
 		imageLoader = new GlideImageLoader(getContext());
 		sharedPrefs= new SharedPrefs(getContext());
 		shopProfilePresenter.requestShopProfileDetails(sharedPrefs.getKeyAccessTokenShop());
+		backButton.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				getActivity().onBackPressed();
+			}
+		});
 
-		buttonEditProfile.setOnClickListener(new View.OnClickListener() {
+		edit_profile_btn.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
 

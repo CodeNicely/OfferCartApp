@@ -95,6 +95,9 @@ public class OfferAddFragment extends Fragment implements OfferAddView {
     @BindView(R.id.offer_description)
     EditText editTextdescription;
 
+    @BindView(R.id.backButton)
+    ImageView backButton;
+
     @BindView(R.id.imageView)
     ImageView imageView;
     @BindView(R.id.progressBar)
@@ -187,6 +190,12 @@ public class OfferAddFragment extends Fragment implements OfferAddView {
         progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
         progressDialog.setIndeterminate(true);
         progressDialog.setCancelable(false);
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getActivity().onBackPressed();
+            }
+        });
 
 	//	tvofferExpiry.setOnClickListener(new On);
 
@@ -245,7 +254,7 @@ public class OfferAddFragment extends Fragment implements OfferAddView {
 		*/
 //					Toast.makeText(getContext(),year,Toast.LENGTH_SHORT).show();
                     offerAddPresenter.addOffer(sharedPrefs.getKeyAccessTokenShop(),
-                            name, description, date, month, year, imageUri);
+                            name, description, date, month+1, year, imageUri);
                 }
 
             }

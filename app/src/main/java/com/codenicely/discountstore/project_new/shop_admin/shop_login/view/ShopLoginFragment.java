@@ -69,9 +69,14 @@ public class ShopLoginFragment extends Fragment implements ShopLoginView{
 	@BindView(R.id.imageView)
 	ImageView imageView;*/
 	@BindView(R.id.linearlayoutLoginShop)
-	RelativeLayout relativeLayout;/*
+	RelativeLayout relativeLayout;
+	/*
 	@BindView(R.id.linearlayoutLoginShop)
-	LinearLayout linearLayout;*/
+	LinearLayout linearLayout;
+	*/
+
+	@BindView(R.id.backButton)
+	ImageView backButton;
 
 	private ShopLoginPresenter shopLoginPresenter;
 
@@ -150,6 +155,12 @@ public class ShopLoginFragment extends Fragment implements ShopLoginView{
 				});
 
 		shopLoginPresenter=new ShopLoginPresenterImpl(this,new RetrofitShopLoginProvider());
+		backButton.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				getActivity().onBackPressed();
+			}
+		});
 
 		loginButton.setOnClickListener(new View.OnClickListener() {
 			@Override

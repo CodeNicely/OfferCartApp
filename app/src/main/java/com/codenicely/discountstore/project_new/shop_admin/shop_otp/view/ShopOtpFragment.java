@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
@@ -54,6 +55,10 @@ public class ShopOtpFragment extends Fragment implements ShopOtpView {
     Button sendOtpButton;
     String mobile;
     String otp1;
+
+    @BindView(R.id.backButton)
+    ImageView backButton;
+
     private SharedPrefs sharedPrefs;
 
     /**
@@ -96,6 +101,12 @@ public class ShopOtpFragment extends Fragment implements ShopOtpView {
         sharedPrefs = new SharedPrefs(getContext());
         mobile = getArguments().getString("mobile");
         shopOtpPresenter = new ShopOtpPresenterImpl(this, new RetrofitShopOtpProvider());
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getActivity().onBackPressed();
+            }
+        });
 
         sendOtpButton.setOnClickListener(new View.OnClickListener() {
             @Override

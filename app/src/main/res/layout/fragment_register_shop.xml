@@ -16,6 +16,39 @@
         android:layout_height="wrap_content"
         android:layout_margin="4dp"
         android:orientation="vertical"
+        android:id="@+id/linearlayout"
+
+        android:padding="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="20"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_weight="4"
+            android:id="@+id/backButton"
+            android:src="@drawable/ic_arrow_back_white_24dp"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_weight="16"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="Sign Up"
+            android:textAllCaps="true"
+            android:textColor="@color/white_line"
+            android:textSize="18dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:orientation="vertical"
         android:padding="4dp">
 
         <TextView
@@ -225,5 +258,5 @@
             </LinearLayout>
         </ScrollView>
     </LinearLayout>
-
+</LinearLayout>
 </RelativeLayout>

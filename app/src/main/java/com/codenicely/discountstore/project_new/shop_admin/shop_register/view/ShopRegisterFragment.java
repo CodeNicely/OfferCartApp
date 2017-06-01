@@ -122,6 +122,8 @@ public class ShopRegisterFragment extends Fragment implements ShopRegisterView {
 /*
     @BindView(R.id.cardView)
     CardView cardView;*/
+    @BindView(R.id.backButton)
+    ImageView backButton;
 
     @BindView(R.id.progressBar)
     ProgressBar progressBar;
@@ -194,7 +196,12 @@ public class ShopRegisterFragment extends Fragment implements ShopRegisterView {
 
         Dexter.initialize(context);
         shopRegisterPresenter = new ShopRegisterPresenterImpl(this, new RetrofitShopRegisterHelper(context));
-
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getActivity().onBackPressed();
+            }
+        });
         galleryButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
