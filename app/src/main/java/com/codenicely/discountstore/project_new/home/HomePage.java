@@ -43,39 +43,43 @@ public class HomePage extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_activity);
-            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_NOSENSOR);
-            Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-            setSupportActionBar(toolbar);
-            DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-            ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                    this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-            drawer.setDrawerListener(toggle);
-            toggle.syncState();
-            navigationView = (NavigationView) findViewById(R.id.nav_view);
-            navigationView.setNavigationItemSelectedListener(this);
-            sharedPrefs = new SharedPrefs(this);
-            if (!sharedPrefs.getCity().equals("NA")) {
-                setFragment(new CategoryFragment(), "Categories");
 
-            } else {
-                setFragment(new CityFragment(), "City");
-            }
+        setTheme(R.style.AppThemeUser);
 
-            int backStackCount = getSupportFragmentManager().getBackStackEntryCount();
-            for (int i = 0; i < backStackCount; i++) {
 
-                // Get the back stack fragment id.
-                int backStackId = getSupportFragmentManager().getBackStackEntryAt(i).getId();
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_NOSENSOR);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawer.setDrawerListener(toggle);
+        toggle.syncState();
+        navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(this);
+        sharedPrefs = new SharedPrefs(this);
+        if (!sharedPrefs.getCity().equals("NA")) {
+            setFragment(new CategoryFragment(), "Categories");
 
-                getFragmentManager().popBackStack(backStackId, FragmentManager.POP_BACK_STACK_INCLUSIVE);
+        } else {
+            setFragment(new CityFragment(), "City");
+        }
 
-            }
-            if (getIntent().getBooleanExtra(Keys.KEY_OPEN_WALLET, false)) {
+        int backStackCount = getSupportFragmentManager().getBackStackEntryCount();
+        for (int i = 0; i < backStackCount; i++) {
 
-                addFragment(new WalletFragment(), "WalletFragment");
-                getSupportActionBar().hide();
+            // Get the back stack fragment id.
+            int backStackId = getSupportFragmentManager().getBackStackEntryAt(i).getId();
 
-            }
+            getFragmentManager().popBackStack(backStackId, FragmentManager.POP_BACK_STACK_INCLUSIVE);
+
+        }
+        if (getIntent().getBooleanExtra(Keys.KEY_OPEN_WALLET, false)) {
+
+            addFragment(new WalletFragment(), "WalletFragment");
+            getSupportActionBar().hide();
+
+        }
         //when app is in background or closed..!
         Intent startingIntent = getIntent();
         if (startingIntent.getExtras() != null) {
@@ -88,20 +92,19 @@ public class HomePage extends AppCompatActivity
             }
         }
 
-        }
+    }
+
     //when app is in foreground..!
     @Override
-    public  void onNewIntent(Intent intent)
-    {
+    public void onNewIntent(Intent intent) {
         super.onNewIntent(intent);
-        if(intent.getStringExtra("FcmActivity").equals("True"))
-        {
-            String msg=intent.getStringExtra("shop_id");
-            String name=intent.getStringExtra("shop_name");
-            int id= Integer.valueOf(msg);
-            if (id!=0 && name!=null){
-                Log.d("open offers fragment","offers");
-                onShopSelected(id,name);
+        if (intent.getStringExtra("FcmActivity").equals("True")) {
+            String msg = intent.getStringExtra("shop_id");
+            String name = intent.getStringExtra("shop_name");
+            int id = Integer.valueOf(msg);
+            if (id != 0 && name != null) {
+                Log.d("open offers fragment", "offers");
+                onShopSelected(id, name);
             }
         }
 
@@ -150,7 +153,7 @@ public class HomePage extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if(sharedPrefs.getCity().equals("NA")){
+        if (sharedPrefs.getCity().equals("NA")) {
             addFragment(new CityFragment(), "Select City");
             getSupportActionBar().hide();
             Toast.makeText(this, "Please Select City First", Toast.LENGTH_SHORT).show();
@@ -187,14 +190,13 @@ public class HomePage extends AppCompatActivity
 
             getSupportActionBar().hide();
 
-        }else if(id==R.id.nav_logout)
-        {
+        } else if (id == R.id.nav_logout) {
             sharedPrefs.setLogin(false);
             sharedPrefs.setCity("NA");
             sharedPrefs.setAccessToken("");
             sharedPrefs.setEmailId("");
             sharedPrefs.setUsername("");
-            Intent in=new Intent(HomePage.this, WelcomeScreenActivity.class);
+            Intent in = new Intent(HomePage.this, WelcomeScreenActivity.class);
             startActivity(in);
             finish();
 
@@ -230,7 +232,7 @@ public class HomePage extends AppCompatActivity
 
     }
 
-    public void onCategorySelected(int category_id,String category_name) {
+    public void onCategorySelected(int category_id, String category_name) {
         Bundle bundle = new Bundle();
         bundle.putInt(Keys.KEY_CATEGORY_ID, category_id);
         ShopFragment shopFragment = new ShopFragment();

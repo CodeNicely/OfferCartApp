@@ -18,7 +18,7 @@
         android:layout_height="50dp"
         android:textAllCaps="true"
         android:gravity="center"
-        android:textColor="@color/color_shop_accent"
+        android:textColor="@color/while_line"
         android:text="Verify Otp"
         android:textSize="@dimen/medium_text_size"
         android:layout_marginTop="10dp"
@@ -74,8 +74,8 @@
                         android:layout_height="wrap_content"
                         android:hint="Please enter OTP to continue"
                         android:inputType="phone"
-                        android:textColor="@color/color_shop_accent"
-                        android:textColorHint="@color/color_shop_accent"
+                        android:textColor="@color/while_line"
+                        android:textColorHint="@color/while_line"
                         android:theme="@style/EditTextTheme"
                         android:maxLength="10"
                         android:textSize="@dimen/small_text_size"
@@ -92,7 +92,7 @@
                     android:enabled="true"
                     android:clickable="true"
                     android:text="Submit"
-                    android:textColor="@color/color_shop_accent"
+                    android:textColor="@color/while_line"
                     android:background="@drawable/shop_sign_up_button"
 
                     />

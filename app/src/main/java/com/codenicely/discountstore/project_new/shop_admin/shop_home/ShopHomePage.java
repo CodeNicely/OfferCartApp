@@ -52,6 +52,8 @@ public class ShopHomePage extends AppCompatActivity
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        setTheme(R.style.AppThemeShop);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shop_home_activity);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_NOSENSOR);

@@ -6,123 +6,114 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <ScrollView
-        android:id="@+id/scrollView"
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        >
+        android:layout_margin="50dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="50dp"
+            android:gravity="center"
+            android:text="@string/shop_login_textview"
+            android:textAllCaps="true"
+            android:textColor="@color/while_line"
+            android:textSize="@dimen/medium_text_size" />
 
 
-        <LinearLayout
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:padding="4dp"
+            android:src="@mipmap/brand_store_logo" />
+
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="50dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="@string/login_description"
+            android:textColor="@color/while_line" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:textColor="@color/while_line"
+            android:textColorHint="@color/while_line"
+            android:textColorHighlight="@color/while_line"
+            android:textColorLink="@color/while_line"
+            android:textSize="@dimen/small_text_size"
+            android:theme="@style/EditTextTheme" />
+
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/color_shop_accent"
+            app:hintTextAppearance="@style/EditTextLayoutTheme">
+
+            <EditText
+                android:id="@+id/mobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_mobile"
+                android:inputType="phone"
+                android:maxLength="10"
+                android:padding="8dp" />
+        </android.support.design.widget.TextInputLayout>
+
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
+            android:textColorHint="@color/color_shop_accent"
+            app:hintTextAppearance="@style/EditTextLayoutTheme">
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/shop_hint_password"
+                android:inputType="textPassword"
+                android:textColor="@color/while_line"
+                android:textColorHint="@color/while_line"
+                android:theme="@style/EditTextTheme" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="12dp"
             android:layout_marginTop="50dp"
-            android:orientation="vertical">
+            android:background="@drawable/rounded_button"
+            android:gravity="center"
+            android:padding="12dp"
+            android:text="@string/shop_login"
+            android:textColor="@color/white" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginBottom="50dp"
-                android:gravity="center"
-                android:text="@string/shop_login_textview"
-                android:textAllCaps="true"
-                android:textColor="@color/color_shop_accent"
-                android:textSize="@dimen/medium_text_size" />
+        <Button
+            android:id="@+id/buttonSignUp"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="12dp"
+            android:background="@drawable/rounded_button"
+            android:gravity="center"
+            android:padding="12dp"
+            android:text="@string/shop_login_new"
 
-
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColorHint="@color/color_shop_accent"
-                app:hintTextAppearance="@style/EditTextLayoutTheme">
-
-                <EditText
-                    android:id="@+id/mobile"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/hint_mobile"
-                    android:inputType="phone"
-                    android:maxLength="10"
-                    android:padding="8dp"
-                    />
-            </android.support.design.widget.TextInputLayout>
-
-                    <ImageView
-                        android:src="@mipmap/brand_store_logo"
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
-                        android:padding="4dp"
-                        />
-
-                    <TextView
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-
-                        android:text="@string/login_description"
-                        android:padding="4dp"
-                        android:textColor="@color/color_shop_accent"
-                        />
-                </LinearLayout>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:textAllCaps="true"
-                    android:gravity="center"
-                    android:textColor="@color/color_shop_accent"
-                    android:textColorHint="@color/color_shop_accent"
-                    android:textSize="@dimen/small_text_size"
-                    android:theme="@style/EditTextTheme" />
-
-
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="50dp"
-                android:textColorHint="@color/color_shop_accent"
-                app:hintTextAppearance="@style/EditTextLayoutTheme">
-
-                <EditText
-                    android:id="@+id/password"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/shop_hint_password"
-                    android:inputType="textPassword"
-                    android:textColor="@color/color_shop_accent"
-                    android:textColorHint="@color/color_shop_accent"
-                    android:theme="@style/EditTextTheme" />
-
-            </android.support.design.widget.TextInputLayout>
-
-            <Button
-                android:id="@+id/button"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_margin="12dp"
-                android:layout_marginTop="50dp"
-                android:background="@drawable/rounded_button"
-                android:gravity="center"
-                android:padding="12dp"
-                android:text="@string/shop_login"
-                android:textColor="@color/white" />
-
-            <Button
-                android:id="@+id/buttonSignUp"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_margin="12dp"
-                android:background="@drawable/rounded_button"
-                android:gravity="center"
-                android:padding="12dp"
-                android:text="@string/shop_login_new"
-
-                android:textColor="@color/white" />
-</ScrollView>
+            android:textColor="@color/white" />
+    </LinearLayout>
 
     <ProgressBar
         android:id="@+id/progressBar"

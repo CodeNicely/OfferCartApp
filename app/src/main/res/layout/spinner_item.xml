@@ -6,6 +6,6 @@
         android:background="@color/color_shop_primary"
         android:textSize="20sp"
         android:gravity="left"
-        android:textColor="@color/color_shop_accent"
+        android:textColor="@color/while_line"
         android:padding="5dip"
         />
