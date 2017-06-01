@@ -107,7 +107,9 @@ public class ShowShopProfileFragment extends Fragment implements ShowShopProfile
 		args.putString(ARG_PARAM2, param2);
 		fragment.setArguments(args);
 		return fragment;
-	}	public ShowShopProfileFragment() {
+	}
+
+	public ShowShopProfileFragment() {
 		// Required empty public constructor
 	}
 

@@ -22,6 +22,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
@@ -32,6 +33,7 @@ import com.codenicely.discountstore.project_new.helper.SharedPrefs;
 import com.codenicely.discountstore.project_new.helper.image_loader.GlideImageLoader;
 import com.codenicely.discountstore.project_new.helper.image_loader.ImageLoader;
 import com.codenicely.discountstore.project_new.shop_admin.shop_activity.ShopActivity;
+import com.codenicely.discountstore.project_new.shop_admin.shop_forgot_password.view.ShopForgotPasswordFragment;
 import com.codenicely.discountstore.project_new.shop_admin.shop_home.ShopHomePage;
 import com.codenicely.discountstore.project_new.shop_admin.shop_login.model.RetrofitShopLoginProvider;
 import com.codenicely.discountstore.project_new.shop_admin.shop_login.presenter.ShopLoginPresenter;
@@ -65,7 +67,11 @@ public class ShopLoginFragment extends Fragment implements ShopLoginView{
 	@BindView(R.id.progressBar)
 	ProgressBar progressBar;
 	@BindView(R.id.buttonSignUp)
-	Button buttonSignUp;/*
+	Button buttonSignUp;
+	@BindView(R.id.forgot_password_button)
+	TextView forgotPasswordButton;
+	/*
+
 	@BindView(R.id.imageView)
 	ImageView imageView;*/
 	@BindView(R.id.linearlayoutLoginShop)
@@ -162,6 +168,13 @@ public class ShopLoginFragment extends Fragment implements ShopLoginView{
 			}
 		});
 
+		forgotPasswordButton.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				ShopForgotPasswordFragment shopForgotPasswordFragment = new ShopForgotPasswordFragment();
+				((ShopActivity)getContext()).addFragment(shopForgotPasswordFragment);
+			}
+		});
 		loginButton.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
@@ -217,6 +230,7 @@ public class ShopLoginFragment extends Fragment implements ShopLoginView{
 
 		Log.d("Access Token :",access_token);
 		sharedPrefs.setAccessTokenShop(access_token);
+
 		sharedPrefs.setShopLogin(true);
 
 		loginButton.setEnabled(true);

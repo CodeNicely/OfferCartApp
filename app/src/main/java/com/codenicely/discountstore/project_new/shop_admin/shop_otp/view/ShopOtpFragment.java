@@ -96,6 +96,8 @@ public class ShopOtpFragment extends Fragment implements ShopOtpView {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        boolean fp = getArguments().getBoolean("fp",false);
+
         View v = inflater.inflate(R.layout.fragment_shop_otp, container, false);
         ButterKnife.bind(this, v);
         sharedPrefs = new SharedPrefs(getContext());

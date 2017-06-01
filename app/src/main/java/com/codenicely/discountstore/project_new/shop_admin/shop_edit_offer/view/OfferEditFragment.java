@@ -170,7 +170,6 @@ public class OfferEditFragment extends Fragment implements OfferEditView {
 		Log.d("Description ---",offer_description);
 		Log.d("Image----",offer_image);
 
-
         View view = inflater.inflate(R.layout.fragment_edit_offer, container, false);
         ButterKnife.bind(this, view);
         editTextname.setText(offer_name);

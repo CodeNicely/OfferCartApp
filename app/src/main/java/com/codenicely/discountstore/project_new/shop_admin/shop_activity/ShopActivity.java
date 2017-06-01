@@ -8,12 +8,14 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 
 import com.codenicely.discountstore.project_new.R;
+import com.codenicely.discountstore.project_new.shop_admin.shop_forgot_password.view.ShopForgotPasswordFragment;
 import com.codenicely.discountstore.project_new.shop_admin.shop_login.view.ShopLoginFragment;
 import com.codenicely.discountstore.project_new.shop_admin.shop_otp.view.ShopOtpFragment;
 import com.codenicely.discountstore.project_new.shop_admin.shop_register.view.ShopRegisterFragment;
 
 public class ShopActivity extends AppCompatActivity implements ShopRegisterFragment.OnFragmentInteractionListener,
-           ShopOtpFragment.OnFragmentInteractionListener,ShopLoginFragment.OnFragmentInteractionListener {
+           ShopOtpFragment.OnFragmentInteractionListener,ShopLoginFragment.OnFragmentInteractionListener
+,ShopForgotPasswordFragment.OnFragmentInteractionListener{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
