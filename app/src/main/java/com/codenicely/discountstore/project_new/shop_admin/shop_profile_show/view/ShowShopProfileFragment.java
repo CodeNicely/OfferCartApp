@@ -134,9 +134,10 @@ public class ShowShopProfileFragment extends Fragment implements ShowShopProfile
 				getActivity().onBackPressed();
 			}
 		});
-
+		toolbar.inflateMenu(R.menu.shop_show_profile);
 
 		progressBar.setVisibility(View.GONE);
+
 
 		// Inflate the layout for this fragment
 		shopProfilePresenter=new ShowShopProfilePresenterImpl(this,new RetrofitShopProfileProvider());

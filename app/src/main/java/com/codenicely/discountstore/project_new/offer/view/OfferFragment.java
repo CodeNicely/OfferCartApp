@@ -259,7 +259,7 @@ public class OfferFragment extends Fragment implements OfferScreenView, BuyOffer
         if (buyOfferData.isSuccess()) {
             final AlertDialog ad = new AlertDialog.Builder(getActivity())
                     .create();
-            ad.setIcon(R.drawable.discount_store_logo);
+            ad.setIcon(R.mipmap.brand_store_logo);
 
             ad.setCancelable(false);
             ad.setTitle("Buying Offer Successful \n " + "Offer Price " + String.valueOf(buyOfferData.getPrice()) + "deducted from wallet.");
@@ -278,7 +278,7 @@ public class OfferFragment extends Fragment implements OfferScreenView, BuyOffer
         } else {
             final AlertDialog ad = new AlertDialog.Builder(getActivity())
                     .create();
-            ad.setIcon(R.drawable.discount_store_logo);
+            ad.setIcon(R.mipmap.brand_store_logo);
 
             ad.setCancelable(false);
             ad.setTitle("Buying Offer Failed");
@@ -304,7 +304,7 @@ public class OfferFragment extends Fragment implements OfferScreenView, BuyOffer
         final AlertDialog ad = new AlertDialog.Builder(getActivity())
                 .create();
         ad.setCancelable(false);
-        ad.setIcon(R.drawable.discount_store_logo);
+        ad.setIcon(R.mipmap.brand_store_logo);
         ad.setTitle("Do you really want to buy this offer ??");
         ad.setMessage("This offer cost Rs. " + offer_price + " \nThis amount will be deducted from your account wallet!");
         ad.setCancelable(false);

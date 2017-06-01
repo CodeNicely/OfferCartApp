@@ -19,7 +19,6 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
-import android.support.v7.widget.CardView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -32,9 +31,8 @@ import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.codenicely.discountstore.project_new.R;
-import com.codenicely.discountstore.project_new.helper.utils.BitmapUtils;
-import com.codenicely.discountstore.project_new.helper.utils.UriUtils;
 import com.codenicely.discountstore.project_new.shop_admin.shop_otp.view.ShopOtpFragment;
 import com.codenicely.discountstore.project_new.shop_admin.shop_register.data.CategoryData;
 import com.codenicely.discountstore.project_new.shop_admin.shop_register.data.CityData;
@@ -52,7 +50,6 @@ import com.karumi.dexter.listener.multi.MultiplePermissionsListener;
 import com.karumi.dexter.listener.single.PermissionListener;
 
 import java.io.File;
-import java.io.IOException;
 import java.util.List;
 
 import butterknife.BindView;
@@ -139,7 +136,7 @@ public class ShopRegisterFragment extends Fragment implements ShopRegisterView {
     private ArrayAdapter<String> city_array_adapter;
     private ArrayAdapter<String> category_array_adapter;
     private ProgressDialog progressDialog;
-	String mobile;
+    String mobile;
 
     public ShopRegisterFragment() {
         // Required empty public constructor
@@ -154,14 +151,14 @@ public class ShopRegisterFragment extends Fragment implements ShopRegisterView {
      * @return A new instance of fragment ShopRegisterFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public  ShopRegisterFragment newInstance(String param1, String param2) {
+    public ShopRegisterFragment newInstance(String param1, String param2) {
         ShopRegisterFragment fragment = new ShopRegisterFragment();
-		Bundle args = new Bundle();
-		args.putString(ARG_PARAM1, param1);
-		args.putString(ARG_PARAM2, param2);
-		fragment.setArguments(args);
-		return fragment;
-	}
+        Bundle args = new Bundle();
+        args.putString(ARG_PARAM1, param1);
+        args.putString(ARG_PARAM2, param2);
+        fragment.setArguments(args);
+        return fragment;
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -252,7 +249,7 @@ public class ShopRegisterFragment extends Fragment implements ShopRegisterView {
                 }/* else if (description.equals("") || description.equals(null)) {
                     description_edittext.setError("Please enter shop description");
                     description_edittext.requestFocus();
-                } */else if (address.equals("") || address.equals(null)) {
+                } */ else if (address.equals("") || address.equals(null)) {
                     description_edittext.setError("Please enter shop address");
                     description_edittext.requestFocus();
                 } else if (category.equals(SELECT_CATEGORY)) {
@@ -283,30 +280,20 @@ public class ShopRegisterFragment extends Fragment implements ShopRegisterView {
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode,resultCode, data);
+        super.onActivityResult(requestCode, resultCode, data);
 
         if (requestCode == GALLERY_REQUEST_ID && resultCode == RESULT_OK && data != null && data.getData() != null) {
             imageUri = data.getData();
-            try {
-                //Getting the Bitmap from Gallery
-                //bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), filePath);
-                if (imageUri != null) {
-                    bitmap = MediaStore.Images.Media.getBitmap(context.getContentResolver(), imageUri);
-                    imageView.setImageBitmap(bitmap);
-                }
-            } catch (IOException e) {
-                e.printStackTrace();
+            if (imageUri != null) {
+                Glide.with(this).load(imageUri).fitCenter().crossFade().into(imageView);
+
             }
 
-        } else if (requestCode ==CAMERA_REQUEST_ID && resultCode == RESULT_OK) {
+        } else if (requestCode == CAMERA_REQUEST_ID && resultCode == RESULT_OK) {
 
-            //    imageUri=data.getData();
-            imageUri=Uri.fromFile(image);
-            try {
-                bitmap = BitmapUtils.filePathToBitmapConverter(UriUtils.uriToFilePathConverter(context, imageUri));
-                imageView.setImageBitmap(bitmap);
-            } catch (IOException e) {
-                e.printStackTrace();
+            if (imageUri != null) {
+                imageUri = Uri.fromFile(image);
+                Glide.with(this).load(imageUri).fitCenter().crossFade().into(imageView);
             }
         }
     }
@@ -338,7 +325,7 @@ public class ShopRegisterFragment extends Fragment implements ShopRegisterView {
             //cardView.setVisibility(View.GONE);
         } else {
             progressBar.setVisibility(View.GONE);
-           // cardView.setVisibility(View.VISIBLE);
+            // cardView.setVisibility(View.VISIBLE);
         }
     }
 
@@ -450,6 +437,7 @@ public class ShopRegisterFragment extends Fragment implements ShopRegisterView {
 
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR2)
     @Override
     public void showGallery() {
 
@@ -522,15 +510,15 @@ public class ShopRegisterFragment extends Fragment implements ShopRegisterView {
     @Override
     public void onRegistrationSuccess() {
 
-		Fragment fragment=new ShopOtpFragment();
-		FragmentManager fm= getFragmentManager();
-		FragmentTransaction ft=fm.beginTransaction();
-		Bundle args = new Bundle();
-		args.putString("mobile", mobile);
-		fragment.setArguments(args);
-		ft.replace(R.id.container_body,fragment);
-		ft.commit();
+        Fragment fragment = new ShopOtpFragment();
+        FragmentManager fm = getFragmentManager();
+        FragmentTransaction ft = fm.beginTransaction();
+        Bundle args = new Bundle();
+        args.putString("mobile", mobile);
+        fragment.setArguments(args);
+        ft.replace(R.id.container_body, fragment);
+        ft.commit();
 
-       // ((ShopActivity) getActivity()).addFragment(new ShopOtpFragment());
+        // ((ShopActivity) getActivity()).addFragment(new ShopOtpFragment());
     }
 }
