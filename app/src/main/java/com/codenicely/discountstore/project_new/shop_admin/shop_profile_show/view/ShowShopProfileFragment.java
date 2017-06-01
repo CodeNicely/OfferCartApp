@@ -9,6 +9,8 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -107,6 +109,13 @@ public class ShowShopProfileFragment extends Fragment implements ShowShopProfile
 			mParam1 = getArguments().getString(ARG_PARAM1);
 			mParam2 = getArguments().getString(ARG_PARAM2);
 		}
+	}
+
+	@Override
+	public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+		inflater.inflate(R.menu.shop_show_profile, menu);
+			super.onCreateOptionsMenu(menu, inflater);
+
 	}
 
 	@Override
@@ -215,7 +224,6 @@ public class ShowShopProfileFragment extends Fragment implements ShowShopProfile
 		city=shopProfileData.getCity();
 		category=shopProfileData.getShop_category();
 		image=shopProfileData.getImage();
-
 		progressBar1.setVisibility(View.VISIBLE);
 		imageLoader.loadImage(shopProfileData.getImage(), imageView, progressBar1);
 		textViewShopName.setText("Name          : ");
