@@ -285,6 +285,7 @@ public class ShopRegisterFragment extends Fragment implements ShopRegisterView {
         if (requestCode == GALLERY_REQUEST_ID && resultCode == RESULT_OK && data != null && data.getData() != null) {
             imageUri = data.getData();
             if (imageUri != null) {
+
                 Glide.with(this).load(imageUri).fitCenter().crossFade().into(imageView);
 
             }

@@ -14,7 +14,7 @@ import com.codenicely.discountstore.project_new.shop_admin.payment_shop.view.Pay
  * Created by aman on 19/5/17.
  */
 
-public class ShopPaymentPresenterImpl implements  ShopPaymentPresenter{
+public class ShopPaymentPresenterImpl implements ShopPaymentPresenter {
 
     PaymentShopProvider paymentShopProvider;
     PaymentShopView paymentShopView;
@@ -32,53 +32,15 @@ public class ShopPaymentPresenterImpl implements  ShopPaymentPresenter{
         paymentShopProvider.requestShopPaymentHash(id, access_token, new PaymentShopCallBack() {
             @Override
             public void OnSuccess(ShopPaymentData shopPaymentData) {
-                if(shopPaymentData.isSuccess())
-                {
+                if (shopPaymentData.isSuccess()) {
                     paymentShopView.showLoading(false);
                     paymentShopView.showMessage(shopPaymentData.getMessage());
                     paymentShopView.proceedToShopPayment(shopPaymentData);
-                    Log.d("Hash",shopPaymentData.getServer_hash());
-                }
-                else
-                {
-                    Log.d("False","failure");
+                    Log.d("Hash", shopPaymentData.getChecksum_hash());
+                } else {
+                    Log.d("False", "failure");
                     paymentShopView.showLoading(false);
                     paymentShopView.showMessage(shopPaymentData.getMessage());
-                }
-
-
-
-            }
-
-            @Override
-            public void OnFailure(String error) {
-               paymentShopView.showMessage(error);
-                paymentShopView.showLoading(false);
-
-
-            }
-        });
-
-    }
-
-    @Override
-    public void updateShopPaymentStatus(String access_token, String transaction_id,Boolean success) {
-        paymentShopView.showLoading(true);
-        paymentShopProvider.updateShopPaymentStatus(access_token, transaction_id,success, new UpdateShopPaymentCallBack() {
-            @Override
-            public void OnSuccess(UpdateShopPaymentData updateShopPaymentData) {
-                if(updateShopPaymentData.isSuccess())
-                {
-                    paymentShopView.showLoading(false);
-                   // paymentShopView.showMessage(updateShopPaymentData.getMessage());
-                    Log.d("Aman_confirm","aman confirm");
-                }
-                else
-                {
-                    paymentShopView.showLoading(false);
-                    paymentShopView.showMessage(updateShopPaymentData.getMessage());
-
-                    Log.d("False2",updateShopPaymentData.getMessage());
                 }
 
 
@@ -88,11 +50,41 @@ public class ShopPaymentPresenterImpl implements  ShopPaymentPresenter{
             public void OnFailure(String error) {
                 paymentShopView.showMessage(error);
                 paymentShopView.showLoading(false);
-                Log.d("Aman","aman");
+
 
             }
         });
 
+    }
+
+    @Override
+    public void updateShopPaymentStatus(String access_token, String transaction_id, Boolean success) {
+        paymentShopView.showLoading(true);
+        paymentShopProvider.updateShopPaymentStatus(access_token, transaction_id, success, new UpdateShopPaymentCallBack() {
+            @Override
+            public void OnSuccess(UpdateShopPaymentData updateShopPaymentData) {
+                if (updateShopPaymentData.isSuccess()) {
+                    paymentShopView.showLoading(false);
+                    // paymentShopView.showMessage(updateShopPaymentData.getMessage());
+                    Log.d("Aman_confirm", "aman confirm");
+                } else {
+                    paymentShopView.showLoading(false);
+                    paymentShopView.showMessage(updateShopPaymentData.getMessage());
+
+                    Log.d("False2", updateShopPaymentData.getMessage());
+                }
+
+
+            }
+
+            @Override
+            public void OnFailure(String error) {
+                paymentShopView.showMessage(error);
+                paymentShopView.showLoading(false);
+                Log.d("Aman", "aman");
+
+            }
+        });
 
 
     }

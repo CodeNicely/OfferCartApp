@@ -21,6 +21,15 @@
     </item>
     <item
         is-multidex="true"
+        jar="/home/meghal/AndroidStudioProjects/OfferCartApp/app/libs/PGSDK_V2.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ac7573d38f31559f8f027eb698769d3ebad40b64">
+        <dex dex="/home/meghal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/transforms/dex/debug/folders/1000/2/PGSDK_V2.0_b5529e3c82af2d8c1bfedaae425fb7facf473a8d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/home/meghal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
         jumboMode="true"
         optimize="true"
@@ -34,7 +43,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="6ce1121bf1349b0acf04cd589836520b19b528f0">
+        sha1="1613fc890a26ad185e4076436c40b9b0411b1a84">
         <dex dex="/home/meghal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_1d6ee9db7719ec52505ab63a8fa9a885a1db09dc/classes.dex" />
     </item>
 
