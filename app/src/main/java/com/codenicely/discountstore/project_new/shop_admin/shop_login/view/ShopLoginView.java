@@ -7,4 +7,5 @@ public interface ShopLoginView {
 	void showProgressbar(boolean show);
 	void showMessage(String message);
 	void onLoginVerified(String access_token);
+	void onLoginFailed();
 }

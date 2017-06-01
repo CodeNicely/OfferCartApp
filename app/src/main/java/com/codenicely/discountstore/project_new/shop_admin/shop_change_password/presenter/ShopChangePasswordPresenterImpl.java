@@ -27,7 +27,8 @@ public class ShopChangePasswordPresenterImpl implements ShopChangePasswordPresen
 				if (shopChangePasswordData.isSuccess()){
 					shopChangePasswordView.showProgressbar(false);
 					shopChangePasswordView.showMessage(shopChangePasswordData.getMessage());
-				}else {
+					shopChangePasswordView.onPasswordChanged();
+					}else {
 					shopChangePasswordView.showProgressbar(false);
 					shopChangePasswordView.showMessage(shopChangePasswordData.getMessage());
 

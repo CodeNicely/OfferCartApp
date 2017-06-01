@@ -2,11 +2,13 @@ package com.codenicely.discountstore.project_new.shop_admin.shop_change_password
 
 import android.annotation.TargetApi;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
+import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -181,6 +183,25 @@ public class ShopChangePasswordFragment extends Fragment implements ShopChangePa
 
 	@Override
 	public void onPasswordChanged() {
+
+		AlertDialog.Builder builder;
+		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+			builder = new AlertDialog.Builder(getContext(), android.R.style.Theme_Material_Dialog_Alert);
+		} else {
+			builder = new AlertDialog.Builder(getContext());
+		}
+		builder.setTitle("Password Changed")
+				.setMessage("Your password has been changed successfully")
+				.setPositiveButton(R.string.okay, new DialogInterface.OnClickListener() {
+					public void onClick(DialogInterface dialog, int which) {
+
+                        dialog.dismiss();
+						onDestroy();
+					}
+				})
+
+				.show();
+
 		//don't know what to put here
 	}
 

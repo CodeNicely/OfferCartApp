@@ -31,6 +31,7 @@ public class ShopLoginPresenterImpl implements ShopLoginPresenter {
 				} else {
 					shopLoginView.showProgressbar(false);
 					shopLoginView.showMessage(shopLoginData.getMessage());
+					shopLoginView.onLoginFailed();
 				}
 			}
 

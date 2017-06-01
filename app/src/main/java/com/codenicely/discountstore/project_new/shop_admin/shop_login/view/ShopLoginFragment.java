@@ -208,11 +208,22 @@ public class ShopLoginFragment extends Fragment implements ShopLoginView{
 		sharedPrefs.setAccessTokenShop(access_token);
 		sharedPrefs.setShopLogin(true);
 
+		loginButton.setEnabled(true);
+		loginButton.setClickable(true);
+
+
 		//Something to jump to next activity
 		Intent intent = new Intent(getContext(), ShopHomePage.class);
 		startActivity(intent);
 		onDestroy();
 		}
+
+	@Override
+	public void onLoginFailed() {
+		loginButton.setEnabled(true);
+		loginButton.setClickable(true);
+
+	}
 
 	public interface OnFragmentInteractionListener {
 		void onFragmentInteraction(Uri uri);

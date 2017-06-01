@@ -168,6 +168,9 @@ public class LoginScreenActivity extends Activity implements LoginScreenView {
 
     @Override
     public void onLoginVerified() {
+        login_button.setEnabled(true);
+        login_button.setEnabled(true);
+
         Intent in = new Intent(LoginScreenActivity.this, OtpViewImpl.class);
         in.putExtra("mobile", mobile1);
         startActivity(in);
