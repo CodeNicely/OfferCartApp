@@ -8,6 +8,7 @@
         android:id="@+id/progressBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:visibility="gone"
         android:layout_centerInParent="true" />
 
     <LinearLayout
@@ -36,7 +37,7 @@
                 android:layout_weight="16"
                 android:layout_height="50dp"
                 android:gravity="center"
-                android:text="Sign Up"
+                android:text="Edit Offer"
                 android:textAllCaps="true"
                 android:textColor="@color/white_line"
                 android:textSize="18dp" />
@@ -65,13 +66,11 @@
 -->
 
         <ScrollView
-            android:background="@color/color_shop_primary"
 
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <LinearLayout
-                android:background="@color/color_shop_primary"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
@@ -79,69 +78,60 @@
 
                 <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/white_line"
+                    app:hintTextAppearance="@style/EditTextLayoutTheme">
 
                     <EditText
                         android:id="@+id/name"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="@string/offer_name" />
-
+                        android:hint="@string/offer_name"
+                        android:textColor="@color/white_line"
+                        android:textColorHint="@color/white_line"
+                        android:theme="@style/EditTextTheme"
+                        />
                 </android.support.design.widget.TextInputLayout>
-                <!--
-                                <android.support.design.widget.TextInputLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content">
 
-                                    <EditText
-                                        android:id="@+id/offer_validity"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:hint="@string/offer_validity"
-                                        />
 
-                                </android.support.design.widget.TextInputLayout>-->
-                <DatePicker
-                    android:id="@+id/offer_expiry"
+
+
+                <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:calendarViewShown="false"
-                    android:datePickerMode="spinner"
-                    android:spinnersShown="true"></DatePicker><!--
-                <android.support.design.widget.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <EditText
-                        android:id="@+id/offer_price"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/offer_price"
-                        android:inputType="number" />
-                </android.support.design.widget.TextInputLayout>
--->
-                <android.support.design.widget.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:textColorHint="@color/white_line"
+                    app:hintTextAppearance="@style/EditTextLayoutTheme">
 
                     <EditText
                         android:id="@+id/offer_description"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:gravity="start"
                         android:hint="@string/description"
-                        android:minHeight="100dp" />
+                        android:textColor="@color/white_line"
+                        android:textColorHint="@color/white_line"
+                        android:theme="@style/EditTextTheme"
+                        />
+
 
                 </android.support.design.widget.TextInputLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:id="@+id/offer_expiry"
+                    android:text="Offer Expiry Date"
+                    android:textColor="@color/white_line"
+                    android:layout_margin="4dp"
+                    android:textSize="@dimen/small_text_size" />
 
                 <ImageView
                     android:id="@+id/imageView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:maxHeight="250dp"
-                    android:minHeight="100dp"
-                    android:padding="8dp"
-                    android:src="@mipmap/brand_store_logo" />
+                    android:minHeight="250dp"
+                    android:maxHeight="400dp"
+                    android:contentDescription="@string/shop_image"
+                    android:src="@drawable/brand_store_logo_white" />
+
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -151,24 +141,30 @@
 
                     <Button
                         android:id="@+id/galleryButton"
-                        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                        style="@style/Widget.AppCompat.Button.Colored"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_margin="12dp"
                         android:layout_weight="5"
+                        android:background="@drawable/shop_sign_up_button"
                         android:text="@string/select_images_gallery"
+                        android:textColor="@color/white_line"
 
                         />
 
                     <Button
                         android:id="@+id/cameraButton"
-                        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                        style="@style/Widget.AppCompat.Button.Colored"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_margin="12dp"
                         android:layout_weight="5"
-                        android:text="@string/take_picture" />
+                        android:background="@drawable/shop_sign_up_button"
+                        android:text="@string/take_picture"
+
+                        android:textColor="@color/white_line" />
 
                 </LinearLayout>
-
 
                 <Button
                     android:id="@+id/registerOffer"
@@ -176,7 +172,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="@string/edit_offer" />
+                    android:layout_margin="12dp"
+                    android:background="@drawable/shop_sign_up_button"
+                    android:text="@string/register_offer"
+                    android:textColor="@color/white_line"
+
+                    />
+
 
             </LinearLayout>
         </ScrollView>

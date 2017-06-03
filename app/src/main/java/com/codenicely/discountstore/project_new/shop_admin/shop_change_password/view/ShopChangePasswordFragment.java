@@ -118,7 +118,8 @@ public class ShopChangePasswordFragment extends Fragment implements ShopChangePa
 				getActivity().onBackPressed();
 			}
 		});
-*/
+*/		old_password_edittext.setVisibility(View.VISIBLE);
+
 		backButton.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {

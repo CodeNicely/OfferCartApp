@@ -525,7 +525,6 @@ public class ShopRegisterFragment extends Fragment implements ShopRegisterView {
         fragment.setArguments(args);
         ft.replace(R.id.container_body, fragment);
         ft.commit();
-
         // ((ShopActivity) getActivity()).addFragment(new ShopOtpFragment());
     }
 }

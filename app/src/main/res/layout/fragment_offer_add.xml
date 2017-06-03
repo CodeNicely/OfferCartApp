@@ -10,6 +10,7 @@
         android:id="@+id/progressBar"
         android:layout_centerInParent="true"
         android:layout_width="wrap_content"
+        android:visibility="gone"
         android:layout_height="wrap_content" />
 <!--
     <android.support.v7.widget.Toolbar
@@ -84,7 +85,7 @@
                         android:id="@+id/offer_name"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="@string/offer_name" />
+                        android:hint="@string/offer_name"
                         android:textColor="@color/white_line"
                         android:textColorHint="@color/white_line"
                         android:theme="@style/EditTextTheme"
@@ -112,14 +113,15 @@
 
 
                 </android.support.design.widget.TextInputLayout>
-                <DatePicker
+                <TextView
                     android:layout_width="match_parent"
+                    android:layout_height="50dp"
                     android:id="@+id/offer_expiry"
-                    android:datePickerMode="spinner"
-                    android:calendarViewShown="false"
-                    android:tag="Offer Validity"
-                    android:layout_height="wrap_content">
-                </DatePicker>
+                    android:text="Offer Expiry Date"
+                    android:textColor="@color/white_line"
+                    android:layout_margin="4dp"
+                    android:textSize="@dimen/small_text_size" />
+
                 <ImageView
                     android:id="@+id/imageView"
                     android:layout_width="match_parent"

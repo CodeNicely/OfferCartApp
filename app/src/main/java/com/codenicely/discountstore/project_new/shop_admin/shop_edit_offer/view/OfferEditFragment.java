@@ -1,6 +1,7 @@
 package com.codenicely.discountstore.project_new.shop_admin.shop_edit_offer.view;
 
 import android.Manifest;
+import android.app.DatePickerDialog;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -28,6 +29,7 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.codenicely.discountstore.project_new.R;
@@ -36,6 +38,7 @@ import com.codenicely.discountstore.project_new.helper.image_loader.GlideImageLo
 import com.codenicely.discountstore.project_new.helper.image_loader.ImageLoader;
 import com.codenicely.discountstore.project_new.helper.utils.BitmapUtils;
 import com.codenicely.discountstore.project_new.helper.utils.UriUtils;
+import com.codenicely.discountstore.project_new.shop_admin.shop_add_offer.view.OfferAddFragment;
 import com.codenicely.discountstore.project_new.shop_admin.shop_edit_offer.model.RetrofitOfferEditHelper;
 import com.codenicely.discountstore.project_new.shop_admin.shop_edit_offer.presenter.OfferEditPresenter;
 import com.codenicely.discountstore.project_new.shop_admin.shop_edit_offer.presenter.OfferEditPresenterImpl;
@@ -51,7 +54,9 @@ import com.karumi.dexter.listener.single.PermissionListener;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Calendar;
 import java.util.List;
+import java.util.TimeZone;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -66,7 +71,7 @@ import static android.app.Activity.RESULT_OK;
  * Use the {@link OfferEditFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class OfferEditFragment extends Fragment implements OfferEditView {
+public class OfferEditFragment extends Fragment implements OfferEditView,DatePickerDialog.OnDateSetListener {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -97,7 +102,7 @@ public class OfferEditFragment extends Fragment implements OfferEditView {
     @BindView(R.id.registerOffer)
     Button registerButton;
     @BindView(R.id.offer_expiry)
-    DatePicker datePicker;
+    TextView tvofferExpiry;
 
 
 /*
@@ -110,6 +115,8 @@ public class OfferEditFragment extends Fragment implements OfferEditView {
 
     @BindView(R.id.backButton)
     ImageView backButton;
+    DatePickerDialog datePickerDialog;
+    int year,month,date;
 
     private ProgressDialog progressDialog;
     private static final String TAG = "OfferEditFragment";
@@ -120,7 +127,6 @@ public class OfferEditFragment extends Fragment implements OfferEditView {
 
     String offer_id;
     OfferEditPresenter offerAddPresenter;
-    //Date expiry_date;
     private OnFragmentInteractionListener mListener;
 
 	ImageLoader imageLoader;
@@ -165,19 +171,28 @@ public class OfferEditFragment extends Fragment implements OfferEditView {
 		String offer_name = getArguments().getString("offer_name");
 		String offer_description = getArguments().getString("offer_description");
 		String offer_image = getArguments().getString("offer_image");
-		Log.d("Offer Id ------",offer_id);
+        final String expiry_date =getArguments().getString("offer_expiry_date");
+        Log.d("Offer Id ------",offer_id);
 		Log.d("Name ------",offer_name);
 		Log.d("Description ---",offer_description);
 		Log.d("Image----",offer_image);
+        Calendar calendar = Calendar.getInstance(TimeZone.getDefault());
 
         View view = inflater.inflate(R.layout.fragment_edit_offer, container, false);
         ButterKnife.bind(this, view);
         editTextname.setText(offer_name);
         editTextdescription.setText(offer_description);
+        tvofferExpiry.setText("Offer Expiry Date");
+        tvofferExpiry.append(" : "+ expiry_date);
+
+        datePickerDialog = new DatePickerDialog(
+           context, R.style.DatePickerDialogTheme, OfferEditFragment.this,
+           calendar.get(Calendar.YEAR),calendar.get(Calendar.MONTH),calendar.get(Calendar.DATE));
 
         imageLoader=new GlideImageLoader(getContext());
 
 		imageLoader.loadImage(offer_image,imageView,progressBar);
+
 /*
         toolbar.setNavigationIcon(ContextCompat.getDrawable(context, R.drawable.ic_arrow_back_white_24dp));
 
@@ -198,6 +213,12 @@ public class OfferEditFragment extends Fragment implements OfferEditView {
             @Override
             public void onClick(View v) {
                 getActivity().onBackPressed();
+            }
+        });
+        tvofferExpiry.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                datePickerDialog.show();
             }
         });
 
@@ -224,31 +245,43 @@ public class OfferEditFragment extends Fragment implements OfferEditView {
 
                 sharedPrefs = new SharedPrefs(getContext());
                 String name = editTextname.getText().toString();
-                //	String validity = editTextvalidity.getText().toString();
                 String description = editTextdescription.getText().toString();
 
-                //	String price =editTextprice.getText().toString();
 
-                int year = datePicker.getYear();
-                int month = datePicker.getMonth();
-                int date = datePicker.getDayOfMonth();
+				if (tvofferExpiry.getText().toString().equals("Offer Expiry Date : "+ expiry_date)){
+					Log.d("REQUIRED---",tvofferExpiry.getText().toString());
+					Log.d("PRESENTD---","Offer Expiry Date : "+ expiry_date);
+
+				int year0=expiry_date.charAt(0)-48;
+				int year1=expiry_date.charAt(1)-48;
+				int year2=expiry_date.charAt(2)-48;
+				int year3=expiry_date.charAt(3)-48;
+					Log.d("PRESENTD---","Offer Expiry Date : "+ year0);
+					Log.d("PRESENTD---","Offer Expiry Date : "+ year1);
+					Log.d("PRESENTD---","Offer Expiry Date : "+ year2);
+					Log.d("PRESENTD---","Offer Expiry Date : "+ year3);
+
+				int month0=expiry_date.charAt(5)-48;
+				int month1=expiry_date.charAt(6)-48;
+
+				int date0=expiry_date.charAt(8)-48;
+				int date1=expiry_date.charAt(9)-48;
 
 
-                if (name.equals("") || name.equals(null)) {
+				date=date0*10+date1;
+				month=month0*10+month1;
+				year=year0*1000+year1*100+year2*10+year3;
+				//	Toast.makeText(getContext(),date+"/"+month+"/"+year,Toast.LENGTH_LONG).show();
+				}
+
+
+				if (name.equals("") || name.equals(null)) {
                     editTextname.setError("Please enter Offer Name");
                     editTextname.requestFocus();
                 } else if (description.equals("") || description.equals(null)) {
                     editTextdescription.setError("Please enter Offer description");
                     editTextdescription.requestFocus();
-                }
-                /*else if (validity.equals("") || validity.equals(null)) {
-                    editTextvalidity.setError("Please enter Offer Validity");
-					editTextvalidity.requestFocus();
-				}*//*else if (price.equals("") || price.equals(null)) {
-					editTextprice.setError("Please enter Offer Validity");
-					editTextprice.requestFocus();
-				}*/
-                else if (imageUri == null) {
+                } else if (imageUri == null) {
                     Snackbar.make(getActivity().findViewById(android.R.id.content),
                             "You've not selected any image to upload.", Snackbar.LENGTH_LONG)
                             .setActionTextColor(Color.RED)
@@ -450,6 +483,16 @@ public class OfferEditFragment extends Fragment implements OfferEditView {
         //Go to home page now.
     }
 
+    @Override
+    public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+        this.year=year;
+        this.month=month+1;
+        this.date=dayOfMonth;
+        tvofferExpiry.setText("Offer Expiry Date");
+        tvofferExpiry.append(" : "+ date+"/"+this.month+"/"+this.year);
+
+    }
+
 
     /**
      * This interface must be implemented by activities that contain this
@@ -461,6 +504,7 @@ public class OfferEditFragment extends Fragment implements OfferEditView {
      * "http://developer.android.com/training/basics/fragments/communicating.html"
      * >Communicating with Other Fragments</a> for more information.
      */
+
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);

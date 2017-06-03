@@ -93,11 +93,11 @@ public class RetrofitOfferEditHelper implements OfferEditHelper {
 			File imageFile = FileUtils.BitmapToFileConverter(context, BitmapUtils.filePathToBitmapConverter(UriUtils.uriToFilePathConverter(context, imageUri)));
 			RequestBody fbody = RequestBody.create(MediaType.parse("multipart/form-data"), imageFile);
 
-			MultipartBody.Part image =
-					MultipartBody.Part.createFormData("image", imageFile.getName(), fbody);
+			MultipartBody.Part offer_image =
+					MultipartBody.Part.createFormData("offer_image", imageFile.getName(), fbody);
 
 			return offerEditApi.requestOfferEdit(shop_access_token1,offer_id1, offer_name1, offer_description1,
-					date1,month1,year1,image);
+					date1,month1,year1,offer_image);
 		}
 
 
