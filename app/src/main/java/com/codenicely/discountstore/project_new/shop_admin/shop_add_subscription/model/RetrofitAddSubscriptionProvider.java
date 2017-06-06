@@ -1,5 +1,7 @@
 package com.codenicely.discountstore.project_new.shop_admin.shop_add_subscription.model;
 
+import android.util.Log;
+
 import com.codenicely.discountstore.project_new.shop_admin.shop_add_subscription.AddSubscriptionCallBack;
 import com.codenicely.discountstore.project_new.shop_admin.shop_add_subscription.api.AddSubscriptionDataApi;
 import com.codenicely.discountstore.project_new.shop_admin.shop_add_subscription.model.data.AddSubscriptionData;
@@ -44,19 +46,21 @@ public class RetrofitAddSubscriptionProvider implements AddSubscriptionProvider{
     @Override
     public void requestSubscription(String access_token, final AddSubscriptionCallBack addSubscriptionCallBack) {
      Call<AddSubscriptionData> call=addSubscriptionDataApi.getSubscription(access_token);
+        Log.d("CALL--","sdsdds");
+
         call.enqueue(new Callback<AddSubscriptionData>() {
             @Override
             public void onResponse(Call<AddSubscriptionData> call, Response<AddSubscriptionData> response) {
                 addSubscriptionCallBack.OnSuccess(response.body());
+                Log.d("SUCCESS--","sdsdds");
             }
 
             @Override
             public void onFailure(Call<AddSubscriptionData> call, Throwable t) {
                   addSubscriptionCallBack.OnFailure("UNAABLE TO CONNECT");
+                Log.d("FAILURE--","sdsdds");
                 t.printStackTrace();
             }
         });
-
-
     }
 }

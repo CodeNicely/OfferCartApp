@@ -47,7 +47,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColorHint="@color/white"
-            app:hintTextAppearance="@color/white"
+            app:hintTextAppearance="@style/EditTextLayoutTheme"
             tools:targetApi="lollipop">
 
             <EditText
@@ -56,7 +56,6 @@
                 android:layout_height="wrap_content"
                 android:focusable="true"
                 android:hint="@string/full_name"
-                android:text="Meghal Agrawal"
                 android:textColor="@color/white"
                 android:textColorHint="@color/white"
                 android:textSize="@dimen/small_text_size"
@@ -70,7 +69,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColorHint="@color/white"
-            app:hintTextAppearance="@color/white"
+
+            app:hintTextAppearance="@style/EditTextLayoutTheme"
             tools:targetApi="lollipop">
 
             <EditText
@@ -78,7 +78,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:focusable="true"
-                android:text="8109109457"
                 android:inputType="number"
                 android:hint="@string/mobile_no"
                 android:textColor="@color/white"
@@ -93,7 +92,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColorHint="@color/white"
-            app:hintTextAppearance="@color/white"
+            app:hintTextAppearance="@style/EditTextLayoutTheme"
             tools:targetApi="lollipop">
 
             <EditText
@@ -101,7 +100,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:focusable="true"
-                android:text="meghal@codenicely.in"
                 android:hint="@string/email_id"
                 android:textColor="@color/white"
                 android:textColorHint="@color/white"

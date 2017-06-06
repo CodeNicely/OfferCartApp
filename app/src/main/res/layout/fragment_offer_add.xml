@@ -1,69 +1,82 @@
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:background="@color/color_shop_primary"
+    android:layout_height="wrap_content"
 
-    android:layout_height="wrap_content">
+    android:background="@color/color_shop_primary">
 
     <ProgressBar
         android:id="@+id/progressBar"
-        android:layout_centerInParent="true"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-<!--
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar"
-        app:title="@string/title_add_offer"
-        app:titleTextColor="@color/white"
-        android:titleTextColor="@color/white"
-        android:title="@string/title_add_offer"
-        android:background="@color/color_shop_primary"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>-->
-<!--
-
-    <android.support.v7.widget.CardView
-        android:id="@+id/cardView"
-        android:layout_below="@+id/toolbar"
-        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        app:cardCornerRadius="4dp"
-        app:contentPadding="8dp">
--->
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_shop_primary"
+            android:navigationIcon="@drawable/ic_arrow_back_white_24dp"
+            android:title="@string/title_add_offer"
+            android:titleTextColor="@color/white"
+            app:navigationIcon="@drawable/ic_arrow_back_white_24dp"
+            app:title="@string/title_add_offer"
+            app:titleTextColor="@color/white" />
+    </android.support.design.widget.AppBarLayout>
+
+    <!--
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_below="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="4dp"
+            app:contentPadding="8dp">
+    -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="4dp"
         android:orientation="vertical"
+        android:layout_below="@+id/appBarLayout"
         android:padding="4dp">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:weightSum="20"
-            android:orientation="horizontal">
+        <!--
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="20"
+                    android:orientation="horizontal">
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_weight="4"
-                android:id="@+id/backButton"
-                android:src="@drawable/ic_arrow_back_white_24dp"
-                android:layout_height="match_parent"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_weight="16"
-                android:layout_height="50dp"
-                android:gravity="center"
-                android:text="Add Offer"
-                android:textAllCaps="true"
-                android:textColor="@color/white_line"
-                android:textSize="@dimen/medium_text_size" />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_weight="4"
+                        android:id="@+id/backButton"
+                        android:src="@drawable/ic_arrow_back_white_24dp"
+                        android:layout_height="match_parent"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_weight="16"
+                        android:layout_height="50dp"
+                        android:gravity="center"
+                        android:text="Add Offer"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white_line"
+                        android:textSize="@dimen/medium_text_size" />
 
-        </LinearLayout>
+                </LinearLayout>
+        -->
 
-    <ScrollView
+        <ScrollView
 
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -84,15 +97,11 @@
                         android:id="@+id/offer_name"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="@string/offer_name" />
+                        android:hint="@string/offer_name"
                         android:textColor="@color/white_line"
                         android:textColorHint="@color/white_line"
-                        android:theme="@style/EditTextTheme"
-                        />
+                        android:theme="@style/EditTextTheme" />
                 </android.support.design.widget.TextInputLayout>
-
-
-
 
                 <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
@@ -105,30 +114,29 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/description"
-                    android:textColor="@color/white_line"
-                    android:textColorHint="@color/white_line"
-                    android:theme="@style/EditTextTheme"
-                    />
-
+                        android:textColor="@color/white_line"
+                        android:textColorHint="@color/white_line"
+                        android:theme="@style/EditTextTheme" />
 
                 </android.support.design.widget.TextInputLayout>
-                <DatePicker
-                    android:layout_width="match_parent"
+
+                <TextView
                     android:id="@+id/offer_expiry"
-                    android:datePickerMode="spinner"
-                    android:calendarViewShown="false"
-                    android:tag="Offer Validity"
-                    android:layout_height="wrap_content">
-                </DatePicker>
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_margin="4dp"
+                    android:text="Offer Expiry Date"
+                    android:textColor="@color/white_line"
+                    android:textSize="@dimen/small_text_size" />
+
                 <ImageView
                     android:id="@+id/imageView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:minHeight="250dp"
-                    android:maxHeight="400dp"
                     android:contentDescription="@string/shop_image"
+                    android:maxHeight="400dp"
+                    android:minHeight="250dp"
                     android:src="@drawable/brand_store_logo_white" />
-
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -145,9 +153,7 @@
                         android:layout_weight="5"
                         android:background="@drawable/shop_sign_up_button"
                         android:text="@string/select_images_gallery"
-                        android:textColor="@color/white_line"
-
-                        />
+                        android:textColor="@color/white_line" />
 
                     <Button
                         android:id="@+id/cameraButton"
@@ -158,7 +164,6 @@
                         android:layout_weight="5"
                         android:background="@drawable/shop_sign_up_button"
                         android:text="@string/take_picture"
-
                         android:textColor="@color/white_line" />
 
                 </LinearLayout>
@@ -172,9 +177,7 @@
                     android:layout_margin="12dp"
                     android:background="@drawable/shop_sign_up_button"
                     android:text="@string/register_offer"
-                    android:textColor="@color/white_line"
-
-                    />
+                    android:textColor="@color/white_line" />
 
             </LinearLayout>
         </ScrollView>

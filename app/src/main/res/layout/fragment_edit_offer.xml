@@ -1,15 +1,35 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/color_shop_primary"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:background="@color/color_shop_primary">
 
     <ProgressBar
         android:id="@+id/progressBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true" />
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
 
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@color/color_shop_primary"
+            app:navigationIcon="@drawable/ic_arrow_back_white_24dp"
+            android:navigationIcon="@drawable/ic_arrow_back_white_24dp"
+            android:title="@string/edit_offer"
+            android:titleTextColor="@color/white"
+            app:title="@string/edit_offer"
+            app:titleTextColor="@color/white" />
+
+    </android.support.design.widget.AppBarLayout>
+    <!--
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -36,150 +56,149 @@
                 android:layout_weight="16"
                 android:layout_height="50dp"
                 android:gravity="center"
-                android:text="Sign Up"
+                android:text="Edit Offer"
                 android:textAllCaps="true"
                 android:textColor="@color/white_line"
                 android:textSize="18dp" />
 
-        </LinearLayout>
+        </LinearLayout>-->
 
-<!--
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/color_shop_primary"
-        android:title="@string/title_edit_offer"
-        android:titleTextColor="@color/white"
-        app:title="@string/edit_offer"
-        app:titleTextColor="@color/white" />
-
-    <android.support.v7.widget.CardView
-        android:id="@+id/cardView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/toolbar"
-        android:layout_margin="8dp"
-        app:cardCornerRadius="4dp"
-        app:contentPadding="8dp">
--->
-
-        <ScrollView
-            android:background="@color/color_shop_primary"
-
+    <!--
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:background="@color/color_shop_primary"
+            android:title="@string/title_edit_offer"
+            android:titleTextColor="@color/white"
+            app:title="@string/edit_offer"
+            app:titleTextColor="@color/white" />
 
-            <LinearLayout
-                android:background="@color/color_shop_primary"
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="4dp"
+            app:contentPadding="8dp">
+    -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/appBarLayout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="8dp">
+                android:textColorHint="@color/white_line"
+                app:hintTextAppearance="@style/EditTextLayoutTheme">
 
-                <android.support.design.widget.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <EditText
-                        android:id="@+id/name"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/offer_name" />
-
-                </android.support.design.widget.TextInputLayout>
-                <!--
-                                <android.support.design.widget.TextInputLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content">
-
-                                    <EditText
-                                        android:id="@+id/offer_validity"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:hint="@string/offer_validity"
-                                        />
-
-                                </android.support.design.widget.TextInputLayout>-->
-                <DatePicker
-                    android:id="@+id/offer_expiry"
+                <EditText
+                    android:id="@+id/name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:calendarViewShown="false"
-                    android:datePickerMode="spinner"
-                    android:spinnersShown="true"></DatePicker><!--
-                <android.support.design.widget.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:hint="@string/offer_name"
+                    android:textColor="@color/white_line"
+                    android:textColorHint="@color/white_line"
+                    android:theme="@style/EditTextTheme" />
+            </android.support.design.widget.TextInputLayout>
 
-                    <EditText
-                        android:id="@+id/offer_price"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/offer_price"
-                        android:inputType="number" />
-                </android.support.design.widget.TextInputLayout>
--->
-                <android.support.design.widget.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
 
-                    <EditText
-                        android:id="@+id/offer_description"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="start"
-                        android:hint="@string/description"
-                        android:minHeight="100dp" />
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/white_line"
+                app:hintTextAppearance="@style/EditTextLayoutTheme">
 
-                </android.support.design.widget.TextInputLayout>
-
-                <ImageView
-                    android:id="@+id/imageView"
+                <EditText
+                    android:id="@+id/offer_description"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:maxHeight="250dp"
-                    android:minHeight="100dp"
-                    android:padding="8dp"
-                    android:src="@mipmap/brand_store_logo" />
+                    android:hint="@string/description"
+                    android:textColor="@color/white_line"
+                    android:textColorHint="@color/white_line"
+                    android:theme="@style/EditTextTheme" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:weightSum="10">
 
-                    <Button
-                        android:id="@+id/galleryButton"
-                        style="@style/Widget.AppCompat.Button.Borderless.Colored"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="5"
-                        android:text="@string/select_images_gallery"
+            </android.support.design.widget.TextInputLayout>
 
-                        />
+            <TextView
+                android:id="@+id/offer_expiry"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="4dp"
+                android:text="Offer Expiry Date"
+                android:textColor="@color/white_line"
+                android:textSize="@dimen/small_text_size" />
 
-                    <Button
-                        android:id="@+id/cameraButton"
-                        style="@style/Widget.AppCompat.Button.Borderless.Colored"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="5"
-                        android:text="@string/take_picture" />
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/shop_image"
+                android:maxHeight="400dp"
+                android:minHeight="250dp"
+                android:src="@drawable/brand_store_logo_white" />
 
-                </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="10">
 
                 <Button
-                    android:id="@+id/registerOffer"
-                    style="@style/Base.Widget.AppCompat.Button.Colored"
+                    android:id="@+id/galleryButton"
+                    style="@style/Widget.AppCompat.Button.Colored"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="@string/edit_offer" />
+                    android:layout_margin="12dp"
+                    android:layout_weight="5"
+                    android:background="@drawable/shop_sign_up_button"
+                    android:text="@string/select_images_gallery"
+                    android:textColor="@color/white_line"
+
+                    />
+
+                <Button
+                    android:id="@+id/cameraButton"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12dp"
+                    android:layout_weight="5"
+                    android:background="@drawable/shop_sign_up_button"
+                    android:text="@string/take_picture"
+
+                    android:textColor="@color/white_line" />
 
             </LinearLayout>
-        </ScrollView>
-</LinearLayout><!--
-    </android.support.v7.widget.CardView>
---></RelativeLayout>
+
+            <Button
+                android:id="@+id/registerOffer"
+                style="@style/Base.Widget.AppCompat.Button.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="12dp"
+                android:background="@drawable/shop_sign_up_button"
+                android:text="@string/register_offer"
+                android:textColor="@color/white_line"
+
+                />
+
+
+        </LinearLayout>
+    </ScrollView>
+    <!--
+        </android.support.v7.widget.CardView>
+    -->
+</RelativeLayout>

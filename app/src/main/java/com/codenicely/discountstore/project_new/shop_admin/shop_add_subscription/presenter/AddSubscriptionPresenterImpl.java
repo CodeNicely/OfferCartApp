@@ -4,6 +4,7 @@ import com.codenicely.discountstore.project_new.shop_admin.shop_add_subscription
 import com.codenicely.discountstore.project_new.shop_admin.shop_add_subscription.model.AddSubscriptionProvider;
 import com.codenicely.discountstore.project_new.shop_admin.shop_add_subscription.model.data.AddSubscriptionData;
 import com.codenicely.discountstore.project_new.shop_admin.shop_add_subscription.view.AddSubscriptionView;
+import com.paytm.pgsdk.Log;
 
 /**
  * Created by aman on 18/5/17.
@@ -27,11 +28,13 @@ private AddSubscriptionProvider addSubscriptionProvider;
             public void OnSuccess(AddSubscriptionData addSubscriptionData) {
                 if(addSubscriptionData.isSuccess()) {
                     addSubscriptionView.showProgressBar(false);
-                    addSubscriptionView.setData(addSubscriptionData);
+                    Log.d("PRESENTER----","Success");
+                    addSubscriptionView.setData(addSubscriptionData.getSubscription_offer_data());
                 }else
                 {
                     addSubscriptionView.showProgressBar(false);
-                    addSubscriptionView.showMessage(addSubscriptionData.getMessage());
+					android.util.Log.d("FAILURE--","sdsdds");
+					addSubscriptionView.showMessage(addSubscriptionData.getMessage());
                 }
             }
 

@@ -67,7 +67,6 @@ public class OtpViewImpl extends Activity implements OtpView {
                 otpPresenter.requestOtp(otp1, mobile);
                 submitButton.setEnabled(false);
                 submitButton.setClickable(false);
-
             }
         });
 

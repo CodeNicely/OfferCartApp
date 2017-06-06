@@ -16,7 +16,7 @@ import rx.Observable;
 public class MockShopRegisterHelper implements ShopRegisterHelper {
 
     @Override
-    public Observable<ShopRegisterData> registerShop(String name, String mobile, String password, String description, String address, String category, String city, Uri imageUri) throws IOException {
+    public Observable<ShopRegisterData> registerShop(String name, String mobile, String password, String description, String address, String category, String city,Double latitude,Double longitude, Uri imageUri) throws IOException {
         return null;
     }
 

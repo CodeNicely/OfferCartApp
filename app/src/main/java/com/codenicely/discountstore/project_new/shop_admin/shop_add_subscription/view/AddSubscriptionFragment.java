@@ -4,6 +4,9 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -52,19 +55,25 @@ public class AddSubscriptionFragment extends Fragment implements AddSubscription
 
    private String access_token;
     private  int offerId;
-    @BindView(R.id.spinner_add_subscription)
-    Spinner subscription_spinner;
+    /*@BindView(R.id.spinner_add_subscription)
+    Spinner subscription_spinner;*/
     @BindView(R.id.addSubacriptionProgressBar)
     ProgressBar subscriptionProgressBar;
-    @BindView(R.id.add_subscription_button)
+    /*@BindView(R.id.add_subscription_button)
     Button add_subscription;
+	*/@BindView(R.id.recycler_view_shop_subscription)
+	RecyclerView recyclerView;
 
-private SharedPrefs sharedPrefs;
+    @BindView(R.id.toolbar)
+    Toolbar toolbar;
+
+	private SharedPrefs sharedPrefs;
     private AddSubscriptionPresenter addSubscriptionPresenter;
-private AddSubscriptionDetails addSubscriptionDetails;
 
     private OnFragmentInteractionListener mListener;
+	private LinearLayoutManager linearLayoutManager;
 
+    private ShopSubscriptionAdapter shopSubscriptionAdapter;
     public AddSubscriptionFragment() {
         // Required empty public constructor
     }
@@ -100,26 +109,39 @@ private AddSubscriptionDetails addSubscriptionDetails;
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view =inflater.inflate(R.layout.fragment_add_subscription, container, false);
 
+        View view =inflater.inflate(R.layout.fragment_add_subscription, container, false);
         ButterKnife.bind(this,view);
+
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getActivity().onBackPressed();
+            }
+        });
+
         sharedPrefs = new SharedPrefs(getContext());
         addSubscriptionPresenter=new AddSubscriptionPresenterImpl(new RetrofitAddSubscriptionProvider(),this);
-        addSubscriptionPresenter.requestSubscription(access_token);
-access_token=sharedPrefs.getKeyAccessTokenShop();
-        add_subscription.setOnClickListener(new View.OnClickListener() {
+        access_token=sharedPrefs.getKeyAccessTokenShop();
+        shopSubscriptionAdapter=new ShopSubscriptionAdapter(getContext(),this);
+		linearLayoutManager = new LinearLayoutManager(getContext());
+		recyclerView.setLayoutManager(linearLayoutManager);
+		recyclerView.setAdapter(shopSubscriptionAdapter);
+		addSubscriptionPresenter.requestSubscription(access_token);
+
+        /*add_subscription.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 ShopPaymentFragment shopPaymentFragment=ShopPaymentFragment.newInstance(offerId);
                 ((ShopHomePage) getContext()).setFragment(shopPaymentFragment, "payment fragment");
                 Log.d("add button","fv");
                 //call pay u money gateway
-//selected offer"s ID is stored in variable offer_id
+        //selected offer"s ID is stored in variable offer_id
 
 
             }
         });
-
+*/
 
 
 
@@ -159,11 +181,11 @@ access_token=sharedPrefs.getKeyAccessTokenShop();
     }
 
     @Override
-    public void setData(AddSubscriptionData addSubscriptionData) {
-        List<AddSubscriptionDetails> addSubscriptionDetailses = new ArrayList<AddSubscriptionDetails>(addSubscriptionData.getSubscription_offer_data());
+    public void setData(List<AddSubscriptionDetails> addSubscriptionDetailsList) {
+		shopSubscriptionAdapter.setSubscriptionData(addSubscriptionDetailsList);
+		shopSubscriptionAdapter.notifyDataSetChanged();
 
-
-        ArrayAdapter<String> adapter;
+/*
         int n= addSubscriptionDetailses.size();
         final int price[] = new int [n];
         final String title[] = new String[n];
@@ -177,8 +199,10 @@ access_token=sharedPrefs.getKeyAccessTokenShop();
             id[i] = addSubscriptionDetails.getSubscription_id();
             i++;
         }
+*/
 
 
+/*
         adapter = new ArrayAdapter<String>(getContext(),
                 android.R.layout.simple_spinner_item,title);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -194,6 +218,7 @@ access_token=sharedPrefs.getKeyAccessTokenShop();
 
             }
         });
+*/
 
 
 
@@ -206,7 +231,11 @@ access_token=sharedPrefs.getKeyAccessTokenShop();
         mListener = null;
     }
 
-    /**
+	public void getRegisterrationDetails(String accessToken, int subscription_id) {
+	//intent to payment activity
+	}
+
+	/**
      * This interface must be implemented by activities that contain this
      * fragment to allow an interaction in this fragment to be communicated
      * to the activity and potentially other fragments contained in that

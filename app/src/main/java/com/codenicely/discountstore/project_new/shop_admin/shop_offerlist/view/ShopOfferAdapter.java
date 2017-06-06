@@ -37,12 +37,8 @@ public class ShopOfferAdapter extends RecyclerView.Adapter<ShopOfferAdapter.MyVi
 
 
     private SharedPrefs sharedPrefs;
-    private String access_token;
     private Context context;
     private LayoutInflater layoutInflater;
-    private ShopOfferListFragment shopOfferListFragment;
-    private ShopOfferListView shopOfferListView;
-    private ShopOfferListDetails shopOfferListDetails;
     private List<ShopOfferListDetails> shopOfferListDetailses = new ArrayList<>();
     private ImageLoader imageLoader;
     private ShopOfferListPresenter shopOfferListPresenter;
@@ -51,8 +47,6 @@ public class ShopOfferAdapter extends RecyclerView.Adapter<ShopOfferAdapter.MyVi
         this.context = context;
 
         this.layoutInflater = LayoutInflater.from(context);
-        this.shopOfferListFragment = shopOfferListFragment;
-        this.shopOfferListView = new ShopOfferListFragment();
         imageLoader = new GlideImageLoader(context);
         shopOfferListPresenter = new ShopOfferListPresenterImpl(new RetrofitShopOfferListProvider(), shopOfferListFragment);
         //  shopOfferListPresenter = new ShopOfferListPresenterImpl(new MockShopOfferListProvider(), shopOfferListFragment);
@@ -60,11 +54,9 @@ public class ShopOfferAdapter extends RecyclerView.Adapter<ShopOfferAdapter.MyVi
 
     @Override
     public ShopOfferAdapter.MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-
 		sharedPrefs=new SharedPrefs(context);
         View view = layoutInflater.inflate(R.layout.shop_offer_item, parent, false);
         return new ShopOfferAdapter.MyViewHolder(view);
-
     }
 
     @Override
@@ -91,6 +83,7 @@ public class ShopOfferAdapter extends RecyclerView.Adapter<ShopOfferAdapter.MyVi
                 String offer_name_string = shopOfferListDetails.getOffer_title();
                 String offer_description_string = shopOfferListDetails.getOffer_description();
                 String offer_image_string = shopOfferListDetails.getOffer_image();
+                String expiry_date=shopOfferListDetails.getExpiry_date();
               //  String year =shopOfferListDetails.get
 
 
@@ -103,6 +96,7 @@ public class ShopOfferAdapter extends RecyclerView.Adapter<ShopOfferAdapter.MyVi
                 args.putString("offer_name", offer_name_string);
                 args.putString("offer_description", offer_description_string);
                 args.putString("offer_image", offer_image_string);
+                args.putString("offer_expiry_date", expiry_date);
 				Log.d("Name --------------",offer_name_string);
 
 				fragment.setArguments(args);

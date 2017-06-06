@@ -3,6 +3,7 @@ package com.codenicely.discountstore.project_new.shop_admin.shop_profile_show.vi
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -41,102 +42,104 @@ import butterknife.ButterKnife;
  * create an instance of this fragment.
  */
 public class ShowShopProfileFragment extends Fragment implements ShowShopProfileView {
-	// TODO: Rename parameter arguments, choose names that match
-	// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-	private static final String ARG_PARAM1 = "param1";
-	private static final String ARG_PARAM2 = "param2";
+    // TODO: Rename parameter arguments, choose names that match
+    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+    private static final String ARG_PARAM1 = "param1";
+    private static final String ARG_PARAM2 = "param2";
 
-	// TODO: Rename and change types of parameters
-	private String mParam1;
-	private String mParam2;
+    // TODO: Rename and change types of parameters
+    private String mParam1;
+    private String mParam2;
 
-	@BindView(R.id.shop_name)
-	TextView textViewShopName;
-	@BindView(R.id.shop_description)
-	TextView textViewShopDescription;
-	@BindView(R.id.backButton)
-	ImageView backButton;
-	@BindView(R.id.shop_address)
-	TextView textViewShopAddress;
-	@BindView(R.id.phone_number)
-	TextView textViewShopPhoneNo;
-	@BindView(R.id.shop_category)
-	TextView textViewShopCategory;
-	@BindView(R.id.shop_city)
-	TextView textViewShopCity;
-	@BindView(R.id.imageView)
-	ImageView imageView;
-	@BindView(R.id.imageProgressBar)
-	ProgressBar progressBar1;
+    @BindView(R.id.shop_name)
+    TextView textViewShopName;
 
-	@BindView(R.id.progressBar)
-	ProgressBar progressBar;
-/*
-	@BindView(R.id.edit_profile_btn)
-	Button buttonEditProfile;
-*/
-	@BindView(R.id.editButton)
-	ImageView edit_profile_btn;
+    @BindView(R.id.shop_description)
+    TextView textViewShopDescription;
 
+    @BindView(R.id.shop_address)
+    TextView textViewShopAddress;
 
-	/*@BindView(R.id.toolbar)
-	Toolbar toolbar;
+    @BindView(R.id.phone_number)
+    TextView textViewShopPhoneNo;
+
+    @BindView(R.id.shop_category)
+    TextView textViewShopCategory;
+
+    @BindView(R.id.shop_city)
+    TextView textViewShopCity;
+
+    @BindView(R.id.imageView)
+    ImageView imageView;
+
+    @BindView(R.id.imageProgressBar)
+    ProgressBar progressBar1;
+
+    @BindView(R.id.progressBar)
+    ProgressBar progressBar;
+
+    @BindView(R.id.edit_button)
+    FloatingActionButton edit_button;
 
 
-*/
-	ShowShopProfilePresenter shopProfilePresenter;
-	private ImageLoader imageLoader;
-	SharedPrefs sharedPrefs;
-	private OnFragmentInteractionListener mListener;
+    @BindView(R.id.toolbar)
+    Toolbar toolbar;
 
 
-	String name,description,address,category,city,image;
-	/**
-	 * Use this factory method to create a new instance of
-	 * this fragment using the provided parameters.
-	 *
-	 * @param param1 Parameter 1.
-	 * @param param2 Parameter 2.
-	 * @return A new instance of fragment ShowShopProfileFragment.
-	 */
-	// TODO: Rename and change types and number of parameters
-	public static ShowShopProfileFragment newInstance(String param1, String param2) {
-		ShowShopProfileFragment fragment = new ShowShopProfileFragment();
-		Bundle args = new Bundle();
-		args.putString(ARG_PARAM1, param1);
-		args.putString(ARG_PARAM2, param2);
-		fragment.setArguments(args);
-		return fragment;
-	}
+    ShowShopProfilePresenter shopProfilePresenter;
+    private ImageLoader imageLoader;
+    SharedPrefs sharedPrefs;
+    private OnFragmentInteractionListener mListener;
 
-	public ShowShopProfileFragment() {
-		// Required empty public constructor
-	}
 
-	@Override
-	public void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		if (getArguments() != null) {
-			mParam1 = getArguments().getString(ARG_PARAM1);
-			mParam2 = getArguments().getString(ARG_PARAM2);
-		}
-	}
+    String name, description, address, category, city, image;
 
-	@Override
-	public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-		inflater.inflate(R.menu.shop_show_profile, menu);
-			super.onCreateOptionsMenu(menu, inflater);
+    /**
+     * Use this factory method to create a new instance of
+     * this fragment using the provided parameters.
+     *
+     * @param param1 Parameter 1.
+     * @param param2 Parameter 2.
+     * @return A new instance of fragment ShowShopProfileFragment.
+     */
+    // TODO: Rename and change types and number of parameters
+    public static ShowShopProfileFragment newInstance(String param1, String param2) {
+        ShowShopProfileFragment fragment = new ShowShopProfileFragment();
+        Bundle args = new Bundle();
+        args.putString(ARG_PARAM1, param1);
+        args.putString(ARG_PARAM2, param2);
+        fragment.setArguments(args);
+        return fragment;
+    }
 
-	}
+    public ShowShopProfileFragment() {
+        // Required empty public constructor
+    }
 
-	@Override
-	public View onCreateView(LayoutInflater inflater, ViewGroup container,
-							 Bundle savedInstanceState) {
-		View v=inflater.inflate(R.layout.fragment_shop_profile,container,false);
-		ButterKnife.bind(this,v);
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        if (getArguments() != null) {
+            mParam1 = getArguments().getString(ARG_PARAM1);
+            mParam2 = getArguments().getString(ARG_PARAM2);
+        }
+    }
 
-		Context context =getContext();
-	/*	toolbar.setNavigationIcon(ContextCompat.getDrawable(context,R.drawable.ic_arrow_back_white_24dp));
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        inflater.inflate(R.menu.shop_show_profile, menu);
+        super.onCreateOptionsMenu(menu, inflater);
+
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        View v = inflater.inflate(R.layout.fragment_shop_profile, container, false);
+        ButterKnife.bind(this, v);
+
+        Context context = getContext();
+    /*	toolbar.setNavigationIcon(ContextCompat.getDrawable(context,R.drawable.ic_arrow_back_white_24dp));
 
 		toolbar.setNavigationOnClickListener(new View.OnClickListener() {
 			@Override
@@ -147,22 +150,22 @@ public class ShowShopProfileFragment extends Fragment implements ShowShopProfile
 		});
 		toolbar.inflateMenu(R.menu.shop_show_profile);
 */
-		progressBar.setVisibility(View.GONE);
+        progressBar.setVisibility(View.GONE);
 
 
-		// Inflate the layout for this fragment
-		shopProfilePresenter=new ShowShopProfilePresenterImpl(this,new RetrofitShopProfileProvider());
-		imageLoader = new GlideImageLoader(getContext());
-		sharedPrefs= new SharedPrefs(getContext());
-		shopProfilePresenter.requestShopProfileDetails(sharedPrefs.getKeyAccessTokenShop());
-		backButton.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				getActivity().onBackPressed();
-			}
-		});
+        // Inflate the layout for this fragment
+        shopProfilePresenter = new ShowShopProfilePresenterImpl(this, new RetrofitShopProfileProvider());
+        imageLoader = new GlideImageLoader(getContext());
+        sharedPrefs = new SharedPrefs(getContext());
+        shopProfilePresenter.requestShopProfileDetails(sharedPrefs.getKeyAccessTokenShop());
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getActivity().onBackPressed();
+            }
+        });
 
-		edit_profile_btn.setOnClickListener(new View.OnClickListener() {
+        edit_button.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
 
@@ -189,87 +192,87 @@ public class ShowShopProfileFragment extends Fragment implements ShowShopProfile
 
 			}
 		});
-		return v;
-	}
+        return v;
+    }
 
-	// TODO: Rename method, update argument and hook method into UI event
-	public void onButtonPressed(Uri uri) {
+    // TODO: Rename method, update argument and hook method into UI event
+    public void onButtonPressed(Uri uri) {
 
-		if (mListener != null) {
-			mListener.onFragmentInteraction(uri);
-		}
+        if (mListener != null) {
+            mListener.onFragmentInteraction(uri);
+        }
 
-	}
+    }
 
-	@Override
-	public void onAttach(Context context) {
-		super.onAttach(context);
-		if (context instanceof OnFragmentInteractionListener) {
-			mListener = (OnFragmentInteractionListener) context;
-		} else {
-			throw new RuntimeException(context.toString()
-											   + " must implement OnFragmentInteractionListener");
-		}
-	}
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        if (context instanceof OnFragmentInteractionListener) {
+            mListener = (OnFragmentInteractionListener) context;
+        } else {
+            throw new RuntimeException(context.toString()
+                    + " must implement OnFragmentInteractionListener");
+        }
+    }
 
-	@Override
-	public void onDetach() {
-		super.onDetach();
-		mListener = null;
-	}
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        mListener = null;
+    }
 
-	@Override
-	public void showProgressbar(boolean show) {
-		if (show){
+    @Override
+    public void showProgressbar(boolean show) {
+        if (show) {
 
-			progressBar1.setVisibility(View.VISIBLE);
-		}else {
-			progressBar1.setVisibility(View.INVISIBLE);
-		}
+            progressBar1.setVisibility(View.VISIBLE);
+        } else {
+            progressBar1.setVisibility(View.INVISIBLE);
+        }
 
-	}
+    }
 
-	@Override
-	public void showMessage(String message) {
-		Toast.makeText(getContext(),message,Toast.LENGTH_SHORT).show();
-	}
+    @Override
+    public void showMessage(String message) {
+        Toast.makeText(getContext(), message, Toast.LENGTH_SHORT).show();
+    }
 
-	@Override
-	public void onProfileRecieved(ShowShopProfileData shopProfileData) {
-		name =shopProfileData.getShop_name();
-		description=shopProfileData.getShop_description();
-		address=shopProfileData.getShop_address();
-		city=shopProfileData.getCity();
-		category=shopProfileData.getShop_category();
-		image=shopProfileData.getImage();
-		progressBar1.setVisibility(View.VISIBLE);
-		imageLoader.loadImage(shopProfileData.getImage(), imageView, progressBar1);
-		textViewShopName.setText("Name          : ");
-		textViewShopName.append(name);
-		textViewShopDescription.setText("Description   : ");
-		textViewShopDescription.append(description);
-		textViewShopAddress.setText("Address       : ");
-		textViewShopAddress.append(address);
-		textViewShopPhoneNo.setText("Mobile number : ");
-		textViewShopPhoneNo.append(shopProfileData.getMobile_number());
-		textViewShopCategory.setText("Category      : ");
-		textViewShopCategory.append(category);
-		textViewShopCity.setText("City          : ");
-		textViewShopCity.append(city);
-	}
+    @Override
+    public void onProfileRecieved(ShowShopProfileData shopProfileData) {
+        name = shopProfileData.getShop_name();
+        description = shopProfileData.getShop_description();
+        address = shopProfileData.getShop_address();
+        city = shopProfileData.getCity();
+        category = shopProfileData.getShop_category();
+        image = shopProfileData.getImage();
+        progressBar1.setVisibility(View.VISIBLE);
+        imageLoader.loadImage(shopProfileData.getImage(), imageView, progressBar1);
+        textViewShopName.setText("Name          : ");
+        textViewShopName.append(name);
+        textViewShopDescription.setText("Description   : ");
+        textViewShopDescription.append(description);
+        textViewShopAddress.setText("Address       : ");
+        textViewShopAddress.append(address);
+        textViewShopPhoneNo.setText("Mobile number : ");
+        textViewShopPhoneNo.append(shopProfileData.getMobile_number());
+        textViewShopCategory.setText("Category      : ");
+        textViewShopCategory.append(category);
+        textViewShopCity.setText("City          : ");
+        textViewShopCity.append(city);
+    }
 
-	/**
-	 * This interface must be implemented by activities that contain this
-	 * fragment to allow an interaction in this fragment to be communicated
-	 * to the activity and potentially other fragments contained in that
-	 * activity.
-	 * <p/>
-	 * See the Android Training lesson <a href=
-	 * "http://developer.android.com/training/basics/fragments/communicating.html"
-	 * >Communicating with Other Fragments</a> for more information.
-	 */
-	public interface OnFragmentInteractionListener {
-		// TODO: Update argument type and name
-		void onFragmentInteraction(Uri uri);
-	}
+    /**
+     * This interface must be implemented by activities that contain this
+     * fragment to allow an interaction in this fragment to be communicated
+     * to the activity and potentially other fragments contained in that
+     * activity.
+     * <p/>
+     * See the Android Training lesson <a href=
+     * "http://developer.android.com/training/basics/fragments/communicating.html"
+     * >Communicating with Other Fragments</a> for more information.
+     */
+    public interface OnFragmentInteractionListener {
+        // TODO: Update argument type and name
+        void onFragmentInteraction(Uri uri);
+    }
 }

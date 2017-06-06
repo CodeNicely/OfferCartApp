@@ -1,6 +1,7 @@
 package com.codenicely.discountstore.project_new.shop_admin.shop_add_offer.view;
 
 import android.Manifest;
+import android.app.DatePickerDialog;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -17,7 +18,6 @@ import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
-import android.support.v7.widget.CardView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -38,6 +38,7 @@ import com.codenicely.discountstore.project_new.helper.utils.UriUtils;
 import com.codenicely.discountstore.project_new.shop_admin.shop_add_offer.model.RetrofitOfferAddHelper;
 import com.codenicely.discountstore.project_new.shop_admin.shop_add_offer.presenter.OfferAddPresenter;
 import com.codenicely.discountstore.project_new.shop_admin.shop_add_offer.presenter.OfferAddPresenterImpl;
+import com.codenicely.discountstore.project_new.shop_admin.shop_home.ShopHomePage;
 import com.karumi.dexter.Dexter;
 import com.karumi.dexter.MultiplePermissionsReport;
 import com.karumi.dexter.PermissionToken;
@@ -49,7 +50,9 @@ import com.karumi.dexter.listener.single.PermissionListener;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Calendar;
 import java.util.List;
+import java.util.TimeZone;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -64,7 +67,7 @@ import static android.app.Activity.RESULT_OK;
  * Use the {@link OfferAddFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class OfferAddFragment extends Fragment implements OfferAddView {
+public class OfferAddFragment extends Fragment implements OfferAddView ,DatePickerDialog.OnDateSetListener{
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -82,21 +85,20 @@ public class OfferAddFragment extends Fragment implements OfferAddView {
     SharedPrefs sharedPrefs;
     @BindView(R.id.offer_name)
     EditText editTextName;
-
 /*
     @BindView(R.id.offer_validity)
 	EditText editTextValidity;
 */
-
 /*
 	@BindView(R.id.offer_price)
 	EditText editTextprice;*/
-
     @BindView(R.id.offer_description)
     EditText editTextdescription;
+/*
 
     @BindView(R.id.backButton)
     ImageView backButton;
+*/
 
     @BindView(R.id.imageView)
     ImageView imageView;
@@ -111,16 +113,11 @@ public class OfferAddFragment extends Fragment implements OfferAddView {
 
 /*    @BindView(R.id.cardView)
     CardView cardView;*/
-/*
 	@BindView(R.id.offer_expiry)
-	TextView tvofferExpiry;*/
-    @BindView(R.id.offer_expiry)
-    DatePicker datePicker;
+    TextView tvofferExpiry;
 
-/*
     @BindView(R.id.toolbar)
     Toolbar toolbar;
-*/
 
     private ProgressDialog progressDialog;
     private static final String TAG = "OfferEditFragment";
@@ -130,10 +127,10 @@ public class OfferAddFragment extends Fragment implements OfferAddView {
     private final int GALLERY_REQUEST_ID = 1;
 
     OfferAddPresenter offerAddPresenter;
-
+    DatePickerDialog datePickerDialog;
 
     private OnFragmentInteractionListener mListener;
-
+    int year,month,date;
     /**
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
@@ -170,37 +167,44 @@ public class OfferAddFragment extends Fragment implements OfferAddView {
                              Bundle savedInstanceState) {
 		// Inflate the layout for this fragment
         context = getContext();
-
+        Calendar calendar = Calendar.getInstance(TimeZone.getDefault());
         View view = inflater.inflate(R.layout.fragment_offer_add, container, false);
 
         ButterKnife.bind(this, view);
 
-        //toolbar.setNavigationIcon(ContextCompat.getDrawable(context,R.drawable.ic_arrow_back_white_24dp));
-/*
+        toolbar.setNavigationIcon(ContextCompat.getDrawable(context,R.drawable.ic_arrow_back_white_24dp));
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                 getActivity().onBackPressed();
             }
-        });*/
+        });
 
         progressDialog = new ProgressDialog(context);
         progressDialog.setMessage("Please wait . . .");
         progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
         progressDialog.setIndeterminate(true);
         progressDialog.setCancelable(false);
-        backButton.setOnClickListener(new View.OnClickListener() {
+        /*backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 getActivity().onBackPressed();
             }
         });
-
-	//	tvofferExpiry.setOnClickListener(new On);
+*/
 
       //  datePicker.setMinDate(System.currentTimeMillis());
         offerAddPresenter = new OfferAddPresenterImpl(this, new RetrofitOfferAddHelper(context));
+        datePickerDialog = new DatePickerDialog(
+            context, R.style.DatePickerDialogTheme, OfferAddFragment.this,
+        calendar.get(Calendar.YEAR),calendar.get(Calendar.MONTH),calendar.get(Calendar.DATE));
+        tvofferExpiry.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                datePickerDialog.show();
+            }
+        });
         cameraButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -209,6 +213,7 @@ public class OfferAddFragment extends Fragment implements OfferAddView {
 
             }
         });
+
         galleryButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -223,14 +228,9 @@ public class OfferAddFragment extends Fragment implements OfferAddView {
 
                 sharedPrefs = new SharedPrefs(getContext());
                 String name = editTextName.getText().toString();
-                //	String validity = editTextValidity.getText().toString();
                 String description = editTextdescription.getText().toString();
-                //	int  price = Integer.parseInt(editTextprice.getText().toString());
 
-                int year = datePicker.getYear();
-                int month = datePicker.getMonth();
-                int date = datePicker.getDayOfMonth();
-                int price = 0;
+
                 if (name.equals("") || name.equals(null)) {
                     editTextName.setError("Please enter Offer Name");
                     editTextName.requestFocus();
@@ -439,11 +439,18 @@ public class OfferAddFragment extends Fragment implements OfferAddView {
 
     @Override
     public void onOfferAdded() {
-
 		getActivity().onBackPressed();
         //Go to home page now.
-
     }
+
+    @Override
+    public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+        this.year=year;
+        this.month=month+1;
+        this.date=dayOfMonth;
+    	tvofferExpiry.setText("Offer Expiry Date");
+		tvofferExpiry.append(" : "+ date+"/"+this.month+"/"+this.year);
+	}
 
 
     /**
@@ -493,6 +500,4 @@ public class OfferAddFragment extends Fragment implements OfferAddView {
             }
         }
     }
-
-
 }

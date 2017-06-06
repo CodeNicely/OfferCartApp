@@ -17,9 +17,9 @@
     <dimen name="twenty">20dp</dimen>
     <dimen name="cards_number_textsize">37sp</dimen>
     <dimen name="cards_label_textsize">13sp</dimen>
-    <dimen name="padding_small">8dip</dimen>
-    <dimen name="padding_medium">8dip</dimen>
-    <dimen name="padding_large">16dip</dimen>
+    <dimen name="padding_small">8dp</dimen>
+    <dimen name="padding_medium">12dp</dimen>
+    <dimen name="padding_large">16dp</dimen>
     <dimen name="dialog_layout_button_width">150dp</dimen>
     <dimen name="dialog_layout_button_height">40dp</dimen>
     <dimen name="dialog_layout_button_boundary_padding">1dp</dimen>

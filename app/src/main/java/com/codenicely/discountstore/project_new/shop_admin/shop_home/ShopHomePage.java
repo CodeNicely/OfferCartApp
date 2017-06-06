@@ -23,9 +23,9 @@ import com.codenicely.discountstore.project_new.contact_us.view.ContactUsFragmen
 import com.codenicely.discountstore.project_new.developers.view.DeveloperFragment;
 import com.codenicely.discountstore.project_new.helper.SharedPrefs;
 import com.codenicely.discountstore.project_new.home.HomePageInterface;
+import com.codenicely.discountstore.project_new.shop_admin.shop_change_password.view.ShopChangePasswordFragment;
 import com.codenicely.discountstore.project_new.shop_admin.shop_add_offer.view.OfferAddFragment;
 import com.codenicely.discountstore.project_new.shop_admin.shop_add_subscription.view.AddSubscriptionFragment;
-import com.codenicely.discountstore.project_new.shop_admin.shop_change_password.view.ShopChangePasswordFragment;
 import com.codenicely.discountstore.project_new.shop_admin.shop_edit_offer.view.OfferEditFragment;
 import com.codenicely.discountstore.project_new.shop_admin.shop_offerlist.view.ShopOfferListFragment;
 import com.codenicely.discountstore.project_new.shop_admin.shop_profile_edit.view.EditShopProfileFragment;
@@ -49,12 +49,12 @@ public class ShopHomePage extends AppCompatActivity
 
     private SharedPrefs sharedPrefs;
     private NavigationView navigationView;
-
+    boolean fp;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         setTheme(R.style.AppThemeShop);
-
         super.onCreate(savedInstanceState);
+        fp = getIntent().getBooleanExtra("fp",false);
         setContentView(R.layout.activity_shop_home_activity);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_NOSENSOR);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -69,8 +69,13 @@ public class ShopHomePage extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
         sharedPrefs = new SharedPrefs(this);
 
-        ShopOfferListFragment shopOfferListFragment = new ShopOfferListFragment();
-        setFragment(shopOfferListFragment, "Home");
+        if (fp==true){
+            ShopChangePasswordFragment shopChangePasswordFragment= new ShopChangePasswordFragment();
+            addFragment(shopChangePasswordFragment,"Change Password");
+        }else {
+            ShopOfferListFragment shopOfferListFragment = new ShopOfferListFragment();
+            setFragment(shopOfferListFragment, "Home");
+        }
 
         int backStackCount = getSupportFragmentManager().getBackStackEntryCount();
         for (int i = 0; i < backStackCount; i++) {
@@ -166,12 +171,15 @@ public class ShopHomePage extends AppCompatActivity
     public void setFragment(Fragment fragment, String title) {
 
         if (fragment != null) {
+
+
+
             FragmentManager fragmentManager = getSupportFragmentManager();
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
             fragmentTransaction.replace(R.id.home_layout, fragment);
             fragmentTransaction.commit();
             getSupportActionBar().setTitle(title);
-        }
+            }
 
     }
 

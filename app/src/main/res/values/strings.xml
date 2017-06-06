@@ -51,7 +51,7 @@
     <string name="title_add_offer">Add New Offer</string>
     <string name="title_edit_offer">Edit Offer</string>
     <string name="add_subscription">Add Subscription</string>
-    <string name="customer_login">Get Started</string>
+    <string name="customer_login">Login</string>
     <string name="shop_login">L o g i n</string>
     <string name="shop_login_new">R e g i s t e r </string>
 
@@ -63,5 +63,16 @@
     <string name="shop_signup_textview">Sign up as Shop</string>
     <string name="otp">Enter OTP</string>
     <string name="okay">Okay</string>
+
+    //subscription module
+    <string name="Rs">\u20B9</string>
+    //register module
+    <string name="title_location_permission">Location Permission Needed</string>
+    <string name="ok">Ok</string>
+    <string name="text_location_permission">Please provide us location permission</string>
+    <string name="offers">Offers</string>
+    <string name="buy_now">Buy Now</string>
+    <string name="shop_profile">Shop Profile</string>
+    <string name="change_password">Change Password</string>
 
 </resources>
