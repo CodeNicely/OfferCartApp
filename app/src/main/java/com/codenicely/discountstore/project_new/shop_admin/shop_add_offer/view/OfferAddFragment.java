@@ -18,6 +18,7 @@ import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -93,9 +94,11 @@ public class OfferAddFragment extends Fragment implements OfferAddView ,DatePick
 	EditText editTextprice;*/
     @BindView(R.id.offer_description)
     EditText editTextdescription;
+/*
 
     @BindView(R.id.backButton)
     ImageView backButton;
+*/
 
     @BindView(R.id.imageView)
     ImageView imageView;
@@ -112,13 +115,9 @@ public class OfferAddFragment extends Fragment implements OfferAddView ,DatePick
     CardView cardView;*/
 	@BindView(R.id.offer_expiry)
     TextView tvofferExpiry;
-/*    @BindView(R.id.offer_expiry)
-    DatePicker datePicker;*/
 
-/*
     @BindView(R.id.toolbar)
     Toolbar toolbar;
-*/
 
     private ProgressDialog progressDialog;
     private static final String TAG = "OfferEditFragment";
@@ -173,28 +172,27 @@ public class OfferAddFragment extends Fragment implements OfferAddView ,DatePick
 
         ButterKnife.bind(this, view);
 
-        //toolbar.setNavigationIcon(ContextCompat.getDrawable(context,R.drawable.ic_arrow_back_white_24dp));
-/*
+        toolbar.setNavigationIcon(ContextCompat.getDrawable(context,R.drawable.ic_arrow_back_white_24dp));
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                 getActivity().onBackPressed();
             }
-        });*/
+        });
 
         progressDialog = new ProgressDialog(context);
         progressDialog.setMessage("Please wait . . .");
         progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
         progressDialog.setIndeterminate(true);
         progressDialog.setCancelable(false);
-        backButton.setOnClickListener(new View.OnClickListener() {
+        /*backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 getActivity().onBackPressed();
             }
         });
-
+*/
 
       //  datePicker.setMinDate(System.currentTimeMillis());
         offerAddPresenter = new OfferAddPresenterImpl(this, new RetrofitOfferAddHelper(context));

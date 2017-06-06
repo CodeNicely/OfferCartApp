@@ -51,17 +51,6 @@
         android:orientation="vertical"
         android:padding="4dp">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_margin="20dp"
-            android:layout_marginTop="10dp"
-            android:gravity="center"
-            android:text="@string/shop_signup_textview"
-            android:textAllCaps="true"
-            android:textColor="@color/white_line"
-            android:textSize="@dimen/medium_text_size" />
-
         <ScrollView
             android:id="@+id/scrollView"
             android:layout_width="match_parent"
@@ -199,6 +188,11 @@
                     android:backgroundTint="@color/white_line" />
 
 
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/latitude_longitude"
+                    android:textColor="@color/white_line"/>
                 <ImageView
                     android:id="@+id/imageView"
                     android:layout_width="match_parent"

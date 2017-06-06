@@ -7,9 +7,6 @@ import com.codenicely.discountstore.project_new.shop_admin.shop_add_subscription
  */
 
 public interface AddSubscriptionCallBack {
-
-
-
     void OnSuccess(AddSubscriptionData addSubscriptionData);
     void OnFailure(String error);
 }

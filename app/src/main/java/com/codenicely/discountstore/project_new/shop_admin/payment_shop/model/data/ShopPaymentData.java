@@ -6,34 +6,36 @@ package com.codenicely.discountstore.project_new.shop_admin.payment_shop.model.d
 
 public class ShopPaymentData {
 
-        private boolean success;
-        private String message;
-        private String mobile;
-        private String name;
-        private String email;
-        private String key;
-        private String merchant_id;
-        private double amount;
-        private String transaction_id;
-        private String product_name;
+    private boolean success;
+    private String message;
 
-        private String server_hash;
+    private String merchant_id;
+    private String order_id;
+    private String customer_id;
+    private String industry_type_id;
+    private String channel_id;
+    private String amount;
+    private String website;
+    private String email;
+    private String mobile;
+    private String callback_url;
+    private String checksum_hash;
 
-    public ShopPaymentData(boolean success, String message, String mobile, String name, String email,
-                           String key, String merchant_id, double amount, String transaction_id, String product_name, String server_hash) {
+    public ShopPaymentData(boolean success, String message, String merchant_id, String order_id, String customer_id, String industry_type_id, String channel_id, String amount, String website, String email, String mobile, String callback_url, String checksum_hash) {
         this.success = success;
         this.message = message;
-        this.mobile = mobile;
-        this.name = name;
-        this.email = email;
-        this.key = key;
         this.merchant_id = merchant_id;
+        this.order_id = order_id;
+        this.customer_id = customer_id;
+        this.industry_type_id = industry_type_id;
+        this.channel_id = channel_id;
         this.amount = amount;
-        this.transaction_id = transaction_id;
-        this.product_name = product_name;
-        this.server_hash = server_hash;
+        this.website = website;
+        this.email = email;
+        this.mobile = mobile;
+        this.callback_url = callback_url;
+        this.checksum_hash = checksum_hash;
     }
-
 
     public boolean isSuccess() {
         return success;
@@ -43,49 +45,47 @@ public class ShopPaymentData {
         return message;
     }
 
-    public String getMobile() {
-        return mobile;
+    public String getMerchant_id() {
+        return merchant_id;
     }
 
-    public String getName() {
-        return name;
+    public String getOrder_id() {
+        return order_id;
+    }
+
+    public String getCustomer_id() {
+        return customer_id;
+    }
+
+    public String getIndustry_type_id() {
+        return industry_type_id;
+    }
+
+    public String getChannel_id() {
+        return channel_id;
+    }
+
+    public String getAmount() {
+        return amount;
+    }
+
+    public String getWebsite() {
+        return website;
     }
 
     public String getEmail() {
         return email;
     }
 
-    public String getKey() {
-        return key;
+    public String getMobile() {
+        return mobile;
     }
 
-    public String getMerchant_id() {
-        return merchant_id;
+    public String getCallback_url() {
+        return callback_url;
     }
 
-    public double getAmount() {
-        return amount;
-    }
-
-    public String getTransaction_id() {
-        return transaction_id;
-    }
-
-    public String getProduct_name() {
-        return product_name;
-    }
-
-    public String getServer_hash() {
-        return server_hash;
+    public String getChecksum_hash() {
+        return checksum_hash;
     }
 }
-
-
-
-
-
-
-
-
-
-

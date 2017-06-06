@@ -37,12 +37,8 @@ public class ShopOfferAdapter extends RecyclerView.Adapter<ShopOfferAdapter.MyVi
 
 
     private SharedPrefs sharedPrefs;
-    private String access_token;
     private Context context;
     private LayoutInflater layoutInflater;
-    private ShopOfferListFragment shopOfferListFragment;
-    private ShopOfferListView shopOfferListView;
-    private ShopOfferListDetails shopOfferListDetails;
     private List<ShopOfferListDetails> shopOfferListDetailses = new ArrayList<>();
     private ImageLoader imageLoader;
     private ShopOfferListPresenter shopOfferListPresenter;
@@ -51,8 +47,6 @@ public class ShopOfferAdapter extends RecyclerView.Adapter<ShopOfferAdapter.MyVi
         this.context = context;
 
         this.layoutInflater = LayoutInflater.from(context);
-        this.shopOfferListFragment = shopOfferListFragment;
-        this.shopOfferListView = new ShopOfferListFragment();
         imageLoader = new GlideImageLoader(context);
         shopOfferListPresenter = new ShopOfferListPresenterImpl(new RetrofitShopOfferListProvider(), shopOfferListFragment);
         //  shopOfferListPresenter = new ShopOfferListPresenterImpl(new MockShopOfferListProvider(), shopOfferListFragment);
@@ -60,11 +54,9 @@ public class ShopOfferAdapter extends RecyclerView.Adapter<ShopOfferAdapter.MyVi
 
     @Override
     public ShopOfferAdapter.MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-
 		sharedPrefs=new SharedPrefs(context);
         View view = layoutInflater.inflate(R.layout.shop_offer_item, parent, false);
         return new ShopOfferAdapter.MyViewHolder(view);
-
     }
 
     @Override

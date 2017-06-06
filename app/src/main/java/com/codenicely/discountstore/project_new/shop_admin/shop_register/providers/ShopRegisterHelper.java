@@ -23,6 +23,8 @@ public interface ShopRegisterHelper {
                                               String address,
                                               String category,
                                               String city,
+                                              Double latitude,
+                                              Double longitude,
                                               Uri imageUri) throws IOException;
 
 

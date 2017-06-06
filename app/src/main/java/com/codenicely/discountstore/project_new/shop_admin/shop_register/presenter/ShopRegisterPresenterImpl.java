@@ -44,14 +44,12 @@ public class ShopRegisterPresenterImpl implements ShopRegisterPresenter {
     @Override
     public void openCamera() {
         File image = requestNewFile();
-
         if (shopRegisterView.checkPermissionForCamera()) {
             shopRegisterView.fileFromPath(image.getPath());
             shopRegisterView.showCamera();
         } else {
             if (shopRegisterView.requestCameraPermission()) {
                 shopRegisterView.fileFromPath(image.getPath());
-
                 shopRegisterView.showCamera();
             }
         }
@@ -61,7 +59,6 @@ public class ShopRegisterPresenterImpl implements ShopRegisterPresenter {
     public void openGallery() {
 
         if (shopRegisterView.checkPermissionForGallery()) {
-
             shopRegisterView.showGallery();
         } else {
 
@@ -76,16 +73,17 @@ public class ShopRegisterPresenterImpl implements ShopRegisterPresenter {
     @Override
     public void registerShop(String name, String mobile, String password,
                              String description, String address, String category,
-                             String city, Uri imageUri) {
+                             String city,Double latitude,Double longitude, Uri imageUri) {
 
 
         shopRegisterView.showDialogLoader(true);
         try {
             shopRegisterDataObservable = shopRegisterHelper.registerShop(name,
-                    mobile, password, description, address, category, city, imageUri);
+                    mobile, password, description, address, category, city,latitude,longitude, imageUri);
             Log.i(TAG, "Value of Observable" + shopRegisterDataObservable.toString());
             subscription = shopRegisterDataObservable.subscribeOn(Schedulers.newThread()).
                     observeOn(AndroidSchedulers.mainThread()).subscribe(new Observer<ShopRegisterData>() {
+
                 @Override
                 public void onCompleted() {
                     shopRegisterView.showLoader(false);
@@ -112,7 +110,6 @@ public class ShopRegisterPresenterImpl implements ShopRegisterPresenter {
                     shopRegisterView.showMessage(spotUploadData.getMessage());
                     shopRegisterView.showDialogLoader(false);
                     shopRegisterView.showLoader(false);
-
                 }
             });
 

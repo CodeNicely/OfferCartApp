@@ -20,7 +20,7 @@ public interface ShopRegisterPresenter {
     void openGallery();
 
     void registerShop(String name, String mobile, String password, String description, String address,
-                      String category, String city, Uri imageUri);
+                      String category, String city,Double latitude ,Double longitude,Uri imageUri);
 
     void requestPreRegistrationDetails();
 

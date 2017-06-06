@@ -29,6 +29,11 @@
     <string name="my_cards">My Cards</string>
     <string name="password">Password</string>
     <string name="cancel">@android:string/cancel</string>
+
+    <string name="gps_network_not_enabled">Brand Store requires your location to be turned on.</string>
+    <string name="open_location_settings">Open Location Setting</string>
+
+
     <string name="enter_cvv_number">Enter CVV Number</string>
     <string name="enter_cvv_number_optional">Enter CVV(Optional)</string>
     <string name="if_expiry_on_card">Enter Expiry(Optional)</string>

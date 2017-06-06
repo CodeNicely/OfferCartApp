@@ -11,12 +11,11 @@ public class AddSubscriptionData {
     String message;
     List<AddSubscriptionDetails> subscription_list;
 
-    public AddSubscriptionData(boolean success, String message, List<AddSubscriptionDetails> subscription_offer_data) {
+    public AddSubscriptionData(boolean success, String message, List<AddSubscriptionDetails> subscription_list) {
         this.success = success;
         this.message = message;
-        this.subscription_list = subscription_offer_data;
+        this.subscription_list = subscription_list;
     }
-
 
     public boolean isSuccess() {
         return success;

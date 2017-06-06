@@ -64,6 +64,8 @@ public class RetrofitShopRegisterHelper implements ShopRegisterHelper {
                                                      String address,
                                                      String category,
                                                      String city,
+                                                     Double latitude,
+                                                     Double longitude,
                                                      Uri imageUri) throws IOException {
 
         RequestBody name1 =
@@ -89,6 +91,12 @@ public class RetrofitShopRegisterHelper implements ShopRegisterHelper {
         RequestBody city1 =
                 RequestBody.create(
                         MediaType.parse("multipart/form-data"), city);
+        RequestBody longitude1 =
+                RequestBody.create(
+                        MediaType.parse("multipart/form-data"), String.valueOf(longitude));
+        RequestBody latitude1 =
+                RequestBody.create(
+                        MediaType.parse("multipart/form-data"), String.valueOf(latitude));
 
 /*
 
@@ -103,7 +111,7 @@ public class RetrofitShopRegisterHelper implements ShopRegisterHelper {
                     MultipartBody.Part.createFormData("image", imageFile.getName(), fbody);
 
             return shopRegisterApi.requestShopRegistration(name1, mobile1, password1, description1,
-                    address1,category1,city1,image);
+                    address1,category1,city1,latitude1,longitude1,image);
         }
 
         return null;
