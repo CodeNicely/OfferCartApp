@@ -44,6 +44,7 @@ public class ShopHomePage extends AppCompatActivity
         OfferAddFragment.OnFragmentInteractionListener,
         OfferEditFragment.OnFragmentInteractionListener,
         ShopChangePasswordFragment.OnFragmentInteractionListener,
+        com.codenicely.discountstore.project_new.shop_admin.shopforgotpassword.shop_change_password.view.ShopChangePasswordFragment.OnFragmentInteractionListener,
         AddSubscriptionFragment.OnFragmentInteractionListener,
         ShopOfferListFragment.OnFragmentInteractionListener {
 
@@ -55,6 +56,7 @@ public class ShopHomePage extends AppCompatActivity
         setTheme(R.style.AppThemeShop);
         super.onCreate(savedInstanceState);
         fp = getIntent().getBooleanExtra("fp",false);
+
         setContentView(R.layout.activity_shop_home_activity);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_NOSENSOR);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -70,7 +72,7 @@ public class ShopHomePage extends AppCompatActivity
         sharedPrefs = new SharedPrefs(this);
 
         if (fp==true){
-            ShopChangePasswordFragment shopChangePasswordFragment= new ShopChangePasswordFragment();
+            com.codenicely.discountstore.project_new.shop_admin.shopforgotpassword.shop_change_password.view.ShopChangePasswordFragment shopChangePasswordFragment= new com.codenicely.discountstore.project_new.shop_admin.shopforgotpassword.shop_change_password.view.ShopChangePasswordFragment();
             addFragment(shopChangePasswordFragment,"Change Password");
         }else {
             ShopOfferListFragment shopOfferListFragment = new ShopOfferListFragment();

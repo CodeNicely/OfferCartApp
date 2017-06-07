@@ -8,6 +8,6 @@ import com.codenicely.discountstore.project_new.shops.view.OnShopsReceived;
 
 public interface ShopProvider {
 
-    void getShops(String access_token, int category_id, OnShopsReceived onShopsReceived);
+    void getShops(String access_token, int category_id,Double latitude,Double longitude, OnShopsReceived onShopsReceived);
 
 }

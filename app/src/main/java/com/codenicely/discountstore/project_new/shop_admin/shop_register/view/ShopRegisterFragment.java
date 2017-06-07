@@ -2,7 +2,6 @@ package com.codenicely.discountstore.project_new.shop_admin.shop_register.view;
 
 import android.Manifest;
 import android.app.ProgressDialog;
-import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -27,6 +26,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -65,10 +65,8 @@ import com.karumi.dexter.listener.single.PermissionListener;
 
 import java.io.File;
 import java.util.List;
-
 import butterknife.BindView;
 import butterknife.ButterKnife;
-
 import static android.app.Activity.RESULT_OK;
 
 /**
@@ -79,6 +77,7 @@ import static android.app.Activity.RESULT_OK;
  * Use the {@link ShopRegisterFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
+
 public class ShopRegisterFragment extends Fragment implements ShopRegisterView,LocationListener
 	  , GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener {
 	// TODO: Rename parameter arguments, choose names that match
@@ -147,8 +146,8 @@ public class ShopRegisterFragment extends Fragment implements ShopRegisterView,L
 	/*
 		@BindView(R.id.cardView)
 		CardView cardView;*/
-	@BindView(R.id.backButton)
-	ImageView backButton;
+	@BindView(R.id.toolbar)
+	Toolbar toolbar;
 	@BindView(R.id.latitude_longitude)
 	TextView latitudeLongitude;
 
@@ -239,7 +238,6 @@ public class ShopRegisterFragment extends Fragment implements ShopRegisterView,L
 
 
 		LocationManager lm = (LocationManager) getActivity().getSystemService(Context.LOCATION_SERVICE);
-/*
 
 		try {
 			gps_enabled = lm.isProviderEnabled(LocationManager.GPS_PROVIDER);
@@ -250,7 +248,7 @@ public class ShopRegisterFragment extends Fragment implements ShopRegisterView,L
 		} catch (Exception ex) {
 		}
 		if (!gps_enabled ) {
-			Toast.makeText(getContext(),"True",Toast.LENGTH_SHORT).show();
+		//	Toast.makeText(getContext(),"True",Toast.LENGTH_SHORT).show();
 
 			AlertDialog.Builder dialog = new AlertDialog.Builder(getContext(), R.style.AlertDialogTheme);
 			dialog.setCancelable(false);
@@ -274,11 +272,9 @@ public class ShopRegisterFragment extends Fragment implements ShopRegisterView,L
 			});
 			dialog.show();
 		} else {
-			Toast.makeText(getContext(),"False",Toast.LENGTH_SHORT).show();
+//			Toast.makeText(getContext(),"False",Toast.LENGTH_SHORT).show();
 
-			*/
-/*
-			if (receiver == null) {
+		/*	if (receiver == null) {
 				IntentFilter filter = new IntentFilter("Hello World");
 				receiver = new BroadcastReceiver() {
 					@Override
@@ -302,11 +298,11 @@ public class ShopRegisterFragment extends Fragment implements ShopRegisterView,L
 				};
 				registerReceiver(receiver, filter);
 			}
-		*//*
+		*/
 }
-*/
 
 			city_spinner.setAdapter(city_array_adapter);
+
 			category_spinner.setAdapter(category_array_adapter);
 
 			Dexter.initialize(context);
@@ -318,9 +314,8 @@ public class ShopRegisterFragment extends Fragment implements ShopRegisterView,L
 				}
 
 			}
-
 			shopRegisterPresenter = new ShopRegisterPresenterImpl(this, new RetrofitShopRegisterHelper(context));
-			backButton.setOnClickListener(new View.OnClickListener() {
+			toolbar.setOnClickListener(new View.OnClickListener() {
 				@Override
 				public void onClick(View v) {
 					getActivity().onBackPressed();
@@ -448,7 +443,7 @@ public class ShopRegisterFragment extends Fragment implements ShopRegisterView,L
 			}
 		}, Manifest.permission.ACCESS_FINE_LOCATION);
 
-		Toast.makeText(getContext(),"REquest True",Toast.LENGTH_SHORT).show();
+//		Toast.makeText(getContext(),"REquest True",Toast.LENGTH_SHORT).show();
 
 		return LOCATION_REQUEST;
 

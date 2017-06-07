@@ -29,14 +29,15 @@
 
     <TextView
         android:id="@+id/tv1"
+        android:typeface="normal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/imageLayout"
         android:layout_centerInParent="true"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="20dp"
         android:gravity="center"
         android:textColor="@color/colorPrimary"
-        android:textSize="24dp" />
+        android:textSize="16dp" />
 
     />
 </RelativeLayout>

@@ -48,6 +48,7 @@
             android:layout_height="wrap_content"
             android:textColorHint="@color/white"
             app:hintTextAppearance="@style/EditTextLayoutTheme"
+            android:layout_margin="4dp"
             tools:targetApi="lollipop">
 
             <EditText
@@ -70,6 +71,7 @@
             android:layout_height="wrap_content"
             android:textColorHint="@color/white"
 
+            android:layout_margin="4dp"
             app:hintTextAppearance="@style/EditTextLayoutTheme"
             tools:targetApi="lollipop">
 
@@ -92,6 +94,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColorHint="@color/white"
+            android:layout_margin="4dp"
             app:hintTextAppearance="@style/EditTextLayoutTheme"
             tools:targetApi="lollipop">
 

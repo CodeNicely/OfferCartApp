@@ -30,7 +30,7 @@
     <string name="shop_hint_password">Password</string>
 
     <string name="hint_email">Shop Address</string>
-    <string name="register_shop">Register Shop</string>
+    <string name="register_shop">Sign \t Up </string>
     <string name="edit_shop">Update Shop Details</string>
     <string name="take_picture">Take Picture</string>
     <string name="select_images_gallery">Select Image from Gallery</string>
@@ -53,14 +53,14 @@
     <string name="add_subscription">Add Subscription</string>
     <string name="customer_login">Login</string>
     <string name="shop_login">L o g i n</string>
-    <string name="shop_login_new">R e g i s t e r </string>
+    <string name="shop_login_new">S i g n\tU p  </string>
 
 
     <string name="full_name">Full Name</string>
     <string name="mobile_no">Mobile No</string>
     <string name="email_id">Email id</string>
     <string name="shop_login_textview">Shop Login</string>
-    <string name="shop_signup_textview">Sign up as Shop</string>
+    <string name="shop_signup_textview">Shop Sign up </string>
     <string name="otp">Enter OTP</string>
     <string name="okay">Okay</string>
 

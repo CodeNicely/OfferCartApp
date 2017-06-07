@@ -3,120 +3,39 @@
 
     <item
         is-multidex="false"
-        jar="/Users/meghalagrawal/.android/build-cache/43e56d2701141bca56ad57b56b4a14cf9899d8ad/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.3"
-        sha1="3f0a85e6000998ac322ddd50750e8cf91601a84b">
-        <dex dex="/Users/meghalagrawal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/pre-dexed/debug/classes_3e0a7f9da6924fb5139666cfb1ec7ed469b882b2.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/meghalagrawal/.android/build-cache/d48d035735cbd7adbb6e6d41733463a336f235b7/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.3"
-        sha1="7979972576b6dbb1688052e42e5199abb54f81ba">
-        <dex dex="/Users/meghalagrawal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/pre-dexed/debug/classes_dee6f1e60a73a0448353beff2c137ff175122fd2.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/meghalagrawal/.android/build-cache/23487594d6e48ff19da976517ffb31c09dbd3bf7/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.3"
-        sha1="69e74a8b1cbf5b8ee0fc0cca6bab1ac6c45efef8">
-        <dex dex="/Users/meghalagrawal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/pre-dexed/debug/classes_13e7ddafb1c71df4d9b134ecad1bd0a657ca607f.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/meghalagrawal/AndroidStudioProjects/OfferCartApp/payUMoneysdk/build/intermediates/bundles/default/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.3"
-        sha1="64cf223ab5e6d617f032f9068765f0aa0219b526">
-        <dex dex="/Users/meghalagrawal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/pre-dexed/debug/classes_9c6f03d250745b911eb7d3733ab082312102ea04.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/meghalagrawal/.android/build-cache/80d48228b5584ffd6ee58fc89bbedd90f5ac6b58/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.3"
-        sha1="da832806828ba407284c0c4b1d87b8f9ed9f2520">
-        <dex dex="/Users/meghalagrawal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/pre-dexed/debug/classes_f8c5c9abcdb8d603ffc741faa86935200d3562df.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/meghalagrawal/.android/build-cache/16f304aecc7dea251f1da7704355d8f4e9df8330/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.3"
-        sha1="9ff5114aff3bfb387577ba92a11408dcf0441c24">
-        <dex dex="/Users/meghalagrawal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/pre-dexed/debug/classes_5423d33c2ef204f5afbe23cc0e28e1ce4190411e.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/meghalagrawal/.android/build-cache/b6ca6b89158f2b68def23d7c5a5d82b568766004/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.3"
-        sha1="8f83a631abfdb790591a720e0cfb5f41329831c3">
-        <dex dex="/Users/meghalagrawal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/pre-dexed/debug/classes_e88dcd7913e46442769689880acf0507cd2a9912.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/meghalagrawal/AndroidStudioProjects/OfferCartApp/app/libs/PayU-release.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.3"
-        sha1="4f44d002c904670109f55299492ea858abdeb705">
-        <dex dex="/Users/meghalagrawal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/pre-dexed/debug/PayU-release_75a846d2fdb9be7a367d2c7865892edcb0977d1a.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/meghalagrawal/.android/build-cache/08bc9e6badce67ea541ace63a041e1dd463c1478/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.3"
-        sha1="900a290779cdb4eb2e63b6f7806fd9f30ce4f60d">
-        <dex dex="/Users/meghalagrawal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/pre-dexed/debug/classes_d2fc1cee98ce2b7eba44d6590978a84df4a114e2.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/meghalagrawal/AndroidStudioProjects/OfferCartApp/app/libs/retrofit-2.0.0-beta2.jar"
+        jar="/home/ujjwal/AndroidStudioProjects/OfferCartApp/app/libs/retrofit-2.0.0-beta2.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.3"
         sha1="880d9e0997b2d1bfc98e0d121ced33ee5d04aac4">
-        <dex dex="/Users/meghalagrawal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/pre-dexed/debug/retrofit-2.0.0-beta2_3378892707869d8bec1546c3a86a388f7cb16105.jar" />
+        <dex dex="/home/ujjwal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/pre-dexed/debug/retrofit-2.0.0-beta2_776839e55f80532824c49c725fc3dee9fc184a1a.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/meghalagrawal/.android/build-cache/72e3c0f52cf93422524cc840b78539785f0d4f96/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.3"
-        sha1="d79c575e1d97b0298746a4c032a0c1dc201c2f82">
-        <dex dex="/Users/meghalagrawal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/pre-dexed/debug/classes_633c6ee5dc1664495089b712478beaa14a7e6606.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/meghalagrawal/.android/build-cache/6a294d2362ac5d62071d755a4c7dcff665cbc6ca/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.3"
-        sha1="0a534044236cf81b002604643d23e7ca56bd1ee0">
-        <dex dex="/Users/meghalagrawal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/pre-dexed/debug/classes_480894d25f92552c876e64df8379bffc849cce7c.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/meghalagrawal/AndroidStudioProjects/OfferCartApp/app/libs/PGSDK_V2.0.jar"
+        jar="/home/ujjwal/AndroidStudioProjects/OfferCartApp/app/libs/PGSDK_V2.0.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.3"
         sha1="ac7573d38f31559f8f027eb698769d3ebad40b64">
-        <dex dex="/Users/meghalagrawal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/pre-dexed/debug/PGSDK_V2.0_7b77c9cf65c08a8b78aebf74191439ac86705410.jar" />
+        <dex dex="/home/ujjwal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/pre-dexed/debug/PGSDK_V2.0_853e03d536d1f5c199cedf46b406c38addb89dbb.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/ujjwal/AndroidStudioProjects/OfferCartApp/payUMoneysdk/build/intermediates/bundles/default/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="73ae6b5ed8243bf3aed8b91847d8d7979bc99a2b">
+        <dex dex="/home/ujjwal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/pre-dexed/debug/classes_2f4af5e8948c25bed9afc78fcbcbf06d27c01ebb.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/ujjwal/AndroidStudioProjects/OfferCartApp/app/libs/PayU-release.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="4f44d002c904670109f55299492ea858abdeb705">
+        <dex dex="/home/ujjwal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/pre-dexed/debug/PayU-release_33bb3e03af96e69f87ddfbd034326e3dcb468c94.jar" />
     </item>
 
 </items>

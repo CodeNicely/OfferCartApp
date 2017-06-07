@@ -5,12 +5,12 @@ package com.codenicely.discountstore.project_new.helper;
  */
 public class Urls {
 
-
-	//public static final String BASE_URL = "http://172.20.10.13:8888";
-	public static final String BASE_URL = "http://app.vegworld.online:2017";
-//	public static final String BASE_URL = "http://192.168.0.101:8000";
+//	public static final String BASE_URL = "http://139.59.78.127:4888";
+	public static final String BASE_URL = "http://172.20.10.11:8888";
+//	public static final String BASE_URL = "http://app.vegworld.online:2017";
     public static final String REQUEST_FCM_UPDATE = "update_fcm/";
-    //splash_screen
+
+	//splash_screen
 
     public static final String REQUEST_SPLASH_SCREEN = "version/";
     //public static final String REQUEST_SIGN_IN_API = "Here half url will be there leaving base url ";

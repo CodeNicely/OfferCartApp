@@ -131,11 +131,13 @@ public class EditShopProfileFragment extends Fragment implements EditShopProfile
 	@BindView(R.id.progressBar)
 	ProgressBar progressBar;
 
-/*	@BindView(R.id.toolbar)
-	Toolbar toolbar;*/
+	@BindView(R.id.toolbar)
+	Toolbar toolbar;
+/*
 
 	@BindView(R.id.backButton)
 	ImageView backButton;
+*/
 
 
 	ImageLoader imageLoader;
@@ -201,7 +203,7 @@ public class EditShopProfileFragment extends Fragment implements EditShopProfile
 		context = getContext();
 		ButterKnife.bind(this, view);
 
-		/*toolbar.setNavigationIcon(ContextCompat.getDrawable(context,R.drawable.ic_arrow_back_white_24dp));
+		toolbar.setNavigationIcon(ContextCompat.getDrawable(context,R.drawable.ic_arrow_back_white_24dp));
 
 		toolbar.setNavigationOnClickListener(new View.OnClickListener() {
 			@Override
@@ -211,13 +213,13 @@ public class EditShopProfileFragment extends Fragment implements EditShopProfile
 			}
 		});
 
-*/backButton.setOnClickListener(new View.OnClickListener() {
+		/*backButton.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				getActivity().onBackPressed();
 			}
 		});
-
+*/
 		progressDialog = new ProgressDialog(context);
 		progressDialog.setMessage("Please wait . . .");
 		progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);

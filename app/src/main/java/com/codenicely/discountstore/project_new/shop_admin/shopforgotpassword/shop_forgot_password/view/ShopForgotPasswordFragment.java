@@ -11,7 +11,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
@@ -50,8 +49,8 @@ public class ShopForgotPasswordFragment extends Fragment implements ShopForgotPa
 	@BindView(R.id.button)
 	Button sendButton;
 
-	@BindView(R.id.backButton)
-	ImageView backButton;
+	@BindView(R.id.toolbar)
+	android.support.v7.widget.Toolbar toolbar;
 	ShopForgotPasswordPresenter shopForgotPasswordPresenter;
 	String mobile;
 	private OnFragmentInteractionListener mListener;
@@ -93,12 +92,23 @@ public class ShopForgotPasswordFragment extends Fragment implements ShopForgotPa
 		View view = inflater.inflate(R.layout.fragment_shop_forgot_password, container, false);
 		ButterKnife.bind(this, view);
 		shopForgotPasswordPresenter= new ShopForgotPasswordPresenterImpl(this,new RetrofitShopForgotPasswordHelper(getContext()));
-		backButton.setOnClickListener(new View.OnClickListener() {
+		/*backButton.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				getActivity().onBackPressed();
 			}
 		});
+
+		*/
+
+		toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View view) {
+
+				getActivity().onBackPressed();
+			}
+		});
+
 		sendButton.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {

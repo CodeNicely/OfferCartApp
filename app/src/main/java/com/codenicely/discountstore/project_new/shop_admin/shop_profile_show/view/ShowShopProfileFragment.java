@@ -125,12 +125,7 @@ public class ShowShopProfileFragment extends Fragment implements ShowShopProfile
         }
     }
 
-    @Override
-    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-        inflater.inflate(R.menu.shop_show_profile, menu);
-        super.onCreateOptionsMenu(menu, inflater);
 
-    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -138,8 +133,6 @@ public class ShowShopProfileFragment extends Fragment implements ShowShopProfile
         View v = inflater.inflate(R.layout.fragment_shop_profile, container, false);
         ButterKnife.bind(this, v);
 
-        Context context = getContext();
-    /*	toolbar.setNavigationIcon(ContextCompat.getDrawable(context,R.drawable.ic_arrow_back_white_24dp));
 
 		toolbar.setNavigationOnClickListener(new View.OnClickListener() {
 			@Override
@@ -148,8 +141,6 @@ public class ShowShopProfileFragment extends Fragment implements ShowShopProfile
 				getActivity().onBackPressed();
 			}
 		});
-		toolbar.inflateMenu(R.menu.shop_show_profile);
-*/
         progressBar.setVisibility(View.GONE);
 
 
@@ -168,9 +159,7 @@ public class ShowShopProfileFragment extends Fragment implements ShowShopProfile
         edit_button.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-
 				//something to open new fragment
-
 				Fragment fragment=new EditShopProfileFragment();
 				FragmentManager fm=getFragmentManager();
 				FragmentTransaction ft=fm.beginTransaction();
@@ -185,11 +174,8 @@ public class ShowShopProfileFragment extends Fragment implements ShowShopProfile
 				ft.replace(R.id.home_layout,fragment);
 				ft.addToBackStack(null);
 				ft.commit();
-
 			//	EditShopProfileFragment editShopProfileFragment=new EditShopProfileFragment();
 			//	((ShopHomePage)getActivity()).addFragment(editShopProfileFragment  ,"Edit Shop Details");
-
-
 			}
 		});
         return v;
@@ -197,11 +183,9 @@ public class ShowShopProfileFragment extends Fragment implements ShowShopProfile
 
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
-
         if (mListener != null) {
             mListener.onFragmentInteraction(uri);
         }
-
     }
 
     @Override
@@ -247,18 +231,25 @@ public class ShowShopProfileFragment extends Fragment implements ShowShopProfile
         image = shopProfileData.getImage();
         progressBar1.setVisibility(View.VISIBLE);
         imageLoader.loadImage(shopProfileData.getImage(), imageView, progressBar1);
-        textViewShopName.setText("Name          : ");
-        textViewShopName.append(name);
-        textViewShopDescription.setText("Description   : ");
-        textViewShopDescription.append(description);
-        textViewShopAddress.setText("Address       : ");
-        textViewShopAddress.append(address);
-        textViewShopPhoneNo.setText("Mobile number : ");
-        textViewShopPhoneNo.append(shopProfileData.getMobile_number());
-        textViewShopCategory.setText("Category      : ");
-        textViewShopCategory.append(category);
-        textViewShopCity.setText("City          : ");
-        textViewShopCity.append(city);
+//        textViewShopName.setText("Name          : ");
+  //      textViewShopName.append(name);
+        textViewShopName.setText(name);
+//        textViewShopDescription.setText("Description   : ");
+  //      textViewShopDescription.append(description);
+        textViewShopDescription.setText(description);
+//        textViewShopAddress.setText("Address       : ");
+  //      textViewShopAddress.append(address);
+        textViewShopAddress.setText(address);
+//        textViewShopPhoneNo.setText("Mobile number : ");
+  //      textViewShopPhoneNo.append(shopProfileData.getMobile_number());
+        textViewShopPhoneNo.setText(shopProfileData.getMobile_number()+"");
+
+       // textViewShopCategory.setText("Category      : ");
+       // textViewShopCategory.append(category);
+        textViewShopCategory.setText(category);
+        //textViewShopCity.setText("City          : ");
+        textViewShopCity.setText(city);
+        //textViewShopCity.append(city);
     }
 
     /**

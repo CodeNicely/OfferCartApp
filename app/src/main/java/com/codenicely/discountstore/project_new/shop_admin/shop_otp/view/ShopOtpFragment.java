@@ -57,9 +57,13 @@ public class ShopOtpFragment extends Fragment implements ShopOtpView {
     Button sendOtpButton;
     String mobile;
     String otp1;
+    @BindView(R.id.toolbar)
+    android.support.v7.widget.Toolbar toolbar;
 
+/*
     @BindView(R.id.backButton)
     ImageView backButton;
+*/
     boolean fp;
     private SharedPrefs sharedPrefs;
 
@@ -105,13 +109,19 @@ public class ShopOtpFragment extends Fragment implements ShopOtpView {
         mobile = getArguments().getString("mobile");
         Log.d("MOBILE------",mobile);
         shopOtpPresenter = new ShopOtpPresenterImpl(this, new RetrofitShopOtpProvider());
-        backButton.setOnClickListener(new View.OnClickListener() {
+        /*backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 getActivity().onBackPressed();
             }
-        });
+        });*/
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
+                getActivity().onBackPressed();
+            }
+        });
         sendOtpButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

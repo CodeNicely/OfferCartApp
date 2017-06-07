@@ -61,10 +61,11 @@ public class ShopRegisterPresenterImpl implements ShopRegisterPresenter {
         if (shopRegisterView.checkPermissionForGallery()) {
             shopRegisterView.showGallery();
         } else {
-
             if (shopRegisterView.requestGalleryPermission()) {
                 shopRegisterView.showGallery();
-            }
+            }else {
+
+			}
         }
 
     }

@@ -35,7 +35,6 @@ public class WelcomeScreenActivity extends Activity implements WelcomeScreenView
     private ProgressBar progressBar;
     private ViewPagerAdapter viewPagerAdapter;
     private WelcomeScreenPresenter welcomeScreenPresenter;
-    private WelcomeScreenView welcomeScreenView;
     private TabLayout tabLayout;
     @BindView(R.id.button_login_shop)
     Button button_login_shop;

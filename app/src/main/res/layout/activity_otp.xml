@@ -57,7 +57,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColorHint="@color/white"
-                app:hintTextAppearance="@color/white"
+                app:hintTextAppearance="@style/EditTextLayoutTheme"
                 tools:targetApi="lollipop"
                 android:padding="12dp"
                 >

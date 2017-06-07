@@ -108,7 +108,6 @@ public class ShopChangePasswordFragment extends Fragment implements ShopChangePa
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
-
     }
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)

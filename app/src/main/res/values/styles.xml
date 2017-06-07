@@ -93,5 +93,6 @@
     <style name="DatePickerDialogTheme" parent="Theme.AppCompat.Light.Dialog">
         <item name="colorAccent">@color/color_shop_primary</item>
     </style>
+
 </resources>
 

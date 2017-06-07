@@ -58,13 +58,13 @@ public class ShopChangePasswordFragment extends Fragment implements ShopChangePa
 	ProgressBar progressBar;
 	ShopChangePasswordPresenter shopChangePasswordPresenter;
 	SharedPrefs sharedPrefs;
-/*
 
 	@BindView(R.id.toolbar)
 	android.support.v7.widget.Toolbar toolbar;
-*/
+/*
 	@BindView(R.id.backButton)
 	ImageView backButton;
+*/
 
 
 	private OnFragmentInteractionListener mListener;
@@ -109,7 +109,7 @@ public class ShopChangePasswordFragment extends Fragment implements ShopChangePa
 		Context context =getContext();
 		old_password_edittext.setVisibility(View.GONE);
 
-		backButton.setOnClickListener(new View.OnClickListener() {
+		toolbar.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				getActivity().onBackPressed();

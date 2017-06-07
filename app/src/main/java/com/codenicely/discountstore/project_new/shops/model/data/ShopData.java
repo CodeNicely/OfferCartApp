@@ -4,17 +4,25 @@ package com.codenicely.discountstore.project_new.shops.model.data;
  * Created by iket on 22/10/16.
  */
 public class ShopData {
-    private String  name, image, address;
     private int shop_id;
-    public ShopData(int shop_id, String name, String image, String address, String phone) {
+
+    private String  name, image, address;
+    private Float distance;
+
+    public ShopData(int shop_id, String name, String image, String address, Float distance) {
         this.shop_id = shop_id;
         this.name = name;
         this.image = image;
         this.address = address;
+        this.distance = distance;
     }
 
     public int getShopId() {
         return shop_id;
+    }
+
+    public Float getDistance() {
+        return distance;
     }
 
     public String getName() {
