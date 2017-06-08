@@ -14,10 +14,10 @@ public class MockDataProvider implements MyOrdersProvider{
     @Override
     public void getOrders(String access_token, OnOrdersReceived onOrdersReceived) {
         List<OrderDetails> ordersDatas=new ArrayList<>();
-        OrderDetails orderDetails=new OrderDetails("","","","Diwali Special","Opposite Sbi Bank,Pandri,Raipur","Dominos","1st December","Rs. 100");
+        OrderDetails orderDetails=new OrderDetails("","","","Diwali Special","Opposite Sbi Bank,Pandri,Raipur","Dominos","1st December");
         ordersDatas.add(orderDetails);
 
-        orderDetails=new OrderDetails("","","","Big Million Sale","Near Tellibanda Lake,Raipur","Boys Zone","21st December","Rs. 50");
+        orderDetails=new OrderDetails("","","","Big Million Sale","Near Tellibanda Lake,Raipur","Boys Zone","21st December");
         ordersDatas.add(orderDetails);
 
 

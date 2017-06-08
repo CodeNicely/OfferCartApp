@@ -3,6 +3,7 @@ package com.codenicely.discountstore.project_new.verify_otp.view;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
@@ -14,6 +15,7 @@ import android.widget.Toast;
 import com.codenicely.discountstore.project_new.R;
 import com.codenicely.discountstore.project_new.helper.SharedPrefs;
 import com.codenicely.discountstore.project_new.home.HomePage;
+import com.codenicely.discountstore.project_new.login.view.LoginScreenActivity;
 import com.codenicely.discountstore.project_new.verify_otp.models.RetrofitOtpProvider;
 import com.codenicely.discountstore.project_new.verify_otp.presenter.OtpPresenter;
 import com.codenicely.discountstore.project_new.verify_otp.presenter.OtpPresenterImpl;
@@ -24,13 +26,14 @@ import butterknife.ButterKnife;
 /**
  * Created by aman on 16/10/16.
  */
-public class OtpViewImpl extends Activity implements OtpView {
+public class OtpViewImpl extends AppCompatActivity implements OtpView {
 
     EditText otp;
     Button submitButton;
     ProgressBar progressbar;
     String mobile;
     String otp1;
+    LoginScreenActivity loginScreenActivity;
 
     @BindView(R.id.toolbar)
     Toolbar toolbar;
@@ -44,8 +47,8 @@ public class OtpViewImpl extends Activity implements OtpView {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_otp);
         ButterKnife.bind(this);
-
-        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+        loginScreenActivity=new LoginScreenActivity();
+		toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 finish();
@@ -98,7 +101,7 @@ public class OtpViewImpl extends Activity implements OtpView {
         Intent a = new Intent(OtpViewImpl.this, HomePage.class);
         startActivity(a);
         finish();
-
+		loginScreenActivity.loginScreenActivity.finish();
     }
 
 }

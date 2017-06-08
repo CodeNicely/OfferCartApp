@@ -77,6 +77,7 @@ public class WelcomeScreenActivity extends Activity implements WelcomeScreenView
             public void onClick(View view) {
                 Intent intent = new Intent(WelcomeScreenActivity.this, ShopActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
 

@@ -193,7 +193,8 @@ public class ShopOtpFragment extends Fragment implements ShopOtpView {
         }
 
             startActivity(intent);
-            (getActivity()).finish();
+		getActivity().finish();
+
         //something to jump to next fragment
 
     }

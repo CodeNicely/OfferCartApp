@@ -52,7 +52,7 @@ public class LoginScreenActivity extends Activity implements LoginScreenView {
 //
 //    @BindView(R.id.toolbar)
 //    Toolbar toolbar;
-
+	public static LoginScreenActivity loginScreenActivity;
     private ProgressBar progressbar;
     private LoginScreenPresenter loginScreenPresenter;
 
@@ -66,7 +66,7 @@ public class LoginScreenActivity extends Activity implements LoginScreenView {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         ButterKnife.bind(this);
-
+		loginScreenActivity=this;
         back_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -168,9 +168,9 @@ public class LoginScreenActivity extends Activity implements LoginScreenView {
 
     @Override
     public void onBackPressed() {
-        Intent intent = new Intent(LoginScreenActivity.this, WelcomeScreenActivity.class);
+        /*Intent intent = new Intent(LoginScreenActivity.this, WelcomeScreenActivity.class);
         startActivity(intent);
         finish();
-
+*/	super.onBackPressed();
     }
 }

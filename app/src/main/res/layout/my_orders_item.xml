@@ -47,11 +47,12 @@
                     android:layout_height="wrap_content"
                     android:text="Offer Title"
                     android:textColor="#000000"
+                    android:textStyle="bold"
                     android:layout_gravity="start"
                     android:id="@+id/order_title"
                     android:textSize="16dp"
                     />
-                <TextView
+              <!--  <TextView
                     android:layout_weight="5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -60,7 +61,7 @@
                     android:id="@+id/offer_code"
                     android:textSize="16dp"
                     />
-
+-->
             </LinearLayout>
 
 
@@ -69,7 +70,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Price: Rs.15"
-                android:textStyle="bold"
                 android:textColor="#424242"
                 android:id="@+id/order_cost"
                 android:textSize="16dp"

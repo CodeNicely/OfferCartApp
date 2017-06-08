@@ -278,18 +278,19 @@ public class OfferFragment extends Fragment implements OfferScreenView, GetOffer
             ad.show();
 
         } else {
+
             final AlertDialog ad = new AlertDialog.Builder(getActivity())
-                    .create();
+                                           .create();
             ad.setIcon(R.mipmap.brand_store_logo);
 
             ad.setCancelable(false);
-            ad.setTitle("Getting Offer Failed");
-            ad.setMessage(getOfferData.getMessage() + "\n\n" + "You can try later");
+            ad.setTitle("Offer Get Successful" );
+            ad.setMessage(getOfferData.getMessage() + "\n\n" );
             ad.setCancelable(false);
-            ad.setButton(DialogInterface.BUTTON_POSITIVE, "Add Money", new DialogInterface.OnClickListener() {
+            ad.setButton(DialogInterface.BUTTON_POSITIVE, "Okay", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
-                    ((HomePage) getActivity()).addFragment(new WalletFragment(), "Wallet");
+                    //  ((HomePage)getActivity()).addFragment);
                     ad.cancel();
 
                 }

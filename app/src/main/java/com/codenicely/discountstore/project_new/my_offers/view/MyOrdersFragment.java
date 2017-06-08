@@ -52,7 +52,7 @@ public class MyOrdersFragment extends Fragment implements MyOrdersInterface {
     @BindView(R.id.order_toolbar)
     Toolbar toolbar;
 
-    private Adapter adapter;
+    private MyOffersAdapter myOffersAdapter;
     private SharedPrefs sharedPrefs;
     private String token;
     private MyOrdersPresenter myOrdersPresenter;
@@ -108,7 +108,7 @@ public class MyOrdersFragment extends Fragment implements MyOrdersInterface {
     }
 
     private void initialize() {
-        adapter = new Adapter(getContext(), this);
+        myOffersAdapter = new MyOffersAdapter(getContext(), this);
         sharedPrefs = new SharedPrefs(getContext());
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
@@ -120,9 +120,8 @@ public class MyOrdersFragment extends Fragment implements MyOrdersInterface {
         linearLayoutManager = new LinearLayoutManager(getContext());
         myOrdersPresenter = new MyOrdersPresenterImpl(this, new RetrofitOrdersProvider());
         token = sharedPrefs.getAccessToken();
-        recyclerView.setAdapter(adapter);
+        recyclerView.setAdapter(myOffersAdapter);
         recyclerView.setLayoutManager(linearLayoutManager);
-
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -159,8 +158,8 @@ public class MyOrdersFragment extends Fragment implements MyOrdersInterface {
 
     @Override
     public void onOfferReceived(OrdersData ordersData) {
-        adapter.setData(ordersData.getMy_offer_list());
-        adapter.notifyDataSetChanged();
+        myOffersAdapter.setData(ordersData.getMy_offer_list());
+        myOffersAdapter.notifyDataSetChanged();
     }
 
     /**

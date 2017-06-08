@@ -190,7 +190,7 @@
                 android:layout_gravity="center"
                 android:layout_margin="12dp"
                 android:background="@drawable/shop_sign_up_button"
-                android:text="@string/register_offer"
+                android:text="Update Offer"
                 android:textColor="@color/white_line"
 
                 />

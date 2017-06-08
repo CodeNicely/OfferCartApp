@@ -217,7 +217,6 @@ public class HomePage extends AppCompatActivity
             fragmentTransaction.commit();
             getSupportActionBar().setTitle(title);
         }
-
     }
 
     public void addFragment(Fragment fragment, String title) {
@@ -249,34 +248,6 @@ public class HomePage extends AppCompatActivity
         addFragment(offerFragment, shop_name);
     }
 
-
-    private boolean isDouble(String str) {
-        try {
-            Double.parseDouble(str);
-            return true;
-        } catch (NumberFormatException e) {
-            return false;
-        }
-    }
-
-    private String getTxnId() {
-        return ("0nf7" + System.currentTimeMillis());
-    }
-
-    private double getAmount() {
-
-
-        Double amount = 100.0;
-
-        if (isDouble(amt.toString())) {
-            amount = Double.parseDouble(amt.toString());
-            return amount;
-        } else {
-            Toast.makeText(getApplicationContext(), "Paying Default Amount ₹10", Toast.LENGTH_LONG).show();
-            return amount;
-        }
-
-    }
 
 
     /*

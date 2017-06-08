@@ -21,7 +21,7 @@ import java.util.List;
 /**
  * Created by iket on 3/11/16.
  */
-public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
+public class MyOffersAdapter extends RecyclerView.Adapter<MyOffersAdapter.MyViewHolder> {
 
     private List<OrderDetails> orderDetailsList=new ArrayList<>();
     private Context context;
@@ -30,7 +30,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
     private MyOrdersFragment myOrdersFragment;
 
 
-    public Adapter(Context context, MyOrdersFragment myOrdersFragment) {
+    public MyOffersAdapter(Context context, MyOrdersFragment myOrdersFragment) {
 
         this.context=context;
         this.myOrdersFragment = myOrdersFragment;
@@ -56,10 +56,10 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
 
         holder.title.setText(ordersDetails.getOffer_name());
         holder.address.setText(ordersDetails.getShop_address());
-        holder.cost.setText("Offer Price - Rs."+ordersDetails.getOffer_price());
+        holder.cost.setText(ordersDetails.getOffer_description());
         holder.valid.setText("Offer valid upto "+ordersDetails.getOffer_validity());
         holder.shop.setText(ordersDetails.getShop_name());
-        holder.offer_code.setText("Offer Code - "+ordersDetails.getOffer_code());
+      //  holder.offer_code.setText(String.format("%.3f",ordersDetails.getShop_distance())+" km");
         imageLoader.loadImage(ordersDetails.getOffer_image(),holder.imageView,holder.imageProgressBar);
 
     }
@@ -78,7 +78,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
 
         private MyViewHolder(View itemView) {
             super(itemView);
-            offer_code=(TextView)itemView.findViewById(R.id.offer_code);
+/*            offer_code=(TextView)itemView.findViewById(R.id.offer_code);*/
             title=(TextView)itemView.findViewById(R.id.order_title);
             shop=(TextView)itemView.findViewById(R.id.order_shop);
             address=(TextView)itemView.findViewById(R.id.order_address);

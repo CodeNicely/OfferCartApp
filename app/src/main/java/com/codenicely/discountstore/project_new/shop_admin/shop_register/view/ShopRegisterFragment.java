@@ -258,6 +258,7 @@ public class ShopRegisterFragment extends Fragment implements ShopRegisterView,L
 
 			AlertDialog.Builder dialog = new AlertDialog.Builder(getContext(), R.style.AlertDialogTheme);
 			dialog.setCancelable(false);
+			dialog.setTitle("Location Permission Required");
 			dialog.setMessage(getResources().getString(R.string.gps_network_not_enabled));
 			dialog.setPositiveButton(getResources().getString(R.string.open_location_settings), new DialogInterface.OnClickListener() {
 				@Override
@@ -680,7 +681,7 @@ public class ShopRegisterFragment extends Fragment implements ShopRegisterView,L
 			latitude = location.getLatitude();
 			longitude = location.getLongitude();
 
-			Toast.makeText(getContext(),String.valueOf(latitude),Toast.LENGTH_SHORT).show();
+		//	Toast.makeText(getContext(),String.valueOf(latitude),Toast.LENGTH_SHORT).show();
 
 			latitudeLongitude.setText("Current Location - " + String.valueOf(latitude)
 											  + " , " + longitude);
@@ -789,7 +790,8 @@ public class ShopRegisterFragment extends Fragment implements ShopRegisterView,L
         }
         city_array_adapter.notifyDataSetChanged();
         category_array_adapter.notifyDataSetChanged();
-    }
+
+	}
 
     @Override
     public void onRegistrationSuccess() {

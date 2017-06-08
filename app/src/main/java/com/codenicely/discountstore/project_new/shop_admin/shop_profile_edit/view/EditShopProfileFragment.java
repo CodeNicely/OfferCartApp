@@ -730,7 +730,7 @@ public class EditShopProfileFragment extends Fragment implements EditShopProfile
 			latitude = location.getLatitude();
 			longitude = location.getLongitude();
 
-			Toast.makeText(getContext(),String.valueOf(latitude),Toast.LENGTH_SHORT).show();
+	//		Toast.makeText(getContext(),String.valueOf(latitude),Toast.LENGTH_SHORT).show();
 
 		/*	latitudeLongitude.setText("Current Location - " + String.valueOf(latitude)
 											  + " , " + longitude);

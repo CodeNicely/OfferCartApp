@@ -141,7 +141,8 @@
                     android:minHeight="250dp"
                     android:maxHeight="400dp"
                     android:contentDescription="@string/shop_image"
-                    android:src="@drawable/brand_store_logo_white" />
+                    android:src="@drawable/brand_store_1"
+                    />
 
                 <LinearLayout
                     android:layout_width="match_parent"
