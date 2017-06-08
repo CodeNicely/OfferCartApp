@@ -22,11 +22,11 @@ public class LoginScreenPresenterImpl implements LoginScreenPresenter {
     }
 
     @Override
-    public void requestLogin(String name, String mobile, String email) {
+    public void requestLogin(String name, String mobile) {
 
         loginView.showLoading(true);
         Log.d("Resp", "1");
-        loginProvider.requestLogin(name, mobile, email, new LoginCallback() {
+        loginProvider.requestLogin(name, mobile,  new LoginCallback() {
             @Override
             public void onSuccess(LoginData loginData) {
                 if (loginData.isSuccess()) {

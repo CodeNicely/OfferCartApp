@@ -56,7 +56,7 @@ public class MockShopOfferListProvider implements ShopOfferListProvider {
             shopOfferListDetailses.add(shopOfferListDetails);
     */    }
 
-        ShopOfferListData shopOfferListData = new ShopOfferListData(true,"List Received","fhd","dv",shopOfferListDetailses);
+        ShopOfferListData shopOfferListData = new ShopOfferListData(true,"List Received","fhd","dv","Register Now",shopOfferListDetailses);
         return shopOfferListData;
     }
 
@@ -68,6 +68,7 @@ public class MockShopOfferListProvider implements ShopOfferListProvider {
         return shopOfferDeleteData;
     }
 }
+
 
 
 

@@ -70,12 +70,12 @@ public class EditShopProfilePresenterImpl implements EditShopProfilePresenter {
 
 	@Override
 	public void editShopProfile(String access_token, String name, String description,
-								String address, String category, String city, Uri imageUri) {
+								String address, String category, String city,Double latitude,Double longitude, Uri imageUri) {
 
 		editShopProfileView.showDialogLoader(true);
 		try {
 			shopRegisterDataObservable = editShopProfileHelper.editShop(access_token,name,description,
-					address, category, city, imageUri);
+					address, category, city,latitude,longitude, imageUri);
 			Log.i(TAG, "Value of Observable" + shopRegisterDataObservable.toString());
 			subscription = shopRegisterDataObservable.subscribeOn(Schedulers.newThread()).
 																								 observeOn(AndroidSchedulers.mainThread()).subscribe(new Observer<ShopEditData>() {

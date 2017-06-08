@@ -1,9 +1,12 @@
 package com.codenicely.discountstore.project_new.shop_admin.shop_add_subscription.view;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
@@ -11,28 +14,40 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.ProgressBar;
-import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.codenicely.discountstore.project_new.R;
+import com.codenicely.discountstore.project_new.shop_admin.payment_shop.model.RetrofitPaymentShopProvider;
+import com.codenicely.discountstore.project_new.shop_admin.payment_shop.model.data.ShopPaymentData;
+import com.codenicely.discountstore.project_new.shop_admin.payment_shop.presenter.ShopPaymentPresenter;
+import com.codenicely.discountstore.project_new.shop_admin.payment_shop.presenter.ShopPaymentPresenterImpl;
+import com.codenicely.discountstore.project_new.shop_admin.payment_shop.view.PaymentShopView;
+import com.codenicely.discountstore.project_new.shop_admin.payment_shop.view.ShopPaymentFragment;
 import com.codenicely.discountstore.project_new.shop_admin.shop_add_subscription.model.RetrofitAddSubscriptionProvider;
-import com.codenicely.discountstore.project_new.shop_admin.shop_add_subscription.model.data.AddSubscriptionData;
 import com.codenicely.discountstore.project_new.shop_admin.shop_add_subscription.model.data.AddSubscriptionDetails;
 import com.codenicely.discountstore.project_new.shop_admin.shop_add_subscription.presenter.AddSubscriptionPresenter;
 import com.codenicely.discountstore.project_new.shop_admin.shop_add_subscription.presenter.AddSubscriptionPresenterImpl;
 import com.codenicely.discountstore.project_new.helper.SharedPrefs;
-import com.codenicely.discountstore.project_new.shop_admin.payment_shop.view.ShopPaymentFragment;
+import com.codenicely.discountstore.project_new.shop_admin.shop_edit_offer.view.OfferEditFragment;
 import com.codenicely.discountstore.project_new.shop_admin.shop_home.ShopHomePage;
+import com.codenicely.discountstore.project_new.shop_admin.shop_offerlist.view.ShopOfferListFragment;
+import com.payUMoney.sdk.PayUmoneySdkInitilizer;
+import com.payUMoney.sdk.SdkConstants;
+import com.paytm.pgsdk.PaytmClientCertificate;
+import com.paytm.pgsdk.PaytmOrder;
+import com.paytm.pgsdk.PaytmPGService;
+import com.paytm.pgsdk.PaytmPaymentTransactionCallback;
 
-import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+
+import static android.app.Activity.RESULT_CANCELED;
+import static android.app.Activity.RESULT_OK;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -42,7 +57,7 @@ import butterknife.ButterKnife;
  * Use the {@link AddSubscriptionFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class AddSubscriptionFragment extends Fragment implements AddSubscriptionView{
+public class AddSubscriptionFragment extends Fragment implements AddSubscriptionView,PaymentShopView{
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -52,10 +67,13 @@ public class AddSubscriptionFragment extends Fragment implements AddSubscription
     private String mParam1;
     private String mParam2;
 
+	private int id;
 
-   private String access_token;
+    private String access_token;
     private  int offerId;
-    /*@BindView(R.id.spinner_add_subscription)
+	private String transaction;
+
+	/*@BindView(R.id.spinner_add_subscription)
     Spinner subscription_spinner;*/
     @BindView(R.id.addSubacriptionProgressBar)
     ProgressBar subscriptionProgressBar;
@@ -69,12 +87,15 @@ public class AddSubscriptionFragment extends Fragment implements AddSubscription
 
 	private SharedPrefs sharedPrefs;
     private AddSubscriptionPresenter addSubscriptionPresenter;
+	private ShopOfferListFragment shopOfferListFragment;
 
     private OnFragmentInteractionListener mListener;
 	private LinearLayoutManager linearLayoutManager;
 
     private ShopSubscriptionAdapter shopSubscriptionAdapter;
-    public AddSubscriptionFragment() {
+	private ShopPaymentPresenter shopPaymentPresenter;
+
+	public AddSubscriptionFragment() {
         // Required empty public constructor
     }
 
@@ -86,6 +107,8 @@ public class AddSubscriptionFragment extends Fragment implements AddSubscription
      * @param param2 Parameter 2.
      * @return A new instance of fragment AddSubscriptionFragment.
      */
+
+
     // TODO: Rename and change types and number of parameters
     public static AddSubscriptionFragment newInstance(String param1, String param2) {
         AddSubscriptionFragment fragment = new AddSubscriptionFragment();
@@ -128,6 +151,12 @@ public class AddSubscriptionFragment extends Fragment implements AddSubscription
 		recyclerView.setLayoutManager(linearLayoutManager);
 		recyclerView.setAdapter(shopSubscriptionAdapter);
 		addSubscriptionPresenter.requestSubscription(access_token);
+
+
+
+		shopPaymentPresenter = new ShopPaymentPresenterImpl(new RetrofitPaymentShopProvider(), this);
+		shopOfferListFragment = new ShopOfferListFragment();
+
 
         /*add_subscription.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -180,7 +209,150 @@ public class AddSubscriptionFragment extends Fragment implements AddSubscription
 
     }
 
-    @Override
+	@Override
+	public void showLoading(boolean show) {
+		if (show)
+			subscriptionProgressBar.setVisibility(View.VISIBLE);
+		else
+			subscriptionProgressBar.setVisibility(View.GONE);
+	}
+
+	public void requestShopPaymentHash(int id){
+		shopPaymentPresenter.requestShopPaymentHash(id, sharedPrefs.getKeyAccessTokenShop());
+	}
+
+
+	@Override
+	public void proceedToShopPayment(ShopPaymentData shopPaymentData) {
+		//Getting the Service Instance. PaytmPGService.getStagingService() will return //the Service pointing to Staging
+		//Environment.
+
+//and PaytmPGService.getProductionService() will return the Service pointing to //Production Environment.
+
+		PaytmPGService Service = PaytmPGService.getStagingService();
+//                Service = PaytmPGService.getProductionService();
+
+//Create new order Object having all order information.
+		Map<String, String> paramMap = new HashMap<>();
+		paramMap.put("MID", shopPaymentData.getMerchant_id());
+		paramMap.put("ORDER_ID", shopPaymentData.getOrder_id());
+		paramMap.put("CUST_ID", shopPaymentData.getMobile());
+		paramMap.put("INDUSTRY_TYPE_ID", shopPaymentData.getIndustry_type_id());
+		paramMap.put("CHANNEL_ID", shopPaymentData.getChannel_id());
+		paramMap.put("TXN_AMOUNT", shopPaymentData.getAmount());
+		paramMap.put("WEBSITE", shopPaymentData.getWebsite());
+		paramMap.put("CALLBACK_URL", shopPaymentData.getCallback_url());
+		paramMap.put("EMAIL", shopPaymentData.getEmail());
+		paramMap.put("MOBILE_NO", shopPaymentData.getMobile());
+		paramMap.put("CHECKSUMHASH", shopPaymentData.getChecksum_hash());
+
+//Create Client Certificate object holding the information related to Client Certificate. Filename must be without .p12 extension.
+//For example, if suppose client.p12 is stored in raw folder, then filename must be client.
+		PaytmClientCertificate Certificate = new PaytmClientCertificate(null, null);
+
+		PaytmOrder Order = new PaytmOrder(paramMap);
+
+//Set PaytmOrder and PaytmClientCertificate Object. Call this method and set both objects before starting transaction.
+//        Service.initialize(Order, Certificate);
+//OR
+		Service.initialize(Order, null);
+
+//Start the Payment Transaction. Before starting the transaction ensure that initialize method is called.
+
+		Service.startPaymentTransaction(getContext(), true, true, new PaytmPaymentTransactionCallback() {
+
+			@Override
+			public void someUIErrorOccurred(String inErrorMessage) {
+				Log.d("LOG", "UI Error Occur.");
+				Toast.makeText(getContext(), " UI Error Occur. ", Toast.LENGTH_LONG).show();
+			}
+
+			@Override
+			public void onTransactionResponse(Bundle inResponse) {
+				Log.d("LOG", "Payment Transaction : " + inResponse);
+				Toast.makeText(getContext(), "Payment Transaction response " + inResponse.toString(), Toast.LENGTH_LONG).show();
+			}
+
+			@Override
+			public void networkNotAvailable() {
+				Log.d("LOG", "UI Error Occur.");
+				Toast.makeText(getContext(), " UI Error Occur. ", Toast.LENGTH_LONG).show();
+			}
+
+			@Override
+			public void clientAuthenticationFailed(String inErrorMessage) {
+				Log.d("LOG", "UI Error Occur.");
+				Toast.makeText(getContext(), " Severside Error " + inErrorMessage, Toast.LENGTH_LONG).show();
+			}
+
+			@Override
+			public void onErrorLoadingWebPage(int iniErrorCode,
+											  String inErrorMessage, String inFailingUrl) {
+				Log.d("LOG", "Error Loading Web page");
+				Toast.makeText(getContext(), " Error loading webpage " + inErrorMessage, Toast.LENGTH_LONG).show();
+			}
+
+			@Override
+			public void onBackPressedCancelTransaction() {
+				// TODO Auto-generated method stub
+				Log.d("LOG", "Error onBackPressedCancelTransaction");
+				Toast.makeText(getContext(), " onBackPressedCancelTransaction " , Toast.LENGTH_LONG).show();
+
+			}
+
+			@Override
+			public void onTransactionCancel(String inErrorMessage, Bundle inResponse) {
+				Log.d("LOG", "Payment Transaction Failed " + inErrorMessage);
+				Toast.makeText(getContext(), "Payment Transaction Failed ", Toast.LENGTH_LONG).show();
+			}
+
+		});
+
+
+	}
+
+	@Override
+	public void onActivityResult(int requestCode, int resultCode, Intent data) {
+		super.onActivityResult(requestCode, resultCode, data);
+		Log.d("OnActivityResult", "activity");
+		if (requestCode == PayUmoneySdkInitilizer.PAYU_SDK_PAYMENT_REQUEST_CODE) {
+
+			if (resultCode == RESULT_OK) {
+				Log.d("Response", "ok");
+				String paymentId = data.getStringExtra(SdkConstants.PAYMENT_ID);
+
+				shopPaymentPresenter.updateShopPaymentStatus(sharedPrefs.getKeyAccessTokenShop(), transaction, true);
+
+				((ShopHomePage) getContext()).setFragment(shopOfferListFragment, "HOME");
+
+			} else if (resultCode == RESULT_CANCELED) {
+				Log.d("Response", "failure");
+
+				shopPaymentPresenter.updateShopPaymentStatus(sharedPrefs.getKeyAccessTokenShop(), transaction, false);
+
+				((ShopHomePage) getContext()).setFragment(shopOfferListFragment, "HOME");
+			} else if (resultCode == PayUmoneySdkInitilizer.RESULT_FAILED) {
+				Log.i("app_activity", "failure");
+				Log.d("Response", "failure");
+				shopPaymentPresenter.updateShopPaymentStatus(sharedPrefs.getKeyAccessTokenShop(), transaction, false);
+
+
+				((ShopHomePage) getContext()).setFragment(shopOfferListFragment, "HOME");
+			} else if (resultCode == PayUmoneySdkInitilizer.RESULT_BACK) {
+				Log.i("Response", "User returned without login");
+				Log.d("Response", "failure");
+				Toast.makeText(getContext(), "User Returned Without Login to PayuMoney", Toast.LENGTH_SHORT).show();
+				shopPaymentPresenter.updateShopPaymentStatus(sharedPrefs.getKeyAccessTokenShop(), transaction, false);
+
+				Log.d("BACK AMAN", "back");
+
+
+			}
+		}
+
+	}
+
+	@Override
     public void setData(List<AddSubscriptionDetails> addSubscriptionDetailsList) {
 		shopSubscriptionAdapter.setSubscriptionData(addSubscriptionDetailsList);
 		shopSubscriptionAdapter.notifyDataSetChanged();
@@ -232,8 +404,24 @@ public class AddSubscriptionFragment extends Fragment implements AddSubscription
     }
 
 	public void getRegisterrationDetails(String accessToken, int subscription_id) {
-	//intent to payment activity
-	}
+
+		Fragment fragment = new ShopPaymentFragment();
+		FragmentManager fm = ((ShopHomePage) getContext()).getSupportFragmentManager();
+		FragmentTransaction ft = fm.beginTransaction();
+		Bundle args = new Bundle();
+
+		args.putInt("subscription_id", subscription_id);
+		Log.d("ID--------------",""+subscription_id);
+
+		fragment.setArguments(args);
+		ft.replace(R.id.home_layout, fragment);
+		ft.addToBackStack(null);
+		ft.commit();
+
+		//intent to payment activity
+
+    }
+
 
 	/**
      * This interface must be implemented by activities that contain this

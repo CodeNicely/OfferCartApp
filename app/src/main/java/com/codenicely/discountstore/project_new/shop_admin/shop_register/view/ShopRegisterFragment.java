@@ -14,6 +14,7 @@ import android.location.LocationManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
 import android.provider.MediaStore;
 import android.provider.Settings;
 import android.support.annotation.NonNull;
@@ -96,9 +97,9 @@ public class ShopRegisterFragment extends Fragment implements ShopRegisterView,L
 	private LocationRequest mLocationRequest;
 	private double latitude;
 	private double longitude;
+	private boolean LOCATION_REQUEST = false;
 
 	private boolean CAMERA_REQUEST = false;
-	private boolean LOCATION_REQUEST = false;
 	private boolean GALLERY_REQUEST = false;
 	private static final int CAMERA_REQUEST_ID = 100;
 	private final int GALLERY_REQUEST_ID = 1;
@@ -153,7 +154,12 @@ public class ShopRegisterFragment extends Fragment implements ShopRegisterView,L
 
 	@BindView(R.id.progressBar)
 	ProgressBar progressBar;
-
+	String name,password;
+	String confirm_password;
+	String description;
+	String address;
+	String city;
+	String category;
 	private Bitmap bitmap;
 	private Uri imageUri = null;
 	// TODO: Rename and change types of parameters
@@ -346,14 +352,14 @@ public class ShopRegisterFragment extends Fragment implements ShopRegisterView,L
 				@Override
 				public void onClick(View v) {
 
-					String name = name_edittext.getText().toString();
+					name = name_edittext.getText().toString();
 					mobile = mobile_edittext.getText().toString();
-					String password = password_edittext.getText().toString();
-					String confirm_password = confirm_password_edittext.getText().toString();
-					String description = description_edittext.getText().toString();
-					String address = address_edittext.getText().toString();
-					String city = city_spinner.getSelectedItem().toString();
-					String category = category_spinner.getSelectedItem().toString();
+					password = password_edittext.getText().toString();
+					confirm_password = confirm_password_edittext.getText().toString();
+					description = description_edittext.getText().toString();
+					address = address_edittext.getText().toString();
+					city = city_spinner.getSelectedItem().toString();
+					category = category_spinner.getSelectedItem().toString();
 
 					if (name.equals("") || name.equals(null)) {
 						name_edittext.setError("Please enter Name");
@@ -393,10 +399,19 @@ public class ShopRegisterFragment extends Fragment implements ShopRegisterView,L
 								.setActionTextColor(Color.RED)
 								.show();
 					} else {
+						final Handler handler = new Handler();
 
-						shopRegisterPresenter.registerShop(name, mobile, password, description, address,
-								category, city, latitude,longitude,imageUri);
-					}
+						handler.postDelayed(new Runnable() {
+							@Override
+							public void run() {
+								// Do something after 5s = 5000ms
+								shopRegisterPresenter.registerShop(name, mobile, password, description, address,
+										category, city, latitude,longitude,imageUri);
+							}
+						}, 500);
+
+
+							}
 				}
 			});
 			shopRegisterPresenter.requestPreRegistrationDetails();
@@ -665,6 +680,7 @@ public class ShopRegisterFragment extends Fragment implements ShopRegisterView,L
 			latitude = location.getLatitude();
 			longitude = location.getLongitude();
 
+			Toast.makeText(getContext(),String.valueOf(latitude),Toast.LENGTH_SHORT).show();
 
 			latitudeLongitude.setText("Current Location - " + String.valueOf(latitude)
 											  + " , " + longitude);
@@ -738,7 +754,7 @@ public class ShopRegisterFragment extends Fragment implements ShopRegisterView,L
         image = new File(filePath);
         Log.i(TAG, "fileFromPath method : " + image.getPath());
 
-    }
+	}
 
     @Override
     public void showDialog(String title, String message) {

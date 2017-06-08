@@ -39,18 +39,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="4dp"
-                android:weightSum="10">
+                >
 
                 <TextView
                     android:id="@+id/offer_title"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="start"
-                    android:layout_weight="2"
                     android:text="Offer Title"
                     android:textColor="#000000"
                     android:textSize="24dp" />
-
+<!--
                 <TextView
                     android:id="@+id/offer_cost"
                     android:layout_width="match_parent"
@@ -60,7 +59,7 @@
                     android:gravity="center"
                     android:text="Price: Rs.15"
                     android:textColor="@color/colorAccent"
-                    android:textSize="16dp" />
+                    android:textSize="16dp" />-->
             </LinearLayout>
 
             <TextView
@@ -91,7 +90,6 @@
                     android:text="Offer Valid till 30th Nov."
                     android:textColor="@color/accent_light"
                     android:textSize="12dp"
-
                     />
 
                 <Button
@@ -101,8 +99,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="end"
-                    android:text="Buy Now"
-                    android:textColor="@color/white" />
+                    android:text="Get Now"
+                    android:textColor="@color/white"
+                    android:background="@drawable/shop_sign_up_button"
+                    />
             </LinearLayout>
         </LinearLayout>
 

@@ -8,6 +8,6 @@ import com.codenicely.discountstore.project_new.login.LoginCallback;
  */
 public interface LoginProvider {
 
-    void requestLogin(String name, String mobile, String email, LoginCallback loginUsCallback);
+    void requestLogin(String name, String mobile, LoginCallback loginUsCallback);
 
 }

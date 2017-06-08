@@ -7,6 +7,7 @@ import java.util.List;
  */
 
 public class OfferScreenList {
+
     private List<OfferScreenDetails> offer_list;
     private boolean success;
     private String message;

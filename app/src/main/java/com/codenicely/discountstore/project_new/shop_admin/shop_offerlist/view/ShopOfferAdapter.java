@@ -67,7 +67,7 @@ public class ShopOfferAdapter extends RecyclerView.Adapter<ShopOfferAdapter.MyVi
         holder.validity1.append(String.valueOf(shopOfferListDetails.getValidity()));
         holder.validity1.append(" more days");
 
-        holder.validity2.setText("The offer is valid before ");
+        holder.validity2.setText("This offer is valid till ");
         holder.validity2.append(shopOfferListDetails.getExpiry_date());
 
 

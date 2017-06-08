@@ -64,7 +64,9 @@ public class ShopPaymentFragment extends Fragment implements PaymentShopView {
     private OnFragmentInteractionListener mListener;
 
     public ShopPaymentFragment() {
+
         // Required empty public constructor
+
     }
 
     /**
@@ -77,7 +79,6 @@ public class ShopPaymentFragment extends Fragment implements PaymentShopView {
     public static ShopPaymentFragment newInstance(int iD) {
         ShopPaymentFragment fragment = new ShopPaymentFragment();
         Bundle args = new Bundle();
-        args.putInt(SUBSCRIPTION, iD);
 
         fragment.setArguments(args);
         return fragment;
@@ -87,7 +88,7 @@ public class ShopPaymentFragment extends Fragment implements PaymentShopView {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            id = getArguments().getInt(SUBSCRIPTION);
+            id = getArguments().getInt("subscription_id");
 
         }
     }
@@ -163,14 +164,13 @@ public class ShopPaymentFragment extends Fragment implements PaymentShopView {
             progressBar.setVisibility(View.VISIBLE);
         else
             progressBar.setVisibility(View.GONE);
-
-
     }
 
     @Override
     public void proceedToShopPayment(ShopPaymentData shopPaymentData) {
         //Getting the Service Instance. PaytmPGService.getStagingService() will return //the Service pointing to Staging
         //Environment.
+
 //and PaytmPGService.getProductionService() will return the Service pointing to //Production Environment.
 
         PaytmPGService Service = PaytmPGService.getStagingService();

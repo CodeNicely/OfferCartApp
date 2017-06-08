@@ -71,7 +71,7 @@
                 android:layout_gravity="center"
                 android:layout_weight="5"
                 android:padding="4dp"
-                android:text="Offer Valid till 30th Nov."
+                android:visibility="gone"
                 android:textColor="@color/color_shop_primary"
                 android:textSize="12dp"
                 />
@@ -83,7 +83,6 @@
                 android:layout_gravity="center"
                 android:layout_weight="5"
                 android:padding="4dp"
-                android:text="Offer Valid For 30 days from subscription"
                 android:textColor="@color/color_shop_primary"
                 android:textSize="12dp"
 

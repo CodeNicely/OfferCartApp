@@ -98,9 +98,11 @@ public class RetrofitOfferEditHelper implements OfferEditHelper {
 
 			return offerEditApi.requestOfferEdit(shop_access_token1,offer_id1, offer_name1, offer_description1,
 					date1,month1,year1,offer_image);
+		}else {
+			MultipartBody.Part offer_image =null;
+
+			return offerEditApi.requestOfferEdit(shop_access_token1,offer_id1, offer_name1, offer_description1,
+					date1,month1,year1,offer_image);
 		}
-
-
-			return null;
 	}
 }

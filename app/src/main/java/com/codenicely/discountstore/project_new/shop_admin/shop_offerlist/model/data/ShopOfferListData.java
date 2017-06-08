@@ -8,20 +8,25 @@ import java.util.List;
 
 public class ShopOfferListData {
     boolean success;
-    String message,subscription_validity,shop_name;
+    String message,subscription_description,subscription_button_description,shop_name;
     List<ShopOfferListDetails> shop_offer_list;
 
+	public ShopOfferListData(boolean success, String message, String subscription_description,
+							 String subscription_button_description,
+							 String shop_name, List<ShopOfferListDetails> shop_offer_list) {
+		this.success = success;
+		this.message = message;
+		this.subscription_description = subscription_description;
+		this.subscription_button_description = subscription_button_description;
+		this.shop_name = shop_name;
+		this.shop_offer_list = shop_offer_list;
+	}
 
-    public ShopOfferListData(boolean success, String message, String subscription_validity,
-                             String shop_name, List<ShopOfferListDetails> shop_offer_list) {
-        this.success = success;
-        this.message = message;
-        this.subscription_validity = subscription_validity;
-        this.shop_name = shop_name;
-        this.shop_offer_list = shop_offer_list;
-    }
+	public String getSubscription_button_description() {
+		return subscription_button_description;
+	}
 
-    public boolean isSuccess() {
+	public boolean isSuccess() {
         return success;
     }
 
@@ -29,8 +34,8 @@ public class ShopOfferListData {
         return message;
     }
 
-    public String getSubscription_validity() {
-        return subscription_validity;
+    public String getSubscription_description() {
+        return subscription_description;
     }
 
     public String getShop_name() {

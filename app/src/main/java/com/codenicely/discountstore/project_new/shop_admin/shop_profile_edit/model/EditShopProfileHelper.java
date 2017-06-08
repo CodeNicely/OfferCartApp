@@ -18,7 +18,7 @@ public interface EditShopProfileHelper {
 									  String description,
 									  String address,
 									  String category,
-									  String city,
+									  String city,Double latitude,Double longitude,
 									  Uri imageUri) throws IOException;
 
 

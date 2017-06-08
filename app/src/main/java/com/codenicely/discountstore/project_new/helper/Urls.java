@@ -5,9 +5,9 @@ package com.codenicely.discountstore.project_new.helper;
  */
 public class Urls {
 
-//	public static final String BASE_URL = "http://139.59.78.127:4888";
-	public static final String BASE_URL = "http://172.20.10.11:8888";
-//	public static final String BASE_URL = "http://app.vegworld.online:2017";
+	public static final String BASE_URL = "http://139.59.78.127:4888";
+	//public static final String BASE_URL = "http://172.20.10.13:8888";
+//	//public static final String BASE_URL = "http://app.vegworld.online:2017";
     public static final String REQUEST_FCM_UPDATE = "update_fcm/";
 
 	//splash_screen
@@ -37,6 +37,8 @@ public class Urls {
     public static final String RequestShop = "shop/";
 
     public static final String SUB_URL_BUY_OFFER = "buy_offer/";
+	public static final String SUB_URL_GET_OFFER = "get_offer/";
+
     public static final String SUB_URL_ABOUT_US = "about_us/";
     public static final String SUB_URL_CONTACT_US = "contact_us/";
     public static final String SUB_URL_DEVELOPERS = "developers/";

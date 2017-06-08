@@ -90,27 +90,6 @@
                 />
         </android.support.design.widget.TextInputLayout>
 
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColorHint="@color/white"
-            android:layout_margin="4dp"
-            app:hintTextAppearance="@style/EditTextLayoutTheme"
-            tools:targetApi="lollipop">
-
-            <EditText
-                android:id="@+id/editText3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:focusable="true"
-                android:hint="@string/email_id"
-                android:textColor="@color/white"
-                android:textColorHint="@color/white"
-                android:textSize="@dimen/small_text_size"
-                android:theme="@style/EditTextTheme"
-
-                />
-        </android.support.design.widget.TextInputLayout>
 
         <Button
             android:id="@+id/button"

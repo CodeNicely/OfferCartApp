@@ -45,7 +45,7 @@ public class ShopOfferListFragment extends Fragment implements ShopOfferListView
 
     @BindView(R.id.shop_name)
     TextView name;
-    @BindView(R.id.shop_subscription)
+    @BindView(R.id.subscription_description)
     TextView subscription;
     @BindView(R.id.add_button1)
     FloatingActionButton add_offer;
@@ -178,7 +178,8 @@ public class ShopOfferListFragment extends Fragment implements ShopOfferListView
     @Override
     public void setData(ShopOfferListData shopOfferListData) {
         name.setText(shopOfferListData.getShop_name());
-        subscription.setText("Subscription left: " + shopOfferListData.getSubscription_validity());
+        subscription.setText(shopOfferListData.getSubscription_description());
+        add_subscription.setText(shopOfferListData.getSubscription_button_description());
         shopOfferAdapter.setData(shopOfferListData.getShop_offer_list());
         shopOfferAdapter.notifyDataSetChanged();
     }

@@ -12,7 +12,4 @@ public interface PaymentShopView {
     void showLoading(boolean show);
 
     void proceedToShopPayment(ShopPaymentData shopPaymentData);
-
-
-
 }

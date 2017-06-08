@@ -293,11 +293,17 @@ public class OfferEditFragment extends Fragment implements OfferEditView, DatePi
                     editTextdescription.setError("Please enter Offer description");
                     editTextdescription.requestFocus();
                 } else if (imageUri == null) {
-                    Snackbar.make(getActivity().findViewById(android.R.id.content),
+                   /* Snackbar.make(getActivity().findViewById(android.R.id.content),
                             "You've not selected any image to upload.", Snackbar.LENGTH_LONG)
                             .setActionTextColor(Color.RED)
                             .show();
+                */
+                    offerAddPresenter.requestEditOfferOffer(sharedPrefs.getKeyAccessTokenShop(), offer_id,
+                            name, description, date, month, year, null);
+
+
                 } else {
+
                     offerAddPresenter.requestEditOfferOffer(sharedPrefs.getKeyAccessTokenShop(), offer_id,
                             name, description, date, month, year, imageUri);
 

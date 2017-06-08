@@ -15,6 +15,7 @@ import com.codenicely.discountstore.project_new.helper.image_loader.GlideImageLo
 import com.codenicely.discountstore.project_new.helper.image_loader.ImageLoader;
 import com.codenicely.discountstore.project_new.offer.model.data.OfferScreenDetails;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -55,16 +56,21 @@ public class OfferScreenAdapter extends RecyclerView.Adapter<OfferScreenAdapter.
 
         final OfferScreenDetails offerScreenDetails = offerScreenDetailsList.get(position);
         holder.title.setText(offerScreenDetails.getName());
-        holder.cost.setText("Rs. ");
+  /*      holder.cost.setText("Rs. ");
         holder.cost.append(String.valueOf(offerScreenDetails.getPrice()));
-        holder.validity.setText(String.valueOf(offerScreenDetails.getValidity()));
+  */
+        holder.validity.setText("This offer is valid till ");
+		SimpleDateFormat sdf  = new SimpleDateFormat("yyyy");
+        holder.validity.append(""+String.valueOf(offerScreenDetails.getExpiry_date().getDate())+"/"
+		+String.valueOf(offerScreenDetails.getExpiry_date().getMonth())+"/"+
+		String.valueOf(sdf.format(offerScreenDetails.getExpiry_date())));
         holder.description.setText(String.valueOf(offerScreenDetails.getDescription()));
 
         holder.buy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                offerFragment.buyOffer(offerScreenDetails.getOffer_id(),offerScreenDetails.getPrice());
+                offerFragment.getOffer(offerScreenDetails.getOffer_id(),offerScreenDetails.getPrice());
 
             }
         });
@@ -80,7 +86,7 @@ public class OfferScreenAdapter extends RecyclerView.Adapter<OfferScreenAdapter.
 
     protected class MyViewHolder extends RecyclerView.ViewHolder {
 
-        private TextView title, cost, validity, description;
+        private TextView title, validity, description;
         private ImageView image;
         private Button buy;
         private ProgressBar imageProgressBar;
@@ -90,7 +96,6 @@ public class OfferScreenAdapter extends RecyclerView.Adapter<OfferScreenAdapter.
             title = (TextView) itemView.findViewById(R.id.offer_title);
             description = (TextView) itemView.findViewById(R.id.offer_description);
             validity = (TextView) itemView.findViewById(R.id.offer_validity);
-            cost = (TextView) itemView.findViewById(R.id.offer_cost);
             image = (ImageView) itemView.findViewById(R.id.image);
             buy = (Button) itemView.findViewById(R.id.buy);
             imageProgressBar=(ProgressBar)itemView.findViewById(R.id.imageProgressBar);

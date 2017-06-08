@@ -53,12 +53,17 @@ public class ShopSubscriptionAdapter extends RecyclerView.Adapter<ShopSubscripti
 		holder.description.setText(addSubscriptionDetails.getSubscription_description());
 		holder.cost.setText(R.string.Rs);
 		holder.cost.append(" "+addSubscriptionDetails.getSubscription_price()+"");
+
 		holder.register.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				addSubscriptionFragment.getRegisterrationDetails(sharedPrefs.getAccessToken(),addSubscriptionDetails.getSubscription_id());
+
+			//	addSubscriptionFragment.getRegisterrationDetails(sharedPrefs.getAccessToken(),addSubscriptionDetails.getSubscription_id());
+			addSubscriptionFragment.requestShopPaymentHash(addSubscriptionDetails.getSubscription_id());
+
 			}
 		});
+
 	}
 
 	public void setSubscriptionData(List<AddSubscriptionDetails> addSubscriptionDetailsList) {

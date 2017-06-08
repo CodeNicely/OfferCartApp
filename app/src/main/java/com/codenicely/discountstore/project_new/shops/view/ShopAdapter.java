@@ -49,7 +49,7 @@ public class ShopAdapter extends RecyclerView.Adapter<ShopAdapter.MyViewHolder> 
 
         holder.name.setText(shopData.getName());
         holder.address.setText(shopData.getAddress());
-
+		holder.distance.setText(String.format("%.3f",shopData.getDistance())+" km");
         imageLoader.loadImage(shopData.getImage(),holder.image,holder.imageProgressBar);
         holder.shopCardView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -70,7 +70,7 @@ public class ShopAdapter extends RecyclerView.Adapter<ShopAdapter.MyViewHolder> 
     protected class MyViewHolder extends RecyclerView.ViewHolder {
 
         private CardView shopCardView;
-        private TextView name, address;
+        private TextView name, address,distance;
         private ImageView image;
         private ProgressBar imageProgressBar;
 
@@ -82,7 +82,7 @@ public class ShopAdapter extends RecyclerView.Adapter<ShopAdapter.MyViewHolder> 
             name = (TextView) itemView.findViewById(R.id.shop_name);
             address = (TextView) itemView.findViewById(R.id.shop_address);
             image = (ImageView) itemView.findViewById(R.id.shop_image);
+            distance= (TextView) itemView.findViewById(R.id.shop_distance);
         }
-
     }
 }

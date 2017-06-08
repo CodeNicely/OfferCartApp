@@ -27,15 +27,15 @@ import com.codenicely.discountstore.project_new.helper.SharedPrefs;
 import com.codenicely.discountstore.project_new.helper.image_loader.GlideImageLoader;
 import com.codenicely.discountstore.project_new.helper.image_loader.ImageLoader;
 import com.codenicely.discountstore.project_new.home.HomePage;
-import com.codenicely.discountstore.project_new.offer.model.RetrofitBuyOfferProvider;
+import com.codenicely.discountstore.project_new.offer.model.RetrofitGetOfferProvider;
 import com.codenicely.discountstore.project_new.offer.model.RetrofitOfferScreenDetailsProvider;
 import com.codenicely.discountstore.project_new.offer.model.data.OfferData;
 import com.codenicely.discountstore.project_new.offer.model.data.OfferScreenDetails;
 import com.codenicely.discountstore.project_new.offer.model.data.OfferScreenList;
-import com.codenicely.discountstore.project_new.offer.presenter.BuyOfferPresenter;
+import com.codenicely.discountstore.project_new.offer.presenter.GetOfferPresenter;
 import com.codenicely.discountstore.project_new.offer.presenter.OfferScreenDetailsPresenter;
 import com.codenicely.discountstore.project_new.offer.presenter.OfferScreenDetailsPresenterImpl;
-import com.codenicely.discountstore.project_new.offer.presenter.BuyOfferPresenterImpl;
+import com.codenicely.discountstore.project_new.offer.presenter.GetOfferPresenterImpl;
 import com.codenicely.discountstore.project_new.wallet.view.WalletFragment;
 
 import butterknife.BindView;
@@ -49,7 +49,7 @@ import butterknife.ButterKnife;
  * Use the {@link OfferFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class OfferFragment extends Fragment implements OfferScreenView, BuyOfferView {
+public class OfferFragment extends Fragment implements OfferScreenView, GetOfferView {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -95,7 +95,7 @@ public class OfferFragment extends Fragment implements OfferScreenView, BuyOffer
     private LinearLayoutManager linearLayoutManager;
     private SharedPrefs sharedPrefs;
     private OnFragmentInteractionListener mListener;
-    private BuyOfferPresenter buyOfferPresenter;
+    private GetOfferPresenter getOfferPresenter;
 
     public OfferFragment() {
         // Required empty public constructor
@@ -145,7 +145,7 @@ public class OfferFragment extends Fragment implements OfferScreenView, BuyOffer
        /* AdView adView = (AdView)view.findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
         adView.loadAd(adRequest);*/
-        buyOfferPresenter = new BuyOfferPresenterImpl(this, new RetrofitBuyOfferProvider());
+        getOfferPresenter = new GetOfferPresenterImpl(this, new RetrofitGetOfferProvider());
         toolbar.setTitle("Offers");
         toolbar.setNavigationIcon(ContextCompat.getDrawable(getContext(), R.drawable.ic_arrow_back_white_24dp));
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
@@ -255,15 +255,17 @@ public class OfferFragment extends Fragment implements OfferScreenView, BuyOffer
     }
 
     @Override
-    public void onOfferBuy(OfferData buyOfferData) {
-        if (buyOfferData.isSuccess()) {
+    public void onOfferget(OfferData getOfferData) {
+
+        if (getOfferData.isSuccess()) {
+
             final AlertDialog ad = new AlertDialog.Builder(getActivity())
                     .create();
             ad.setIcon(R.mipmap.brand_store_logo);
 
             ad.setCancelable(false);
-            ad.setTitle("Buying Offer Successful \n " + "Offer Price " + String.valueOf(buyOfferData.getPrice()) + "deducted from wallet.");
-            ad.setMessage(buyOfferData.getMessage() + "\n\n" + "You can checkout your order status in My Orders Section");
+            ad.setTitle("Offer Get Successful" );
+            ad.setMessage(getOfferData.getMessage() + "\n\n" );
             ad.setCancelable(false);
             ad.setButton(DialogInterface.BUTTON_POSITIVE, "Okay", new DialogInterface.OnClickListener() {
                 @Override
@@ -281,8 +283,8 @@ public class OfferFragment extends Fragment implements OfferScreenView, BuyOffer
             ad.setIcon(R.mipmap.brand_store_logo);
 
             ad.setCancelable(false);
-            ad.setTitle("Buying Offer Failed");
-            ad.setMessage(buyOfferData.getMessage() + "\n\n" + "You can checkout your order status in My Orders Section");
+            ad.setTitle("Getting Offer Failed");
+            ad.setMessage(getOfferData.getMessage() + "\n\n" + "You can try later");
             ad.setCancelable(false);
             ad.setButton(DialogInterface.BUTTON_POSITIVE, "Add Money", new DialogInterface.OnClickListener() {
                 @Override
@@ -299,9 +301,9 @@ public class OfferFragment extends Fragment implements OfferScreenView, BuyOffer
 
     }
 
-    public void buyOffer(final int offer_id, int offer_price) {
+    public void getOffer(final int offer_id, int offer_price) {
 
-        final AlertDialog ad = new AlertDialog.Builder(getActivity())
+     /*   final AlertDialog ad = new AlertDialog.Builder(getActivity())
                 .create();
         ad.setCancelable(false);
         ad.setIcon(R.mipmap.brand_store_logo);
@@ -311,7 +313,9 @@ public class OfferFragment extends Fragment implements OfferScreenView, BuyOffer
         ad.setButton(DialogInterface.BUTTON_POSITIVE, "Yes", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                buyOfferPresenter.buyOffer(offer_id, sharedPrefs.getAccessToken());
+     */
+        getOfferPresenter.getOffer(offer_id, sharedPrefs.getAccessToken());
+/*
 
                 ad.cancel();
             }
@@ -323,6 +327,7 @@ public class OfferFragment extends Fragment implements OfferScreenView, BuyOffer
             }
         });
         ad.show();
+*/
 
     }
 
@@ -333,6 +338,7 @@ public class OfferFragment extends Fragment implements OfferScreenView, BuyOffer
         collapsingToolbarLayout.setExpandedTitleTextAppearance(R.style.ExpandedAppBarPlus1);
         collapsingToolbarLayout.setCollapsedTitleTextAppearance(R.style.CollapsedAppBarPlus1);
     }*/
+
 
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name

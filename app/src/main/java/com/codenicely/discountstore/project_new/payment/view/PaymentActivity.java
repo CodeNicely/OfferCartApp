@@ -343,6 +343,7 @@ public class PaymentActivity extends AppCompatActivity implements PaymentView {
                 dialog.dismiss();
             }
         });
+
         builder.show();
 
     }

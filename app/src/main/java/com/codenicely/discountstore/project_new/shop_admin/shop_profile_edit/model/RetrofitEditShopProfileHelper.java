@@ -56,7 +56,7 @@ public class RetrofitEditShopProfileHelper implements EditShopProfileHelper {
 	@Override
 	public Observable<ShopEditData> editShop(String shop_access_token, String name,
 											 String description, String address, String category,
-											 String city, Uri imageUri) throws IOException {
+											 String city,Double latitude,Double longitude, Uri imageUri) throws IOException {
 
 		RequestBody shop_access_token1 =
 				RequestBody.create(
@@ -77,7 +77,13 @@ public class RetrofitEditShopProfileHelper implements EditShopProfileHelper {
 		RequestBody city1 =
 				RequestBody.create(
 						MediaType.parse("multipart/form-data"), city);
-		if (imageUri != null) {
+		RequestBody latitude1 =
+				RequestBody.create(
+						MediaType.parse("multipart/form-data"), latitude+"");
+		RequestBody longitude1 =
+				RequestBody.create(
+						MediaType.parse("multipart/form-data"), longitude+"");
+			if (imageUri != null) {
 			//    File imageFile=new File(imageUri.getPath());
 			File imageFile = FileUtils.BitmapToFileConverter(context, BitmapUtils.filePathToBitmapConverter(UriUtils.uriToFilePathConverter(context, imageUri)));
 			RequestBody fbody = RequestBody.create(MediaType.parse("multipart/form-data"), imageFile);
@@ -86,10 +92,12 @@ public class RetrofitEditShopProfileHelper implements EditShopProfileHelper {
 					MultipartBody.Part.createFormData("image", imageFile.getName(), fbody);
 
 			return editShopProfileAPI.requestShopEdit(shop_access_token1,name1, description1,
-					address1,category1,city1,image);
-		}
-
-		return null;
+					address1,category1,city1,latitude1,longitude1,image);
+		}else {
+				MultipartBody.Part image =null;
+				return editShopProfileAPI.requestShopEdit(shop_access_token1,name1, description1,
+						address1,category1,city1,latitude1,longitude1,image);
+			}
 	}
 
 	@Override

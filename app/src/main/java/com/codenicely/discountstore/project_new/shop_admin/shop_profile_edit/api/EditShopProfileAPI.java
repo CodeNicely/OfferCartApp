@@ -27,6 +27,8 @@ public interface EditShopProfileAPI {
 		@Part("address") RequestBody address,
 		@Part("category") RequestBody category,
 		@Part("city") RequestBody city,
+		@Part("latitude") RequestBody latitude,
+		@Part("longitude") RequestBody longitude,
 		@Part MultipartBody.Part image);
 
 	@GET(Urls.SUB_URL_PREREGISTER_DATA_SHOP)

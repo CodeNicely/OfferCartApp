@@ -47,6 +47,7 @@
     <string name="edit_offer">Update Offer</string>
 
     //shop change password module
+
     <string name="change_password_description">Enter the details to change your password</string>
     <string name="title_add_offer">Add New Offer</string>
     <string name="title_edit_offer">Edit Offer</string>
@@ -71,7 +72,7 @@
     <string name="ok">Ok</string>
     <string name="text_location_permission">Please provide us location permission</string>
     <string name="offers">Offers</string>
-    <string name="buy_now">Buy Now</string>
+    <string name="buy_now">Register Now</string>
     <string name="shop_profile">Shop Profile</string>
     <string name="change_password">Change Password</string>
 

@@ -14,7 +14,7 @@ public interface EditShopProfilePresenter {
 	void openGallery();
 
 	void editShopProfile(String access_token,String name, String description, String address,
-					  String category, String city, Uri imageUri);
+					  String category, String city,Double latitude,Double longitude, Uri imageUri);
 
 	void requestPreRegistrationDetails();
 

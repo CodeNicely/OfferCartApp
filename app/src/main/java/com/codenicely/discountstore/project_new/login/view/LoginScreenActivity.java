@@ -37,13 +37,11 @@ import butterknife.ButterKnife;
 public class LoginScreenActivity extends Activity implements LoginScreenView {
     public static final Pattern VALID_EMAIL_ADDRESS_REGEX =
             Pattern.compile("^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,6}$", Pattern.CASE_INSENSITIVE);
-    String email1;
     String name1;
     EditText name;
     Button login_button;
     EditText mobile;
     String mobile1;
-    EditText email;
 
     @BindView(R.id.back_button)
     ImageView back_button;
@@ -94,7 +92,6 @@ public class LoginScreenActivity extends Activity implements LoginScreenView {
         login_button = (Button) findViewById(R.id.button);
         name = (EditText) findViewById(R.id.editText);
         mobile = (EditText) findViewById(R.id.editText2);
-        email = (EditText) findViewById(R.id.editText3);
 
         ButterKnife.bind(this);
 
@@ -106,7 +103,6 @@ public class LoginScreenActivity extends Activity implements LoginScreenView {
             public void onClick(View v) {
                 name1 = name.getText().toString();
                 mobile1 = mobile.getText().toString();
-                email1 = email.getText().toString();
                 if (name1.equals("") || name1.equals(null)) {
                     name.setError("Please fill name");
                     name.requestFocus();
@@ -114,31 +110,19 @@ public class LoginScreenActivity extends Activity implements LoginScreenView {
                     mobile.setError("Please fill mobile");
                     mobile.requestFocus();
 
-                } else if (email1.equals("") || email1.equals("")) {
-                    email.setError("Please fill email id ");
-                    email.requestFocus();
                 } else if (mobile1.length() != 10) {
                     mobile.setError("Invalid Mobile No.");
                     mobile.requestFocus();
-                } else if (!validate(email1)) {
-                    email.setError("Invalid Email Address");
-                    email.requestFocus();
                 }
-
                 if ((name1.equals("") || name1.equals(null)) ||
-                        ((mobile1.equals("") || mobile1.equals(null)) || mobile1.length() != 10) ||
-                        (email1.equals("") || email1.equals("")
-                                || !validate(email1))
-
-                        )
-
+                    ((mobile1.equals("") || mobile1.equals(null)) || mobile1.length() != 10))
                 {
 
 
                 } else {
                     login_button.setEnabled(false);
                     login_button.setClickable(false);
-                    loginScreenPresenter.requestLogin(name1, mobile1, email1);
+                    loginScreenPresenter.requestLogin(name1, mobile1);
                 }
 
 

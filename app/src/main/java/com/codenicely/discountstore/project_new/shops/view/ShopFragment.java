@@ -10,6 +10,7 @@ import android.location.Location;
 import android.location.LocationManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
 import android.provider.Settings;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -50,6 +51,7 @@ import com.karumi.dexter.listener.PermissionRequest;
 import com.karumi.dexter.listener.single.PermissionListener;
 
 import java.util.List;
+
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -97,7 +99,7 @@ public class ShopFragment extends Fragment implements ShopView,LocationListener
     private boolean gps_enabled;
     private boolean network_enabled;
 	static final int LOCATION_SETTINGS_REQUEST = 1;
-
+	int category_id;
     public ShopFragment() {
         // Required empty public constructor
     }
@@ -238,12 +240,21 @@ public class ShopFragment extends Fragment implements ShopView,LocationListener
 
 
 		Bundle bundle=this.getArguments();
-        int category_id=bundle.getInt(Keys.KEY_CATEGORY_ID);
+        category_id=bundle.getInt(Keys.KEY_CATEGORY_ID);
 
         sharedPrefs = new SharedPrefs(getContext());
         initialize();
         Log.d("fcm", MyApplication.getFcm());
-        shopPresenter.getShops(sharedPrefs.getAccessToken(), category_id,latitude,longitude);
+
+		final Handler handler = new Handler();
+		handler.postDelayed(new Runnable() {
+			@Override
+			public void run() {
+				// Do something after 5s = 5000ms
+				shopPresenter.getShops(sharedPrefs.getAccessToken(), category_id ,latitude,longitude);
+			}
+		}, 500);
+
         return view;
     }
 
