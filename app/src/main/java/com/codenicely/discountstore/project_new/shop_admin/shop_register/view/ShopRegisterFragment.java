@@ -1,6 +1,7 @@
 package com.codenicely.discountstore.project_new.shop_admin.shop_register.view;
 
 import android.Manifest;
+import android.annotation.TargetApi;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -32,6 +33,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -43,10 +45,12 @@ import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.codenicely.discountstore.project_new.R;
+import com.codenicely.discountstore.project_new.city.data.CityDetails;
 import com.codenicely.discountstore.project_new.shop_admin.shop_otp.view.ShopOtpFragment;
 import com.codenicely.discountstore.project_new.shop_admin.shop_register.data.CategoryData;
 import com.codenicely.discountstore.project_new.shop_admin.shop_register.data.CityData;
 import com.codenicely.discountstore.project_new.shop_admin.shop_register.data.ShopPreRegistrationData;
+import com.codenicely.discountstore.project_new.shop_admin.shop_register.data.StateData;
 import com.codenicely.discountstore.project_new.shop_admin.shop_register.presenter.ShopRegisterPresenter;
 import com.codenicely.discountstore.project_new.shop_admin.shop_register.presenter.ShopRegisterPresenterImpl;
 import com.codenicely.discountstore.project_new.shop_admin.shop_register.providers.RetrofitShopRegisterHelper;
@@ -65,7 +69,10 @@ import com.karumi.dexter.listener.multi.MultiplePermissionsListener;
 import com.karumi.dexter.listener.single.PermissionListener;
 
 import java.io.File;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import static android.app.Activity.RESULT_OK;
@@ -83,12 +90,13 @@ public class ShopRegisterFragment extends Fragment implements ShopRegisterView,L
 	  , GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener {
 	// TODO: Rename parameter arguments, choose names that match
 	// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-
+	private StateData stateData;
 	private static final String ARG_PARAM1 = "param1";
 	private static final String ARG_PARAM2 = "param2";
 	// LogCat tag
 	private static final String TAG = "ShopRegisterFragment";
 	private static final String SELECT_CITY = "Select City";
+	private static final String SELECT_STATE = "Select State";
 	private static final String SELECT_CATEGORY = "Select Category";
 
 	//Define a request code to send to Google Play services
@@ -98,7 +106,6 @@ public class ShopRegisterFragment extends Fragment implements ShopRegisterView,L
 	private double latitude;
 	private double longitude;
 	private boolean LOCATION_REQUEST = false;
-
 	private boolean CAMERA_REQUEST = false;
 	private boolean GALLERY_REQUEST = false;
 	private static final int CAMERA_REQUEST_ID = 100;
@@ -106,7 +113,8 @@ public class ShopRegisterFragment extends Fragment implements ShopRegisterView,L
 	private ShopRegisterPresenter shopRegisterPresenter;
 	private File image = null;
 
-
+	HashMap<String, Integer> hashMap ;
+	int flag;
 	private Context context;
 
 	@BindView(R.id.galleryButton)
@@ -142,6 +150,9 @@ public class ShopRegisterFragment extends Fragment implements ShopRegisterView,L
 	@BindView(R.id.city_spinner)
 	Spinner city_spinner;
 
+	@BindView(R.id.state_spinner)
+	Spinner state_spinner;
+
 	@BindView(R.id.imageView)
 	ImageView imageView;
 	/*
@@ -167,9 +178,12 @@ public class ShopRegisterFragment extends Fragment implements ShopRegisterView,L
 	private String mParam2;
 	static final int LOCATION_SETTINGS_REQUEST = 1;
 
+	String state = "Select State";
 	private OnFragmentInteractionListener mListener;
-	private ArrayAdapter<String> city_array_adapter;
+	private ArrayAdapter<String> state_array_adapter;
 	private ArrayAdapter<String> category_array_adapter;
+	private ArrayAdapter<String> city_array_adapter;
+
 	private ProgressDialog progressDialog;
 	String mobile;
 	private boolean gps_enabled;
@@ -211,7 +225,8 @@ public class ShopRegisterFragment extends Fragment implements ShopRegisterView,L
 							 Bundle savedInstanceState) {
 		// Inflate the layout for this fragment
 		View view = inflater.inflate(R.layout.fragment_register_shop, container, false);
-
+		hashMap = new HashMap<String, Integer>();
+		flag++;
 		context = getContext();
 		ButterKnife.bind(this, view);
 		progressDialog = new ProgressDialog(context);
@@ -220,11 +235,13 @@ public class ShopRegisterFragment extends Fragment implements ShopRegisterView,L
 		progressDialog.setIndeterminate(true);
 		progressDialog.setCancelable(false);
 
-		city_array_adapter = new ArrayAdapter<>(context, R.layout.spinner_item);
+		state_array_adapter = new ArrayAdapter<>(context, R.layout.spinner_item);
 		category_array_adapter = new ArrayAdapter<>(context, R.layout.spinner_item);
+		city_array_adapter = new ArrayAdapter<>(context, R.layout.spinner_item);
 
 		city_array_adapter.add(SELECT_CITY);
 		category_array_adapter.add(SELECT_CATEGORY);
+		state_array_adapter.add(SELECT_STATE);
 
 		mGoogleApiClient = new GoogleApiClient.Builder(getContext())
 								   // The next two lines tell the new client that “this” current class will handle connection stuff
@@ -309,9 +326,38 @@ public class ShopRegisterFragment extends Fragment implements ShopRegisterView,L
 }
 
 			city_spinner.setAdapter(city_array_adapter);
-
+			state_spinner.setAdapter(state_array_adapter);
 			category_spinner.setAdapter(category_array_adapter);
 
+			state_spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+				@TargetApi(Build.VERSION_CODES.N)
+				@Override
+				public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+					if (flag >1){
+						int error=0;
+						int state_id = 0;
+						state = state_spinner.getSelectedItem().toString();
+						Toast.makeText(getContext(),state,Toast.LENGTH_SHORT).show();
+						try {
+							 state_id=hashMap.get(state);
+						}catch (Exception e){
+							error=1;
+						}
+						if (error ==0){
+							city_array_adapter.clear();
+							city_array_adapter.add(SELECT_CITY);
+							shopRegisterPresenter.requestCityList(state_id);
+						}
+
+					}
+					flag++;
+				}
+
+				@Override
+				public void onNothingSelected(AdapterView<?> parent) {
+
+				}
+			});
 			Dexter.initialize(context);
 			if (checkPermissionForLocation()){
 
@@ -555,6 +601,15 @@ public class ShopRegisterFragment extends Fragment implements ShopRegisterView,L
 	}
 
 	@Override
+	public void onCitiesRecieved(List<CityDetails> cityDatalist) {
+		for (int i = 0; i < cityDatalist.size(); i++) {
+			CityDetails cityData = cityDatalist.get(i);
+			city_array_adapter.add(cityData.getCity_name());
+		}
+		city_array_adapter.notifyDataSetChanged();
+	}
+
+	@Override
 	public boolean checkPermissionForCamera() {
 
 
@@ -779,16 +834,18 @@ public class ShopRegisterFragment extends Fragment implements ShopRegisterView,L
     public void setPreRegistrationData(ShopPreRegistrationData shopPreRegistrationData) {
 
 
-        for (int i = 0; i < shopPreRegistrationData.getCity_list().size(); i++) {
-            CityData cityData = shopPreRegistrationData.getCity_list().get(i);
-            city_array_adapter.add(cityData.getName());
+        for (int i = 0; i < shopPreRegistrationData.getState_list().size(); i++) {
+			stateData = shopPreRegistrationData.getState_list().get(i);
+            state_array_adapter.add(stateData.getName());
+			hashMap.put(stateData.getName(),stateData.getId());
         }
 
         for (int i = 0; i < shopPreRegistrationData.getCategory_list().size(); i++) {
             CategoryData categoryData = shopPreRegistrationData.getCategory_list().get(i);
             category_array_adapter.add(categoryData.getName());
         }
-        city_array_adapter.notifyDataSetChanged();
+
+        state_array_adapter.notifyDataSetChanged();
         category_array_adapter.notifyDataSetChanged();
 
 	}

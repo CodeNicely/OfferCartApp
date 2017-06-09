@@ -1,6 +1,7 @@
 package com.codenicely.discountstore.project_new.shop_admin.shop_profile_edit.view;
 
 import android.Manifest;
+import android.annotation.TargetApi;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -12,6 +13,7 @@ import android.graphics.Color;
 import android.location.Location;
 import android.location.LocationManager;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.provider.Settings;
@@ -28,6 +30,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -38,6 +41,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.codenicely.discountstore.project_new.R;
+import com.codenicely.discountstore.project_new.city.data.CityDetails;
 import com.codenicely.discountstore.project_new.helper.SharedPrefs;
 import com.codenicely.discountstore.project_new.helper.image_loader.GlideImageLoader;
 import com.codenicely.discountstore.project_new.helper.image_loader.ImageLoader;
@@ -53,6 +57,7 @@ import com.codenicely.discountstore.project_new.shop_admin.shop_profile_show.vie
 import com.codenicely.discountstore.project_new.shop_admin.shop_register.data.CategoryData;
 import com.codenicely.discountstore.project_new.shop_admin.shop_register.data.CityData;
 import com.codenicely.discountstore.project_new.shop_admin.shop_register.data.ShopPreRegistrationData;
+import com.codenicely.discountstore.project_new.shop_admin.shop_register.data.StateData;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.LocationListener;
@@ -69,6 +74,7 @@ import com.karumi.dexter.listener.single.PermissionListener;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.List;
 
 import butterknife.BindView;
@@ -90,9 +96,11 @@ public class EditShopProfileFragment extends Fragment implements EditShopProfile
 	// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 	private static final String ARG_PARAM1 = "param1";
 	private static final String ARG_PARAM2 = "param2";
-	private static final String TAG = "EditShopProfileFragment";
-	private static final String SELECT_CITY = "Select City";
-	private static final String SELECT_CATEGORY = "Select Category";
+	private static final String TAG = "EditShopProfileFragment" ;
+	private static final String SELECT_CITY = "Select City" ;
+	private static final String SELECT_CATEGORY = "Select Category" ;
+	private static final String SELECT_STATE = "Select State" ;
+
 	private boolean CAMERA_REQUEST = false;
 	private boolean GALLERY_REQUEST = false;
 	private static final int CAMERA_REQUEST_ID = 100;
@@ -111,6 +119,8 @@ public class EditShopProfileFragment extends Fragment implements EditShopProfile
 	private double longitude;
 	private boolean LOCATION_REQUEST = false;
 
+	HashMap<String, Integer> hashMap ;
+	int flag;
 
 	@BindView(R.id.galleryButton)
 	Button galleryButton;
@@ -155,6 +165,9 @@ public class EditShopProfileFragment extends Fragment implements EditShopProfile
 
 	@BindView(R.id.toolbar)
 	Toolbar toolbar;
+
+	@BindView(R.id.state_spinner)
+	Spinner state_spinner;
 /*
 
 	@BindView(R.id.backButton)
@@ -164,7 +177,9 @@ public class EditShopProfileFragment extends Fragment implements EditShopProfile
 
 	ImageLoader imageLoader;
 	private Bitmap bitmap;
+	String state = "Select State";
 	private Uri imageUri = null;
+	private ArrayAdapter<String> state_array_adapter;
 	private ArrayAdapter<String> city_array_adapter;
 	private ArrayAdapter<String> category_array_adapter;
 	private ProgressDialog progressDialog;
@@ -219,10 +234,11 @@ public class EditShopProfileFragment extends Fragment implements EditShopProfile
 		city = getArguments().getString("city");
 		image1 = getArguments().getString("image");
 
+		hashMap = new HashMap<String, Integer>();
 
 		imageLoader = new GlideImageLoader(getContext());
 
-
+		flag++;
 		context = getContext();
 		ButterKnife.bind(this, view);
 
@@ -249,13 +265,16 @@ public class EditShopProfileFragment extends Fragment implements EditShopProfile
 		progressDialog.setIndeterminate(true);
 		progressDialog.setCancelable(false);
 		city_array_adapter = new ArrayAdapter<>(context, R.layout.spinner_item);
+		state_array_adapter = new ArrayAdapter<>(context, R.layout.spinner_item);
 		category_array_adapter = new ArrayAdapter<>(context, R.layout.spinner_item);
 
 
 		city_array_adapter.add(SELECT_CITY);
+		state_array_adapter.add(SELECT_STATE);
 		category_array_adapter.add(SELECT_CATEGORY);
 
 		city_spinner.setAdapter(city_array_adapter);
+		state_spinner.setAdapter(state_array_adapter);
 		category_spinner.setAdapter(category_array_adapter);
 		Dexter.initialize(context);
 		if (checkPermissionForLocation()){
@@ -285,6 +304,38 @@ public class EditShopProfileFragment extends Fragment implements EditShopProfile
 
 
 		LocationManager lm = (LocationManager) getActivity().getSystemService(Context.LOCATION_SERVICE);
+
+		state_spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+			@TargetApi(Build.VERSION_CODES.N)
+			@Override
+			public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+				if (flag >1){
+					int error=0;
+					int state_id = 0;
+					state = state_spinner.getSelectedItem().toString();
+					Toast.makeText(getContext(),state,Toast.LENGTH_SHORT).show();
+					try {
+						state_id=hashMap.get(state);
+					}catch (Exception e){
+						error=1;
+						Log.d("FRAGMENT1--","-------------------");
+					}
+					if (error ==0){
+						city_array_adapter.clear();
+						city_array_adapter.add(SELECT_CITY);
+						Log.d("FRAGMENT--","-------------------");
+							editShopProfilePresenter.requestCityList(state_id);
+					}
+
+				}
+				flag++;
+			}
+
+			@Override
+			public void onNothingSelected(AdapterView<?> parent) {
+
+			}
+		});
 
 		try {
 			gps_enabled = lm.isProviderEnabled(LocationManager.GPS_PROVIDER);
@@ -674,25 +725,29 @@ public class EditShopProfileFragment extends Fragment implements EditShopProfile
 	public void setPreRegistrationData(ShopPreRegistrationData shopPreRegistrationData) {
 		int index_of_category = 0;
 		int index_of_city = 0;
-		for (int i = 0; i < shopPreRegistrationData.getCity_list().size(); i++) {
-			CityData cityData = shopPreRegistrationData.getCity_list().get(i);
-			index_of_city =cityData.getName().indexOf(city);
-			city_array_adapter.add(cityData.getName());
+
+		for (int i = 0; i < shopPreRegistrationData.getState_list().size(); i++) {
+			StateData stateData = shopPreRegistrationData.getState_list().get(i);
+			//index_of_city = stateData.getName().indexOf(city);
+			state_array_adapter.add(stateData.getName());
+			hashMap.put(stateData.getName(),stateData.getId());
+
 		}
+
 		for (int i = 0; i < shopPreRegistrationData.getCategory_list().size(); i++) {
 			CategoryData categoryData = shopPreRegistrationData.getCategory_list().get(i);
 			index_of_category =categoryData.getName().indexOf(category);
 			category_array_adapter.add(categoryData.getName());
 		}
 
-		city_array_adapter.notifyDataSetChanged();
+		state_array_adapter.notifyDataSetChanged();
 		category_array_adapter.notifyDataSetChanged();
 
 		name_edittext.setText(name);
 		address_edittext.setText(address);
 		description_edittext.setText(description);
 		category_spinner.setSelection(index_of_category);
-		city_spinner.setSelection(index_of_city);
+		//city_spinner.setSelection(index_of_city);
 		//imageUri= Uri.parse(image1);
 		imageLoader.loadImage(image1, imageView, progressBar);
 	}
@@ -706,6 +761,14 @@ public class EditShopProfileFragment extends Fragment implements EditShopProfile
 		ShowShopProfileFragment showShopProfileFragment=new ShowShopProfileFragment();
 		((ShopHomePage)getActivity()).addFragment(showShopProfileFragment,"Home");
 */
+	}
+	@Override
+	public void onCitiesRecieved(List<CityDetails> cityDatalist) {
+		for (int i = 0; i < cityDatalist.size(); i++) {
+			CityDetails cityData = cityDatalist.get(i);
+			city_array_adapter.add(cityData.getCity_name());
+		}
+		city_array_adapter.notifyDataSetChanged();
 	}
 
 	@Override
@@ -747,8 +810,6 @@ public class EditShopProfileFragment extends Fragment implements EditShopProfile
 	public void onLocationChanged(Location location) {
 		latitude = location.getLatitude();
 		longitude = location.getLongitude();
-
-
 	}
 
 	@Override

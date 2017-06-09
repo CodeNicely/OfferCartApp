@@ -1,6 +1,10 @@
 package com.codenicely.discountstore.project_new.shop_admin.shop_register.view;
 
+import com.codenicely.discountstore.project_new.city.data.CityDetails;
+import com.codenicely.discountstore.project_new.shop_admin.shop_register.data.CityData;
 import com.codenicely.discountstore.project_new.shop_admin.shop_register.data.ShopPreRegistrationData;
+
+import java.util.List;
 
 /**
  * Created by meghal on 11/10/16.
@@ -15,6 +19,7 @@ public interface ShopRegisterView {
 
     void showMessage(String message);
 
+    void onCitiesRecieved(List<CityDetails> cityDataList);
     /**
      * This method is for checking camera permission.
      * Applicable only for devices with Api 23 or more.

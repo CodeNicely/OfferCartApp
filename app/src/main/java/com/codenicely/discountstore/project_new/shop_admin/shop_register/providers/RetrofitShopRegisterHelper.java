@@ -3,10 +3,12 @@ package com.codenicely.discountstore.project_new.shop_admin.shop_register.provid
 import android.content.Context;
 import android.net.Uri;
 
+import com.codenicely.discountstore.project_new.city.api.CityRequestApi;
 import com.codenicely.discountstore.project_new.helper.Urls;
 import com.codenicely.discountstore.project_new.helper.utils.BitmapUtils;
 import com.codenicely.discountstore.project_new.helper.utils.FileUtils;
 import com.codenicely.discountstore.project_new.helper.utils.UriUtils;
+import com.codenicely.discountstore.project_new.shop_admin.shop_register.OnCitiesReceived;
 import com.codenicely.discountstore.project_new.shop_admin.shop_register.OnPreRegistrationApiResponse;
 import com.codenicely.discountstore.project_new.shop_admin.shop_register.api.ShopRegisterApi;
 import com.codenicely.discountstore.project_new.shop_admin.shop_register.data.ShopPreRegistrationData;
@@ -33,6 +35,7 @@ import rx.Observable;
  */
 
 public class RetrofitShopRegisterHelper implements ShopRegisterHelper {
+    private CityRequestApi cityRequestApi;
 
     private Retrofit retrofit;
     private ShopRegisterApi shopRegisterApi;
@@ -53,6 +56,7 @@ public class RetrofitShopRegisterHelper implements ShopRegisterHelper {
                 .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
                 .build();
         shopRegisterApi = retrofit.create(ShopRegisterApi.class);
+        cityRequestApi = retrofit.create(CityRequestApi.class);
 
     }
 
@@ -135,5 +139,25 @@ public class RetrofitShopRegisterHelper implements ShopRegisterHelper {
                 onPreRegistrationApiResponse.onFailure(t.getMessage());
             }
         });
+    }
+
+    @Override
+    public void requestCityList(int state_id, final OnCitiesReceived onCitiesReceived) {
+
+        Call<com.codenicely.discountstore.project_new.city.data.CityData> call = cityRequestApi.getCities("No access token needed",state_id);
+        call.enqueue(new Callback<com.codenicely.discountstore.project_new.city.data.CityData>() {
+            @Override
+            public void onResponse(Call<com.codenicely.discountstore.project_new.city.data.CityData> call, retrofit2.Response<com.codenicely.discountstore.project_new.city.data.CityData> response) {
+                onCitiesReceived.onSuccess(response.body());
+            }
+
+            @Override
+            public void onFailure(Call<com.codenicely.discountstore.project_new.city.data.CityData> call, Throwable t) {
+                t.printStackTrace();
+                onCitiesReceived.onFailure();
+
+            }
+        });
+
     }
 }

@@ -18,4 +18,5 @@ public interface EditShopProfilePresenter {
 
 	void requestPreRegistrationDetails();
 
+	void requestCityList(int state_id);
 }

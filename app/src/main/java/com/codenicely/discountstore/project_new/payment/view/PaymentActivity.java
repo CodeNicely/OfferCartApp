@@ -209,7 +209,7 @@ public class PaymentActivity extends AppCompatActivity implements PaymentView {
 
         Toast.makeText(this, "Please wait... Generating hash from server ... ", Toast.LENGTH_LONG).show();
 
-        StringRequest jsonObjectRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
+        StringRequest jsonObjectRequest = new StringRequest(Request.Method.POST, url, new CityData.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 try {
@@ -238,7 +238,7 @@ public class PaymentActivity extends AppCompatActivity implements PaymentView {
                 }
             }
 
-        }, new Response.ErrorListener() {
+        }, new CityData.ErrorListener() {
 
             @Override
             public void onErrorResponse(VolleyError error) {
@@ -270,7 +270,7 @@ public class PaymentActivity extends AppCompatActivity implements PaymentView {
         if (requestCode == PayUmoneySdkInitilizer.PAYU_SDK_PAYMENT_REQUEST_CODE) {
 
             if (resultCode == RESULT_OK) {
-                Log.i("Response", "Success - Payment ID : " + data.getStringExtra(SdkConstants.PAYMENT_ID));
+                Log.i("CityData", "Success - Payment ID : " + data.getStringExtra(SdkConstants.PAYMENT_ID));
                 String paymentId = data.getStringExtra(SdkConstants.PAYMENT_ID);
                 //    showDialogMessage("Payment Success Id : " + paymentId);
                 paymentPresenter.updatePaymentStatus(sharedPrefs.getAccessToken(), transaction_id);
@@ -280,7 +280,7 @@ public class PaymentActivity extends AppCompatActivity implements PaymentView {
                 finish();
 
             } else if (resultCode == RESULT_CANCELED) {
-                Log.i("Response", "failure");
+                Log.i("CityData", "failure");
              //   showDialogMessage("cancelled");
                 paymentPresenter.updatePaymentStatus(sharedPrefs.getAccessToken(), transaction_id);
                 Intent intent=new Intent(this, HomePage.class);
@@ -310,7 +310,7 @@ public class PaymentActivity extends AppCompatActivity implements PaymentView {
 */
                 //Write your code if there's no result
        /*     } else if (resultCode == PayUmoneySdkInitilizer.RESULT_BACK) {
-                Log.i("Response", "User returned without login");
+                Log.i("CityData", "User returned without login");
                 Toast.makeText(this, "User Returned Without Login to PayuMoney", Toast.LENGTH_SHORT).show();
 //                showDialogMessage("User returned without login");
                 finish();
@@ -335,7 +335,7 @@ public class PaymentActivity extends AppCompatActivity implements PaymentView {
 
     private void showDialogMessage(String message) {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Response");
+        builder.setTitle("CityData");
         builder.setMessage(message);
         builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             @Override

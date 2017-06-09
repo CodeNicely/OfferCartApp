@@ -1,6 +1,9 @@
 package com.codenicely.discountstore.project_new.shop_admin.shop_profile_edit.view;
 
+import com.codenicely.discountstore.project_new.city.data.CityDetails;
 import com.codenicely.discountstore.project_new.shop_admin.shop_register.data.ShopPreRegistrationData;
+
+import java.util.List;
 
 /**
  * Created by ujjwal on 17/5/17.
@@ -63,5 +66,6 @@ public interface EditShopProfileView {
 	void setPreRegistrationData(ShopPreRegistrationData shopPreRegistrationData);
 
 	void onEditSuccess();
+	void onCitiesRecieved(List<CityDetails> cityDataList);
 
 }

@@ -200,7 +200,7 @@ public class ShopHomePage extends AppCompatActivity
 
     private void showDialogMessage(String message) {
         android.app.AlertDialog.Builder builder = new android.app.AlertDialog.Builder(this);
-        builder.setTitle("Response");
+        builder.setTitle("CityData");
         builder.setMessage(message);
         builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             @Override

@@ -120,7 +120,7 @@ public class ShopPaymentFragment extends Fragment implements PaymentShopView {
         if (requestCode == PayUmoneySdkInitilizer.PAYU_SDK_PAYMENT_REQUEST_CODE) {
 
             if (resultCode == RESULT_OK) {
-                Log.d("Response", "ok");
+                Log.d("CityData", "ok");
                 String paymentId = data.getStringExtra(SdkConstants.PAYMENT_ID);
 
                 shopPaymentPresenter.updateShopPaymentStatus(sharedPrefs.getKeyAccessTokenShop(), transaction, true);
@@ -128,21 +128,21 @@ public class ShopPaymentFragment extends Fragment implements PaymentShopView {
                 ((ShopHomePage) getContext()).setFragment(shopOfferListFragment, "HOME");
 
             } else if (resultCode == RESULT_CANCELED) {
-                Log.d("Response", "failure");
+                Log.d("CityData", "failure");
 
                 shopPaymentPresenter.updateShopPaymentStatus(sharedPrefs.getKeyAccessTokenShop(), transaction, false);
 
                 ((ShopHomePage) getContext()).setFragment(shopOfferListFragment, "HOME");
             } else if (resultCode == PayUmoneySdkInitilizer.RESULT_FAILED) {
                 Log.i("app_activity", "failure");
-                Log.d("Response", "failure");
+                Log.d("CityData", "failure");
                 shopPaymentPresenter.updateShopPaymentStatus(sharedPrefs.getKeyAccessTokenShop(), transaction, false);
 
 
                 ((ShopHomePage) getContext()).setFragment(shopOfferListFragment, "HOME");
             } else if (resultCode == PayUmoneySdkInitilizer.RESULT_BACK) {
-                Log.i("Response", "User returned without login");
-                Log.d("Response", "failure");
+                Log.i("CityData", "User returned without login");
+                Log.d("CityData", "failure");
                 Toast.makeText(getContext(), "User Returned Without Login to PayuMoney", Toast.LENGTH_SHORT).show();
                 shopPaymentPresenter.updateShopPaymentStatus(sharedPrefs.getKeyAccessTokenShop(), transaction, false);
 

@@ -5,8 +5,8 @@ package com.codenicely.discountstore.project_new.helper;
  */
 public class Urls {
 
-	public static final String BASE_URL = "http://139.59.78.127:4888";
-	//public static final String BASE_URL = "http://172.20.10.11:8888";
+//	public static final String BASE_URL = "http://139.59.78.127:4888";
+	public static final String BASE_URL = "http://172.20.10.13:8888";
 //	//public static final String BASE_URL = "http://app.vegworld.online:2017";
     public static final String REQUEST_FCM_UPDATE = "update_fcm/";
 
@@ -26,8 +26,13 @@ public class Urls {
     public static final String WALLET = "wallet/";
 
     //city_screen
-    public static final String REQUEST_CITY = "city/";
-    public static final String Send_CITY = "city/";
+    public static final String REQUEST_CITY = "request_cities/";
+	public static final String SEND_CITY = "get_city/";
+
+	//state select
+	public static final String REQUEST_STATE = "request_states/";
+		//never_used
+	public static final String SEND_STATE = "get_state/";
 
     //offer
     public static final String SUB_URL_MY_ORDERS = "my_offers/";
@@ -50,7 +55,7 @@ public class Urls {
 	public static final String SUB_URL_CREATE_SHOP = "create_shop/";
 
 	//to get category and city list
-    public static final String SUB_URL_PREREGISTER_DATA_SHOP = "city_category/";
+    public static final String SUB_URL_PREREGISTER_DATA_SHOP = "state_category/";
 
     //shop_otp
     public static final String VERIFY_SHOP_OTP = "verify_shop_otp/";

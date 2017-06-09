@@ -24,4 +24,5 @@ public interface ShopRegisterPresenter {
 
     void requestPreRegistrationDetails();
 
+    void requestCityList(int state_id);
 }

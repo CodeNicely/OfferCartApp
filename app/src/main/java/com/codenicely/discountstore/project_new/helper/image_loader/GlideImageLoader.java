@@ -30,7 +30,7 @@ public class GlideImageLoader implements ImageLoader {
 
     @Override
     public void loadImage(String url, final ImageView imageView, final ProgressBar progressBar) {
-//        Log.d("Response",url);
+//        Log.d("CityData",url);
 //        url = url.replace("\"", "");
 
 

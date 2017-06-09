@@ -5,7 +5,9 @@ import android.net.Uri;
 import android.util.Log;
 
 import com.codenicely.discountstore.project_new.R;
+import com.codenicely.discountstore.project_new.city.data.CityData;
 import com.codenicely.discountstore.project_new.helper.MyApplication;
+import com.codenicely.discountstore.project_new.shop_admin.shop_register.OnCitiesReceived;
 import com.codenicely.discountstore.project_new.shop_admin.shop_register.OnPreRegistrationApiResponse;
 import com.codenicely.discountstore.project_new.shop_admin.shop_register.data.ShopPreRegistrationData;
 import com.codenicely.discountstore.project_new.shop_admin.shop_register.data.ShopRegisterData;
@@ -101,7 +103,7 @@ public class ShopRegisterPresenterImpl implements ShopRegisterPresenter {
                 @Override
                 public void onNext(ShopRegisterData spotUploadData) {
 
-                    Log.i(TAG, "Response " + spotUploadData.toString());
+                    Log.i(TAG, "CityData " + spotUploadData.toString());
                     if (spotUploadData.isSuccess()) {
                         shopRegisterView.onRegistrationSuccess();
 
@@ -140,6 +142,26 @@ public class ShopRegisterPresenterImpl implements ShopRegisterPresenter {
         });
 
 
+    }
+
+    @Override
+    public void requestCityList(int state_id) {
+        shopRegisterView.showLoader(true);
+        shopRegisterHelper.requestCityList(state_id, new OnCitiesReceived() {
+            @Override
+            public void onFailure() {
+                shopRegisterView.showLoader(false);
+                shopRegisterView.showMessage("Failed to get City List");
+            }
+
+            @Override
+            public void onSuccess(CityData cityData) {
+                shopRegisterView.showLoader(false);
+                shopRegisterView.onCitiesRecieved(cityData.getCity_data());
+
+
+            }
+        });
     }
 
 

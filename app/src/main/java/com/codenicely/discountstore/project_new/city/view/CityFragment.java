@@ -7,7 +7,6 @@ import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,10 +15,10 @@ import android.widget.Toast;
 
 import com.codenicely.discountstore.project_new.R;
 import com.codenicely.discountstore.project_new.categories.view.CategoryFragment;
-import com.codenicely.discountstore.project_new.city.models.RetrofitCityScreenProvider;
-import com.codenicely.discountstore.project_new.city.models.data.CityScreenData;
-import com.codenicely.discountstore.project_new.city.presenter.CityScreenPresenter;
-import com.codenicely.discountstore.project_new.city.presenter.CityScreenPresenterImpl;
+import com.codenicely.discountstore.project_new.city.models.RetrofitCityProvider;
+import com.codenicely.discountstore.project_new.city.data.CityDetails;
+import com.codenicely.discountstore.project_new.city.presenter.CityPresenter;
+import com.codenicely.discountstore.project_new.city.presenter.CityPresenterImpl;
 import com.codenicely.discountstore.project_new.helper.MyApplication;
 import com.codenicely.discountstore.project_new.helper.SharedPrefs;
 import com.codenicely.discountstore.project_new.home.HomePage;
@@ -37,7 +36,7 @@ import butterknife.ButterKnife;
  * Use the {@link CityFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class CityFragment extends Fragment implements CityScreenView {
+public class CityFragment extends Fragment implements CityView {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -55,7 +54,7 @@ public class CityFragment extends Fragment implements CityScreenView {
 
     private CityAdapter cityAdapter;
     private LinearLayoutManager linearLayoutManager;
-    private CityScreenPresenter cityScreenPresenter;
+    private CityPresenter cityPresenter;
     private SharedPrefs sharedPrefs;
     private String access_token;
 
@@ -63,7 +62,7 @@ public class CityFragment extends Fragment implements CityScreenView {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-
+	int state_id;
     private OnFragmentInteractionListener mListener;
 
     public CityFragment() {
@@ -93,7 +92,6 @@ public class CityFragment extends Fragment implements CityScreenView {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
         }
 
     }
@@ -102,7 +100,9 @@ public class CityFragment extends Fragment implements CityScreenView {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_city, container, false);
+        /*state_id = getArguments().getInt("state_id");
+        */
+		View view = inflater.inflate(R.layout.fragment_city, container, false);
         ButterKnife.bind(this, view);
 
         ((HomePage) getActivity()).getSupportActionBar().hide();
@@ -113,6 +113,8 @@ public class CityFragment extends Fragment implements CityScreenView {
         AdRequest adRequest = new AdRequest.Builder().build();
         adView.loadAd(adRequest);*/
 
+		state_id=sharedPrefs.getStateId();
+
         if (sharedPrefs.getCity().equals("NA")) {
             toolbar.setNavigationOnClickListener(new View.OnClickListener() {
                 @Override
@@ -122,7 +124,8 @@ public class CityFragment extends Fragment implements CityScreenView {
 
                 }
             });
-        } else {
+        }
+		else {
             toolbar.setNavigationOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -130,15 +133,16 @@ public class CityFragment extends Fragment implements CityScreenView {
                 }
             });
         }
+
         access_token = sharedPrefs.getAccessToken();
 
-        cityScreenPresenter = new CityScreenPresenterImpl(this, new RetrofitCityScreenProvider());
+        cityPresenter = new CityPresenterImpl(this, new RetrofitCityProvider());
         cityAdapter = new CityAdapter(getContext(), this);
 
         linearLayoutManager = new LinearLayoutManager(getContext());
         recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.setAdapter(cityAdapter);
-        cityScreenPresenter.requestCity(access_token);
+        cityPresenter.requestCity(access_token,state_id);
 
 
         return view;
@@ -170,7 +174,6 @@ public class CityFragment extends Fragment implements CityScreenView {
         } else {
             progressBar.setVisibility(View.GONE);
         }
-
     }
 
     @Override
@@ -179,8 +182,8 @@ public class CityFragment extends Fragment implements CityScreenView {
     }
 
     @Override
-    public void onCityVerified(List<CityScreenData> cityScreenDataList) {
-        cityAdapter.setData(cityScreenDataList);
+    public void onCityListRecieved(List<CityDetails> cityDetailsList) {
+        cityAdapter.setData(cityDetailsList);
         cityAdapter.notifyDataSetChanged();
     }
 
@@ -189,20 +192,15 @@ public class CityFragment extends Fragment implements CityScreenView {
         sharedPrefs = new SharedPrefs(getContext());
         access_token = sharedPrefs.getAccessToken();
 
-        cityScreenPresenter.sendSelectedCity(city_name, city_id, access_token, MyApplication.getFcm());
+        cityPresenter.sendSelectedCity(city_name, city_id, access_token);
 
 
     }
 
     @Override
-    public void onCitySent(String city) {
-    /*    Intent in=new Intent(getActivity(), HomePage.class);
-        startActivity(in);
-        getActivity().finish();
-    */
+    public void onCitySelectSuccess(String city) {
         sharedPrefs.setCity(city);
         ((HomePage) getContext()).setFragment(new CategoryFragment(), "Home");
-
     }
 
     /**
@@ -215,8 +213,11 @@ public class CityFragment extends Fragment implements CityScreenView {
      * "http://developer.android.com/training/basics/fragments/communicating.html"
      * >Communicating with Other Fragments</a> for more information.
      */
+
+
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
     }
+
 }

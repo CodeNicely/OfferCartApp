@@ -3,12 +3,14 @@ package com.codenicely.discountstore.project_new.shop_admin.shop_profile_edit.mo
 import android.content.Context;
 import android.net.Uri;
 
+import com.codenicely.discountstore.project_new.city.api.CityRequestApi;
 import com.codenicely.discountstore.project_new.helper.Urls;
 import com.codenicely.discountstore.project_new.helper.utils.BitmapUtils;
 import com.codenicely.discountstore.project_new.helper.utils.FileUtils;
 import com.codenicely.discountstore.project_new.helper.utils.UriUtils;
 import com.codenicely.discountstore.project_new.shop_admin.shop_profile_edit.api.EditShopProfileAPI;
 import com.codenicely.discountstore.project_new.shop_admin.shop_profile_edit.data.ShopEditData;
+import com.codenicely.discountstore.project_new.shop_admin.shop_register.OnCitiesReceived;
 import com.codenicely.discountstore.project_new.shop_admin.shop_register.OnPreRegistrationApiResponse;
 import com.codenicely.discountstore.project_new.shop_admin.shop_register.data.ShopPreRegistrationData;
 
@@ -35,6 +37,8 @@ public class RetrofitEditShopProfileHelper implements EditShopProfileHelper {
 	private Retrofit retrofit;
 	private EditShopProfileAPI editShopProfileAPI;
 	private Context context;
+	private CityRequestApi cityRequestApi;
+
 
 
 	public RetrofitEditShopProfileHelper(Context context) {
@@ -51,6 +55,7 @@ public class RetrofitEditShopProfileHelper implements EditShopProfileHelper {
 						   .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
 						   .build();
 		editShopProfileAPI= retrofit.create(EditShopProfileAPI.class);
+		cityRequestApi = retrofit.create(CityRequestApi.class);
 	}
 
 	@Override
@@ -114,6 +119,25 @@ public class RetrofitEditShopProfileHelper implements EditShopProfileHelper {
 			public void onFailure(Call<ShopPreRegistrationData> call, Throwable t) {
 				t.printStackTrace();
 				onPreRegistrationApiResponse.onFailure(t.getMessage());
+			}
+		});
+
+	}
+
+	@Override
+	public void requestCityList(int state_id, final OnCitiesReceived onCitiesReceived) {
+		Call<com.codenicely.discountstore.project_new.city.data.CityData> call = cityRequestApi.getCities("No access token needed",state_id);
+		call.enqueue(new Callback<com.codenicely.discountstore.project_new.city.data.CityData>() {
+			@Override
+			public void onResponse(Call<com.codenicely.discountstore.project_new.city.data.CityData> call, retrofit2.Response<com.codenicely.discountstore.project_new.city.data.CityData> response) {
+				onCitiesReceived.onSuccess(response.body());
+			}
+
+			@Override
+			public void onFailure(Call<com.codenicely.discountstore.project_new.city.data.CityData> call, Throwable t) {
+				t.printStackTrace();
+				onCitiesReceived.onFailure();
+
 			}
 		});
 

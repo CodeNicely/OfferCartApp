@@ -93,7 +93,7 @@ public class OfferAddPresenterImpl implements OfferAddPresenter {
 
 				@Override
 				public void onNext(OfferAddData offerAddData) {
-					Log.i(TAG, "Response " + offerAddData.toString());
+					Log.i(TAG, "CityData " + offerAddData.toString());
 
 					if (offerAddData.isSuccess()) {
 						offerAddView.showLoader(false);

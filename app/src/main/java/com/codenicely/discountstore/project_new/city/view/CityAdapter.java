@@ -2,7 +2,6 @@ package com.codenicely.discountstore.project_new.city.view;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,7 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.codenicely.discountstore.project_new.R;
-import com.codenicely.discountstore.project_new.city.models.data.CityScreenData;
+import com.codenicely.discountstore.project_new.city.data.CityDetails;
 import com.codenicely.discountstore.project_new.home.HomePage;
 
 import java.util.ArrayList;
@@ -20,7 +19,7 @@ import java.util.List;
  * Created by iket on 19/10/16.
  */
 public class CityAdapter extends RecyclerView.Adapter<CityAdapter.MyViewHolder> {
-    private List<CityScreenData> cityScreenDataList = new ArrayList<>();
+    private List<CityDetails> cityDetailsList = new ArrayList<>();
     private Context context;
     private LayoutInflater layoutInflater;
     private CityFragment cityFragment;
@@ -31,8 +30,8 @@ public class CityAdapter extends RecyclerView.Adapter<CityAdapter.MyViewHolder> 
         layoutInflater = LayoutInflater.from(context);
     }
 
-    public void setData(List<CityScreenData> cityScreenData) {
-        cityScreenDataList = cityScreenData;
+    public void setData(List<CityDetails> cityDetails) {
+        cityDetailsList = cityDetails;
     }
 
     @Override
@@ -44,9 +43,9 @@ public class CityAdapter extends RecyclerView.Adapter<CityAdapter.MyViewHolder> 
     @Override
     public void onBindViewHolder(final MyViewHolder holder, int position) {
 
-        final CityScreenData cityScreenData = cityScreenDataList.get(position);
+        final CityDetails cityDetails = cityDetailsList.get(position);
 
-        holder.city.setText(cityScreenData.getCity_name());
+        holder.city.setText(cityDetails.getCity_name());
 
 
         holder.city.setOnClickListener(new View.OnClickListener() {
@@ -54,7 +53,7 @@ public class CityAdapter extends RecyclerView.Adapter<CityAdapter.MyViewHolder> 
             public void onClick(View v) {
 
                 if (context instanceof HomePage) {
-                    cityFragment.onCitySelected(cityScreenData.getCity_id(), cityScreenData.getCity_name());
+                    cityFragment.onCitySelected(cityDetails.getCity_id(), cityDetails.getCity_name());
                     holder.done.setVisibility(View.VISIBLE);
                 }
 
@@ -66,7 +65,7 @@ public class CityAdapter extends RecyclerView.Adapter<CityAdapter.MyViewHolder> 
 
     @Override
     public int getItemCount() {
-        return cityScreenDataList.size();
+        return cityDetailsList.size();
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {

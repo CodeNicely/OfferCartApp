@@ -2,6 +2,7 @@ package com.codenicely.discountstore.project_new.shop_admin.shop_register.provid
 
 import android.net.Uri;
 
+import com.codenicely.discountstore.project_new.shop_admin.shop_register.OnCitiesReceived;
 import com.codenicely.discountstore.project_new.shop_admin.shop_register.OnPreRegistrationApiResponse;
 import com.codenicely.discountstore.project_new.shop_admin.shop_register.data.ShopRegisterData;
 
@@ -30,4 +31,5 @@ public interface ShopRegisterHelper {
 
     void requestPreRegistrationDetails(OnPreRegistrationApiResponse onPreRegistrationApiResponse);
 
+    void requestCityList(int state_id, OnCitiesReceived onCitiesReceived);
 }

@@ -3,6 +3,7 @@ package com.codenicely.discountstore.project_new.shop_admin.shop_profile_edit.mo
 import android.net.Uri;
 
 import com.codenicely.discountstore.project_new.shop_admin.shop_profile_edit.data.ShopEditData;
+import com.codenicely.discountstore.project_new.shop_admin.shop_register.OnCitiesReceived;
 import com.codenicely.discountstore.project_new.shop_admin.shop_register.OnPreRegistrationApiResponse;
 
 import java.io.IOException;
@@ -24,4 +25,5 @@ public interface EditShopProfileHelper {
 
 	void requestPreRegistrationDetails(OnPreRegistrationApiResponse onPreRegistrationApiResponse);
 
+	void requestCityList(int state_id, OnCitiesReceived onCitiesReceived);
 }

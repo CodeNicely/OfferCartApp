@@ -4,10 +4,12 @@ import android.net.Uri;
 import android.util.Log;
 
 import com.codenicely.discountstore.project_new.R;
+import com.codenicely.discountstore.project_new.city.data.CityData;
 import com.codenicely.discountstore.project_new.helper.MyApplication;
 import com.codenicely.discountstore.project_new.shop_admin.shop_profile_edit.data.ShopEditData;
 import com.codenicely.discountstore.project_new.shop_admin.shop_profile_edit.model.EditShopProfileHelper;
 import com.codenicely.discountstore.project_new.shop_admin.shop_profile_edit.view.EditShopProfileView;
+import com.codenicely.discountstore.project_new.shop_admin.shop_register.OnCitiesReceived;
 import com.codenicely.discountstore.project_new.shop_admin.shop_register.OnPreRegistrationApiResponse;
 import com.codenicely.discountstore.project_new.shop_admin.shop_register.data.ShopPreRegistrationData;
 
@@ -99,7 +101,7 @@ public class EditShopProfilePresenterImpl implements EditShopProfilePresenter {
 				@Override
 				public void onNext(ShopEditData shopEditData) {
 
-					Log.i(TAG, "Response " + shopEditData.toString());
+					Log.i(TAG, "CityData " + shopEditData.toString());
 					if (shopEditData.isSuccess()) {
 						editShopProfileView.showLoader(false);
 						editShopProfileView.showDialogLoader(false);
@@ -143,4 +145,25 @@ public class EditShopProfilePresenterImpl implements EditShopProfilePresenter {
 		});
 
 	}
+
+	@Override
+	public void requestCityList(int state_id) {
+		editShopProfileView.showLoader(true);
+		editShopProfileHelper.requestCityList(state_id, new OnCitiesReceived() {
+			@Override
+			public void onFailure() {
+				editShopProfileView.showLoader(false);
+				editShopProfileView.showMessage("Failed to get City List");
+			}
+
+			@Override
+			public void onSuccess(CityData cityData) {
+				editShopProfileView.showLoader(false);
+				editShopProfileView.onCitiesRecieved(cityData.getCity_data());
+
+
+			}
+		});
+	}
+
 }

@@ -25,8 +25,13 @@ public class SharedPrefs {
     private static final String KEY_ACCESS_TOKEN = "access_token";
 	private static final String KEY_ACCESS_TOKEN_SHOP = "access_token_shop";
 
-	private static final String KEY_City = "raipur";
-    private static final int KEY_VERSION = 1;
+	private static final String KEY_CITY = "Raipur";
+	private static final String KEY_STATE = "Chattisgarh";
+	private static final String KEY_STATE_ID ="State Id";
+
+
+
+	private static final int KEY_VERSION = 1;
     private static final String IS_FIRST_TIME_LAUNCH = "IsFirstTimeLaunch";
 
 
@@ -53,11 +58,26 @@ public class SharedPrefs {
     }
 
     public String getCity() {
-        return pref.getString(KEY_City, "NA");
+        return pref.getString(KEY_CITY, "NA");
     }
+	public int getStateId() {
+		return pref.getInt(KEY_STATE_ID, 0);
+	}
 
+	public String getState() {
+		return pref.getString(KEY_STATE, "NA");
+	}
+	public void setState(int state_id) {
+		editor.putInt(KEY_STATE_ID, state_id);
+		editor.commit();
+	}
+
+	public void setState(String state) {
+		editor.putString(KEY_STATE, state);
+		editor.commit();
+	}
     public void setCity(String city) {
-        editor.putString(KEY_City, city);
+        editor.putString(KEY_CITY, city);
         editor.commit();
     }
 

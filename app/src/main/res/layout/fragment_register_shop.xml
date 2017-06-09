@@ -201,11 +201,19 @@
                 <Spinner
                     android:id="@+id/category_spinner"
                     android:layout_width="match_parent"
+                    android:layout_margin="8dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/white_line" />
+                <Spinner
+                    android:id="@+id/state_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_margin="8dp"
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/white_line" />
 
                 <Spinner
                     android:id="@+id/city_spinner"
+                    android:layout_margin="8dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/white_line" />
