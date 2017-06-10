@@ -102,8 +102,8 @@ public class WelcomeScreenActivity extends Activity implements WelcomeScreenView
     public void setData(List<WelcomeImageDetails> welcomeImageDetails) {
         viewPagerAdapter.setImageList(welcomeImageDetails);
         viewPagerAdapter.notifyDataSetChanged();
-        pageSwitcher(3);
-    }
+     /*   pageSwitcher(3);
+    */}
 
     Timer timer;
     int page = 1;

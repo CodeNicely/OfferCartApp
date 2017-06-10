@@ -177,7 +177,7 @@ public class HomePage extends AppCompatActivity
             finish();
 
         } else if (id == R.id.nav_changeCity) {
-            addFragment(new CityFragment(), "Select City");
+            addFragment(new StateFragment(), "Select State");
             getSupportActionBar().hide();
 
         } else if (id == R.id.nav_my_orders) {
