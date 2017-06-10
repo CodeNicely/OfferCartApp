@@ -337,7 +337,7 @@ public class EditShopProfileFragment extends Fragment implements EditShopProfile
 			}
 		});
 
-		try {
+		/*try {
 			gps_enabled = lm.isProviderEnabled(LocationManager.GPS_PROVIDER);
 		} catch (Exception ex) {
 		}
@@ -372,7 +372,7 @@ public class EditShopProfileFragment extends Fragment implements EditShopProfile
 		} else {
 //			Toast.makeText(getContext(),"False",Toast.LENGTH_SHORT).show();
 
-		/*	if (receiver == null) {
+		*//*	if (receiver == null) {
 				IntentFilter filter = new IntentFilter("Hello World");
 				receiver = new BroadcastReceiver() {
 					@Override
@@ -396,8 +396,8 @@ public class EditShopProfileFragment extends Fragment implements EditShopProfile
 				};
 				registerReceiver(receiver, filter);
 			}
-		*/
-		}
+		*//*
+		}*/
 
 		initialise();
 

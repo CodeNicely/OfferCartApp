@@ -262,7 +262,7 @@ public class ShopRegisterFragment extends Fragment implements ShopRegisterView,L
 
 		LocationManager lm = (LocationManager) getActivity().getSystemService(Context.LOCATION_SERVICE);
 
-		try {
+		/*try {
 			gps_enabled = lm.isProviderEnabled(LocationManager.GPS_PROVIDER);
 		} catch (Exception ex) {
 		}
@@ -298,7 +298,7 @@ public class ShopRegisterFragment extends Fragment implements ShopRegisterView,L
 		} else {
 //			Toast.makeText(getContext(),"False",Toast.LENGTH_SHORT).show();
 
-		/*	if (receiver == null) {
+		*//*	if (receiver == null) {
 				IntentFilter filter = new IntentFilter("Hello World");
 				receiver = new BroadcastReceiver() {
 					@Override
@@ -322,8 +322,8 @@ public class ShopRegisterFragment extends Fragment implements ShopRegisterView,L
 				};
 				registerReceiver(receiver, filter);
 			}
-		*/
-}
+		*//*
+}*/
 
 			city_spinner.setAdapter(city_array_adapter);
 			state_spinner.setAdapter(state_array_adapter);
