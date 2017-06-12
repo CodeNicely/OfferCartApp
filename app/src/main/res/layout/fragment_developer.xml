@@ -58,6 +58,7 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
+
                     android:layout_height="wrap_content">
 
                     <ProgressBar
@@ -65,7 +66,6 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerInParent="true"
-
                         />
 
                     <ImageView
@@ -76,6 +76,30 @@
                         android:minHeight="120dp"
                         android:padding="8dp" />
                 </RelativeLayout>
+<!--
+                <RelativeLayout
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp">
+
+                    <ProgressBar
+                        android:id="@+id/imageProgressBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+
+                        />
+
+                    <ImageView
+
+                        android:id="@+id/imageView"
+                        android:layout_width="match_parent"
+                        android:layout_height="160dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/brand_store_1"
+                        android:padding="8dp" />
+                </RelativeLayout>
+-->
 
                 <TextView
                     android:id="@+id/about"

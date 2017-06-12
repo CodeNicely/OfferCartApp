@@ -281,7 +281,7 @@ public class ShopFragment extends Fragment implements ShopView,LocationListener
 			}
 		}, Manifest.permission.ACCESS_FINE_LOCATION);
 
-		Toast.makeText(getContext(),"REquest True",Toast.LENGTH_SHORT).show();
+//		Toast.makeText(getContext(),"REquest True",Toast.LENGTH_SHORT).show();
 
 		return LOCATION_REQUEST;
 
@@ -296,7 +296,7 @@ public class ShopFragment extends Fragment implements ShopView,LocationListener
 
 		}
 		else{
-			Toast.makeText(getContext(),"CHeck False",Toast.LENGTH_SHORT).show();
+		//	Toast.makeText(getContext(),"CHeck False",Toast.LENGTH_SHORT).show();
 			return false;
 		}
 

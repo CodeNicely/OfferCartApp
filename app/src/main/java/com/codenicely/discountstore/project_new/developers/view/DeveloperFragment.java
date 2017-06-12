@@ -1,7 +1,11 @@
 package com.codenicely.discountstore.project_new.developers.view;
 
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
@@ -15,6 +19,9 @@ import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.animation.GlideAnimation;
+import com.bumptech.glide.request.target.SimpleTarget;
 import com.codenicely.discountstore.project_new.R;
 import com.codenicely.discountstore.project_new.developers.model.RetrofitDeveloperProvider;
 import com.codenicely.discountstore.project_new.developers.model.data.CompanyData;
@@ -118,6 +125,20 @@ public class DeveloperFragment extends Fragment implements DeveloperView {
                 getActivity().onBackPressed();
             }
         });
+/*
+        Glide.with(this).load(R.drawable.codenicely_full_logo).asBitmap().into(
+                new SimpleTarget<Bitmap>() {
+                    @Override
+                    public void onResourceReady(Bitmap resource,
+                                                GlideAnimation<? super Bitmap> glideAnimation) {
+                        Drawable drawable = new BitmapDrawable(resource);
+                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+                            companyImage.setBackground(drawable);
+                        }
+                    }
+                });
+*/
+
 
         developersPresenter = new DevelopersPresenterImpl(this, new RetrofitDeveloperProvider());
         developersPresenter.requestDevelopersData();

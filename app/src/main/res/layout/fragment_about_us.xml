@@ -38,7 +38,7 @@
             <RelativeLayout
                 android:gravity="center"
                 android:layout_width="match_parent"
-                android:layout_height="100dp">
+                android:layout_height="160dp">
 
                 <ProgressBar
                     android:id="@+id/imageProgressBar"
@@ -52,8 +52,9 @@
 
                     android:id="@+id/imageView"
                     android:layout_width="match_parent"
-                    android:layout_height="100dp"
+                    android:layout_height="160dp"
                     android:layout_gravity="center"
+                    android:src="@drawable/brand_store_1"
                     android:padding="8dp" />
             </RelativeLayout>
 

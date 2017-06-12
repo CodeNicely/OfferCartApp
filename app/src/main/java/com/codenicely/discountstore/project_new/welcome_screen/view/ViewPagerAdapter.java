@@ -49,7 +49,7 @@ public class ViewPagerAdapter extends PagerAdapter {
         ProgressBar imageProgressBar = (ProgressBar) view.findViewById(R.id.imageProgressBar);
 
         textView.setText(welcomeImageDetails.getMessage());
-        imageLoader.loadImage(welcomeImageDetails.getImage_url(),imageView,imageProgressBar);
+//        imageLoader.loadImage(welcomeImageDetails.getImage_url(),imageView,imageProgressBar);
 
 
         return view;

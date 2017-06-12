@@ -28,8 +28,11 @@ import com.codenicely.discountstore.project_new.shop_admin.shop_add_offer.view.O
 import com.codenicely.discountstore.project_new.shop_admin.shop_add_subscription.view.AddSubscriptionFragment;
 import com.codenicely.discountstore.project_new.shop_admin.shop_edit_offer.view.OfferEditFragment;
 import com.codenicely.discountstore.project_new.shop_admin.shop_offerlist.view.ShopOfferListFragment;
+import com.codenicely.discountstore.project_new.shop_admin.shop_privacy_policy.ShopPrivacyPolicyFragment;
 import com.codenicely.discountstore.project_new.shop_admin.shop_profile_edit.view.EditShopProfileFragment;
 import com.codenicely.discountstore.project_new.shop_admin.shop_profile_show.view.ShowShopProfileFragment;
+import com.codenicely.discountstore.project_new.shop_admin.shop_refund_and_cancellation.ShopRefundCancellationFragment;
+import com.codenicely.discountstore.project_new.shop_admin.shop_terms_and_conditions.ShopTNCFragment;
 import com.codenicely.discountstore.project_new.welcome_screen.view.WelcomeScreenActivity;
 
 public class ShopHomePage extends AppCompatActivity
@@ -46,7 +49,11 @@ public class ShopHomePage extends AppCompatActivity
         ShopChangePasswordFragment.OnFragmentInteractionListener,
         com.codenicely.discountstore.project_new.shop_admin.shopforgotpassword.shop_change_password.view.ShopChangePasswordFragment.OnFragmentInteractionListener,
         AddSubscriptionFragment.OnFragmentInteractionListener,
-        ShopOfferListFragment.OnFragmentInteractionListener {
+        ShopOfferListFragment.OnFragmentInteractionListener,
+        ShopPrivacyPolicyFragment.OnFragmentInteractionListener,
+        ShopRefundCancellationFragment.OnFragmentInteractionListener,
+        ShopTNCFragment.OnFragmentInteractionListener
+        {
 
     private SharedPrefs sharedPrefs;
     private NavigationView navigationView;
@@ -140,6 +147,15 @@ public class ShopHomePage extends AppCompatActivity
 
         } else if (id == R.id.change_password) {
             addFragment(new ShopChangePasswordFragment(), "Change Password");
+            getSupportActionBar().hide();
+        } else if (id == R.id.terms_conditions) {
+            addFragment(new ShopTNCFragment(), "Terms and Conditions");
+            getSupportActionBar().hide();
+        } else if (id == R.id.refund_cancellation) {
+            addFragment(new ShopRefundCancellationFragment(), "Refund and Cancellation ");
+            getSupportActionBar().hide();
+        } else if (id == R.id.privacy_policy) {
+            addFragment(new ShopPrivacyPolicyFragment(), "Privacy and Policy");
             getSupportActionBar().hide();
         } else if (id == R.id.nav_profile) {
             addFragment(new ShowShopProfileFragment(), "Profile");

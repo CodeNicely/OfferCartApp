@@ -337,7 +337,7 @@ public class ShopRegisterFragment extends Fragment implements ShopRegisterView,L
 						int error=0;
 						int state_id = 0;
 						state = state_spinner.getSelectedItem().toString();
-						Toast.makeText(getContext(),state,Toast.LENGTH_SHORT).show();
+						//Toast.makeText(getContext(),state,Toast.LENGTH_SHORT).show();
 						try {
 							 state_id=hashMap.get(state);
 						}catch (Exception e){
@@ -475,7 +475,7 @@ public class ShopRegisterFragment extends Fragment implements ShopRegisterView,L
 
 		}
 		else{
-			Toast.makeText(getContext(),"CHeck False",Toast.LENGTH_SHORT).show();
+		//	Toast.makeText(getContext(),"CHeck False",Toast.LENGTH_SHORT).show();
 			return false;
 		}
 	}

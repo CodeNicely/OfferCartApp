@@ -10,7 +10,7 @@ Edited by Ujjwal :)  :D
 
 public class Urls {
 
-	public static final String BASE_URL = "http://139.59.42.224:4888";
+	public static final String BASE_URL = "http://46.101.103.44:4888";
 	//public static final String BASE_URL = "http://172.20.10.13:8888";
 //	//public static final String BASE_URL = "http://app.vegworld.online:2017";
     public static final String REQUEST_FCM_UPDATE = "update_fcm/";
@@ -36,7 +36,8 @@ public class Urls {
 
 	//state select
 	public static final String REQUEST_STATE = "request_states/";
-		//never_used
+
+	//never_used
 	public static final String SEND_STATE = "get_state/";
 
     //offer

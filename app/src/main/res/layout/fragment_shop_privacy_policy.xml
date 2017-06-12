@@ -1,0 +1,128 @@
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_shop_primary"
+            app:titleTextColor="@color/white"
+            app:navigationIcon="@drawable/ic_arrow_back_white_24dp"
+            app:title="Privacy Policy"
+             />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_marginRight="16dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="6dp"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:text="@string/user_privacy_statement"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:text="@string/privacy_policy1"
+                android:lineSpacingExtra="4dp"
+                android:layout_margin="8dp"
+                android:textColor="@color/black"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_margin="8dp"
+                android:textSize="18dp"
+                android:text="USER INFORMATION "/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:lineSpacingExtra="4dp"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                android:text="@string/privacy_policy2"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_margin="8dp"
+                android:textSize="18dp"
+                android:text="INFORMATION SHARING"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:lineSpacingExtra="4dp"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                android:text="@string/privacy_policy3"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_margin="8dp"
+                android:textSize="18dp"
+                android:text="INFORMATION SECURITY"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:lineSpacingExtra="4dp"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                android:text="@string/privacy_policy4"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_margin="8dp"
+                android:textSize="18dp"
+                android:text="CONTACT US"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:lineSpacingExtra="4dp"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginBottom="16dp"
+                android:text="@string/privacy_policy5"
+                />
+        </LinearLayout>
+    </ScrollView>
+    
+</LinearLayout>

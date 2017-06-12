@@ -18,6 +18,7 @@ import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.codenicely.discountstore.project_new.R;
 import com.codenicely.discountstore.project_new.contact_us.model.RetrofitContactUsProvider;
 import com.codenicely.discountstore.project_new.contact_us.model.data.ContactUsData;
@@ -149,6 +150,8 @@ public class ContactUsFragment extends Fragment implements ContactUsView {
         contactUsPresenter.requestContactUs();
 
         imageLoader = new GlideImageLoader(getContext());
+
+
         return view;
     }
 
@@ -219,7 +222,7 @@ public class ContactUsFragment extends Fragment implements ContactUsView {
         twitter.setText(twitterUrl);
         instagram.setText(instagramUrl);
 */
-        imageLoader.loadImage(contactUsData.getImage(), imageView, imageProgressBar);
+       // imageLoader.loadImage(contactUsData.getImage(), imageView, imageProgressBar);
 
 /*
 
