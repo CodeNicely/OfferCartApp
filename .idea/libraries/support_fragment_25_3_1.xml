@@ -1,17 +1,12 @@
 <component name="libraryTable">
   <library name="support-fragment-25.3.1">
-    <ANNOTATIONS>
-      <root url="jar://$USER_HOME$/.android/build-cache/b17013633f6794f77daa40ce1d00f1005ab1bb35/output/annotations.zip!/" />
-      <root url="jar://$USER_HOME$/.android/build-cache/b17013633f6794f77daa40ce1d00f1005ab1bb35/output/annotations.zip!/" />
-    </ANNOTATIONS>
     <CLASSES>
-      <root url="jar://$USER_HOME$/.android/build-cache/b17013633f6794f77daa40ce1d00f1005ab1bb35/output/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.android/build-cache/b17013633f6794f77daa40ce1d00f1005ab1bb35/output/res" />
+      <root url="file://$USER_HOME$/.android/build-cache/09c31ac389160fd180f26609b2589c66e7170782/output/res" />
+      <root url="jar://$USER_HOME$/.android/build-cache/09c31ac389160fd180f26609b2589c66e7170782/output/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="jar://$USER_HOME$/Android/Sdk/extras/android/m2repository/com/android/support/support-fragment/25.3.1/support-fragment-25.3.1-sources.jar!/" />
-      <root url="jar://$USER_HOME$/Android/Sdk/extras/android/m2repository/com/android/support/support-fragment/25.3.1/support-fragment-25.3.1-sources.jar!/" />
+      <root url="jar://$USER_HOME$/Library/Android/sdk/extras/android/m2repository/com/android/support/support-fragment/25.3.1/support-fragment-25.3.1-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

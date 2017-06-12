@@ -16,5 +16,7 @@
     <dimen name="medium_text_size">24dp</dimen>
     <dimen name="large_text_size">36dp</dimen>
     <dimen name="small_text_size">16dp</dimen>
+    <dimen name="padding_medium">12dp</dimen>
+    <dimen name="padding_small">8dp</dimen>
 
 </resources>
