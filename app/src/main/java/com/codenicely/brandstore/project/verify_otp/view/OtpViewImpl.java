@@ -18,6 +18,7 @@ import com.codenicely.brandstore.project.login.view.LoginScreenActivity;
 import com.codenicely.brandstore.project.verify_otp.models.RetrofitOtpProvider;
 import com.codenicely.brandstore.project.verify_otp.presenter.OtpPresenter;
 import com.codenicely.brandstore.project.verify_otp.presenter.OtpPresenterImpl;
+import com.codenicely.brandstore.project.welcome_screen.view.WelcomeScreenActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -33,6 +34,7 @@ public class OtpViewImpl extends AppCompatActivity implements OtpView {
     String mobile;
     String otp1;
     LoginScreenActivity loginScreenActivity;
+	WelcomeScreenActivity welcomeScreenActivity;
 
     @BindView(R.id.toolbar)
     Toolbar toolbar;
@@ -47,6 +49,7 @@ public class OtpViewImpl extends AppCompatActivity implements OtpView {
         setContentView(R.layout.activity_otp);
         ButterKnife.bind(this);
         loginScreenActivity=new LoginScreenActivity();
+		welcomeScreenActivity= new WelcomeScreenActivity();
 		toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -76,6 +79,8 @@ public class OtpViewImpl extends AppCompatActivity implements OtpView {
 
     @Override
     public void showLoading(boolean show) {
+        submitButton.setEnabled(true);
+        submitButton.setClickable(true);
         if (show) {
             progressbar.setVisibility(View.VISIBLE);
             submitButton.setClickable(false);
@@ -101,6 +106,7 @@ public class OtpViewImpl extends AppCompatActivity implements OtpView {
         startActivity(a);
         finish();
 		loginScreenActivity.loginScreenActivity.finish();
+        welcomeScreenActivity.welcomeScreenActivity.finish();
     }
 
 }

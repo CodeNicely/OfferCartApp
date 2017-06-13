@@ -20,6 +20,7 @@ import com.codenicely.brandstore.project.shop_admin.shop_home.ShopHomePage;
 import com.codenicely.brandstore.project.shop_admin.shop_otp.model.RetrofitShopOtpProvider;
 import com.codenicely.brandstore.project.shop_admin.shop_otp.presenter.ShopOtpPresenter;
 import com.codenicely.brandstore.project.shop_admin.shop_otp.presenter.ShopOtpPresenterImpl;
+import com.codenicely.brandstore.project.welcome_screen.view.WelcomeScreenActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -42,7 +43,7 @@ public class ShopOtpFragment extends Fragment implements ShopOtpView {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-
+	WelcomeScreenActivity welcomeScreenActivity;
     private OnFragmentInteractionListener mListener;
     ShopOtpPresenter shopOtpPresenter;
 
@@ -105,13 +106,9 @@ public class ShopOtpFragment extends Fragment implements ShopOtpView {
         sharedPrefs = new SharedPrefs(getContext());
         mobile = getArguments().getString("mobile");
         Log.d("MOBILE------",mobile);
-        shopOtpPresenter = new ShopOtpPresenterImpl(this, new RetrofitShopOtpProvider());
-        /*backButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                getActivity().onBackPressed();
-            }
-        });*/
+        welcomeScreenActivity=new WelcomeScreenActivity();
+		shopOtpPresenter = new ShopOtpPresenterImpl(this, new RetrofitShopOtpProvider());
+
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -177,7 +174,6 @@ public class ShopOtpFragment extends Fragment implements ShopOtpView {
 
     @Override
     public void onOtpVerified(String access_token) {
-
            Log.d("res", access_token);
 
             sharedPrefs.setAccessTokenShop(access_token);
@@ -192,8 +188,9 @@ public class ShopOtpFragment extends Fragment implements ShopOtpView {
             startActivity(intent);
 		getActivity().finish();
 
-        //something to jump to next fragment
 
+        //something to jump to next fragment
+		welcomeScreenActivity.welcomeScreenActivity.finish();
     }
 
 

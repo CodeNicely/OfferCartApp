@@ -104,11 +104,9 @@ public class ShopHomePage extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
-        } else if (getFragmentManager().getBackStackEntryCount() == 0) {
+        } else if (getSupportFragmentManager().getBackStackEntryCount() > 0) {
 
-
-            navigationView.getMenu().getItem(0).setChecked(true);
-            super.onBackPressed();
+         super.onBackPressed();
 
         } else {
 
@@ -129,6 +127,13 @@ public class ShopHomePage extends AppCompatActivity
                 public void onClick(DialogInterface dialog, int which) {
                     ad.cancel();
 
+                }
+            });
+            ad.setOnShowListener( new DialogInterface.OnShowListener() {
+                @Override
+                public void onShow(DialogInterface arg0) {
+                    ad.getButton(AlertDialog.BUTTON_POSITIVE).setTextColor(Color.BLACK);
+                    ad.getButton(AlertDialog.BUTTON_NEGATIVE).setTextColor(Color.BLACK);
                 }
             });
             ad.show();

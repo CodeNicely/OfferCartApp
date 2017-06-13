@@ -41,13 +41,15 @@ public class WelcomeScreenActivity extends Activity implements WelcomeScreenView
 
     @BindView(R.id.button_login_customer)
     Button button_login_customer;
+    public static
+    WelcomeScreenActivity welcomeScreenActivity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
         ButterKnife.bind(this);
-
+        welcomeScreenActivity=this;
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
         initialise();
     }
@@ -67,7 +69,6 @@ public class WelcomeScreenActivity extends Activity implements WelcomeScreenView
             public void onClick(View view) {
                 Intent i = new Intent(WelcomeScreenActivity.this, LoginScreenActivity.class);
                 startActivity(i);
-                finish();
 
             }
         });
@@ -77,7 +78,6 @@ public class WelcomeScreenActivity extends Activity implements WelcomeScreenView
             public void onClick(View view) {
                 Intent intent = new Intent(WelcomeScreenActivity.this, ShopActivity.class);
                 startActivity(intent);
-                finish();
             }
         });
 

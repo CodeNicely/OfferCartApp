@@ -68,7 +68,7 @@ public class HomePage extends AppCompatActivity
         }else if (sharedPrefs.getCity().equals("NA")) {
             setFragment(new CityFragment(), "City");
         }else {
-            setFragment(new CategoryFragment(), "Categories");
+            setFragment(new CategoryFragment(), "Home");
         }
 
         int backStackCount = getSupportFragmentManager().getBackStackEntryCount();
@@ -118,13 +118,12 @@ public class HomePage extends AppCompatActivity
 
     @Override
     public void onBackPressed() {
+       // Toast.makeText(getApplicationContext(),getFragmentManager().getBackStackEntryCount()+" ",Toast.LENGTH_SHORT).show();
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
-        } else if (getFragmentManager().getBackStackEntryCount() == 0) {
-
-
-            navigationView.getMenu().getItem(0).setChecked(true);
+        } else if (getSupportFragmentManager().getBackStackEntryCount() > 0) {
+//            navigationView.getMenu().getItem(0).setChecked(true);
             super.onBackPressed();
 
         } else {
@@ -232,11 +231,10 @@ public class HomePage extends AppCompatActivity
             FragmentManager fragmentManager = getSupportFragmentManager();
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
             fragmentTransaction.replace(R.id.home_layout, fragment);
-            fragmentTransaction.addToBackStack(null);
+            fragmentTransaction.addToBackStack(title);
             fragmentTransaction.commit();
             //     getSupportActionBar().setTitle(title);
         }
-
     }
 
     public void onCategorySelected(int category_id, String category_name) {
