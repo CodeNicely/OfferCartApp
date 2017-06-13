@@ -1,12 +1,15 @@
 package com.codenicely.brandstore.project.shop_admin.shop_offerlist.view;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -188,6 +191,7 @@ public class ShopOfferListFragment extends Fragment implements ShopOfferListView
     public void onDeleteSuccessful() {
         shopOfferListPresenter.requestShopOffer(sharedPrefs.getKeyAccessTokenShop());
     }
+
 
     /**
      * This interface must be implemented by activities that contain this

@@ -3,6 +3,7 @@ package com.codenicely.brandstore.project.shop_admin.shop_home;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
@@ -15,7 +16,9 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.MenuItem;
+import android.widget.Button;
 
 import com.codenicely.brandstore.project.R;
 import com.codenicely.brandstore.project.about_us.view.AboutUsFragment;
@@ -227,6 +230,33 @@ public class ShopHomePage extends AppCompatActivity
         builder.show();
     }
 
+    public void onOfferAdded(){
+        final AlertDialog ad = new AlertDialog.Builder(this)
+                                       .create();
+        Log.d("QWERTYUIOP-----------","sdansdnmsdnsdk");
+        ad.setIcon(R.drawable.brand_store_logo);
+        ad.setTitle("Offer Successfully Published" );
+        ad.setMessage("To show your offers to the world register your shop" + "\n" );
+        ad.setButton(DialogInterface.BUTTON_POSITIVE, "Register Now", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+				AddSubscriptionFragment addSubscriptionFragment= new AddSubscriptionFragment();
+				addFragment(addSubscriptionFragment,"Add Subscription");
+				ad.cancel();
+            }
+        });
+		ad.setOnShowListener( new DialogInterface.OnShowListener() {
+		  @Override
+		  public void onShow(DialogInterface arg0) {
+			  ad.getButton(AlertDialog.BUTTON_POSITIVE).setTextColor(Color.BLACK);
+		  }
+	  });
+        ad.show();
+
+
+
+
+    }
     @Override
     public void onFragmentInteraction(Uri uri) {
 

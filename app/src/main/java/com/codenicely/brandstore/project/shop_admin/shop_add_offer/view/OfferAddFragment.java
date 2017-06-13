@@ -35,9 +35,12 @@ import com.codenicely.brandstore.project.R;
 import com.codenicely.brandstore.project.helper.SharedPrefs;
 import com.codenicely.brandstore.project.helper.utils.BitmapUtils;
 import com.codenicely.brandstore.project.helper.utils.UriUtils;
+import com.codenicely.brandstore.project.offer.model.data.OfferScreenList;
 import com.codenicely.brandstore.project.shop_admin.shop_add_offer.model.RetrofitOfferAddHelper;
 import com.codenicely.brandstore.project.shop_admin.shop_add_offer.presenter.OfferAddPresenter;
 import com.codenicely.brandstore.project.shop_admin.shop_add_offer.presenter.OfferAddPresenterImpl;
+import com.codenicely.brandstore.project.shop_admin.shop_home.ShopHomePage;
+import com.codenicely.brandstore.project.shop_admin.shop_offerlist.view.ShopOfferListFragment;
 import com.karumi.dexter.Dexter;
 import com.karumi.dexter.MultiplePermissionsReport;
 import com.karumi.dexter.PermissionToken;
@@ -212,7 +215,7 @@ public class OfferAddFragment extends Fragment implements OfferAddView ,DatePick
 
             }
         });
-
+		Dexter.initialize(getContext());
         galleryButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -438,7 +441,11 @@ public class OfferAddFragment extends Fragment implements OfferAddView ,DatePick
 
     @Override
     public void onOfferAdded() {
-		getActivity().onBackPressed();
+		showMessage("Offer Published");
+		ShopOfferListFragment shopOfferListFragment = new ShopOfferListFragment();
+		((ShopHomePage)getActivity()).setFragment(shopOfferListFragment,"Home");
+		((ShopHomePage)getActivity()).onOfferAdded();
+		//getActivity().onBackPressed();
         //Go to home page now.
     }
 
