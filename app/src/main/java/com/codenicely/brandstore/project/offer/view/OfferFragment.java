@@ -259,7 +259,7 @@ public class OfferFragment extends Fragment implements OfferScreenView, GetOffer
 
             final AlertDialog ad = new AlertDialog.Builder(getActivity())
                     .create();
-            ad.setIcon(R.mipmap.brand_store_logo);
+            ad.setIcon(R.drawable.brand_store_logo);
 
             ad.setCancelable(false);
             ad.setTitle("Offer Get Successful" );
@@ -279,7 +279,7 @@ public class OfferFragment extends Fragment implements OfferScreenView, GetOffer
 
             final AlertDialog ad = new AlertDialog.Builder(getActivity())
                                            .create();
-            ad.setIcon(R.mipmap.brand_store_logo);
+            ad.setIcon(R.drawable.brand_store_logo);
 
             ad.setCancelable(false);
             ad.setTitle("Offer Get Successful" );

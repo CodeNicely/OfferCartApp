@@ -31,7 +31,6 @@ import com.codenicely.brandstore.project.my_offers.view.MyOrdersFragment;
 import com.codenicely.brandstore.project.offer.view.OfferFragment;
 import com.codenicely.brandstore.project.shops.view.ShopFragment;
 import com.codenicely.brandstore.project.state.view.StateFragment;
-import com.codenicely.brandstore.project.wallet.view.WalletFragment;
 import com.codenicely.brandstore.project.welcome_screen.view.WelcomeScreenActivity;
 
 public class HomePage extends AppCompatActivity
@@ -81,12 +80,12 @@ public class HomePage extends AppCompatActivity
             getFragmentManager().popBackStack(backStackId, FragmentManager.POP_BACK_STACK_INCLUSIVE);
 
         }
-        if (getIntent().getBooleanExtra(Keys.KEY_OPEN_WALLET, false)) {
+        /*if (getIntent().getBooleanExtra(Keys.KEY_OPEN_WALLET, false)) {
 
             addFragment(new WalletFragment(), "WalletFragment");
             getSupportActionBar().hide();
 
-        }
+        }*/
         //when app is in background or closed..!
         Intent startingIntent = getIntent();
         if (startingIntent.getExtras() != null) {

@@ -230,10 +230,10 @@
                     android:id="@+id/imageView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:minHeight="250dp"
-                    android:maxHeight="400dp"
+                    android:minHeight="120dp"
+                    android:maxHeight="160dp"
                     android:contentDescription="@string/shop_image"
-                    android:src="@mipmap/brand_store_1" />
+                    android:src="@drawable/brand_store_logo" />
 
                 <LinearLayout
                     android:layout_width="match_parent"

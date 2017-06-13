@@ -119,7 +119,7 @@
                                 android:layout_height="match_parent"
                                 android:minHeight="250dp"
                                 android:scaleType="fitXY"
-                                android:src="@mipmap/brand_store_logo"
+                                android:src="@mipmap/brand_store_1"
 
                                 />
 

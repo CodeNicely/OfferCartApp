@@ -23,7 +23,6 @@ import com.codenicely.brandstore.project.shop_admin.payment_shop.model.data.Shop
 import com.codenicely.brandstore.project.shop_admin.payment_shop.presenter.ShopPaymentPresenter;
 import com.codenicely.brandstore.project.shop_admin.payment_shop.presenter.ShopPaymentPresenterImpl;
 import com.codenicely.brandstore.project.shop_admin.payment_shop.view.PaymentShopView;
-import com.codenicely.brandstore.project.shop_admin.payment_shop.view.ShopPaymentFragment;
 import com.codenicely.brandstore.project.shop_admin.shop_add_subscription.model.RetrofitAddSubscriptionProvider;
 import com.codenicely.brandstore.project.shop_admin.shop_add_subscription.model.data.AddSubscriptionDetails;
 import com.codenicely.brandstore.project.shop_admin.shop_add_subscription.presenter.AddSubscriptionPresenter;
@@ -155,19 +154,7 @@ public class AddSubscriptionFragment extends Fragment implements AddSubscription
 		shopOfferListFragment = new ShopOfferListFragment();
 
 
-        /*add_subscription.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                ShopPaymentFragment shopPaymentFragment=ShopPaymentFragment.newInstance(offerId);
-                ((ShopHomePage) getContext()).setFragment(shopPaymentFragment, "payment fragment");
-                Log.d("add button","fv");
-                //call pay u money gateway
-        //selected offer"s ID is stored in variable offer_id
 
-
-            }
-        });
-*/
 
 
 
@@ -357,25 +344,6 @@ public class AddSubscriptionFragment extends Fragment implements AddSubscription
     public void onDetach() {
         super.onDetach();
         mListener = null;
-    }
-
-	public void getRegisterrationDetails(String accessToken, int subscription_id) {
-
-		Fragment fragment = new ShopPaymentFragment();
-		FragmentManager fm = ((ShopHomePage) getContext()).getSupportFragmentManager();
-		FragmentTransaction ft = fm.beginTransaction();
-		Bundle args = new Bundle();
-
-		args.putInt("subscription_id", subscription_id);
-		Log.d("ID--------------",""+subscription_id);
-
-		fragment.setArguments(args);
-		ft.replace(R.id.home_layout, fragment);
-		ft.addToBackStack(null);
-		ft.commit();
-
-		//intent to payment activity
-
     }
 
 
