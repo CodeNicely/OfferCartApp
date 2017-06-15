@@ -18,7 +18,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
-import android.widget.Button;
 
 import com.codenicely.brandstore.project.R;
 import com.codenicely.brandstore.project.about_us.view.AboutUsFragment;
