@@ -52,6 +52,7 @@ public class LoginScreenActivity extends Activity implements LoginScreenView {
 //    @BindView(R.id.toolbar)
 //    Toolbar toolbar;
 	public static LoginScreenActivity loginScreenActivity;
+
     private ProgressBar progressbar;
     private LoginScreenPresenter loginScreenPresenter;
 
@@ -152,7 +153,7 @@ public class LoginScreenActivity extends Activity implements LoginScreenView {
     @Override
     public void onLoginVerified() {
         login_button.setEnabled(true);
-        login_button.setEnabled(true);
+        login_button.setClickable(true);
 
         Intent in = new Intent(LoginScreenActivity.this, OtpViewImpl.class);
         in.putExtra("mobile", mobile1);
