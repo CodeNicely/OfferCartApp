@@ -1,7 +1,7 @@
 package com.codenicely.brandstore.project.about_us.view;
 
 
-import com.codenicely.brandstore.project.about_us.model.data.AboutUsData;
+import com.codenicely.brandstore.project.about_us.data.AboutUsData;
 
 /**
  * Created by meghal on 13/10/16.

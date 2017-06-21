@@ -50,6 +50,7 @@ public class ShopSubscriptionAdapter extends RecyclerView.Adapter<ShopSubscripti
 		holder.cost.setText(R.string.Rs);
 		holder.cost.append(" "+addSubscriptionDetails.getSubscription_price()+"");
 
+
 		holder.register.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {

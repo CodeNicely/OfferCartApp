@@ -3,7 +3,7 @@ package com.codenicely.brandstore.project.about_us.model;
 
 import com.codenicely.brandstore.project.about_us.AboutUsCallBack;
 import com.codenicely.brandstore.project.about_us.api.AboutUsApi;
-import com.codenicely.brandstore.project.about_us.model.data.AboutUsData;
+import com.codenicely.brandstore.project.about_us.data.AboutUsData;
 import com.codenicely.brandstore.project.helper.Urls;
 
 import okhttp3.OkHttpClient;

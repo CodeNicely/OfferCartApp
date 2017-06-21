@@ -16,7 +16,7 @@ import android.widget.TextView;
 
 import com.codenicely.brandstore.project.R;
 import com.codenicely.brandstore.project.about_us.model.RetrofitAboutUsProvider;
-import com.codenicely.brandstore.project.about_us.model.data.AboutUsData;
+import com.codenicely.brandstore.project.about_us.data.AboutUsData;
 import com.codenicely.brandstore.project.about_us.presenter.AboutUsPresenter;
 import com.codenicely.brandstore.project.about_us.presenter.AboutUsPresenterImpl;
 import com.codenicely.brandstore.project.helper.image_loader.GlideImageLoader;

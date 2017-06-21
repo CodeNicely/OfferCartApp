@@ -1,7 +1,7 @@
 package com.codenicely.brandstore.project.about_us.api;
 
 
-import com.codenicely.brandstore.project.about_us.model.data.AboutUsData;
+import com.codenicely.brandstore.project.about_us.data.AboutUsData;
 import com.codenicely.brandstore.project.helper.Urls;
 
 import retrofit2.Call;

@@ -4,7 +4,7 @@ package com.codenicely.brandstore.project.about_us.presenter;
 import com.codenicely.brandstore.project.R;
 import com.codenicely.brandstore.project.about_us.AboutUsCallBack;
 import com.codenicely.brandstore.project.about_us.model.AboutUsProvider;
-import com.codenicely.brandstore.project.about_us.model.data.AboutUsData;
+import com.codenicely.brandstore.project.about_us.data.AboutUsData;
 import com.codenicely.brandstore.project.about_us.view.AboutUsView;
 import com.codenicely.brandstore.project.helper.MyApplication;
 
