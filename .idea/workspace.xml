@@ -10,53 +10,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5ed4a8d8-5cc8-464c-a726-90d3af86fe86" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-06-13-17-54-19-317.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-06-13-17-56-41-741.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-06-13-17-59-00-978.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-06-13-18-11-22-226.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-06-13-18-13-22-015.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-06-13-18-18-09-675.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-06-13-18-22-55-613.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-06-13-18-27-52-577.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-06-13-18-33-28-253.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-06-13-18-37-28-488.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-06-13-18-37-44-830.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-06-13-18-40-55-969.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-06-14-01-13-42-691.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-06-14-01-14-15-520.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-06-14-02-34-35-101.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-06-14-02-37-47-257.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-06-14-02-38-19-912.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-06-14-02-41-46-666.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-06-14-02-43-46-427.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-06-14-02-48-28-863.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-06-14-02-48-57-993.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-06-14-02-49-11-763.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-06-14-02-51-46-285.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-06-14-02-52-39-171.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-06-14-02-53-41-407.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-06-14-02-56-27-760.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-06-14-02-59-09-286.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-06-14-03-01-22-105.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-06-14-03-02-57-049.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-06-14-03-04-32-634.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-06-14-15-59-47-319.rawproto" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/brandstore/project/about_us/model/data/AboutUsData.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/brandstore/project/about_us/data/AboutUsData.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.lock" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/generated/mockable-android-25.jar" afterPath="$PROJECT_DIR$/build/generated/mockable-android-25.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/brandstore/project/about_us/AboutUsCallBack.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/brandstore/project/about_us/AboutUsCallBack.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/brandstore/project/about_us/api/AboutUsApi.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/brandstore/project/about_us/api/AboutUsApi.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/brandstore/project/about_us/model/RetrofitAboutUsProvider.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/brandstore/project/about_us/model/RetrofitAboutUsProvider.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/brandstore/project/about_us/presenter/AboutUsPresenterImpl.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/brandstore/project/about_us/presenter/AboutUsPresenterImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/brandstore/project/about_us/view/AboutUsFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/brandstore/project/about_us/view/AboutUsFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/brandstore/project/about_us/view/AboutUsView.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/brandstore/project/about_us/view/AboutUsView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/brandstore/project/shop_admin/shop_add_subscription/view/ShopSubscriptionAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/brandstore/project/shop_admin/shop_add_subscription/view/ShopSubscriptionAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/shop_subscription_item.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/shop_subscription_item.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/codenicely/brandstore/project/shop_admin/shop_profile_edit/view/EditShopProfileFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/codenicely/brandstore/project/shop_admin/shop_profile_edit/view/EditShopProfileFragment.java" />
     </list>
     <ignored path="OfferCartApp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -120,8 +80,8 @@
       <file leaf-file-name="EditShopProfileFragment.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/codenicely/brandstore/project/shop_admin/shop_profile_edit/view/EditShopProfileFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8309859">
-              <caret line="459" column="0" selection-start-line="459" selection-start-column="0" selection-end-line="459" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.58685446">
+              <caret line="766" column="50" selection-start-line="766" selection-start-column="50" selection-end-line="766" selection-end-column="50" />
               <folding />
             </state>
           </provider>
@@ -2330,7 +2290,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project_new/shop_admin/shop_profile_edit/view/EditShopProfileFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_shop_profile.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/codenicely/discountstore/project_new/shop_admin/shop_home/ShopHomePage.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_shop_privacy_policy.xml" />
@@ -2381,11 +2340,12 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/codenicely/brandstore/project/shop_admin/shop_register/view/ShopRegisterFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/codenicely/brandstore/project/shop_admin/shop_add_subscription/view/ShopSubscriptionAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/shop_subscription_item.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/codenicely/brandstore/project/shop_admin/shop_profile_edit/view/EditShopProfileFragment.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="-768" />
+    <option name="x" value="-1366" />
     <option name="width" value="1366" />
     <option name="height" value="768" />
   </component>
@@ -3183,7 +3143,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="-768" width="1366" height="768" extended-state="6" />
+    <frame x="-1366" y="0" width="1366" height="768" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.4969697" order="6" side_tool="false" content_ui="tabs" />
@@ -3639,8 +3599,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/codenicely/brandstore/project/shop_admin/shop_profile_edit/view/EditShopProfileFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8309859">
-          <caret line="459" column="0" selection-start-line="459" selection-start-column="0" selection-end-line="459" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.58685446">
+          <caret line="766" column="50" selection-start-line="766" selection-start-column="50" selection-end-line="766" selection-end-column="50" />
           <folding />
         </state>
       </provider>

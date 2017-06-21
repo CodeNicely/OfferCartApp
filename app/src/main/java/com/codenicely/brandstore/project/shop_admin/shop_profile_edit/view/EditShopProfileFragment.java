@@ -738,7 +738,10 @@ public class EditShopProfileFragment extends Fragment implements EditShopProfile
 		name_edittext.setText(name);
 		address_edittext.setText(address);
 		description_edittext.setText(description);
-		category_spinner.setSelection(index_of_category);
+		//category_spinner.setSelection(index_of_category);
+		category_spinner.setSelection(category_array_adapter.getPosition(category));
+		state_spinner.setSelection(state_array_adapter.getPosition(sharedPrefs.getState()));
+
 		//city_spinner.setSelection(index_of_city);
 		//imageUri= Uri.parse(image1);
 		imageLoader.loadImage(image1, imageView, progressBar);
@@ -760,6 +763,7 @@ public class EditShopProfileFragment extends Fragment implements EditShopProfile
 			CityDetails cityData = cityDatalist.get(i);
 			city_array_adapter.add(cityData.getCity_name());
 		}
+		city_spinner.setSelection(city_array_adapter.getPosition(sharedPrefs.getCity()));
 		city_array_adapter.notifyDataSetChanged();
 	}
 
