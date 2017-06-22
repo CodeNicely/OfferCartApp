@@ -20,8 +20,9 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     app:tabBackground="@drawable/tab_selector"
-    android:visibility="gone"
+    android:visibility="visible"
     app:tabGravity="center"
+    android:layout_alignParentBottom="true"
     android:layout_above="@+id/button_login_customer"
     app:tabIndicatorHeight="0dp"/>
 

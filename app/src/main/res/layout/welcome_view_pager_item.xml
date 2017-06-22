@@ -3,7 +3,7 @@
     android:id="@+id/relative"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="8dp">
+    >
 
     <RelativeLayout
         android:id="@+id/imageLayout"
@@ -42,4 +42,31 @@
         android:textSize="16dp" />
 
     />
+    <Button
+        android:id="@+id/button_login_customer"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_margin="0dp"
+        android:layout_height="40dp"
+        android:layout_above="@+id/button_login_shop"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:onClick="button"
+        android:text="@string/login_as_customer"
+        android:textSize="16dp"
+        />
+
+    <Button
+        android:id="@+id/button_login_shop"
+        android:background="@color/color_shop_primary_dark"
+        android:layout_margin="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:onClick="button"
+        android:text="@string/login_as_shop"
+        android:textSize="16dp"
+        />
 </RelativeLayout>

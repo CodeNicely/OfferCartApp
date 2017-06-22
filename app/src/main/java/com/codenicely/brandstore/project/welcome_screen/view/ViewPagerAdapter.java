@@ -5,6 +5,7 @@ import android.support.v4.view.PagerAdapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -17,6 +18,8 @@ import com.codenicely.brandstore.project.welcome_screen.models.data.WelcomeImage
 import java.util.ArrayList;
 import java.util.List;
 
+import butterknife.BindView;
+
 /**
  * Created by aman on 19/10/16.
  */
@@ -26,6 +29,7 @@ public class ViewPagerAdapter extends PagerAdapter {
     private List<WelcomeImageDetails> welcomeImageDetailsList = new ArrayList<>();
     private LayoutInflater layoutInflater;
     private ImageLoader imageLoader;
+    private int size;
 
     public ViewPagerAdapter(Context context) {
 
@@ -35,7 +39,8 @@ public class ViewPagerAdapter extends PagerAdapter {
 
     public void setImageList(List<WelcomeImageDetails> welcomeImageDetailsList) {
         this.welcomeImageDetailsList = welcomeImageDetailsList;
-    }
+    	size = welcomeImageDetailsList.size();
+	}
 
     @Override
     public Object instantiateItem(ViewGroup container, int position) {
@@ -47,17 +52,40 @@ public class ViewPagerAdapter extends PagerAdapter {
         TextView textView = (TextView) view.findViewById(R.id.tv1);
         ImageView imageView = (ImageView) view.findViewById(R.id.img);
         ProgressBar imageProgressBar = (ProgressBar) view.findViewById(R.id.imageProgressBar);
+		Button button_login_shop = (Button) view.findViewById(R.id.button_login_shop);
+		Button button_login_customer = (Button) view.findViewById(R.id.button_login_customer);
 
-        textView.setText(welcomeImageDetails.getMessage());
+		textView.setText(welcomeImageDetails.getMessage());
 //        imageLoader.loadImage(welcomeImageDetails.getImage_url(),imageView,imageProgressBar);
 
+
+		if (position==size-1){
+
+			button_login_customer.setVisibility(View.GONE);
+			button_login_shop.setVisibility(View.GONE);
+			button_login_customer.setOnClickListener(new View.OnClickListener() {
+				@Override
+				public void onClick(View v) {
+					((WelcomeScreenActivity)context).onCustomerButtonClick();
+				}
+			});
+			button_login_shop.setOnClickListener(new View.OnClickListener() {
+				@Override
+				public void onClick(View v) {
+					((WelcomeScreenActivity)context).onShopButtonClick();
+				}
+			});
+		}else {
+			button_login_customer.setVisibility(View.INVISIBLE);
+			button_login_shop.setVisibility(View.INVISIBLE);
+		}
 
         return view;
     }
 
     @Override
     public int getCount() {
-        return welcomeImageDetailsList.size();
+        return size;
     }
 
     @Override

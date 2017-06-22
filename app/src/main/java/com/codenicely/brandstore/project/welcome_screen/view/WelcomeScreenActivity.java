@@ -5,11 +5,14 @@ package com.codenicely.brandstore.project.welcome_screen.view;
  */
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.Toast;
@@ -22,6 +25,7 @@ import com.codenicely.brandstore.project.welcome_screen.models.data.WelcomeImage
 import com.codenicely.brandstore.project.welcome_screen.presenter.WelcomeScreenPresenter;
 import com.codenicely.brandstore.project.welcome_screen.presenter.WelcomeScreenPresenterImpl;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -36,6 +40,7 @@ public class WelcomeScreenActivity extends Activity implements WelcomeScreenView
     private ViewPagerAdapter viewPagerAdapter;
     private WelcomeScreenPresenter welcomeScreenPresenter;
     private TabLayout tabLayout;
+    List<WelcomeImageDetails> welcomeImageDetails = new ArrayList<>();
     @BindView(R.id.button_login_shop)
     Button button_login_shop;
 
@@ -55,6 +60,8 @@ public class WelcomeScreenActivity extends Activity implements WelcomeScreenView
     }
 
     public void initialise() {
+        final Context context = this;
+
         viewPagerAdapter = new ViewPagerAdapter(this);
         viewPager = (ViewPager) findViewById(R.id.viewpager);
         tabLayout= (TabLayout) findViewById(R.id.tabLayout);
@@ -63,10 +70,14 @@ public class WelcomeScreenActivity extends Activity implements WelcomeScreenView
         viewPagerAdapter = new ViewPagerAdapter(this);
         viewPager.setAdapter(viewPagerAdapter);
         tabLayout.setupWithViewPager(viewPager);
-
+        button_login_customer.setVisibility(View.GONE);
+//        button_login_customer.setAlpha(0);
+//        button_login_shop.setAlpha(0);
+        button_login_shop.setVisibility(View.GONE);
         button_login_customer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 Intent i = new Intent(WelcomeScreenActivity.this, LoginScreenActivity.class);
                 startActivity(i);
 
@@ -80,6 +91,44 @@ public class WelcomeScreenActivity extends Activity implements WelcomeScreenView
                 startActivity(intent);
             }
         });
+        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                if (position==welcomeImageDetails.size()-1){
+//                    Animation startAnimation = AnimationUtils.loadAnimation(context, R.anim.fade_in_animation);
+//                    button_login_customer.startAnimation(startAnimation);
+//                    button_login_shop.startAnimation(startAnimation);
+
+                    button_login_customer.setVisibility(View.VISIBLE);
+                    button_login_shop.setVisibility(View.VISIBLE);
+                }else {
+                    button_login_customer.setVisibility(View.GONE);
+                    button_login_shop.setVisibility(View.GONE);
+
+                }
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
+
+    }
+    public void onShopButtonClick() {
+        Intent intent = new Intent(WelcomeScreenActivity.this, ShopActivity.class);
+        startActivity(intent);
+
+    }
+
+    void onCustomerButtonClick(){
+        Intent i = new Intent(WelcomeScreenActivity.this, LoginScreenActivity.class);
+        startActivity(i);
 
     }
 
@@ -88,6 +137,7 @@ public class WelcomeScreenActivity extends Activity implements WelcomeScreenView
         Toast.makeText(this, error, Toast.LENGTH_LONG).show();
 
     }
+
 
     @Override
     public void showProgressBar(boolean show) {
@@ -101,7 +151,9 @@ public class WelcomeScreenActivity extends Activity implements WelcomeScreenView
     @Override
     public void setData(List<WelcomeImageDetails> welcomeImageDetails) {
         viewPagerAdapter.setImageList(welcomeImageDetails);
+        this.welcomeImageDetails = welcomeImageDetails;
         viewPagerAdapter.notifyDataSetChanged();
+
      /*   pageSwitcher(3);
     */}
 
@@ -114,6 +166,7 @@ public class WelcomeScreenActivity extends Activity implements WelcomeScreenView
         // in
         // milliseconds
     }
+
 
     // this is an inner class...
     class RemindTask extends TimerTask {

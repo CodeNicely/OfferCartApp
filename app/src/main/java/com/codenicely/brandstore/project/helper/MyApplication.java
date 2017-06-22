@@ -4,6 +4,8 @@ import android.app.Application;
 import android.content.Context;
 
 import com.google.firebase.iid.FirebaseInstanceId;
+import com.crashlytics.android.Crashlytics;
+import io.fabric.sdk.android.Fabric;
 
 /**
  * Created by meghal on 23/10/16.
@@ -16,6 +18,7 @@ public class MyApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        Fabric.with(this, new Crashlytics());
         context = this;
         //     FontsOverride.setDefaultFont(this, "DEFAULT", "fonts/comfortaa.ttf");
         //    FontsOverride.setDefaultFont(this, "MONOSPACE", "fonts/homemade.ttf");
