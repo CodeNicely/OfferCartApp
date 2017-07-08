@@ -84,10 +84,11 @@ public class OtpViewImpl extends AppCompatActivity implements OtpView {
         if (show) {
             progressbar.setVisibility(View.VISIBLE);
             submitButton.setClickable(false);
-
+            submitButton.setEnabled(false);
         } else {
             progressbar.setVisibility(View.INVISIBLE);
             submitButton.setEnabled(true);
+            submitButton.setClickable(true);
         }
     }
 

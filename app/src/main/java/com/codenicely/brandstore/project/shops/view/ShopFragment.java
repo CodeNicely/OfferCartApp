@@ -23,6 +23,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.codenicely.brandstore.project.R;
@@ -71,7 +72,10 @@ public class ShopFragment extends Fragment implements ShopView,LocationListener
     Toolbar toolbar;
     @BindView(R.id.shop_progressbar)
     ProgressBar progressBar;
-/*
+
+	@BindView(R.id.tv_no_shop)
+	TextView tv_no_shop;
+ /*
 	@BindView(R.id.latitude_longitude)
 	TextView latitudeLongitude;
 */
@@ -349,8 +353,15 @@ public class ShopFragment extends Fragment implements ShopView,LocationListener
 
     @Override
     public void OnShopsDataReceived(List<ShopData> shopDataList) {
-        shopAdapter.setData(shopDataList);
-        shopAdapter.notifyDataSetChanged();
+    	if (shopDataList.size()==0){
+			tv_no_shop.setVisibility(View.VISIBLE);
+		}else {
+			tv_no_shop.setVisibility(View.GONE);
+			shopAdapter.setData(shopDataList);
+			shopAdapter.notifyDataSetChanged();
+		}
+
+
     }
 
     @Override

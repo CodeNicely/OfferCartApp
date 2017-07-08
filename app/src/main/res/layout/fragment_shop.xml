@@ -24,6 +24,16 @@
     android:orientation="vertical"
     android:layout_below="@id/appBarLayout"
     android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/tv_no_shop"
+        android:layout_margin="50dp"
+        android:textSize="24dp"
+        android:visibility="gone"
+        android:gravity="center"
+        android:textColor="@color/colorPrimary"
+        android:text="There are no shops availaible in your city"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
     <android.support.v7.widget.RecyclerView
         android:layout_below="@+id/appBarLayout"
         android:id="@+id/shops_recycler"

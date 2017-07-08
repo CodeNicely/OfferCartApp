@@ -216,7 +216,7 @@ public class AddSubscriptionFragment extends Fragment implements AddSubscription
 			options.put("currency", "INR");
             options.put("amount", "100");
 			JSONObject preFill = new JSONObject();
-			preFill.put("email", shopPaymentData.getEmail());
+			preFill.put("email", "");
 			Log.d(TAG,shopPaymentData.getMobile()+" -- "+shopPaymentData.getEmail());
             preFill.put("contact", shopPaymentData.getMobile());
  		    options.put("prefill", preFill);
