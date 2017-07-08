@@ -64,7 +64,6 @@ public class HomePage extends AppCompatActivity
 
         if( sharedPrefs.getState().equals("NA")){
             setFragment(new StateFragment(), "State");
-
         }else if (sharedPrefs.getCity().equals("NA")) {
             setFragment(new CityFragment(), "City");
         }else {
@@ -124,7 +123,8 @@ public class HomePage extends AppCompatActivity
             drawer.closeDrawer(GravityCompat.START);
         } else if (getSupportFragmentManager().getBackStackEntryCount() > 0) {
 //            navigationView.getMenu().getItem(0).setChecked(true);
-            super.onBackPressed();
+			getFragmentManager().popBackStack();
+			super.onBackPressed();
 
         } else {
 
@@ -144,7 +144,6 @@ public class HomePage extends AppCompatActivity
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
                     ad.cancel();
-
                 }
             });
             ad.show();
@@ -181,7 +180,6 @@ public class HomePage extends AppCompatActivity
         } else if (id == R.id.nav_my_orders) {
             addFragment(new MyOrdersFragment(), "My Orders");
             getSupportActionBar().hide();
-
 
         } else if (id == R.id.nav_contact_us) {
             addFragment(new ContactUsFragment(), "Contact Us");

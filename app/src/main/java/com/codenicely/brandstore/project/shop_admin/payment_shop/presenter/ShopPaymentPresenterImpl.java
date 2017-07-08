@@ -26,7 +26,7 @@ public class ShopPaymentPresenterImpl implements ShopPaymentPresenter {
     }
 
     @Override
-    public void requestShopPaymentHash(int id, String access_token) {
+    public void requestShopPaymentHash(final int payment_type, int id, final int days, String access_token) {
 
         paymentShopView.showLoading(true);
         paymentShopProvider.requestShopPaymentHash(id, access_token, new PaymentShopCallBack() {
@@ -34,8 +34,8 @@ public class ShopPaymentPresenterImpl implements ShopPaymentPresenter {
             public void OnSuccess(ShopPaymentData shopPaymentData) {
                 if (shopPaymentData.isSuccess()) {
                     paymentShopView.showLoading(false);
-                    paymentShopView.showMessage(shopPaymentData.getMessage());
-                    paymentShopView.proceedToShopPayment(shopPaymentData);
+//                    paymentShopView.showMessage(shopPaymentData.getMessage());
+                    paymentShopView.proceedToShopPayment(shopPaymentData,days,payment_type);
                     Log.d("Hash", shopPaymentData.getChecksum_hash());
                 } else {
                     Log.d("False", "failure");
@@ -65,16 +65,14 @@ public class ShopPaymentPresenterImpl implements ShopPaymentPresenter {
             public void OnSuccess(UpdateShopPaymentData updateShopPaymentData) {
                 if (updateShopPaymentData.isSuccess()) {
                     paymentShopView.showLoading(false);
+                    paymentShopView.showMessage(updateShopPaymentData.getMessage());
                     // paymentShopView.showMessage(updateShopPaymentData.getMessage());
                     Log.d("Aman_confirm", "aman confirm");
                 } else {
                     paymentShopView.showLoading(false);
                     paymentShopView.showMessage(updateShopPaymentData.getMessage());
-
                     Log.d("False2", updateShopPaymentData.getMessage());
                 }
-
-
             }
 
             @Override
@@ -85,7 +83,5 @@ public class ShopPaymentPresenterImpl implements ShopPaymentPresenter {
 
             }
         });
-
-
     }
 }

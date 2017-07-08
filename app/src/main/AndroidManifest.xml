@@ -18,6 +18,10 @@
         android:supportsRtl="true"
 
         >
+        <meta-data
+            android:name="com.razorpay.ApiKey"
+            android:value="rzp_live_c0AW0q7zAa4z7x"
+            />
 
         <meta-data
             android:name="com.google.android.gms.version"

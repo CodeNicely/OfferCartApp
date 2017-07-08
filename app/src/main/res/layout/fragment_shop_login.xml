@@ -63,7 +63,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="4dp"
             android:textColorHint="@color/white_line"
-            app:hintTextAppearance="@style/EditTextLayoutTheme">
+            app:hintTextAppearance="@style/EditTextLayoutTheme2">
 
             <EditText
                 android:id="@+id/mobile"
@@ -73,7 +73,7 @@
                 android:inputType="phone"
                 android:maxLength="10"
                 android:textColor="@color/white_line"
-                android:theme="@style/EditTextTheme"
+                android:theme="@style/EditTextTheme2"
                 android:textColorHint="@color/white_line"
                 android:padding="8dp" />
         </android.support.design.widget.TextInputLayout>
@@ -84,7 +84,7 @@
                 android:layout_margin="4dp"
                 android:layout_height="wrap_content"
                 android:textColorHint="@color/white_line"
-                app:hintTextAppearance="@style/EditTextLayoutTheme">
+                app:hintTextAppearance="@style/EditTextLayoutTheme2">
 
                 <EditText
                     android:id="@+id/password"
@@ -94,7 +94,7 @@
                     android:inputType="textPassword"
                     android:textColor="@color/white_line"
                     android:textColorHint="@color/white_line"
-                    android:theme="@style/EditTextTheme" />
+                    android:theme="@style/EditTextTheme2" />
 
             </android.support.design.widget.TextInputLayout>
 <LinearLayout

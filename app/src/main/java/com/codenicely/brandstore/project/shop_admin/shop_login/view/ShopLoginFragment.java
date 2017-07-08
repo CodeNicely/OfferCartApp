@@ -183,10 +183,10 @@ public class ShopLoginFragment extends Fragment implements ShopLoginView{
 				mobile = editTextMobile.getText().toString();
 				password = editTextPassword.getText().toString();
 				if (mobile.equals("") || mobile.equals(null)) {
-					editTextMobile.setError("Please fill name");
+					editTextMobile.setError("Please fill mobile");
 					editTextMobile.requestFocus();
 				} else if (password.equals("") || password.equals(null)) {
-					editTextPassword.setError("Please fill mobile");
+					editTextPassword.setError("Please fill password");
 					editTextPassword.requestFocus();
 			}
 				else {

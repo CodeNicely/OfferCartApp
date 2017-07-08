@@ -12,7 +12,7 @@ public class Urls {
 
 	public static final String BASE_URL = "http://139.59.22.130:2017";
 	//public static final String BASE_URL = "http://172.20.10.13:8888";
-//	//public static final String BASE_URL = "http://app.vegworld.online:2017";
+	//public static final String BASE_URL = "http://app.vegworld.online:2017";
     public static final String REQUEST_FCM_UPDATE = "update_fcm/";
 
 	//splash_screen
@@ -56,7 +56,7 @@ public class Urls {
     public static final String SUB_URL_PAYMENT_HASH = "payment_hash/";
     public static final String SUB_URL_UPDATE_PAYMENT_STATUS = "update_payment_status/";
     public static final String  SUB_URL_SHOP_PAYMENT_HASH= "add_subscription/";
-    public static final String SUB_URL_UPDATE_SHOP_PAYMENT = "update_shop_payment_status/";
+    public static final String SUB_URL_UPDATE_SHOP_PAYMENT = "add_subscription/";
 	//shop_register
 	public static final String SUB_URL_CREATE_SHOP = "create_shop/";
 

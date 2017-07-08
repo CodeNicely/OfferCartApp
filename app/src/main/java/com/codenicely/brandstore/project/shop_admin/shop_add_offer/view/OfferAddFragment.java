@@ -444,7 +444,7 @@ public class OfferAddFragment extends Fragment implements OfferAddView ,DatePick
 		showMessage("Offer Published");
 		ShopOfferListFragment shopOfferListFragment = new ShopOfferListFragment();
 		((ShopHomePage)getActivity()).setFragment(shopOfferListFragment,"Home");
-		((ShopHomePage)getActivity()).onOfferAdded();
+//		((ShopHomePage)getActivity()).onOfferAdded();
 		//getActivity().onBackPressed();
         //Go to home page now.
     }

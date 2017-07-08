@@ -168,7 +168,6 @@ public class ShopOfferListFragment extends Fragment implements ShopOfferListView
             progressBar.setVisibility(View.VISIBLE);
         } else {
             progressBar.setVisibility(View.GONE);
-
         }
 
     }

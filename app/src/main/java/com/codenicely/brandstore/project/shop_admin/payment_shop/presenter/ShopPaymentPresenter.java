@@ -8,7 +8,7 @@ public interface ShopPaymentPresenter {
 
 
 
-    void requestShopPaymentHash(int id , String access_token );
+    void requestShopPaymentHash(int payment_type,int id ,int days, String access_token );
     void updateShopPaymentStatus(String access_token, String transaction_id,Boolean success);
 
 

@@ -92,7 +92,7 @@ public class ShopPaymentFragment extends Fragment implements PaymentShopView {
         shopPaymentPresenter = new ShopPaymentPresenterImpl(new RetrofitPaymentShopProvider(), this);
         sharedPrefs = new SharedPrefs(getContext());
         shopOfferListFragment = new ShopOfferListFragment();
-        shopPaymentPresenter.requestShopPaymentHash(id, sharedPrefs.getKeyAccessTokenShop());
+        shopPaymentPresenter.requestShopPaymentHash(id,1, 0,sharedPrefs.getKeyAccessTokenShop());
         return (view);
     }
 
@@ -155,8 +155,10 @@ public class ShopPaymentFragment extends Fragment implements PaymentShopView {
             progressBar.setVisibility(View.GONE);
     }
 
+
+
     @Override
-    public void proceedToShopPayment(ShopPaymentData shopPaymentData) {
+    public void proceedToShopPayment(ShopPaymentData shopPaymentData,int days,int payment_type) {
         //Getting the Service Instance. PaytmPGService.getStagingService() will return //the Service pointing to Staging
         //Environment.
 

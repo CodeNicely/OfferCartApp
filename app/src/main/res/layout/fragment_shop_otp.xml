@@ -78,7 +78,7 @@
                 <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
                     android:textColorHint="@color/white_line"
-                    app:hintTextAppearance="@style/EditTextLayoutTheme"
+                    app:hintTextAppearance="@style/EditTextLayoutTheme2"
                     android:layout_height="wrap_content">
 
                     <EditText
@@ -89,7 +89,7 @@
                         android:inputType="phone"
                         android:textColor="@color/white_line"
                         android:textColorHint="@color/white_line"
-                        android:theme="@style/EditTextTheme"
+                        android:theme="@style/EditTextTheme2"
                         android:maxLength="10"
                         android:textSize="@dimen/small_text_size"
                         />

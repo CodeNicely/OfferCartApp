@@ -46,6 +46,17 @@
         app:cardCornerRadius="4dp"
         app:contentPadding="8dp">
 -->
+        <android.support.v7.widget.CardView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|center"
+            app:cardBackgroundColor="@color/white_line"
+            app:cardCornerRadius="8dp"
+            android:padding="8dp"
+            android:layout_margin="8dp"
+            android:paddingLeft="8dp"
+            android:paddingTop="8dp"
+            >
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -58,19 +69,19 @@
             android:id="@+id/scrollView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/color_shop_primary">
+            android:background="@color/white">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/color_shop_primary"
+                android:background="@color/white"
                 android:orientation="vertical"
                 android:padding="4dp">
 
                 <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColorHint="@color/white_line"
+                    android:textColorHint="@color/black"
                     app:hintTextAppearance="@style/EditTextLayoutTheme">
 
                     <EditText
@@ -78,16 +89,33 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/hint_name"
-                        android:textColor="@color/shop_line_color"
-                        android:textColorHint="@color/shop_line_color"
+                        android:textColor="@color/color_shop_primary"
+                        android:textColorHint="@color/black"
                         android:theme="@style/EditTextTheme" />
                 </android.support.design.widget.TextInputLayout>
+
+
+                <!--<android.support.design.widget.TextInputLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:textColorHint="@color/black"-->
+                    <!--app:hintTextAppearance="@style/EditTextLayoutTheme">-->
+
+                    <!--<EditText-->
+                        <!--android:id="@+id/name"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:hint="@string/hint_name"-->
+                        <!--android:textColor="@color/shop_line_color"-->
+                        <!--android:textColorHint="@color/shop_line_color"-->
+                        <!--android:theme="@style/EditTextTheme" />-->
+                <!--</android.support.design.widget.TextInputLayout>-->
 
 
                 <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColorHint="@color/white_line"
+                    android:textColorHint="@color/black"
                     app:hintTextAppearance="@style/EditTextLayoutTheme">
 
                     <EditText
@@ -96,9 +124,9 @@
                         android:layout_height="wrap_content"
                         android:gravity="start"
                         android:hint="@string/description"
-                        android:minHeight="100dp"
-                        android:textColor="@color/shop_line_color"
-                        android:textColorHint="@color/shop_line_color"
+                        android:minHeight="50dp"
+                        android:textColor="@color/color_shop_primary"
+                        android:textColorHint="@color/black"
                         android:theme="@style/EditTextTheme" />
 
                 </android.support.design.widget.TextInputLayout>
@@ -107,7 +135,7 @@
                 <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColorHint="@color/white_line"
+                    android:textColorHint="@color/black"
                     app:hintTextAppearance="@style/EditTextLayoutTheme">
 
                     <EditText
@@ -115,8 +143,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/hint_email"
-                        android:textColor="@color/shop_line_color"
-                        android:textColorHint="@color/shop_line_color"
+                        android:textColor="@color/color_shop_primary"
+                        android:textColorHint="@color/black"
                         android:theme="@style/EditTextTheme" />
 
                 </android.support.design.widget.TextInputLayout>
@@ -127,20 +155,25 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="8dp"
-                    android:backgroundTint="@color/shop_line_color" />
+                    android:textColorHint="@color/black"
+/>
+                    <!--android:backgroundTint="@color/shop_line_color" -->
+                    <!--/>-->
                 <Spinner
                     android:id="@+id/state_spinner"
                     android:layout_width="match_parent"
                     android:layout_margin="8dp"
                     android:layout_height="wrap_content"
-                    android:backgroundTint="@color/white_line" />
+                    android:backgroundTint="@color/black"
+                    />
 
                 <Spinner
                     android:id="@+id/city_spinner"
                     android:layout_width="match_parent"
                     android:layout_margin="8dp"
                     android:layout_height="wrap_content"
-                    android:backgroundTint="@color/shop_line_color" />
+                    android:backgroundTint="@color/black"
+                    />
 
                 <ImageView
                     android:id="@+id/imageView"
@@ -150,6 +183,7 @@
                     android:maxHeight="400dp"
                     android:contentDescription="@string/shop_image"
                     android:src="@drawable/brand_store_logo"
+                    android:background="@drawable/brand_store_logo"
                     />
 
                 <LinearLayout
@@ -200,6 +234,6 @@
             </LinearLayout>
         </ScrollView>
     </LinearLayout>
-<!--    </android.support.v7.widget.CardView>-->
+    </android.support.v7.widget.CardView>
 </RelativeLayout>
     </LinearLayout>

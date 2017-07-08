@@ -17,6 +17,4 @@ public interface PaymentApi {
     Call<ShopPaymentData> getPaymentHash(@Query("subscription_id") int id,
                                          @Query("shop_access_token") String access_token);
 
-
-
 }

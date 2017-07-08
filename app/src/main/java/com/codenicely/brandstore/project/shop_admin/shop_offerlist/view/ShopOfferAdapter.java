@@ -1,10 +1,13 @@
 package com.codenicely.brandstore.project.shop_admin.shop_offerlist.view;
 
 import android.content.Context;
+import android.content.DialogInterface;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -112,7 +115,25 @@ public class ShopOfferAdapter extends RecyclerView.Adapter<ShopOfferAdapter.MyVi
         holder.delete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                shopOfferListPresenter.delete(sharedPrefs.getKeyAccessTokenShop(), shopOfferListDetails.getOffer_id());
+                final AlertDialog ad = new AlertDialog.Builder(context,R.style.YourDialogStyle)
+                                               .create();
+                ad.setCancelable(false);
+                ad.setTitle("Delete ?");
+                ad.setMessage("Do you really want to delete this offer ?");
+                ad.setButton(DialogInterface.BUTTON_POSITIVE, "yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        shopOfferListPresenter.delete(sharedPrefs.getKeyAccessTokenShop(), shopOfferListDetails.getOffer_id());
+                        ad.cancel();
+                    }
+                });
+                ad.setButton(DialogInterface.BUTTON_NEGATIVE, "no", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        ad.cancel();
+                    }
+                });
+                ad.show();
 
             }
         });

@@ -142,10 +142,10 @@ public class ShopChangePasswordFragment extends Fragment implements ShopChangePa
                 String confirm_password = confirm_password_edittext.getText().toString();
                 String shop_access_token = sharedPrefs.getKeyAccessTokenShop();
                 if (old_password.equals("") || old_password.equals(null)) {
-                    old_password_edittext.setError("Please enter Name");
+                    old_password_edittext.setError("Please enter old password");
                     old_password_edittext.requestFocus();
                 } else if (new_password.equals("") || new_password.equals(null)) {
-                    new_password_edittext.setError("Please enter a password");
+                    new_password_edittext.setError("Please enter a new password");
                     new_password_edittext.requestFocus();
                 } else if (new_password_edittext.length() < 6) {
                     new_password_edittext.setError("Password should be of min length 6");

@@ -11,5 +11,5 @@ public interface PaymentShopView {
 
     void showLoading(boolean show);
 
-    void proceedToShopPayment(ShopPaymentData shopPaymentData);
+    void proceedToShopPayment(ShopPaymentData shopPaymentData,int days,int payment_type);
 }

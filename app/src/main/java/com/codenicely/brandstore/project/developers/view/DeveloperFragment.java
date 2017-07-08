@@ -14,6 +14,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.codenicely.brandstore.project.R;
 import com.codenicely.brandstore.project.developers.model.RetrofitDeveloperProvider;
@@ -171,10 +172,12 @@ public class DeveloperFragment extends Fragment implements DeveloperView {
     @Override
     public void showMessage(String message) {
 
-        Snackbar snackbar = Snackbar
-                .make(snackView, message, Snackbar.LENGTH_LONG);
+//        Snackbar snackbar = Snackbar
+//                .make(snackView, message, Snackbar.LENGTH_LONG);
+//
+//        snackbar.show();
+        Toast.makeText(getContext(),message,Toast.LENGTH_SHORT).show();
 
-        snackbar.show();
     }
 
     @Override
