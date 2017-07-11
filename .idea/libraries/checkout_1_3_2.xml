@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="checkout-1.3.2">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.android/build-cache/bdf6930ab99cc3effe49d978801e787506fbaa43/output/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.android/build-cache/bdf6930ab99cc3effe49d978801e787506fbaa43/output/res" />
+      <root url="file://$USER_HOME$/.android/build-cache/0f85f0cfcef260da725233c77851006515c0ff1f/output/res" />
+      <root url="jar://$USER_HOME$/.android/build-cache/0f85f0cfcef260da725233c77851006515c0ff1f/output/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
