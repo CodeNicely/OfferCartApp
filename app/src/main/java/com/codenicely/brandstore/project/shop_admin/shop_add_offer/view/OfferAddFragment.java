@@ -452,7 +452,7 @@ public class OfferAddFragment extends Fragment implements OfferAddView ,DatePick
     @Override
     public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
         this.year=year;
-        this.month=month+1;
+        this.month=month;
         this.date=dayOfMonth;
     	tvofferExpiry.setText("Offer Expiry Date");
 		tvofferExpiry.append(" : "+ date+"/"+this.month+"/"+this.year);

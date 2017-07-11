@@ -214,9 +214,9 @@ public class AddSubscriptionFragment extends Fragment implements AddSubscription
 //			options.put("image", "https://rzp-mobile.s3.amazonaws.com/images/rzp.png");
             options.put("id",shopPaymentData.getOrder_id());
 			options.put("currency", "INR");
-            options.put("amount", "100");
+            options.put("amount", String.valueOf(Integer.valueOf(shopPaymentData.getAmount())*100));
 			JSONObject preFill = new JSONObject();
-			preFill.put("email", "");
+//			preFill.put("email", "");
 			Log.d(TAG,shopPaymentData.getMobile()+" -- "+shopPaymentData.getEmail());
             preFill.put("contact", shopPaymentData.getMobile());
  		    options.put("prefill", preFill);
