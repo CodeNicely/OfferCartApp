@@ -209,7 +209,7 @@ public class StateFragment extends Fragment implements StateView {
 		args.putInt("state_id",state_id);
 		fragment.setArguments(args);
 		ft.replace(R.id.home_layout, fragment);
-		ft.addToBackStack(null);
+//		ft.addToBackStack(null);
 		ft.commit();
 		((HomePage) getContext()).getSupportActionBar().hide();
 		((HomePage) getContext()).setFragment(new CityFragment(), "Select City");

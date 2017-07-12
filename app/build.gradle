@@ -16,6 +16,7 @@ repositories {
 
 apply plugin: 'android-apt'
 
+
 android {
     compileSdkVersion 25
     buildToolsVersion '25.0.3'
@@ -24,8 +25,8 @@ android {
         applicationId "com.codenicely.brandstore.project"
         minSdkVersion 16
         targetSdkVersion 25
-        versionCode 9
-        versionName "1.9"
+        versionCode 10
+        versionName "1.0010"
     }
     buildTypes {
 
