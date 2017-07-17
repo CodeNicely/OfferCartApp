@@ -523,9 +523,9 @@ public class ShopRegisterFragment extends Fragment implements ShopRegisterView,L
 			}
 
 		} else if (requestCode == CAMERA_REQUEST_ID && resultCode == RESULT_OK) {
+			imageUri = Uri.fromFile(image);
 
 			if (imageUri != null) {
-				imageUri = Uri.fromFile(image);
 				Glide.with(this).load(imageUri).fitCenter().crossFade().into(imageView);
 			}
 		}

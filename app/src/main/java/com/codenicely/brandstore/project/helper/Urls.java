@@ -11,7 +11,7 @@ Edited by Ujjwal :)  :D
 public class Urls {
 
 	public static final String BASE_URL = "http://139.59.22.130:2017";
-//	public static final String BASE_URL = "http://192.168.0.114:8000";
+//	public static final String BASE_URL = "http://192.168.43.97:8000";
 	//public static final String BASE_URL = "http://app.vegworld.online:2017";
     public static final String REQUEST_FCM_UPDATE = "update_fcm/";
 

@@ -25,6 +25,8 @@ import com.codenicely.brandstore.project.welcome_screen.view.WelcomeScreenActivi
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
+import static com.codenicely.brandstore.project.helper.MyApplication.getContext;
+
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
