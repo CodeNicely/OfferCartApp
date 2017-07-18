@@ -25,8 +25,8 @@ android {
         applicationId "com.codenicely.brandstore.project"
         minSdkVersion 16
         targetSdkVersion 25
-        versionCode 10
-        versionName "1.0010"
+        versionCode 11
+        versionName "1.0011"
     }
     buildTypes {
 
