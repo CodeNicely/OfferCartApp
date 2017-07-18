@@ -13,7 +13,7 @@
                 android:layout_height="wrap_content"
                 android:background="?attr/selectableItemBackground"
                 app:navigationIcon="@drawable/ic_arrow_back_white_24dp"
-                app:title="My Orders"
+                app:title="My Offers"
                 app:titleTextColor="@color/white"
                 />
         </android.support.design.widget.AppBarLayout>
