@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/home/ujjwal/AndroidStudioProjects/OfferCartApp/app/libs/retrofit-2.0.0-beta2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="880d9e0997b2d1bfc98e0d121ced33ee5d04aac4">
+        <dex dex="/home/ujjwal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/pre-dexed/debug/retrofit-2.0.0-beta2_776839e55f80532824c49c725fc3dee9fc184a1a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/ujjwal/AndroidStudioProjects/OfferCartApp/app/libs/PGSDK_V2.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="ac7573d38f31559f8f027eb698769d3ebad40b64">
+        <dex dex="/home/ujjwal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/pre-dexed/debug/PGSDK_V2.0_853e03d536d1f5c199cedf46b406c38addb89dbb.jar" />
+    </item>
+
+</items>

@@ -12,6 +12,7 @@ import com.codenicely.brandstore.project.shop_admin.shop_edit_offer.data.OfferEd
 
 import java.io.File;
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
 import okhttp3.MediaType;
 import okhttp3.MultipartBody;
@@ -35,7 +36,9 @@ public class RetrofitOfferEditHelper implements OfferEditHelper {
 		this.context = context;
 		HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
 		interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
-		OkHttpClient client = new OkHttpClient.Builder().addInterceptor(interceptor).build();
+		OkHttpClient client = new OkHttpClient.Builder().addInterceptor(interceptor).readTimeout(10, TimeUnit.MINUTES).
+	    writeTimeout(10,TimeUnit.MINUTES).connectTimeout(10,TimeUnit.MINUTES).retryOnConnectionFailure(true)
+	    .build();
 
 
 		retrofit = new Retrofit.Builder()
