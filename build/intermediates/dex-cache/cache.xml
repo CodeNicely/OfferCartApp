@@ -3,21 +3,57 @@
 
     <item
         is-multidex="false"
-        jar="/Users/meghalagrawal/AndroidStudioProjects/OfferCartApp/app/libs/retrofit-2.0.0-beta2.jar"
+        jar="/home/ujjwal/.android/build-cache/910b39ef9706a3c1d6647eeda97ada85a81813c2/output/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.3"
-        sha1="880d9e0997b2d1bfc98e0d121ced33ee5d04aac4">
-        <dex dex="/Users/meghalagrawal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/pre-dexed/release/retrofit-2.0.0-beta2_3378892707869d8bec1546c3a86a388f7cb16105.jar" />
+        sha1="061f159f4e9d93546c4fbd7f12e33434197b87bb">
+        <dex dex="/home/ujjwal/Desktop/OfferCartApp/app/build/intermediates/pre-dexed/debug/classes_9a2b6a39e996931d2d715fc43ab1839ab7e93616.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/meghalagrawal/AndroidStudioProjects/OfferCartApp/app/libs/PGSDK_V2.0.jar"
+        jar="/home/ujjwal/Desktop/OfferCartApp/app/libs/PGSDK_V2.0.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.3"
         sha1="ac7573d38f31559f8f027eb698769d3ebad40b64">
-        <dex dex="/Users/meghalagrawal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/pre-dexed/release/PGSDK_V2.0_7b77c9cf65c08a8b78aebf74191439ac86705410.jar" />
+        <dex dex="/home/ujjwal/Desktop/OfferCartApp/app/build/intermediates/pre-dexed/debug/PGSDK_V2.0_1d2a38459ee431754c4c738be7c6de60ed03f041.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/ujjwal/android-studio-2/gradle/3.3/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.3.3/1262995965440e28ba5c4d480c9c9ab4ccce84cc/picasso-2.3.3.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="1262995965440e28ba5c4d480c9c9ab4ccce84cc">
+        <dex dex="/home/ujjwal/Desktop/OfferCartApp/app/build/intermediates/pre-dexed/debug/picasso-2.3.3_d0d7ea6b0336cfff53f6ceab4a57c76be30e67a1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/ujjwal/android-studio-2/gradle/3.3/caches/modules-2/files-2.1/com.jakewharton/butterknife-annotations/8.4.0/ea392375cf9ff59234a82e7928a204215ccc98cd/butterknife-annotations-8.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="ea392375cf9ff59234a82e7928a204215ccc98cd">
+        <dex dex="/home/ujjwal/Desktop/OfferCartApp/app/build/intermediates/pre-dexed/debug/butterknife-annotations-8.4.0_786d750ae7f9b1863a6eaec82cc2c930edb1827a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/ujjwal/.android/build-cache/3d9383c24537588bc5df19bb158836429b5dd623/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="a07818a1ecabdb149998823429cce555af4b9cba">
+        <dex dex="/home/ujjwal/Desktop/OfferCartApp/app/build/intermediates/pre-dexed/debug/classes_691fb00216f1be7895e487d82e3b99228fc021de.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/ujjwal/Desktop/OfferCartApp/app/libs/retrofit-2.0.0-beta2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="880d9e0997b2d1bfc98e0d121ced33ee5d04aac4">
+        <dex dex="/home/ujjwal/Desktop/OfferCartApp/app/build/intermediates/pre-dexed/debug/retrofit-2.0.0-beta2_c195c05fa725947d46a9c752ce20749f00464ecb.jar" />
     </item>
 
 </items>
