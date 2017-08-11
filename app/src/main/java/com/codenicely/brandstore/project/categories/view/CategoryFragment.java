@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.codenicely.brandstore.project.R;
@@ -41,6 +42,8 @@ public class CategoryFragment extends Fragment implements CategoriesView {
     /* @BindView(R.id.tabLayout)
      TabLayout tabLayout;
  */
+    @BindView(R.id.tv_no_shop)
+    TextView tv_no_shop;
     @BindView(R.id.category_recycler)
     RecyclerView recyclerView;
     @BindView(R.id.categories_progressbar)
@@ -156,8 +159,12 @@ public class CategoryFragment extends Fragment implements CategoriesView {
 
     @Override
     public void onDataReceived(List<CategoryData> categoryDatas) {
-        categoryAdapter.setData(categoryDatas);
-        categoryAdapter.notifyDataSetChanged();
+		if (categoryDatas.size() ==0){
+			tv_no_shop.setVisibility(View.VISIBLE);
+		}else{
+			categoryAdapter.setData(categoryDatas);
+			categoryAdapter.notifyDataSetChanged();
+		}
 
     }
 
