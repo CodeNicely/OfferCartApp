@@ -3,21 +3,21 @@
 
     <item
         is-multidex="false"
-        jar="/home/ujjwal/Desktop/OfferCartApp/app/libs/retrofit-2.0.0-beta2.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.3"
-        sha1="880d9e0997b2d1bfc98e0d121ced33ee5d04aac4">
-        <dex dex="/home/ujjwal/Desktop/OfferCartApp/app/build/intermediates/pre-dexed/debug/retrofit-2.0.0-beta2_c195c05fa725947d46a9c752ce20749f00464ecb.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/ujjwal/Desktop/OfferCartApp/app/libs/PGSDK_V2.0.jar"
+        jar="/home/ujjwal/AndroidStudioProjects/Codenicely/OfferCartApp/app/libs/PGSDK_V2.0.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.3"
         sha1="ac7573d38f31559f8f027eb698769d3ebad40b64">
-        <dex dex="/home/ujjwal/Desktop/OfferCartApp/app/build/intermediates/pre-dexed/debug/PGSDK_V2.0_1d2a38459ee431754c4c738be7c6de60ed03f041.jar" />
+        <dex dex="/home/ujjwal/AndroidStudioProjects/Codenicely/OfferCartApp/app/build/intermediates/pre-dexed/debug/PGSDK_V2.0_f8faa03dc5319f0e585841c3b811037b91a66cc2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/ujjwal/AndroidStudioProjects/Codenicely/OfferCartApp/app/libs/retrofit-2.0.0-beta2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="880d9e0997b2d1bfc98e0d121ced33ee5d04aac4">
+        <dex dex="/home/ujjwal/AndroidStudioProjects/Codenicely/OfferCartApp/app/build/intermediates/pre-dexed/debug/retrofit-2.0.0-beta2_1bb8612f51d17da434f06b1f463c87edbc9b997f.jar" />
     </item>
 
 </items>

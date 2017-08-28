@@ -93,5 +93,8 @@
     <string name="refund_cancellation3">We will try our best to create the suitable services for our clients.\nIn case any client is not completely satisfied with our products we can provide a refund.\nIf paid by payment gateway name payments refund will be made to the same account.\n\n</string>
     <string name="description">Description</string>
     <string name="password">Password</string>
+    <string name="gps_network_not_enabled">Location is not enabled !Want to go to settings menu ?</string>
+    <string name="open_location_settings">Settings</string>
+    <string name="cancel">Cancel</string>
 
 </resources>
