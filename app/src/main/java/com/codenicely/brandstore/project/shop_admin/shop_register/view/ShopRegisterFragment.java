@@ -829,7 +829,6 @@ public class ShopRegisterFragment extends Fragment implements ShopRegisterView, 
             }
         });
         ad.show();
-
     }
 
     @Override

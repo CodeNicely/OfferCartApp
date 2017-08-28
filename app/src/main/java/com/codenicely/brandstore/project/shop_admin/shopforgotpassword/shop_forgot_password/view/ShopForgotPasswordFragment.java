@@ -40,6 +40,7 @@ public class ShopForgotPasswordFragment extends Fragment implements ShopForgotPa
 	// TODO: Rename and change types of parameters
 	private String mParam1;
 	private String mParam2;
+	private Context context;
 
 	@BindView(R.id.mobile)
 	EditText editTextMobile;
@@ -100,6 +101,7 @@ public class ShopForgotPasswordFragment extends Fragment implements ShopForgotPa
 		});
 
 		*/
+		context =getContext();
 
 		toolbar.setNavigationOnClickListener(new View.OnClickListener() {
 			@Override
@@ -145,7 +147,7 @@ public class ShopForgotPasswordFragment extends Fragment implements ShopForgotPa
 
 	@Override
 	public void showMessage(String message) {
-		Toast.makeText(getContext(),message,Toast.LENGTH_SHORT).show();
+		Toast.makeText(context,message,Toast.LENGTH_SHORT).show();
 	}
 
 	@Override
