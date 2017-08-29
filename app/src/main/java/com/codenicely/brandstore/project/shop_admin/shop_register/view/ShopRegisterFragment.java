@@ -154,8 +154,9 @@ public class ShopRegisterFragment extends Fragment implements ShopRegisterView, 
     @BindView(R.id.imageView)
     ImageView imageView;
     /*
-        @BindView(R.id.cardView)
-        CardView cardView;*/
+    @BindView(R.id.cardView)
+    CardView cardView;*/
+
     @BindView(R.id.toolbar)
     Toolbar toolbar;
     @BindView(R.id.latitude_longitude)
@@ -495,12 +496,13 @@ public class ShopRegisterFragment extends Fragment implements ShopRegisterView, 
                 LOCATION_REQUEST = false;
             }
 
-            @Override
-            public void onPermissionRationaleShouldBeShown(PermissionRequest permission, PermissionToken token) {
+			@Override
+			public void onPermissionRationaleShouldBeShown(PermissionRequest permission, PermissionToken token) {
+
+			}
 
 
-            }
-        }, Manifest.permission.ACCESS_FINE_LOCATION);
+		}, Manifest.permission.ACCESS_FINE_LOCATION);
 
 //		Toast.makeText(getContext(),"REquest True",Toast.LENGTH_SHORT).show();
 

@@ -4,14 +4,18 @@ package com.codenicely.brandstore.project.splash_screen.view;
  * Created by aman on 11/10/16.
  */
 
+import android.Manifest;
 import android.app.Activity;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
@@ -30,6 +34,12 @@ import com.codenicely.brandstore.project.splash_screen.models.data.SplashScreenD
 import com.codenicely.brandstore.project.splash_screen.presenter.SplashScreenPresenter;
 import com.codenicely.brandstore.project.splash_screen.presenter.SplashScreenPresenterImpl;
 import com.codenicely.brandstore.project.welcome_screen.view.WelcomeScreenActivity;
+import com.karumi.dexter.Dexter;
+import com.karumi.dexter.PermissionToken;
+import com.karumi.dexter.listener.PermissionDeniedResponse;
+import com.karumi.dexter.listener.PermissionGrantedResponse;
+import com.karumi.dexter.listener.PermissionRequest;
+import com.karumi.dexter.listener.single.PermissionListener;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -45,19 +55,23 @@ public class SplashScreenActivity extends Activity implements SplashScreenView {
 
     @BindView(R.id.logo)
     ImageView logo;
+	private boolean LOCATION_REQUEST = false;
+	public Context context;
 
     private ImageLoader imageLoader;
     private SharedPrefs sharedPrefs;
     private SplashScreenPresenter splashScreenPresenter;
     private Handler handler;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
         ButterKnife.bind(this);
-        imageLoader = new GlideImageLoader(this);
+		context = this;
+		Dexter.initialize(context);
+
+		imageLoader = new GlideImageLoader(this);
         Glide.with(this).load(R.drawable.codenicely_logo).into(codenicely_logo);
         Glide.with(this).load(R.drawable.brand_store_logo).into(logo);
 
@@ -112,15 +126,40 @@ public class SplashScreenActivity extends Activity implements SplashScreenView {
                     ad.cancel();
 
                     if (sharedPrefs.isLoggedIn()) {
-                        startActivity(new Intent(SplashScreenActivity.this, HomePage.class));
-                        finish();
-                    } else if (sharedPrefs.isLoggedInasShop()) {
+						if (checkPermissionForLocation()) {
+							startActivity(new Intent(SplashScreenActivity.this, HomePage.class));
+							finish();
+						} else {
+							if (requestLocationPermission()) {
+								startActivity(new Intent(SplashScreenActivity.this, HomePage.class));
+								finish();
+							}
 
-                        startActivity(new Intent(SplashScreenActivity.this, ShopHomePage.class));
-                        finish();
+						}
+                    } else if (sharedPrefs.isLoggedInasShop()) {
+						if (checkPermissionForLocation()) {
+							startActivity(new Intent(SplashScreenActivity.this, ShopHomePage.class));
+							finish();
+						} else {
+							if (requestLocationPermission()) {
+								startActivity(new Intent(SplashScreenActivity.this, ShopHomePage.class));
+								finish();
+							}
+
+						}
+
                     } else {
-                        startActivity(new Intent(SplashScreenActivity.this, WelcomeScreenActivity.class));
-                        finish();
+						if (checkPermissionForLocation()) {
+							startActivity(new Intent(SplashScreenActivity.this, WelcomeScreenActivity.class));
+							finish();
+						} else {
+							if (requestLocationPermission()) {
+								startActivity(new Intent(SplashScreenActivity.this, WelcomeScreenActivity.class));
+								finish();
+							}
+
+						}
+
                     }
 
                 }
@@ -160,15 +199,38 @@ public class SplashScreenActivity extends Activity implements SplashScreenView {
                 public void run() {
 
                     if (sharedPrefs.isLoggedIn()) {
-                        startActivity(new Intent(SplashScreenActivity.this, HomePage.class));
-                        finish();
+						if (checkPermissionForLocation()) {
+							startActivity(new Intent(SplashScreenActivity.this, HomePage.class));
+							finish();
+						} else {
+							if (requestLocationPermission()) {
+								startActivity(new Intent(SplashScreenActivity.this, HomePage.class));
+								finish();
+							}
+						}
                     } else if (sharedPrefs.isLoggedInasShop()) {
+						if (checkPermissionForLocation()) {
+							startActivity(new Intent(SplashScreenActivity.this, ShopHomePage.class));
+							finish();
+						} else {
+							if (requestLocationPermission()) {
+								startActivity(new Intent(SplashScreenActivity.this, ShopHomePage.class));
+								finish();
+							}
 
-                        startActivity(new Intent(SplashScreenActivity.this, ShopHomePage.class));
-                        finish();
+						}
+
                     } else {
-                        startActivity(new Intent(SplashScreenActivity.this, WelcomeScreenActivity.class));
-                        finish();
+						if (checkPermissionForLocation()) {
+							startActivity(new Intent(SplashScreenActivity.this, WelcomeScreenActivity.class));
+							finish();
+						} else {
+							if (requestLocationPermission()) {
+								startActivity(new Intent(SplashScreenActivity.this, WelcomeScreenActivity.class));
+								finish();
+							}
+
+						}
                     }
 
                 }
@@ -187,20 +249,96 @@ public class SplashScreenActivity extends Activity implements SplashScreenView {
             public void run() {
 
                 if (sharedPrefs.isLoggedIn()) {
-                    startActivity(new Intent(SplashScreenActivity.this, HomePage.class));
-                    finish();
+                    if (checkPermissionForLocation()) {
+						startActivity(new Intent(SplashScreenActivity.this, HomePage.class));
+						finish();
+                    } else {
+                        if (requestLocationPermission()) {
+							startActivity(new Intent(SplashScreenActivity.this, HomePage.class));
+							finish();
+                        }
+
+                    }
+
                 } else if (sharedPrefs.isLoggedInasShop()) {
-                    startActivity(new Intent(SplashScreenActivity.this, ShopHomePage.class));
-                    finish();
+					if (checkPermissionForLocation()) {
+						startActivity(new Intent(SplashScreenActivity.this, ShopHomePage.class));
+						finish();
+					} else {
+						if (requestLocationPermission()) {
+							startActivity(new Intent(SplashScreenActivity.this, ShopHomePage.class));
+							finish();
+						}
+
+					}
                 } else {
-                    startActivity(new Intent(SplashScreenActivity.this, WelcomeScreenActivity.class));
-                    finish();
+					if (checkPermissionForLocation()) {
+						startActivity(new Intent(SplashScreenActivity.this, WelcomeScreenActivity.class));
+						finish();
+					} else {
+						if (requestLocationPermission()) {
+							startActivity(new Intent(SplashScreenActivity.this, WelcomeScreenActivity.class));
+							finish();
+						}
+					}
                 }
 
             }
         }, 300);
 
     }
+    private boolean checkPermissionForLocation() {
+
+        if (ContextCompat.checkSelfPermission(this,
+                Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
+			Log.d("CHECK---","true");
+            return true;
+
+        } else {
+			Log.d("CHECK---","false");
+            return false;
+        }
+    }
+
+    private boolean requestLocationPermission() {
+
+		Log.d("REQQQ","chech true");
+
+
+		Dexter.checkPermission(new PermissionListener() {
+            @Override
+            public void onPermissionGranted(PermissionGrantedResponse response) {
+
+				Log.d("REQUEST---","true");
+				splashScreenPresenter.requestSplash(MyApplication.getFcm());
+
+                LOCATION_REQUEST = true;
+            }
+
+            @Override
+            public void onPermissionDenied(PermissionDeniedResponse response) {
+
+				Log.d("REQUEST---","false");
+				android.os.Process.killProcess(android.os.Process.myPid());
+				System.exit(1);
+                LOCATION_REQUEST = false;
+            }
+
+            @Override
+            public void onPermissionRationaleShouldBeShown(PermissionRequest permission, PermissionToken token) {
+				Log.d("REQUEST---","nothing");
+				token.continuePermissionRequest();
+
+
+            }
+        }, Manifest.permission.ACCESS_FINE_LOCATION);
+		Log.d("REQQQ","check finish");
+
+		return LOCATION_REQUEST;
+
+    }
+
+
 
 
 }

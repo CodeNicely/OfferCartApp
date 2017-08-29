@@ -2,22 +2,40 @@
 <items version="2" >
 
     <item
-        is-multidex="false"
-        jar="/Users/meghalagrawal/AndroidStudioProjects/OfferCartApp/app/libs/retrofit-2.0.0-beta2.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.3"
-        sha1="880d9e0997b2d1bfc98e0d121ced33ee5d04aac4">
-        <dex dex="/Users/meghalagrawal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/pre-dexed/release/retrofit-2.0.0-beta2_3378892707869d8bec1546c3a86a388f7cb16105.jar" />
-    </item>
-    <item
-        is-multidex="false"
+        is-multidex="true"
         jar="/Users/meghalagrawal/AndroidStudioProjects/OfferCartApp/app/libs/PGSDK_V2.0.jar"
-        jumboMode="false"
+        jumboMode="true"
         optimize="true"
         revision="25.0.3"
         sha1="ac7573d38f31559f8f027eb698769d3ebad40b64">
-        <dex dex="/Users/meghalagrawal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/pre-dexed/release/PGSDK_V2.0_7b77c9cf65c08a8b78aebf74191439ac86705410.jar" />
+        <dex dex="/Users/meghalagrawal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/transforms/dex/debug/folders/1000/2/PGSDK_V2.0_7b77c9cf65c08a8b78aebf74191439ac86705410/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/meghalagrawal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="/Users/meghalagrawal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_b3f574df2bf9504cfabf3008450ff55c2fa07c6e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/meghalagrawal/AndroidStudioProjects/OfferCartApp/app/libs/retrofit-2.0.0-beta2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="880d9e0997b2d1bfc98e0d121ced33ee5d04aac4">
+        <dex dex="/Users/meghalagrawal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/transforms/dex/debug/folders/1000/2/retrofit-2.0.0-beta2_3378892707869d8bec1546c3a86a388f7cb16105/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/meghalagrawal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="116ce40e9403a9d08991882abecd936d7e7095cb">
+        <dex dex="/Users/meghalagrawal/AndroidStudioProjects/OfferCartApp/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_e389aca7dff9b57a577556d167521f7f641f563b/classes.dex" />
     </item>
 
 </items>
