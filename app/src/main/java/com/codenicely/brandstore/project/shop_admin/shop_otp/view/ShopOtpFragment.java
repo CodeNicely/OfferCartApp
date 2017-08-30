@@ -48,7 +48,7 @@ public class ShopOtpFragment extends Fragment implements ShopOtpView {
 	WelcomeScreenActivity welcomeScreenActivity;
     private OnFragmentInteractionListener mListener;
     ShopOtpPresenter shopOtpPresenter;
-
+    private Context context;
     @BindView(R.id.editTextOtp)
     EditText otpEditText;
     @BindView(R.id.progressBarView)
@@ -110,7 +110,7 @@ public class ShopOtpFragment extends Fragment implements ShopOtpView {
         Log.d("MOBILE------",mobile);
         welcomeScreenActivity=new WelcomeScreenActivity();
 		shopOtpPresenter = new ShopOtpPresenterImpl(this, new RetrofitShopOtpProvider());
-
+        context = getContext();
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -159,7 +159,7 @@ public class ShopOtpFragment extends Fragment implements ShopOtpView {
 
     @Override
     public void showMessage(String message) {
-        Toast.makeText(getContext(), message, Toast.LENGTH_SHORT).show();
+        Toast.makeText(context, message, Toast.LENGTH_SHORT).show();
 
     }
 
@@ -181,7 +181,7 @@ public class ShopOtpFragment extends Fragment implements ShopOtpView {
             sharedPrefs.setAccessTokenShop(access_token);
             sharedPrefs.setShopLogin(true);
 
-        Intent intent = new Intent(getContext(), ShopHomePage.class);
+        Intent intent = new Intent(context, ShopHomePage.class);
 
         if (fp) {
             intent.putExtra("fp",true);

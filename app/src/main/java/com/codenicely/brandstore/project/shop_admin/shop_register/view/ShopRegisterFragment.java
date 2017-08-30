@@ -3,9 +3,11 @@ package com.codenicely.brandstore.project.shop_admin.shop_register.view;
 import android.Manifest;
 import android.annotation.TargetApi;
 import android.app.ProgressDialog;
+import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.IntentSender;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
@@ -17,6 +19,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.provider.MediaStore;
+import android.provider.Settings;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.annotation.RequiresApi;
@@ -261,7 +264,7 @@ public class ShopRegisterFragment extends Fragment implements ShopRegisterView, 
 
         LocationManager lm = (LocationManager) getActivity().getSystemService(Context.LOCATION_SERVICE);
 
-		/*try {
+		try {
             gps_enabled = lm.isProviderEnabled(LocationManager.GPS_PROVIDER);
 		} catch (Exception ex) {
 		}
@@ -297,32 +300,32 @@ public class ShopRegisterFragment extends Fragment implements ShopRegisterView, 
 		} else {
 //			Toast.makeText(getContext(),"False",Toast.LENGTH_SHORT).show();
 
-		*//*	if (receiver == null) {
-				IntentFilter filter = new IntentFilter("Hello World");
-				receiver = new BroadcastReceiver() {
-					@Override
-					public void onReceive(Context context, Intent intent) {
-						if (intent.getAction().contentEquals("Hello World")) {
-							lat = intent.getDoubleExtra("lat", 0.0);
-							lng = intent.getDoubleExtra("lng", 0.0);
-							world.lat = lat;
-							world.lng = lng;
+//			if (receiver == null) {
+//				IntentFilter filter = new IntentFilter("Hello World");
+//				receiver = new BroadcastReceiver() {
+//					@Override
+//					public void onReceive(Context context, Intent intent) {
+//						if (intent.getAction().contentEquals("Hello World")) {
+//							lat = intent.getDoubleExtra("lat", 0.0);
+//							lng = intent.getDoubleExtra("lng", 0.0);
+//							world.lat = lat;
+//							world.lng = lng;
+//
+//							profile.lat = lat;
+//							profile.lng = lng;
+//
+//							if (needSomethingTweet || needSomethingWorld) {
+//								needSomethingWorld = false;
+//								needSomethingTweet = false;
+//								getAllPosts(count);
+//							}
+//						}
+//					}
+//				};
+//				registerReceiver(receiver, filter);
+//			}
 
-							profile.lat = lat;
-							profile.lng = lng;
-
-							if (needSomethingTweet || needSomethingWorld) {
-								needSomethingWorld = false;
-								needSomethingTweet = false;
-								getAllPosts(count);
-							}
-						}
-					}
-				};
-				registerReceiver(receiver, filter);
-			}
-		*//*
-}*/
+}
 
         city_spinner.setAdapter(city_array_adapter);
         state_spinner.setAdapter(state_array_adapter);
@@ -826,7 +829,6 @@ public class ShopRegisterFragment extends Fragment implements ShopRegisterView, 
             }
         });
         ad.show();
-
     }
 
     @Override

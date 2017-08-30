@@ -70,7 +70,7 @@ public class DeveloperFragment extends Fragment implements DeveloperView {
     private View snackView;
     private DevelopersPresenter developersPresenter;
     private OnFragmentInteractionListener mListener;
-
+    private Context context;
     public DeveloperFragment() {
         // Required empty public constructor
     }
@@ -108,6 +108,7 @@ public class DeveloperFragment extends Fragment implements DeveloperView {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_developer, container, false);
         ButterKnife.bind(this, view);
+        context = getContext();
         /*AdView adView = (AdView)view.findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
         adView.loadAd(adRequest);*/
@@ -172,11 +173,7 @@ public class DeveloperFragment extends Fragment implements DeveloperView {
     @Override
     public void showMessage(String message) {
 
-//        Snackbar snackbar = Snackbar
-//                .make(snackView, message, Snackbar.LENGTH_LONG);
-//
-//        snackbar.show();
-        Toast.makeText(getContext(),message,Toast.LENGTH_SHORT).show();
+        Toast.makeText(context,message,Toast.LENGTH_SHORT).show();
 
     }
 
@@ -192,7 +189,7 @@ public class DeveloperFragment extends Fragment implements DeveloperView {
             aboutUs.setText(companyData.getAbout());
 
             website.setText(companyData.getWebsite());
-            ImageLoader imageLoader = new GlideImageLoader(getContext());
+            ImageLoader imageLoader = new GlideImageLoader(context);
             imageLoader.loadImage(companyData.getCompanyImage(), companyImage, imageProgressBar);
 
         }

@@ -92,7 +92,6 @@ public class EditShopProfileFragment extends Fragment implements EditShopProfile
 	private static final String SELECT_CITY = "Select City" ;
 	private static final String SELECT_CATEGORY = "Select Category" ;
 	private static final String SELECT_STATE = "Select State" ;
-
 	private boolean CAMERA_REQUEST = false;
 	private boolean GALLERY_REQUEST = false;
 	private static final int CAMERA_REQUEST_ID = 100;
@@ -728,7 +727,7 @@ public class EditShopProfileFragment extends Fragment implements EditShopProfile
 
 		for (int i = 0; i < shopPreRegistrationData.getCategory_list().size(); i++) {
 			CategoryData categoryData = shopPreRegistrationData.getCategory_list().get(i);
-			index_of_category =categoryData.getName().indexOf(category);
+			//index_of_category =categoryData.getName().indexOf(category);
 			category_array_adapter.add(categoryData.getName());
 		}
 

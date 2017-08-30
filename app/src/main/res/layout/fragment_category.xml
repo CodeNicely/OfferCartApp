@@ -4,12 +4,25 @@
     android:layout_height="match_parent"
     xmlns:ads="http://schemas.android.com/apk/res-auto"
     tools:context=".categories.view.CategoryFragment">
-
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/tv_no_shop"
+        android:layout_margin="50dp"
+        android:textSize="24dp"
+        android:visibility="gone"
+        android:gravity="center"
+        android:textColor="@color/colorPrimary"
+        android:text="There are no shops availaible in your city now."
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
     <android.support.v7.widget.RecyclerView
         android:id="@+id/category_recycler"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"/>
+</LinearLayout>
 
     <ProgressBar
         android:id="@+id/categories_progressbar"

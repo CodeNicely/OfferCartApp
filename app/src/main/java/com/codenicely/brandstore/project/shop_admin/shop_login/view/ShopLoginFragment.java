@@ -2,6 +2,7 @@ package com.codenicely.brandstore.project.shop_admin.shop_login.view;
 
 
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
@@ -85,7 +86,7 @@ public class ShopLoginFragment extends Fragment implements ShopLoginView{
 	ImageView backButton;
 
 	private ShopLoginPresenter shopLoginPresenter;
-
+	private Context context;
 	String mobile,password;
 	private SharedPrefs sharedPrefs;
 
@@ -142,7 +143,7 @@ public class ShopLoginFragment extends Fragment implements ShopLoginView{
 		//	actionBar.hide();
 		}
 
-
+		context =getContext();
 		View view =inflater.inflate(R.layout.fragment_shop_login, container, false);
 		ButterKnife.bind(this,view);
 		sharedPrefs = new SharedPrefs(getContext());
@@ -240,10 +241,10 @@ public class ShopLoginFragment extends Fragment implements ShopLoginView{
 
 
 		//Something to jump to next activity
-		Intent intent = new Intent(getContext(), ShopHomePage.class);
+		Intent intent = new Intent(context, ShopHomePage.class);
 		startActivity(intent);
 		getActivity().finish();
-		welcomeScreenActivity.welcomeScreenActivity.finish();
+		WelcomeScreenActivity.welcomeScreenActivity.finish();
 	}
 
 	@Override

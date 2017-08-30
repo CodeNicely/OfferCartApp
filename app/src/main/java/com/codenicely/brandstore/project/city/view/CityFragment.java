@@ -63,7 +63,7 @@ public class CityFragment extends Fragment implements CityView {
     private String mParam2;
 	int state_id;
     private OnFragmentInteractionListener mListener;
-
+    private Context context;
     public CityFragment() {
         // Required empty public constructor
     }
@@ -103,7 +103,7 @@ public class CityFragment extends Fragment implements CityView {
         */
 		View view = inflater.inflate(R.layout.fragment_city, container, false);
         ButterKnife.bind(this, view);
-
+        context = getContext();
         ((HomePage) getActivity()).getSupportActionBar().hide();
         toolbar.setTitle("Select City");
 
@@ -177,7 +177,7 @@ public class CityFragment extends Fragment implements CityView {
 
     @Override
     public void showMessage(String message) {
-        Toast.makeText(getContext(), "" + message, Toast.LENGTH_SHORT).show();
+        Toast.makeText(context, "" + message, Toast.LENGTH_SHORT).show();
     }
 
     @Override
@@ -188,7 +188,7 @@ public class CityFragment extends Fragment implements CityView {
 
     @Override
     public void onCitySelected(int city_id, String city_name) {
-        sharedPrefs = new SharedPrefs(getContext());
+        sharedPrefs = new SharedPrefs(context);
         access_token = sharedPrefs.getAccessToken();
 
         cityPresenter.sendSelectedCity(city_name, city_id, access_token);
@@ -199,7 +199,7 @@ public class CityFragment extends Fragment implements CityView {
     @Override
     public void onCitySelectSuccess(String city) {
         sharedPrefs.setCity(city);
-        ((HomePage) getContext()).setFragment(new CategoryFragment(), "Home");
+        ((HomePage) context).setFragment(new CategoryFragment(), "Home");
     }
 
     @Override
