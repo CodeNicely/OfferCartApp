@@ -129,7 +129,6 @@ public class ShowShopProfileFragment extends Fragment implements ShowShopProfile
         View v = inflater.inflate(R.layout.fragment_shop_profile, container, false);
         ButterKnife.bind(this, v);
 
-
 		toolbar.setNavigationOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View view) {
@@ -141,7 +140,7 @@ public class ShowShopProfileFragment extends Fragment implements ShowShopProfile
 
 
         // Inflate the layout for this fragment
-        shopProfilePresenter = new ShowShopProfilePresenterImpl(this, new RetrofitShopProfileProvider());
+        shopProfilePresenter = new ShowShopProfilePresenterImpl(this,new RetrofitShopProfileProvider());
         imageLoader = new GlideImageLoader(getContext());
         sharedPrefs = new SharedPrefs(getContext());
         shopProfilePresenter.requestShopProfileDetails(sharedPrefs.getKeyAccessTokenShop());
@@ -204,7 +203,6 @@ public class ShowShopProfileFragment extends Fragment implements ShowShopProfile
     @Override
     public void showProgressbar(boolean show) {
         if (show) {
-
             progressBar1.setVisibility(View.VISIBLE);
         } else {
             progressBar1.setVisibility(View.INVISIBLE);

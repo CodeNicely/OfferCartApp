@@ -3,7 +3,7 @@ package com.codenicely.brandstore.project.offer.model;
 import com.codenicely.brandstore.project.helper.Urls;
 import com.codenicely.brandstore.project.offer.OfferScreenDetailsCallback;
 import com.codenicely.brandstore.project.offer.api.OfferScreenRequestApi;
-import com.codenicely.brandstore.project.offer.model.data.OfferScreenList;
+import com.codenicely.brandstore.project.offer.model.data.OfferData;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -52,17 +52,17 @@ public class RetrofitOfferScreenDetailsProvider implements OfferScreenDetailsPro
     public void requestOfferList(String accessToken, int shop_id, final OfferScreenDetailsCallback offerScreenDetailsCallback) {
 
 
-        final Call<OfferScreenList> offerScreenDataCall = offerScreenRequestApi.getCategoryListData(accessToken, shop_id);
+        final Call<OfferData> offerScreenDataCall = offerScreenRequestApi.getCategoryListData(accessToken, shop_id);
 
-        offerScreenDataCall.enqueue(new Callback<OfferScreenList>() {
+        offerScreenDataCall.enqueue(new Callback<OfferData>() {
             @Override
-            public void onResponse(Call<OfferScreenList> call, Response<OfferScreenList> response) {
+            public void onResponse(Call<OfferData> call, Response<OfferData> response) {
 
                 offerScreenDetailsCallback.onSuccess(response.body());
             }
 
             @Override
-            public void onFailure(Call<OfferScreenList> call, Throwable t) {
+            public void onFailure(Call<OfferData> call, Throwable t) {
                 t.printStackTrace();
             }
         });

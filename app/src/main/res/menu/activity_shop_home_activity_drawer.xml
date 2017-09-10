@@ -9,8 +9,12 @@
 
         <item
             android:id="@+id/nav_profile"
-            android:icon="@drawable/ic_location_on_black_24dp"
+            android:icon="@drawable/ic_person_black_24dp"
             android:title="Profile" />
+        <item
+            android:id="@+id/change_location"
+            android:icon="@drawable/ic_location_on_black_24dp"
+            android:title="Change Shop Location" />
         <item
             android:id="@+id/change_password"
             android:icon="@drawable/ic_account_balance_wallet_black_24dp"

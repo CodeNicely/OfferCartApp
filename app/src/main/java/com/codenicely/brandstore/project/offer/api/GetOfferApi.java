@@ -1,7 +1,7 @@
 package com.codenicely.brandstore.project.offer.api;
 
 import com.codenicely.brandstore.project.helper.Urls;
-import com.codenicely.brandstore.project.offer.model.data.OfferData;
+import com.codenicely.brandstore.project.offer.model.data.OfferGetData;
 
 import retrofit2.Call;
 import retrofit2.http.Field;
@@ -15,6 +15,6 @@ public interface GetOfferApi {
 
 	@FormUrlEncoded
 	@POST(Urls.SUB_URL_GET_OFFER)
-	Call<OfferData> getOffer(@Field("offer_id") int offer_id, @Field("access_token") String access_token);
+	Call<OfferGetData> getOffer(@Field("offer_id") int offer_id, @Field("access_token") String access_token);
 
 }

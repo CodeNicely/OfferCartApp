@@ -46,6 +46,9 @@
     <string name="register_offer">Publish Offer</string>
     <string name="edit_offer">Edit Offer</string>
 
+    //shop change location module
+    <string name="location_shop">USE THIS LOCATION</string>
+    <string name="google_maps_key">AIzaSyCNirAzXfz2QtXcb2HoFOMxjnIZY31yhoI</string>
     //shop change password module
 
     <string name="change_password_description">Enter the details to change your password</string>

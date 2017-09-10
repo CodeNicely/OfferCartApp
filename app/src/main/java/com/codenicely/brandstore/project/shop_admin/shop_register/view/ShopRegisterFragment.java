@@ -3,11 +3,9 @@ package com.codenicely.brandstore.project.shop_admin.shop_register.view;
 import android.Manifest;
 import android.annotation.TargetApi;
 import android.app.ProgressDialog;
-import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.IntentFilter;
 import android.content.IntentSender;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
@@ -99,7 +97,6 @@ public class ShopRegisterFragment extends Fragment implements ShopRegisterView, 
     private static final String SELECT_CITY = "Select City";
     private static final String SELECT_STATE = "Select State";
     private static final String SELECT_CATEGORY = "Select Category";
-
     //Define a request code to send to Google Play services
     private final static int CONNECTION_FAILURE_RESOLUTION_REQUEST = 9000;
     private GoogleApiClient mGoogleApiClient;
@@ -633,7 +630,6 @@ public class ShopRegisterFragment extends Fragment implements ShopRegisterView, 
             return true;
         else
             return false;
-
     }
 
     @Override

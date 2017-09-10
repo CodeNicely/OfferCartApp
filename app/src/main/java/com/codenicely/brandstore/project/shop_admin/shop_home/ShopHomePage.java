@@ -32,6 +32,7 @@ import com.codenicely.brandstore.project.shop_admin.payment_shop.model.data.Shop
 import com.codenicely.brandstore.project.shop_admin.payment_shop.presenter.ShopPaymentPresenter;
 import com.codenicely.brandstore.project.shop_admin.payment_shop.presenter.ShopPaymentPresenterImpl;
 import com.codenicely.brandstore.project.shop_admin.payment_shop.view.PaymentShopView;
+import com.codenicely.brandstore.project.shop_admin.shop_change_location.view.ShopLocationFragment;
 import com.codenicely.brandstore.project.shop_admin.shop_change_password.view.ShopChangePasswordFragment;
 import com.codenicely.brandstore.project.shop_admin.shop_add_offer.view.OfferAddFragment;
 import com.codenicely.brandstore.project.shop_admin.shop_add_subscription.view.AddSubscriptionFragment;
@@ -178,7 +179,10 @@ public class ShopHomePage extends AppCompatActivity
             startActivity(intent);
             finish();
 
-        } else if (id == R.id.change_password) {
+        } else if (id == R.id.change_location) {
+			addFragment(new ShopLocationFragment(), "Change Shop Location");
+			getSupportActionBar().hide();
+		} else if (id == R.id.change_password) {
             addFragment(new ShopChangePasswordFragment(), "Change Password");
             getSupportActionBar().hide();
         } else if (id == R.id.terms_conditions) {

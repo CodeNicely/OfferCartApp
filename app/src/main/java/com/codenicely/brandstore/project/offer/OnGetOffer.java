@@ -1,7 +1,7 @@
 package com.codenicely.brandstore.project.offer;
 
 
-import com.codenicely.brandstore.project.offer.model.data.OfferData;
+import com.codenicely.brandstore.project.offer.model.data.OfferGetData;
 
 /**
  * Created by meghal on 2/11/16.
@@ -10,7 +10,7 @@ import com.codenicely.brandstore.project.offer.model.data.OfferData;
 public interface OnGetOffer {
 
 
-    void onSuccess(OfferData offerData);
+    void onSuccess(OfferGetData offerData);
 
     void onFailure();
 

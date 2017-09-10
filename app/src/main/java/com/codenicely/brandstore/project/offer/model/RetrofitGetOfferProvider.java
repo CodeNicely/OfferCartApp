@@ -3,7 +3,7 @@ package com.codenicely.brandstore.project.offer.model;
 import com.codenicely.brandstore.project.helper.Urls;
 import com.codenicely.brandstore.project.offer.OnGetOffer;
 import com.codenicely.brandstore.project.offer.api.GetOfferApi;
-import com.codenicely.brandstore.project.offer.model.data.OfferData;
+import com.codenicely.brandstore.project.offer.model.data.OfferGetData;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -50,17 +50,17 @@ public class RetrofitGetOfferProvider implements GetOffer_Provider {
     public void getOffer(int offer_id, String access_token, final OnGetOffer onGetOffer) {
 
 
-        Call<OfferData> getOfferDataCall = getOfferApi.getOffer(offer_id, access_token);
-        getOfferDataCall.enqueue(new Callback<OfferData>() {
+        Call<OfferGetData> getOfferDataCall = getOfferApi.getOffer(offer_id, access_token);
+        getOfferDataCall.enqueue(new Callback<OfferGetData>() {
             @Override
-            public void onResponse(Call<OfferData> call, Response<OfferData> response) {
+            public void onResponse(Call<OfferGetData> call, Response<OfferGetData> response) {
 
                 onGetOffer.onSuccess(response.body());
 
             }
 
             @Override
-            public void onFailure(Call<OfferData> call, Throwable t) {
+            public void onFailure(Call<OfferGetData> call, Throwable t) {
                 onGetOffer.onFailure();
                 t.printStackTrace();
             }

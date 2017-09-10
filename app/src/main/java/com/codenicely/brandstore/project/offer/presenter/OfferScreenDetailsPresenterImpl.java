@@ -2,7 +2,7 @@ package com.codenicely.brandstore.project.offer.presenter;
 
 import com.codenicely.brandstore.project.offer.OfferScreenDetailsCallback;
 import com.codenicely.brandstore.project.offer.model.OfferScreenDetailsProvider;
-import com.codenicely.brandstore.project.offer.model.data.OfferScreenList;
+import com.codenicely.brandstore.project.offer.model.data.OfferData;
 import com.codenicely.brandstore.project.offer.view.OfferScreenView;
 
 /**
@@ -26,8 +26,7 @@ public class OfferScreenDetailsPresenterImpl implements OfferScreenDetailsPresen
         offerScreenView.showProgressBar(true);
         offerScreenDetailsProvider.requestOfferList(access_token, shop_id, new OfferScreenDetailsCallback() {
             @Override
-            public void onSuccess(OfferScreenList offerScreenData) {
-
+            public void onSuccess(OfferData offerScreenData) {
                 offerScreenView.showProgressBar(false);
                 if (offerScreenData.isSuccess()) {
                     offerScreenView.onOfferReceived(offerScreenData);

@@ -39,7 +39,6 @@ public class OfferScreenAdapter extends RecyclerView.Adapter<OfferScreenAdapter.
     }
 
     public void setdata(List<OfferScreenDetails> offerScreenDetails) {
-
         this.offerScreenDetailsList = offerScreenDetails;
     }
 

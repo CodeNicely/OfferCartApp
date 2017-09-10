@@ -15,5 +15,5 @@ public interface ShopAdminChangePasswordApi {
 	@FormUrlEncoded
 	@POST(Urls.SHOP_CHANGE_OLD_PASSWORD)
 	Call<ShopChangePasswordData> requestChangePassword(@Field("shop_access_token") String shop_access_token,
-			@Field("old_password") String old_password,@Field("new_password") String new_password);
+	@Field("old_password") String old_password,@Field("new_password") String new_password);
 }

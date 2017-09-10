@@ -35,7 +35,6 @@ import com.codenicely.brandstore.project.R;
 import com.codenicely.brandstore.project.helper.SharedPrefs;
 import com.codenicely.brandstore.project.helper.utils.BitmapUtils;
 import com.codenicely.brandstore.project.helper.utils.UriUtils;
-import com.codenicely.brandstore.project.offer.model.data.OfferScreenList;
 import com.codenicely.brandstore.project.shop_admin.shop_add_offer.model.RetrofitOfferAddHelper;
 import com.codenicely.brandstore.project.shop_admin.shop_add_offer.presenter.OfferAddPresenter;
 import com.codenicely.brandstore.project.shop_admin.shop_add_offer.presenter.OfferAddPresenterImpl;

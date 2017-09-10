@@ -11,7 +11,8 @@ Edited by Ujjwal :)  :D
 public class Urls {
 
 	public static final String BASE_URL = "http://139.59.22.130:2017";
-//	public static final String BASE_URL = "http://192.168.43.97:8000";
+
+	//public static final String BASE_URL = "http://192.168.42.36:8000";
 	//public static final String BASE_URL = "http://app.vegworld.online:2017";
     public static final String REQUEST_FCM_UPDATE = "update_fcm/";
 
@@ -68,7 +69,13 @@ public class Urls {
     //shop_login
     public static final String VERIFY_SHOP_LOGIN = "verify_shop_login/";
 
-    //shop_change_old_password
+	//get_shop_location
+	public static final String SHOP_GET_LOCATION = "get_shop_location/";
+
+	//shop_change_location
+	public static final String SHOP_CHANGE_LOCATION = "change_shop_location/";
+
+	//shop_change_old_password
     public static final String SHOP_CHANGE_OLD_PASSWORD = "change_password/";
 
 	//shop_forgot_password

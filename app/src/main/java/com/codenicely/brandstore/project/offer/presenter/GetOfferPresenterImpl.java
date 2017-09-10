@@ -2,7 +2,7 @@ package com.codenicely.brandstore.project.offer.presenter;
 
 import com.codenicely.brandstore.project.offer.OnGetOffer;
 import com.codenicely.brandstore.project.offer.model.GetOffer_Provider;
-import com.codenicely.brandstore.project.offer.model.data.OfferData;
+import com.codenicely.brandstore.project.offer.model.data.OfferGetData;
 import com.codenicely.brandstore.project.offer.view.GetOfferView;
 
 /**
@@ -25,7 +25,7 @@ public class GetOfferPresenterImpl implements GetOfferPresenter {
         getOfferView.showLoadingDialog(true);
         buyOfferProvider.getOffer(offer_id, access_token, new OnGetOffer() {
             @Override
-            public void onSuccess(OfferData getOfferData) {
+            public void onSuccess(OfferGetData getOfferData) {
 
                 getOfferView.showLoadingDialog(false);
                 if (getOfferData.isSuccess()) {

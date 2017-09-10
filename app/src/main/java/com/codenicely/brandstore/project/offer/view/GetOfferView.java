@@ -1,6 +1,6 @@
 package com.codenicely.brandstore.project.offer.view;
 
-import com.codenicely.brandstore.project.offer.model.data.OfferData;
+import com.codenicely.brandstore.project.offer.model.data.OfferGetData;
 
 /**
  * Created by meghal on 2/11/16.
@@ -13,6 +13,6 @@ public interface GetOfferView {
 
     void showLoadingDialog(boolean show);
 
-    void onOfferget(OfferData offerData);
+    void onOfferget(OfferGetData offerData);
 
 }

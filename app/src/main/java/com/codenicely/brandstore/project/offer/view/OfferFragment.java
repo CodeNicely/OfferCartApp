@@ -3,6 +3,7 @@ package com.codenicely.brandstore.project.offer.view;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -28,9 +29,9 @@ import com.codenicely.brandstore.project.helper.image_loader.GlideImageLoader;
 import com.codenicely.brandstore.project.helper.image_loader.ImageLoader;
 import com.codenicely.brandstore.project.offer.model.RetrofitGetOfferProvider;
 import com.codenicely.brandstore.project.offer.model.RetrofitOfferScreenDetailsProvider;
-import com.codenicely.brandstore.project.offer.model.data.OfferData;
+import com.codenicely.brandstore.project.offer.model.data.OfferGetData;
 import com.codenicely.brandstore.project.offer.model.data.OfferScreenDetails;
-import com.codenicely.brandstore.project.offer.model.data.OfferScreenList;
+import com.codenicely.brandstore.project.offer.model.data.OfferData;
 import com.codenicely.brandstore.project.offer.presenter.GetOfferPresenter;
 import com.codenicely.brandstore.project.offer.presenter.OfferScreenDetailsPresenter;
 import com.codenicely.brandstore.project.offer.presenter.OfferScreenDetailsPresenterImpl;
@@ -73,6 +74,9 @@ public class OfferFragment extends Fragment implements OfferScreenView, GetOffer
 
     @BindView(R.id.shop_address)
     TextView shopAddress;
+
+    @BindView(R.id.button_map_shop)
+    ImageView mapButton;
 
     @BindView(R.id.imageProgressBar)
     ProgressBar imageProgressBar;
@@ -152,6 +156,7 @@ public class OfferFragment extends Fragment implements OfferScreenView, GetOffer
                 getActivity().onBackPressed();
             }
         });
+
         Bundle bundle = this.getArguments();
         int shop_id = bundle.getInt(Keys.KEY_SHOP_ID);
         offerScreenDetailsPresenter.requestOfferList(sharedPrefs.getAccessToken(), shop_id);
@@ -212,7 +217,7 @@ public class OfferFragment extends Fragment implements OfferScreenView, GetOffer
     }
 
     @Override
-    public void onOfferReceived(OfferScreenList offerScreenList) {
+    public void onOfferReceived(OfferData offerScreenList) {
 
         //      setCollapsingToolbarLayoutTitle(offerScreenList.getShop_name()+" - Offers");
         //   toolbar.setTitle(offerScreenList.getShop_name()+" - Offers ");
@@ -223,6 +228,28 @@ public class OfferFragment extends Fragment implements OfferScreenView, GetOffer
 
         offerScreenAdapter.setdata(offerScreenList.getOffer_list());
         offerScreenAdapter.notifyDataSetChanged();
+        String location = "geo:";
+        location =location.concat(offerScreenList.getShop_latitude());
+        location= location.concat(",");
+        location =location.concat(offerScreenList.getShop_longitude());
+        location= location.concat("?q=");
+        location =location.concat(offerScreenList.getShop_latitude());
+        location= location.concat(",");
+        location =location.concat(offerScreenList.getShop_longitude());
+
+
+        final Uri gmmIntentUri = Uri.parse(location);
+    //        Uri gmmIntentUri = Uri.parse("geo:51.49234,7.43045?q=51.49234,7.43045");
+        mapButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+                mapIntent.setPackage("com.google.android.apps.maps");
+                if (mapIntent.resolveActivity(getActivity().getPackageManager()) != null) {
+                    startActivity(mapIntent);
+                }
+            }
+        });
     }
 
     @Override
@@ -253,7 +280,7 @@ public class OfferFragment extends Fragment implements OfferScreenView, GetOffer
     }
 
     @Override
-    public void onOfferget(OfferData getOfferData) {
+    public void onOfferget(OfferGetData getOfferData) {
 
         if (getOfferData.isSuccess()) {
 
