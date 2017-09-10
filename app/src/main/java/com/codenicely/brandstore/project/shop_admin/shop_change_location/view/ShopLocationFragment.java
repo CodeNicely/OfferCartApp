@@ -83,14 +83,8 @@ public class ShopLocationFragment extends Fragment
 	@BindView(R.id.toolbar)
 	Toolbar toolbar;
 
-	MapView mapView;
-	GoogleMap map;
-	GoogleMap mGoogleMap;
-	SupportMapFragment mapFrag;
 	LocationRequest mLocationRequest;
 	GoogleApiClient mGoogleApiClient;
-	Location mLastLocation;
-	Marker mCurrLocationMarker;
 	ShopLocationPresenter shopLocationPresenter;
 	Context context;
 	private OnFragmentInteractionListener mListener;
